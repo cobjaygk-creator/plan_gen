@@ -1,0 +1,988 @@
+{
+  "slide_width_pt": 960.0,
+  "slide_height_pt": 540.0,
+  "colors": [
+    {
+      "rgb": "000000",
+      "count": 13
+    },
+    {
+      "rgb": "FFF2CC",
+      "count": 2
+    },
+    {
+      "rgb": "7030A0",
+      "count": 1
+    }
+  ],
+  "fonts": [
+    {
+      "name": "+mn-ea",
+      "size_pt": 7.0,
+      "bold": null,
+      "color": null,
+      "count": 18
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 8.0,
+      "bold": null,
+      "color": null,
+      "count": 15
+    },
+    {
+      "name": null,
+      "size_pt": null,
+      "bold": null,
+      "color": null,
+      "count": 12
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 10.0,
+      "bold": true,
+      "color": null,
+      "count": 10
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 9.0,
+      "bold": true,
+      "color": null,
+      "count": 7
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 9.0,
+      "bold": null,
+      "color": null,
+      "count": 6
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 8.0,
+      "bold": true,
+      "color": null,
+      "count": 5
+    },
+    {
+      "name": "나눔고딕",
+      "size_pt": 9.0,
+      "bold": null,
+      "color": null,
+      "count": 4
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 16.0,
+      "bold": true,
+      "color": null,
+      "count": 3
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 28.0,
+      "bold": true,
+      "color": null,
+      "count": 2
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 9.0,
+      "bold": true,
+      "color": "FF0000",
+      "count": 2
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 11.0,
+      "bold": true,
+      "color": null,
+      "count": 2
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 14.0,
+      "bold": null,
+      "color": null,
+      "count": 1
+    },
+    {
+      "name": "+mn-ea",
+      "size_pt": 14.0,
+      "bold": true,
+      "color": null,
+      "count": 1
+    }
+  ],
+  "slides": [
+    {
+      "slide_no": 6,
+      "top_level_shapes": [
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 68.5,
+          "top_pt": 0.0,
+          "width_pt": 205.6,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 342.1,
+          "top_pt": 0.0,
+          "width_pt": 379.1,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 2",
+          "left_pt": 767.6,
+          "top_pt": 0.0,
+          "width_pt": 73.7,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 6",
+          "left_pt": 886.3,
+          "top_pt": 0.9,
+          "width_pt": 73.7,
+          "height_pt": 18.8,
+          "has_table": false
+        },
+        {
+          "name": "슬라이드 번호 개체 틀 3",
+          "left_pt": 884.2,
+          "top_pt": 512.0,
+          "width_pt": 62.4,
+          "height_pt": 18.1,
+          "has_table": false
+        },
+        {
+          "name": "표 7",
+          "left_pt": 721.6,
+          "top_pt": 37.2,
+          "width_pt": 238.1,
+          "height_pt": 184.8,
+          "has_table": true
+        },
+        {
+          "name": "그룹 19",
+          "left_pt": 117.7,
+          "top_pt": 396.7,
+          "width_pt": 487.6,
+          "height_pt": 113.4,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 26",
+          "left_pt": 154.5,
+          "top_pt": 208.8,
+          "width_pt": 413.5,
+          "height_pt": 61.4,
+          "has_table": false
+        },
+        {
+          "name": "TextBox 27",
+          "left_pt": 272.3,
+          "top_pt": 57.7,
+          "width_pt": 172.1,
+          "height_pt": 18.8,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 28",
+          "left_pt": 117.7,
+          "top_pt": 101.9,
+          "width_pt": 487.6,
+          "height_pt": 44.0,
+          "has_table": false
+        },
+        {
+          "name": "직선 연결선 29",
+          "left_pt": 118.7,
+          "top_pt": 169.9,
+          "width_pt": 487.6,
+          "height_pt": 0.0,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 30",
+          "left_pt": 167.0,
+          "top_pt": 215.2,
+          "width_pt": 413.5,
+          "height_pt": 46.8,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 31",
+          "left_pt": 227.6,
+          "top_pt": 184.1,
+          "width_pt": 261.6,
+          "height_pt": 19.4,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 32",
+          "left_pt": 147.1,
+          "top_pt": 403.4,
+          "width_pt": 98.6,
+          "height_pt": 17.0,
+          "has_table": false
+        },
+        {
+          "name": "모서리가 둥근 직사각형 85",
+          "left_pt": 230.5,
+          "top_pt": 296.2,
+          "width_pt": 104.9,
+          "height_pt": 94.8,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 35",
+          "left_pt": 253.6,
+          "top_pt": 373.5,
+          "width_pt": 55.0,
+          "height_pt": 18.2,
+          "has_table": false
+        },
+        {
+          "name": "모서리가 둥근 직사각형 79",
+          "left_pt": 347.3,
+          "top_pt": 296.2,
+          "width_pt": 105.0,
+          "height_pt": 94.8,
+          "has_table": false
+        },
+        {
+          "name": "모서리가 둥근 직사각형 74",
+          "left_pt": 462.4,
+          "top_pt": 296.2,
+          "width_pt": 104.9,
+          "height_pt": 94.6,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 위쪽 모서리 41",
+          "left_pt": 467.5,
+          "top_pt": 290.9,
+          "width_pt": 94.6,
+          "height_pt": 18.6,
+          "has_table": false
+        },
+        {
+          "name": "그림 43",
+          "left_pt": 225.6,
+          "top_pt": 315.9,
+          "width_pt": 113.2,
+          "height_pt": 80.0,
+          "has_table": false
+        },
+        {
+          "name": "그림 44",
+          "left_pt": 339.8,
+          "top_pt": 302.0,
+          "width_pt": 122.7,
+          "height_pt": 99.9,
+          "has_table": false
+        },
+        {
+          "name": "그림 45",
+          "left_pt": 451.6,
+          "top_pt": 287.9,
+          "width_pt": 131.4,
+          "height_pt": 110.6,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 48",
+          "left_pt": 147.1,
+          "top_pt": 431.6,
+          "width_pt": 98.6,
+          "height_pt": 17.0,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 49",
+          "left_pt": 277.6,
+          "top_pt": 407.5,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 50",
+          "left_pt": 393.7,
+          "top_pt": 408.2,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 51",
+          "left_pt": 509.7,
+          "top_pt": 407.5,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 52",
+          "left_pt": 393.7,
+          "top_pt": 434.8,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 53",
+          "left_pt": 509.7,
+          "top_pt": 434.0,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 54",
+          "left_pt": 147.1,
+          "top_pt": 459.4,
+          "width_pt": 98.6,
+          "height_pt": 17.0,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 55",
+          "left_pt": 509.7,
+          "top_pt": 462.0,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 56",
+          "left_pt": 147.1,
+          "top_pt": 487.8,
+          "width_pt": 98.6,
+          "height_pt": 17.0,
+          "has_table": false
+        },
+        {
+          "name": "자유형: 도형 57",
+          "left_pt": 509.7,
+          "top_pt": 492.2,
+          "width_pt": 10.8,
+          "height_pt": 8.3,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 위쪽 모서리 58",
+          "left_pt": 352.3,
+          "top_pt": 290.9,
+          "width_pt": 94.6,
+          "height_pt": 18.6,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 위쪽 모서리 59",
+          "left_pt": 235.6,
+          "top_pt": 290.9,
+          "width_pt": 94.6,
+          "height_pt": 18.6,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 60",
+          "left_pt": 372.6,
+          "top_pt": 374.5,
+          "width_pt": 55.0,
+          "height_pt": 18.2,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 61",
+          "left_pt": 487.9,
+          "top_pt": 374.7,
+          "width_pt": 54.9,
+          "height_pt": 18.2,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 62",
+          "left_pt": 117.7,
+          "top_pt": 82.2,
+          "width_pt": 487.6,
+          "height_pt": 25.6,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 63",
+          "left_pt": 0.0,
+          "top_pt": 528.7,
+          "width_pt": 721.9,
+          "height_pt": 11.3,
+          "has_table": false
+        },
+        {
+          "name": "그래픽 141",
+          "left_pt": 347.2,
+          "top_pt": 531.3,
+          "width_pt": 28.5,
+          "height_pt": 4.5,
+          "has_table": false
+        },
+        {
+          "name": "TextBox 44",
+          "left_pt": 721.9,
+          "top_pt": 460.6,
+          "width_pt": 237.7,
+          "height_pt": 40.0,
+          "has_table": false
+        }
+      ]
+    },
+    {
+      "slide_no": 7,
+      "top_level_shapes": [
+        {
+          "name": "직사각형 5",
+          "left_pt": 117.5,
+          "top_pt": 99.3,
+          "width_pt": 487.5,
+          "height_pt": 429.3,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 68.5,
+          "top_pt": 0.0,
+          "width_pt": 205.6,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 342.1,
+          "top_pt": 0.0,
+          "width_pt": 379.1,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 2",
+          "left_pt": 767.6,
+          "top_pt": 0.0,
+          "width_pt": 73.7,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 6",
+          "left_pt": 886.3,
+          "top_pt": 0.9,
+          "width_pt": 73.7,
+          "height_pt": 18.8,
+          "has_table": false
+        },
+        {
+          "name": "슬라이드 번호 개체 틀 3",
+          "left_pt": 884.2,
+          "top_pt": 512.0,
+          "width_pt": 62.4,
+          "height_pt": 18.1,
+          "has_table": false
+        },
+        {
+          "name": "표 7",
+          "left_pt": 721.6,
+          "top_pt": 37.2,
+          "width_pt": 238.1,
+          "height_pt": 184.8,
+          "has_table": true
+        },
+        {
+          "name": "모서리가 둥근 직사각형 89",
+          "left_pt": 163.3,
+          "top_pt": 193.9,
+          "width_pt": 391.7,
+          "height_pt": 254.1,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 38",
+          "left_pt": 163.3,
+          "top_pt": 173.8,
+          "width_pt": 391.7,
+          "height_pt": 45.4,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 40",
+          "left_pt": 224.8,
+          "top_pt": 185.2,
+          "width_pt": 268.8,
+          "height_pt": 21.4,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 42",
+          "left_pt": 117.5,
+          "top_pt": 67.9,
+          "width_pt": 487.5,
+          "height_pt": 43.6,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 46",
+          "left_pt": 133.5,
+          "top_pt": 81.1,
+          "width_pt": 453.3,
+          "height_pt": 17.0,
+          "has_table": false
+        },
+        {
+          "name": "그룹 1",
+          "left_pt": 0.0,
+          "top_pt": 528.7,
+          "width_pt": 721.9,
+          "height_pt": 11.3,
+          "has_table": false
+        },
+        {
+          "name": "그룹 76",
+          "left_pt": 0.0,
+          "top_pt": 20.6,
+          "width_pt": 721.9,
+          "height_pt": 11.3,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 13",
+          "left_pt": 240.2,
+          "top_pt": 252.3,
+          "width_pt": 45.2,
+          "height_pt": 40.7,
+          "has_table": false
+        },
+        {
+          "name": "그림 14",
+          "left_pt": 250.8,
+          "top_pt": 260.5,
+          "width_pt": 24.0,
+          "height_pt": 24.0,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 15",
+          "left_pt": 217.6,
+          "top_pt": 297.4,
+          "width_pt": 90.4,
+          "height_pt": 24.2,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 20",
+          "left_pt": 336.6,
+          "top_pt": 251.7,
+          "width_pt": 45.2,
+          "height_pt": 40.7,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 21",
+          "left_pt": 313.3,
+          "top_pt": 296.8,
+          "width_pt": 90.4,
+          "height_pt": 24.2,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 23",
+          "left_pt": 433.7,
+          "top_pt": 250.7,
+          "width_pt": 45.2,
+          "height_pt": 40.7,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 24",
+          "left_pt": 422.3,
+          "top_pt": 295.7,
+          "width_pt": 70.9,
+          "height_pt": 24.2,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 26",
+          "left_pt": 240.2,
+          "top_pt": 348.4,
+          "width_pt": 45.2,
+          "height_pt": 40.7,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 27",
+          "left_pt": 217.6,
+          "top_pt": 393.5,
+          "width_pt": 90.4,
+          "height_pt": 24.2,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 29",
+          "left_pt": 336.6,
+          "top_pt": 347.2,
+          "width_pt": 45.2,
+          "height_pt": 40.7,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 30",
+          "left_pt": 314.0,
+          "top_pt": 392.3,
+          "width_pt": 90.4,
+          "height_pt": 24.2,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 32",
+          "left_pt": 433.7,
+          "top_pt": 347.2,
+          "width_pt": 45.2,
+          "height_pt": 40.7,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 33",
+          "left_pt": 411.1,
+          "top_pt": 392.2,
+          "width_pt": 90.4,
+          "height_pt": 24.2,
+          "has_table": false
+        },
+        {
+          "name": "그림 34",
+          "left_pt": 346.5,
+          "top_pt": 260.5,
+          "width_pt": 24.0,
+          "height_pt": 24.0,
+          "has_table": false
+        },
+        {
+          "name": "그림 35",
+          "left_pt": 250.8,
+          "top_pt": 356.5,
+          "width_pt": 24.0,
+          "height_pt": 24.0,
+          "has_table": false
+        },
+        {
+          "name": "그림 36",
+          "left_pt": 345.5,
+          "top_pt": 354.6,
+          "width_pt": 24.0,
+          "height_pt": 24.0,
+          "has_table": false
+        },
+        {
+          "name": "그림 37",
+          "left_pt": 445.7,
+          "top_pt": 355.3,
+          "width_pt": 24.0,
+          "height_pt": 24.0,
+          "has_table": false
+        },
+        {
+          "name": "그림 44",
+          "left_pt": 444.3,
+          "top_pt": 261.0,
+          "width_pt": 24.0,
+          "height_pt": 24.0,
+          "has_table": false
+        }
+      ]
+    },
+    {
+      "slide_no": 8,
+      "top_level_shapes": [
+        {
+          "name": "직사각형 5",
+          "left_pt": 117.5,
+          "top_pt": 32.0,
+          "width_pt": 487.5,
+          "height_pt": 487.4,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 68.5,
+          "top_pt": 0.0,
+          "width_pt": 205.6,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 342.1,
+          "top_pt": 0.0,
+          "width_pt": 379.1,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 2",
+          "left_pt": 767.6,
+          "top_pt": 0.0,
+          "width_pt": 73.7,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 6",
+          "left_pt": 886.3,
+          "top_pt": 0.9,
+          "width_pt": 73.7,
+          "height_pt": 18.8,
+          "has_table": false
+        },
+        {
+          "name": "슬라이드 번호 개체 틀 3",
+          "left_pt": 884.2,
+          "top_pt": 512.0,
+          "width_pt": 62.4,
+          "height_pt": 18.1,
+          "has_table": false
+        },
+        {
+          "name": "표 7",
+          "left_pt": 721.6,
+          "top_pt": 37.2,
+          "width_pt": 238.1,
+          "height_pt": 184.8,
+          "has_table": true
+        },
+        {
+          "name": "모서리가 둥근 직사각형 89",
+          "left_pt": 164.3,
+          "top_pt": 87.3,
+          "width_pt": 391.7,
+          "height_pt": 396.5,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 38",
+          "left_pt": 164.3,
+          "top_pt": 67.2,
+          "width_pt": 391.7,
+          "height_pt": 45.4,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 40",
+          "left_pt": 225.8,
+          "top_pt": 78.5,
+          "width_pt": 268.8,
+          "height_pt": 21.4,
+          "has_table": false
+        },
+        {
+          "name": "그룹 1",
+          "left_pt": 0.0,
+          "top_pt": 528.7,
+          "width_pt": 721.9,
+          "height_pt": 11.3,
+          "has_table": false
+        },
+        {
+          "name": "그룹 76",
+          "left_pt": 0.0,
+          "top_pt": 20.6,
+          "width_pt": 721.9,
+          "height_pt": 11.3,
+          "has_table": false
+        },
+        {
+          "name": "표 8",
+          "left_pt": 187.5,
+          "top_pt": 307.8,
+          "width_pt": 347.2,
+          "height_pt": 151.3,
+          "has_table": true
+        },
+        {
+          "name": "표 47",
+          "left_pt": 187.5,
+          "top_pt": 142.3,
+          "width_pt": 347.2,
+          "height_pt": 165.4,
+          "has_table": true
+        },
+        {
+          "name": "그림 17",
+          "left_pt": 235.3,
+          "top_pt": 150.3,
+          "width_pt": 91.6,
+          "height_pt": 140.9,
+          "has_table": false
+        },
+        {
+          "name": "그림 19",
+          "left_pt": 416.4,
+          "top_pt": 151.5,
+          "width_pt": 72.3,
+          "height_pt": 138.5,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 22",
+          "left_pt": 187.5,
+          "top_pt": 272.8,
+          "width_pt": 172.7,
+          "height_pt": 21.5,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 28",
+          "left_pt": 360.2,
+          "top_pt": 272.8,
+          "width_pt": 174.5,
+          "height_pt": 21.5,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 31",
+          "left_pt": 209.5,
+          "top_pt": 258.3,
+          "width_pt": 34.0,
+          "height_pt": 21.5,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 45",
+          "left_pt": 375.4,
+          "top_pt": 258.3,
+          "width_pt": 34.0,
+          "height_pt": 21.5,
+          "has_table": false
+        }
+      ]
+    },
+    {
+      "slide_no": 9,
+      "top_level_shapes": [
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 68.5,
+          "top_pt": 0.0,
+          "width_pt": 205.6,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 3",
+          "left_pt": 342.1,
+          "top_pt": 0.0,
+          "width_pt": 379.1,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 2",
+          "left_pt": 767.6,
+          "top_pt": 0.0,
+          "width_pt": 73.7,
+          "height_pt": 19.8,
+          "has_table": false
+        },
+        {
+          "name": "텍스트 개체 틀 6",
+          "left_pt": 886.3,
+          "top_pt": 0.9,
+          "width_pt": 73.7,
+          "height_pt": 18.8,
+          "has_table": false
+        },
+        {
+          "name": "슬라이드 번호 개체 틀 3",
+          "left_pt": 884.2,
+          "top_pt": 512.0,
+          "width_pt": 62.4,
+          "height_pt": 18.1,
+          "has_table": false
+        },
+        {
+          "name": "표 7",
+          "left_pt": 721.6,
+          "top_pt": 37.2,
+          "width_pt": 238.1,
+          "height_pt": 184.8,
+          "has_table": true
+        },
+        {
+          "name": "그룹 76",
+          "left_pt": 0.0,
+          "top_pt": 20.6,
+          "width_pt": 721.9,
+          "height_pt": 11.3,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 14",
+          "left_pt": 611.5,
+          "top_pt": 46.2,
+          "width_pt": 74.3,
+          "height_pt": 28.2,
+          "has_table": false
+        },
+        {
+          "name": "사각형: 둥근 모서리 15",
+          "left_pt": 262.1,
+          "top_pt": 42.9,
+          "width_pt": 194.2,
+          "height_pt": 34.8,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 17",
+          "left_pt": 262.1,
+          "top_pt": 50.3,
+          "width_pt": 194.2,
+          "height_pt": 20.6,
+          "has_table": false
+        },
+        {
+          "name": "TextBox 22",
+          "left_pt": 149.4,
+          "top_pt": 96.8,
+          "width_pt": 359.5,
+          "height_pt": 20.4,
+          "has_table": false
+        },
+        {
+          "name": "직사각형 24",
+          "left_pt": 148.0,
+          "top_pt": 115.3,
+          "width_pt": 414.4,
+          "height_pt": 70.6,
+          "has_table": false
+        },
+        {
+          "name": "직선 연결선 25",
+          "left_pt": 119.1,
+          "top_pt": 37.2,
+          "width_pt": 484.7,
+          "height_pt": 0.0,
+          "has_table": false
+        },
+        {
+          "name": "직선 연결선 26",
+          "left_pt": 119.1,
+          "top_pt": 83.8,
+          "width_pt": 484.7,
+          "height_pt": 0.0,
+          "has_table": false
+        }
+      ]
+    }
+  ]
+}

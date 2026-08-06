@@ -8,3 +8,4 @@ ai_results/
 .claude/settings.local.json
 samples/
 out/
+templates/master_template_raw.json
