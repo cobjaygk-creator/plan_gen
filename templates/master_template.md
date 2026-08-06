@@ -30,9 +30,26 @@
 - `FFF2CC` — 옅은 노랑 (하이라이트 배경 추정)
 - `7030A0` — 보라 (배지 추정)
 
-⚠️ **한계**: 도형 fill 중 상당수가 테마 스킴 참조(scheme color)라 `fill_rgb`로 못 잡은 케이스가
-많음. 3단계(블록 엔진 구현)에서 실제 배지 색상이 필요해지면 해당 slide의 XML을 다시 열어
-정확한 색상을 뽑아야 함 — 지금 3개 색상만으로 배지 색상을 단정하지 말 것.
+⚠️ **한계 (렌더러 작업 때 해소됨, 아래 참고)**: 도형 fill 중 상당수가 테마 스킴 참조라
+`fill_rgb`로 못 잡혔음 — 슬라이드 7/8 XML을 직접 열어 schemeClr을 수동으로 역산해서 해결.
+
+## 렌더러용 확정 스타일 값 (슬라이드 7/8 XML 직접 역산, scheme color 포함)
+
+이 값들은 python-pptx의 `fill.fore_color.rgb`로는 안 잡히는 schemeClr 참조를 XML에서
+직접 읽어 표준 Office 스와치 공식으로 환산한 것. `tools/render_pptx.py`가 이 값을 사용함.
+
+| 요소 | 값 | 근거 |
+|---|---|---|
+| 카드(아이콘 프레임) 배경 | `FFFFFF` (흰색) | `roundRect`, `<a:solidFill><a:schemeClr val="bg1"/>` |
+| 카드 테두리 | `BFBFBF` (연회색) | `schemeClr val="bg1" lumMod=75%` = "Background 1, Darker 25%" 표준 스와치, 두께 0.25pt |
+| 카드 모서리 반경 | ~9.5% (`adj≈9481`) | `prstGeom prst="roundRect"` |
+| 캡션 텍스트 색 | `262626` (순검정 아님) | `schemeClr val="tx1" lumMod=85% lumOff=15%` = "Text 1, Lighter 15%" 표준 스와치 |
+| 캡션 폰트/크기 | 맑은 고딕, 7~9pt | 섹션마다 7pt(그리드)~9pt(new_highlight) 혼재, 렌더러는 8pt로 통일 |
+| 섹션 헤더바 배경 | `404040` (진회색), `roundRect` | `schemeClr val="tx1" lumMod=75% lumOff=25%` = "Text 1, Lighter 25%" 표준 스와치 |
+| 섹션 헤더바 텍스트 | `FFFFFF`, 16pt bold | `schemeClr val="bg1"` 직접 참조 |
+| NEW 배지 | 도형 아님 — 빨강(`FF0000`) 굵은 글씨만, 배경 없음, 대각선 회전(~-18°) | `<a:t>NEW</a:t>` 런에 `srgbClr val="FF0000"`, `rot="20524426"` (60000분의1도 단위) |
+
+이 표는 `master_template_raw.json`을 다시 열지 않고도 렌더러가 참조할 수 있는 최종본.
 
 ## 블록 관련 슬라이드 구조 (레이아웃: `[AS]공지형`, 페이지 1/4~4/4)
 

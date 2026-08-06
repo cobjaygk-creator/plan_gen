@@ -3,18 +3,21 @@ the fixed fields (step 5) out as a real .pptx file. Everything upstream of
 this module only ever computed layout math or classified text — this is
 the one place that actually touches python-pptx shape-creation calls.
 
-Deliberately does not try to pixel-match the original master template's
-exact XML styling (theme colors, precise borders) — that's excess
-precision for what the block engine/regression scorer actually check
-(text present, image present, no overlap). Uses the confirmed values from
-master_template.md (slide size, body font, content box) and otherwise
-keeps shapes plain.
+Style values (colors/fonts/card frame/header bar) come from
+templates/master_template.md's "렌더러용 확정 스타일 값" table — those were
+reverse-engineered from the actual slide XML of samples/202605_result.pptx
+because most of them are theme scheme-color references (schemeClr, not a
+literal RGB) that python-pptx's high-level API can't read directly. Still
+doesn't chase the master template's exact XML down to borders-on-every-
+shape level — this covers what's visually load-bearing (card frame,
+header bar, caption color, NEW styling), not full pixel parity.
 """
 import os
 from pptx import Presentation
 from pptx.util import Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
+from pptx.enum.text import PP_ALIGN
 
 from tools.blocks.geometry import Placement
 
@@ -22,9 +25,14 @@ SLIDE_WIDTH_PT = 960
 SLIDE_HEIGHT_PT = 540
 BODY_FONT = "맑은 고딕"
 
-PLACEHOLDER_FILL = RGBColor(0xE7, 0xE6, 0xE6)  # theme lt2
-PLACEHOLDER_LINE = RGBColor(0xA5, 0xA5, 0xA5)  # theme accent3
-BADGE_FILL = RGBColor(0xFF, 0x00, 0x00)
+# templates/master_template.md 렌더러용 확정 스타일 값 표 그대로
+CARD_FILL = RGBColor(0xFF, 0xFF, 0xFF)         # bg1
+CARD_BORDER = RGBColor(0xBF, 0xBF, 0xBF)       # bg1 lumMod75% = "Background 1, Darker 25%"
+CAPTION_COLOR = RGBColor(0x26, 0x26, 0x26)     # tx1 lumMod85%/lumOff15% = "Text 1, Lighter 15%"
+HEADER_BG = RGBColor(0x40, 0x40, 0x40)         # tx1 lumMod75%/lumOff25% = "Text 1, Lighter 25%"
+HEADER_TEXT_COLOR = RGBColor(0xFF, 0xFF, 0xFF)  # bg1
+NEW_BADGE_COLOR = RGBColor(0xFF, 0x00, 0x00)
+CARD_CORNER_RADIUS = 0.095  # adj≈9481 in prstGeom roundRect terms
 
 
 def _item_name(ref) -> str:
@@ -33,37 +41,45 @@ def _item_name(ref) -> str:
     return str(ref) if ref is not None else ""
 
 
+def _add_card_frame(slide, left, top, width, height):
+    """White rounded-rect card frame — drawn behind every icon/image slot
+    regardless of whether a real picture ends up on top of it, matching
+    the source pptx (the card frame shape exists independently of 그림 N)."""
+    frame = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left, top, width, height)
+    frame.adjustments[0] = CARD_CORNER_RADIUS
+    frame.fill.solid()
+    frame.fill.fore_color.rgb = CARD_FILL
+    frame.line.color.rgb = CARD_BORDER
+    frame.line.width = Pt(0.25)
+    frame.shadow.inherit = False
+    return frame
+
+
 def _add_placement(slide, placement: Placement):
     left, top = Pt(placement.left), Pt(placement.top)
     width, height = Pt(placement.width), Pt(placement.height)
 
     if placement.kind in ("icon", "image"):
+        frame = _add_card_frame(slide, left, top, width, height)
         image_path = placement.ref.get("image") if isinstance(placement.ref, dict) else None
         if image_path and os.path.exists(image_path):
             slide.shapes.add_picture(image_path, left, top, width, height)
-            return
-        box = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, left, top, width, height)
-        box.fill.solid()
-        box.fill.fore_color.rgb = PLACEHOLDER_FILL
-        box.line.color.rgb = PLACEHOLDER_LINE
-        tf = box.text_frame
-        tf.word_wrap = True
-        tf.text = _item_name(placement.ref)[:24]
-        p = tf.paragraphs[0]
-        p.font.size = Pt(6)
-        p.font.name = BODY_FONT
+        # text_only: leave the card frame empty — the block engine always
+        # places a separate caption below/beside it carrying the name
+        # (source pptx never puts text inside the card shape itself either)
         return
 
     if placement.kind == "badge":
-        box = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left, top, width, height)
-        box.fill.solid()
-        box.fill.fore_color.rgb = BADGE_FILL
-        tf = box.text_frame
+        # source pptx: no shape, just bold red rotated text (see master_template.md)
+        tb = slide.shapes.add_textbox(left, top, width, height)
+        tb.rotation = -18
+        tf = tb.text_frame
         tf.text = _item_name(placement.ref) or "NEW"
         p = tf.paragraphs[0]
-        p.font.size = Pt(7)
+        p.alignment = PP_ALIGN.CENTER
+        p.font.size = Pt(9)
         p.font.bold = True
-        p.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
+        p.font.color.rgb = NEW_BADGE_COLOR
         p.font.name = BODY_FONT
         return
 
@@ -73,18 +89,26 @@ def _add_placement(slide, placement: Placement):
     tf.word_wrap = True
     tf.text = _item_name(placement.ref)
     p = tf.paragraphs[0]
+    p.alignment = PP_ALIGN.CENTER
     p.font.size = Pt(8)
     p.font.name = BODY_FONT
+    p.font.color.rgb = CAPTION_COLOR
 
 
-def _add_section_header(slide, text: str):
-    tb = slide.shapes.add_textbox(Pt(20), Pt(20), Pt(600), Pt(30))
-    tf = tb.text_frame
+def _add_section_header(slide, text: str, left=Pt(20), top=Pt(20), width=Pt(500), height=Pt(36)):
+    bar = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left, top, width, height)
+    bar.fill.solid()
+    bar.fill.fore_color.rgb = HEADER_BG
+    bar.line.fill.background()
+    bar.shadow.inherit = False
+    tf = bar.text_frame
     tf.text = text
     p = tf.paragraphs[0]
+    p.alignment = PP_ALIGN.CENTER
     p.font.size = Pt(16)
     p.font.bold = True
     p.font.name = BODY_FONT
+    p.font.color.rgb = HEADER_TEXT_COLOR
 
 
 def _add_fixed_fields_slide(prs, blank_layout, fixed: dict):
