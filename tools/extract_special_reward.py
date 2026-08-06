@@ -65,6 +65,35 @@ def extract_drawing_text_anchors(path: str) -> list[dict]:
     return anchors
 
 
+def extract_drawing_picture_rows(path: str) -> set[int]:
+    """Row numbers (1-indexed, inclusive of anchor span) that have a
+    <xdr:pic> anchored to them. Cheap presence-only check — full position
+    matching (which picture belongs to which item) is step 7's job, but
+    the classifier needs to know "does this row have an image at all" to
+    tell grid apart from text_list (identical as pure text otherwise —
+    see 202508, which text-only classified as text_list despite actually
+    being an image grid in the rendered output)."""
+    drawing_path = _find_drawing_path(path)
+    if drawing_path is None:
+        return set()
+    with zipfile.ZipFile(path) as z:
+        data = z.read(drawing_path).decode("utf-8", errors="replace")
+
+    rows_with_pics = set()
+    for chunk in ANCHOR_SPLIT_RE.split(data)[1:]:
+        if "<xdr:pic>" not in chunk:
+            continue
+        from_m = FROM_RE.search(chunk)
+        to_m = re.search(r"<xdr:to>.*?<xdr:row>(\d+)</xdr:row>", chunk, re.S)
+        if not from_m:
+            continue
+        row_start = int(from_m.group(2)) + 1
+        row_end = int(to_m.group(1)) + 1 if to_m else row_start
+        for r in range(row_start, row_end + 1):
+            rows_with_pics.add(r)
+    return rows_with_pics
+
+
 def extract_special_reward_rows(path: str, start_row: int) -> list[dict]:
     wb = openpyxl.load_workbook(path, data_only=True)
     ws = wb["Sheet1"]
@@ -98,19 +127,27 @@ def extract_special_reward_rows(path: str, start_row: int) -> list[dict]:
         # don't clobber a real cell value with a textbox guess at the same slot
         entry["cells"].setdefault(anchor["col_letter"], anchor["text"])
 
+    pic_rows = extract_drawing_picture_rows(path)
+    for r, entry in row_map.items():
+        entry["has_image"] = r in pic_rows
+
     return [row_map[r] for r in sorted(row_map)]
 
 
 def to_compact_text(rows: list[dict]) -> str:
     """Grid-preserving compact text — cheap on tokens, keeps enough
     structure (which columns are populated together) for the model to
-    infer N-column grid vs single-column list vs paired layout."""
+    infer N-column grid vs single-column list vs paired layout. Appends
+    an explicit image-presence marker per row since that's otherwise
+    invisible in plain text and is the deciding signal between grid and
+    text_list (see extract_drawing_picture_rows)."""
     lines = []
     for row in rows:
         cells = row["cells"]
         cols = "".join(cells.keys())
         values = " | ".join(cells.values())
-        lines.append(f"{cols}{row['row']}: {values}")
+        marker = " [이미지있음]" if row.get("has_image") else ""
+        lines.append(f"{cols}{row['row']}: {values}{marker}")
     return "\n".join(lines)
 
 
