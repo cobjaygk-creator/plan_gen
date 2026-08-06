@@ -1,18 +1,30 @@
 """Detect overlapping shapes on each slide of a pptx file.
 
-Used both to pick a bug-free master template sample (step 1) and later
-as one of the regression scoring signals (step 4).
+v2 — the first version (see git history) flagged group-shape-vs-own-child
+containment and background-panel-vs-content containment as "overlaps",
+which is just normal nesting/layering, not a bug. This version:
+  1. Only compares leaf shapes (flattens into group children, never
+     compares a group's own bounding box against its children).
+  2. Ignores full-containment pairs (one box entirely inside another —
+     that's a background panel under content, by design).
+  3. Only flags partial overlap above a minimum area, which is what an
+     actual layout bug (two items crammed into the same space) looks like.
+
+Used both to pick a bug-free master template sample (step 1) and as one of
+the regression scoring signals (step 4).
 """
 from pptx import Presentation
-from pptx.util import Emu
+
+CONTAINMENT_TOLERANCE = 0  # pt-EMU slack when deciding "fully inside"
 
 
-def shape_boxes(slide):
+def leaf_boxes(shapes):
     boxes = []
-    for shape in slide.shapes:
-        if shape.left is None or shape.top is None:
+    for shape in shapes:
+        if shape.shape_type == 6:  # GROUP — recurse, never compare the group itself
+            boxes.extend(leaf_boxes(shape.shapes))
             continue
-        if shape.width is None or shape.height is None:
+        if shape.left is None or shape.top is None or shape.width is None or shape.height is None:
             continue
         boxes.append((shape.shape_id, shape.name, shape.left, shape.top,
                       shape.left + shape.width, shape.top + shape.height))
@@ -27,18 +39,30 @@ def overlap_area(a, b):
     return ox * oy
 
 
-def find_overlaps(path, min_area_emu=914400 * 914400 // 400):
-    """min_area_emu default threshold ~ a few square points, filters noise."""
+def fully_contains(a, b):
+    """True if box a fully contains box b (or vice versa is checked by caller)."""
+    _, _, ax0, ay0, ax1, ay1 = a
+    _, _, bx0, by0, bx1, by1 = b
+    return (ax0 - CONTAINMENT_TOLERANCE <= bx0 and ay0 - CONTAINMENT_TOLERANCE <= by0 and
+            ax1 + CONTAINMENT_TOLERANCE >= bx1 and ay1 + CONTAINMENT_TOLERANCE >= by1)
+
+
+def find_overlaps(path, min_area_pt2=15.0):
+    """min_area_pt2: ignore overlaps smaller than this (border/AA noise)."""
+    min_area_emu = min_area_pt2 * (12700 ** 2)
     prs = Presentation(path)
     report = []
     for idx, slide in enumerate(prs.slides, start=1):
-        boxes = shape_boxes(slide)
+        boxes = leaf_boxes(slide.shapes)
         pairs = []
         for i in range(len(boxes)):
             for j in range(i + 1, len(boxes)):
-                area = overlap_area(boxes[i], boxes[j])
+                a, b = boxes[i], boxes[j]
+                if fully_contains(a, b) or fully_contains(b, a):
+                    continue
+                area = overlap_area(a, b)
                 if area > min_area_emu:
-                    pairs.append((boxes[i][1], boxes[j][1], area))
+                    pairs.append((a[1], b[1], area))
         if pairs:
             report.append((idx, pairs))
     return report
@@ -50,10 +74,10 @@ if __name__ == "__main__":
         path = f"samples/{name}_result.pptx"
         report = find_overlaps(path)
         if not report:
-            print(f"{name}: OK (no significant overlaps)")
+            print(f"{name}: OK (no significant partial overlaps)")
         else:
             print(f"{name}: {len(report)} slide(s) with overlaps")
             for slide_no, pairs in report:
                 for a, b, area in pairs:
-                    pt2 = area / (914400 ** 2 / 100)
+                    pt2 = area / (12700 ** 2)
                     print(f"  slide {slide_no}: '{a}' x '{b}' overlap~{pt2:.1f}pt2")
