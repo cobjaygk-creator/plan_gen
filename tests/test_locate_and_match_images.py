@@ -112,20 +112,9 @@ def test_match_images_does_not_reuse_same_anchor_twice(monkeypatch):
     assert len(unmatched) == 1
 
 
-def test_match_images_marks_position_matches_with_source(monkeypatch):
-    from tools import match_images as mi_module
-
-    monkeypatch.setattr(mi_module, "get_picture_anchors",
-                         lambda path: [PictureAnchor("B", 18, 21, "rId1", "xl/media/image1.png")])
-
-    located = [LocatedItem("아이템A", False, row=19, col_letter="B", matched_cell_text="아이템A")]
-    matched, _ = match_images("fake_path.xlsx", located)
-    assert matched[0].source == "position"
-
-
-def test_asset_repository_stub_defaults_to_none_so_items_stay_text_only(monkeypatch):
-    # with no asset repository configured (current default), anything
-    # position-matching misses must land as text_only, not error out
+def test_match_images_no_column_images_stays_text_only(monkeypatch):
+    # only image source is request.xlsx itself — nothing else to fall
+    # back to, so a miss must land as text_only, not error out
     from tools import match_images as mi_module
 
     monkeypatch.setattr(mi_module, "get_picture_anchors", lambda path: [])
@@ -133,18 +122,3 @@ def test_asset_repository_stub_defaults_to_none_so_items_stay_text_only(monkeypa
     matched, text_only = match_images("fake_path.xlsx", located)
     assert len(matched) == 0
     assert len(text_only) == 1
-
-
-def test_asset_repository_fallback_used_when_position_match_fails(monkeypatch):
-    from tools import match_images as mi_module
-
-    monkeypatch.setattr(mi_module, "get_picture_anchors", lambda path: [])
-    monkeypatch.setattr(mi_module, "lookup_image_by_name",
-                         lambda name: "assets/아이템A.png" if name == "아이템A" else None)
-
-    located = [LocatedItem("아이템A", False, row=19, col_letter="B", matched_cell_text="아이템A")]
-    matched, text_only = match_images("fake_path.xlsx", located)
-    assert len(matched) == 1
-    assert matched[0].source == "asset_repo"
-    assert matched[0].image_path == "assets/아이템A.png"
-    assert len(text_only) == 0
