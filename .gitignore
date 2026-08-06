@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+ai_results/
+.env
+~$*.xlsx
+*.tmp
+.claude/settings.local.json
+samples/
+out/
