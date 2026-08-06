@@ -28,6 +28,25 @@ class ClassificationError(Exception):
     """Raised when the model's output doesn't validate against the schema."""
 
 
+def _unstringify_nested_json(value):
+    """Occasionally (observed on 202602) the model stuffs a nested array/
+    object as a JSON-encoded string instead of real nested JSON, even
+    with tool-use forcing — e.g. {"sections": "[{...}]"} instead of
+    {"sections": [{...}]}. Recursively un-stringify anything that looks
+    like it, so a real structural problem still fails validation instead
+    of being masked, but this formatting quirk doesn't."""
+    if isinstance(value, dict):
+        return {k: _unstringify_nested_json(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_unstringify_nested_json(v) for v in value]
+    if isinstance(value, str) and value.strip()[:1] in "[{":
+        try:
+            return _unstringify_nested_json(json.loads(value))
+        except (json.JSONDecodeError, ValueError):
+            return value
+    return value
+
+
 def _anthropic_classify(system_prompt: str, user_prompt: str, schema_model: Type[T], model: str) -> T:
     import anthropic
 
@@ -41,7 +60,7 @@ def _anthropic_classify(system_prompt: str, user_prompt: str, schema_model: Type
 
     response = client.messages.create(
         model=model,
-        max_tokens=2048,
+        max_tokens=4096,
         system=system_prompt,
         tools=[tool],
         tool_choice={"type": "tool", "name": tool_name},
@@ -50,8 +69,18 @@ def _anthropic_classify(system_prompt: str, user_prompt: str, schema_model: Type
 
     for block in response.content:
         if block.type == "tool_use" and block.name == tool_name:
+            if response.stop_reason == "max_tokens":
+                raise ClassificationError(
+                    "response truncated at max_tokens — output was too large to finish "
+                    "(likely too many items in one section), not a real schema mismatch"
+                )
+            if not isinstance(block.input, dict):
+                raise ClassificationError(
+                    f"tool_use input was not a JSON object (got {type(block.input).__name__}), "
+                    "likely a truncated/malformed response"
+                )
             try:
-                return schema_model.model_validate(block.input)
+                return schema_model.model_validate(_unstringify_nested_json(block.input))
             except Exception as e:
                 raise ClassificationError(f"schema validation failed: {e}") from e
 

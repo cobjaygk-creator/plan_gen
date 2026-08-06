@@ -1,0 +1,120 @@
+"""Step 8: connect steps 5-7-6-3 into one pipeline per month.
+
+request.xlsx
+  -> parse_fixed_fields (step 5, no AI)
+  -> extract_special_reward_rows (step 6 prep, no AI)
+  -> classify_month (step 6, AI: Haiku->Sonnet)
+  -> locate_items + match_images (step 7, no AI)
+  -> dispatch to the matching tools.blocks function (step 3) per section
+
+Each section's items become {"name": ..., "image": path_or_None}, fed to
+whichever block engine function its block_type maps to. Block engine
+functions raise ValueError on malformed input (design: never silently
+misrender) — this module catches that per-section and records it as a
+RenderError rather than crashing the whole month, since one bad section
+in a 4-page request shouldn't block the other three.
+"""
+from dataclasses import dataclass, field
+
+from tools.parse_fixed_fields import parse_fixed_fields
+from tools.extract_special_reward import extract_special_reward_rows, to_compact_text
+from tools.classify_month import classify_month, NeedsHumanReview
+from tools.locate_items import locate_items
+from tools.match_images import match_images
+from tools.blocks import (
+    grid_block, text_list_block, new_highlight_block, few_preview_block, paired_columns_block,
+    has_any_overlap,
+)
+
+
+@dataclass
+class SectionResult:
+    title: str
+    block_type: str
+    item_count: int
+    matched_image_count: int
+    text_only_count: int
+    pages: list = field(default_factory=list)
+    render_error: str | None = None
+
+
+@dataclass
+class MonthResult:
+    month: str
+    sections: list[SectionResult] = field(default_factory=list)
+    needs_human_review: str | None = None
+    fatal_error: str | None = None
+
+
+def _items_with_images(section, matched, text_only) -> list[dict]:
+    image_by_name = {m.name: m.image_path for m in matched}
+    out = []
+    for item in section.items:
+        out.append({"name": item.name, "image": image_by_name.get(item.name), "is_new": item.is_new})
+    return out
+
+
+def _render_section(section, items: list[dict]) -> list:
+    bt = section.block_type
+    if bt == "grid":
+        return grid_block(items, columns=3, icon_size=24.0)
+    if bt == "text_list":
+        return text_list_block(items, columns=3)
+    if bt == "new_highlight":
+        new_items = [i for i in items if i["is_new"]]
+        rest_items = [i for i in items if not i["is_new"]]
+        return new_highlight_block(new_items, rest_items)
+    if bt == "few_preview":
+        return few_preview_block(items)
+    if bt == "paired_columns":
+        pair_items, sub_items = items[:2], items[2:] or None
+        return paired_columns_block(pair_items, sub_items=sub_items, footnote=section.footnote)
+    raise ValueError(f"unknown block_type: {bt!r}")
+
+
+def process_month(month: str, request_path: str, image_out_dir: str | None = None) -> MonthResult:
+    fixed = parse_fixed_fields(request_path)
+    rows = extract_special_reward_rows(request_path, fixed["special_reward_start_row"])
+    raw_text = to_compact_text(rows)
+
+    try:
+        classify_result = classify_month(month, raw_text)
+    except NeedsHumanReview as e:
+        return MonthResult(month, needs_human_review=str(e))
+
+    result = MonthResult(month)
+    for section in classify_result.output.sections:
+        located, unlocated = locate_items(rows, section.items)
+        matched, text_only = match_images(request_path, located, out_dir=image_out_dir)
+        items = _items_with_images(section, matched, text_only)
+
+        try:
+            pages = _render_section(section, items)
+            result.sections.append(SectionResult(
+                title=section.section_title, block_type=section.block_type,
+                item_count=len(section.items), matched_image_count=len(matched),
+                text_only_count=len(text_only) + len(unlocated), pages=pages,
+            ))
+        except ValueError as e:
+            result.sections.append(SectionResult(
+                title=section.section_title, block_type=section.block_type,
+                item_count=len(section.items), matched_image_count=len(matched),
+                text_only_count=len(text_only) + len(unlocated), render_error=str(e),
+            ))
+
+    return result
+
+
+def summarize(result: MonthResult) -> str:
+    if result.fatal_error:
+        return f"[ERROR] {result.month}: {result.fatal_error}"
+    if result.needs_human_review:
+        return f"[NEEDS_REVIEW] {result.month}: {result.needs_human_review}"
+    lines = [f"{result.month}:"]
+    for s in result.sections:
+        overlap_pages = sum(1 for p in s.pages if has_any_overlap(p)) if s.pages else 0
+        status = "ERROR" if s.render_error else ("OVERLAP" if overlap_pages else "OK")
+        img_pct = (s.matched_image_count / s.item_count * 100) if s.item_count else 0
+        detail = s.render_error or f"img={img_pct:.0f}% overlap_pages={overlap_pages}/{len(s.pages)}"
+        lines.append(f"  [{status}] {s.title} ({s.block_type}, {s.item_count} items): {detail}")
+    return "\n".join(lines)
