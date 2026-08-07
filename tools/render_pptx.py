@@ -14,10 +14,10 @@ header bar, caption color, NEW styling), not full pixel parity.
 """
 import os
 from pptx import Presentation
-from pptx.util import Pt
+from pptx.util import Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
-from pptx.enum.text import PP_ALIGN
+from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 
 from tools.blocks.geometry import Placement, CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM
 
@@ -33,6 +33,7 @@ HEADER_BG = RGBColor(0x40, 0x40, 0x40)         # tx1 lumMod75%/lumOff25% = "Text
 HEADER_TEXT_COLOR = RGBColor(0xFF, 0xFF, 0xFF)  # bg1
 NEW_BADGE_COLOR = RGBColor(0xFF, 0x00, 0x00)
 CARD_CORNER_RADIUS = 0.095  # adj≈9481 in prstGeom roundRect terms
+NEW_CARD_BORDER = RGBColor(0xE8, 0x3E, 0x3E)  # reference sample's NEW-card border
 CONTENT_BG_FILL = RGBColor(0xF2, 0xF2, 0xF2)   # bg1 lumMod95% = "Background 1, Darker 5%"
 CONTENT_BG_BORDER = RGBColor(0xBF, 0xBF, 0xBF)  # same swatch as card border
 
@@ -55,22 +56,51 @@ def _add_content_background(slide):
     return panel
 
 
+def _add_picture_fitted(slide, image_path, left, top, width, height, margin=Pt(4)):
+    """Inserts the picture at its real aspect ratio, letterboxed to fit
+    inside (left,top,width,height) rather than stretched to fill it —
+    matters here because request.xlsx images are a mix of square icons
+    and wide logo/banner shapes (e.g. the "RETRO" title asset), and
+    stretching those into a square cell visibly distorts them."""
+    try:
+        from PIL import Image
+        with Image.open(image_path) as im:
+            iw, ih = im.size
+    except Exception:
+        slide.shapes.add_picture(image_path, left, top, width, height)
+        return
+
+    avail_w, avail_h = width - margin * 2, height - margin * 2
+    ratio = iw / ih if ih else 1.0
+    disp_w = avail_w
+    disp_h = Emu(int(disp_w / ratio)) if ratio else avail_h
+    if disp_h > avail_h:
+        disp_h = avail_h
+        disp_w = Emu(int(disp_h * ratio))
+    pic_left = left + (width - disp_w) / 2
+    pic_top = top + (height - disp_h) / 2
+    slide.shapes.add_picture(image_path, pic_left, pic_top, disp_w, disp_h)
+
+
 def _item_name(ref) -> str:
     if isinstance(ref, dict):
         return ref.get("name", "")
     return str(ref) if ref is not None else ""
 
 
-def _add_card_frame(slide, left, top, width, height):
+def _add_card_frame(slide, left, top, width, height, is_new=False):
     """White rounded-rect card frame — drawn behind every icon/image slot
     regardless of whether a real picture ends up on top of it, matching
-    the source pptx (the card frame shape exists independently of 그림 N)."""
+    the source pptx (the card frame shape exists independently of 그림 N).
+    is_new items get a red border + thicker line so the card itself reads
+    as "new" at a glance, not just the small corner badge (matches the
+    reference sample the user compared against)."""
     frame = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, left, top, width, height)
     frame.adjustments[0] = CARD_CORNER_RADIUS
     frame.fill.solid()
     frame.fill.fore_color.rgb = CARD_FILL
-    frame.line.color.rgb = CARD_BORDER
-    frame.line.width = Pt(0.25)
+    frame.line.color.rgb = NEW_CARD_BORDER if is_new else CARD_BORDER
+    frame.line.width = Pt(1.25) if is_new else Pt(0.25)
     frame.shadow.inherit = False
     return frame
 
@@ -80,21 +110,26 @@ def _add_placement(slide, placement: Placement):
     width, height = Pt(placement.width), Pt(placement.height)
 
     if placement.kind in ("icon", "image"):
-        _add_card_frame(slide, left, top, width, height)
+        is_new = isinstance(placement.ref, dict) and bool(placement.ref.get("is_new"))
+        _add_card_frame(slide, left, top, width, height, is_new=is_new)
         image_path = placement.ref.get("image") if isinstance(placement.ref, dict) else None
         if image_path and os.path.exists(image_path):
-            slide.shapes.add_picture(image_path, left, top, width, height)
+            _add_picture_fitted(slide, image_path, left, top, width, height)
             return
-        if isinstance(placement.ref, dict) and placement.ref.get("is_new"):
+        if is_new:
             # genuinely new item, art not ready yet — say so instead of a
-            # silent blank box (matches source data's own "이미지 추후 전달 예정")
-            tb = slide.shapes.add_textbox(left, top, width, height)
+            # silent blank box (matches source data's own "이미지 추후 전달 예정").
+            # Starts below where the NEW badge sits (top-left corner) so the
+            # two don't visually collide.
+            badge_clearance = Pt(22)
+            tb = slide.shapes.add_textbox(left, top + badge_clearance, width, height - badge_clearance)
             tf = tb.text_frame
             tf.word_wrap = True
-            tf.text = "이미지 추후 전달 예정"
+            tf.vertical_anchor = MSO_ANCHOR.MIDDLE
+            tf.text = "이미지\n추후 전달 예정"
             p = tf.paragraphs[0]
             p.alignment = PP_ALIGN.CENTER
-            p.font.size = Pt(6)
+            p.font.size = Pt(8)
             p.font.name = BODY_FONT
             p.font.color.rgb = CAPTION_COLOR
         # ordinary item with no matched image: leave the card frame empty —

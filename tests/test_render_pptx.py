@@ -98,6 +98,6 @@ def test_render_pptx_shows_pending_image_note_for_new_items_without_image(tmp_pa
 
     all_text = [s.text_frame.text for slide in prs.slides for s in slide.shapes if s.has_text_frame]
     joined = " | ".join(all_text)
-    assert "이미지 추후 전달 예정" in joined
+    assert "이미지\n추후 전달 예정" in joined
     # only the new item without an image gets the note, not the ordinary one
-    assert joined.count("이미지 추후 전달 예정") == 1
+    assert joined.count("이미지\n추후 전달 예정") == 1

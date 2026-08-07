@@ -36,6 +36,7 @@ class SectionResult:
     text_only_count: int
     pages: list = field(default_factory=list)
     render_error: str | None = None
+    footnote: str | None = None
 
 
 @dataclass
@@ -103,12 +104,14 @@ def process_month(month: str, request_path: str, image_out_dir: str | None = Non
                 title=section.section_title, block_type=section.block_type,
                 item_count=len(section.items), matched_image_count=len(matched),
                 text_only_count=len(text_only) + len(unlocated), pages=pages,
+                footnote=section.footnote,
             ))
         except ValueError as e:
             result.sections.append(SectionResult(
                 title=section.section_title, block_type=section.block_type,
                 item_count=len(section.items), matched_image_count=len(matched),
                 text_only_count=len(text_only) + len(unlocated), render_error=str(e),
+                footnote=section.footnote,
             ))
 
     return result
