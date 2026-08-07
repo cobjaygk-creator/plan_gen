@@ -29,8 +29,8 @@ class ClassificationError(Exception):
 
 
 def _unstringify_nested_json(value):
-    """Occasionally (observed on 202602) the model stuffs a nested array/
-    object as a JSON-encoded string instead of real nested JSON, even
+    """Occasionally (observed on 202602/202603) the model stuffs a nested
+    array/object as a JSON-encoded string instead of real nested JSON, even
     with tool-use forcing — e.g. {"sections": "[{...}]"} instead of
     {"sections": [{...}]}. Recursively un-stringify anything that looks
     like it, so a real structural problem still fails validation instead
@@ -44,6 +44,27 @@ def _unstringify_nested_json(value):
             return _unstringify_nested_json(json.loads(value))
         except (json.JSONDecodeError, ValueError):
             return value
+    return value
+
+
+def _unwrap_self_nesting(value):
+    """Confirmed directly on 202602's raw Sonnet response: the stringified
+    value from _unstringify_nested_json can itself be a dict that redundantly
+    re-wraps the very same key one level deeper — the tool call came back
+    as {"sections": "{\\"sections\\": [...]}"} (a JSON string, itself an
+    object with a "sections" key holding the real array), so after
+    unstringifying you're left with {"sections": {"sections": [...]}}, still
+    one level too deep for the schema. If a dict's value is itself a dict
+    whose only key is that same key name, unwrap it — recurse first so this
+    also catches it nested deeper than the top level."""
+    if isinstance(value, dict):
+        unwrapped = {k: _unwrap_self_nesting(v) for k, v in value.items()}
+        return {
+            k: (v[k] if isinstance(v, dict) and set(v.keys()) == {k} else v)
+            for k, v in unwrapped.items()
+        }
+    if isinstance(value, list):
+        return [_unwrap_self_nesting(v) for v in value]
     return value
 
 
@@ -85,7 +106,8 @@ def _anthropic_classify(system_prompt: str, user_prompt: str, schema_model: Type
                     "likely a truncated/malformed response"
                 )
             try:
-                return schema_model.model_validate(_unstringify_nested_json(block.input))
+                cleaned = _unwrap_self_nesting(_unstringify_nested_json(block.input))
+                return schema_model.model_validate(cleaned)
             except Exception as e:
                 raise ClassificationError(f"schema validation failed: {e}") from e
 
