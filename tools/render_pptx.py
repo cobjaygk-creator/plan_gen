@@ -109,9 +109,17 @@ def _add_placement(slide, placement: Placement):
     left, top = Pt(placement.left), Pt(placement.top)
     width, height = Pt(placement.width), Pt(placement.height)
 
+    if placement.kind == "frame":
+        # background card only, drawn behind whatever placements follow it
+        # in the same page's list (python-pptx stacks new shapes on top of
+        # earlier ones, so this must be added first) — see paired_columns_block
+        _add_card_frame(slide, left, top, width, height)
+        return
+
     if placement.kind in ("icon", "image"):
         is_new = isinstance(placement.ref, dict) and bool(placement.ref.get("is_new"))
-        _add_card_frame(slide, left, top, width, height, is_new=is_new)
+        if not placement.meta.get("no_frame"):
+            _add_card_frame(slide, left, top, width, height, is_new=is_new)
         image_path = placement.ref.get("image") if isinstance(placement.ref, dict) else None
         if image_path and os.path.exists(image_path):
             _add_picture_fitted(slide, image_path, left, top, width, height)
@@ -156,12 +164,20 @@ def _add_placement(slide, placement: Placement):
     tb = slide.shapes.add_textbox(left, top, width, height)
     tf = tb.text_frame
     tf.word_wrap = True
-    tf.text = _item_name(placement.ref)
-    p = tf.paragraphs[0]
-    p.alignment = PP_ALIGN.CENTER
-    p.font.size = Pt(8)
-    p.font.name = BODY_FONT
-    p.font.color.rgb = CAPTION_COLOR
+    align = PP_ALIGN.LEFT if placement.meta.get("align") == "left" else PP_ALIGN.CENTER
+    lines = _item_name(placement.ref).split("\n") or [""]
+    tf.text = lines[0]
+    tf.paragraphs[0].alignment = align
+    tf.paragraphs[0].font.size = Pt(8)
+    tf.paragraphs[0].font.name = BODY_FONT
+    tf.paragraphs[0].font.color.rgb = CAPTION_COLOR
+    for line in lines[1:]:
+        p = tf.add_paragraph()
+        p.text = line
+        p.alignment = align
+        p.font.size = Pt(8)
+        p.font.name = BODY_FONT
+        p.font.color.rgb = CAPTION_COLOR
 
 
 def _add_section_header(slide, text: str, left=Pt(20), top=Pt(20), width=Pt(500), height=Pt(36)):

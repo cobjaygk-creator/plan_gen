@@ -150,3 +150,35 @@ class TestPairedColumnsBlock:
         assert len(pages) == 1
         assert not has_any_overlap(pages[0])
         assert_within_content_box(pages[0])
+
+    def test_card_frame_grows_with_sub_item_count(self):
+        # real bug: the card around each pair used to be a fixed size that
+        # only wrapped the portrait image, leaving the sub-item list to
+        # float below it with no border — the frame must stretch to
+        # actually contain however much content ends up in that column.
+        short_pages = paired_columns_block(
+            make_items(2, "set"), sub_items_by_pair=(make_items(2, "sub0"), make_items(2, "sub1")),
+        )
+        long_pages = paired_columns_block(
+            make_items(2, "set"), sub_items_by_pair=(make_items(8, "sub0"), make_items(8, "sub1")),
+        )
+        short_frame = next(p for p in short_pages[0] if p.kind == "frame")
+        long_frame = next(p for p in long_pages[0] if p.kind == "frame")
+        assert long_frame.height > short_frame.height
+
+    def test_sub_items_with_images_get_icon_placements(self):
+        pages = paired_columns_block(
+            make_items(2, "set"),
+            sub_items_by_pair=(make_items(3, "sub0"), make_items(3, "sub1")),
+        )
+        icon_kinds = [p for p in pages[0] if p.kind == "icon"]
+        assert len(icon_kinds) == 6  # one per sub-item, since make_items() always sets an image
+        text_kinds = [p for p in pages[0] if p.kind == "text" and p.meta.get("align") == "left"]
+        assert len(text_kinds) == 6
+
+    def test_sub_items_without_images_stay_plain_text(self):
+        no_image_subs = [{"name": f"sub{i}"} for i in range(3)]  # no "image" key at all
+        pages = paired_columns_block(make_items(2, "set"), sub_items_by_pair=(no_image_subs, no_image_subs))
+        assert not any(p.kind == "icon" for p in pages[0])
+        assert not has_any_overlap(pages[0])
+        assert_within_content_box(pages[0])

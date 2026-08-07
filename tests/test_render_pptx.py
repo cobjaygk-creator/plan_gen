@@ -5,9 +5,11 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from pptx import Presentation
 
-from tools.render_pptx import render_pptx, SLIDE_WIDTH_PT, SLIDE_HEIGHT_PT
+from pptx.util import Pt
+
+from tools.render_pptx import render_pptx, SLIDE_WIDTH_PT, SLIDE_HEIGHT_PT, _add_placement
 from tools.pipeline import MonthResult, SectionResult
-from tools.blocks import grid_block
+from tools.blocks import grid_block, Placement
 
 FIXED = {
     "title_lines": ["테스트 부제목", "테스트 배틀패스"],
@@ -101,3 +103,40 @@ def test_render_pptx_shows_pending_image_note_for_new_items_without_image(tmp_pa
     assert "이미지\n추후 전달 예정" in joined
     # only the new item without an image gets the note, not the ordinary one
     assert joined.count("이미지\n추후 전달 예정") == 1
+
+
+def test_multiline_text_placement_styles_every_paragraph(tmp_path):
+    # real bug: a "\n"-joined footnote ("* 문장1.\n* 문장2.") relied on
+    # python-pptx auto-splitting text_frame.text on "\n" into paragraphs,
+    # but only paragraphs[0] ever got an explicit font size — the
+    # auto-created second paragraph fell back to the theme's default
+    # (much larger) size and visually overflowed into the fixed content
+    # below it. Every paragraph must get the same explicit styling.
+    prs = Presentation()
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    placement = Placement("text", 10.0, 10.0, 400.0, 40.0, "* 첫 번째 문장입니다.\n* 두 번째 문장입니다.")
+    _add_placement(slide, placement)
+
+    tb = next(s for s in slide.shapes if s.has_text_frame)
+    tf = tb.text_frame
+    assert len(tf.paragraphs) == 2
+    assert tf.paragraphs[0].text == "* 첫 번째 문장입니다."
+    assert tf.paragraphs[1].text == "* 두 번째 문장입니다."
+    assert tf.paragraphs[0].font.size == Pt(8)
+    assert tf.paragraphs[1].font.size == Pt(8)
+
+
+def test_frame_placement_draws_card_with_no_picture_or_text(tmp_path):
+    prs = Presentation()
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    _add_placement(slide, Placement("frame", 10.0, 10.0, 200.0, 100.0))
+    shapes = list(slide.shapes)
+    assert len(shapes) == 1
+    assert not shapes[0].has_text_frame or shapes[0].text_frame.text == ""
+
+
+def test_no_frame_meta_skips_card_border_on_image_placement(tmp_path):
+    prs = Presentation()
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    _add_placement(slide, Placement("image", 10.0, 10.0, 80.0, 80.0, {"image": None}, meta={"no_frame": True}))
+    assert len(list(slide.shapes)) == 0

@@ -18,7 +18,11 @@ PAIR_HEIGHT_MIN = 90.0
 PAIR_HEIGHT_MAX = 260.0
 PAIR_CAPTION_HEIGHT = 20.0
 SUB_ROW_HEIGHT = 18.0
-FOOTNOTE_HEIGHT = 16.0
+SUB_ICON_SIZE = 16.0
+SUB_ICON_GAP = 6.0
+SUB_ROW_INSET = 8.0  # left/right margin inside the card for sub-item rows
+CARD_BOTTOM_PAD = 8.0  # card frame grows this much past the last row it wraps
+FOOTNOTE_LINE_HEIGHT = 14.0
 
 
 def paired_columns_block(
@@ -43,35 +47,60 @@ def paired_columns_block(
     ratio = PAIR_HEIGHT_WITH_SUBLIST_RATIO if has_sublists else PAIR_HEIGHT_RATIO
     pair_height = min(PAIR_HEIGHT_MAX, max(PAIR_HEIGHT_MIN, height * ratio))
 
+    footnote_lines = footnote.count("\n") + 1 if footnote else 0
+    footnote_height = footnote_lines * FOOTNOTE_LINE_HEIGHT
+
     placements = []
     cell_w = (width - PAIR_GAP_X) / 2
     cursor_ys = []
     for idx, item in enumerate(pair_items):
         x = left + idx * (cell_w + PAIR_GAP_X)
-        placements.append(Placement("image", x, top, cell_w, pair_height, item))
-        placements.append(Placement("caption", x, top + pair_height, cell_w, PAIR_CAPTION_HEIGHT, item.get("name")))
+        pair_placements = [
+            # no_frame: the wrapping card (added below, once its height is
+            # known) already gives this column a border — a second border
+            # just around the portrait would double up against it
+            Placement("image", x, top, cell_w, pair_height, item, meta={"no_frame": True}),
+            Placement("caption", x, top + pair_height, cell_w, PAIR_CAPTION_HEIGHT, item.get("name")),
+        ]
         cursor_y = top + pair_height + PAIR_CAPTION_HEIGHT + 8.0
 
         sub_items = sub_items_by_pair[idx] if sub_items_by_pair and idx < len(sub_items_by_pair) else None
         if sub_items:
-            rows_avail = int((bottom - FOOTNOTE_HEIGHT - cursor_y) // SUB_ROW_HEIGHT)
+            rows_avail = int((bottom - footnote_height - cursor_y) // SUB_ROW_HEIGHT)
             if len(sub_items) > max(0, rows_avail):
                 raise ValueError(
                     f"paired_columns_block: pair {idx} has {len(sub_items)} sub_items, "
                     f"only {max(0, rows_avail)} rows available — design doc doesn't define "
                     "pagination for block D, escalate"
                 )
+            has_icons = any(si.get("image") for si in sub_items)
             for row, sub_item in enumerate(sub_items):
                 y = cursor_y + row * SUB_ROW_HEIGHT
-                placements.append(Placement("text", x, y, cell_w, SUB_ROW_HEIGHT, sub_item.get("name")))
+                if has_icons:
+                    icon_y = y + (SUB_ROW_HEIGHT - SUB_ICON_SIZE) / 2
+                    pair_placements.append(Placement("icon", x + SUB_ROW_INSET, icon_y, SUB_ICON_SIZE, SUB_ICON_SIZE, sub_item))
+                    text_x = x + SUB_ROW_INSET + SUB_ICON_SIZE + SUB_ICON_GAP
+                    text_w = cell_w - 2 * SUB_ROW_INSET - SUB_ICON_SIZE - SUB_ICON_GAP
+                    pair_placements.append(Placement("text", text_x, y, text_w, SUB_ROW_HEIGHT, sub_item.get("name"), meta={"align": "left"}))
+                else:
+                    pair_placements.append(Placement("text", x, y, cell_w, SUB_ROW_HEIGHT, sub_item.get("name")))
             cursor_y += len(sub_items) * SUB_ROW_HEIGHT
         cursor_ys.append(cursor_y)
+
+        # background card sized to wrap exactly what this column ended up
+        # containing (image + caption + its own sub-item list) instead of a
+        # box that stops short of / overshoots the actual content — must be
+        # inserted before this pair's other placements so it renders behind
+        # them (python-pptx stacks later-added shapes on top of earlier ones)
+        card_bottom = min(cursor_y + CARD_BOTTOM_PAD, bottom)
+        placements.append(Placement("frame", x, top, cell_w, card_bottom - top))
+        placements.extend(pair_placements)
 
     if footnote:
         # right after wherever the taller of the two columns' content
         # ended — NOT pinned to the box bottom, which left a dead gap
         # whenever a column was short (see git history for that bug)
-        y = min(max(cursor_ys) + 10.0, bottom - FOOTNOTE_HEIGHT)
-        placements.append(Placement("text", left, y, width, FOOTNOTE_HEIGHT, footnote))
+        y = min(max(cursor_ys) + 10.0, bottom - footnote_height)
+        placements.append(Placement("text", left, y, width, footnote_height, footnote))
 
     return [placements]

@@ -18,7 +18,7 @@ CONTENT_HEIGHT = CONTENT_BOTTOM - CONTENT_TOP
 
 @dataclass
 class Placement:
-    kind: str                    # 'icon' | 'caption' | 'badge' | 'image' | 'text'
+    kind: str                    # 'icon' | 'caption' | 'badge' | 'image' | 'text' | 'frame'
     left: float
     top: float
     width: float
@@ -43,10 +43,12 @@ def overlaps(a: Placement, b: Placement) -> bool:
     return True
 
 
-def has_any_overlap(placements: list[Placement], ignore_kinds: tuple[str, ...] = ("badge",)) -> bool:
+def has_any_overlap(placements: list[Placement], ignore_kinds: tuple[str, ...] = ("badge", "frame")) -> bool:
     """Badges intentionally overlay their parent image/icon corner by design
-    (see the NEW-badge reference sample) — excluded by default. Pass
-    ignore_kinds=() to check literally everything."""
+    (see the NEW-badge reference sample) — excluded by default. 'frame' is a
+    background card drawn behind a group of other placements (see
+    paired_columns_block) and is expected to overlap everything inside it.
+    Pass ignore_kinds=() to check literally everything."""
     checked = [p for p in placements if p.kind not in ignore_kinds]
     for i in range(len(checked)):
         for j in range(i + 1, len(checked)):

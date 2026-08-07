@@ -23,7 +23,7 @@ from schemas.classification_schema import ClassificationOutput
 from schemas.few_shot_examples import FEW_SHOT_EXAMPLES
 from tools.ai_client import classify, HAIKU_MODEL, SONNET_MODEL, ClassificationError
 
-PROMPT_VERSION = "v4"  # v4: paired_columns pair_group tagging for per-set sub-item lists
+PROMPT_VERSION = "v5"  # v5: preserve intentionally-repeated same-name rows instead of deduping them
 CONFIDENCE_THRESHOLD = 0.7
 CACHE_DIR = "ai_results"
 
@@ -69,6 +69,10 @@ true로, 그리고 confidence를 낮춰서 사람이 재확인하게 해라.
 절대 원칙:
 - 좌표/이미지 매칭은 네 역할이 아니다. 오직 텍스트 분류 + 항목 추출만 한다.
 - 원문에 없는 항목을 지어내지 마라. 원문 이름을 그대로 옮겨라 (오타 포함).
+- **같은 이름이 서로 다른 행에 여러 번 나오면, 그건 실수로 중복 입력된 게 아니라
+  같은 이름을 쓰는 별개의 항목(수량/파츠가 다름)일 가능성이 높다 — 임의로 하나로
+  합치지 말고 원문에 나온 행 개수 그대로 items에 각각 넣어라.** 판단 근거가 되는
+  각주(예: "OOO은 착용 파츠가 다른 N종이 지급됩니다")가 있으면 그게 명확한 신호다.
 - 하나의 입력에 여러 섹션(예: "기간제 패키지"와 "배틀패스 의상 교환권")이 섞여 있으면
   섹션별로 각각 분류해라. 섹션 구분은 볼드/헤더처럼 보이는 짧은 제목 줄로 판단한다.
 - confidence는 네가 이 분류에 얼마나 확신하는지 0~1로 정직하게 적어라. 애매하면
