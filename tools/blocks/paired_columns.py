@@ -45,7 +45,11 @@ def paired_columns_block(pair_items: list[dict], sub_items: list[dict] | None = 
         cursor_y += (((len(sub_items) - 1) // SUB_COLUMNS) + 1) * SUB_ROW_HEIGHT if sub_items else 0
 
     if footnote:
-        y = CONTENT_BOTTOM - FOOTNOTE_HEIGHT
+        # right after wherever the actual content ended (pair captions, or
+        # sub_items if present) — NOT pinned to CONTENT_BOTTOM, which left
+        # a large dead gap and made the footnote look stranded at the very
+        # bottom whenever there were no sub_items (the common case)
+        y = min(cursor_y + 10.0, CONTENT_BOTTOM - FOOTNOTE_HEIGHT)
         placements.append(Placement("text", CONTENT_LEFT, y, CONTENT_WIDTH, FOOTNOTE_HEIGHT, footnote))
 
     return [placements]

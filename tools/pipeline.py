@@ -72,6 +72,16 @@ def _render_section(section, items: list[dict]) -> list:
 
 
 def process_month(month: str, request_path: str, image_out_dir: str | None = None) -> MonthResult:
+    """image_out_dir=None extracts to out/<month>/images by default — NOT
+    "no images": omitting it used to silently leave match_images.py's
+    in-archive paths (e.g. "xl/media/image8.PNG") on each item, which
+    render_pptx.py's os.path.exists() check then quietly treats as "no
+    image" (empty card, no error). That's how a fully-matched section
+    could render with zero pictures. Pass an explicit dir (or the same
+    default) if you want the images anywhere else."""
+    if image_out_dir is None:
+        image_out_dir = f"out/{month}/images"
+
     fixed = parse_fixed_fields(request_path)
     rows = extract_special_reward_rows(request_path, fixed["special_reward_start_row"])
     raw_text = to_compact_text(rows)

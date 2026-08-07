@@ -23,10 +23,10 @@ def _fake_classify(month, raw_text, **kwargs):
     return ClassifyResult(month, output, "claude-haiku-4-5-20251001", from_cache=False)
 
 
-def test_process_month_renders_grid_section_end_to_end():
+def test_process_month_renders_grid_section_end_to_end(tmp_path):
     with patch("tools.pipeline.classify_month", side_effect=_fake_classify):
         path = os.path.join(SAMPLES_DIR, "202605_request.xlsx")
-        result = pipeline.process_month("202605", path)
+        result = pipeline.process_month("202605", path, image_out_dir=str(tmp_path))
 
     assert result.needs_human_review is None
     assert result.fatal_error is None
@@ -39,7 +39,7 @@ def test_process_month_renders_grid_section_end_to_end():
     assert "[OK]" in summary or "[OVERLAP]" in summary
 
 
-def test_process_month_records_render_error_without_crashing():
+def test_process_month_records_render_error_without_crashing(tmp_path):
     def fake_classify_bad_paired(month, raw_text, **kwargs):
         output = ClassificationOutput(sections=[
             Section(section_title="이상한 섹션", block_type="paired_columns",
@@ -49,7 +49,7 @@ def test_process_month_records_render_error_without_crashing():
 
     with patch("tools.pipeline.classify_month", side_effect=fake_classify_bad_paired):
         path = os.path.join(SAMPLES_DIR, "202605_request.xlsx")
-        result = pipeline.process_month("202605", path)
+        result = pipeline.process_month("202605", path, image_out_dir=str(tmp_path))
 
     assert len(result.sections) == 1
     assert result.sections[0].render_error is not None  # paired_columns needs exactly 2
@@ -57,7 +57,7 @@ def test_process_month_records_render_error_without_crashing():
     assert "[ERROR]" in summary
 
 
-def test_process_month_propagates_needs_human_review():
+def test_process_month_propagates_needs_human_review(tmp_path):
     from tools.classify_month import NeedsHumanReview
 
     def fake_classify_raises(month, raw_text, **kwargs):
@@ -65,7 +65,25 @@ def test_process_month_propagates_needs_human_review():
 
     with patch("tools.pipeline.classify_month", side_effect=fake_classify_raises):
         path = os.path.join(SAMPLES_DIR, "202605_request.xlsx")
-        result = pipeline.process_month("202605", path)
+        result = pipeline.process_month("202605", path, image_out_dir=str(tmp_path))
 
     assert result.needs_human_review is not None
     assert "202605" in pipeline.summarize(result)
+
+
+def test_process_month_defaults_to_real_local_image_paths():
+    # Regression: omitting image_out_dir used to leave in-archive paths
+    # (e.g. "xl/media/image8.PNG") on matched items, which render_pptx.py's
+    # os.path.exists() check silently treats as "no image" — a fully-
+    # matched section could render with zero pictures and no error at all.
+    with patch("tools.pipeline.classify_month", side_effect=_fake_classify):
+        path = os.path.join(SAMPLES_DIR, "202605_request.xlsx")
+        result = pipeline.process_month("202605", path)  # no image_out_dir
+
+    section = result.sections[0]
+    for page in section.pages:
+        for placement in page:
+            if placement.kind == "icon" and isinstance(placement.ref, dict):
+                image_path = placement.ref.get("image")
+                if image_path:
+                    assert os.path.exists(image_path), f"matched image path is not a real file: {image_path}"

@@ -19,7 +19,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN
 
-from tools.blocks.geometry import Placement
+from tools.blocks.geometry import Placement, CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM
 
 SLIDE_WIDTH_PT = 960
 SLIDE_HEIGHT_PT = 540
@@ -33,6 +33,26 @@ HEADER_BG = RGBColor(0x40, 0x40, 0x40)         # tx1 lumMod75%/lumOff25% = "Text
 HEADER_TEXT_COLOR = RGBColor(0xFF, 0xFF, 0xFF)  # bg1
 NEW_BADGE_COLOR = RGBColor(0xFF, 0x00, 0x00)
 CARD_CORNER_RADIUS = 0.095  # adj≈9481 in prstGeom roundRect terms
+CONTENT_BG_FILL = RGBColor(0xF2, 0xF2, 0xF2)   # bg1 lumMod95% = "Background 1, Darker 5%"
+CONTENT_BG_BORDER = RGBColor(0xBF, 0xBF, 0xBF)  # same swatch as card border
+
+
+def _add_content_background(slide):
+    """Large rounded panel behind the whole content grid — source pptx's
+    "모서리가 둥근 직사각형 89" shape (round2SameRect, bg1 lumMod95%/lumMod75%
+    border). Was missing entirely before; every item just floated on the
+    plain white slide with no panel behind it."""
+    panel = slide.shapes.add_shape(
+        MSO_SHAPE.ROUNDED_RECTANGLE,
+        Pt(CONTENT_LEFT), Pt(CONTENT_TOP), Pt(CONTENT_WIDTH), Pt(CONTENT_BOTTOM - CONTENT_TOP),
+    )
+    panel.adjustments[0] = 0.04
+    panel.fill.solid()
+    panel.fill.fore_color.rgb = CONTENT_BG_FILL
+    panel.line.color.rgb = CONTENT_BG_BORDER
+    panel.line.width = Pt(0.25)
+    panel.shadow.inherit = False
+    return panel
 
 
 def _item_name(ref) -> str:
@@ -181,6 +201,7 @@ def render_pptx(fixed: dict, month_result, out_path: str) -> str:
             continue
         for page in section.pages:
             slide = prs.slides.add_slide(blank_layout)
+            _add_content_background(slide)
             _add_section_header(slide, section.title)
             for placement in page:
                 _add_placement(slide, placement)
