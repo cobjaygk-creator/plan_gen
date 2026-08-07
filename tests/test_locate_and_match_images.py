@@ -122,3 +122,30 @@ def test_match_images_no_column_images_stays_text_only(monkeypatch):
     matched, text_only = match_images("fake_path.xlsx", located)
     assert len(matched) == 0
     assert len(text_only) == 1
+
+
+def test_match_images_finds_optimal_assignment_not_just_greedy(monkeypatch):
+    # Real bug reproduction (202512 "FX 타이틀 교환권"): 3 items competing
+    # for anchors under tolerance where a naive per-item-in-order greedy
+    # match leaves one item unmatched (an earlier item takes the anchor a
+    # later item needed more, even though it had an equally-good backup)
+    # despite a valid 3-of-3 assignment existing. Exact real row numbers.
+    from tools import match_images as mi_module
+
+    def fake_get_anchors(path):
+        return [
+            PictureAnchor("C", 42, 45, "rId1", "img8.png"),   # anchor1
+            PictureAnchor("C", 37, 40, "rId2", "img10.png"),  # anchor2
+            PictureAnchor("C", 49, 51, "rId3", "img11.png"),  # anchor3
+        ]
+
+    monkeypatch.setattr(mi_module, "get_picture_anchors", fake_get_anchors)
+
+    located = [
+        LocatedItem("아에루라", False, row=41, col_letter="C", matched_cell_text="아에루라"),
+        LocatedItem("멍멍멍멍", False, row=46, col_letter="C", matched_cell_text="멍멍멍멍"),
+        LocatedItem("서핑푸리링", False, row=52, col_letter="C", matched_cell_text="서핑푸리링"),
+    ]
+    matched, text_only = match_images("fake_path.xlsx", located)
+    assert len(text_only) == 0
+    assert len(matched) == 3
