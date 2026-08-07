@@ -11,6 +11,7 @@ formatting changes.
 """
 import re
 from dataclasses import dataclass
+from typing import Optional
 
 NEW_MARKER_RE = re.compile(r"\s*\(new!?\)\s*$", re.IGNORECASE)
 
@@ -27,6 +28,7 @@ class LocatedItem:
     row: int
     col_letter: str
     matched_cell_text: str
+    pair_group: Optional[int] = None
 
 
 def locate_items(rows: list[dict], items: list) -> tuple[list[LocatedItem], list]:
@@ -58,6 +60,9 @@ def locate_items(rows: list[dict], items: list) -> tuple[list[LocatedItem], list
             continue
         row_no, col_letter, raw_text = best
         used.add((row_no, col_letter))
-        located.append(LocatedItem(item.name, item.is_new, row_no, col_letter, raw_text))
+        located.append(LocatedItem(
+            item.name, item.is_new, row_no, col_letter, raw_text,
+            pair_group=getattr(item, "pair_group", None),
+        ))
 
     return located, unlocated

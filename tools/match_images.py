@@ -22,8 +22,10 @@ from dataclasses import dataclass
 
 from tools.locate_items import LocatedItem
 from tools.extract_images import PictureAnchor, get_picture_anchors, extract_and_save_images
+from tools.extract_special_reward import COLS
 
 ROW_TOLERANCE = 3
+COL_INDEX = {c: i for i, c in enumerate(COLS)}
 
 
 @dataclass
@@ -39,6 +41,13 @@ def _distance(item: LocatedItem, anchor: PictureAnchor) -> int:
     if anchor.row_start <= item.row <= anchor.row_end:
         return 0
     return min(abs(item.row - anchor.row_start), abs(item.row - anchor.row_end))
+
+
+def _col_distance(a_col: str, b_col: str) -> int:
+    ia, ib = COL_INDEX.get(a_col), COL_INDEX.get(b_col)
+    if ia is None or ib is None:
+        return 0 if a_col == b_col else 999
+    return abs(ia - ib)
 
 
 def _max_bipartite_match(adjacency: dict[int, list[int]]) -> dict[int, int]:
@@ -68,8 +77,18 @@ def _max_bipartite_match(adjacency: dict[int, list[int]]) -> dict[int, int]:
 
 def match_images(
     path: str, located_items: list[LocatedItem], out_dir: str | None = None,
-    row_tolerance: int = ROW_TOLERANCE,
+    row_tolerance: int = ROW_TOLERANCE, col_tolerance: int = 0,
 ) -> tuple[list[MatchedItem], list[LocatedItem]]:
+    """col_tolerance=0 (default) requires an exact same-column anchor,
+    matching every existing caller's behavior unchanged. A caller can widen
+    it (see paired_columns handling in tools/pipeline.py) for layouts where
+    the image is anchored 1-2 columns off from its item's own text column —
+    e.g. a tall portrait anchored near the center column between two
+    side-by-side item lists. Not on by default because a wider tolerance
+    lets a *closer-row* item in a neighboring column outcompete the item an
+    anchor actually belongs to (see git history: paired_columns sub-items
+    sitting inside a set-portrait's row span would otherwise win it away
+    from the set name itself)."""
     if out_dir:
         anchor_files = extract_and_save_images(path, out_dir)
         anchor_to_file = {id(a): f for a, f in anchor_files}
@@ -78,33 +97,23 @@ def match_images(
         anchors = get_picture_anchors(path)
         anchor_to_file = {id(a): a.media_path for a in anchors}
 
-    by_col_anchors: dict[str, list[PictureAnchor]] = {}
-    for a in anchors:
-        by_col_anchors.setdefault(a.col_letter, []).append(a)
+    adjacency: dict[int, list[int]] = {}
+    for item_idx, item in enumerate(located_items):
+        candidates = [
+            (a_idx, _distance(item, a), _col_distance(item.col_letter, a.col_letter))
+            for a_idx, a in enumerate(anchors)
+        ]
+        candidates = [
+            (a_idx, rd, cd) for a_idx, rd, cd in candidates
+            if rd <= row_tolerance and cd <= col_tolerance
+        ]
+        candidates.sort(key=lambda x: (x[1], x[2]))  # nearest row first, then nearest column
+        adjacency[item_idx] = [a_idx for a_idx, _, _ in candidates]
 
-    by_col_items: dict[str, list[int]] = {}
-    for global_idx, item in enumerate(located_items):
-        by_col_items.setdefault(item.col_letter, []).append(global_idx)
-
-    matched_by_global_idx: dict[int, PictureAnchor] = {}
-
-    for col_letter, item_global_indices in by_col_items.items():
-        col_anchors = by_col_anchors.get(col_letter, [])
-        if not col_anchors:
-            continue
-        adjacency = {}
-        for local_idx, global_idx in enumerate(item_global_indices):
-            item = located_items[global_idx]
-            candidates = [
-                (a_idx, _distance(item, a)) for a_idx, a in enumerate(col_anchors)
-                if _distance(item, a) <= row_tolerance
-            ]
-            candidates.sort(key=lambda x: x[1])
-            adjacency[local_idx] = [a_idx for a_idx, _ in candidates]
-
-        matching = _max_bipartite_match(adjacency)
-        for local_idx, anchor_idx in matching.items():
-            matched_by_global_idx[item_global_indices[local_idx]] = col_anchors[anchor_idx]
+    matching = _max_bipartite_match(adjacency)
+    matched_by_global_idx: dict[int, PictureAnchor] = {
+        item_idx: anchors[a_idx] for item_idx, a_idx in matching.items()
+    }
 
     matched = []
     text_only = []

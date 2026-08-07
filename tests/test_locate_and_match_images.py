@@ -124,6 +124,35 @@ def test_match_images_no_column_images_stays_text_only(monkeypatch):
     assert len(text_only) == 1
 
 
+def test_match_images_col_tolerance_zero_still_requires_exact_column(monkeypatch):
+    from tools import match_images as mi_module
+
+    def fake_get_anchors(path):
+        return [PictureAnchor("C", 18, 26, "rId1", "portrait.png")]
+
+    monkeypatch.setattr(mi_module, "get_picture_anchors", fake_get_anchors)
+    located = [LocatedItem("자켓 세트", False, row=18, col_letter="B", matched_cell_text="자켓 세트")]
+    matched, unmatched = match_images("fake_path.xlsx", located, col_tolerance=0)
+    assert len(matched) == 0
+    assert len(unmatched) == 1
+
+
+def test_match_images_col_tolerance_bridges_nearby_column(monkeypatch):
+    # real 202606 case: "자켓 세트" sits in column B but its portrait image
+    # is anchored at column C (col_tolerance=0 finds nothing, see above) —
+    # widening tolerance must let it reach across
+    from tools import match_images as mi_module
+
+    def fake_get_anchors(path):
+        return [PictureAnchor("C", 18, 26, "rId1", "portrait.png")]
+
+    monkeypatch.setattr(mi_module, "get_picture_anchors", fake_get_anchors)
+    located = [LocatedItem("자켓 세트", False, row=18, col_letter="B", matched_cell_text="자켓 세트")]
+    matched, unmatched = match_images("fake_path.xlsx", located, col_tolerance=2)
+    assert len(matched) == 1
+    assert matched[0].image_path == "portrait.png"
+
+
 def test_match_images_finds_optimal_assignment_not_just_greedy(monkeypatch):
     # Real bug reproduction (202512 "FX 타이틀 교환권"): 3 items competing
     # for anchors under tolerance where a naive per-item-in-order greedy

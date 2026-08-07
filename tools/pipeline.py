@@ -27,6 +27,13 @@ from tools.blocks import (
 )
 
 
+PAIRED_COLUMNS_COL_TOLERANCE = 2  # bridges the gap between a set's own text
+                                   # column (B or D) and where its portrait
+                                   # image is actually anchored (often nearer
+                                   # the center column, C) — see real 202606
+                                   # case in tools/match_images.py's docstring
+
+
 @dataclass
 class SectionResult:
     title: str
@@ -116,7 +123,23 @@ def process_month(month: str, request_path: str, image_out_dir: str | None = Non
     result = MonthResult(month)
     for section in classify_result.output.sections:
         located, unlocated = locate_items(rows, section.items)
-        matched, text_only = match_images(request_path, located, out_dir=image_out_dir)
+        if section.block_type == "paired_columns":
+            # only the 2 set-name items (pair_group is None) ever attempt
+            # image matching — sub-items are always rendered as plain text
+            # (see tools/blocks/paired_columns.py) and, worse, a sub-item's
+            # row often sits exactly inside a set-portrait anchor's row span
+            # (distance 0), so if left in the competition it would win that
+            # anchor away from the actual set name via the nearest-first
+            # tiebreak — confirmed on the real 202606 data.
+            matchable = [l for l in located if l.pair_group is None]
+            never_matched = [l for l in located if l.pair_group is not None]
+            matched, unmatched = match_images(
+                request_path, matchable, out_dir=image_out_dir,
+                col_tolerance=PAIRED_COLUMNS_COL_TOLERANCE,
+            )
+            text_only = unmatched + never_matched
+        else:
+            matched, text_only = match_images(request_path, located, out_dir=image_out_dir)
         items = _items_with_images(section, matched, text_only)
 
         try:

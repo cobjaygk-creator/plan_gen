@@ -71,6 +71,41 @@ def test_process_month_propagates_needs_human_review(tmp_path):
     assert "202605" in pipeline.summarize(result)
 
 
+def test_process_month_paired_columns_matches_set_names_not_sub_items(tmp_path):
+    # Real 202606 bug: "자켓 세트"/"치마 세트" portraits are anchored at
+    # column C/D while their own text sits in column B/D — outside
+    # match_images' default col_tolerance=0. Widening tolerance blindly
+    # would let a sub-item (whose row sits exactly inside the portrait
+    # anchor's row span, distance 0) win the anchor away from the actual
+    # set name (row 18, distance >0) via the nearest-first tiebreak.
+    # process_month must exclude sub-items from paired_columns matching
+    # entirely so only the 2 set-name items ever compete for portraits.
+    def fake_classify_202606(month, raw_text, **kwargs):
+        output = ClassificationOutput(sections=[
+            Section(section_title="배틀패스 신규 의상", block_type="paired_columns", items=[
+                Item(name="20th 파티 자켓 세트", pair_group=None),
+                Item(name="20th 파티 치마 세트", pair_group=None),
+                Item(name="20th 파티 연미복", pair_group=0),
+                Item(name="20th 파티 흰꽃 머리띠", pair_group=1),
+            ], footnote="* 각주", confidence=0.9),
+        ])
+        return ClassifyResult(month, output, "claude-haiku-4-5-20251001", from_cache=False)
+
+    with patch("tools.pipeline.classify_month", side_effect=fake_classify_202606):
+        path = os.path.join(SAMPLES_DIR, "202606_request.xlsx")
+        result = pipeline.process_month("202606", path, image_out_dir=str(tmp_path))
+
+    section = result.sections[0]
+    assert section.render_error is None
+    items_by_name = {i["name"]: i for i in section.items}
+    assert items_by_name["20th 파티 자켓 세트"]["image"] is not None
+    assert items_by_name["20th 파티 치마 세트"]["image"] is not None
+    # sub-items must never receive an image even though match_images would
+    # gladly hand one to them if they were left in the matching pool
+    assert items_by_name["20th 파티 연미복"]["image"] is None
+    assert items_by_name["20th 파티 흰꽃 머리띠"]["image"] is None
+
+
 def test_process_month_defaults_to_real_local_image_paths():
     # Regression: omitting image_out_dir used to leave in-archive paths
     # (e.g. "xl/media/image8.PNG") on matched items, which render_pptx.py's

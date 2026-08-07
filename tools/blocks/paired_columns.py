@@ -18,9 +18,6 @@ PAIR_HEIGHT_MIN = 90.0
 PAIR_HEIGHT_MAX = 260.0
 PAIR_CAPTION_HEIGHT = 20.0
 SUB_ROW_HEIGHT = 18.0
-SUB_ICON_SIZE = 16.0
-SUB_ICON_GAP = 6.0
-SUB_ROW_INSET = 8.0  # left/right margin inside the card for sub-item rows
 CARD_BOTTOM_PAD = 8.0  # card frame grows this much past the last row it wraps
 FOOTNOTE_LINE_HEIGHT = 14.0
 
@@ -73,17 +70,15 @@ def paired_columns_block(
                     f"only {max(0, rows_avail)} rows available — design doc doesn't define "
                     "pagination for block D, escalate"
                 )
-            has_icons = any(si.get("image") for si in sub_items)
+            # always plain centered text, never a per-item icon — sub-items
+            # never attempt image matching at the pipeline level (see
+            # tools/pipeline.py's paired_columns handling), and both the
+            # human-made reference sample and the user's own edited version
+            # of a generated file show the sub-list as text only, with the
+            # single portrait image being what represents the whole set
             for row, sub_item in enumerate(sub_items):
                 y = cursor_y + row * SUB_ROW_HEIGHT
-                if has_icons:
-                    icon_y = y + (SUB_ROW_HEIGHT - SUB_ICON_SIZE) / 2
-                    pair_placements.append(Placement("icon", x + SUB_ROW_INSET, icon_y, SUB_ICON_SIZE, SUB_ICON_SIZE, sub_item))
-                    text_x = x + SUB_ROW_INSET + SUB_ICON_SIZE + SUB_ICON_GAP
-                    text_w = cell_w - 2 * SUB_ROW_INSET - SUB_ICON_SIZE - SUB_ICON_GAP
-                    pair_placements.append(Placement("text", text_x, y, text_w, SUB_ROW_HEIGHT, sub_item.get("name"), meta={"align": "left"}))
-                else:
-                    pair_placements.append(Placement("text", x, y, cell_w, SUB_ROW_HEIGHT, sub_item.get("name")))
+                pair_placements.append(Placement("text", x, y, cell_w, SUB_ROW_HEIGHT, sub_item.get("name")))
             cursor_y += len(sub_items) * SUB_ROW_HEIGHT
         cursor_ys.append(cursor_y)
 
