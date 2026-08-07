@@ -37,6 +37,7 @@ class SectionResult:
     pages: list = field(default_factory=list)
     render_error: str | None = None
     footnote: str | None = None
+    items: list = field(default_factory=list)
 
 
 @dataclass
@@ -51,8 +52,28 @@ def _items_with_images(section, matched, text_only) -> list[dict]:
     image_by_name = {m.name: m.image_path for m in matched}
     out = []
     for item in section.items:
-        out.append({"name": item.name, "image": image_by_name.get(item.name), "is_new": item.is_new})
+        out.append({
+            "name": item.name, "image": image_by_name.get(item.name), "is_new": item.is_new,
+            "pair_group": item.pair_group,
+        })
     return out
+
+
+def split_pair_items(items: list[dict]) -> tuple[list[dict], tuple[list[dict], list[dict]]]:
+    """Splits a flat item list into (pair_items, (sub_items_for_pair0,
+    sub_items_for_pair1)) using each item's pair_group tag (real case:
+    202606 "배틀패스 신규 의상" — 2 sets, each with its own ~6-item component
+    list, see tools/blocks/paired_columns.py). Falls back to plain
+    positional slicing with no sub-lists when nothing carries a
+    pair_group tag at all — the simpler "2 sets + shared footnote" case
+    that predates this field, and any pre-existing ai_results/ cache
+    entries from before it existed."""
+    if not any(i.get("pair_group") is not None for i in items):
+        return items[:2], ([], [])
+    pair_items = [i for i in items if i.get("pair_group") is None]
+    sub0 = [i for i in items if i.get("pair_group") == 0]
+    sub1 = [i for i in items if i.get("pair_group") == 1]
+    return pair_items, (sub0, sub1)
 
 
 def _render_section(section, items: list[dict]) -> list:
@@ -67,8 +88,8 @@ def _render_section(section, items: list[dict]) -> list:
     if bt == "few_preview":
         return few_preview_block(items)
     if bt == "paired_columns":
-        pair_items, sub_items = items[:2], items[2:] or None
-        return paired_columns_block(pair_items, sub_items=sub_items, footnote=section.footnote)
+        pair_items, sub_items_by_pair = split_pair_items(items)
+        return paired_columns_block(pair_items, sub_items_by_pair=sub_items_by_pair, footnote=section.footnote)
     raise ValueError(f"unknown block_type: {bt!r}")
 
 
@@ -104,14 +125,14 @@ def process_month(month: str, request_path: str, image_out_dir: str | None = Non
                 title=section.section_title, block_type=section.block_type,
                 item_count=len(section.items), matched_image_count=len(matched),
                 text_only_count=len(text_only) + len(unlocated), pages=pages,
-                footnote=section.footnote,
+                footnote=section.footnote, items=items,
             ))
         except ValueError as e:
             result.sections.append(SectionResult(
                 title=section.section_title, block_type=section.block_type,
                 item_count=len(section.items), matched_image_count=len(matched),
                 text_only_count=len(text_only) + len(unlocated), render_error=str(e),
-                footnote=section.footnote,
+                footnote=section.footnote, items=items,
             ))
 
     return result

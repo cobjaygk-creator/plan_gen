@@ -67,6 +67,35 @@ CD28: 할로윈 뱀파이어 슈트 세트 ll | 할로윈 뱀파이어 원피스
 ], "footnote": "아래 패션 세트 중 택 1 (거래 불가)", "confidence": 0.92}
 (판단 근거: 정확히 2개 세트 비교 + "···중 택 1" 각주 → paired_columns)
 
+예시 3b (paired_columns + pair_group — 202606 "배틀패스 신규 의상", 세트별 하위 목록):
+입력:
+B17: 배틀패스 신규 의상
+C18: 20th 파티 자켓 세트 / 20th 파티 치마 세트
+BD20: 20th 파티 연미복 | 20th 파티 흰꽃 머리띠 [이미지있음]
+BD21: 20th 파티 크라바트 자켓 | 20th 파티 오프숄더 블라우스 [이미지있음]
+BD22: 20th 파티 줄무늬 바지 | 20th 파티 미니 드레스 [이미지있음]
+BD23: 20th 파티 옥스퍼드 화 | 20th 파티 리본 힐 [이미지있음]
+BD24: 20th 파티 흰 보석 장갑 | 20th 파티 초롱 눈빛 [이미지있음]
+B28: * 자켓 세트는 연미복(한벌옷)과 자켓/바지(상하의)로 나뉘어져 있으며 3종이 전부 지급됩니다.
+출력: {"section_title": "배틀패스 신규 의상", "block_type": "paired_columns", "items": [
+  {"name": "20th 파티 자켓 세트", "is_new": false, "pair_group": null},
+  {"name": "20th 파티 치마 세트", "is_new": false, "pair_group": null},
+  {"name": "20th 파티 연미복", "is_new": false, "pair_group": 0},
+  {"name": "20th 파티 흰꽃 머리띠", "is_new": false, "pair_group": 1},
+  {"name": "20th 파티 크라바트 자켓", "is_new": false, "pair_group": 0},
+  {"name": "20th 파티 오프숄더 블라우스", "is_new": false, "pair_group": 1},
+  {"name": "20th 파티 줄무늬 바지", "is_new": false, "pair_group": 0},
+  {"name": "20th 파티 미니 드레스", "is_new": false, "pair_group": 1},
+  {"name": "20th 파티 옥스퍼드 화", "is_new": false, "pair_group": 0},
+  {"name": "20th 파티 리본 힐", "is_new": false, "pair_group": 1},
+  {"name": "20th 파티 흰 보석 장갑", "is_new": false, "pair_group": 0},
+  {"name": "20th 파티 초롱 눈빛", "is_new": false, "pair_group": 1}
+], "footnote": "* 자켓 세트는 연미복(한벌옷)과 자켓/바지(상하의)로 나뉘어져 있으며 3종이 전부 지급됩니다.", "confidence": 0.85}
+(판단 근거: C18에 "자켓 세트 / 치마 세트"로 두 세트가 나란히 병기되고, 그 아래 B열/D열에
+각 세트의 하위 구성품이 여러 행에 걸쳐 나열됨 — "택 1" 각주가 없어도 paired_columns다.
+세트 이름 2개는 pair_group=null(= pair_items), B열 하위 구성품은 pair_group=0, D열은
+pair_group=1. 이 15개를 flat grid로 뽑으면 안 된다 — 세트별 목록이라는 구조를 잃는다.)
+
 예시 4 (few_preview — 202509 "할로윈 펌킨 버킷 등록권"):
 입력:
 CD50: 할로윈 펌킨 버킷 등록권 | 할로윈 잭 오 랜턴 등록권 [이미지있음]

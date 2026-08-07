@@ -122,7 +122,6 @@ class TestPairedColumnsBlock:
     def test_basic_pair_with_footnote(self):
         pages = paired_columns_block(
             make_items(2, "set"),
-            sub_items=make_items(4, "sub"),
             footnote="아래 패션 세트 중 택 1 (거래불가)",
         )
         assert len(pages) == 1
@@ -137,4 +136,17 @@ class TestPairedColumnsBlock:
 
     def test_sub_items_over_capacity_raises(self):
         with pytest.raises(ValueError):
-            paired_columns_block(make_items(2, "set"), sub_items=make_items(200, "sub"))
+            paired_columns_block(
+                make_items(2, "set"),
+                sub_items_by_pair=(make_items(200, "sub"), []),
+            )
+
+    def test_per_pair_sub_lists_no_overlap(self):
+        pages = paired_columns_block(
+            make_items(2, "set"),
+            sub_items_by_pair=(make_items(6, "sub0"), make_items(4, "sub1")),
+            footnote="자켓 세트는 연미복과 자켓/바지로 나뉘어 3종이 전부 지급됩니다.",
+        )
+        assert len(pages) == 1
+        assert not has_any_overlap(pages[0])
+        assert_within_content_box(pages[0])

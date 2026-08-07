@@ -21,6 +21,7 @@ from tools.blocks.dynamic_grid import fit_grid_pages
 from tools.blocks.text_list import text_list_block
 from tools.blocks.few_preview import few_preview_block
 from tools.blocks.paired_columns import paired_columns_block
+from tools.pipeline import split_pair_items
 from tools.render_pptx import _add_placement, _add_section_header
 
 EMU_PER_PT = 12700
@@ -149,26 +150,9 @@ def _render_section_pages(section, items: list[dict], box):
     if bt == "few_preview":
         return few_preview_block(items, box=content_box)
     if bt == "paired_columns":
-        pair_items, sub_items = items[:2], items[2:] or None
-        return paired_columns_block(pair_items, sub_items=sub_items, footnote=section.footnote, box=content_box)
+        pair_items, sub_items_by_pair = split_pair_items(items)
+        return paired_columns_block(pair_items, sub_items_by_pair=sub_items_by_pair, footnote=section.footnote, box=content_box)
     raise ValueError(f"unknown block_type: {bt!r}")
-
-
-def _items_from_pages(section) -> list[dict]:
-    """section.pages already has items baked into Placement.ref (from
-    pipeline.py's _items_with_images) — pull the unique item dicts back
-    out in original order rather than re-deriving them, so this module
-    doesn't need its own copy of the classify/match logic."""
-    seen = set()
-    items = []
-    for page in section.pages:
-        for placement in page:
-            if placement.kind in ("icon", "image") and isinstance(placement.ref, dict):
-                key = placement.ref.get("name")
-                if key not in seen:
-                    seen.add(key)
-                    items.append(placement.ref)
-    return items
 
 
 # -------------------------------------------------------- slide surgery ----
@@ -248,8 +232,7 @@ def render_from_template(fixed: dict, month_result, template_path: str, out_path
 
     all_pages = []  # (section_title, placements) — laid out against box0
     for section in sections:
-        items = _items_from_pages(section)
-        for page in _render_section_pages(section, items, box0):
+        for page in _render_section_pages(section, section.items, box0):
             all_pages.append((section.title, page))
 
     last_slide, last_marker = blue_slots[-1]  # always carries notices/final

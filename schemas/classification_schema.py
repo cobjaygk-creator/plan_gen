@@ -12,6 +12,14 @@ BlockType = Literal["grid", "text_list", "new_highlight", "few_preview", "paired
 class Item(BaseModel):
     name: str = Field(description="아이템/세트 이름, 원문 그대로 (괄호 안 '(new)' 등 마커는 is_new로 분리)")
     is_new: bool = Field(default=False, description="이름에 (new)/(new!) 마커가 붙어 있었는지")
+    pair_group: Optional[int] = Field(
+        default=None,
+        description=(
+            "paired_columns 블록에서만 사용. 이 항목이 두 세트 중 어느 쪽 하위 구성품인지 "
+            "(0=첫 번째 세트, 1=두 번째 세트). 세트 자체의 이름(예: '자켓 세트', '치마 세트')인 "
+            "항목은 null로 둔다 — 그게 pair_items가 된다. 다른 블록타입에서는 항상 null."
+        ),
+    )
 
 
 class Section(BaseModel):

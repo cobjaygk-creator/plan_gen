@@ -76,10 +76,11 @@ def make_month_result(month, sections):
 
 
 def _grid_section(title, n_items, footnote=None):
-    items = [{"name": f"{title}아이템{i}", "image": None, "is_new": False} for i in range(n_items)]
+    items = [{"name": f"{title}아이템{i}", "image": None, "is_new": False, "pair_group": None} for i in range(n_items)]
     pages = grid_block(items, columns=3, icon_size=24.0)
     return SectionResult(title=title, block_type="grid", item_count=n_items,
-                          matched_image_count=0, text_only_count=n_items, pages=pages, footnote=footnote)
+                          matched_image_count=0, text_only_count=n_items, pages=pages, footnote=footnote,
+                          items=items)
 
 
 def test_render_from_template_fits_within_existing_slots(tmp_path):

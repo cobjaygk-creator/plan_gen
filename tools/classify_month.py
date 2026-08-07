@@ -23,7 +23,7 @@ from schemas.classification_schema import ClassificationOutput
 from schemas.few_shot_examples import FEW_SHOT_EXAMPLES
 from tools.ai_client import classify, HAIKU_MODEL, SONNET_MODEL, ClassificationError
 
-PROMPT_VERSION = "v3"  # v3: standalone NEW!/이미지 추후 전달 예정 marker-row attribution fix
+PROMPT_VERSION = "v4"  # v4: paired_columns pair_group tagging for per-set sub-item lists
 CONFIDENCE_THRESHOLD = 0.7
 CACHE_DIR = "ai_results"
 
@@ -40,7 +40,17 @@ SYSTEM_PROMPT = """\
   싶을 때 쓴다 — is_new=true 항목이 있는 grid류 섹션에 사용해도 되고, 굳이
   구분 안 되면 grid로 분류해도 무방하다 (렌더러가 동일하게 처리함)
 - few_preview: 항목 1~3개, 큰 이미지 프리뷰 성격
-- paired_columns: 정확히 세트 2개를 비교하고 "···중 택 1" 같은 각주가 붙는 구조
+- paired_columns: 정확히 세트 2개를 비교하는 구조. 두 가지 실제 패턴이 있다:
+  (a) "···중 택 1" 각주가 붙고 세트 2개만 있는 단순한 경우
+  (b) 세트 이름 2개가 "A 세트 / B 세트"처럼 한 줄에 슬래시로 나란히 적혀 있고, 그
+      아래 여러 행에 걸쳐 두 열(예: B열, D열)에 각 세트의 하위 구성품이 나란히
+      나열되는 경우 — "···중 택 1" 문구가 없어도 이 구조면 paired_columns다.
+      이때 세트 이름 2개는 items에 pair_group=null로 넣고(이게 pair_items가 됨),
+      각 하위 구성품은 어느 세트 소속인지에 따라 pair_group=0(첫 세트, 보통 왼쪽 열)
+      또는 pair_group=1(둘째 세트, 보통 오른쪽 열)을 붙인다. 하위 구성품이 없으면
+      pair_group은 전부 null로 둔다 (기존 단순 paired_columns와 동일하게 처리됨).
+      **하위 구성품 15개를 그냥 flat하게 grid로 뽑지 마라** — 두 세트 밑에 각각
+      딸린 목록이라는 구조 정보를 pair_group으로 반드시 남겨야 한다.
 
 입력의 각 줄 끝에 "[이미지있음]"이 붙어있으면 그 행에 실제 이미지가 있다는 뜻이다
 (원본 엑셀에 삽입된 그림 기준, 추측 아님). 이게 있는 섹션은 grid/few_preview/

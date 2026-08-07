@@ -13,6 +13,7 @@ import argparse
 import os
 import re
 import sys
+from datetime import datetime
 
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -36,7 +37,7 @@ def _guess_month(request_path: str) -> str:
 def main():
     parser = argparse.ArgumentParser(description="request.xlsx -> 배틀패스 SB .pptx 자동 생성")
     parser.add_argument("request_path", help="request.xlsx 경로")
-    parser.add_argument("--out", help="출력 .pptx 경로 (기본: out/<월>/generated.pptx)")
+    parser.add_argument("--out", help="출력 .pptx 경로 (기본: out/<월>/gen_<날짜>_<시분>.pptx)")
     parser.add_argument("--images", help="이미지 저장 폴더 (기본: out/<월>/images)")
     parser.add_argument("--template", default=TEMPLATE_PATH, help=f"기준 template.pptx 경로 (기본: {TEMPLATE_PATH})")
     parser.add_argument("--no-template", action="store_true",
@@ -48,7 +49,8 @@ def main():
         sys.exit(1)
 
     month = _guess_month(args.request_path)
-    out_path = args.out or f"out/{month}/generated.pptx"
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    out_path = args.out or f"out/{month}/gen_{timestamp}.pptx"
     image_dir = args.images or f"out/{month}/images"
 
     print(f"[1/4] 고정 필드 파싱 중... ({args.request_path})")
