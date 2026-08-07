@@ -21,7 +21,10 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
 from tools.parse_fixed_fields import parse_fixed_fields
 from tools.pipeline import process_month, summarize
 from tools.render_pptx import render_pptx
+from tools.render_from_template import render_from_template
 from tools.classify_month import NeedsHumanReview
+
+TEMPLATE_PATH = "samples/template.pptx"
 
 
 def _guess_month(request_path: str) -> str:
@@ -35,6 +38,9 @@ def main():
     parser.add_argument("request_path", help="request.xlsx 경로")
     parser.add_argument("--out", help="출력 .pptx 경로 (기본: out/<월>/generated.pptx)")
     parser.add_argument("--images", help="이미지 저장 폴더 (기본: out/<월>/images)")
+    parser.add_argument("--template", default=TEMPLATE_PATH, help=f"기준 template.pptx 경로 (기본: {TEMPLATE_PATH})")
+    parser.add_argument("--no-template", action="store_true",
+                         help="template.pptx 없이 처음부터 슬라이드 생성 (구 방식)")
     args = parser.parse_args()
 
     if not os.path.exists(args.request_path):
@@ -67,8 +73,13 @@ def main():
     for line in summarize(result).splitlines():
         print("      " + line)
 
-    print(f"[4/4] .pptx 렌더링 중... -> {out_path}")
-    render_pptx(fixed, result, out_path)
+    use_template = not args.no_template and os.path.exists(args.template)
+    print(f"[4/4] .pptx 렌더링 중... -> {out_path}"
+          + (f" (template.pptx 마커 기반: {args.template})" if use_template else " (템플릿 없이 새로 생성)"))
+    if use_template:
+        render_from_template(fixed, result, args.template, out_path)
+    else:
+        render_pptx(fixed, result, out_path)
 
     print(f"\n완료: {out_path}")
 
