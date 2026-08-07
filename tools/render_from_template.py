@@ -230,14 +230,23 @@ def render_from_template(fixed: dict, month_result, template_path: str, out_path
         raise ValueError(f"{template_path}: no blue (00B0F0) content markers found")
 
     sections = [s for s in month_result.sections if not s.render_error]
-    box0 = (blue_slots[0][1].left, blue_slots[0][1].top, blue_slots[0][1].width, blue_slots[0][1].height)
 
-    all_pages = []  # (section_title, placements) — laid out against box0;
-    # real per-slide box sizes in this template are close enough (~460pt
-    # square) that reusing one reference box for layout math is accurate
-    # for slides 7/8; slide 9 is deliberately smaller since it also carries
-    # notices, so it's kept as the guaranteed-last slot rather than mixed
-    # into the pool of same-size reward pages.
+    # Layout math has to use ONE reference box size for every page, since
+    # which page lands on which slide isn't known until after layout runs.
+    # Real bug found via actual output: using the *first* slot's box
+    # (slides 7/8, ~460pt square) computed a single page for a 15-item
+    # section that fit fine there — but that lone page is always the "last
+    # page" (see below), which always lands on the notices slide's smaller
+    # box (~340pt tall), so it overflowed straight through the fixed
+    # "최종 산출물은..." button and 유의사항 text underneath. Using the
+    # *smallest* box among all slots as the shared reference guarantees
+    # whatever gets computed fits whichever slot it actually lands on —
+    # slightly under-uses the larger slots, but under-using space is a far
+    # smaller problem than overlapping fixed template content.
+    smallest_marker = min((m for _, m in blue_slots), key=lambda m: m.width * m.height)
+    box0 = (smallest_marker.left, smallest_marker.top, smallest_marker.width, smallest_marker.height)
+
+    all_pages = []  # (section_title, placements) — laid out against box0
     for section in sections:
         items = _items_from_pages(section)
         for page in _render_section_pages(section, items, box0):

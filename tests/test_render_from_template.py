@@ -103,6 +103,39 @@ def test_render_from_template_fits_within_existing_slots(tmp_path):
     assert "유의사항" in all_text  # last slide's fixed content survived
 
 
+def test_single_page_content_fits_the_actual_landing_slot_not_the_first_slot(tmp_path):
+    # Real bug from an actual generated file: layout was computed against
+    # the *first* blue slot's box (slides 7/8, ~460pt tall). A 15-item
+    # grid fit fine there as a single page — but a lone page always lands
+    # on the *last* slot (the notices slide), whose box is smaller
+    # (~340pt tall) because it also carries the fixed 최종산출물/유의사항
+    # content below it. The grid rendered right through that fixed text.
+    fixed = parse_fixed_fields(REQUEST_512)
+    result = make_month_result("999904", [_grid_section("배틀패스 신규 의상", 15)])
+    out_path = str(tmp_path / "out.pptx")
+    render_from_template(fixed, result, TEMPLATE_PATH, out_path)
+
+    prs = Presentation(out_path)
+    target_slide = next(
+        slide for slide in prs.slides
+        if any(s.has_text_frame and "유의사항" == s.text_frame.text.strip() for s in slide.shapes)
+    )
+    fixed_content_top = min(
+        s.top / 12700 for s in target_slide.shapes
+        if s.has_text_frame and s.text_frame.text.strip() == "유의사항"
+    )
+    item_caption_bottoms = [
+        (s.top + s.height) / 12700 for s in target_slide.shapes
+        if s.has_text_frame and s.text_frame.text.strip().startswith("배틀패스 신규 의상아이템")
+    ]
+    assert len(item_caption_bottoms) == 15  # all 15 captions actually rendered
+    # every item caption must end above where the fixed 유의사항 label
+    # begins — no overlap with the template's own fixed content
+    assert all(bottom <= fixed_content_top + 1 for bottom in item_caption_bottoms), (
+        max(item_caption_bottoms), fixed_content_top
+    )
+
+
 def test_render_from_template_clones_slides_when_content_overflows(tmp_path):
     fixed = parse_fixed_fields(REQUEST_512)
     result = make_month_result("999901", [
