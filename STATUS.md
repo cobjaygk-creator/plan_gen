@@ -1,48 +1,56 @@
 # plan_gen 현재 상태
 
 ## 요약
-설계서(v2) 1~8단계 + .pptx 렌더러까지 완료. **request.xlsx를 넣으면 진짜 .pptx가
-나오는 전체 파이프라인이 처음부터 끝까지 동작함** (202605로 실증: 4슬라이드,
-23개 아이템 전부 포함, NEW 배지 정상). 남은 건 9단계(신규 월 실사용 테스트)뿐.
+설계서(v2) 1~8단계 + .pptx 렌더러 + 실사용 버그 수정 라운드 완료.
+request.xlsx → 진짜 스타일 적용된 .pptx까지 전체 파이프라인 동작, `run.py`로
+한 줄 실행 가능. 202512 실사용 검증에서 실제 버그 2건 발견/수정함.
 
-- 마스터 템플릿: `templates/master_template.md` (기준: 202605)
+- 마스터 템플릿(색상/폰트/헤더바/카드 실제 값 포함): `templates/master_template.md`
 - 블록타입 분류(10개월): `templates/block_type_classification.md`
-- 블록 엔진(5개 함수, A/E 통합): `tools/blocks/`
-- 회귀 채점기: `tools/regression.py`
+- 블록 엔진(4개 함수 — grid/text_list/few_preview/paired_columns, new_highlight는 grid로 통합됨): `tools/blocks/`
+- 회귀 채점기: `tools/regression.py` + 202512 정식 회귀 케이스: `tests/test_regression_202512.py`
 - 고정 필드 파서: `tools/parse_fixed_fields.py`
 - 특별보상 원문 추출(셀+드로잉 텍스트박스+이미지유무): `tools/extract_special_reward.py`
-- AI 분류기(Haiku→Sonnet 에스컬레이션): `tools/classify_month.py`, `tools/ai_client.py`
-- 아이템 위치 역매칭 + 이미지 매칭(요청서 내 위치 매칭만): `tools/locate_items.py`, `tools/extract_images.py`, `tools/match_images.py`
-- 전체 파이프라인 연결: `tools/pipeline.py` (`process_month()`)
-- **.pptx 렌더러**: `tools/render_pptx.py` (`render_pptx()`) — 처음으로 진짜 산출물 생성
-- 테스트: `tests/` — 67개 전체 통과 (`.venv/Scripts/python.exe -m pytest tests/`)
+- AI 분류기(Haiku→Sonnet 에스컬레이션, 같은 등급 내 재시도 포함): `tools/classify_month.py`, `tools/ai_client.py`
+- 아이템 위치 역매칭 + 이미지 매칭(최적 이분 매칭): `tools/locate_items.py`, `tools/extract_images.py`, `tools/match_images.py`
+- 전체 파이프라인 연결: `tools/pipeline.py`
+- .pptx 렌더러(실제 스타일 적용): `tools/render_pptx.py`
+- **실행 진입점**: `run.py` — `python run.py samples/xxx_request.xlsx` 한 줄로 끝까지 실행
+- 테스트: `tests/` — 74개 전체 통과
 
-## 8단계 회귀 실행 결과 (10개월 전체, 실제 API)
-9/10개월 정상 렌더링, **모든 페이지에서 겹침 0건**. 5개 블록타입 전부 실사용 데이터에서
-동작 확인. 202602(설계서가 원래 버그 파일로 지목한 샘플)만 AI 응답 스키마 이상으로
-NeedsHumanReview 발동 — 억지로 추측하지 않고 정상적으로 사람에게 넘김.
-
-이미지 매칭률은 0~94%로 월마다 편차가 큼 — 사업팀이 요청서에 이미지를 얼마나
-첨부했는지에 따른 자연스러운 편차로 확정됨. 매칭 안 되는 항목은 텍스트만 있는
-placeholder 박스로 렌더링됨 (빈 화면 아님, 이름은 항상 보임).
+## 202512 실사용 검증에서 발견/수정한 버그 (사용자 스크린샷 비교로 발견)
+1. **new_highlight 블록 렌더링 방식이 잘못됨**: NEW 항목을 거대한 별도 카드로 빼고
+   나머지는 이미지 없는 텍스트 목록으로 처리하도록 설계했었는데, 실제로는 NEW
+   항목도 다른 항목과 같은 그리드 칸에 들어가고 배지만 붙는 구조였음 (202605
+   샘플 하나만 보고 일반화한 게 틀림). → new_highlight를 grid_block에 통합,
+   badge + "이미지 추후 전달 예정" placeholder로 표현
+2. **NEW 마커가 독립된 행으로 있을 때 엉뚱한 항목에 귀속됨**: "NEW!"가 이름 옆이
+   아니라 별도 줄로 있으면 그 다음(아래) 같은 열의 항목을 가리키는 건데 AI가
+   이전 항목에 붙임 → 프롬프트에 귀속 규칙 명시, few-shot 예시 교체
+3. **이미지 매칭이 탐욕적(greedy)이라 최적이 아닌 경우 놓침**: 항목 3개가
+   이미지 2개를 두고 경쟁할 때 먼저 처리된 항목이 최적이 아닌 선택을 해서
+   실제로는 매칭 가능한 다른 항목이 못 받는 문제 → 최적 이분 매칭(Kuhn's
+   algorithm)으로 교체, 202512에서 6/8 → 7/8로 확인
+4. (부수적) Sonnet이 가끔 스키마를 이중 중첩된 형태로 반환하는 문제 발견 →
+   같은 모델 등급 내 재시도(최대 2회) 추가
 
 ## 결정된 사항
-- **이미지 소스는 요청서 첨부 이미지 하나뿐.** 별도 에셋 저장소 없음 — 확인 완료.
-- 이미지 화질: 원본 그대로, 카드 크기에 맞춰 리사이즈만. 화질 검증/업스케일링 없음.
-- 렌더러는 마스터 템플릿의 정확한 XML 스타일(테마 색상, 테두리 등)까지 재현하지
-  않음 — 회귀 채점이 실제로 보는 건 텍스트/이미지 유무·겹침이지 픽셀 일치가 아님.
+- 이미지 소스는 요청서 첨부 이미지 하나뿐, 별도 에셋 저장소 없음 — 확인 완료
+- 이미지 화질: 원본 그대로, 카드 크기에 맞춰 리사이즈만
+- 렌더러 스타일: 실제 슬라이드 XML에서 역산한 값 적용 (카드 흰배경+연회색
+  테두리, 헤더바 진회색+흰글씨, 캡션 262626, NEW는 배지 도형 아니고 빨간
+  회전 텍스트) — `master_template.md`에 표로 기록됨
+- Claude Sonnet 5는 `temperature` 파라미터 미지원 (deprecated, 400 에러) —
+  API 응답 편차는 같은 등급 재시도로 흡수
 
 ## 최근 5건
-1. .pptx 렌더러 구현 — Placement 좌표를 실제 슬라이드로 변환하는 마지막 단계.
-   202605로 실증: 4슬라이드(표지/그리드/NEW강조리스트/유의사항), 23개 아이템 전부,
-   NEW 배지 정상 표시. 이미지 없는 항목은 이름이 보이는 placeholder 박스로 처리
-2. 에셋 저장소 스텁 제거 — 이미지 소스가 요청서 첨부뿐이라는 게 확정됨
-3. 8단계: 파이프라인 전체 연결, 10개월 실사용 데이터로 회귀 실행. 9/10 정상, 겹침 0건.
-   `ai_client.py` 견고성 문제 2개 발견/수정
-4. 7단계: 위치 기반 이미지 매칭 구현
-5. 6단계: AI 분류기 구현, 실제 API 키로 검증
+1. 이미지 매칭 최적화(Kuhn's algorithm) + 202512 정식 회귀 테스트 추가
+2. new_highlight→grid 통합, NEW 마커 귀속 규칙 프롬프트 추가, 같은 등급 재시도 로직
+3. 렌더러에 마스터 템플릿 실제 스타일(색상/폰트/헤더바/카드) 적용
+4. run.py 실행 진입점 추가 (UTF-8 콘솔 출력 강제)
+5. .pptx 렌더러 최초 구현
 
 ## 다음 단계
-9단계(신규 월 실사용 테스트) — 다음 달 실제 request.xlsx가 오면 그걸로 전체
-파이프라인(`tools/pipeline.py` + `tools/render_pptx.py`)을 돌려서 실사용 검증.
-그 전까지는 기존 10개 샘플로 회귀 테스트를 반복 실행하며 다듬는 정도가 남음.
+설계서 9단계(신규 월 실사용 테스트)는 실제 다음 달 request.xlsx가 와야
+의미 있게 검증됨. 그 전까지는 사용자 피드백 기반으로 실사용 버그를
+찾아 고치는 이번 라운드 같은 작업이 이어질 것으로 예상.
