@@ -4,6 +4,13 @@ confirmed block type. Pulled from templates/block_type_classification.md's
 확정(confirmed) rows only; text_list has no confirmed real sample yet
 (none of the 10 months landed on plain B), so that one example is
 synthetic and labeled as such rather than presented as real data.
+
+Example 2 (new_highlight) was rewritten from real 202512 data after the
+original 202605-based example led the model to misattribute a standalone
+"NEW!"/"이미지 추후 전달 예정" marker row to the wrong (preceding) item —
+the correct rule is that a standalone marker row refers to the NEXT
+same-column item, and the resulting layout is just a grid with a badge,
+not a separate oversized card (see tools/blocks/grid.py).
 """
 
 FEW_SHOT_EXAMPLES = """\
@@ -24,21 +31,30 @@ BCD20: 길드의 가호 습득서(기간제) | [이벤트] 피크닉 타이틀 �
   {"name": "헌터의 힘 스킬 습득서 (30일)", "is_new": false}
 ], "footnote": null, "confidence": 0.95}
 
-예시 2 (new_highlight — 202605 "배틀패스 의상 교환권", 목록 길어서 일부 생략):
+예시 2 (new_highlight/grid — 202512 "배틀패스 FX 타이틀 교환권", 독립 줄 NEW 마커 예시):
 입력:
-B21: 배틀패스 의상 교환권
-C22: (교환 리스트 중 택1)
-BCD23: 노네임 의상 세트 | 붉은 거인 의상 세트 | 블랙 하이틴 캐쥬얼 세트 I
-...(중략, 다른 항목들)...
-BCD29: 산뜻한 로망 세트 | 버니버니 의상 세트 I | 발레코어 소프트 의상 세트 I (new) [이미지있음]
-CD30: 버니버니 의상 세트 II | 발레코어 소프트 의상 세트 II (new) [이미지있음]
-출력: {"section_title": "배틀패스 의상 교환권", "block_type": "new_highlight", "items": [
-  {"name": "노네임 의상 세트", "is_new": false},
-  ...(중략)...,
-  {"name": "발레코어 소프트 의상 세트 I", "is_new": true},
-  {"name": "발레코어 소프트 의상 세트 II", "is_new": true}
-], "footnote": "(교환 리스트 중 택1)", "confidence": 0.9}
-(판단 근거: "(new)" 마커가 붙은 항목이 1~2개 있고 나머지는 평범한 이름 목록 → new_highlight)
+D33: 배틀패스 FX 타이틀 교환권 [이미지있음]
+C35: 아래 FX 타이틀 중 택 1 (거래 불가)
+EDC41: RETRO FX 타이틀 습득서 (영구제) | 수묵화 FX 타이틀 습득서(영구제) | 아에루라 FX 타이틀 습득서(영구제) [이미지있음]
+EDC46: LEFICA 타이틀 습득서 (영구제) | DEVIL FX 타이틀 습득서 (영구제) | 멍멍 멍멍멍 FX 타이틀 습득서(영구제)
+D49: NEW!
+D50: 이미지 추후 전달 예정
+CD52: 서핑 푸리링 타이틀 습득서(영구제) | 따끈따근 프리링 타이틀 습득서(영구제)
+출력: {"section_title": "배틀패스 FX 타이틀 교환권", "block_type": "grid", "items": [
+  {"name": "RETRO FX 타이틀 습득서 (영구제)", "is_new": false},
+  {"name": "수묵화 FX 타이틀 습득서(영구제)", "is_new": false},
+  {"name": "아에루라 FX 타이틀 습득서(영구제)", "is_new": false},
+  {"name": "LEFICA 타이틀 습득서 (영구제)", "is_new": false},
+  {"name": "DEVIL FX 타이틀 습득서 (영구제)", "is_new": false},
+  {"name": "멍멍 멍멍멍 FX 타이틀 습득서(영구제)", "is_new": false},
+  {"name": "서핑 푸리링 타이틀 습득서(영구제)", "is_new": false},
+  {"name": "따끈따근 프리링 타이틀 습득서(영구제)", "is_new": true}
+], "footnote": "아래 FX 타이틀 중 택 1 (거래 불가)", "confidence": 0.85}
+(판단 근거: "NEW!"/"이미지 추후 전달 예정"이 D49/D50에 독립된 줄로 있고, 그 다음(D52)에
+나온 "따끈따근 프리링 타이틀 습득서"가 D열의 다음 항목이므로 그게 신규 항목이다 —
+D46의 "멍멍 멍멍멍"(그 앞 항목)이 아니다. 8개 항목이 전부 같은 그리드 칸에 들어가고
+신규 항목만 배지가 붙으므로 block_type은 grid — new_highlight로 표기해도 렌더링은
+동일하게 처리된다.)
 
 예시 3 (paired_columns — 202509 "할로윈 뱀파이어 의상 선택권"):
 입력:

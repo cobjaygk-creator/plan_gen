@@ -60,13 +60,27 @@ def _add_placement(slide, placement: Placement):
     width, height = Pt(placement.width), Pt(placement.height)
 
     if placement.kind in ("icon", "image"):
-        frame = _add_card_frame(slide, left, top, width, height)
+        _add_card_frame(slide, left, top, width, height)
         image_path = placement.ref.get("image") if isinstance(placement.ref, dict) else None
         if image_path and os.path.exists(image_path):
             slide.shapes.add_picture(image_path, left, top, width, height)
-        # text_only: leave the card frame empty — the block engine always
-        # places a separate caption below/beside it carrying the name
-        # (source pptx never puts text inside the card shape itself either)
+            return
+        if isinstance(placement.ref, dict) and placement.ref.get("is_new"):
+            # genuinely new item, art not ready yet — say so instead of a
+            # silent blank box (matches source data's own "이미지 추후 전달 예정")
+            tb = slide.shapes.add_textbox(left, top, width, height)
+            tf = tb.text_frame
+            tf.word_wrap = True
+            tf.text = "이미지 추후 전달 예정"
+            p = tf.paragraphs[0]
+            p.alignment = PP_ALIGN.CENTER
+            p.font.size = Pt(6)
+            p.font.name = BODY_FONT
+            p.font.color.rgb = CAPTION_COLOR
+        # ordinary item with no matched image: leave the card frame empty —
+        # the block engine always places a separate caption below/beside it
+        # carrying the name (source pptx never puts text inside the card
+        # shape itself either)
         return
 
     if placement.kind == "badge":

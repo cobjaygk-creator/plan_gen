@@ -56,18 +56,34 @@ def test_both_low_confidence_raises_needs_human_review():
             classify_month("999903", "raw text here")
 
 
-def test_haiku_schema_failure_escalates():
+def test_haiku_schema_failure_retries_same_tier_before_escalating():
+    # malformed-response retry (MALFORMED_RETRY_ATTEMPTS=2): Haiku fails
+    # once, succeeds on retry — should NOT escalate to Sonnet at all
     with patch("tools.classify_month.classify") as mock_classify:
         mock_classify.side_effect = [ClassificationError("bad json"), make_output(confidence=0.9)]
         result = classify_month("999904", "raw text here")
+        assert result.model_used == HAIKU_MODEL
+        assert mock_classify.call_count == 2
+
+
+def test_haiku_fails_both_retries_then_escalates_to_sonnet():
+    with patch("tools.classify_month.classify") as mock_classify:
+        mock_classify.side_effect = [
+            ClassificationError("bad json"), ClassificationError("bad json"),
+            make_output(confidence=0.9),
+        ]
+        result = classify_month("999904b", "raw text here")
         assert result.model_used == SONNET_MODEL
+        assert mock_classify.call_count == 3
 
 
 def test_sonnet_schema_failure_after_haiku_failure_raises():
     with patch("tools.classify_month.classify") as mock_classify:
-        mock_classify.side_effect = [ClassificationError("bad json"), ClassificationError("still bad")]
+        # Haiku fails both attempts, Sonnet fails both attempts -> give up
+        mock_classify.side_effect = [ClassificationError("bad json")] * 4
         with pytest.raises(NeedsHumanReview):
             classify_month("999905", "raw text here")
+        assert mock_classify.call_count == 4
 
 
 def test_cache_hit_skips_api_call():

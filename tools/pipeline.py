@@ -22,7 +22,7 @@ from tools.classify_month import classify_month, NeedsHumanReview
 from tools.locate_items import locate_items
 from tools.match_images import match_images
 from tools.blocks import (
-    grid_block, text_list_block, new_highlight_block, few_preview_block, paired_columns_block,
+    grid_block, text_list_block, few_preview_block, paired_columns_block,
     has_any_overlap,
 )
 
@@ -56,14 +56,13 @@ def _items_with_images(section, matched, text_only) -> list[dict]:
 
 def _render_section(section, items: list[dict]) -> list:
     bt = section.block_type
-    if bt == "grid":
+    if bt in ("grid", "new_highlight"):
+        # new_highlight merged into grid: real data (202512) showed NEW
+        # items sit in a normal-sized grid cell with just a badge, not a
+        # separately-sized "highlight card" — see tools/blocks/grid.py
         return grid_block(items, columns=3, icon_size=24.0)
     if bt == "text_list":
         return text_list_block(items, columns=3)
-    if bt == "new_highlight":
-        new_items = [i for i in items if i["is_new"]]
-        rest_items = [i for i in items if not i["is_new"]]
-        return new_highlight_block(new_items, rest_items)
     if bt == "few_preview":
         return few_preview_block(items)
     if bt == "paired_columns":

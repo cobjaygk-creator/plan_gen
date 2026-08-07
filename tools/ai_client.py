@@ -61,6 +61,11 @@ def _anthropic_classify(system_prompt: str, user_prompt: str, schema_model: Type
     response = client.messages.create(
         model=model,
         max_tokens=4096,
+        # No temperature override: claude-sonnet-5 rejects it outright
+        # ("temperature is deprecated for this model"), and Haiku accepts
+        # but only one of the two models actually needs it pinned. Run-to-
+        # run variance on borderline sections is handled by the existing
+        # confidence-threshold escalation instead (design principle 4).
         system=system_prompt,
         tools=[tool],
         tool_choice={"type": "tool", "name": tool_name},

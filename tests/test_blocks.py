@@ -5,7 +5,7 @@ import pytest
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from tools.blocks import (
-    grid_block, text_list_block, new_highlight_block,
+    grid_block, text_list_block,
     few_preview_block, paired_columns_block, has_any_overlap,
     CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM,
 )
@@ -67,28 +67,34 @@ class TestTextListBlock:
         for page in pages:
             assert not has_any_overlap(page)
 
+    def test_new_item_gets_suffix_since_there_is_no_icon_to_badge(self):
+        items = make_items(3)
+        items[1]["is_new"] = True
+        pages = text_list_block(items, columns=3)
+        texts = [p.ref for p in pages[0]]
+        assert "item1 (NEW)" in texts
+        assert "item0" in texts and "item0 (NEW)" not in texts
 
-class TestNewHighlightBlock:
-    def test_two_new_cards_plus_rest(self):
-        new_items = make_items(2, "new")
-        rest = make_items(10, "rest")
-        pages = new_highlight_block(new_items, rest)
-        assert len(pages) >= 1
-        assert not has_any_overlap(pages[0])  # badges vs image ignored by default
-        assert_within_content_box(pages[0])
-        # 2 new items x 3 placements (image+badge+caption) present on first page
-        assert sum(1 for p in pages[0] if p.kind == "badge") == 2
 
-    def test_rejects_too_many_new_items(self):
-        with pytest.raises(ValueError):
-            new_highlight_block(make_items(3, "new"), [])
+class TestGridBlockNewBadge:
+    # "new_highlight" (B') merged into grid_block after 202512 real-data
+    # evidence showed NEW items sit in a normal grid cell + small badge,
+    # not a separately-sized highlight card (see tools/blocks/grid.py).
+    def test_new_item_gets_a_badge(self):
+        items = make_items(6)
+        items[2]["is_new"] = True
+        pages = grid_block(items, columns=3, icon_size=24.0)
+        assert sum(1 for p in pages[0] if p.kind == "badge") == 1
 
-    def test_rest_overflow_spills_to_plain_pages(self):
-        pages = new_highlight_block(make_items(1, "new"), make_items(80, "rest"))
-        assert len(pages) > 1
-        for page in pages[1:]:
-            assert all(p.kind != "badge" for p in page)
-            assert not has_any_overlap(page)
+    def test_no_badges_when_nothing_is_new(self):
+        pages = grid_block(make_items(6), columns=3, icon_size=24.0)
+        assert sum(1 for p in pages[0] if p.kind == "badge") == 0
+
+    def test_badge_does_not_count_as_content_overlap(self):
+        items = make_items(6)
+        items[0]["is_new"] = True
+        pages = grid_block(items, columns=3, icon_size=24.0)
+        assert not has_any_overlap(pages[0])  # badge intentionally overlays its icon corner
 
 
 class TestFewPreviewBlock:

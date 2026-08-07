@@ -23,7 +23,7 @@ from schemas.classification_schema import ClassificationOutput
 from schemas.few_shot_examples import FEW_SHOT_EXAMPLES
 from tools.ai_client import classify, HAIKU_MODEL, SONNET_MODEL, ClassificationError
 
-PROMPT_VERSION = "v2"  # v2: added [이미지있음] image-presence marker (grid vs text_list fix)
+PROMPT_VERSION = "v3"  # v3: standalone NEW!/이미지 추후 전달 예정 marker-row attribution fix
 CONFIDENCE_THRESHOLD = 0.7
 CACHE_DIR = "ai_results"
 
@@ -32,9 +32,13 @@ SYSTEM_PROMPT = """\
 섹션을 아래 5개 블록타입 중 하나로 분류하고 항목을 뽑아내는 역할만 한다.
 
 블록타입 정의:
-- grid: 아이콘/이미지 여러 개 + 캡션, N열 그리드 (소형/대형 이미지 크기는 무관)
+- grid: 아이콘/이미지 여러 개 + 캡션, N열 그리드 (소형/대형 이미지 크기는 무관).
+  일부 항목에 "(new)"/"(new!)" 마커나 별도의 "NEW!" 행이 붙어 있어도 grid다 —
+  NEW 항목은 다른 항목과 같은 칸에 들어가고 배지만 붙을 뿐, 별도 레이아웃이 아니다.
 - text_list: 이미지 없이 이름만 나열, 보통 3열
-- new_highlight: 이름에 "(new)"/"(new!)" 마커가 붙은 항목 1~2개 + 나머지는 평범한 목록
+- new_highlight: grid와 렌더링은 동일하지만 "신규 항목이 있다"는 의미를 구분하고
+  싶을 때 쓴다 — is_new=true 항목이 있는 grid류 섹션에 사용해도 되고, 굳이
+  구분 안 되면 grid로 분류해도 무방하다 (렌더러가 동일하게 처리함)
 - few_preview: 항목 1~3개, 큰 이미지 프리뷰 성격
 - paired_columns: 정확히 세트 2개를 비교하고 "···중 택 1" 같은 각주가 붙는 구조
 
@@ -43,6 +47,14 @@ SYSTEM_PROMPT = """\
 new_highlight/paired_columns 중 하나여야 하고, 이미지가 하나도 없는 섹션만
 text_list일 수 있다. "[이미지있음]" 마커 없이 이름만 나열된 걸 보고 grid로
 판단하지 마라 — 이미지 유무는 반드시 이 마커로만 판단해라, 이름 느낌으로 추측하지 마라.
+
+**"NEW!"/"이미지 추후 전달 예정" 같은 문구가 이름 옆이 아니라 완전히 독립된 한 줄로
+나오면, 그건 그 줄 다음(아래)에 나오는 같은 열(B/C/D)의 항목을 가리키는 것이다 —
+바로 위에 나온 항목이 아니다.** 예를 들어 "D49: NEW!" 다음에 "D50: 이미지 추후
+전달 예정"이 나오고 그 다음 "CD52: 항목A | 항목B"가 나오면, D열의 항목B가 신규
+항목이고 아직 이미지가 없는 것이지 그 앞에 나온 항목이 신규인 게 아니다. 헷갈리면
+"이미지 추후 전달 예정"이라는 문구가 있었다는 걸 근거로 그 항목의 is_new를
+true로, 그리고 confidence를 낮춰서 사람이 재확인하게 해라.
 
 절대 원칙:
 - 좌표/이미지 매칭은 네 역할이 아니다. 오직 텍스트 분류 + 항목 추출만 한다.
@@ -106,6 +118,25 @@ def _build_user_prompt(raw_text: str) -> str:
     return f"{FEW_SHOT_EXAMPLES}\n---\n이제 아래 입력을 같은 형식으로 분류해라:\n\n{raw_text}"
 
 
+MALFORMED_RETRY_ATTEMPTS = 2  # observed ~2/3 per-call success rate on malformed-
+                              # response cases (double-nested JSON quirk) even with
+                              # an unchanged prompt/input — Sonnet doesn't support a
+                              # temperature pin to reduce this, so retry the same
+                              # tier before escalating/giving up, since a schema
+                              # error is a formatting fluke, not a judgment call
+                              # (unlike low confidence, which is never retried).
+
+
+def _classify_with_retry(system_prompt, user_prompt, model, attempts=MALFORMED_RETRY_ATTEMPTS):
+    last_error = None
+    for _ in range(attempts):
+        try:
+            return classify(system_prompt, user_prompt, ClassificationOutput, model)
+        except ClassificationError as e:
+            last_error = e
+    raise last_error
+
+
 def classify_month(month: str, raw_text: str, force_refresh: bool = False) -> ClassifyResult:
     key = _cache_key(raw_text)
 
@@ -118,7 +149,7 @@ def classify_month(month: str, raw_text: str, force_refresh: bool = False) -> Cl
     user_prompt = _build_user_prompt(raw_text)
 
     try:
-        output = classify(SYSTEM_PROMPT, user_prompt, ClassificationOutput, HAIKU_MODEL)
+        output = _classify_with_retry(SYSTEM_PROMPT, user_prompt, HAIKU_MODEL)
         if _is_confident(output):
             _save_cache(month, key, output, HAIKU_MODEL)
             return ClassifyResult(month, output, HAIKU_MODEL, from_cache=False)
@@ -126,7 +157,7 @@ def classify_month(month: str, raw_text: str, force_refresh: bool = False) -> Cl
         output = None
 
     try:
-        output = classify(SYSTEM_PROMPT, user_prompt, ClassificationOutput, SONNET_MODEL)
+        output = _classify_with_retry(SYSTEM_PROMPT, user_prompt, SONNET_MODEL)
         if _is_confident(output):
             _save_cache(month, key, output, SONNET_MODEL)
             return ClassifyResult(month, output, SONNET_MODEL, from_cache=False)
