@@ -1,4 +1,8 @@
+from pathlib import Path
+
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from starlette.middleware.sessions import SessionMiddleware
 
 from .config import SESSION_COOKIE_NAME, SESSION_MAX_AGE_SECONDS, SESSION_SECRET_KEY
@@ -25,3 +29,20 @@ app.include_router(generations.router)
 @app.get("/health")
 def health():
     return {"ok": True}
+
+
+# Single-process local use: once `npm run build` has produced
+# web/frontend/dist, serve it from this same FastAPI process instead of
+# needing a separate Vite dev server running alongside it. Registered
+# after the API routers above, so /auth/*, /generations/*, /health still
+# take priority — Starlette matches routes in registration order.
+_FRONTEND_DIST = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+if _FRONTEND_DIST.is_dir():
+    app.mount("/assets", StaticFiles(directory=_FRONTEND_DIST / "assets"), name="frontend-assets")
+
+    @app.get("/{full_path:path}")
+    def spa(full_path: str):
+        candidate = _FRONTEND_DIST / full_path
+        if full_path and candidate.is_file():
+            return FileResponse(candidate)
+        return FileResponse(_FRONTEND_DIST / "index.html")

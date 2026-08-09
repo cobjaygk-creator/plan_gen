@@ -1,7 +1,8 @@
 # plan_gen backend (FastAPI)
 
-2단계까지 구현된 상태입니다: 인증 + 요청서 업로드/생성/진행상황/다운로드
-(아키텍처 설계 문서의 다음 구현 순서 참고).
+인증 + 요청서 업로드/생성/진행상황/다운로드까지 구현되어 있고, 프론트엔드까지
+포함해서 **팀 배포 없이 본인 PC에서만 쓰는 용도로 완성된 상태**입니다
+(사내 서버 배포는 필요 시 나중에 별도로).
 
 ## 설치
 ```
@@ -9,21 +10,29 @@
 ```
 
 ## .env
-루트 `.env`에 다음을 추가하세요 (`.env.example` 참고):
-```
-SESSION_SECRET_KEY=<python -c "import secrets; print(secrets.token_hex(32))" 로 생성>
-```
-설정 안 하면 로컬 개발용 기본값으로 동작하지만, 실제 배포 전엔 반드시 설정해야 합니다.
+루트 `.env`에 `SESSION_SECRET_KEY`가 이미 채워져 있습니다 (없다면
+`python -c "import secrets; print(secrets.token_hex(32))"`로 생성해서 추가).
 
 ## 계정 생성 (자체 회원가입 없음 — 관리자가 직접 생성)
 ```
 .venv\Scripts\python.exe web/backend/create_user.py <이메일> <비밀번호> <이름>
 ```
 
-## 서버 실행
+## 평소 실행 (권장) — 백엔드 하나로 화면+API 전부
+```
+powershell -ExecutionPolicy Bypass -File web/run_local.ps1
+```
+`http://localhost:8000`에서 로그인부터 다운로드까지 전부 됩니다. 이 스크립트가
+프론트엔드를 빌드하고 `web/frontend/dist`를 FastAPI가 직접 서빙하도록
+`app/main.py`에 구성돼 있어서, 프로세스 하나만 띄우면 됩니다.
+
+## 개발 중 (프론트 코드를 수정할 때만)
+HMR(자동 새로고침)이 필요하면 백엔드/프론트를 따로 띄우세요:
 ```
 .venv\Scripts\python.exe -m uvicorn app.main:app --reload --app-dir web/backend --port 8000
 ```
+그리고 별도 터미널에서 `web/frontend/README.md`대로 `npm run dev` (5173 포트,
+`/auth` `/generations` `/health`를 8000으로 프록시).
 
 ## 엔드포인트
 - `POST /auth/login` — `{"email": ..., "password": ...}` → 세션 쿠키 발급
@@ -49,5 +58,12 @@ SESSION_SECRET_KEY=<python -c "import secrets; print(secrets.token_hex(32))" 로
 업로드 → SSE 스트림 → 다운로드까지 실제 202606 요청서로 검증, 결과물이 python-pptx로
 정상적으로 열림).
 
+## 확인한 것
+`web/run_local.ps1`로 빌드 후 서버 하나만 띄워서, 브라우저로 `http://localhost:8000`
+접속 → 로그인 → 생성 이력(실데이터) 확인, curl로 SPA 클라이언트 라우팅(`/generate`
+같은 경로도 index.html로 정상 폴백)·API 경로 우선순위(`/auth/me`가 SPA 폴백에
+안 먹힘)·정적 에셋 서빙까지 전부 실제로 검증.
+
 ## 다음 단계
-React 프론트엔드 — 앞서 만든 와이어프레임을 실제 컴포넌트로 옮기고 이 API에 연결.
+지금은 필요 없지만, 나중에 팀 배포가 필요해지면 아키텍처 설계 문서의 6단계
+(Nginx + systemd/Docker, 사내 서버 상시 배포)를 진행하면 됩니다.
