@@ -19,11 +19,11 @@ import json
 import os
 from dataclasses import dataclass, asdict
 
-from schemas.classification_schema import ClassificationOutput
+from schemas.classification_schema import ClassificationOutput, Section
 from schemas.few_shot_examples import FEW_SHOT_EXAMPLES
 from tools.ai_client import classify, HAIKU_MODEL, SONNET_MODEL, ClassificationError
 
-PROMPT_VERSION = "v5"  # v5: preserve intentionally-repeated same-name rows instead of deduping them
+PROMPT_VERSION = "v6"  # v6: generalize paired_columns pair-item detection beyond the slash-pair surface form
 CONFIDENCE_THRESHOLD = 0.7
 CACHE_DIR = "ai_results"
 
@@ -40,17 +40,26 @@ SYSTEM_PROMPT = """\
   싶을 때 쓴다 — is_new=true 항목이 있는 grid류 섹션에 사용해도 되고, 굳이
   구분 안 되면 grid로 분류해도 무방하다 (렌더러가 동일하게 처리함)
 - few_preview: 항목 1~3개, 큰 이미지 프리뷰 성격
-- paired_columns: 정확히 세트 2개를 비교하는 구조. 두 가지 실제 패턴이 있다:
-  (a) "···중 택 1" 각주가 붙고 세트 2개만 있는 단순한 경우
-  (b) 세트 이름 2개가 "A 세트 / B 세트"처럼 한 줄에 슬래시로 나란히 적혀 있고, 그
-      아래 여러 행에 걸쳐 두 열(예: B열, D열)에 각 세트의 하위 구성품이 나란히
-      나열되는 경우 — "···중 택 1" 문구가 없어도 이 구조면 paired_columns다.
-      이때 세트 이름 2개는 items에 pair_group=null로 넣고(이게 pair_items가 됨),
-      각 하위 구성품은 어느 세트 소속인지에 따라 pair_group=0(첫 세트, 보통 왼쪽 열)
-      또는 pair_group=1(둘째 세트, 보통 오른쪽 열)을 붙인다. 하위 구성품이 없으면
-      pair_group은 전부 null로 둔다 (기존 단순 paired_columns와 동일하게 처리됨).
-      **하위 구성품 15개를 그냥 flat하게 grid로 뽑지 마라** — 두 세트 밑에 각각
-      딸린 목록이라는 구조 정보를 pair_group으로 반드시 남겨야 한다.
+- paired_columns: 핵심은 정확히 2개의 **최상위 선택지**가 있고, 그 외 항목은 전부 그 2개
+  중 하나에 속하는 하위 구성 요소라는 것이다. 이걸 판단할 때 **표면적 형식(슬래시로
+  병기됐는지, 한 줄에 몇 열인지 등)에 얽매이지 말고 의미로 판단해라** — 최상위 선택지
+  2개가 어떻게 적혀 있는지는 매번 다를 수 있다:
+    · 한 셀에 "A 세트 / B 세트"처럼 슬래시로 병기된 경우도 있고,
+    · 다른 하위 구성품 행들과 똑같이 생긴 2열 행(예: "CD28: 의상 세트 l | 의상 세트 ll")에
+      적혀 있는 경우도 있다 — 이때 다른 행들과 형식이 같다고 전부 같은 레벨로 취급하지 마라.
+  판단 근거: 각주나 안내문에 "···중 택 1"/"···중 하나" 같은 문구가 있으면, 그 문구가
+  가리키는 명사(예: "패션 세트", "의상 세트")와 이름이 일치하거나 그 명사를 포함하는
+  항목이 최상위 선택지다. 나머지 항목(예: 모자/상의/바지/신발처럼 구성품 하나하나를
+  가리키는 이름)은 그 선택지 중 어느 쪽에 속하는지 보고 하위 구성품으로 분류한다.
+  최상위 선택지 2개를 찾으면 items에 pair_group=null로 넣고(이게 pair_items가 됨), 각
+  하위 구성품은 소속에 따라 pair_group=0(첫 번째) 또는 pair_group=1(두 번째)을 붙인다.
+  하위 구성품이 전혀 없는 단순 비교(세트 2개만 있고 "···중 택 1" 각주만 붙은 경우)라면
+  pair_group은 전부 null로 둔다. **하위 구성품을 그냥 flat하게 grid로 뽑거나, 최상위
+  선택지 자체를 하위 구성품과 같은 레벨로 섞어 넣지 마라** — 세트별 목록이라는 구조
+  정보를 pair_group으로 반드시 남겨야 한다.
+  **최상위 선택지가 정확히 2개인지 스스로 확인해라.** 아무리 찾아도 정확히 2개가 안
+  나오면(0개, 1개, 3개 이상) 이 섹션의 confidence를 반드시 낮게 적어서 사람이
+  재검토하게 해라 — 애매한 채로 pair_group을 억지로 채우지 마라.
 
 입력의 각 줄 끝에 "[이미지있음]"이 붙어있으면 그 행에 실제 이미지가 있다는 뜻이다
 (원본 엑셀에 삽입된 그림 기준, 추측 아님). 이게 있는 섹션은 grid/few_preview/
@@ -124,8 +133,27 @@ def _save_cache(month: str, key: str, output: ClassificationOutput, model_used: 
         )
 
 
+def _is_structurally_valid(section: Section) -> bool:
+    """paired_columns_block hard-requires exactly 2 pair_group=None items
+    (see tools/blocks/paired_columns.py) — if the model's pair_group
+    tagging doesn't produce exactly 2, the section is guaranteed to blow
+    up at render time and get silently dropped from the final .pptx
+    (render_error sections are skipped, not fatal). Catch that here so it
+    counts as "not confident" and escalates/asks for human review instead
+    of quietly shipping a deck with missing content (real case: 202503
+    "버니버니 의상 선택권" came back with 0 pair_group=None items)."""
+    if section.block_type != "paired_columns":
+        return True
+    return sum(1 for i in section.items if i.pair_group is None) == 2
+
+
 def _is_confident(output: ClassificationOutput) -> bool:
-    return all(s.confidence >= CONFIDENCE_THRESHOLD for s in output.sections) if output.sections else False
+    if not output.sections:
+        return False
+    return all(
+        s.confidence >= CONFIDENCE_THRESHOLD and _is_structurally_valid(s)
+        for s in output.sections
+    )
 
 
 def _build_user_prompt(raw_text: str) -> str:
@@ -179,6 +207,10 @@ def classify_month(month: str, raw_text: str, force_refresh: bool = False) -> Cl
         raise NeedsHumanReview(month, f"Sonnet also failed schema validation: {e}", raw_text) from e
 
     low_conf = [s.section_title for s in output.sections if s.confidence < CONFIDENCE_THRESHOLD]
-    raise NeedsHumanReview(
-        month, f"Sonnet confidence still below {CONFIDENCE_THRESHOLD} for: {low_conf}", raw_text
-    )
+    structurally_bad = [s.section_title for s in output.sections if not _is_structurally_valid(s)]
+    reasons = []
+    if low_conf:
+        reasons.append(f"confidence still below {CONFIDENCE_THRESHOLD} for: {low_conf}")
+    if structurally_bad:
+        reasons.append(f"paired_columns didn't resolve to exactly 2 top-level items for: {structurally_bad}")
+    raise NeedsHumanReview(month, f"Sonnet also not usable — {'; '.join(reasons)}", raw_text)

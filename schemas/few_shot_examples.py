@@ -106,6 +106,41 @@ BD24와 BD25 두 행에 각각 나온다 — 이름이 같다고 하나로 합�
 항목으로 넣어야 한다 (자켓 세트 하위 7개, 치마 세트 하위 6개, 총 15개).** 이걸 flat
 grid로 뽑거나 중복을 하나로 합치면 안 된다 — 세트별 목록과 실제 수량 구조를 잃는다.)
 
+예시 3c (paired_columns + pair_group — 202503 "버니버니 의상 선택권", 최상위 세트명이
+슬래시 없이 다른 행과 똑같은 2열 형식으로 적힌 경우):
+입력:
+B17: 버니버니 의상 선택권 [이미지있음]
+C19: 아래 패션 세트 중 택 1 (거래 불가)
+EC20: 버니버니 모자 II | 버니버니 모자 I [이미지있음]
+EC21: 버니버니 상의 II | 버니버니 상의 I [이미지있음]
+EC22: 버니버니 치마 | 버니버니 바지 [이미지있음]
+EC23: 버니버니 신발 II | 버니버니 신발 I [이미지있음]
+EC24: 버니버니 안대 II | 버니버니 안대 I [이미지있음]
+CD28: 버니버니 의상 세트 l | 버니버니 의상 세트 ll [이미지있음]
+출력: {"section_title": "버니버니 의상 선택권", "block_type": "paired_columns", "items": [
+  {"name": "버니버니 의상 세트 l", "is_new": false, "pair_group": null},
+  {"name": "버니버니 의상 세트 ll", "is_new": false, "pair_group": null},
+  {"name": "버니버니 모자 I", "is_new": false, "pair_group": 0},
+  {"name": "버니버니 모자 II", "is_new": false, "pair_group": 1},
+  {"name": "버니버니 상의 I", "is_new": false, "pair_group": 0},
+  {"name": "버니버니 상의 II", "is_new": false, "pair_group": 1},
+  {"name": "버니버니 바지", "is_new": false, "pair_group": 0},
+  {"name": "버니버니 치마", "is_new": false, "pair_group": 1},
+  {"name": "버니버니 신발 I", "is_new": false, "pair_group": 0},
+  {"name": "버니버니 신발 II", "is_new": false, "pair_group": 1},
+  {"name": "버니버니 안대 I", "is_new": false, "pair_group": 0},
+  {"name": "버니버니 안대 II", "is_new": false, "pair_group": 1}
+], "footnote": "아래 패션 세트 중 택 1 (거래 불가)", "confidence": 0.85}
+(판단 근거: CD28의 "의상 세트 l | 의상 세트 ll"은 다른 EC20~24 행들과 형식(2열,
+[이미지있음])이 완전히 똑같아 보이지만, C19의 "아래 패션 세트 중 택 1" 각주가
+가리키는 명사(패션 "세트")와 이름이 일치하는 항목이 바로 이 둘이므로 이게 최상위
+선택지(pair_group=null)다. **이걸 다른 행들과 똑같이 생겼다고 해서 하위 구성품처럼
+pair_group=0/1로 넣으면 pair_items가 0개가 되어 렌더링이 실패한다 — 반드시 최상위
+선택지를 정확히 2개 찾아내라.** 나머지 항목은 이름 끝의 로마숫자(I/II)가 "세트 l"/
+"세트 ll"과 대응되므로 그걸 근거로 pair_group을 매긴다 — E열/C열이라는 위치가 아니라
+이름 자체가 소속을 알려주는 경우도 있다는 뜻이다. 최상위 선택지가 정확히 2개인지
+스스로 검증하고, 안 되면 confidence를 낮춰라.)
+
 예시 4 (few_preview — 202509 "할로윈 펌킨 버킷 등록권"):
 입력:
 CD50: 할로윈 펌킨 버킷 등록권 | 할로윈 잭 오 랜턴 등록권 [이미지있음]

@@ -20,6 +20,19 @@ def make_output(confidence=0.9):
     ])
 
 
+def make_paired_columns_output(confidence=0.9, pair_group_none_count=2):
+    # real 202503 bug: the model can tag 0 (or 1, or 3+) items with
+    # pair_group=None instead of exactly 2 — paired_columns_block hard-
+    # requires exactly 2, so anything else guarantees a render-time
+    # ValueError that silently drops the whole section from the deck
+    items = [Item(name=f"세트{i}", pair_group=None) for i in range(pair_group_none_count)]
+    items += [Item(name="구성품1", pair_group=0), Item(name="구성품2", pair_group=1)]
+    return ClassificationOutput(sections=[
+        Section(section_title="테스트 페어드 섹션", block_type="paired_columns",
+                items=items, footnote="아래 중 택 1", confidence=confidence)
+    ])
+
+
 @pytest.fixture(autouse=True)
 def clean_cache():
     if os.path.exists(CACHE_DIR):
@@ -102,6 +115,37 @@ def test_different_raw_text_is_a_cache_miss():
         classify_month("999907", "text A")
         classify_month("999907", "text B")
         assert mock_classify.call_count == 2
+
+
+def test_paired_columns_with_exactly_two_pair_items_is_confident():
+    with patch("tools.classify_month.classify") as mock_classify:
+        mock_classify.return_value = make_paired_columns_output(confidence=0.9, pair_group_none_count=2)
+        result = classify_month("999909", "raw text here")
+        assert result.model_used == HAIKU_MODEL
+        assert mock_classify.call_count == 1
+
+
+def test_paired_columns_with_zero_pair_items_escalates_despite_high_confidence():
+    # the model's own reported confidence (0.9) must not matter here — 0
+    # pair_group=None items is structurally guaranteed to fail rendering
+    with patch("tools.classify_month.classify") as mock_classify:
+        mock_classify.side_effect = [
+            make_paired_columns_output(confidence=0.9, pair_group_none_count=0),
+            make_paired_columns_output(confidence=0.9, pair_group_none_count=2),
+        ]
+        result = classify_month("999910", "raw text here")
+        assert result.model_used == SONNET_MODEL
+        assert mock_classify.call_count == 2
+
+
+def test_paired_columns_still_structurally_invalid_after_sonnet_raises_with_clear_reason():
+    with patch("tools.classify_month.classify") as mock_classify:
+        mock_classify.side_effect = [
+            make_paired_columns_output(confidence=0.9, pair_group_none_count=0),
+            make_paired_columns_output(confidence=0.9, pair_group_none_count=3),
+        ]
+        with pytest.raises(NeedsHumanReview, match="exactly 2 top-level items"):
+            classify_month("999911", "raw text here")
 
 
 def test_force_refresh_bypasses_cache():
