@@ -1,0 +1,59 @@
+.login-screen {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(560px 320px at 50% -10%, var(--accent-soft), transparent 70%), var(--bg);
+  padding: 40px 20px;
+}
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 36px 32px;
+}
+.login-card .brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.login-card .brand-glyph {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex: none;
+}
+.login-card .brand-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+.login-card .brand-sub {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-top: 1px;
+}
+.login-card h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.login-card p.lede {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  margin: 0 0 26px;
+  line-height: 1.5;
+}
+.login-foot {
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-top: 22px;
+}

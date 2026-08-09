@@ -1,0 +1,274 @@
+.upload-card {
+  padding: 26px;
+  max-width: 620px;
+}
+.dropzone {
+  border: 1.5px dashed var(--border-strong);
+  border-radius: 8px;
+  padding: 34px 20px;
+  text-align: center;
+  background: var(--surface-sunken);
+  cursor: pointer;
+}
+.dropzone.dragging {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.dropzone .ic {
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.dropzone .primary {
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.dropzone .secondary {
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+.dropzone input[type="file"] {
+  display: none;
+}
+
+.file-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+.file-chip .ic {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.file-chip .meta {
+  flex: 1;
+  min-width: 0;
+}
+.file-chip .fname {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.file-chip .fsub {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+}
+.file-chip .remove-btn {
+  background: none;
+  border: none;
+  color: var(--ink-faint);
+  cursor: pointer;
+  padding: 4px;
+  flex: none;
+}
+.file-chip .remove-btn:hover {
+  color: var(--danger);
+}
+
+.form-row {
+  margin-top: 18px;
+}
+.form-row label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+.month-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+.actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.progress-card {
+  padding: 28px;
+  max-width: 620px;
+}
+.progress-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.progress-head h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+.progress-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.progress-sub {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  margin: 0 0 18px;
+}
+.bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-sunken);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.bar-fill.animated::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  width: 40%;
+  animation: sheen 1.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bar-fill.animated::after {
+    animation: none;
+  }
+}
+@keyframes sheen {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.step:last-child {
+  border-bottom: none;
+}
+.step-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+.step.done .step-badge {
+  background: var(--success);
+  color: #fff;
+}
+.step.active .step-badge {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.step.pending .step-badge {
+  background: var(--surface-sunken);
+  color: var(--ink-faint);
+  border: 1px solid var(--border-strong);
+}
+.step.error .step-badge {
+  background: var(--danger);
+  color: #fff;
+}
+.step-label {
+  flex: 1;
+}
+.step-title {
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.step.pending .step-title {
+  color: var(--ink-faint);
+}
+.step-detail {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  margin-top: 1px;
+}
+.step-time {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+}
+
+.spin {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.result-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 13.5px;
+}
+.result-banner.ok {
+  background: color-mix(in srgb, var(--success) 12%, transparent);
+  color: var(--success);
+}
+.result-banner.err {
+  background: color-mix(in srgb, var(--danger) 12%, transparent);
+  color: var(--danger);
+}
+.result-banner .msg {
+  flex: 1;
+}
