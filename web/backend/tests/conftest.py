@@ -27,7 +27,7 @@ def db_factory(tmp_path):
 
 
 @pytest.fixture()
-def client(db_factory):
+def client(db_factory, tmp_path, monkeypatch):
     def override_get_db():
         db = db_factory()
         try:
@@ -36,6 +36,18 @@ def client(db_factory):
             db.close()
 
     app.dependency_overrides[get_db] = override_get_db
+
+    # pipeline_runner.run_generation() runs in a background thread and opens
+    # its own DB session via the module-level SessionLocal — it doesn't go
+    # through FastAPI's dependency injection, so the override above alone
+    # doesn't reach it. Patch it directly, and redirect its file dirs into
+    # tmp_path so tests never touch the real web/backend/data/.
+    from app import pipeline_runner
+    monkeypatch.setattr(pipeline_runner, "SessionLocal", db_factory)
+    monkeypatch.setattr(pipeline_runner, "UPLOAD_DIR", tmp_path / "uploads")
+    monkeypatch.setattr(pipeline_runner, "OUTPUT_DIR", tmp_path / "outputs")
+    monkeypatch.setattr(pipeline_runner, "IMAGE_DIR", tmp_path / "images")
+
     yield TestClient(app)
     app.dependency_overrides.clear()
 

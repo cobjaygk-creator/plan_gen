@@ -106,6 +106,29 @@ def test_process_month_paired_columns_matches_set_names_not_sub_items(tmp_path):
     assert items_by_name["20th 파티 흰꽃 머리띠"]["image"] is None
 
 
+def test_process_month_reports_progress_through_all_3_stages(tmp_path):
+    # web/backend's SSE progress stream depends on these exact 3 calls in
+    # order — 4 is reported separately by whoever calls render_from_template()
+    calls = []
+    with patch("tools.pipeline.classify_month", side_effect=_fake_classify):
+        path = os.path.join(SAMPLES_DIR, "202605_request.xlsx")
+        pipeline.process_month(
+            "202605", path, image_out_dir=str(tmp_path),
+            on_progress=lambda step, msg: calls.append((step, msg)),
+        )
+
+    assert [c[0] for c in calls] == [1, 2, 3]
+    assert all(isinstance(c[1], str) and c[1] for c in calls)
+
+
+def test_process_month_works_without_on_progress_callback(tmp_path):
+    # on_progress is optional — must not require passing a no-op lambda
+    with patch("tools.pipeline.classify_month", side_effect=_fake_classify):
+        path = os.path.join(SAMPLES_DIR, "202605_request.xlsx")
+        result = pipeline.process_month("202605", path, image_out_dir=str(tmp_path))
+    assert result.needs_human_review is None
+
+
 def test_process_month_defaults_to_real_local_image_paths():
     # Regression: omitting image_out_dir used to leave in-archive paths
     # (e.g. "xl/media/image8.PNG") on matched items, which render_pptx.py's

@@ -15,6 +15,7 @@ RenderError rather than crashing the whole month, since one bad section
 in a 4-page request shouldn't block the other three.
 """
 from dataclasses import dataclass, field
+from typing import Callable
 
 from tools.parse_fixed_fields import parse_fixed_fields
 from tools.extract_special_reward import extract_special_reward_rows, to_compact_text
@@ -100,27 +101,45 @@ def _render_section(section, items: list[dict]) -> list:
     raise ValueError(f"unknown block_type: {bt!r}")
 
 
-def process_month(month: str, request_path: str, image_out_dir: str | None = None) -> MonthResult:
+def process_month(
+    month: str, request_path: str, image_out_dir: str | None = None,
+    on_progress: Callable[[int, str], None] | None = None,
+) -> MonthResult:
     """image_out_dir=None extracts to out/<month>/images by default — NOT
     "no images": omitting it used to silently leave match_images.py's
     in-archive paths (e.g. "xl/media/image8.PNG") on each item, which
     render_pptx.py's os.path.exists() check then quietly treats as "no
     image" (empty card, no error). That's how a fully-matched section
     could render with zero pictures. Pass an explicit dir (or the same
-    default) if you want the images anywhere else."""
+    default) if you want the images anywhere else.
+
+    on_progress(step, message): optional callback fired after each of this
+    function's 3 stages (1=고정 필드 파싱, 2=AI 분류+이미지 매칭,
+    3=레이아웃 계산) — step 4 (.pptx 렌더링) happens outside this function,
+    in whatever calls render_from_template(), and isn't reported here.
+    Added for the web backend's SSE progress stream (web/backend/app/
+    pipeline_runner.py); run.py and existing callers just don't pass it."""
+    def _progress(step: int, message: str) -> None:
+        if on_progress:
+            on_progress(step, message)
+
     if image_out_dir is None:
         image_out_dir = f"out/{month}/images"
 
     fixed = parse_fixed_fields(request_path)
     rows = extract_special_reward_rows(request_path, fixed["special_reward_start_row"])
     raw_text = to_compact_text(rows)
+    _progress(1, "고정 필드 파싱 완료")
 
     try:
         classify_result = classify_month(month, raw_text)
     except NeedsHumanReview as e:
         return MonthResult(month, needs_human_review=str(e))
 
-    result = MonthResult(month)
+    # phase 1: classify (done above) + per-section locate/match — the only
+    # network-bound work left after this point is none, so this is where
+    # "AI 분류 + 이미지 매칭" (step 2) actually finishes.
+    prepared = []  # (section, items, matched, text_only, unlocated)
     for section in classify_result.output.sections:
         located, unlocated = locate_items(rows, section.items)
         if section.block_type == "paired_columns":
@@ -141,7 +160,12 @@ def process_month(month: str, request_path: str, image_out_dir: str | None = Non
         else:
             matched, text_only = match_images(request_path, located, out_dir=image_out_dir)
         items = _items_with_images(section, matched, text_only)
+        prepared.append((section, items, matched, text_only, unlocated))
+    _progress(2, "AI 분류 + 이미지 매칭 완료")
 
+    # phase 2: per-section layout (block engine -> Placement pages)
+    result = MonthResult(month)
+    for section, items, matched, text_only, unlocated in prepared:
         try:
             pages = _render_section(section, items)
             result.sections.append(SectionResult(
@@ -157,6 +181,7 @@ def process_month(month: str, request_path: str, image_out_dir: str | None = Non
                 text_only_count=len(text_only) + len(unlocated), render_error=str(e),
                 footnote=section.footnote, items=items,
             ))
+    _progress(3, "레이아웃 계산 완료")
 
     return result
 
