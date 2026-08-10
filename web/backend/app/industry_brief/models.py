@@ -59,3 +59,37 @@ class IssueArticle(Base):
 
     issue_id: Mapped[int] = mapped_column(ForeignKey("industry_brief_issues.id"), primary_key=True)
     article_id: Mapped[int] = mapped_column(ForeignKey("industry_brief_articles.id"), primary_key=True)
+
+
+class DailyBrief(Base):
+    """design doc section 28's `daily_briefs` table. changes/watchList/
+    signals/new_today are JSON columns per the spec — computed at
+    generation time, not their own normalized entities (see trends.py's
+    docstring for why)."""
+    __tablename__ = "industry_brief_daily_briefs"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    brief_date: Mapped[str] = mapped_column(String(10))  # "YYYY-MM-DD"
+    generated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)
+    period_start: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    period_end: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+    article_count: Mapped[int] = mapped_column(default=0)
+    issue_count: Mapped[int] = mapped_column(default=0)
+
+    game_headline: Mapped[str] = mapped_column(Text)
+    game_briefing: Mapped[str] = mapped_column(Text)  # JSON-encoded list[str] paragraphs
+    game_changes: Mapped[str] = mapped_column(Text)  # JSON
+    game_watchlist: Mapped[str] = mapped_column(Text)  # JSON
+
+    ai_headline: Mapped[str] = mapped_column(Text)
+    ai_briefing: Mapped[str] = mapped_column(Text)
+    ai_changes: Mapped[str] = mapped_column(Text)
+    ai_watchlist: Mapped[str] = mapped_column(Text)
+
+    game_ai_analysis: Mapped[str] = mapped_column(Text)  # JSON-encoded list[str] paragraphs
+
+    signals: Mapped[str] = mapped_column(Text)  # JSON
+    new_today: Mapped[str] = mapped_column(Text)  # JSON
+
+    status: Mapped[str] = mapped_column(String(20), default="ok")  # "ok" | "stale" (see synthesis.py)

@@ -161,3 +161,40 @@ EMERGING/GROWING/STABLE/DECLINING을 매긴다 (스펙 8번이 명시적으로 �
 날짜 구간 필터링과 트렌드 분류 로직이 실제로 맞게 작동하는 걸 확인했다. 진짜 "여러 날짜에
 걸친 등락"은 데이터가 며칠 더 쌓여야 실증 가능 — 지금은 합성 다일자 데이터 테스트 7개로
 그 로직 자체(GROWING/DECLINING/STABLE 분기, New Today 필터링, 카테고리 격리)를 검증했다.
+
+## Industry Brief — AI 브리핑 종합 (Phase 6)
+GAME Brief/AI Brief/GAME×AI 교차 인사이트/Watch List/이슈별 Why It Matters를 AI로
+종합해서 `daily_briefs`(신규 `DailyBrief` 모델) 한 줄로 저장하고, 각 Issue의
+`why_it_matters`도 같이 채운다. Phase 3와 같은 `tools/ai_client.py`의 `classify()`를
+쓰지만, 한 기사가 아니라 여러 이슈를 종합하는 작업이라 더 강력한 "분석용" 모델
+(`BRIEF_ANALYSIS_MODEL`, 기본 `gpt-4o`)을 쓴다 — 분류용 모델(`BRIEF_CLASSIFIER_MODEL`,
+`gpt-4o-mini`)과 별도 env var로 분리.
+
+```
+.venv\Scripts\python.exe web/backend/industry_brief_synthesize.py
+```
+
+**환각 방지 설계**: AI에게는 DB에 실제로 있는 Issue(제목/요약/출처 수/신뢰도)와 Phase 5의
+키워드 트렌드만 근거로 주고, "주어진 자료에 없는 사실은 만들어내지 마라"를 프롬프트에
+명시. 한 카테고리에 이슈가 하나도 없으면 AI를 아예 호출하지 않고 고정 문구("오늘은
+분석할 만큼 충분한 자료가 수집되지 않았습니다")로 대체한다. GAME×AI 교차 인사이트도
+두 카테고리 중 하나라도 이슈가 없으면 AI를 호출하지 않고, 스펙 12번이 명시한 고정 문구
+("오늘은 두 산업을 연결할 만큼 뚜렷한 공통 신호가 확인되지 않았습니다")를 쓴다. AI가
+호출되더라도 `has_signal=false`로 답하면 모델이 준 summary는 버리고 같은 고정 문구를
+쓴다 (모델이 억지 연결을 만들어낼 가능성 차단).
+
+**실제로 돌려서 확인한 것**: Phase 4~5에서 준비해둔 실데이터(GAME 23건 + AI 8건 분류,
+클러스터링 결과 26개 이슈)로 실제 OpenAI 호출 3회(GAME 패널/AI 패널/교차 인사이트) 실행.
+결과: GAME 쪽은 "AI 중심 M&A가 게임 투자 환경을 약화시키는 중" 같은 실제 기사 내용에
+기반한 헤드라인/브리핑이 나왔고, 교차 인사이트도 "Unity가 Vector AI 덕에 최고 분기
+실적"과 "AI 집중 M&A가 게임 투자를 약화" 두 실제 이슈를 근거로 진짜 연결고리를 짚어냄
+(억지 연결이 아님). 카테고리당 상위 8개 이슈(`TOP_ISSUES_PER_CATEGORY`)를 대상으로 해서
+`Issue.why_it_matters`도 정확히 16건(8+8) 채워진 것을 DB에서 직접 확인. `article_count`는
+0으로 나왔는데, 이는 실데이터의 실제 발행일(2026-08-07)이 브리핑 생성 시점(2026-08-10)
+기준 "최근 24시간" 밖이라 정상 — Phase 5에서 이미 확인한 것과 같은 특성(며칠 뒤 데이터가
+더 쌓여야 "당일" 윈도우가 실제로 채워짐).
+
+**테스트로 잡을 뻔한 지점**: 초기 테스트에서 기사 `published_at`을 브리핑 기준 시점과
+정확히 같은 값으로 넣었더니 기간 필터(`>= start, < end`, end는 배타적)에서 빠지는 걸
+발견 — trends.py와 동일한 배타적 경계 설계가 의도대로 동작한 것이었고(진짜 버그 아님),
+테스트 데이터를 경계보다 5분 앞으로 옮겨서 수정했다.
