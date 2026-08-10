@@ -1,13 +1,16 @@
 """Phase 3: per-article classification (design doc section 36's "Article
 Intelligence" — relevance, GAME/AI 분류, 요약, keywords, entities, 중요도).
-The spec recommends OpenAI GPT-5.4 nano for this tier; the user approved
-substituting Anthropic (already configured, no new API key needed) for
-the same cheap/fast role — reuses tools/ai_client.py's provider-agnostic
-classify() helper as-is rather than writing a second API client.
+Uses OpenAI per the spec's recommendation (section 22), now that
+OPENAI_API_KEY is configured — reuses tools/ai_client.py's provider-
+agnostic classify() helper as-is (now with OpenAI support added there)
+rather than writing a second API client. Passes provider explicitly so
+this stays independent of the PPT pipeline's AI_PROVIDER=anthropic
+default (spec: "Provider 변경을 고려하여 AI Service Layer를 분리한다").
 
 No Issue clustering here (Phase 4) — this only touches one article at a
 time."""
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,11 +24,15 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from tools.ai_client import classify, ClassificationError, HAIKU_MODEL
+from tools.ai_client import classify, ClassificationError
 
 from .models import Article
 
-CLASSIFIER_MODEL = HAIKU_MODEL
+# Not hardcoded (spec section 22) — override via .env if the account uses
+# a different model. Defaults to a known-available cheap OpenAI model
+# rather than guessing at the spec's own "GPT-5.4 nano" placeholder name.
+BRIEF_AI_PROVIDER = os.environ.get("BRIEF_AI_PROVIDER", "openai")
+CLASSIFIER_MODEL = os.environ.get("BRIEF_CLASSIFIER_MODEL", "gpt-4o-mini")
 
 SYSTEM_PROMPT = """\
 너는 게임업계와 AI업계 뉴스를 분류하는 리서치 어시스턴트다. 기사 제목과
@@ -64,7 +71,10 @@ _IMPORTANCE_SCORE = {"high": 90.0, "medium": 60.0, "low": 30.0}
 def _classify_one(article: Article) -> ArticleClassification | None:
     user_prompt = f"제목: {article.title}\n\n요약/본문: {(article.summary or '')[:1500]}"
     try:
-        return classify(SYSTEM_PROMPT, user_prompt, ArticleClassification, CLASSIFIER_MODEL)
+        return classify(
+            SYSTEM_PROMPT, user_prompt, ArticleClassification, CLASSIFIER_MODEL,
+            provider=BRIEF_AI_PROVIDER,
+        )
     except ClassificationError:
         return None
 

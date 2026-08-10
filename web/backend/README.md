@@ -89,22 +89,29 @@ HMR(자동 새로고침)이 필요하면 백엔드/프론트를 따로 띄우세
 목록에 없습니다 (`sources.py` 주석 참고).
 
 ## Industry Brief — 기사 분류 (Phase 3)
-스펙은 OpenAI GPT-5.4 nano를 권장하지만, 이미 설정된 `ANTHROPIC_API_KEY`로 대체
-(사용자 승인) — `tools/ai_client.py`의 기존 provider-agnostic `classify()` 헬퍼를
-그대로 재사용해서 별도 API 클라이언트를 새로 안 만들었습니다.
+스펙 권장대로 OpenAI 사용 (`OPENAI_API_KEY` 설정됨). `tools/ai_client.py`의 기존
+provider-agnostic `classify()` 헬퍼에 OpenAI 지원을 추가해서 재사용 — PPT 파이프라인의
+`AI_PROVIDER=anthropic`과는 완전히 독립적으로, 이 모듈만 `provider="openai"`를 명시적으로
+넘긴다 (`.env`의 `BRIEF_AI_PROVIDER`/`BRIEF_CLASSIFIER_MODEL`로 오버라이드 가능, 기본
+모델은 `gpt-4o-mini`).
 
 ```
 .venv\Scripts\python.exe web/backend/industry_brief_classify.py [처리할 건수, 기본 10]
 ```
 `classified_at`이 null인(아직 미분류) 기사를 대상으로 관련성/GAME·AI 분류/한글 요약/
-키워드/개체명/중요도(high·medium·low)를 매긴다. 실제 Anthropic API를 호출하므로
-비용이 드는 실행 — 기본값을 작게(10건) 잡아뒀다.
+키워드/개체명/중요도(high·medium·low)를 매긴다. 실제 API를 호출하므로 비용이 드는
+실행 — 기본값을 작게(10건) 잡아뒀다.
 
-**실제로 돌려서 확인한 것**: 실제 GamesIndustry.biz 기사 5건을 진짜 API로 분류 —
-영문 기사를 정확한 한글 1~2문장으로 요약, keywords/entities도 실제 기사 내용과
-일치, 중요도도 합리적으로 매겨짐(GTA6/Take-Two 실적 발표는 high, 임원 영입 소식은
-medium). 실패 케이스도 확인: `classify()`가 예외를 던지면 `classified_at`을 null로
-남겨둬서 다음 실행 때 재시도되도록(조용히 완료 처리하지 않음) 테스트로 검증.
+**실제로 돌려서 확인한 것**: 처음엔 사용자 승인 하에 이미 설정돼있던 `ANTHROPIC_API_KEY`로
+5건 검증(GTA6/Take-Two 실적 발표는 high, 임원 영입 소식은 medium 등 합리적으로 분류).
+이후 `OPENAI_API_KEY`를 추가하고 실제 OpenAI로 전환 — Unity 실적 발표, Tripledot의
+Supersonic 인수(4천만 달러), 자선 번들 소식 3건을 실제 OpenAI API로 재검증. 영문 기사를
+정확한 한글 요약으로, 인수 금액 같은 구체적 사실도 정확히 반영, 중요도도 합리적으로
+매겨짐(M&A/실적 발표는 high, 자선 캠페인은 medium). 두 provider 모두 같은
+`classify()` 인터페이스로 정상 동작 확인.
+
+실패 케이스도 확인: `classify()`가 예외를 던지면 `classified_at`을 null로 남겨둬서
+다음 실행 때 재시도되도록(조용히 완료 처리하지 않음) 테스트로 검증.
 
 ## Industry Brief — 이슈 클러스터링 (Phase 4)
 동일 사건을 다루는 여러 기사를 하나의 Issue로 묶는다. API 호출 없이 로컬 계산만 —

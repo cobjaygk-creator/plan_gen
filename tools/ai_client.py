@@ -114,10 +114,61 @@ def _anthropic_classify(system_prompt: str, user_prompt: str, schema_model: Type
     raise ClassificationError("model did not return a tool_use block")
 
 
-def classify(system_prompt: str, user_prompt: str, schema_model: Type[T], model: str) -> T:
-    provider = os.environ.get("AI_PROVIDER", "anthropic")
+def _openai_classify(system_prompt: str, user_prompt: str, schema_model: Type[T], model: str) -> T:
+    import openai
+
+    client = openai.OpenAI()  # reads OPENAI_API_KEY from env
+    tool_name = "emit_" + schema_model.__name__.lower()
+    tool = {
+        "type": "function",
+        "function": {
+            "name": tool_name,
+            "description": f"Emit the classification result as {schema_model.__name__}.",
+            "parameters": schema_model.model_json_schema(),
+        },
+    }
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        tools=[tool],
+        tool_choice={"type": "function", "function": {"name": tool_name}},
+    )
+
+    message = response.choices[0].message
+    if not message.tool_calls:
+        raise ClassificationError("model did not return a tool call")
+
+    call = message.tool_calls[0]
+    try:
+        raw = json.loads(call.function.arguments)
+    except json.JSONDecodeError as e:
+        raise ClassificationError(f"tool call arguments were not valid JSON: {e}") from e
+
+    try:
+        # same defensive cleanup as the Anthropic path — a model stuffing
+        # nested JSON as a string instead of a real object isn't unique to
+        # one provider
+        cleaned = _unwrap_self_nesting(_unstringify_nested_json(raw))
+        return schema_model.model_validate(cleaned)
+    except Exception as e:
+        raise ClassificationError(f"schema validation failed: {e}") from e
+
+
+def classify(
+    system_prompt: str, user_prompt: str, schema_model: Type[T], model: str, provider: str | None = None,
+) -> T:
+    """provider defaults to the AI_PROVIDER env var (unchanged behavior for
+    existing callers, e.g. tools/classify_month.py) — pass it explicitly to
+    pin a specific call to a provider regardless of that global default,
+    which is how web/backend/app/industry_brief/classifier.py uses OpenAI
+    without touching the PPT pipeline's Anthropic setup."""
+    provider = provider or os.environ.get("AI_PROVIDER", "anthropic")
     if provider == "anthropic":
         return _anthropic_classify(system_prompt, user_prompt, schema_model, model)
     if provider == "openai":
-        raise NotImplementedError("AI_PROVIDER=openai not implemented yet")
+        return _openai_classify(system_prompt, user_prompt, schema_model, model)
     raise ValueError(f"unknown AI_PROVIDER: {provider!r}")

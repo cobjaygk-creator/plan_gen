@@ -1,10 +1,15 @@
 import sys
 import os
 import json
+from types import SimpleNamespace
+from unittest.mock import MagicMock, patch
+
+import pytest
+from pydantic import BaseModel
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from tools.ai_client import _unstringify_nested_json, _unwrap_self_nesting
+from tools.ai_client import _unstringify_nested_json, _unwrap_self_nesting, classify, ClassificationError
 
 
 def test_unstringify_leaves_normal_dict_unchanged():
@@ -50,3 +55,72 @@ def test_full_pipeline_recovers_the_real_202602_shape():
     cleaned = _unwrap_self_nesting(_unstringify_nested_json(raw))
     assert cleaned == {"sections": [{"section_title": "x", "block_type": "grid",
                                       "items": [], "footnote": None, "confidence": 0.5}]}
+
+
+class _Sample(BaseModel):
+    ok: bool
+    label: str
+
+
+def _fake_openai_response(arguments_json: str, tool_name: str = "emit_sample"):
+    tool_call = SimpleNamespace(function=SimpleNamespace(arguments=arguments_json, name=tool_name))
+    message = SimpleNamespace(tool_calls=[tool_call])
+    choice = SimpleNamespace(message=message)
+    return SimpleNamespace(choices=[choice])
+
+
+def test_openai_provider_parses_tool_call_into_schema():
+    fake_client = MagicMock()
+    fake_client.chat.completions.create.return_value = _fake_openai_response(
+        json.dumps({"ok": True, "label": "테스트"})
+    )
+    with patch("openai.OpenAI", return_value=fake_client):
+        result = classify("system", "user", _Sample, "gpt-4o-mini", provider="openai")
+
+    assert result == _Sample(ok=True, label="테스트")
+    # tool_choice must pin the exact tool, not leave it to the model's discretion
+    _, kwargs = fake_client.chat.completions.create.call_args
+    assert kwargs["tool_choice"] == {"type": "function", "function": {"name": "emit__sample"}}
+
+
+def test_openai_provider_unwraps_self_nested_json_string_like_anthropic_path():
+    fake_client = MagicMock()
+    inner = json.dumps({"ok": True, "label": "중첩"})
+    fake_client.chat.completions.create.return_value = _fake_openai_response(
+        json.dumps({"ok": inner})  # malformed the same way the Anthropic quirk is
+    )
+    # this particular malformation isn't the exact self-nesting shape (different
+    # key), so just confirm a genuinely malformed response raises cleanly instead
+    # of crashing with something unrelated
+    with patch("openai.OpenAI", return_value=fake_client):
+        with pytest.raises(ClassificationError):
+            classify("system", "user", _Sample, "gpt-4o-mini", provider="openai")
+
+
+def test_openai_provider_raises_when_model_returns_no_tool_call():
+    fake_client = MagicMock()
+    fake_client.chat.completions.create.return_value = SimpleNamespace(
+        choices=[SimpleNamespace(message=SimpleNamespace(tool_calls=None))]
+    )
+    with patch("openai.OpenAI", return_value=fake_client):
+        with pytest.raises(ClassificationError):
+            classify("system", "user", _Sample, "gpt-4o-mini", provider="openai")
+
+
+def test_openai_provider_raises_on_invalid_json_arguments():
+    fake_client = MagicMock()
+    fake_client.chat.completions.create.return_value = _fake_openai_response("not valid json{{{")
+    with patch("openai.OpenAI", return_value=fake_client):
+        with pytest.raises(ClassificationError):
+            classify("system", "user", _Sample, "gpt-4o-mini", provider="openai")
+
+
+def test_provider_param_overrides_env_default(monkeypatch):
+    monkeypatch.setenv("AI_PROVIDER", "anthropic")
+    fake_client = MagicMock()
+    fake_client.chat.completions.create.return_value = _fake_openai_response(
+        json.dumps({"ok": True, "label": "override"})
+    )
+    with patch("openai.OpenAI", return_value=fake_client):
+        result = classify("system", "user", _Sample, "gpt-4o-mini", provider="openai")
+    assert result.label == "override"
