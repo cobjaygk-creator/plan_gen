@@ -162,6 +162,46 @@ C41: (교환 리스트 중 택1)
 없는 이름을 지어내서 grid처럼 분류하면 안 되고, items를 빈 배열로 둔 채
 block_type만 icon_only로 표시한다 — 실제 이미지 배치는 코드가 좌표로 처리한다.)
 
+예시 3e (grid, paired_columns 아님 — 202602 "배틀패스 의상 교환권", "···중 택1" 각주가
+있어도 3열 flowing 목록이면 grid인 경우):
+입력:
+B21: 배틀패스 의상 교환권
+C22: (교환 리스트 중 택1)
+BCD23: 노네임 의상 세트 | 붉은 거인 의상 세트 | 블랙 하이틴 캐쥬얼 세트 I
+BCD24: 브라운 니트 세트 | 도플갱어 거인 의상 세트 | 블랙 하이틴 캐쥬얼 세트 II
+BCD25: 화이트 니트 세트 | 레피카 의상 세트 I | 팁 의상 세트
+BCD26: 레트로 팬츠 세트 | 레피카 의상 세트 II | 티페타 의상 세트
+BCD27: 레트로 원피스 세트 | 빌브라트 상하의 의상 세트 | 바다의 악몽 의상 세트
+BCD28: 달콤한 로망 세트 | 빌브라트 한벌옷 의상 세트 | 바다의 향기 의상 세트
+B29: 산뜻한 로망 세트
+출력: {"section_title": "배틀패스 의상 교환권", "block_type": "grid", "items": [
+  {"name": "노네임 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "붉은 거인 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "블랙 하이틴 캐쥬얼 세트 I", "is_new": false, "pair_group": null},
+  {"name": "브라운 니트 세트", "is_new": false, "pair_group": null},
+  {"name": "도플갱어 거인 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "블랙 하이틴 캐쥬얼 세트 II", "is_new": false, "pair_group": null},
+  {"name": "화이트 니트 세트", "is_new": false, "pair_group": null},
+  {"name": "레피카 의상 세트 I", "is_new": false, "pair_group": null},
+  {"name": "팁 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "레트로 팬츠 세트", "is_new": false, "pair_group": null},
+  {"name": "레피카 의상 세트 II", "is_new": false, "pair_group": null},
+  {"name": "티페타 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "레트로 원피스 세트", "is_new": false, "pair_group": null},
+  {"name": "빌브라트 상하의 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "바다의 악몽 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "달콤한 로망 세트", "is_new": false, "pair_group": null},
+  {"name": "빌브라트 한벌옷 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "바다의 향기 의상 세트", "is_new": false, "pair_group": null},
+  {"name": "산뜻한 로망 세트", "is_new": false, "pair_group": null}
+], "footnote": "(교환 리스트 중 택1)", "confidence": 0.9}
+(판단 근거: 예시 3c/3b와 각주 패턴("···중 택1")은 비슷해 보이지만, 여기 하위 항목들은
+BCD23~28처럼 **한 행에 서로 무관한 항목이 3개씩** 나열돼 있다 — 세트0/세트1로 짝지어진
+2열 행이 아니다. "노네임 의상 세트"와 "붉은 거인 의상 세트"가 같은 행(BCD23)에 있다고
+둘이 짝은 아니라는 뜻이다. 19개 항목 전부 그 자체로 완성된 세트이고 부위 조각이 아니므로,
+paired_columns로 억지로 2그룹 나누지 말고 그냥 grid로 전부 pair_group=null 넣는다. 각주
+문구만 보고 paired_columns를 판단하면 안 된다는 걸 보여주는 예시다.)
+
 예시 4 (few_preview — 202509 "할로윈 펌킨 버킷 등록권"):
 입력:
 CD50: 할로윈 펌킨 버킷 등록권 | 할로윈 잭 오 랜턴 등록권 [이미지있음]

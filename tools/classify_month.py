@@ -23,7 +23,7 @@ from schemas.classification_schema import ClassificationOutput, Section
 from schemas.few_shot_examples import FEW_SHOT_EXAMPLES
 from tools.ai_client import classify, HAIKU_MODEL, SONNET_MODEL, ClassificationError
 
-PROMPT_VERSION = "v7"  # v7: icon_only block type for images with no item names at all
+PROMPT_VERSION = "v8"  # v8: paired_columns requires a genuine 2-column-paired row structure, not just a "···중 택1" footnote
 CONFIDENCE_THRESHOLD = 0.7
 CACHE_DIR = "ai_results"
 
@@ -60,6 +60,18 @@ SYSTEM_PROMPT = """\
   **최상위 선택지가 정확히 2개인지 스스로 확인해라.** 아무리 찾아도 정확히 2개가 안
   나오면(0개, 1개, 3개 이상) 이 섹션의 confidence를 반드시 낮게 적어서 사람이
   재검토하게 해라 — 애매한 채로 pair_group을 억지로 채우지 마라.
+  **"···중 택 1" 각주만 보고 paired_columns로 단정하지 마라 — 그 각주는 grid에도
+  똑같이 붙는다 (예: "여러 세트 중 하나를 고르세요" 같은 문구는 완성된 세트 여러
+  개 중 하나를 고르는 평범한 grid에도 흔하다).** paired_columns인지 확인하는
+  진짜 신호는 **하위 항목들이 정확히 2열로 짝지어진 행에서 나왔는지**다 — 한 행에
+  세트0 몫 항목 하나, 세트1 몫 항목 하나씩 정확히 나오는 구조(예: "EC20: 모자 II |
+  모자 I")여야 한다. 반대로 한 행에 서로 무관한 항목이 3개 이상 나열되는 목록
+  (예: "BCD23: 노네임 세트 | 붉은거인 세트 | 블랙하이틴 세트")은, 그 항목들이 전부
+  "···세트"라는 이름이고 각주에 "택1"이 붙어 있어도 **paired_columns가 아니라
+  grid다** — 이런 목록의 각 항목은 서로의 부위 조각이 아니라 각자 독립적으로 고를
+  수 있는 완성품이기 때문이다. 요약하면: 하위 항목이 2열 짝행 구조에서 나왔으면
+  paired_columns, 3열 이상 flowing 목록에서 나왔으면 grid — 각주 문구가 비슷해
+  보여도 이 열 구조 차이로 판단해라.
 - icon_only: 제목/각주 뒤에 항목 이름이 하나도 없이, "42:  [이미지있음]"처럼 **행 번호와
   마커만 있고 그 앞에 텍스트가 전혀 없는 줄**이 이어지는 경우다. 이건 이름표 없이
   이미지만으로 고르는 선택지 그룹이라는 뜻이다 (예: 아이콘 여러 개를 합쳐놓은 그림 하나로
