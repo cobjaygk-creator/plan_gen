@@ -18,13 +18,11 @@ function HistoryIcon() {
     </svg>
   );
 }
-function GridIcon() {
+function TrendIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="3" y="3" width="7" height="9" rx="1" />
-      <rect x="14" y="3" width="7" height="5" rx="1" />
-      <rect x="14" y="12" width="7" height="9" rx="1" />
-      <rect x="3" y="16" width="7" height="5" rx="1" />
+      <polyline points="3 17 9 11 13 15 21 6" />
+      <polyline points="15 6 21 6 21 12" />
     </svg>
   );
 }
@@ -78,6 +76,12 @@ export function AppShell() {
       <div className="app-body">
         <div className="lnb">
           <div className="lnb-group-label">메뉴</div>
+          <NavLink to="/" end className={navClass}>
+            <span className="ic">
+              <TrendIcon />
+            </span>
+            업계 동향
+          </NavLink>
           <NavLink to="/generate" className={navClass}>
             <span className="ic">
               <PlusIcon />
@@ -89,14 +93,6 @@ export function AppShell() {
               <HistoryIcon />
             </span>
             생성 이력
-          </NavLink>
-          <div className="lnb-spacer" />
-          <div className="lnb-group-label">보기</div>
-          <NavLink to="/" end className={navClass}>
-            <span className="ic">
-              <GridIcon />
-            </span>
-            대시보드
           </NavLink>
         </div>
         <div className="content">
