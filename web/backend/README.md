@@ -105,3 +105,26 @@ HMR(자동 새로고침)이 필요하면 백엔드/프론트를 따로 띄우세
 일치, 중요도도 합리적으로 매겨짐(GTA6/Take-Two 실적 발표는 high, 임원 영입 소식은
 medium). 실패 케이스도 확인: `classify()`가 예외를 던지면 `classified_at`을 null로
 남겨둬서 다음 실행 때 재시도되도록(조용히 완료 처리하지 않음) 테스트로 검증.
+
+## Industry Brief — 이슈 클러스터링 (Phase 4)
+동일 사건을 다루는 여러 기사를 하나의 Issue로 묶는다. API 호출 없이 로컬 계산만 —
+스펙 26번이 명시한 MVP 기준("URL + 제목 유사도로 시작")대로 제목 유사도(표준 라이브러리
+`difflib`)와, Phase 3에서 이미 뽑아둔 keyword/entity 겹침을 함께 봐서 판단한다
+(임베딩·추가 AI 호출 없음, 카테고리 다르면 절대 안 묶임).
+
+```
+.venv\Scripts\python.exe web/backend/industry_brief_cluster.py
+```
+
+**실제로 돌려서 확인한 것**: 이미 분류해둔 실제 기사 5건(전부 다른 주제)을 클러스터링
+→ 5개 모두 별도 이슈로 분리됨, 오탐 병합 없음 확인. `confidence`(출처 수·공식자료
+여부 기반)도 각 이슈가 소스 1개뿐이라 전부 `WEAK`로 정확히 계산됨.
+
+**테스트로 잡은 실제 버그**: 신규 이슈를 만들 때 방금 추가한 `IssueArticle` 행을 DB에서
+다시 조회해서 통계(confidence 등)를 계산했는데, 이 프로젝트의 `SessionLocal`은
+`autoflush=False`라(`database.py`) 그 조회가 막 추가한 행을 못 보고 빈 결과를 받아서
+`confidence`가 계속 `None`으로 남는 버그였음 — DB에서 다시 읽지 않고 방금 만든 멤버
+목록을 메모리에서 그대로 넘기는 방식으로 수정. 합성 데이터 테스트가 이 버그를 실제로
+잡아냈다 (해피 패스만 봤으면 놓쳤을 것).
+
+why_it_matters(왜 중요한지 설명)는 아직 비어있음 — Phase 6(AI 브리핑 종합)에서 채움.
