@@ -67,3 +67,23 @@ HMR(자동 새로고침)이 필요하면 백엔드/프론트를 따로 띄우세
 ## 다음 단계
 지금은 필요 없지만, 나중에 팀 배포가 필요해지면 아키텍처 설계 문서의 6단계
 (Nginx + systemd/Docker, 사내 서버 상시 배포)를 진행하면 됩니다.
+
+## Industry Brief — RSS 수집 (Phase 2)
+`app/industry_brief/`에 격리된 별도 기능. `User`/`Generation`과 같은 SQLite 파일을
+쓰지만(같은 `Base`) 코드/모델은 완전히 분리돼 있습니다.
+
+```
+.venv\Scripts\python.exe web/backend/industry_brief_collect.py
+```
+`app/industry_brief/sources.py`에 등록된 소스(RSS 실존 확인된 것만) 각각에서 기사를
+가져와 URL 기준 중복 제거 후 저장합니다. 아직 스케줄러 없음 — 수동 실행. AI 분류/중요도
+평가는 Phase 3, 대시보드 연동(`GET /industry-brief/latest`)은 그 이후.
+
+**실제로 돌려서 확인한 것**: 소스 7개 중 6개 정상 수집(1,320건), TechCrunch는 그쪽 서버
+인증서 만료로 실패(코드 문제 아님, 다른 소스에 영향 없이 개별 에러로 격리됨 확인). 같은
+스크립트를 두 번째 실행하니 신규 0건·전부 중복으로 잡혀서 URL 중복 제거가 실제로 동작하는
+것도 확인. 참고로 OpenAI 피드는 최신 글만이 아니라 전체 아카이브(1,115건)를 반환해서,
+Phase 3에서 브리핑 만들 때는 `published_at` 기준으로 최근 것만 걸러써야 합니다.
+
+게임메카/디스이즈게임/Anthropic 등 스펙에 있던 다른 소스는 공식 RSS를 못 찾아서 아직
+목록에 없습니다 (`sources.py` 주석 참고).
