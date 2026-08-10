@@ -1,11 +1,10 @@
-"""Article storage (design doc section 28's `articles` table, MVP subset —
-importance_score/entities/keywords are Phase 3 (AI classification) and
-aren't populated yet). Deliberately its own module, not added to
-app/models.py, so User/Generation stay untouched by anything Industry
-Brief does — per the "기존 기능과 강하게 결합하지 않는다" principle."""
+"""Article storage (design doc section 28's `articles` table). Deliberately
+its own module, not added to app/models.py, so User/Generation stay
+untouched by anything Industry Brief does — per the "기존 기능과 강하게
+결합하지 않는다" principle."""
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, String, Text
+from sqlalchemy import DateTime, Float, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from ..database import Base
@@ -27,3 +26,11 @@ class Article(Base):
     published_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     collected_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)
     summary: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    # Phase 3 (Article Intelligence) — null until classify_pending() processes
+    # this row; a null classified_at is exactly the "still pending" queue.
+    is_relevant: Mapped[bool | None] = mapped_column(nullable=True)
+    importance_score: Mapped[float | None] = mapped_column(Float, nullable=True)
+    keywords: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON-encoded list[str]
+    entities: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON-encoded list[str]
+    classified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

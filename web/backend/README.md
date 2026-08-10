@@ -76,14 +76,32 @@ HMR(자동 새로고침)이 필요하면 백엔드/프론트를 따로 띄우세
 .venv\Scripts\python.exe web/backend/industry_brief_collect.py
 ```
 `app/industry_brief/sources.py`에 등록된 소스(RSS 실존 확인된 것만) 각각에서 기사를
-가져와 URL 기준 중복 제거 후 저장합니다. 아직 스케줄러 없음 — 수동 실행. AI 분류/중요도
-평가는 Phase 3, 대시보드 연동(`GET /industry-brief/latest`)은 그 이후.
+가져와 URL 기준 중복 제거 후 저장합니다. 아직 스케줄러 없음 — 수동 실행. 대시보드
+연동(`GET /industry-brief/latest`)은 Phase 5~6 이후.
 
 **실제로 돌려서 확인한 것**: 소스 7개 중 6개 정상 수집(1,320건), TechCrunch는 그쪽 서버
 인증서 만료로 실패(코드 문제 아님, 다른 소스에 영향 없이 개별 에러로 격리됨 확인). 같은
 스크립트를 두 번째 실행하니 신규 0건·전부 중복으로 잡혀서 URL 중복 제거가 실제로 동작하는
 것도 확인. 참고로 OpenAI 피드는 최신 글만이 아니라 전체 아카이브(1,115건)를 반환해서,
-Phase 3에서 브리핑 만들 때는 `published_at` 기준으로 최근 것만 걸러써야 합니다.
+브리핑을 만들 때는 `published_at` 기준으로 최근 것만 걸러써야 합니다.
 
 게임메카/디스이즈게임/Anthropic 등 스펙에 있던 다른 소스는 공식 RSS를 못 찾아서 아직
 목록에 없습니다 (`sources.py` 주석 참고).
+
+## Industry Brief — 기사 분류 (Phase 3)
+스펙은 OpenAI GPT-5.4 nano를 권장하지만, 이미 설정된 `ANTHROPIC_API_KEY`로 대체
+(사용자 승인) — `tools/ai_client.py`의 기존 provider-agnostic `classify()` 헬퍼를
+그대로 재사용해서 별도 API 클라이언트를 새로 안 만들었습니다.
+
+```
+.venv\Scripts\python.exe web/backend/industry_brief_classify.py [처리할 건수, 기본 10]
+```
+`classified_at`이 null인(아직 미분류) 기사를 대상으로 관련성/GAME·AI 분류/한글 요약/
+키워드/개체명/중요도(high·medium·low)를 매긴다. 실제 Anthropic API를 호출하므로
+비용이 드는 실행 — 기본값을 작게(10건) 잡아뒀다.
+
+**실제로 돌려서 확인한 것**: 실제 GamesIndustry.biz 기사 5건을 진짜 API로 분류 —
+영문 기사를 정확한 한글 1~2문장으로 요약, keywords/entities도 실제 기사 내용과
+일치, 중요도도 합리적으로 매겨짐(GTA6/Take-Two 실적 발표는 high, 임원 영입 소식은
+medium). 실패 케이스도 확인: `classify()`가 예외를 던지면 `classified_at`을 null로
+남겨둬서 다음 실행 때 재시도되도록(조용히 완료 처리하지 않음) 테스트로 검증.
