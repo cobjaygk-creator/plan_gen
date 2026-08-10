@@ -196,8 +196,37 @@ def _signals_payload(trends: list[TopicTrend]) -> list[dict]:
     ]
 
 
-def _new_today_payload(trends: list[TopicTrend]) -> list[dict]:
-    return [{"topic": t.topic, "todayCount": t.today_count} for t in new_today(trends)]
+def _topic_source_stats(db: Session, category: str, topic: str, start: datetime, end: datetime) -> tuple[int, int]:
+    """(independent source count, official source count) for articles that
+    carry `topic` as a keyword within [start, end) — used to give New Today
+    items the same source-diversity context the frontend's IssueCard shows,
+    without an extra AI call (pure DB aggregation)."""
+    articles = db.execute(
+        select(Article).where(
+            Article.category == category,
+            Article.is_relevant.is_(True),
+            Article.published_at >= start,
+            Article.published_at < end,
+        )
+    ).scalars().all()
+    matching = [a for a in articles if topic in (json.loads(a.keywords) if a.keywords else [])]
+    sources = {a.source for a in matching}
+    officials = sum(1 for a in matching if a.source_type == "official")
+    return len(sources), officials
+
+
+def _new_today_payload(db: Session, trends: list[TopicTrend], period_start: datetime, period_end: datetime) -> list[dict]:
+    payload = []
+    for t in new_today(trends):
+        independent_sources, official_count = _topic_source_stats(db, t.category, t.topic, period_start, period_end)
+        payload.append({
+            "topic": t.topic,
+            "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+            "articleCount": t.today_count,
+            "independentSources": independent_sources,
+            "officialCount": official_count,
+        })
+    return payload
 
 
 def generate_daily_brief(db: Session, reference_date: datetime | None = None) -> DailyBrief:
@@ -248,7 +277,9 @@ def generate_daily_brief(db: Session, reference_date: datetime | None = None) ->
         ai_watchlist=json.dumps([w.model_dump() for w in ai_panel.watchlist], ensure_ascii=False),
         game_ai_analysis=json.dumps(cross_summary, ensure_ascii=False),
         signals=json.dumps(_signals_payload(game_trends + ai_trends), ensure_ascii=False),
-        new_today=json.dumps(_new_today_payload(game_trends + ai_trends), ensure_ascii=False),
+        new_today=json.dumps(
+            _new_today_payload(db, game_trends + ai_trends, period_start, period_end), ensure_ascii=False
+        ),
         status="ok",
     )
     db.add(brief)

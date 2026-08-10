@@ -7,6 +7,7 @@ from starlette.middleware.sessions import SessionMiddleware
 
 from .config import SESSION_COOKIE_NAME, SESSION_MAX_AGE_SECONDS, SESSION_SECRET_KEY
 from .database import Base, engine
+from .industry_brief.routes import router as industry_brief_router
 from .routers import auth, generations
 
 Base.metadata.create_all(bind=engine)
@@ -24,6 +25,7 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(generations.router)
+app.include_router(industry_brief_router)
 
 
 @app.get("/health")

@@ -77,7 +77,7 @@ HMR(자동 새로고침)이 필요하면 백엔드/프론트를 따로 띄우세
 ```
 `app/industry_brief/sources.py`에 등록된 소스(RSS 실존 확인된 것만) 각각에서 기사를
 가져와 URL 기준 중복 제거 후 저장합니다. 아직 스케줄러 없음 — 수동 실행. 대시보드
-연동(`GET /industry-brief/latest`)은 Phase 5~6 이후.
+연동(`GET /industry-brief/latest`)은 아래 "대시보드 API 연동" 절 참고.
 
 **실제로 돌려서 확인한 것**: 소스 7개 중 6개 정상 수집(1,320건), TechCrunch는 그쪽 서버
 인증서 만료로 실패(코드 문제 아님, 다른 소스에 영향 없이 개별 에러로 격리됨 확인). 같은
@@ -198,3 +198,27 @@ GAME Brief/AI Brief/GAME×AI 교차 인사이트/Watch List/이슈별 Why It Mat
 정확히 같은 값으로 넣었더니 기간 필터(`>= start, < end`, end는 배타적)에서 빠지는 걸
 발견 — trends.py와 동일한 배타적 경계 설계가 의도대로 동작한 것이었고(진짜 버그 아님),
 테스트 데이터를 경계보다 5분 앞으로 옮겨서 수정했다.
+
+## Industry Brief — 대시보드 API 연동 (Phase 6.5)
+Phase 1의 목업(`SAMPLE_BRIEF`)을 실제 데이터로 교체. `GET /industry-brief/latest`
+(로그인 필요, 기존 `get_current_user` 재사용)가 가장 최근 `DailyBrief` 행 +
+카테고리별 상위 이슈(`TOP_ISSUES_PER_CATEGORY`=8개씩)를 프론트 `IndustryBrief`
+타입 그대로(`briefDate`/`watchList`/`crossInsight.hasSignal` 등 camelCase) 직렬화해서
+반환한다. 아직 브리핑이 하나도 없으면 404 — 프론트는 이미 Phase 1부터 이 케이스용
+빈 상태 화면을 갖고 있어서 별도 처리 불필요했다. `crossInsight.hasSignal`은 별도
+컬럼이 아니라 `game_ai_analysis`가 고정 문구(`NO_CROSS_SIGNAL_TEXT`)와 같은지
+비교해서 판단한다(저장 형태를 굳이 늘리지 않음).
+
+**테스트로 잡은 실제 버그**: SQLite가 `DateTime(timezone=True)`에서도 tzinfo를
+저장 시 지운다는 게 Phase 5에서도 나온 이슈인데, `publishedAgo`("N시간 전") 계산
+코드에서 DB에서 막 읽어온 naive datetime과 새로 만든 tz-aware `datetime.now(UTC)`를
+바로 빼다가 `TypeError: can't subtract offset-naive and offset-aware datetimes`가
+실제로 남 — trends.py 문서화된 것과 같은 패턴인데도 새 코드라 또 걸림. naive
+datetime을 UTC로 간주해서 tzinfo를 붙여주는 `_as_aware_utc()`로 수정.
+
+**실제로 돌려서 확인한 것**: 프론트를 다시 빌드하고 `web/run_local.ps1`과 같은
+방식으로 서버 하나만 띄워서 브라우저로 직접 확인 — 대시보드에 더 이상 목업 문구가
+아니라 실제 OpenAI가 실제 수집 기사로 종합한 GAME/AI 헤드라인·브리핑, 실제
+Take-Two/Unity/Roblox/EA 관련 이슈 16개(카테고리당 8개)와 각각의 Why It Matters,
+`근거 약함`(이슈당 기사 1건이라 WEAK가 정확) 같은 신뢰도 표시까지 전부 정상 렌더링
+확인. 콘솔 에러 없음.
