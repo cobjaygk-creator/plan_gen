@@ -21,6 +21,7 @@ from tools.blocks.dynamic_grid import fit_grid_pages
 from tools.blocks.text_list import text_list_block
 from tools.blocks.few_preview import few_preview_block
 from tools.blocks.paired_columns import paired_columns_block
+from tools.blocks.icon_only import icon_only_block
 from tools.pipeline import split_pair_items
 from tools.render_pptx import _add_placement, _add_section_header
 
@@ -152,6 +153,8 @@ def _render_section_pages(section, items: list[dict], box):
     if bt == "paired_columns":
         pair_items, sub_items_by_pair = split_pair_items(items)
         return paired_columns_block(pair_items, sub_items_by_pair=sub_items_by_pair, footnote=section.footnote, box=content_box)
+    if bt == "icon_only":
+        return icon_only_block(items, box=content_box)
     raise ValueError(f"unknown block_type: {bt!r}")
 
 

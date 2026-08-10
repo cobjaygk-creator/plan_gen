@@ -108,6 +108,8 @@ def extract_special_reward_rows(path: str, start_row: int) -> list[dict]:
         if end_row == r:
             break
 
+    pic_rows = extract_drawing_picture_rows(path)
+
     row_map: dict[int, dict] = {}
 
     for r in range(start_row, end_row):
@@ -116,7 +118,13 @@ def extract_special_reward_rows(path: str, start_row: int) -> list[dict]:
             v = ws.cell(row=r, column=col_idx).value
             if v not in (None, ""):
                 cells[col_letter] = str(v).strip()
-        if cells:
+        # a row can be worth keeping even with zero cell text, if a picture
+        # is anchored there and nothing else describes it — e.g. a pure
+        # icon-choice section (real case: 202602 "고양이 모자 선택권", whose
+        # 9 icons are one combined image anchored to rows with no text in
+        # any cell at all). Dropping these silently meant the classifier
+        # never even knew the section had content beyond its title/footnote.
+        if cells or r in pic_rows:
             row_map[r] = {"row": r, "cells": cells}
 
     for anchor in extract_drawing_text_anchors(path):
@@ -127,7 +135,6 @@ def extract_special_reward_rows(path: str, start_row: int) -> list[dict]:
         # don't clobber a real cell value with a textbox guess at the same slot
         entry["cells"].setdefault(anchor["col_letter"], anchor["text"])
 
-    pic_rows = extract_drawing_picture_rows(path)
     for r, entry in row_map.items():
         entry["has_image"] = r in pic_rows
 
@@ -147,7 +154,13 @@ def to_compact_text(rows: list[dict]) -> str:
         cols = "".join(cells.keys())
         values = " | ".join(cells.values())
         marker = " [이미지있음]" if row.get("has_image") else ""
-        lines.append(f"{cols}{row['row']}: {values}{marker}")
+        if values:
+            lines.append(f"{cols}{row['row']}: {values}{marker}")
+        else:
+            # no cell text at all, but kept because a picture anchors here
+            # (see extract_special_reward_rows) — render as a bare marker
+            # line so the classifier can still see "there's content here"
+            lines.append(f"{row['row']}:{marker}")
     return "\n".join(lines)
 
 

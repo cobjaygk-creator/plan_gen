@@ -39,3 +39,20 @@ def test_stays_within_declared_row_range():
     rows = _rows_for("202605")
     for row in rows:
         assert row["row"] >= 16  # special_reward_start_row for this sample
+
+
+def test_image_only_rows_are_not_dropped_202602():
+    # real bug: rows 42-50 anchor a single combined image (202602's
+    # "[이벤트] 고양이 모자 선택권", 9 cat-hat icons, no item names anywhere)
+    # but carry zero cell text — used to be silently excluded entirely, so
+    # the classifier never even knew the section had content past its
+    # title/footnote (see extract_special_reward_rows' docstring note)
+    rows = _rows_for("202602")
+    by_row = {r["row"]: r for r in rows}
+    assert 42 in by_row
+    assert by_row[42]["cells"] == {}
+    assert by_row[42]["has_image"] is True
+
+    text = to_compact_text(rows)
+    assert "42: [이미지있음]" in text
+    assert "[이벤트] 고양이 모자 선택권" in text

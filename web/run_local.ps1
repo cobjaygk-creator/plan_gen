@@ -10,6 +10,7 @@
 # uvicorn --reload와 npm run dev를 각각 따로 띄우세요.
 
 $ErrorActionPreference = "Stop"
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 Write-Host "[1/2] 프론트엔드 빌드 중..."

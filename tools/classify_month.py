@@ -23,13 +23,13 @@ from schemas.classification_schema import ClassificationOutput, Section
 from schemas.few_shot_examples import FEW_SHOT_EXAMPLES
 from tools.ai_client import classify, HAIKU_MODEL, SONNET_MODEL, ClassificationError
 
-PROMPT_VERSION = "v6"  # v6: generalize paired_columns pair-item detection beyond the slash-pair surface form
+PROMPT_VERSION = "v7"  # v7: icon_only block type for images with no item names at all
 CONFIDENCE_THRESHOLD = 0.7
 CACHE_DIR = "ai_results"
 
 SYSTEM_PROMPT = """\
 너는 게임 배틀패스 기획서의 "특별 보상 미리보기" 구간 원문을 읽고, 그 안의 각 하위
-섹션을 아래 5개 블록타입 중 하나로 분류하고 항목을 뽑아내는 역할만 한다.
+섹션을 아래 6개 블록타입 중 하나로 분류하고 항목을 뽑아내는 역할만 한다.
 
 블록타입 정의:
 - grid: 아이콘/이미지 여러 개 + 캡션, N열 그리드 (소형/대형 이미지 크기는 무관).
@@ -60,12 +60,19 @@ SYSTEM_PROMPT = """\
   **최상위 선택지가 정확히 2개인지 스스로 확인해라.** 아무리 찾아도 정확히 2개가 안
   나오면(0개, 1개, 3개 이상) 이 섹션의 confidence를 반드시 낮게 적어서 사람이
   재검토하게 해라 — 애매한 채로 pair_group을 억지로 채우지 마라.
+- icon_only: 제목/각주 뒤에 항목 이름이 하나도 없이, "42:  [이미지있음]"처럼 **행 번호와
+  마커만 있고 그 앞에 텍스트가 전혀 없는 줄**이 이어지는 경우다. 이건 이름표 없이
+  이미지만으로 고르는 선택지 그룹이라는 뜻이다 (예: 아이콘 여러 개를 합쳐놓은 그림 하나로
+  보여주는 경우). 이때 items는 반드시 빈 배열 []로 둬라 — 지어낼 이름이 없다. 좌표/이미지
+  배치는 코드가 알아서 하니 너는 "이 섹션엔 이름 없는 이미지만 있다"는 것만 표시하면 된다.
 
 입력의 각 줄 끝에 "[이미지있음]"이 붙어있으면 그 행에 실제 이미지가 있다는 뜻이다
 (원본 엑셀에 삽입된 그림 기준, 추측 아님). 이게 있는 섹션은 grid/few_preview/
-new_highlight/paired_columns 중 하나여야 하고, 이미지가 하나도 없는 섹션만
+new_highlight/paired_columns/icon_only 중 하나여야 하고, 이미지가 하나도 없는 섹션만
 text_list일 수 있다. "[이미지있음]" 마커 없이 이름만 나열된 걸 보고 grid로
 판단하지 마라 — 이미지 유무는 반드시 이 마커로만 판단해라, 이름 느낌으로 추측하지 마라.
+grid 등 다른 타입과 icon_only의 차이는 "항목 이름이 있는지"다 — 이름 있는 항목들이
+이미지와 함께 나열되면 grid, 이름 자체가 아예 없으면 icon_only다.
 
 **"NEW!"/"이미지 추후 전달 예정" 같은 문구가 이름 옆이 아니라 완전히 독립된 한 줄로
 나오면, 그건 그 줄 다음(아래)에 나오는 같은 열(B/C/D)의 항목을 가리키는 것이다 —

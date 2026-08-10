@@ -6,7 +6,7 @@ independently into one of the 5 confirmed block types.
 from typing import Literal, Optional
 from pydantic import BaseModel, Field
 
-BlockType = Literal["grid", "text_list", "new_highlight", "few_preview", "paired_columns"]
+BlockType = Literal["grid", "text_list", "new_highlight", "few_preview", "paired_columns", "icon_only"]
 
 
 class Item(BaseModel):

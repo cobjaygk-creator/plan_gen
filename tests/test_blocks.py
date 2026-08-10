@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from tools.blocks import (
     grid_block, text_list_block,
-    few_preview_block, paired_columns_block, has_any_overlap,
+    few_preview_block, paired_columns_block, icon_only_block, has_any_overlap,
     CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM,
 )
 
@@ -180,3 +180,36 @@ class TestPairedColumnsBlock:
         assert len(text_kinds) == 6
         assert not has_any_overlap(pages[0])
         assert_within_content_box(pages[0])
+
+
+class TestIconOnlyBlock:
+    BOX = (CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM - CONTENT_TOP)
+
+    def test_single_image_no_caption(self):
+        # real case: 202602's 9 cat-hat icons are one combined picture, so
+        # a single-image icon_only section is the common real shape
+        pages = icon_only_block([{"image": "cat.png"}], box=self.BOX)
+        assert len(pages) == 1
+        assert len(pages[0]) == 1
+        assert pages[0][0].kind == "icon"
+        assert not any(p.kind == "caption" for p in pages[0])
+
+    def test_multiple_images_grid_no_overlap(self):
+        items = [{"image": f"icon{i}.png"} for i in range(9)]
+        pages = icon_only_block(items, box=self.BOX)
+        assert not has_any_overlap(pages[0])
+        assert len(pages[0]) == 9
+        for p in pages[0]:
+            assert p.kind == "icon"
+
+    def test_rejects_zero_images(self):
+        with pytest.raises(ValueError):
+            icon_only_block([], box=self.BOX)
+
+    def test_paginates_when_too_many_for_one_page(self):
+        items = [{"image": f"icon{i}.png"} for i in range(60)]
+        pages = icon_only_block(items, box=self.BOX)
+        assert len(pages) > 1
+        assert sum(len(p) for p in pages) == 60
+        for page in pages:
+            assert not has_any_overlap(page)

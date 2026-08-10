@@ -71,6 +71,36 @@ def test_process_month_propagates_needs_human_review(tmp_path):
     assert "202605" in pipeline.summarize(result)
 
 
+def test_process_month_icon_only_finds_real_image_by_row_range(tmp_path):
+    # Real 202602 case: "[이벤트] 고양이 모자 선택권" (title row 40, footnote
+    # row 41) has zero item names — 9 cat-hat icons are one combined image
+    # anchored to rows 42-50 with no cell text at all. icon_only sections
+    # skip the usual AI-name -> locate -> match flow entirely (there are no
+    # names to locate); process_month must instead find that image by
+    # scanning the section's own row range directly.
+    def fake_classify_icon_only(month, raw_text, **kwargs):
+        output = ClassificationOutput(sections=[
+            Section(section_title="[이벤트] 고양이 모자 선택권", block_type="icon_only",
+                    items=[], footnote="(교환 리스트 중 택1)", confidence=0.9),
+        ])
+        return ClassifyResult(month, output, "claude-haiku-4-5-20251001", from_cache=False)
+
+    with patch("tools.pipeline.classify_month", side_effect=fake_classify_icon_only):
+        path = os.path.join(SAMPLES_DIR, "202602_request.xlsx")
+        result = pipeline.process_month("202602", path, image_out_dir=str(tmp_path))
+
+    assert len(result.sections) == 1
+    section = result.sections[0]
+    assert section.render_error is None
+    assert section.item_count == 1  # the 9 icons are one combined image file
+    assert len(section.items) == 1
+    assert section.items[0]["image"] is not None
+    assert os.path.exists(section.items[0]["image"])
+    assert len(section.pages) == 1
+    assert len(section.pages[0]) == 1  # one "icon" placement, no caption
+    assert section.pages[0][0].kind == "icon"
+
+
 def test_process_month_paired_columns_matches_set_names_not_sub_items(tmp_path):
     # Real 202606 bug: "자켓 세트"/"치마 세트" portraits are anchored at
     # column C/D while their own text sits in column B/D — outside

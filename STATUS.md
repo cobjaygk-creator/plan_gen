@@ -7,6 +7,10 @@ GitHub: https://github.com/cobjaygk-creator/plan_gen (`master` 브랜치)
 마커 영역만 채워서 완성된 `.pptx`를 생성하는 파이프라인. 좌표/레이아웃 계산은 100% 코드이고,
 AI는 "특별 보상 미리보기" 원문 텍스트를 구조화된 항목 목록으로 분류하는 역할만 한다.
 
+이 CLI 파이프라인(`tools/`, `run.py`) 위에 웹 UI(`web/`)도 있음 — 본인 PC에서 로그인해서
+브라우저로 업로드/생성/이력조회 하는 용도로 완성돼 있음 (팀 배포는 아직 불필요, 필요시 나중에).
+실행법은 `web/backend/README.md` 참고 (요약: `web/run_local.ps1` 한 줄).
+
 ## 사용법
 ```
 .venv\Scripts\python.exe run.py samples/202606_request.xlsx
@@ -37,10 +41,10 @@ request.xlsx
 - `tools/render_from_template.py` — 마커 기반 렌더러 (기본 경로)
 - `tools/render_pptx.py` — 템플릿 없이 처음부터 그리는 구형 렌더러 (`--no-template`), 그리고
   `_add_placement`(모든 Placement kind 렌더링 로직)는 두 렌더러가 공유
-- `tools/blocks/` — 블록 엔진 5종: `grid`, `text_list`, `few_preview`, `paired_columns`,
-  `dynamic_grid`(그리드 전용 유동 페이지네이션). 항목 수/박스 크기 기반으로 카드 크기·열
-  개수·페이지 분할을 전부 코드로 계산, AI는 관여 안 함
-- `tools/classify_month.py` — 분류 프롬프트(`SYSTEM_PROMPT`, `PROMPT_VERSION="v6"`) +
+- `tools/blocks/` — 블록 엔진 6종: `grid`, `text_list`, `few_preview`, `paired_columns`,
+  `icon_only`, `dynamic_grid`(그리드 전용 유동 페이지네이션). 항목 수/박스 크기 기반으로
+  카드 크기·열 개수·페이지 분할을 전부 코드로 계산, AI는 관여 안 함
+- `tools/classify_month.py` — 분류 프롬프트(`SYSTEM_PROMPT`, `PROMPT_VERSION="v7"`) +
   Haiku→Sonnet 에스컬레이션 + `ai_results/<월>.json` 캐시(프롬프트 버전이 바뀌면 자동 무효화)
 - `tools/locate_items.py`, `tools/match_images.py`, `tools/extract_images.py` — 위치 기반
   이미지 매칭 (요청서에 첨부된 이미지가 유일한 소스, 별도 에셋 저장소 없음)
@@ -130,13 +134,47 @@ placement에서 정보가 유실됨).
    잡혀서 그 섹션만 조용히 빠지고 나머지는 정상 생성됐었음 — 이제는 "콘텐츠가 빠진 채
    조용히 완성된 것처럼 보이는" 상황 자체를 차단.
 
+### 6라운드 — 이미지 전용(icon_only) 블록타입 신설 (202602 "고양이 모자 선택권")
+사용자가 실제 결과물과 사람이 만든 참고 PPT를 비교하다가, "AI가 확신 있게 분류 못해서
+사람 검토가 필요합니다"라는 메시지가 뜬 이유를 물어봐서 원본을 직접 열어봄. 두 섹션이
+걸렸는데 그중 하나("[이벤트] 고양이 모자 선택권")는 원인이 명확했음: 원본 엑셀에 제목+각주만
+있고 그 아래 항목 이름이 하나도 없이 이미지(9개 아이콘이 합쳐진 그림 1장) 하나만 붙어있었음.
+
+**근본 원인**: `extract_special_reward_rows()`가 셀에 텍스트가 하나도 없는 행은 이미지가
+붙어있어도 통째로 걸러내고 있었음 — 그래서 AI 분류기는 그 이미지의 존재 자체를 몰랐음
+(텍스트만 보고 판단하는 구조라 프롬프트를 아무리 고쳐도 원천적으로 해결 불가능한 문제였음).
+`templates/block_type_classification.md`(초기 10개월 전수조사 기록)를 다시 확인해보니 이
+패턴이 202506에서도 비슷하게 관측돼있어서, 한 달짜리 예외가 아니라 일반화할 가치가 있는
+반복 패턴으로 판단.
+
+(참고로 같은 파일에서 발견된 또 다른 애매한 케이스 — "배틀패스 의상 교환권" 19개 목록에
+제목 없이 붙어있던 "버니버니 세트 I/II (new!)" 서브블록 — 는 애초에 프로젝트 초기 조사
+때부터 "표가 2개인 이상 파일"로 별도 표시돼 있던 케이스라, 스키마를 확장해서까지
+대응할 실익이 없다고 판단해 보류함. 결국 AI가 이걸 별도의 작은 new_highlight 섹션으로
+분리하는 합리적인 해석을 스스로 찾아냈음.)
+
+수정:
+1. `extract_special_reward_rows()`: 셀 텍스트가 없어도 이미지가 앵커된 행은 이제 포함 —
+   `to_compact_text()`가 이런 행을 "42: [이미지있음]"처럼 이름 없는 마커 줄로 표시.
+2. `BlockType`에 `icon_only` 추가, 분류 프롬프트에 패턴 설명 + 실제 202602 데이터 기반
+   few-shot 추가, `PROMPT_VERSION` v7.
+3. `tools/blocks/icon_only.py` 신설 — 캡션 없이 이미지만 박스에 맞춰 배치 (dynamic_grid와
+   같은 box-fitting 방식, 페이지네이션 지원).
+4. `pipeline.py`: `icon_only` 섹션은 AI 항목이름→위치찾기→이미지매칭이라는 기존 흐름을
+   완전히 건너뛰고, 섹션 제목 행부터 다음 섹션 전까지의 행 범위를 직접 스캔해서 그 안에
+   앵커된 이미지를 바로 가져옴 (이름이 아예 없으니 이름 기반 매칭이 원천적으로 불가능).
+
+실제 202602로 검증: AI가 `icon_only`로 정확히 분류(items=[]), 파이프라인이 실제 고양이 모자
+이미지 1장을 찾아서 정상 렌더링(`img=100%`) — 이전엔 이 섹션 때문에 `NeedsHumanReview`로
+막혀서 파일 자체가 생성 안 됐었음.
+
 ### 기타
 - 결과 파일명을 `gen_<날짜>_<시분>.pptx`로 변경 (기존 고정 `generated.pptx`에서)
 - `SectionResult`에 `footnote`, `items` 필드 추가
 
 ## 테스트
-114개 통과 (`pytest tests/`). 실제 202503/202512/202605/202606 요청서를 활용한 회귀 테스트
-다수 포함.
+144개 통과 (`pytest`, CLI 파이프라인 + 웹 백엔드 합산). 실제 202503/202512/202602/202605/202606
+요청서를 활용한 회귀 테스트 다수 포함.
 
 ## 다음 단계
 설계서 9단계(신규 월 실사용 테스트) — 다음 달 실제 request.xlsx가 오면 이번처럼 실제 산출물을
