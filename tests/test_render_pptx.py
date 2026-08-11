@@ -117,13 +117,45 @@ def test_multiline_text_placement_styles_every_paragraph(tmp_path):
     placement = Placement("text", 10.0, 10.0, 400.0, 40.0, "* 첫 번째 문장입니다.\n* 두 번째 문장입니다.")
     _add_placement(slide, placement)
 
-    tb = next(s for s in slide.shapes if s.has_text_frame)
+    # "text" placements now also draw a card frame (see the test below) —
+    # that's an autoshape, which python-pptx gives an (empty) text_frame
+    # too, so skip to the shape that actually has the multiline text.
+    tb = next(s for s in slide.shapes if s.has_text_frame and s.text_frame.text)
     tf = tb.text_frame
     assert len(tf.paragraphs) == 2
     assert tf.paragraphs[0].text == "* 첫 번째 문장입니다."
     assert tf.paragraphs[1].text == "* 두 번째 문장입니다."
-    assert tf.paragraphs[0].font.size == Pt(8)
-    assert tf.paragraphs[1].font.size == Pt(8)
+    assert tf.paragraphs[0].font.size == Pt(9)
+    assert tf.paragraphs[1].font.size == Pt(9)
+
+
+def test_text_kind_placement_gets_its_own_card_frame(tmp_path):
+    # real user comparison (2026-08-11): a text-only reward item (no source
+    # image) rendered as bare floating text looked unfinished next to icon
+    # items that all sit on a card — every item should read as "a card",
+    # image or not.
+    from pptx.enum.shapes import MSO_SHAPE_TYPE
+
+    prs = Presentation()
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    _add_placement(slide, Placement("text", 10.0, 10.0, 120.0, 40.0, "수묵화 대미지 스킨"))
+
+    shapes = list(slide.shapes)
+    assert len(shapes) == 2
+    assert shapes[0].shape_type == MSO_SHAPE_TYPE.AUTO_SHAPE
+    assert shapes[1].text_frame.text == "수묵화 대미지 스킨"
+
+
+def test_caption_kind_placement_stays_unframed(tmp_path):
+    # "caption" sits under an icon that already drew its own frame — must
+    # NOT get a second frame of its own, unlike "text" above.
+    prs = Presentation()
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    _add_placement(slide, Placement("caption", 10.0, 10.0, 120.0, 20.0, "아이템 이름"))
+
+    shapes = list(slide.shapes)
+    assert len(shapes) == 1
+    assert shapes[0].text_frame.text == "아이템 이름"
 
 
 def test_frame_placement_draws_card_with_no_picture_or_text(tmp_path):

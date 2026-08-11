@@ -160,7 +160,35 @@ def _add_placement(slide, placement: Placement):
         p.font.name = BODY_FONT
         return
 
-    # caption / text
+    if placement.kind == "text":
+        # standalone text row (no icon above it — see grid_with_text_overflow_
+        # block / fit_grid_pages_with_text_overflow's text-overflow items and
+        # text_list_block). Real user comparison: without its own card frame
+        # these just floated bare on the slide; every other item type (icon,
+        # caption-under-an-icon) already sits on/under a card. Give it the
+        # same frame so a no-image item still reads as "a real item card",
+        # not a lesser leftover.
+        _add_card_frame(slide, left, top, width, height)
+        tb = slide.shapes.add_textbox(left + Pt(4), top, width - Pt(8), height)
+        tf = tb.text_frame
+        tf.word_wrap = True
+        tf.vertical_anchor = MSO_ANCHOR.MIDDLE
+        lines = _item_name(placement.ref).split("\n") or [""]
+        tf.text = lines[0]
+        tf.paragraphs[0].alignment = PP_ALIGN.CENTER
+        tf.paragraphs[0].font.size = Pt(9)
+        tf.paragraphs[0].font.name = BODY_FONT
+        tf.paragraphs[0].font.color.rgb = CAPTION_COLOR
+        for line in lines[1:]:
+            p = tf.add_paragraph()
+            p.text = line
+            p.alignment = PP_ALIGN.CENTER
+            p.font.size = Pt(9)
+            p.font.name = BODY_FONT
+            p.font.color.rgb = CAPTION_COLOR
+        return
+
+    # caption (sits under an icon that already has its own frame)
     tb = slide.shapes.add_textbox(left, top, width, height)
     tf = tb.text_frame
     tf.word_wrap = True
