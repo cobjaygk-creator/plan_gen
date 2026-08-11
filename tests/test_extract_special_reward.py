@@ -56,3 +56,29 @@ def test_image_only_rows_are_not_dropped_202602():
     text = to_compact_text(rows)
     assert "42: [이미지있음]" in text
     assert "[이벤트] 고양이 모자 선택권" in text
+
+
+def test_colliding_textbox_captions_are_not_dropped_202508():
+    # real bug (user-reported, screenshots): "배틀패스 의상 교환권" rendered
+    # as a broken 4-image icon_only block instead of its real 21-item grid.
+    # Root cause: several rows pack 2 textboxes into the same nominal
+    # spreadsheet column (col_idx0 identical, colOff very different — e.g.
+    # "화이트 니트 세트" and "브라운 니트 세트" both anchor at col_idx0=2)
+    # — the old merge used dict.setdefault(col_letter, text), so the
+    # second caption in each colliding pair was silently dropped. With
+    # only 5 of the real 21 names visible, the classifier had no way to
+    # tell this apart from a real icon_only section.
+    rows = _rows_for("202508")
+    text = to_compact_text(rows)
+    for name in ["브라운 니트 세트", "레트로 팬츠 세트", "도플갱어 거인 의상 세트", "바다의 향기 의상 세트"]:
+        assert name in text, f"{name!r} missing — collision fix regressed"
+
+
+def test_drawing_textbox_entities_are_unescaped_202508():
+    # real bug found alongside the collision one: XML text runs keep
+    # entities literal ("&amp;"), so "빌브라트 수트 & 펀치 mini" rendered
+    # with the escape still in it.
+    rows = _rows_for("202508")
+    text = to_compact_text(rows)
+    assert "빌브라트 수트 & 펀치 mini" in text
+    assert "&amp;" not in text

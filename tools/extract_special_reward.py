@@ -12,6 +12,7 @@ sees nothing there. So this module reads text from both sources (cell
 values + drawing textbox runs) and merges them by anchor row, the same
 way images will need to be position-matched in step 7.
 """
+import html
 import re
 import zipfile
 import openpyxl
@@ -21,6 +22,7 @@ COLS = ["B", "C", "D", "E", "F"]
 
 ANCHOR_SPLIT_RE = re.compile(r"(?=<xdr:(?:twoCellAnchor|oneCellAnchor)[ >])")
 FROM_RE = re.compile(r"<xdr:from><xdr:col>(\d+)</xdr:col>.*?<xdr:row>(\d+)</xdr:row>", re.S)
+FROM_COL_OFF_RE = re.compile(r"<xdr:from><xdr:col>(\d+)</xdr:col>.*?<xdr:colOff>(\d+)</xdr:colOff>", re.S)
 TEXT_RUN_RE = re.compile(r"<a:t>(.*?)</a:t>")
 
 
@@ -37,9 +39,18 @@ def _find_drawing_path(path: str) -> str | None:
 
 
 def extract_drawing_text_anchors(path: str) -> list[dict]:
-    """Returns [{"row": excel_row_1indexed, "col_letter": "B", "text": str}, ...]
-    for every floating textbox (not picture) in the sheet's drawing, ignoring
-    shapes that have no text runs at all."""
+    """Returns [{"row": excel_row_1indexed, "col_letter": "B", "col_off": int,
+    "text": str}, ...] for every floating textbox (not picture) in the
+    sheet's drawing, ignoring shapes that have no text runs at all.
+
+    col_off is the raw <xdr:colOff> EMU offset within col_letter's column —
+    kept so callers can tell apart two textboxes that share the same
+    col_idx0 (and so the same col_letter) but sit at very different
+    horizontal positions. Real case (202508 "배틀패스 의상 교환권"): a
+    4-item visual row only spans 2-3 real spreadsheet columns, so e.g.
+    "화이트 니트 세트" and "브라운 니트 세트" both anchor at col_idx0=2
+    (colOff 539213 vs 2035635 — clearly different cards) — treating them
+    as the same column silently dropped one (see extract_special_reward_rows)."""
     drawing_path = _find_drawing_path(path)
     if drawing_path is None:
         return []
@@ -59,9 +70,16 @@ def extract_drawing_text_anchors(path: str) -> list[dict]:
         col_idx0, row_idx0 = int(m.group(1)), int(m.group(2))
         if col_idx0 >= len(COLS):
             continue
-        joined = "".join(texts).strip()
+        off_m = FROM_COL_OFF_RE.search(chunk)
+        col_off = int(off_m.group(2)) if off_m else 0
+        # XML text runs keep entities literal ("&amp;" for a real "&") —
+        # real case: 202508 "빌브라트 수트 &amp; 펀치 mini" rendered with
+        # the escape still in it before this unescape was added.
+        joined = html.unescape("".join(texts)).strip()
         if joined:
-            anchors.append({"row": row_idx0 + 1, "col_letter": COLS[col_idx0], "text": joined})
+            anchors.append({
+                "row": row_idx0 + 1, "col_letter": COLS[col_idx0], "col_off": col_off, "text": joined,
+            })
     return anchors
 
 
@@ -127,13 +145,34 @@ def extract_special_reward_rows(path: str, start_row: int) -> list[dict]:
         if cells or r in pic_rows:
             row_map[r] = {"row": r, "cells": cells}
 
+    text_anchors_by_row: dict[int, list[dict]] = {}
     for anchor in extract_drawing_text_anchors(path):
         r = anchor["row"]
         if not (start_row <= r < end_row):
             continue
+        text_anchors_by_row.setdefault(r, []).append(anchor)
+
+    for r, row_anchors in text_anchors_by_row.items():
         entry = row_map.setdefault(r, {"row": r, "cells": {}})
-        # don't clobber a real cell value with a textbox guess at the same slot
-        entry["cells"].setdefault(anchor["col_letter"], anchor["text"])
+        # process left-to-right by true position (col_idx0, then colOff) so
+        # that when two textboxes round to the same col_letter (see real
+        # 202508 case in extract_drawing_text_anchors' docstring), the
+        # later one gets bumped to the nearest free letter instead of
+        # silently overwriting/being dropped — every caption survives.
+        row_anchors.sort(key=lambda a: (COLS.index(a["col_letter"]), a["col_off"]))
+        for anchor in row_anchors:
+            letter = anchor["col_letter"]
+            if letter in entry["cells"] and entry["cells"][letter] != anchor["text"]:
+                start_idx = COLS.index(letter)
+                free = next(
+                    (c for c in COLS[start_idx + 1:] if c not in entry["cells"]),
+                    next((c for c in COLS if c not in entry["cells"]), None),
+                )
+                if free is None:
+                    continue  # row already has one caption in every COLS slot — drop, same as before
+                letter = free
+            # don't clobber a real cell value with a textbox guess at the same slot
+            entry["cells"].setdefault(letter, anchor["text"])
 
     for r, entry in row_map.items():
         entry["has_image"] = r in pic_rows
