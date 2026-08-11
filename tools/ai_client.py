@@ -158,6 +158,119 @@ def _openai_classify(system_prompt: str, user_prompt: str, schema_model: Type[T]
         raise ClassificationError(f"schema validation failed: {e}") from e
 
 
+def _anthropic_classify_with_images(
+    system_prompt: str, user_prompt: str, images: list[tuple[str, bytes]],
+    schema_model: Type[T], model: str,
+) -> T:
+    import base64
+    import anthropic
+
+    client = anthropic.Anthropic()
+    tool_name = "emit_" + schema_model.__name__.lower()
+    tool = {
+        "name": tool_name,
+        "description": f"Emit the classification result as {schema_model.__name__}.",
+        "input_schema": schema_model.model_json_schema(),
+    }
+
+    content: list[dict] = []
+    for idx, (media_type, raw_bytes) in enumerate(images):
+        content.append({"type": "text", "text": f"이미지 {idx}:"})
+        content.append({
+            "type": "image",
+            "source": {"type": "base64", "media_type": media_type, "data": base64.b64encode(raw_bytes).decode("ascii")},
+        })
+    content.append({"type": "text", "text": user_prompt})
+
+    response = client.messages.create(
+        model=model, max_tokens=4096, system=system_prompt,
+        tools=[tool], tool_choice={"type": "tool", "name": tool_name},
+        messages=[{"role": "user", "content": content}],
+    )
+
+    for block in response.content:
+        if block.type == "tool_use" and block.name == tool_name:
+            if response.stop_reason == "max_tokens":
+                raise ClassificationError("response truncated at max_tokens")
+            if not isinstance(block.input, dict):
+                raise ClassificationError(
+                    f"tool_use input was not a JSON object (got {type(block.input).__name__})"
+                )
+            try:
+                cleaned = _unwrap_self_nesting(_unstringify_nested_json(block.input))
+                return schema_model.model_validate(cleaned)
+            except Exception as e:
+                raise ClassificationError(f"schema validation failed: {e}") from e
+
+    raise ClassificationError("model did not return a tool_use block")
+
+
+def _openai_classify_with_images(
+    system_prompt: str, user_prompt: str, images: list[tuple[str, bytes]],
+    schema_model: Type[T], model: str,
+) -> T:
+    import base64
+    import openai
+
+    client = openai.OpenAI()
+    tool_name = "emit_" + schema_model.__name__.lower()
+    tool = {
+        "type": "function",
+        "function": {
+            "name": tool_name,
+            "description": f"Emit the classification result as {schema_model.__name__}.",
+            "parameters": schema_model.model_json_schema(),
+        },
+    }
+
+    content: list[dict] = []
+    for idx, (media_type, raw_bytes) in enumerate(images):
+        content.append({"type": "text", "text": f"이미지 {idx}:"})
+        b64 = base64.b64encode(raw_bytes).decode("ascii")
+        content.append({"type": "image_url", "image_url": {"url": f"data:{media_type};base64,{b64}"}})
+    content.append({"type": "text", "text": user_prompt})
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": content}],
+        tools=[tool], tool_choice={"type": "function", "function": {"name": tool_name}},
+    )
+
+    message = response.choices[0].message
+    if not message.tool_calls:
+        raise ClassificationError("model did not return a tool call")
+
+    call = message.tool_calls[0]
+    try:
+        raw = json.loads(call.function.arguments)
+    except json.JSONDecodeError as e:
+        raise ClassificationError(f"tool call arguments were not valid JSON: {e}") from e
+
+    try:
+        cleaned = _unwrap_self_nesting(_unstringify_nested_json(raw))
+        return schema_model.model_validate(cleaned)
+    except Exception as e:
+        raise ClassificationError(f"schema validation failed: {e}") from e
+
+
+def classify_with_images(
+    system_prompt: str, user_prompt: str, images: list[tuple[str, bytes]],
+    schema_model: Type[T], model: str, provider: str | None = None,
+) -> T:
+    """Same contract as classify(), but sends real image bytes alongside
+    the text — for the small minority of cases where position math alone
+    can't tell content from decoration, or can't tell two items apart
+    that share one image. images: [(media_type, raw_bytes), ...], each
+    referenced in user_prompt as "이미지 0", "이미지 1", etc. (0-indexed,
+    matching that order)."""
+    provider = provider or os.environ.get("AI_PROVIDER", "anthropic")
+    if provider == "anthropic":
+        return _anthropic_classify_with_images(system_prompt, user_prompt, images, schema_model, model)
+    if provider == "openai":
+        return _openai_classify_with_images(system_prompt, user_prompt, images, schema_model, model)
+    raise ValueError(f"unknown AI_PROVIDER: {provider!r}")
+
+
 def classify(
     system_prompt: str, user_prompt: str, schema_model: Type[T], model: str, provider: str | None = None,
 ) -> T:

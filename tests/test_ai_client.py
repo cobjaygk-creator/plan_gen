@@ -9,7 +9,9 @@ from pydantic import BaseModel
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from tools.ai_client import _unstringify_nested_json, _unwrap_self_nesting, classify, ClassificationError
+from tools.ai_client import (
+    _unstringify_nested_json, _unwrap_self_nesting, classify, classify_with_images, ClassificationError,
+)
 
 
 def test_unstringify_leaves_normal_dict_unchanged():
@@ -124,3 +126,52 @@ def test_provider_param_overrides_env_default(monkeypatch):
     with patch("openai.OpenAI", return_value=fake_client):
         result = classify("system", "user", _Sample, "gpt-4o-mini", provider="openai")
     assert result.label == "override"
+
+
+def _fake_anthropic_response(tool_input: dict, tool_name: str = "emit__sample", stop_reason: str = "tool_use"):
+    block = SimpleNamespace(type="tool_use", name=tool_name, input=tool_input)
+    return SimpleNamespace(content=[block], stop_reason=stop_reason)
+
+
+def test_classify_with_images_sends_image_blocks_to_anthropic():
+    fake_client = MagicMock()
+    fake_client.messages.create.return_value = _fake_anthropic_response({"ok": True, "label": "본사진"})
+    images = [("image/png", b"\x89PNG\r\n\x1a\nFAKE"), ("image/jpeg", b"\xff\xd8\xffFAKE")]
+
+    with patch("anthropic.Anthropic", return_value=fake_client):
+        result = classify_with_images("system", "user", images, _Sample, "claude-haiku-4-5-20251001")
+
+    assert result == _Sample(ok=True, label="본사진")
+    _, kwargs = fake_client.messages.create.call_args
+    content = kwargs["messages"][0]["content"]
+    image_blocks = [b for b in content if b.get("type") == "image"]
+    assert len(image_blocks) == 2
+    assert image_blocks[0]["source"]["media_type"] == "image/png"
+    assert image_blocks[1]["source"]["media_type"] == "image/jpeg"
+    # the trailing text block must be the actual user_prompt, not swallowed by images
+    assert content[-1] == {"type": "text", "text": "user"}
+
+
+def test_classify_with_images_raises_on_truncated_response():
+    fake_client = MagicMock()
+    fake_client.messages.create.return_value = _fake_anthropic_response(
+        {"ok": True, "label": "x"}, stop_reason="max_tokens"
+    )
+    with patch("anthropic.Anthropic", return_value=fake_client):
+        with pytest.raises(ClassificationError):
+            classify_with_images("system", "user", [("image/png", b"x")], _Sample, "claude-haiku-4-5-20251001")
+
+
+def test_classify_with_images_openai_provider_works():
+    fake_client = MagicMock()
+    fake_client.chat.completions.create.return_value = _fake_openai_response(
+        json.dumps({"ok": True, "label": "openai비전"})
+    )
+    with patch("openai.OpenAI", return_value=fake_client):
+        result = classify_with_images(
+            "system", "user", [("image/png", b"fake")], _Sample, "gpt-4o-mini", provider="openai",
+        )
+    assert result.label == "openai비전"
+    _, kwargs = fake_client.chat.completions.create.call_args
+    content = kwargs["messages"][1]["content"]
+    assert any(b.get("type") == "image_url" for b in content)

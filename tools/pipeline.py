@@ -23,6 +23,7 @@ from tools.classify_month import classify_month, NeedsHumanReview
 from tools.locate_items import locate_items, normalize
 from tools.match_images import match_images
 from tools.extract_images import get_picture_anchors, extract_and_save_images
+from tools.vision_match import resolve_unmatched_with_vision
 from tools.blocks import (
     grid_block, grid_with_text_overflow_block, text_list_block, few_preview_block,
     paired_columns_block, icon_only_block,
@@ -58,15 +59,51 @@ class MonthResult:
     fatal_error: str | None = None
 
 
-def _items_with_images(section, matched, text_only) -> list[dict]:
+def _merge_shared_images(items: list[dict]) -> list[dict]:
+    """Two items that vision-matching (see tools/vision_match.py) decided
+    genuinely share one photo must be shown as one combined card, not two
+    cards both pointing at the same file — the latter is visually
+    indistinguishable from the cross-section duplicate-photo bug fixed in
+    STATUS.md round 10. Plain position matching (match_images.py) never
+    produces this in the first place (its bipartite match gives each
+    anchor to at most one item), so this is a no-op on the common path."""
+    image_to_items: dict[str, list[dict]] = {}
+    for item in items:
+        img = item.get("image")
+        if img:
+            image_to_items.setdefault(img, []).append(item)
+
+    merged, emitted = [], set()
+    for item in items:
+        img = item.get("image")
+        if img is None:
+            merged.append(item)
+            continue
+        if img in emitted:
+            continue
+        emitted.add(img)
+        group = image_to_items[img]
+        if len(group) == 1:
+            merged.append(item)
+        else:
+            merged.append({
+                "name": " / ".join(g["name"] for g in group), "image": img,
+                "is_new": any(g.get("is_new") for g in group), "pair_group": None,
+            })
+    return merged
+
+
+def _items_with_images(section, matched, text_only, vision_resolved=None) -> list[dict]:
     image_by_name = {m.name: m.image_path for m in matched}
+    for v in vision_resolved or []:
+        image_by_name[v.name] = v.image_path
     out = []
     for item in section.items:
         out.append({
             "name": item.name, "image": image_by_name.get(item.name), "is_new": item.is_new,
             "pair_group": item.pair_group,
         })
-    return out
+    return _merge_shared_images(out)
 
 
 def split_pair_items(items: list[dict]) -> tuple[list[dict], tuple[list[dict], list[dict]]]:
@@ -245,9 +282,18 @@ def process_month(
                 col_tolerance=PAIRED_COLUMNS_COL_TOLERANCE,
             )
             text_only = unmatched + never_matched
+            items = _items_with_images(section, matched, text_only)
         else:
             matched, text_only = match_images(request_path, located, out_dir=image_out_dir)
-        items = _items_with_images(section, matched, text_only)
+            # position matching's own last resort: only fires when
+            # something was actually left unmatched, and only looks at
+            # images already anchored near those specific rows — see
+            # tools/vision_match.py's docstring for why this can't just
+            # be another positional rule.
+            vision_resolved, text_only = resolve_unmatched_with_vision(
+                request_path, text_only, matched, image_out_dir,
+            )
+            items = _items_with_images(section, matched, text_only, vision_resolved)
         prepared.append((section, items, matched, text_only, unlocated))
     _progress(2, "AI 분류 + 이미지 매칭 완료")
 
