@@ -132,6 +132,39 @@ def test_process_month_icon_only_excludes_title_adjacent_decoration_202508(tmp_p
     )
 
 
+def test_process_month_icon_only_does_not_steal_images_from_next_section(tmp_path):
+    # Real bug (user-reported, downloaded .pptx): 202509's "할로윈 호박
+    # 동작 선택 상자" is an empty icon_only section immediately followed
+    # by a real few_preview section ("할로윈 펌킨 버킷 등록권") whose 2
+    # portraits anchor at rows 36-50 — starting inside the icon_only run
+    # (34-49) but ending at the few_preview items' own row 50. A
+    # partial-overlap row-range test let icon_only grab both portraits
+    # too, so the same 2 images appeared twice in the rendered deck under
+    # two different captions. icon_only must only take images that fit
+    # *entirely* within its own row range.
+    def fake_classify(month, raw_text, **kwargs):
+        output = ClassificationOutput(sections=[
+            Section(section_title="할로윈 호박 동작 선택 상자", block_type="icon_only",
+                    items=[], footnote="아래 동작 꾸미기 중 택 1 (거래 불가)", confidence=0.9),
+            Section(section_title="할로윈 펌킨 버킷 등록권", block_type="few_preview", items=[
+                Item(name="할로윈 펌킨 버킷 등록권"), Item(name="할로윈 잭 오 랜턴 등록권"),
+            ], footnote=None, confidence=0.9),
+        ])
+        return ClassifyResult(month, output, "claude-haiku-4-5-20251001", from_cache=False)
+
+    with patch("tools.pipeline.classify_month", side_effect=fake_classify):
+        path = os.path.join(SAMPLES_DIR, "202509_request.xlsx")
+        result = pipeline.process_month("202509", path, image_out_dir=str(tmp_path))
+
+    icon_only_section, few_preview_section = result.sections
+    assert icon_only_section.render_error is not None  # legitimately 0 images of its own
+    assert len(icon_only_section.items) == 0
+
+    few_preview_images = [i["image"] for i in few_preview_section.items if i["image"]]
+    assert len(few_preview_images) == 2
+    assert len(set(few_preview_images)) == 2  # the two items must not share one image
+
+
 def test_process_month_paired_columns_matches_set_names_not_sub_items(tmp_path):
     # Real 202606 bug: "자켓 세트"/"치마 세트" portraits are anchored at
     # column C/D while their own text sits in column B/D — outside

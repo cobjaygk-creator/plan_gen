@@ -132,7 +132,19 @@ def _icon_only_items(request_path: str, rows: list[dict], section, image_out_dir
     content item, even if this section were ever misclassified as
     icon_only again — a real content icon always starts strictly after
     the title row (real case: 202602's 9 cat-hat icons start at row 42,
-    well after their title row 40). Structural, no AI cost."""
+    well after their title row 40). Structural, no AI cost.
+
+    Also requires the anchor to fit *entirely* within [start, end], not
+    just overlap it — a tall image can start inside an icon_only run and
+    extend well past its last image-only row into a real named item's row
+    further down (real case: 202509's "할로윈 호박 동작 선택 상자", an
+    empty icon_only section immediately followed by a real few_preview
+    section "할로윈 펌킨 버킷 등록권" — its 2 portraits anchor at rows
+    36-50, starting inside the icon_only run at 34-49 but ending at the
+    few_preview items' own row 50). A partial-overlap test let icon_only
+    steal both portraits out from under the section that actually names
+    them, so the same 2 images appeared twice in the rendered deck under
+    two different captions."""
     title_row = _find_title_row(rows, section.section_title)
     if title_row is None:
         return []
@@ -143,7 +155,7 @@ def _icon_only_items(request_path: str, rows: list[dict], section, image_out_dir
     anchor_files = extract_and_save_images(request_path, image_out_dir)
     selected = [
         (a, f) for a, f in anchor_files
-        if not (a.row_end < start or a.row_start > end) and a.row_start > title_row
+        if a.row_start > title_row and start <= a.row_start and a.row_end <= end
     ]
     return [{"name": "", "image": f, "is_new": False, "pair_group": None} for _, f in selected]
 
