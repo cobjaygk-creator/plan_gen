@@ -17,7 +17,7 @@ from pptx.util import Pt
 from pptx.oxml.ns import qn
 
 from tools.template_markers import find_markers, remove_marker, Marker
-from tools.blocks.dynamic_grid import fit_grid_pages
+from tools.blocks.dynamic_grid import fit_grid_pages_with_text_overflow
 from tools.blocks.text_list import text_list_block
 from tools.blocks.few_preview import few_preview_block
 from tools.blocks.paired_columns import paired_columns_block
@@ -145,7 +145,7 @@ def _render_section_pages(section, items: list[dict], box):
     content_box = _content_box(box)
     bt = section.block_type
     if bt in ("grid", "new_highlight"):
-        return fit_grid_pages(items, *content_box)
+        return fit_grid_pages_with_text_overflow(items, *content_box)
     if bt == "text_list":
         return text_list_block(items, columns=3)
     if bt == "few_preview":

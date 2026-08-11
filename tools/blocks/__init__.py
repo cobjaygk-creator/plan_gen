@@ -1,4 +1,4 @@
-from .grid import grid_block
+from .grid import grid_block, grid_with_text_overflow_block
 from .text_list import text_list_block
 from .few_preview import few_preview_block
 from .paired_columns import paired_columns_block
@@ -7,6 +7,7 @@ from .geometry import Placement, has_any_overlap, CONTENT_LEFT, CONTENT_TOP, CON
 
 __all__ = [
     "grid_block",
+    "grid_with_text_overflow_block",
     "text_list_block",
     "few_preview_block",
     "paired_columns_block",

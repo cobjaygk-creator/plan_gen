@@ -24,7 +24,8 @@ from tools.locate_items import locate_items, normalize
 from tools.match_images import match_images
 from tools.extract_images import get_picture_anchors, extract_and_save_images
 from tools.blocks import (
-    grid_block, text_list_block, few_preview_block, paired_columns_block, icon_only_block,
+    grid_block, grid_with_text_overflow_block, text_list_block, few_preview_block,
+    paired_columns_block, icon_only_block,
     has_any_overlap, CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM,
 )
 
@@ -152,8 +153,12 @@ def _render_section(section, items: list[dict]) -> list:
     if bt in ("grid", "new_highlight"):
         # new_highlight merged into grid: real data (202512) showed NEW
         # items sit in a normal-sized grid cell with just a badge, not a
-        # separately-sized "highlight card" — see tools/blocks/grid.py
-        return grid_block(items, columns=3, icon_size=24.0)
+        # separately-sized "highlight card" — see tools/blocks/grid.py.
+        # grid_with_text_overflow_block (not plain grid_block): real
+        # sections regularly have a few items with no source image at all
+        # (202508) — those get packed as compact text rows instead of an
+        # empty image card.
+        return grid_with_text_overflow_block(items, columns=3, icon_size=24.0)
     if bt == "text_list":
         return text_list_block(items, columns=3)
     if bt == "few_preview":

@@ -5,7 +5,7 @@ import pytest
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from tools.blocks import (
-    grid_block, text_list_block,
+    grid_block, grid_with_text_overflow_block, text_list_block,
     few_preview_block, paired_columns_block, icon_only_block, has_any_overlap,
     CONTENT_LEFT, CONTENT_TOP, CONTENT_WIDTH, CONTENT_BOTTOM,
 )
@@ -50,6 +50,69 @@ class TestGridBlock:
         pages = grid_block(items, columns=3, icon_size=24.0)
         seen = sum(len(p) // 2 for p in pages)
         assert seen == 37
+
+
+class TestGridWithTextOverflowBlock:
+    # Real bug (202508): "산뜻한 소망 세트" and 3 other items in the same
+    # section legitimately have no source image — grid_block gave them an
+    # empty image card, which reads as broken rather than "no image
+    # available". grid_with_text_overflow_block pulls no-image items out
+    # into compact text rows instead.
+    def test_no_image_items_render_as_text_not_empty_cards(self):
+        items = make_items(4)
+        items[1]["image"] = None
+        items[3]["image"] = None
+        pages = grid_with_text_overflow_block(items, columns=3, icon_size=24.0)
+        all_placements = [p for page in pages for p in page]
+
+        icon_items = {p.ref.get("name") for p in all_placements if p.kind == "icon"}
+        text_items = {p.ref for p in all_placements if p.kind == "text"}
+        assert icon_items == {"item0", "item2"}
+        assert text_items == {"item1", "item3"}
+        # no empty/placeholder icon placements for the no-image items
+        assert len(icon_items) == sum(1 for p in all_placements if p.kind == "icon")
+
+    def test_never_drops_items_mixed(self):
+        items = make_items(37)
+        for i in range(0, 37, 3):
+            items[i]["image"] = None
+        pages = grid_with_text_overflow_block(items, columns=3, icon_size=24.0)
+        icon_count = sum(1 for page in pages for p in page if p.kind == "icon")
+        text_count = sum(1 for page in pages for p in page if p.kind == "text")
+        assert icon_count == sum(1 for i in items if i["image"])
+        assert text_count == sum(1 for i in items if not i["image"])
+        for page in pages:
+            assert not has_any_overlap(page)
+            assert_within_content_box(page)
+
+    def test_all_items_have_images_matches_plain_grid_block(self):
+        items = make_items(6)
+        pages = grid_with_text_overflow_block(items, columns=3, icon_size=24.0)
+        plain_pages = grid_block(items, columns=3, icon_size=24.0)
+        assert pages == plain_pages
+
+    def test_no_items_have_images_reads_like_text_list(self):
+        # AI classifier wobbling between grid/text_list for an all-text
+        # section (see tools/pipeline.py docstring) must not change the
+        # visible result — every item lands as a plain text row either way.
+        items = make_items(6)
+        for i in items:
+            i["image"] = None
+        pages = grid_with_text_overflow_block(items, columns=3, icon_size=24.0)
+        assert all(p.kind == "text" for page in pages for p in page)
+        assert sum(len(p) for p in pages) == 6
+
+    def test_empty_items_returns_no_pages(self):
+        assert grid_with_text_overflow_block([], columns=3, icon_size=24.0) == []
+
+    def test_new_no_image_item_gets_suffix_not_a_badge(self):
+        items = make_items(2)
+        items[1]["image"] = None
+        items[1]["is_new"] = True
+        pages = grid_with_text_overflow_block(items, columns=3, icon_size=24.0)
+        all_placements = [p for page in pages for p in page]
+        assert "item1 (NEW)" in [p.ref for p in all_placements if p.kind == "text"]
+        assert sum(1 for p in all_placements if p.kind == "badge") == 0
 
 
 class TestTextListBlock:

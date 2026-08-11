@@ -76,3 +76,71 @@ def fit_grid_pages(
         chunk = items[start:start + per_page]
         pages.append(_layout_page(chunk, box_left, box_top, cols, cell_w, cell_h, icon_size))
     return pages
+
+
+TEXT_ROW_HEIGHT = 24.0  # compact row for no-image items sharing a page with the image grid
+
+
+def _text_rows(items, box_left, top, box_width, cols, row_height=TEXT_ROW_HEIGHT):
+    cell_w = (box_width - GAP * (cols - 1)) / cols
+    placements = []
+    for idx, item in enumerate(items):
+        col, row = idx % cols, idx // cols
+        x = box_left + col * (cell_w + GAP)
+        y = top + row * (row_height + GAP)
+        label = item.get("name", "")
+        if item.get("is_new"):
+            label += " (NEW)"
+        placements.append(Placement("text", x, y, cell_w, row_height, label))
+    return placements
+
+
+def _page_columns(page_placements: list, default: int = 3) -> int:
+    icon_tops = [p.top for p in page_placements if p.kind == "icon"]
+    if not icon_tops:
+        return default
+    first_row_top = min(icon_tops)
+    return sum(1 for t in icon_tops if abs(t - first_row_top) < 0.5)
+
+
+def fit_grid_pages_with_text_overflow(
+    items: list[dict], box_left: float, box_top: float, box_width: float, box_height: float,
+) -> list[list[Placement]]:
+    """Like fit_grid_pages, but an item with no image (item["image"] is
+    falsy) never gets an empty image card — real request data regularly
+    has a few items per section with no source image at all (real case:
+    202508's "산뜻한 소망 세트" and 3 others), and a blank card in their
+    place reads as broken rather than "no image available".
+
+    Image-having items are laid out exactly as fit_grid_pages would (that
+    function is reused unchanged — this only reads its output, never
+    modifies its behavior). Whatever vertical room is left under the
+    lowest placement on each resulting page is packed with the no-image
+    items as compact text rows instead; leftovers spill onto their own
+    text-only page(s), same layout a pure text_list would use."""
+    with_image = [i for i in items if i.get("image")]
+    without_image = [i for i in items if not i.get("image")]
+    if not with_image and not without_image:
+        return []
+
+    image_pages = fit_grid_pages(with_image, box_left, box_top, box_width, box_height) if with_image else []
+
+    text_queue = list(without_image)
+    pages = []
+    box_bottom = box_top + box_height
+    for page in image_pages:
+        cols = _page_columns(page)
+        used_bottom = max((p.bottom for p in page), default=box_top)
+        available = box_bottom - used_bottom - GAP
+        capacity = (max(0, int(available // (TEXT_ROW_HEIGHT + GAP))) * cols) if available > 0 else 0
+        chunk, text_queue = text_queue[:capacity], text_queue[capacity:]
+        pages.append(page + _text_rows(chunk, box_left, used_bottom + GAP, box_width, cols))
+
+    cols = 3
+    rows_per_page = max(1, int((box_height + GAP) // (TEXT_ROW_HEIGHT + GAP)))
+    per_page = rows_per_page * cols
+    for start in range(0, len(text_queue), per_page):
+        chunk = text_queue[start:start + per_page]
+        pages.append(_text_rows(chunk, box_left, box_top, box_width, cols))
+
+    return pages
