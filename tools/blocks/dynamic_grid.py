@@ -15,7 +15,15 @@ from .geometry import Placement
 
 CAPTION_HEIGHT = 34.0
 GAP = 12.0
-MIN_ICON = 50.0
+# Real user comparison (2026-08-11): a from-scratch reference render sized
+# its cards ~65-83pt even on a 9-items-per-page layout, vs. this fitter's
+# old MIN_ICON=50 floor (which the "always use the smallest reward slot as
+# the shared reference box" pagination policy in render_from_template.py
+# hits often — see that module's docstring — so 50 wasn't a rare fallback,
+# it was the common case). Raised the floor so cards stay reference-sized;
+# a page that no longer fits just paginates into more slides instead of
+# shrinking, same as before.
+MIN_ICON = 65.0
 MAX_ICON = 200.0
 BADGE_SIZE = 20.0
 MAX_COLUMNS_TRIED = 6
