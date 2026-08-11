@@ -123,7 +123,15 @@ def _icon_only_row_range(rows: list[dict], title_row: int, footnote: str | None)
 def _icon_only_items(request_path: str, rows: list[dict], section, image_out_dir: str) -> list[dict]:
     """No item names exist for this block type (see tools/blocks/icon_only.py)
     — instead of the usual AI-name -> locate -> match flow, grab whatever
-    images are anchored within the section's own row range directly."""
+    images are anchored within the section's own row range directly.
+
+    Excludes any anchor whose row_start <= title_row: a decorative badge
+    anchored right on the section's own title row (real case: 202508's
+    "WEAR" exchange-ticket icon next to "배틀패스 의상 교환권") is not a
+    content item, even if this section were ever misclassified as
+    icon_only again — a real content icon always starts strictly after
+    the title row (real case: 202602's 9 cat-hat icons start at row 42,
+    well after their title row 40). Structural, no AI cost."""
     title_row = _find_title_row(rows, section.section_title)
     if title_row is None:
         return []
@@ -134,7 +142,7 @@ def _icon_only_items(request_path: str, rows: list[dict], section, image_out_dir
     anchor_files = extract_and_save_images(request_path, image_out_dir)
     selected = [
         (a, f) for a, f in anchor_files
-        if not (a.row_end < start or a.row_start > end)
+        if not (a.row_end < start or a.row_start > end) and a.row_start > title_row
     ]
     return [{"name": "", "image": f, "is_new": False, "pair_group": None} for _, f in selected]
 

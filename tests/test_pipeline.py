@@ -101,6 +101,37 @@ def test_process_month_icon_only_finds_real_image_by_row_range(tmp_path):
     assert section.pages[0][0].kind == "icon"
 
 
+def test_process_month_icon_only_excludes_title_adjacent_decoration_202508(tmp_path):
+    # Real bug (user-reported, screenshots + real file): if "배틀패스 의상
+    # 교환권" is ever misclassified as icon_only again (the actual trigger
+    # was a separate text-extraction bug, already fixed in
+    # extract_special_reward.py — this test guards the icon_only fallback
+    # itself as defense in depth), the row-range image sweep used to grab
+    # the "WEAR" exchange-ticket badge anchored right on the section's own
+    # title row (17-18, title_row=17) as if it were a content item. A real
+    # content icon (202602's cat-hat icons, see the test above) always
+    # starts strictly after its title row — this is a structural,
+    # zero-AI-cost rule, not a vision judgment call.
+    def fake_classify_icon_only(month, raw_text, **kwargs):
+        output = ClassificationOutput(sections=[
+            Section(section_title="배틀패스 의상 교환권", block_type="icon_only",
+                    items=[], footnote="아래 패션 세트 중 택 1 (거래 불가)", confidence=0.9),
+        ])
+        return ClassifyResult(month, output, "claude-haiku-4-5-20251001", from_cache=False)
+
+    with patch("tools.pipeline.classify_month", side_effect=fake_classify_icon_only):
+        path = os.path.join(SAMPLES_DIR, "202508_request.xlsx")
+        result = pipeline.process_month("202508", path, image_out_dir=str(tmp_path))
+
+    section = result.sections[0]
+    assert section.render_error is None
+    image_paths = [item["image"] for item in section.items if item["image"]]
+    assert image_paths  # sanity: real content icons past the title row are still found
+    assert not any(os.path.basename(p).startswith("rId1.") for p in image_paths), (
+        "the title-adjacent WEAR badge (rId1) was swept in as a content item"
+    )
+
+
 def test_process_month_paired_columns_matches_set_names_not_sub_items(tmp_path):
     # Real 202606 bug: "자켓 세트"/"치마 세트" portraits are anchored at
     # column C/D while their own text sits in column B/D — outside
