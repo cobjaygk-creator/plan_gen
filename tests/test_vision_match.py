@@ -10,6 +10,7 @@ from tools.locate_items import LocatedItem
 from tools.match_images import MatchedItem
 from tools.vision_match import (
     ImageAssignment, VisionMatchResult, resolve_unmatched_with_vision,
+    IconFilterResult, filter_decorative_icons,
 )
 
 
@@ -139,3 +140,70 @@ def test_classification_error_leaves_everything_unresolved(tmp_path):
 
     assert resolved == []
     assert unresolved == text_only
+
+
+def test_filter_decorative_icons_single_image_makes_no_call():
+    with patch("tools.vision_match.classify_with_images") as classify:
+        kept = filter_decorative_icons([("image/png", b"only-one")])
+
+    assert kept == [0]
+    classify.assert_not_called()
+
+
+def test_filter_decorative_icons_empty_list_makes_no_call():
+    with patch("tools.vision_match.classify_with_images") as classify:
+        kept = filter_decorative_icons([])
+
+    assert kept == []
+    classify.assert_not_called()
+
+
+def test_filter_decorative_icons_drops_the_badge():
+    # real case: 202512's "신규 배틀패스 헤어 출시" icon_only section
+    # anchors both the real two-pose character photo and a decorative
+    # PASS-ribbon badge in the same image-only row range
+    images = [("image/png", b"real-content-photo"), ("image/png", b"decorative-pass-ribbon")]
+    result = IconFilterResult(real_content_indices=[0])
+    with patch("tools.vision_match.classify_with_images", return_value=result) as classify:
+        kept = filter_decorative_icons(images)
+
+    assert kept == [0]
+    classify.assert_called_once()
+
+
+def test_filter_decorative_icons_keeps_all_when_all_are_real():
+    # real case: 202602's 9 real cat-hat icons, no decoration to exclude
+    images = [("image/png", f"icon-{i}".encode()) for i in range(9)]
+    result = IconFilterResult(real_content_indices=list(range(9)))
+    with patch("tools.vision_match.classify_with_images", return_value=result):
+        kept = filter_decorative_icons(images)
+
+    assert kept == list(range(9))
+
+
+def test_filter_decorative_icons_fails_open_on_classification_error():
+    images = [("image/png", b"a"), ("image/png", b"b")]
+    with patch("tools.vision_match.classify_with_images", side_effect=ClassificationError("boom")):
+        kept = filter_decorative_icons(images)
+
+    assert kept == [0, 1]
+
+
+def test_filter_decorative_icons_fails_open_on_empty_response():
+    # model returned no indices at all (e.g. misjudged everything as
+    # decorative) — fail open rather than silently dropping every image
+    images = [("image/png", b"a"), ("image/png", b"b")]
+    result = IconFilterResult(real_content_indices=[])
+    with patch("tools.vision_match.classify_with_images", return_value=result):
+        kept = filter_decorative_icons(images)
+
+    assert kept == [0, 1]
+
+
+def test_filter_decorative_icons_ignores_out_of_range_index():
+    images = [("image/png", b"a"), ("image/png", b"b")]
+    result = IconFilterResult(real_content_indices=[0, 99])
+    with patch("tools.vision_match.classify_with_images", return_value=result):
+        kept = filter_decorative_icons(images)
+
+    assert kept == [0]

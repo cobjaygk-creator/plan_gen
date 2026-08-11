@@ -58,6 +58,23 @@ class VisionMatchResult(BaseModel):
     assignments: list[ImageAssignment] = Field(default_factory=list)
 
 
+ICON_FILTER_SYSTEM_PROMPT = """\
+너는 게임 보상 섹션에 첨부된 이미지들 중 어떤 것이 실제 보상 콘텐츠(캐릭터,
+의상, 아이템 사진)이고 어떤 것이 장식용 아이콘(리본, 티켓, 뱃지, 로고, PASS
+같은 프로모션 스티커)인지 구분한다.
+
+- 캐릭터/아이템을 실제로 보여주는 사진만 real_content_indices에 넣어라.
+- 리본, 티켓, 뱃지, 로고, 말풍선처럼 장식이나 홍보 목적의 아이콘은 절대
+  포함하지 마라.
+- 확신이 없으면 실제 콘텐츠로 간주해라 — 진짜 보상 사진을 실수로 빼는 것보다
+  장식 아이콘을 하나 더 포함하는 게 낫다.
+- 주어진 이미지 번호(0부터 시작) 범위 밖의 번호를 만들어내지 마라."""
+
+
+class IconFilterResult(BaseModel):
+    real_content_indices: list[int] = Field(default_factory=list)
+
+
 @dataclass
 class VisionResolvedItem:
     name: str
@@ -68,7 +85,7 @@ def _rid_from_path(path: str) -> str:
     return os.path.splitext(os.path.basename(path))[0]
 
 
-def _media_type(path: str) -> str:
+def media_type(path: str) -> str:
     ext = path.rsplit(".", 1)[-1].lower()
     return "image/jpeg" if ext in ("jpg", "jpeg") else "image/png"
 
@@ -109,7 +126,7 @@ def resolve_unmatched_with_vision(
     images = []
     for _, path in candidates:
         with open(path, "rb") as f:
-            images.append((_media_type(path), f.read()))
+            images.append((media_type(path), f.read()))
 
     user_prompt = "항목 이름:\n" + "\n".join(f"- {item.name}" for item in text_only)
 
@@ -127,3 +144,35 @@ def resolve_unmatched_with_vision(
             continue
         resolved.append(VisionResolvedItem(item.name, candidates[idx][1]))
     return resolved, still_unresolved
+
+
+def filter_decorative_icons(images: list[tuple[str, bytes]]) -> list[int]:
+    """Returns indices (into `images`) judged to be real content — for
+    icon_only sections, whose "grab every image anchored in the row range"
+    fallback (pipeline.py's _icon_only_items) has no name text to compare
+    against and so no positional way to tell a real content photo apart
+    from a decorative badge anchored in the same run.
+
+    Real case (202512's "신규 배틀패스 헤어 출시"): the section's image-only
+    row range contains both the real two-pose character photo AND a
+    decorative PASS-ribbon badge — both structurally identical (no title-
+    row adjacency, no size rule proven safe by round 9's badge-vs-photo
+    collision lesson), so this asks the same question a human looks at
+    instantly instead of guessing with more positional rules.
+
+    Only called when there's more than one candidate (a single image can't
+    be ambiguous — zero cost there). Fails open on any error or an empty/
+    invalid response: keep everything rather than risk silently dropping a
+    real reward photo, since round 9 already showed a wrong exclusion is
+    worse than an extra decorative icon slipping through."""
+    if len(images) <= 1:
+        return list(range(len(images)))
+
+    user_prompt = f"이미지 {len(images)}장이 있다. 각각을 확인해라."
+    try:
+        result = classify_with_images(ICON_FILTER_SYSTEM_PROMPT, user_prompt, images, IconFilterResult, VISION_MODEL)
+    except ClassificationError:
+        return list(range(len(images)))
+
+    valid = sorted({i for i in result.real_content_indices if isinstance(i, int) and 0 <= i < len(images)})
+    return valid if valid else list(range(len(images)))

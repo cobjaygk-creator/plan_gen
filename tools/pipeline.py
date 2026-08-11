@@ -23,7 +23,7 @@ from tools.classify_month import classify_month, NeedsHumanReview
 from tools.locate_items import locate_items, normalize
 from tools.match_images import match_images
 from tools.extract_images import get_picture_anchors, extract_and_save_images
-from tools.vision_match import resolve_unmatched_with_vision
+from tools.vision_match import resolve_unmatched_with_vision, filter_decorative_icons, media_type
 from tools.blocks import (
     grid_block, grid_with_text_overflow_block, text_list_block, few_preview_block,
     paired_columns_block, icon_only_block,
@@ -194,6 +194,17 @@ def _icon_only_items(request_path: str, rows: list[dict], section, image_out_dir
         (a, f) for a, f in anchor_files
         if a.row_start > title_row and start <= a.row_start and a.row_end <= end
     ]
+    if len(selected) > 1:
+        # more than one candidate means a decorative badge (e.g. 202512's
+        # PASS ribbon) could be mixed in with real content — no item names
+        # exist here to filter by, so ask vision instead of guessing with
+        # more positional rules (see vision_match.filter_decorative_icons).
+        images = []
+        for _, f in selected:
+            with open(f, "rb") as fh:
+                images.append((media_type(f), fh.read()))
+        keep = filter_decorative_icons(images)
+        selected = [selected[i] for i in keep]
     return [{"name": "", "image": f, "is_new": False, "pair_group": None} for _, f in selected]
 
 

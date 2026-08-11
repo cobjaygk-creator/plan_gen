@@ -239,3 +239,39 @@ def test_process_month_defaults_to_real_local_image_paths():
                 image_path = placement.ref.get("image")
                 if image_path:
                     assert os.path.exists(image_path), f"matched image path is not a real file: {image_path}"
+
+
+def test_process_month_icon_only_filters_decorative_badge_202512(tmp_path):
+    # Real user-reported bug (screenshots + web-generated 202512 output):
+    # "신규 배틀패스 헤어 출시" is icon_only with no item names, and its
+    # image-only row range (57-66) anchors BOTH the real two-pose character
+    # photo (rId12) AND a decorative PASS-ribbon badge (rId13) with no
+    # title-row adjacency to structurally exclude it by (unlike the 202508
+    # WEAR-badge case). Confirmed on the actual file: without the vision
+    # filter, both images rendered as separate cards.
+    from tools.vision_match import IconFilterResult
+
+    def fake_classify_icon_only(month, raw_text, **kwargs):
+        output = ClassificationOutput(sections=[
+            Section(section_title="신규 배틀패스 헤어 출시", block_type="icon_only", items=[],
+                    footnote="배틀패스 쿠폰을 통해         '[이벤트] 배틀패스 머리모양 영구 변경권' 획득 가능",
+                    confidence=0.9),
+        ])
+        return ClassifyResult(month, output, "claude-haiku-4-5-20251001", from_cache=False)
+
+    def fake_filter(images):
+        # real content is always listed first by row order (rId12 before
+        # rId13) in _icon_only_items' anchor scan
+        assert len(images) == 2
+        return [0]
+
+    with patch("tools.pipeline.classify_month", side_effect=fake_classify_icon_only), \
+         patch("tools.pipeline.filter_decorative_icons", side_effect=fake_filter) as filter_mock:
+        path = os.path.join(SAMPLES_DIR, "202512_request.xlsx")
+        result = pipeline.process_month("202512", path, image_out_dir=str(tmp_path))
+
+    filter_mock.assert_called_once()
+    section = result.sections[0]
+    assert section.render_error is None
+    assert len(section.items) == 1
+    assert os.path.basename(section.items[0]["image"]).startswith("rId12")
