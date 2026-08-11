@@ -95,12 +95,13 @@ def _text_rows(items, box_left, top, box_width, cols, row_height=TEXT_ROW_HEIGHT
     return placements
 
 
-def _page_columns(page_placements: list, default: int = 3) -> int:
-    icon_tops = [p.top for p in page_placements if p.kind == "icon"]
-    if not icon_tops:
-        return default
-    first_row_top = min(icon_tops)
-    return sum(1 for t in icon_tops if abs(t - first_row_top) < 0.5)
+TEXT_COLUMNS = 3  # independent of however many columns the image grid above
+                   # used — real case: a page with just 1 image picks 1
+                   # wide column to maximize icon size (see fit_grid_pages),
+                   # but text rows are narrow single lines and packing them
+                   # into that same lone column wasted 2/3 of the box width,
+                   # fitting far fewer text items per page than the room
+                   # actually allowed.
 
 
 def fit_grid_pages_with_text_overflow(
@@ -129,18 +130,16 @@ def fit_grid_pages_with_text_overflow(
     pages = []
     box_bottom = box_top + box_height
     for page in image_pages:
-        cols = _page_columns(page)
         used_bottom = max((p.bottom for p in page), default=box_top)
         available = box_bottom - used_bottom - GAP
-        capacity = (max(0, int(available // (TEXT_ROW_HEIGHT + GAP))) * cols) if available > 0 else 0
+        capacity = (max(0, int(available // (TEXT_ROW_HEIGHT + GAP))) * TEXT_COLUMNS) if available > 0 else 0
         chunk, text_queue = text_queue[:capacity], text_queue[capacity:]
-        pages.append(page + _text_rows(chunk, box_left, used_bottom + GAP, box_width, cols))
+        pages.append(page + _text_rows(chunk, box_left, used_bottom + GAP, box_width, TEXT_COLUMNS))
 
-    cols = 3
     rows_per_page = max(1, int((box_height + GAP) // (TEXT_ROW_HEIGHT + GAP)))
-    per_page = rows_per_page * cols
+    per_page = rows_per_page * TEXT_COLUMNS
     for start in range(0, len(text_queue), per_page):
         chunk = text_queue[start:start + per_page]
-        pages.append(_text_rows(chunk, box_left, box_top, box_width, cols))
+        pages.append(_text_rows(chunk, box_left, box_top, box_width, TEXT_COLUMNS))
 
     return pages
