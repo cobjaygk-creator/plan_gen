@@ -82,6 +82,12 @@ export function AppShell() {
             </span>
             업계 동향
           </NavLink>
+          <NavLink to="/event-bench" className={navClass}>
+            <span className="ic">
+              <TrendIcon />
+            </span>
+            이벤트 벤치마크
+          </NavLink>
           <NavLink to="/generate" className={navClass}>
             <span className="ic">
               <PlusIcon />

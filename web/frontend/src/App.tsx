@@ -6,6 +6,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { GeneratePage } from "./pages/GeneratePage";
 import { HistoryPage } from "./pages/HistoryPage";
+import { EventBenchPage } from "./features/event-bench/EventBenchPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<AppShell />}>
               <Route index element={<DashboardPage />} />
+              <Route path="event-bench" element={<EventBenchPage />} />
               <Route path="generate" element={<GeneratePage />} />
               <Route path="history" element={<HistoryPage />} />
             </Route>
