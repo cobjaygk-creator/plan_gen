@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.industry_brief.models import Article, Issue, IssueArticle
 from app.industry_brief.synthesis import (
+    NO_CROSS_OPINION_TEXT,
     NO_CROSS_SIGNAL_TEXT,
     NO_DATA_HEADLINE,
     ChangeItemOut,
@@ -48,8 +49,8 @@ def _fake_panel(issue_ids):
     return PanelSynthesis(
         headline="합성된 헤드라인",
         briefing=["문단 1", "문단 2"],
-        changes=[ChangeItemOut(direction="up", topic="토픽", description="설명")],
-        watchlist=[WatchItemOut(topic="워치", description="설명")],
+        changes=[ChangeItemOut(direction="up", topic="토픽", description="설명", evidence_issue_ids=issue_ids or [1])],
+        watchlist=[WatchItemOut(topic="워치", description="설명", evidence_issue_ids=issue_ids or [1])],
         issue_why=[IssueWhyItem(issue_id=i, why_it_matters=f"이슈 {i}가 중요한 이유") for i in issue_ids],
     )
 
@@ -73,7 +74,7 @@ def test_no_issues_in_either_category_uses_fallback_without_ai_call(db_factory):
     assert mock_classify.call_count == 0
     assert brief.game_headline == NO_DATA_HEADLINE
     assert brief.ai_headline == NO_DATA_HEADLINE
-    assert json.loads(brief.game_ai_analysis) == [NO_CROSS_SIGNAL_TEXT]
+    assert json.loads(brief.game_ai_analysis) == {"summary": [NO_CROSS_SIGNAL_TEXT], "opinion": NO_CROSS_OPINION_TEXT}
     assert brief.issue_count == 0
 
 
@@ -91,7 +92,10 @@ def test_issues_present_synthesizes_panel_and_backfills_why_it_matters(db_factor
     assert brief.game_headline == "합성된 헤드라인"
     assert json.loads(brief.game_briefing) == ["문단 1", "문단 2"]
     changes = json.loads(brief.game_changes)
-    assert changes == [{"direction": "up", "topic": "토픽", "description": "설명"}]
+    assert changes == [{
+        "direction": "up", "topic": "토픽", "description": "설명",
+        "evidence_issue_ids": [game_issue.id],
+    }]
     # AI side had no issues, so it must stay the fixed fallback and not call the AI for it
     assert brief.ai_headline == NO_DATA_HEADLINE
 
@@ -112,7 +116,7 @@ def test_cross_insight_not_requested_when_one_category_has_no_issues(db_factory)
     # only the GAME panel call should have happened — no AI category, so no
     # AI panel call and no cross-insight call either
     assert mock_classify.call_count == 1
-    assert json.loads(brief.game_ai_analysis) == [NO_CROSS_SIGNAL_TEXT]
+    assert json.loads(brief.game_ai_analysis) == {"summary": [NO_CROSS_SIGNAL_TEXT], "opinion": NO_CROSS_OPINION_TEXT}
 
 
 def test_cross_insight_without_signal_falls_back_to_fixed_text_even_if_summary_present(db_factory):
@@ -122,14 +126,14 @@ def test_cross_insight_without_signal_falls_back_to_fixed_text_even_if_summary_p
 
     fake = _classify_by_schema(
         panel_return=_fake_panel([]),
-        # has_signal=False but summary is non-empty — must still use the fixed
-        # fallback text, not the model's own (unused) summary
-        cross_return=CrossInsightOut(has_signal=False, summary=["이건 쓰이면 안됨"]),
+        # has_signal=False but summary/opinion are non-empty — must still use
+        # the fixed fallback text, not the model's own (unused) values
+        cross_return=CrossInsightOut(has_signal=False, summary=["이건 쓰이면 안됨"], opinion="이것도 쓰이면 안됨"),
     )
     with patch("app.industry_brief.synthesis.classify", side_effect=fake):
         brief = generate_daily_brief(db)
 
-    assert json.loads(brief.game_ai_analysis) == [NO_CROSS_SIGNAL_TEXT]
+    assert json.loads(brief.game_ai_analysis) == {"summary": [NO_CROSS_SIGNAL_TEXT], "opinion": NO_CROSS_OPINION_TEXT}
 
 
 def test_cross_insight_with_signal_uses_model_summary(db_factory):
@@ -139,12 +143,29 @@ def test_cross_insight_with_signal_uses_model_summary(db_factory):
 
     fake = _classify_by_schema(
         panel_return=_fake_panel([]),
-        cross_return=CrossInsightOut(has_signal=True, summary=["연결된 신호 설명"]),
+        cross_return=CrossInsightOut(has_signal=True, summary=["연결된 신호 설명"], opinion="애널리스트 해석"),
     )
     with patch("app.industry_brief.synthesis.classify", side_effect=fake):
         brief = generate_daily_brief(db)
 
-    assert json.loads(brief.game_ai_analysis) == ["연결된 신호 설명"]
+    assert json.loads(brief.game_ai_analysis) == {"summary": ["연결된 신호 설명"], "opinion": "애널리스트 해석"}
+
+
+def test_cross_insight_with_signal_but_empty_opinion_falls_back(db_factory):
+    # model returned has_signal=True with a real summary but somehow left
+    # opinion blank — must not persist an empty "AI 의견" card
+    db = db_factory()
+    _issue(db, category="GAME", title="게임 이슈")
+    _issue(db, category="AI", title="AI 이슈")
+
+    fake = _classify_by_schema(
+        panel_return=_fake_panel([]),
+        cross_return=CrossInsightOut(has_signal=True, summary=["연결된 신호 설명"], opinion=""),
+    )
+    with patch("app.industry_brief.synthesis.classify", side_effect=fake):
+        brief = generate_daily_brief(db)
+
+    assert json.loads(brief.game_ai_analysis) == {"summary": ["연결된 신호 설명"], "opinion": NO_CROSS_OPINION_TEXT}
 
 
 def test_ai_failure_falls_back_to_fixed_panel_without_crashing(db_factory):

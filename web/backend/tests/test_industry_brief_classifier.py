@@ -76,6 +76,41 @@ def test_classify_pending_respects_limit(db_factory):
     assert remaining_pending == 3
 
 
+def test_classify_pending_can_target_specific_sources(db_factory):
+    db = db_factory()
+    target = _article(db, url="https://example.com/official")
+    other = _article(db, url="https://example.com/other")
+    target.source = "크래프톤"
+    other.source = "Other Outlet"
+    db.commit()
+
+    with patch("app.industry_brief.classifier.classify", return_value=_fake_classification()):
+        done = classify_pending(db, limit=10, source_names=("크래프톤",))
+
+    assert done == 1
+    db.refresh(target)
+    db.refresh(other)
+    assert target.classified_at is not None
+    assert other.classified_at is None
+
+
+def test_classify_pending_prioritizes_korean_sources(db_factory):
+    db = db_factory()
+    overseas = _article(db, url="https://example.com/overseas")
+    korean = _article(db, url="https://example.com/korean")
+    overseas.source = "PC Gamer"
+    korean.source = "게임메카"
+    db.commit()
+
+    with patch("app.industry_brief.classifier.classify", return_value=_fake_classification()):
+        done = classify_pending(db, limit=1)
+
+    assert done == 1
+    db.refresh(overseas)
+    db.refresh(korean)
+    assert overseas.classified_at is None
+    assert korean.classified_at is not None
+
 def test_classify_pending_leaves_failed_article_still_pending(db_factory):
     db = db_factory()
     article = _article(db)
@@ -98,3 +133,20 @@ def test_classify_pending_keeps_original_category_when_ai_says_other(db_factory)
     db.refresh(article)
     assert article.category == "GAME"  # unchanged, since OTHER isn't a real category to overwrite with
     assert article.is_relevant is True  # is_relevant is still the real filter signal
+
+
+def test_classify_pending_prioritizes_naver_news_as_korean_source(db_factory):
+    db = db_factory()
+    overseas = _article(db, url="https://example.com/overseas-naver-priority")
+    naver = _article(db, url="https://example.com/naver-priority")
+    overseas.source = "PC Gamer"
+    naver.source = "NAVER · game.example"
+    db.commit()
+
+    with patch("app.industry_brief.classifier.classify", return_value=_fake_classification()):
+        classify_pending(db, limit=1)
+
+    db.refresh(overseas)
+    db.refresh(naver)
+    assert overseas.classified_at is None
+    assert naver.classified_at is not None

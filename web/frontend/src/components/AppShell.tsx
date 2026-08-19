@@ -47,8 +47,8 @@ export function AppShell() {
       <div className="gnb">
         <div className="gnb-left">
           <div className="brand-mark">
-            <div className="brand-glyph">PG</div>
-            <div className="brand-name">plan gen</div>
+            <div className="brand-glyph">UX</div>
+            <div className="brand-name">UXTLER</div>
           </div>
         </div>
         <div className="gnb-right">
@@ -86,7 +86,13 @@ export function AppShell() {
             <span className="ic">
               <TrendIcon />
             </span>
-            이벤트 벤치마크
+            이벤트 모음
+          </NavLink>
+          <NavLink to="/game-sites" className={navClass}>
+            <span className="ic">
+              <TrendIcon />
+            </span>
+            {"사이트"}
           </NavLink>
           <NavLink to="/generate" className={navClass}>
             <span className="ic">

@@ -41,7 +41,19 @@ def _parsed_time_to_dt(struct_time) -> datetime | None:
 
 def _collect_one(db: Session, source: Source) -> SourceResult:
     try:
-        feed = feedparser.parse(source.feed_url)
+        request_headers = None
+        if source.name == "삼성전자 뉴스룸":
+            request_headers = {
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 Chrome/127.0.0.0 Safari/537.36"
+                ),
+                "Accept-Language": "ko-KR,ko;q=0.9",
+            }
+        feed = (
+            feedparser.parse(source.feed_url, request_headers=request_headers)
+            if request_headers else feedparser.parse(source.feed_url)
+        )
     except Exception as e:
         return SourceResult(source.name, 0, 0, 0, error=f"{type(e).__name__}: {e}")
 
@@ -80,4 +92,11 @@ def collect_all(db: Session, sources: list[Source] | None = None) -> CollectResu
     result = CollectResult()
     for source in (sources if sources is not None else SOURCES):
         result.sources.append(_collect_one(db, source))
+    # Explicit source lists are used by tests/manual RSS-only runs. NAVER is
+    # only part of the normal full Industry Brief collection.
+    if sources is None:
+        from .official_html import collect_all_official_html
+        from .naver_news import collect_naver_news
+        result.sources.extend(collect_all_official_html(db))
+        result.sources.append(collect_naver_news(db))
     return result

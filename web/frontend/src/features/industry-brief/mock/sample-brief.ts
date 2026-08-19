@@ -49,14 +49,16 @@ export const SAMPLE_BRIEF: IndustryBrief = {
       "게임업계의 AI 적용 중심이 소비자 노출 기능보다 제작 생산성과 운영 자동화로 이동하고 있습니다.",
       "관련 자료를 종합하면 AI NPC나 생성형 콘텐츠보다 코딩, QA, 번역, 아트 제작 보조, 운영 분석에 대한 실제 적용 사례가 더 빠르게 증가하고 있습니다.",
     ],
+    opinion:
+      "제작 파이프라인에 이미 AI 도구를 내재화한 스튜디오는 콘텐츠 생산 속도에서 우위를 가져갈 가능성이 큰 반면, 외주 아트·QA 비중이 높은 소규모 스튜디오는 비용 구조 재편 압박을 받을 것으로 보입니다. 다음 분기 실적 발표에서 인건비 대비 콘텐츠 산출량 지표나 AI 툴 라이선스 관련 투자 공시가 나오는지가 이 흐름이 굳어지는지 판단할 단서가 될 것입니다.",
   },
 
   signals: [
-    { topic: "AI Agent", direction: "up", weight: 92 },
-    { topic: "Live Service", direction: "up", weight: 78 },
-    { topic: "AI Coding", direction: "up", weight: 71 },
-    { topic: "Steam", direction: "flat", weight: 54 },
-    { topic: "Web3", direction: "down", weight: 21 },
+    { topic: "AI Agent", direction: "up", weight: 92, kind: "INDUSTRY", kindLabel: "산업 주제", state: "NEW", stateLabel: "새로 등장", todayCount: 8, baselineAverage: 0, sourceCount: 5, reason: "직전 7일에는 없던 키워드가 최근 24시간에 8건 포착됐습니다.", evidence: [] },
+    { topic: "Live Service", direction: "up", weight: 78, kind: "INDUSTRY", kindLabel: "산업 주제", state: "EXPANDING", stateLabel: "확산 중", todayCount: 6, baselineAverage: 2.1, sourceCount: 4, reason: "최근 24시간 6건으로, 직전 7일 일평균 2.1건보다 늘었습니다.", evidence: [] },
+    { topic: "AI Coding", direction: "up", weight: 71, kind: "INDUSTRY", kindLabel: "산업 주제", state: "GROWING", stateLabel: "증가 중", todayCount: 5, baselineAverage: 2.4, sourceCount: 3, reason: "최근 24시간 5건이 관찰됐습니다.", evidence: [] },
+    { topic: "Steam", direction: "flat", weight: 54, kind: "INDUSTRY", kindLabel: "산업 주제", state: "CONTINUING", stateLabel: "지속 관찰", todayCount: 4, baselineAverage: 4, sourceCount: 2, reason: "최근 24시간 4건으로 기존 흐름이 이어집니다.", evidence: [] },
+    { topic: "Web3", direction: "down", weight: 21, kind: "INDUSTRY", kindLabel: "산업 주제", state: "DECLINING", stateLabel: "약화 중", todayCount: 1, baselineAverage: 3, sourceCount: 1, reason: "최근 언급량이 기준선보다 줄었습니다.", evidence: [] },
   ],
 
   newToday: [

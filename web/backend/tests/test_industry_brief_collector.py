@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.industry_brief.collector import collect_all
 from app.industry_brief.models import Article
-from app.industry_brief.sources import Source
+from app.industry_brief.sources import SOURCES, Source
 
 
 def _fake_feed(entries, bozo=False):
@@ -25,6 +25,13 @@ def _entry(title, link, summary="", published=True):
 
 
 SRC = Source("Test Outlet", "https://example.com/feed", "GAME", "media")
+
+
+def test_verified_samsung_newsroom_rss_is_configured_as_official_ai_source():
+    source = next(item for item in SOURCES if item.name == "삼성전자 뉴스룸")
+    assert source.feed_url == "https://news.samsung.com/kr/feed/rss"
+    assert source.category == "AI"
+    assert source.source_type == "official"
 
 
 def test_collect_stores_new_articles(db_factory):

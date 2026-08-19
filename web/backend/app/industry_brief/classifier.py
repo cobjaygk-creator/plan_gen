@@ -1,4 +1,4 @@
-"""Phase 3: per-article classification (design doc section 36's "Article
+﻿"""Phase 3: per-article classification (design doc section 36's "Article
 Intelligence" — relevance, GAME/AI 분류, 요약, keywords, entities, 중요도).
 Uses OpenAI per the spec's recommendation (section 22), now that
 OPENAI_API_KEY is configured — reuses tools/ai_client.py's provider-
@@ -12,6 +12,7 @@ time."""
 import json
 import os
 import sys
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Literal
@@ -27,6 +28,9 @@ if str(REPO_ROOT) not in sys.path:
 from tools.ai_client import classify, ClassificationError
 
 from .models import Article
+from .sources import is_korean_source
+from .reference import analyze_live_article
+from .ai_editorial_policy import ai_editorial_cap, ai_editorial_score, is_ai_context_only
 
 # Not hardcoded (spec section 22) — override via .env if the account uses
 # a different model. Defaults to a known-available cheap OpenAI model
@@ -67,6 +71,68 @@ class ArticleClassification(BaseModel):
 
 _IMPORTANCE_SCORE = {"high": 90.0, "medium": 60.0, "low": 30.0}
 
+_HIGH_VALUE_TERMS = (
+    "투자", "인수", "합병", "실적", "출시", "공개", "정책", "규제",
+    "생성형 AI", "AI Agent", "LLM", "반도체", "데이터센터", "전력",
+    "넥슨", "크래프톤", "엔씨소프트", "넷마블", "OpenAI", "Google", "NVIDIA",
+)
+_LOW_VALUE_TERMS = ("이벤트", "쿠폰", "공략", "할인", "체험기")
+
+
+def _pending_priority(article: Article) -> float:
+    """Cheap pre-AI score: freshness + Korea + industry-value signals."""
+    title = article.title.casefold()
+    score = 20.0 if is_korean_source(article.source) else 0.0
+    score += 15.0 if article.source_type == "official" else 0.0
+    score += min(20.0, sum(5.0 for term in _HIGH_VALUE_TERMS if term.casefold() in title))
+    score -= sum(15.0 for term in _LOW_VALUE_TERMS if term.casefold() in title)
+    published = article.published_at or article.collected_at
+    if published is not None:
+        if published.tzinfo is None:
+            published = published.replace(tzinfo=timezone.utc)
+        age_hours = max(0.0, (datetime.now(timezone.utc) - published).total_seconds() / 3600)
+        score += max(0.0, 30.0 - min(age_hours, 30.0))
+    return score
+
+
+def _select_balanced_pending(articles: list[Article], limit: int) -> list[Article]:
+    """Select a diverse batch: max 20% per outlet, max 60% per category/region.
+
+    A final fill pass relaxes category/region caps when a pool is too small,
+    while retaining the per-source cap so one large feed cannot dominate.
+    """
+    if limit <= 0:
+        return []
+    ranked = sorted(articles, key=lambda article: (_pending_priority(article), article.id), reverse=True)
+    source_cap = max(1, (limit + 4) // 5)
+    group_cap = max(1, (limit * 3 + 4) // 5)
+    source_counts: Counter[str] = Counter()
+    category_counts: Counter[str] = Counter()
+    region_counts: Counter[str] = Counter()
+    selected: list[Article] = []
+
+    def add(article: Article, enforce_groups: bool, enforce_source: bool) -> bool:
+        region = "KR" if is_korean_source(article.source) else "GLOBAL"
+        if enforce_source and source_counts[article.source] >= source_cap:
+            return False
+        if enforce_groups and (
+            category_counts[article.category] >= group_cap or region_counts[region] >= group_cap
+        ):
+            return False
+        selected.append(article)
+        source_counts[article.source] += 1
+        category_counts[article.category] += 1
+        region_counts[region] += 1
+        return True
+
+    for enforce_groups, enforce_source in ((True, True), (False, True), (False, False)):
+        for article in ranked:
+            if len(selected) >= limit:
+                return selected
+            if article not in selected:
+                add(article, enforce_groups, enforce_source)
+    return selected
+
 
 def _classify_one(article: Article) -> ArticleClassification | None:
     user_prompt = f"제목: {article.title}\n\n요약/본문: {(article.summary or '')[:1500]}"
@@ -79,14 +145,20 @@ def _classify_one(article: Article) -> ArticleClassification | None:
         return None
 
 
-def classify_pending(db: Session, limit: int = 10) -> int:
+def classify_pending(
+    db: Session,
+    limit: int = 10,
+    source_names: tuple[str, ...] | None = None,
+) -> int:
     """Classifies up to `limit` not-yet-classified articles (classified_at
     is null). Returns how many were actually classified — an article the
     model failed on is left pending (classified_at stays null) rather than
     silently marked done, so a later run retries it instead of losing it."""
-    pending = db.execute(
-        select(Article).where(Article.classified_at.is_(None)).limit(limit)
-    ).scalars().all()
+    query = select(Article).where(Article.classified_at.is_(None))
+    if source_names:
+        query = query.where(Article.source.in_(source_names))
+    candidates = db.execute(query).scalars().all()
+    pending = _select_balanced_pending(candidates, limit)
 
     done = 0
     for article in pending:
@@ -99,9 +171,24 @@ def classify_pending(db: Session, limit: int = 10) -> int:
         article.summary = result.summary
         article.keywords = json.dumps(result.keywords, ensure_ascii=False)
         article.entities = json.dumps(result.entities, ensure_ascii=False)
-        article.importance_score = _IMPORTANCE_SCORE[result.importance]
+        score = _IMPORTANCE_SCORE[result.importance]
+        # The AI lane is a technology briefing, not a broad market-wire feed.
+        # Keep context-only pricing, production, and stock stories searchable,
+        # but ensure they cannot outrank model, product, safety, or security news.
+        if result.category == "AI":
+            score += ai_editorial_score(article)
+            if is_ai_context_only(article):
+                score = min(score, _IMPORTANCE_SCORE["low"])
+        cap = ai_editorial_cap(article)
+        if cap is not None:
+            score = min(score, cap)
+        article.importance_score = max(0.0, min(100.0, score))
         article.classified_at = datetime.now(timezone.utc)
+        analyze_live_article(db, article)
         done += 1
 
     db.commit()
     return done
+
+
+

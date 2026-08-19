@@ -28,6 +28,7 @@ from app.event_bench.nexon_sample import (
     collect_talesrunner_events,
     collect_cso_events,
     collect_heroes_events,
+    collect_ragnarok_events,
 )
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "event_bench" / "nexon_events_sample.json"
@@ -48,6 +49,7 @@ COLLECTORS = {
     "\ud14c\uc77c\uc988\ub7f0\ub108": collect_talesrunner_events,
     "\uce74\uc6b4\ud130\uc2a4\ud2b8\ub77c\uc774\ud06c \uc628\ub77c\uc778": collect_cso_events,
     "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804": collect_heroes_events,
+    "\ub77c\uadf8\ub098\ub85c\ud06c": collect_ragnarok_events,
 }
 
 
@@ -97,6 +99,8 @@ def canonical_game_for_url(event_url: str | None, current_game: str | None) -> s
         return "\uce74\uc6b4\ud130\uc2a4\ud2b8\ub77c\uc774\ud06c \uc628\ub77c\uc778"
     if "heroes.nexon.com" in host:
         return "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804"
+    if "ro.gnjoy.com" in host:
+        return "\ub77c\uadf8\ub098\ub85c\ud06c"
     return current_game
 
 

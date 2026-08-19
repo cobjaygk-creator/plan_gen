@@ -33,6 +33,7 @@ DNF_EVENTS_URL = "https://df.nexon.com/community/news/event/list"
 TALESRUNNER_EVENT_API_URL = "https://tr.rhaon.co.kr/eventb/event/SNB"
 CSO_EVENTS_URL = "https://csonline.nexon.com/News/Event/List"
 HEROES_EVENTS_URL = "https://heroes.nexon.com/news/event/ing"
+RAGNAROK_EVENTS_URL = "https://ro.gnjoy.com/news/event/list.asp"
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
 
 
@@ -88,6 +89,14 @@ def _event_format(event_url: str) -> str:
     if host == "elsword.nexon.com":
         # Board posts use /News/Events/View; campaign landing pages use /EventsYYYY/.
         return "full_page" if path.startswith("/events20") else "board"
+    if host == "heroes.nexon.com" and path.startswith("/promotion/"):
+        return "full_page"
+    if host == "df.nexon.com" and path.startswith("/pg/"):
+        return "full_page"
+    if host == "baram.essential.nexon.com":
+        return "full_page"
+    if host == "baram.nexon.com" and path == "/pccafebenefit":
+        return "full_page"
     if "/eventfull/" in path or "/page/event/" in path or host.startswith("events.") or host.startswith("shop.") or host == "lostark.game.onstove.com" and path.startswith("/event/"):
         return "full_page"
     if host == "tales.nexon.com" and re.match(r"/\d{6}/", path):
@@ -469,6 +478,33 @@ def collect_heroes_events() -> list[EventCandidate]:
     return candidates
 
 
+def collect_ragnarok_events() -> list[EventCandidate]:
+    """Collect every card from Ragnarok Online's official 'ongoing' event board."""
+    soup = BeautifulSoup(_fetch_html(RAGNAROK_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for card in soup.select("section.eventList li"):
+        title_link = card.select_one("p a[href]")
+        if title_link is None:
+            continue
+        event_url = urljoin(RAGNAROK_EVENTS_URL, title_link.get("href", "").strip())
+        title_node = title_link.select_one("strong")
+        title = title_node.get_text(" ", strip=True) if title_node else title_link.get_text(" ", strip=True)
+        date_node = title_link.select_one(".date em")
+        starts_on, ends_on = _date_parts(date_node.get_text(" ", strip=True) if date_node else "")
+        if not title or event_url in seen:
+            continue
+        seen.add(event_url)
+        image = card.select_one("a.eventImg img")
+        candidates.append(EventCandidate(
+            publisher="Gravity", game="라그나로크", title=title, event_url=event_url,
+            hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="board", collected_at=collected_at,
+        ))
+    return candidates
+
+
 def collect_talesrunner_events() -> list[EventCandidate]:
     """Collect dated, active campaigns from TalesRunner's official event API."""
     payload = json.loads(_fetch_html(TALESRUNNER_EVENT_API_URL))
@@ -576,7 +612,7 @@ def collect_nexon_events() -> list[EventCandidate]:
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -607,6 +643,8 @@ def main() -> None:
         candidates = collect_talesrunner_events()
     elif args.source == "dnf":
         candidates = collect_dnf_events()
+    elif args.source == "ragnarok":
+        candidates = collect_ragnarok_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)

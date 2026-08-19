@@ -7,6 +7,7 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { GeneratePage } from "./pages/GeneratePage";
 import { HistoryPage } from "./pages/HistoryPage";
 import { EventBenchPage } from "./features/event-bench/EventBenchPage";
+import { GameSitesPage } from "./features/game-sites/GameSitesPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route element={<AppShell />}>
               <Route index element={<DashboardPage />} />
               <Route path="event-bench" element={<EventBenchPage />} />
+              <Route path="game-sites" element={<GameSitesPage />} />
               <Route path="generate" element={<GeneratePage />} />
               <Route path="history" element={<HistoryPage />} />
             </Route>
