@@ -9,12 +9,14 @@ from .config import SESSION_COOKIE_NAME, SESSION_MAX_AGE_SECONDS, SESSION_SECRET
 from .database import Base, engine
 from .industry_brief.routes import router as industry_brief_router
 from .event_bench.routes import router as event_bench_router
+from .preregistration.routes import router as preregistration_router
 from .game_sites.routes import router as game_sites_router
+from .sentiment_checker.routes import router as sentiment_checker_router
 from .routers import auth, generations
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="UXTLER API")
+app = FastAPI(title="UX Insight API")
 
 app.add_middleware(
     SessionMiddleware,
@@ -29,7 +31,9 @@ app.include_router(auth.router)
 app.include_router(generations.router)
 app.include_router(industry_brief_router)
 app.include_router(event_bench_router)
+app.include_router(preregistration_router)
 app.include_router(game_sites_router)
+app.include_router(sentiment_checker_router)
 
 
 @app.get("/health")

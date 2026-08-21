@@ -10,5 +10,6 @@ samples/
 out/
 templates/master_template_raw.json
 web/backend/data/
+web/backend/server.*.log
 web/frontend/node_modules/
 web/frontend/dist/

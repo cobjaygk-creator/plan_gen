@@ -36,9 +36,8 @@ export function LoginPage() {
     <div className="login-screen">
       <div className="card login-card">
         <div className="brand-mark">
-          <div className="brand-glyph">UX</div>
           <div>
-            <div className="brand-name">UXTLER</div>
+            <div className="brand-name">UX Insight</div>
             <div className="brand-sub">배틀패스 SB 생성기</div>
           </div>
         </div>

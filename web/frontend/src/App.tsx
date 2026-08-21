@@ -7,7 +7,9 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { GeneratePage } from "./pages/GeneratePage";
 import { HistoryPage } from "./pages/HistoryPage";
 import { EventBenchPage } from "./features/event-bench/EventBenchPage";
+import { PreRegistrationPage } from "./features/preregistration/PreRegistrationPage";
 import { GameSitesPage } from "./features/game-sites/GameSitesPage";
+import { SentimentCheckerPage } from "./features/sentiment-checker/SentimentCheckerPage";
 
 function App() {
   return (
@@ -19,9 +21,11 @@ function App() {
             <Route element={<AppShell />}>
               <Route index element={<DashboardPage />} />
               <Route path="event-bench" element={<EventBenchPage />} />
+              <Route path="preregistrations" element={<PreRegistrationPage />} />
               <Route path="game-sites" element={<GameSitesPage />} />
               <Route path="generate" element={<GeneratePage />} />
               <Route path="history" element={<HistoryPage />} />
+              <Route path="sentiment-checker" element={<SentimentCheckerPage />} />
             </Route>
           </Route>
         </Routes>

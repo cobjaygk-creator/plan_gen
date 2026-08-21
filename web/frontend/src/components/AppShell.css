@@ -30,23 +30,11 @@
   align-items: center;
   gap: 10px;
 }
-.brand-glyph {
-  width: 30px;
-  height: 30px;
-  border-radius: 7px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 14px;
-  flex: none;
-}
 .brand-name {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .user-chip {
@@ -123,7 +111,10 @@
   background: var(--surface-sunken);
   border-right: 1px solid var(--border);
   padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
 }
+.lnb-bottom-item { margin-top: auto; }
 .lnb-group-label {
   font-size: 11px;
   font-weight: 700;

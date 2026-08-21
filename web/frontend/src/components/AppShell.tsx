@@ -26,6 +26,29 @@ function TrendIcon() {
     </svg>
   );
 }
+function CalendarIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M3 10h18M8 3v4M16 3v4" />
+    </svg>
+  );
+}
+function GlobeIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9Z" />
+    </svg>
+  );
+}
+function PulseIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M3 12h4l2-5 4 10 2-5h6" />
+    </svg>
+  );
+}
 function ChevronDown() {
   return (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -47,8 +70,7 @@ export function AppShell() {
       <div className="gnb">
         <div className="gnb-left">
           <div className="brand-mark">
-            <div className="brand-glyph">UX</div>
-            <div className="brand-name">UXTLER</div>
+            <div className="brand-name">UX Insight</div>
           </div>
         </div>
         <div className="gnb-right">
@@ -84,15 +106,15 @@ export function AppShell() {
           </NavLink>
           <NavLink to="/event-bench" className={navClass}>
             <span className="ic">
-              <TrendIcon />
+              <CalendarIcon />
             </span>
-            이벤트 모음
+            타사 이벤트
           </NavLink>
           <NavLink to="/game-sites" className={navClass}>
             <span className="ic">
-              <TrendIcon />
+              <GlobeIcon />
             </span>
-            {"사이트"}
+            {"타사 사이트"}
           </NavLink>
           <NavLink to="/generate" className={navClass}>
             <span className="ic">
@@ -105,6 +127,10 @@ export function AppShell() {
               <HistoryIcon />
             </span>
             생성 이력
+          </NavLink>
+          <NavLink to="/sentiment-checker" className={({ isActive }) => navClass({ isActive }) + " lnb-bottom-item"}>
+            <span className="ic"><PulseIcon /></span>
+            {"민심 체크기"}
           </NavLink>
         </div>
         <div className="content">

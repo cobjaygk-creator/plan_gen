@@ -389,6 +389,58 @@ def _extract_metadata(raw: bytes, charset: str) -> tuple[str | None, str | None]
     return clean_title or None, image or None
 
 
+def _rendered_page_metadata(url: str) -> tuple[str | None, str | None]:
+    """Fallback for pages whose real content only exists after client-side
+    JS runs (confirmed live: lastepoch.com serves a Nuxt loading shell with
+    no meta tags at all in the raw HTML). Renders the page with Playwright
+    and reads the title/og:image from the live DOM; when there's still no
+    og:image after rendering, falls back to the largest real (non-icon)
+    <img> visible on the page rather than leaving the thumbnail empty."""
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None, None
+    script = """() => {
+        const meta = document.querySelector('meta[property="og:image"], meta[name="og:image"], meta[name="twitter:image"]');
+        let image = meta ? meta.getAttribute('content') : null;
+        if (!image) {
+            let best = null, bestArea = 0;
+            for (const el of document.querySelectorAll('img')) {
+                const r = el.getBoundingClientRect();
+                const area = r.width * r.height;
+                if (area > bestArea && el.naturalWidth > 150 && el.naturalHeight > 100) {
+                    bestArea = area;
+                    best = el.currentSrc || el.src;
+                }
+            }
+            image = best;
+        }
+        return { title: document.title || null, image };
+    }"""
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch()
+            try:
+                # onewayticketstudio.com serves a cert its own hostname
+                # doesn't validate against (confirmed live) — this context
+                # only renders a page to read its public title/thumbnail,
+                # never handles credentials, so ignoring cert errors here
+                # is the same low-risk tradeoff as _INSECURE_OPENER above.
+                page = browser.new_page(ignore_https_errors=True)
+                # "networkidle" hangs to a timeout on sites that keep a
+                # background connection open (confirmed live: lastepoch.com
+                # never goes idle) — "load" plus a flat pause for late
+                # client-side rendering is reliable across more sites.
+                page.goto(url, wait_until="load", timeout=20000)
+                page.wait_for_timeout(2000)
+                result = page.evaluate(script)
+            finally:
+                browser.close()
+        return result.get("title") or None, result.get("image") or None
+    except Exception:
+        return None, None
+
+
 def _page_metadata(url: str) -> tuple[str | None, str | None]:
     try:
         try:
@@ -397,9 +449,14 @@ def _page_metadata(url: str) -> tuple[str | None, str | None]:
             if not isinstance(exc.reason, ssl.SSLCertVerificationError):
                 raise
             raw, charset = _fetch(url, insecure=True)
-        return _extract_metadata(raw, charset)
+        title, image = _extract_metadata(raw, charset)
     except Exception:
-        return None, None
+        title, image = None, None
+    if not image:
+        rendered_title, rendered_image = _rendered_page_metadata(url)
+        title = title or rendered_title
+        image = image or rendered_image
+    return title, image
 
 
 def refresh_portal_sites() -> dict[str, Any]:
