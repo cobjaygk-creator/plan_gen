@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-08-24T22:34:06.675331+00:00",
+  "generated_at": "2026-08-24T23:13:08.195637+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-08-24",
-      "generatedAt": "2026-08-23T23:13:18.911506+00:00",
+      "briefDate": "2026-08-25",
+      "generatedAt": "2026-08-24T23:07:58.904428+00:00",
       "periodLabel": "오늘",
-      "articleCount": 29,
+      "articleCount": 0,
       "analysisStats": {
-        "collected": 0,
+        "collected": 67,
         "analyzed": 0,
-        "pending": 0,
-        "completionRate": 100,
-        "analysisStatus": "COMPLETE",
+        "pending": 67,
+        "completionRate": 0,
+        "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
         "issues": 0,
         "verifiedIssues": 0,
@@ -56,33 +56,7 @@
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
-        "changes": [
-          {
-            "direction": "up",
-            "topic": "스킬 조합",
-            "description": "카카오게임즈 '도깨비의세계'의 출시를 앞두고 스킬 조합 시스템에 대한 관심이 증가하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              },
-              {
-                "outlet": "NAVER · popcornnews.net",
-                "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-                "publishedAgo": "11일 전",
-                "url": "http://www.popcornnews.net/news/articleView.html?idxno=129538"
-              },
-              {
-                "outlet": "NAVER · newscape.co.kr",
-                "title": "카카오게임즈, 배우 박지훈 등장 '도깨비의세계' 첫 광고 영상 공개",
-                "publishedAgo": "11일 전",
-                "url": "http://www.newscape.co.kr/news/articleView.html?idxno=123934"
-              }
-            ]
-          }
-        ],
+        "changes": [],
         "watchList": []
       },
       "ai": {
@@ -107,96 +81,7 @@
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
-        "changes": [
-          {
-            "direction": "up",
-            "topic": "OpenAI",
-            "description": "오픈AI의 캘리포니아 AI 규제 강화 요구로 주목도가 상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "NVIDIA",
-            "description": "엔비디아의 AI 스타트업 풀사이드와의 제휴로 관심이 급상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · biz.sbs.co.kr",
-                "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-              },
-              {
-                "outlet": "NAVER · biz.heraldcorp.com",
-                "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-              },
-              {
-                "outlet": "NAVER · yna.co.kr",
-                "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "AI Regulation",
-            "description": "오픈AI와 관련된 AI 규제 강화 이슈로 인해 주목도가 상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "AI 모델",
-            "description": "NVIDIA의 오픈소스 AI 모델 개발로 관련 관심이 증가하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · biz.sbs.co.kr",
-                "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-              },
-              {
-                "outlet": "NAVER · biz.heraldcorp.com",
-                "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-              },
-              {
-                "outlet": "NAVER · yna.co.kr",
-                "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-              }
-            ]
-          }
-        ],
+        "changes": [],
         "watchList": []
       },
       "crossInsight": {
@@ -206,400 +91,27 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [
-        {
-          "category": "GAME",
-          "title": "넷마블, TGS서 '펄 인 블루' 첫 공개…日 시장 정조준",
-          "url": "https://dealsite.co.kr/articles/167417",
-          "publishedDate": "2026.08.19"
-        },
-        {
-          "category": "GAME",
-          "title": "마브렉스, 웹3 게임 '픽셀 테이머즈' 글로벌 정식 출시",
-          "url": "https://zdnet.co.kr/view/?no=20260820093423",
-          "publishedDate": "2026.08.20"
-        },
-        {
-          "category": "GAME",
-          "title": "[게임 브리핑] 컴투스, '제우스: 오만의 신' 박지현 플레이 영상 공개",
-          "url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88115",
-          "publishedDate": "2026.08.19"
-        },
-        {
-          "category": "GAME",
-          "title": "플레이위드코리아, '씰M2' BI 공개…4분기 출시 준비 본격화",
-          "url": "https://www.sportschosun.com/entertainment/2026-08-17/202608170100099380006292",
-          "publishedDate": "2026.08.18"
-        },
-        {
-          "category": "GAME",
-          "title": "스마일게이트 ‘크로스파이어’ AAA로 넓힌다…댓츠노문 개발 과정 공개",
-          "url": "https://www.seoultimes.news/news/article.html?no=2000099005",
-          "publishedDate": "2026.08.21"
-        },
-        {
-          "category": "AI",
-          "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-          "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "카카오 개발 AI '카나나2', AI 안전성 평가서 구글 모델 능가",
-          "url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2460068",
-          "publishedDate": "2026.08.18"
-        },
-        {
-          "category": "AI",
-          "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-          "url": "https://www.dt.co.kr/article/12079694?ref=naver",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-          "url": "https://view.asiae.co.kr/article/2026082406343891489",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "포티넷, AI 보안 스타트업 ‘버추AI’ 인수",
-          "url": "https://byline.network/?p=9004111222615946",
-          "publishedDate": "2026.08.20"
-        }
-      ],
+      "recommendedArticles": [],
       "signals": [],
-      "newToday": [
-        {
-          "topic": "Poolside",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 4,
-          "independentSources": 4,
-          "officialCount": 0
-        },
-        {
-          "topic": "AI Regulation",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 3,
-          "independentSources": 3,
-          "officialCount": 0
-        },
-        {
-          "topic": "Developers",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "Safety",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "풀사이드",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "캘리포니아",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        }
-      ],
+      "newToday": [],
       "issues": [],
       "landscape": {
-        "referenceArticleCount": 418,
+        "referenceArticleCount": 0,
         "domains": [
           {
             "key": "GAME",
             "label": "GAME",
-            "issues": [
-              {
-                "key": "game_content",
-                "title": "신작·IP·라이브서비스 변화",
-                "referenceCount": 119,
-                "recentArticleCount": 403,
-                "firstObservedAt": "2026-01-02",
-                "axes": [
-                  "USER",
-                  "CONTENT",
-                  "TALENT"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 153건",
-                  "101개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_global_expansion",
-                "title": "K게임의 글로벌·중국 전략",
-                "referenceCount": 37,
-                "recentArticleCount": 94,
-                "firstObservedAt": "2026-01-05",
-                "axes": [
-                  "GLOBAL",
-                  "CONTENT",
-                  "MARKET"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 38건",
-                  "61개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_platform",
-                "title": "게임 플랫폼·유통 구조",
-                "referenceCount": 36,
-                "recentArticleCount": 53,
-                "firstObservedAt": "2026-01-02",
-                "axes": [
-                  "PLATFORM",
-                  "MARKET",
-                  "CONTENT"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 9건",
-                  "15개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_liveops",
-                "title": "신작·라이브 서비스 흐름",
-                "referenceCount": 26,
-                "recentArticleCount": 155,
-                "firstObservedAt": "2026-01-15",
-                "axes": [
-                  "CONTENT",
-                  "INFRA",
-                  "USER"
-                ],
-                "priorityScore": 92,
-                "priorityReasons": [
-                  "최근 7일 83건",
-                  "63개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_market",
-                "title": "게임 시장·투자·조직 변화",
-                "referenceCount": 24,
-                "recentArticleCount": 114,
-                "firstObservedAt": "2026-01-29",
-                "axes": [
-                  "MARKET",
-                  "CONTENT",
-                  "USER"
-                ],
-                "priorityScore": 91,
-                "priorityReasons": [
-                  "최근 7일 29건",
-                  "73개 매체",
-                  "올해 7개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           },
           {
             "key": "AI",
             "label": "AI",
-            "issues": [
-              {
-                "key": "ai_adoption",
-                "title": "AI 업무 도입·자동화 확산",
-                "referenceCount": 57,
-                "recentArticleCount": 576,
-                "firstObservedAt": "2026-01-07",
-                "axes": [
-                  "TECH",
-                  "CONTENT",
-                  "OPERATIONS"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 211건",
-                  "169개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_work_agents",
-                "title": "AI 에이전트·업무 자동화",
-                "referenceCount": 6,
-                "recentArticleCount": 87,
-                "firstObservedAt": "2026-04-21",
-                "axes": [
-                  "TECH"
-                ],
-                "priorityScore": 76,
-                "priorityReasons": [
-                  "최근 7일 46건",
-                  "50개 매체",
-                  "올해 5개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_market",
-                "title": "AI 투자·인프라·수익성",
-                "referenceCount": 5,
-                "recentArticleCount": 151,
-                "firstObservedAt": "2026-02-02",
-                "axes": [
-                  "MARKET",
-                  "TECH",
-                  "TALENT"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 39건",
-                  "86개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_policy",
-                "title": "AI 규제·안전 환경",
-                "referenceCount": 5,
-                "recentArticleCount": 121,
-                "firstObservedAt": "2026-02-09",
-                "axes": [
-                  "POLICY",
-                  "TECH",
-                  "TALENT"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 47건",
-                  "78개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_global_competition",
-                "title": "AI 글로벌 경쟁과 주권",
-                "referenceCount": 5,
-                "recentArticleCount": 94,
-                "firstObservedAt": "2026-03-09",
-                "axes": [
-                  "GLOBAL",
-                  "TECH"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 35건",
-                  "57개 매체",
-                  "올해 4개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           },
           {
             "key": "GAME_AI",
             "label": "GAME × AI",
-            "issues": [
-              {
-                "key": "game_ai_production",
-                "title": "게임 제작·운영 AI 확산",
-                "referenceCount": 43,
-                "recentArticleCount": 152,
-                "firstObservedAt": "2026-01-08",
-                "axes": [
-                  "TECH",
-                  "POLICY",
-                  "INFRA"
-                ],
-                "priorityScore": 100,
-                "priorityReasons": [
-                  "최근 7일 64건",
-                  "90개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_gameplay",
-                "title": "AI 게임플레이·이용자 경험",
-                "referenceCount": 6,
-                "recentArticleCount": 12,
-                "firstObservedAt": "2026-02-26",
-                "axes": [
-                  "TECH",
-                  "USER",
-                  "CONTENT"
-                ],
-                "priorityScore": 71,
-                "priorityReasons": [
-                  "최근 7일 4건",
-                  "7개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_distribution",
-                "title": "게임 AI의 유통 단계 진입",
-                "referenceCount": 3,
-                "recentArticleCount": 15,
-                "firstObservedAt": "2026-03-11",
-                "axes": [
-                  "PLATFORM",
-                  "TECH"
-                ],
-                "priorityScore": 70,
-                "priorityReasons": [
-                  "최근 7일 7건",
-                  "9개 매체",
-                  "올해 3개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_talent",
-                "title": "AI 시대 게임 인력·역량 변화",
-                "referenceCount": 4,
-                "recentArticleCount": 11,
-                "firstObservedAt": "2026-01-13",
-                "axes": [
-                  "TECH",
-                  "TALENT",
-                  "MARKET"
-                ],
-                "priorityScore": 70,
-                "priorityReasons": [
-                  "최근 7일 5건",
-                  "10개 매체",
-                  "올해 3개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_trust",
-                "title": "게임 AI의 신뢰·수용성 과제",
-                "referenceCount": 3,
-                "recentArticleCount": 15,
-                "firstObservedAt": "2026-01-21",
-                "axes": [
-                  "TECH",
-                  "OPERATIONS",
-                  "POLICY"
-                ],
-                "priorityScore": 67,
-                "priorityReasons": [
-                  "최근 7일 5건",
-                  "15개 매체",
-                  "올해 2개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           }
         ]
       },
@@ -627,20 +139,20 @@
       "policyTimeline": []
     },
     "3d": {
-      "briefDate": "2026-08-24",
-      "generatedAt": "2026-08-23T23:13:18.911506+00:00",
+      "briefDate": "2026-08-25",
+      "generatedAt": "2026-08-24T23:07:58.904428+00:00",
       "periodLabel": "최근 3일",
-      "articleCount": 29,
+      "articleCount": 0,
       "analysisStats": {
-        "collected": 358,
-        "analyzed": 59,
-        "pending": 299,
-        "completionRate": 16,
+        "collected": 249,
+        "analyzed": 0,
+        "pending": 249,
+        "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 37,
-        "issues": 16,
-        "verifiedIssues": 3,
-        "singleSourceIssues": 13
+        "relevant": 0,
+        "issues": 0,
+        "verifiedIssues": 0,
+        "singleSourceIssues": 0
       },
       "analytics": {
         "interest": {
@@ -654,97 +166,10 @@
             "08.23",
             "08.24"
           ],
-          "series": [
-            {
-              "name": "크래프톤",
-              "originalTitle": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0
-              ]
-            },
-            {
-              "name": "넥슨",
-              "originalTitle": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0
-              ]
-            },
-            {
-              "name": "도깨비의세계",
-              "originalTitle": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0
-              ]
-            }
-          ],
+          "series": [],
           "bucket": "일간"
         },
-        "topicShare": [
-          {
-            "topic": "출시",
-            "game": 5,
-            "ai": 3
-          },
-          {
-            "topic": "기타",
-            "game": 4,
-            "ai": 3
-          },
-          {
-            "topic": "M&A",
-            "game": 1,
-            "ai": 5
-          },
-          {
-            "topic": "정책",
-            "game": 0,
-            "ai": 6
-          },
-          {
-            "topic": "기술",
-            "game": 0,
-            "ai": 4
-          },
-          {
-            "topic": "보안",
-            "game": 0,
-            "ai": 2
-          },
-          {
-            "topic": "투자",
-            "game": 0,
-            "ai": 2
-          },
-          {
-            "topic": "업데이트",
-            "game": 1,
-            "ai": 1
-          }
-        ]
+        "topicShare": []
       },
       "game": {
         "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
@@ -754,373 +179,47 @@
         "keySummaryDetails": [
           {
             "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 8,
+            "articleCount": 0,
             "independentSources": 0,
             "officialCount": 0,
             "activeDays": 0,
-            "selectionReason": "관찰 후보 8건 · 공식·주요 매체 근거 보강 필요",
+            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
             "confidence": "WEAK"
           }
         ],
-        "observations": [
-          {
-            "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-            "description": "카카오게임즈가 오는 10월 2.5D MMORPG '도깨비의세계'의 정식 출시를 준비하고 있어 게임 시장의 기대감이 높아지고 있다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              }
-            ]
-          },
-          {
-            "title": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-            "description": "GTA VI의 출시가 여러 차례 연기되었으며, 새로운 예상 출시일은 2026년 11월 19일로 변경되었다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "The Verge",
-                "title": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-                "publishedAgo": "1일 전",
-                "url": "https://www.theverge.com/23987993/gta-6-news-trailers-rockstar-games"
-              }
-            ]
-          }
-        ],
+        "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "게임스컴 어워드 후보작 공개 닷새 앞으로…韓 게임 이번에는?",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "역대급 실적에 국민연금까지 담았다…주가 폭등한 이 기업[이주의 관.종...",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "[더벨][매니저 프로파일 | 스톤브릿지벤처스] 삼성 기술기획 DNA로 딥테...",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
-        "changes": [
-          {
-            "direction": "up",
-            "topic": "스킬 조합",
-            "description": "카카오게임즈 '도깨비의세계'의 출시를 앞두고 스킬 조합 시스템에 대한 관심이 증가하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              },
-              {
-                "outlet": "NAVER · popcornnews.net",
-                "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-                "publishedAgo": "11일 전",
-                "url": "http://www.popcornnews.net/news/articleView.html?idxno=129538"
-              },
-              {
-                "outlet": "NAVER · newscape.co.kr",
-                "title": "카카오게임즈, 배우 박지훈 등장 '도깨비의세계' 첫 광고 영상 공개",
-                "publishedAgo": "11일 전",
-                "url": "http://www.newscape.co.kr/news/articleView.html?idxno=123934"
-              }
-            ]
-          }
-        ],
-        "watchList": [
-          {
-            "rank": 1,
-            "topic": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-            "description": "카카오게임즈의 '도깨비의세계'는 게임 시장에서 새로운 트렌드를 제시하며 초기에 성장 동력을 얻을 가능성이 높습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              }
-            ]
-          },
-          {
-            "rank": 2,
-            "topic": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-            "description": "GTA VI의 출시가 여러 차례 연기되었으며, 새로운 예상 출시일은 2026년 11월 19일로 변경되었다.",
-            "sources": [
-              {
-                "outlet": "The Verge",
-                "title": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-                "publishedAgo": "1일 전",
-                "url": "https://www.theverge.com/23987993/gta-6-news-trailers-rockstar-games"
-              }
-            ]
-          },
-          {
-            "rank": 3,
-            "topic": "'We didn't have layoffs before, and now all of a sudden we have yearly layoffs': Bethesda artist says 'something has changed' under Microsoft",
-            "description": "베데스다 게임 스튜디오 노조가 게임 산업의 노동 권리를 옹호하고 있으며, 최근 마이크로소프트 아래에서 연례 해고가 발생하고 있다는 문제를 제기하고 있다.",
-            "sources": [
-              {
-                "outlet": "PC Gamer",
-                "title": "'We didn't have layoffs before, and now all of a sudden we have yearly layoffs': Bethesda artist says 'something has changed' under Microsoft",
-                "publishedAgo": "1일 전",
-                "url": "https://www.pcgamer.com/gaming-industry/we-didnt-have-layoffs-before-and-now-all-of-a-sudden-we-have-yearly-layoffs-bethesda-artist-says-something-has-changed-under-microsoft/"
-              }
-            ]
-          }
-        ]
+        "changes": [],
+        "watchList": []
       },
       "ai": {
-        "headline": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
+        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
         "keySummaries": [
-          "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다."
+          "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
         "keySummaryDetails": [
           {
-            "issueId": 1504,
-            "text": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-            "articleCount": 3,
-            "independentSources": 3,
+            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
+            "articleCount": 0,
+            "independentSources": 0,
             "officialCount": 0,
-            "activeDays": 1,
-            "selectionReason": "기사 3건 · 독립 매체 3곳 · 1일 관찰 · 교차 확인",
-            "confidence": "STRONG",
-            "scoreBreakdown": {
-              "evidence": 35.0,
-              "coverage": 20.0,
-              "importance": 18.1,
-              "persistence": 4.0,
-              "momentum": 8.0,
-              "editorialAdjustment": 0.0,
-              "userFeedback": 0.0,
-              "approvedRule": 0.0,
-              "total": 85.1
-            }
-          },
-          {
-            "issueId": 1507,
-            "text": "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다.",
-            "articleCount": 2,
-            "independentSources": 2,
-            "officialCount": 0,
-            "activeDays": 1,
-            "selectionReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
-            "confidence": "MODERATE",
-            "scoreBreakdown": {
-              "evidence": 35.0,
-              "coverage": 15.8,
-              "importance": 16.0,
-              "persistence": 4.0,
-              "momentum": 8.0,
-              "editorialAdjustment": 0.0,
-              "userFeedback": 0.0,
-              "approvedRule": 0.0,
-              "total": 78.8
-            }
+            "activeDays": 0,
+            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
+            "confidence": "WEAK"
           }
         ],
-        "observations": [
-          {
-            "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-            "description": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "NAVER · dt.co.kr",
-                "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-              }
-            ]
-          },
-          {
-            "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-            "description": "오픈AI는 자사 AI 에이전트가 테스트 중 외부 플랫폼에 무단 접근한 사고를 공개하며, 이를 계기로 AI 규제 강화를 주장하고 있다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "NAVER · view.asiae.co.kr",
-                "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-                "publishedAgo": "1일 전",
-                "url": "https://view.asiae.co.kr/article/2026082406343891489"
-              }
-            ]
-          }
-        ],
+        "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "스페이스X, AI 코딩 스타트업 '코그니션' 인수 시도 불발...\"협력 논의는...",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "[미국 특징주] 결제사 스트라이프, 오픈라우터 인수…AI 사업 확장",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "오픈AI는 훈련 중단, 구글은 출시 연기…AI 경쟁, 속도서 안전·완성도로",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
-          "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다."
+          "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
-        "changes": [
-          {
-            "direction": "up",
-            "topic": "OpenAI",
-            "description": "오픈AI의 캘리포니아 AI 규제 강화 요구로 주목도가 상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "NVIDIA",
-            "description": "엔비디아의 AI 스타트업 풀사이드와의 제휴로 관심이 급상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · biz.sbs.co.kr",
-                "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-              },
-              {
-                "outlet": "NAVER · biz.heraldcorp.com",
-                "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-              },
-              {
-                "outlet": "NAVER · yna.co.kr",
-                "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "AI Regulation",
-            "description": "오픈AI와 관련된 AI 규제 강화 이슈로 인해 주목도가 상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "AI 모델",
-            "description": "NVIDIA의 오픈소스 AI 모델 개발로 관련 관심이 증가하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · biz.sbs.co.kr",
-                "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-              },
-              {
-                "outlet": "NAVER · biz.heraldcorp.com",
-                "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-              },
-              {
-                "outlet": "NAVER · yna.co.kr",
-                "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-              }
-            ]
-          }
-        ],
-        "watchList": [
-          {
-            "rank": 1,
-            "topic": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-            "description": "오픈AI의 규제 강화 요구는 AI 기술의 안전성과 윤리적 사용을 보장하기 위한 중요한 움직임입니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "rank": 2,
-            "topic": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-            "description": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-            "sources": [
-              {
-                "outlet": "NAVER · dt.co.kr",
-                "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-              }
-            ]
-          },
-          {
-            "rank": 3,
-            "topic": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-            "description": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 기술 라이선스 계약을 체결하며 오픈웨이트 AI 모델 개발에 필요한 인력을 확보했다.",
-            "sources": [
-              {
-                "outlet": "NAVER · tokenpost.kr",
-                "title": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.tokenpost.kr/news/cryptocurrency/396177"
-              }
-            ]
-          }
-        ]
+        "changes": [],
+        "watchList": []
       },
       "crossInsight": {
         "hasSignal": false,
@@ -1129,1126 +228,27 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [
-        {
-          "category": "GAME",
-          "title": "넷마블, TGS서 '펄 인 블루' 첫 공개…日 시장 정조준",
-          "url": "https://dealsite.co.kr/articles/167417",
-          "publishedDate": "2026.08.19"
-        },
-        {
-          "category": "GAME",
-          "title": "삼성전자, 액티비전 블리자드와 ‘콜 오브 듀티: 모던 워페어 4’ 파트너십 체결",
-          "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%95%a1%ed%8b%b0%eb%b9%84%ec%a0%84-%eb%b8%94%eb%a6%ac%ec%9e%90%eb%93%9c%ec%99%80-%ec%bd%9c-%ec%98%a4%eb%b8%8c-%eb%93%80%ed%8b%b0-%eb%aa%a8%eb%8d%98-%ec%9b%8c",
-          "publishedDate": "2026.08.17"
-        },
-        {
-          "category": "GAME",
-          "title": "마브렉스, 웹3 게임 '픽셀 테이머즈' 글로벌 정식 출시",
-          "url": "https://zdnet.co.kr/view/?no=20260820093423",
-          "publishedDate": "2026.08.20"
-        },
-        {
-          "category": "GAME",
-          "title": "[게임 브리핑] 컴투스, '제우스: 오만의 신' 박지현 플레이 영상 공개",
-          "url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88115",
-          "publishedDate": "2026.08.19"
-        },
-        {
-          "category": "GAME",
-          "title": "플레이위드코리아, '씰M2' BI 공개…4분기 출시 준비 본격화",
-          "url": "https://www.sportschosun.com/entertainment/2026-08-17/202608170100099380006292",
-          "publishedDate": "2026.08.18"
-        },
-        {
-          "category": "AI",
-          "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-          "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-          "url": "https://www.dt.co.kr/article/12079694?ref=naver",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-          "url": "https://view.asiae.co.kr/article/2026082406343891489",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-          "url": "https://www.edaily.co.kr/News/Read?newsId=02000806645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "AI 오픈소스 허브도 매물로…허깅페이스 18조원 몸값 띄웠다",
-          "url": "https://www.edaily.co.kr/News/Read?newsId=01997526645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-          "publishedDate": "2026.08.24"
-        }
-      ],
-      "signals": [
-        {
-          "topic": "크래프톤",
-          "direction": "up",
-          "weight": 44,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "M&A",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "크래프톤이 공격적인 투자를 통해 1년 사이에 41개의 자회사와 손자회사를 추가하며 역대 최대 실적을 기록하고 국내 게임업계의 선두에 올랐다는 내용이다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · dnews.co.kr",
-              "title": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-              "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202608211048166110828"
-            }
-          ]
-        },
-        {
-          "topic": "넥슨",
-          "direction": "up",
-          "weight": 38,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "넥슨은 신작 흥행으로 상반기 외형 성장을 이뤘지만, 영업이익률은 저조해 구조적 수익성을 입증해야 한다는 과제가 남았다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · dealsite.co.kr",
-              "title": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-              "url": "https://dealsite.co.kr/articles/167509"
-            }
-          ]
-        },
-        {
-          "topic": "카카오게임즈",
-          "direction": "up",
-          "weight": 38,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "카카오게임즈가 오는 10월 2.5D MMORPG '도깨비의세계'의 정식 출시를 준비하고 있어 게임 시장의 기대감이 높아지고 있다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · sportschosun.com",
-              "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-              "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-            }
-          ]
-        },
-        {
-          "topic": "GTA VI",
-          "direction": "up",
-          "weight": 38,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "GTA VI의 출시가 여러 차례 연기되었으며, 새로운 예상 출시일은 2026년 11월 19일로 변경되었다.",
-          "evidence": [
-            {
-              "outlet": "The Verge",
-              "title": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-              "url": "https://www.theverge.com/23987993/gta-6-news-trailers-rockstar-games"
-            }
-          ]
-        },
-        {
-          "topic": "오픈소스 AI",
-          "direction": "up",
-          "weight": 85,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "M&A",
-          "priorityReason": "기사 3건 · 독립 매체 3곳 · 1일 관찰 · 교차 확인",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 3,
-          "baselineAverage": 0.0,
-          "sourceCount": 3,
-          "reason": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · biz.sbs.co.kr",
-              "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-              "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-            },
-            {
-              "outlet": "NAVER · biz.heraldcorp.com",
-              "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-              "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-            },
-            {
-              "outlet": "NAVER · yna.co.kr",
-              "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-              "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-            }
-          ]
-        },
-        {
-          "topic": "HARO.Assistant 1.0",
-          "direction": "up",
-          "weight": 79,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 2,
-          "baselineAverage": 0.0,
-          "sourceCount": 2,
-          "reason": "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · edaily.co.kr",
-              "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-              "url": "https://www.edaily.co.kr/News/Read?newsId=02000806645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-            },
-            {
-              "outlet": "NAVER · hankyung.com",
-              "title": "한국정보공학, 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0' 출시",
-              "url": "https://www.hankyung.com/article/202608214146O"
-            }
-          ]
-        },
-        {
-          "topic": "AI Regulation",
-          "direction": "up",
-          "weight": 78,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "보안",
-          "priorityReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 2,
-          "baselineAverage": 0.0,
-          "sourceCount": 2,
-          "reason": "오픈AI는 캘리포니아에서 AI 규제를 강화할 것을 요구하며, 개발자들이 문제를 조기에 발견하고 안전성을 높이는 방법을 공유할 필요성을 강조했다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · newsis.com",
-              "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-              "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-            },
-            {
-              "outlet": "NAVER · ytn.co.kr",
-              "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-              "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-            }
-          ]
-        },
-        {
-          "topic": "NVIDIA",
-          "direction": "up",
-          "weight": 46,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "M&A",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · dt.co.kr",
-              "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-              "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-            }
-          ]
-        }
-      ],
-      "newToday": [
-        {
-          "topic": "Poolside",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 4,
-          "independentSources": 4,
-          "officialCount": 0
-        },
-        {
-          "topic": "AI Regulation",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 3,
-          "independentSources": 3,
-          "officialCount": 0
-        },
-        {
-          "topic": "Developers",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "Safety",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "풀사이드",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "캘리포니아",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        }
-      ],
-      "issues": [
-        {
-          "id": "issue-1510",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-          "summary": "크래프톤이 공격적인 투자를 통해 1년 사이에 41개의 자회사와 손자회사를 추가하며 역대 최대 실적을 기록하고 국내 게임업계의 선두에 올랐다는 내용이다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / 크래프톤, 공격 투자로 1년새 계열사 41곳",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 1,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · dnews.co.kr",
-              "title": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-              "publishedAgo": "1일 전",
-              "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202608211048166110828"
-            }
-          ]
-        },
-        {
-          "id": "issue-1502",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-          "summary": "넥슨은 신작 흥행으로 상반기 외형 성장을 이뤘지만, 영업이익률은 저조해 구조적 수익성을 입증해야 한다는 과제가 남았다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / [넥슨 성장의 민낯] '순이익 2배'에 가려",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 1,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · dealsite.co.kr",
-              "title": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-              "publishedAgo": "1일 전",
-              "url": "https://dealsite.co.kr/articles/167509"
-            }
-          ]
-        },
-        {
-          "id": "issue-439",
-          "category": "GAME",
-          "importance": "높음",
-          "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-          "summary": "카카오게임즈가 오는 10월 2.5D MMORPG '도깨비의세계'의 정식 출시를 준비하고 있어 게임 시장의 기대감이 높아지고 있다.",
-          "whyItMatters": "카카오게임즈의 '도깨비의세계'는 게임 시장에서 새로운 트렌드를 제시하며 초기에 성장 동력을 얻을 가능성이 높습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / [여름엔 이 게임③] 도트로 빚은 K-판타지",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · sportschosun.com",
-              "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-              "publishedAgo": "1일 전",
-              "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-            }
-          ]
-        },
-        {
-          "id": "issue-1486",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-          "summary": "GTA VI의 출시가 여러 차례 연기되었으며, 새로운 예상 출시일은 2026년 11월 19일로 변경되었다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / GTA VI: all the news on ",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "The Verge",
-              "title": "GTA VI: all the news on Rockstar’s next entry in the Grand Theft Auto series",
-              "publishedAgo": "1일 전",
-              "url": "https://www.theverge.com/23987993/gta-6-news-trailers-rockstar-games"
-            }
-          ]
-        },
-        {
-          "id": "issue-1474",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "'We didn't have layoffs before, and now all of a sudden we have yearly layoffs': Bethesda artist says 'something has changed' under Microsoft",
-          "summary": "베데스다 게임 스튜디오 노조가 게임 산업의 노동 권리를 옹호하고 있으며, 최근 마이크로소프트 아래에서 연례 해고가 발생하고 있다는 문제를 제기하고 있다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / 'We didn't have layoffs ",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "PC Gamer",
-              "title": "'We didn't have layoffs before, and now all of a sudden we have yearly layoffs': Bethesda artist says 'something has changed' under Microsoft",
-              "publishedAgo": "1일 전",
-              "url": "https://www.pcgamer.com/gaming-industry/we-didnt-have-layoffs-before-and-now-all-of-a-sudden-we-have-yearly-layoffs-bethesda-artist-says-something-has-changed-under-microsoft/"
-            }
-          ]
-        },
-        {
-          "id": "issue-1473",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "EverQuest Legends dev says 'I'm sure we would' add new classes, races 'in the longer-term vision of the game'",
-          "summary": "EverQuest Legends 개발자는 게임의 장기 비전에서 새로운 클래스와 종족을 추가할 것이라고 언급했다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / EverQuest Legends dev sa",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "PC Gamer",
-              "title": "EverQuest Legends dev says 'I'm sure we would' add new classes, races 'in the longer-term vision of the game'",
-              "publishedAgo": "1일 전",
-              "url": "https://www.pcgamer.com/games/mmo/everquest-legends-dev-says-im-sure-we-would-add-new-classes-races-in-the-longer-term-vision-of-the-game/"
-            }
-          ]
-        },
-        {
-          "id": "issue-1472",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "Big Walk is a new co-op puzzle game classic",
-          "summary": "최신 퍼즐 게임 중 하나인 Big Walk는 친구들과 함께 협력하여 문제를 해결하는 클래식한 게임이다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / Big Walk is a new co-op ",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "PC Gamer",
-              "title": "Big Walk is a new co-op puzzle game classic",
-              "publishedAgo": "1일 전",
-              "url": "https://www.pcgamer.com/games/puzzle/big-walk-is-a-new-co-op-puzzle-game-classic/"
-            }
-          ]
-        },
-        {
-          "id": "issue-1471",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "If you're desperate for more Baldur's Gate 3, here's a 6-hour mini-campaign all about Astarion with 4 different endings and 6 new companions",
-          "summary": "Baldur's Gate 3의 캐릭터 아스타리온을 중심으로 한 6시간 분량의 미니 캠페인이 소개되며, 4개의 다양한 결말과 6명의 새로운 동료가 포함된다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / If you're desperate for ",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "PC Gamer",
-              "title": "If you're desperate for more Baldur's Gate 3, here's a 6-hour mini-campaign all about Astarion with 4 different endings and 6 new companions",
-              "publishedAgo": "1일 전",
-              "url": "https://www.pcgamer.com/games/baldurs-gate/if-youre-desperate-for-more-baldurs-gate-3-heres-a-6-hour-mini-campaign-all-about-astarion-with-4-different-endings-and-6-new-companions/"
-            }
-          ]
-        },
-        {
-          "id": "issue-1504",
-          "category": "AI",
-          "importance": "높음",
-          "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-          "summary": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "whyItMatters": "NVIDIA의 첨단 오픈소스 AI 모델 개발은 AI 생태계의 변화와 혁신을 가져올 수 있습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 엔비디아, AI 개발사 우회 인수…첨단 오픈",
-          "confidence": {
-            "level": "STRONG",
-            "articleCount": 3,
-            "independentSources": 3,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "CORROBORATED",
-            "synthesisEligible": true,
-            "establishedMediaCount": 3,
-            "discoveryMediaCount": 0,
-            "reason": "Independent reporting and at least one established or primary source corroborate this event."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · biz.sbs.co.kr",
-              "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-              "publishedAgo": "23시간 전",
-              "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-            },
-            {
-              "outlet": "NAVER · biz.heraldcorp.com",
-              "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-              "publishedAgo": "23시간 전",
-              "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-            },
-            {
-              "outlet": "NAVER · yna.co.kr",
-              "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-            }
-          ]
-        },
-        {
-          "id": "issue-1507",
-          "category": "AI",
-          "importance": "높음",
-          "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-          "summary": "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다.",
-          "whyItMatters": "폐쇄망 환경에서도 AI를 안전하게 활용할 수 있는 솔루션을 제공하여 시장의 투명성과 신뢰성을 높일 수 있습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 한국정보공학, 폐쇄망 전용 AI 업무 플랫폼",
-          "confidence": {
-            "level": "MODERATE",
-            "articleCount": 2,
-            "independentSources": 2,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "CORROBORATED",
-            "synthesisEligible": true,
-            "establishedMediaCount": 2,
-            "discoveryMediaCount": 0,
-            "reason": "Independent reporting and at least one established or primary source corroborate this event."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · edaily.co.kr",
-              "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.edaily.co.kr/News/Read?newsId=02000806645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-            },
-            {
-              "outlet": "NAVER · hankyung.com",
-              "title": "한국정보공학, 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0' 출시",
-              "publishedAgo": "1일 전",
-              "url": "https://www.hankyung.com/article/202608214146O"
-            }
-          ]
-        },
-        {
-          "id": "issue-1497",
-          "category": "AI",
-          "importance": "높음",
-          "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-          "summary": "오픈AI는 캘리포니아에서 AI 규제를 강화할 것을 요구하며, 개발자들이 문제를 조기에 발견하고 안전성을 높이는 방법을 공유할 필요성을 강조했다.",
-          "whyItMatters": "오픈AI의 규제 강화 요구는 AI 기술의 안전성과 윤리적 사용을 보장하기 위한 중요한 움직임입니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 주별 규제 반대했던 오픈AI, 캘리포니아 A",
-          "confidence": {
-            "level": "MODERATE",
-            "articleCount": 2,
-            "independentSources": 2,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "CORROBORATED",
-            "synthesisEligible": true,
-            "establishedMediaCount": 2,
-            "discoveryMediaCount": 0,
-            "reason": "Independent reporting and at least one established or primary source corroborate this event."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · newsis.com",
-              "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-              "publishedAgo": "1일 전",
-              "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-            },
-            {
-              "outlet": "NAVER · ytn.co.kr",
-              "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-              "publishedAgo": "1일 전",
-              "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-            }
-          ]
-        },
-        {
-          "id": "issue-1509",
-          "category": "AI",
-          "importance": "보통",
-          "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-          "summary": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 엔비디아, AI개발기업 인수…오픈웨이트 ‘네",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · dt.co.kr",
-              "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-            }
-          ]
-        },
-        {
-          "id": "issue-1487",
-          "category": "AI",
-          "importance": "보통",
-          "title": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-          "summary": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 기술 라이선스 계약을 체결하며 오픈웨이트 AI 모델 개발에 필요한 인력을 확보했다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 60억달러 풀사이드 계약, 엔비디아 오픈AI",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 1,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · tokenpost.kr",
-              "title": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.tokenpost.kr/news/cryptocurrency/396177"
-            }
-          ]
-        },
-        {
-          "id": "issue-1500",
-          "category": "AI",
-          "importance": "보통",
-          "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-          "summary": "오픈AI는 자사 AI 에이전트가 테스트 중 외부 플랫폼에 무단 접근한 사고를 공개하며, 이를 계기로 AI 규제 강화를 주장하고 있다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 오픈AI, 캘리포니아에 \"AI 규제 강화해야",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · view.asiae.co.kr",
-              "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-              "publishedAgo": "1일 전",
-              "url": "https://view.asiae.co.kr/article/2026082406343891489"
-            }
-          ]
-        },
-        {
-          "id": "issue-1490",
-          "category": "AI",
-          "importance": "보통",
-          "title": "AI 오픈소스 허브도 매물로…허깅페이스 18조원 몸값 띄웠다",
-          "summary": "허깅페이스의 인프라에 자율형 AI 에이전트가 침입하는 사고가 발생하면서 오픈AI가 일부 모델 시험을 중단하고 보안 조치를 강화했다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / AI 오픈소스 허브도 매물로…허깅페이스 18",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · edaily.co.kr",
-              "title": "AI 오픈소스 허브도 매물로…허깅페이스 18조원 몸값 띄웠다",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.edaily.co.kr/News/Read?newsId=01997526645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-            }
-          ]
-        },
-        {
-          "id": "issue-1506",
-          "category": "AI",
-          "importance": "보통",
-          "title": "주별 AI 규제 반대하던 오픈AI \"캘리포니아 AI 규제법 강화\"⋯입장 바꾼...",
-          "summary": "오픈AI는 캘리포니아에서 최첨단 AI 안전을 위해 'SB 53 법' 강화에 협력하겠다고 밝혔다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 주별 AI 규제 반대하던 오픈AI \"캘리포니",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · inews24.com",
-              "title": "주별 AI 규제 반대하던 오픈AI \"캘리포니아 AI 규제법 강화\"⋯입장 바꾼...",
-              "publishedAgo": "23시간 전",
-              "url": "http://www.inews24.com/view/1997448"
-            }
-          ]
-        }
-      ],
+      "recommendedArticles": [],
+      "signals": [],
+      "newToday": [],
+      "issues": [],
       "landscape": {
-        "referenceArticleCount": 418,
+        "referenceArticleCount": 0,
         "domains": [
           {
             "key": "GAME",
             "label": "GAME",
-            "issues": [
-              {
-                "key": "game_content",
-                "title": "신작·IP·라이브서비스 변화",
-                "referenceCount": 119,
-                "recentArticleCount": 403,
-                "firstObservedAt": "2026-01-02",
-                "axes": [
-                  "USER",
-                  "CONTENT",
-                  "TALENT"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 153건",
-                  "101개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_global_expansion",
-                "title": "K게임의 글로벌·중국 전략",
-                "referenceCount": 37,
-                "recentArticleCount": 94,
-                "firstObservedAt": "2026-01-05",
-                "axes": [
-                  "GLOBAL",
-                  "CONTENT",
-                  "MARKET"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 38건",
-                  "61개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_platform",
-                "title": "게임 플랫폼·유통 구조",
-                "referenceCount": 36,
-                "recentArticleCount": 53,
-                "firstObservedAt": "2026-01-02",
-                "axes": [
-                  "PLATFORM",
-                  "MARKET",
-                  "CONTENT"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 9건",
-                  "15개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_liveops",
-                "title": "신작·라이브 서비스 흐름",
-                "referenceCount": 26,
-                "recentArticleCount": 155,
-                "firstObservedAt": "2026-01-15",
-                "axes": [
-                  "CONTENT",
-                  "INFRA",
-                  "USER"
-                ],
-                "priorityScore": 92,
-                "priorityReasons": [
-                  "최근 7일 83건",
-                  "63개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_market",
-                "title": "게임 시장·투자·조직 변화",
-                "referenceCount": 24,
-                "recentArticleCount": 114,
-                "firstObservedAt": "2026-01-29",
-                "axes": [
-                  "MARKET",
-                  "CONTENT",
-                  "USER"
-                ],
-                "priorityScore": 91,
-                "priorityReasons": [
-                  "최근 7일 29건",
-                  "73개 매체",
-                  "올해 7개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           },
           {
             "key": "AI",
             "label": "AI",
-            "issues": [
-              {
-                "key": "ai_adoption",
-                "title": "AI 업무 도입·자동화 확산",
-                "referenceCount": 57,
-                "recentArticleCount": 576,
-                "firstObservedAt": "2026-01-07",
-                "axes": [
-                  "TECH",
-                  "CONTENT",
-                  "OPERATIONS"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 211건",
-                  "169개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_work_agents",
-                "title": "AI 에이전트·업무 자동화",
-                "referenceCount": 6,
-                "recentArticleCount": 87,
-                "firstObservedAt": "2026-04-21",
-                "axes": [
-                  "TECH"
-                ],
-                "priorityScore": 76,
-                "priorityReasons": [
-                  "최근 7일 46건",
-                  "50개 매체",
-                  "올해 5개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_market",
-                "title": "AI 투자·인프라·수익성",
-                "referenceCount": 5,
-                "recentArticleCount": 151,
-                "firstObservedAt": "2026-02-02",
-                "axes": [
-                  "MARKET",
-                  "TECH",
-                  "TALENT"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 39건",
-                  "86개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_policy",
-                "title": "AI 규제·안전 환경",
-                "referenceCount": 5,
-                "recentArticleCount": 121,
-                "firstObservedAt": "2026-02-09",
-                "axes": [
-                  "POLICY",
-                  "TECH",
-                  "TALENT"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 47건",
-                  "78개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_global_competition",
-                "title": "AI 글로벌 경쟁과 주권",
-                "referenceCount": 5,
-                "recentArticleCount": 94,
-                "firstObservedAt": "2026-03-09",
-                "axes": [
-                  "GLOBAL",
-                  "TECH"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 35건",
-                  "57개 매체",
-                  "올해 4개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           },
           {
             "key": "GAME_AI",
             "label": "GAME × AI",
-            "issues": [
-              {
-                "key": "game_ai_production",
-                "title": "게임 제작·운영 AI 확산",
-                "referenceCount": 43,
-                "recentArticleCount": 152,
-                "firstObservedAt": "2026-01-08",
-                "axes": [
-                  "TECH",
-                  "POLICY",
-                  "INFRA"
-                ],
-                "priorityScore": 100,
-                "priorityReasons": [
-                  "최근 7일 64건",
-                  "90개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_gameplay",
-                "title": "AI 게임플레이·이용자 경험",
-                "referenceCount": 6,
-                "recentArticleCount": 12,
-                "firstObservedAt": "2026-02-26",
-                "axes": [
-                  "TECH",
-                  "USER",
-                  "CONTENT"
-                ],
-                "priorityScore": 71,
-                "priorityReasons": [
-                  "최근 7일 4건",
-                  "7개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_distribution",
-                "title": "게임 AI의 유통 단계 진입",
-                "referenceCount": 3,
-                "recentArticleCount": 15,
-                "firstObservedAt": "2026-03-11",
-                "axes": [
-                  "PLATFORM",
-                  "TECH"
-                ],
-                "priorityScore": 70,
-                "priorityReasons": [
-                  "최근 7일 7건",
-                  "9개 매체",
-                  "올해 3개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_talent",
-                "title": "AI 시대 게임 인력·역량 변화",
-                "referenceCount": 4,
-                "recentArticleCount": 11,
-                "firstObservedAt": "2026-01-13",
-                "axes": [
-                  "TECH",
-                  "TALENT",
-                  "MARKET"
-                ],
-                "priorityScore": 70,
-                "priorityReasons": [
-                  "최근 7일 5건",
-                  "10개 매체",
-                  "올해 3개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_trust",
-                "title": "게임 AI의 신뢰·수용성 과제",
-                "referenceCount": 3,
-                "recentArticleCount": 15,
-                "firstObservedAt": "2026-01-21",
-                "axes": [
-                  "TECH",
-                  "OPERATIONS",
-                  "POLICY"
-                ],
-                "priorityScore": 67,
-                "priorityReasons": [
-                  "최근 7일 5건",
-                  "15개 매체",
-                  "올해 2개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           }
         ]
       },
@@ -2256,79 +256,96 @@
         {
           "category": "GAME",
           "label": "게임",
-          "koreaArticleCount": 3,
-          "globalArticleCount": 8,
-          "koreaFocus": [
-            {
-              "topic": "넥슨",
-              "count": 1
-            },
-            {
-              "topic": "영업이익률",
-              "count": 1
-            },
-            {
-              "topic": "순이익",
-              "count": 1
-            }
-          ],
-          "globalFocus": [
-            {
-              "topic": "노동 권리",
-              "count": 1
-            },
-            {
-              "topic": "베데스다",
-              "count": 1
-            },
-            {
-              "topic": "마이크로소프트",
-              "count": 1
-            }
-          ],
+          "koreaArticleCount": 0,
+          "globalArticleCount": 0,
+          "koreaFocus": [],
+          "globalFocus": [],
           "sharedTopics": []
         },
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 26,
+          "koreaArticleCount": 0,
           "globalArticleCount": 0,
-          "koreaFocus": [
-            {
-              "topic": "OpenAI",
-              "count": 5
-            },
-            {
-              "topic": "AI",
-              "count": 4
-            },
-            {
-              "topic": "Generative AI",
-              "count": 4
-            }
-          ],
+          "koreaFocus": [],
           "globalFocus": [],
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 100,
+          "priorityLabel": "긴급 확인",
+          "urgencyLabel": "1일 후 시행",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 100,
+          "priorityLabel": "긴급 확인",
+          "urgencyLabel": "1일 후 시행",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        }
+      ]
     },
     "week": {
-      "briefDate": "2026-08-24",
-      "generatedAt": "2026-08-23T23:13:18.911506+00:00",
+      "briefDate": "2026-08-25",
+      "generatedAt": "2026-08-24T23:07:58.904428+00:00",
       "periodLabel": "이번 주",
-      "articleCount": 29,
+      "articleCount": 0,
       "analysisStats": {
-        "collected": 142,
-        "analyzed": 48,
-        "pending": 94,
-        "completionRate": 34,
+        "collected": 208,
+        "analyzed": 0,
+        "pending": 208,
+        "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 29,
-        "issues": 11,
-        "verifiedIssues": 3,
-        "singleSourceIssues": 8
+        "relevant": 0,
+        "issues": 0,
+        "verifiedIssues": 0,
+        "singleSourceIssues": 0
       },
       "analytics": {
         "interest": {
@@ -2342,97 +359,10 @@
             "08.23",
             "08.24"
           ],
-          "series": [
-            {
-              "name": "크래프톤",
-              "originalTitle": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0
-              ]
-            },
-            {
-              "name": "넥슨",
-              "originalTitle": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0
-              ]
-            },
-            {
-              "name": "도깨비의세계",
-              "originalTitle": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0
-              ]
-            }
-          ],
+          "series": [],
           "bucket": "일간"
         },
-        "topicShare": [
-          {
-            "topic": "M&A",
-            "game": 1,
-            "ai": 5
-          },
-          {
-            "topic": "정책",
-            "game": 0,
-            "ai": 6
-          },
-          {
-            "topic": "출시",
-            "game": 2,
-            "ai": 3
-          },
-          {
-            "topic": "기술",
-            "game": 0,
-            "ai": 4
-          },
-          {
-            "topic": "기타",
-            "game": 0,
-            "ai": 3
-          },
-          {
-            "topic": "보안",
-            "game": 0,
-            "ai": 2
-          },
-          {
-            "topic": "투자",
-            "game": 0,
-            "ai": 2
-          },
-          {
-            "topic": "업데이트",
-            "game": 0,
-            "ai": 1
-          }
-        ]
+        "topicShare": []
       },
       "game": {
         "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
@@ -2442,333 +372,47 @@
         "keySummaryDetails": [
           {
             "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 3,
+            "articleCount": 0,
             "independentSources": 0,
             "officialCount": 0,
             "activeDays": 0,
-            "selectionReason": "관찰 후보 3건 · 공식·주요 매체 근거 보강 필요",
+            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
             "confidence": "WEAK"
           }
         ],
-        "observations": [
-          {
-            "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-            "description": "카카오게임즈가 오는 10월 2.5D MMORPG '도깨비의세계'의 정식 출시를 준비하고 있어 게임 시장의 기대감이 높아지고 있다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              }
-            ]
-          }
-        ],
+        "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "게임스컴 어워드 후보작 공개 닷새 앞으로…韓 게임 이번에는?",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "역대급 실적에 국민연금까지 담았다…주가 폭등한 이 기업[이주의 관.종...",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "[더벨][매니저 프로파일 | 스톤브릿지벤처스] 삼성 기술기획 DNA로 딥테...",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
-        "changes": [
-          {
-            "direction": "up",
-            "topic": "스킬 조합",
-            "description": "카카오게임즈 '도깨비의세계'의 출시를 앞두고 스킬 조합 시스템에 대한 관심이 증가하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              },
-              {
-                "outlet": "NAVER · popcornnews.net",
-                "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-                "publishedAgo": "11일 전",
-                "url": "http://www.popcornnews.net/news/articleView.html?idxno=129538"
-              },
-              {
-                "outlet": "NAVER · newscape.co.kr",
-                "title": "카카오게임즈, 배우 박지훈 등장 '도깨비의세계' 첫 광고 영상 공개",
-                "publishedAgo": "11일 전",
-                "url": "http://www.newscape.co.kr/news/articleView.html?idxno=123934"
-              }
-            ]
-          }
-        ],
-        "watchList": [
-          {
-            "rank": 1,
-            "topic": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-            "description": "카카오게임즈의 '도깨비의세계'는 게임 시장에서 새로운 트렌드를 제시하며 초기에 성장 동력을 얻을 가능성이 높습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · sportschosun.com",
-                "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-                "publishedAgo": "1일 전",
-                "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-              }
-            ]
-          }
-        ]
+        "changes": [],
+        "watchList": []
       },
       "ai": {
-        "headline": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
+        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
         "keySummaries": [
-          "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다."
+          "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
         "keySummaryDetails": [
           {
-            "issueId": 1504,
-            "text": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-            "articleCount": 3,
-            "independentSources": 3,
+            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
+            "articleCount": 0,
+            "independentSources": 0,
             "officialCount": 0,
-            "activeDays": 1,
-            "selectionReason": "기사 3건 · 독립 매체 3곳 · 1일 관찰 · 교차 확인",
-            "confidence": "STRONG",
-            "scoreBreakdown": {
-              "evidence": 35.0,
-              "coverage": 20.0,
-              "importance": 18.1,
-              "persistence": 6.0,
-              "momentum": 8.0,
-              "editorialAdjustment": 0.0,
-              "userFeedback": 0.0,
-              "approvedRule": 0.0,
-              "total": 87.1
-            }
-          },
-          {
-            "issueId": 1507,
-            "text": "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다.",
-            "articleCount": 2,
-            "independentSources": 2,
-            "officialCount": 0,
-            "activeDays": 1,
-            "selectionReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
-            "confidence": "MODERATE",
-            "scoreBreakdown": {
-              "evidence": 35.0,
-              "coverage": 15.8,
-              "importance": 16.0,
-              "persistence": 6.0,
-              "momentum": 8.0,
-              "editorialAdjustment": 0.0,
-              "userFeedback": 0.0,
-              "approvedRule": 0.0,
-              "total": 80.8
-            }
+            "activeDays": 0,
+            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
+            "confidence": "WEAK"
           }
         ],
-        "observations": [
-          {
-            "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-            "description": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "NAVER · dt.co.kr",
-                "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-              }
-            ]
-          },
-          {
-            "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-            "description": "오픈AI는 자사 AI 에이전트가 테스트 중 외부 플랫폼에 무단 접근한 사고를 공개하며, 이를 계기로 AI 규제 강화를 주장하고 있다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "NAVER · view.asiae.co.kr",
-                "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-                "publishedAgo": "1일 전",
-                "url": "https://view.asiae.co.kr/article/2026082406343891489"
-              }
-            ]
-          }
-        ],
+        "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "스페이스X, AI 코딩 스타트업 '코그니션' 인수 시도 불발...\"협력 논의는...",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "[미국 특징주] 결제사 스트라이프, 오픈라우터 인수…AI 사업 확장",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "오픈AI는 훈련 중단, 구글은 출시 연기…AI 경쟁, 속도서 안전·완성도로",
-            "closedAt": "2026-08-23T23:13:08.281629+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
-          "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다."
+          "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
-        "changes": [
-          {
-            "direction": "up",
-            "topic": "OpenAI",
-            "description": "오픈AI의 캘리포니아 AI 규제 강화 요구로 주목도가 상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "NVIDIA",
-            "description": "엔비디아의 AI 스타트업 풀사이드와의 제휴로 관심이 급상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · biz.sbs.co.kr",
-                "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-              },
-              {
-                "outlet": "NAVER · biz.heraldcorp.com",
-                "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-              },
-              {
-                "outlet": "NAVER · yna.co.kr",
-                "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "AI Regulation",
-            "description": "오픈AI와 관련된 AI 규제 강화 이슈로 인해 주목도가 상승하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "direction": "up",
-            "topic": "AI 모델",
-            "description": "NVIDIA의 오픈소스 AI 모델 개발로 관련 관심이 증가하고 있습니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · biz.sbs.co.kr",
-                "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-              },
-              {
-                "outlet": "NAVER · biz.heraldcorp.com",
-                "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-              },
-              {
-                "outlet": "NAVER · yna.co.kr",
-                "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-              }
-            ]
-          }
-        ],
-        "watchList": [
-          {
-            "rank": 1,
-            "topic": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-            "description": "오픈AI의 규제 강화 요구는 AI 기술의 안전성과 윤리적 사용을 보장하기 위한 중요한 움직임입니다.",
-            "sources": [
-              {
-                "outlet": "NAVER · newsis.com",
-                "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-              },
-              {
-                "outlet": "NAVER · ytn.co.kr",
-                "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-                "publishedAgo": "1일 전",
-                "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-              }
-            ]
-          },
-          {
-            "rank": 2,
-            "topic": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-            "description": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-            "sources": [
-              {
-                "outlet": "NAVER · dt.co.kr",
-                "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-              }
-            ]
-          },
-          {
-            "rank": 3,
-            "topic": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-            "description": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 기술 라이선스 계약을 체결하며 오픈웨이트 AI 모델 개발에 필요한 인력을 확보했다.",
-            "sources": [
-              {
-                "outlet": "NAVER · tokenpost.kr",
-                "title": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-                "publishedAgo": "23시간 전",
-                "url": "https://www.tokenpost.kr/news/cryptocurrency/396177"
-              }
-            ]
-          }
-        ]
+        "changes": [],
+        "watchList": []
       },
       "crossInsight": {
         "hasSignal": false,
@@ -2777,948 +421,27 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [
-        {
-          "category": "GAME",
-          "title": "넷마블, TGS서 '펄 인 블루' 첫 공개…日 시장 정조준",
-          "url": "https://dealsite.co.kr/articles/167417",
-          "publishedDate": "2026.08.19"
-        },
-        {
-          "category": "GAME",
-          "title": "삼성전자, 액티비전 블리자드와 ‘콜 오브 듀티: 모던 워페어 4’ 파트너십 체결",
-          "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%ec%95%a1%ed%8b%b0%eb%b9%84%ec%a0%84-%eb%b8%94%eb%a6%ac%ec%9e%90%eb%93%9c%ec%99%80-%ec%bd%9c-%ec%98%a4%eb%b8%8c-%eb%93%80%ed%8b%b0-%eb%aa%a8%eb%8d%98-%ec%9b%8c",
-          "publishedDate": "2026.08.17"
-        },
-        {
-          "category": "GAME",
-          "title": "마브렉스, 웹3 게임 '픽셀 테이머즈' 글로벌 정식 출시",
-          "url": "https://zdnet.co.kr/view/?no=20260820093423",
-          "publishedDate": "2026.08.20"
-        },
-        {
-          "category": "GAME",
-          "title": "[게임 브리핑] 컴투스, '제우스: 오만의 신' 박지현 플레이 영상 공개",
-          "url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88115",
-          "publishedDate": "2026.08.19"
-        },
-        {
-          "category": "GAME",
-          "title": "플레이위드코리아, '씰M2' BI 공개…4분기 출시 준비 본격화",
-          "url": "https://www.sportschosun.com/entertainment/2026-08-17/202608170100099380006292",
-          "publishedDate": "2026.08.18"
-        },
-        {
-          "category": "AI",
-          "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-          "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-          "url": "https://www.dt.co.kr/article/12079694?ref=naver",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-          "url": "https://view.asiae.co.kr/article/2026082406343891489",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-          "url": "https://www.edaily.co.kr/News/Read?newsId=02000806645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "AI",
-          "title": "AI 오픈소스 허브도 매물로…허깅페이스 18조원 몸값 띄웠다",
-          "url": "https://www.edaily.co.kr/News/Read?newsId=01997526645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
-          "publishedDate": "2026.08.24"
-        }
-      ],
-      "signals": [
-        {
-          "topic": "크래프톤",
-          "direction": "up",
-          "weight": 46,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "M&A",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "크래프톤이 공격적인 투자를 통해 1년 사이에 41개의 자회사와 손자회사를 추가하며 역대 최대 실적을 기록하고 국내 게임업계의 선두에 올랐다는 내용이다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · dnews.co.kr",
-              "title": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-              "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202608211048166110828"
-            }
-          ]
-        },
-        {
-          "topic": "넥슨",
-          "direction": "up",
-          "weight": 40,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "넥슨은 신작 흥행으로 상반기 외형 성장을 이뤘지만, 영업이익률은 저조해 구조적 수익성을 입증해야 한다는 과제가 남았다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · dealsite.co.kr",
-              "title": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-              "url": "https://dealsite.co.kr/articles/167509"
-            }
-          ]
-        },
-        {
-          "topic": "카카오게임즈",
-          "direction": "up",
-          "weight": 40,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "카카오게임즈가 오는 10월 2.5D MMORPG '도깨비의세계'의 정식 출시를 준비하고 있어 게임 시장의 기대감이 높아지고 있다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · sportschosun.com",
-              "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-              "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-            }
-          ]
-        },
-        {
-          "topic": "오픈소스 AI",
-          "direction": "up",
-          "weight": 87,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "M&A",
-          "priorityReason": "기사 3건 · 독립 매체 3곳 · 1일 관찰 · 교차 확인",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 3,
-          "baselineAverage": 0.0,
-          "sourceCount": 3,
-          "reason": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · biz.sbs.co.kr",
-              "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-              "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-            },
-            {
-              "outlet": "NAVER · biz.heraldcorp.com",
-              "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-              "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-            },
-            {
-              "outlet": "NAVER · yna.co.kr",
-              "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-              "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-            }
-          ]
-        },
-        {
-          "topic": "HARO.Assistant 1.0",
-          "direction": "up",
-          "weight": 81,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "출시",
-          "priorityReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 2,
-          "baselineAverage": 0.0,
-          "sourceCount": 2,
-          "reason": "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · edaily.co.kr",
-              "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-              "url": "https://www.edaily.co.kr/News/Read?newsId=02000806645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-            },
-            {
-              "outlet": "NAVER · hankyung.com",
-              "title": "한국정보공학, 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0' 출시",
-              "url": "https://www.hankyung.com/article/202608214146O"
-            }
-          ]
-        },
-        {
-          "topic": "AI Regulation",
-          "direction": "up",
-          "weight": 80,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "보안",
-          "priorityReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 2,
-          "baselineAverage": 0.0,
-          "sourceCount": 2,
-          "reason": "오픈AI는 캘리포니아에서 AI 규제를 강화할 것을 요구하며, 개발자들이 문제를 조기에 발견하고 안전성을 높이는 방법을 공유할 필요성을 강조했다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · newsis.com",
-              "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-              "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-            },
-            {
-              "outlet": "NAVER · ytn.co.kr",
-              "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-              "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-            }
-          ]
-        },
-        {
-          "topic": "NVIDIA",
-          "direction": "up",
-          "weight": 48,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "M&A",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-          "evidence": [
-            {
-              "outlet": "NAVER · dt.co.kr",
-              "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-              "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-            }
-          ]
-        }
-      ],
-      "newToday": [
-        {
-          "topic": "Poolside",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 4,
-          "independentSources": 4,
-          "officialCount": 0
-        },
-        {
-          "topic": "AI Regulation",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 3,
-          "independentSources": 3,
-          "officialCount": 0
-        },
-        {
-          "topic": "Developers",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "Safety",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "풀사이드",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        },
-        {
-          "topic": "캘리포니아",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 2,
-          "officialCount": 0
-        }
-      ],
-      "issues": [
-        {
-          "id": "issue-1510",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-          "summary": "크래프톤이 공격적인 투자를 통해 1년 사이에 41개의 자회사와 손자회사를 추가하며 역대 최대 실적을 기록하고 국내 게임업계의 선두에 올랐다는 내용이다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / 크래프톤, 공격 투자로 1년새 계열사 41곳",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 1,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · dnews.co.kr",
-              "title": "크래프톤, 공격 투자로 1년새 계열사 41곳 늘었다",
-              "publishedAgo": "1일 전",
-              "url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202608211048166110828"
-            }
-          ]
-        },
-        {
-          "id": "issue-1502",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-          "summary": "넥슨은 신작 흥행으로 상반기 외형 성장을 이뤘지만, 영업이익률은 저조해 구조적 수익성을 입증해야 한다는 과제가 남았다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / [넥슨 성장의 민낯] '순이익 2배'에 가려",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 1,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · dealsite.co.kr",
-              "title": "[넥슨 성장의 민낯] '순이익 2배'에 가려진 넥슨 수익성…영업이익률 오...",
-              "publishedAgo": "1일 전",
-              "url": "https://dealsite.co.kr/articles/167509"
-            }
-          ]
-        },
-        {
-          "id": "issue-439",
-          "category": "GAME",
-          "importance": "높음",
-          "title": "[여름엔 이 게임③] 도트로 빚은 K-판타지…카카오게임즈 '도깨비의세계...",
-          "summary": "카카오게임즈가 오는 10월 2.5D MMORPG '도깨비의세계'의 정식 출시를 준비하고 있어 게임 시장의 기대감이 높아지고 있다.",
-          "whyItMatters": "카카오게임즈의 '도깨비의세계'는 게임 시장에서 새로운 트렌드를 제시하며 초기에 성장 동력을 얻을 가능성이 높습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "GAME INDUSTRY / [여름엔 이 게임③] 도트로 빚은 K-판타지",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · sportschosun.com",
-              "title": "10월 출시하는 카카오게임즈 '도깨비의세계', 직업 대신 스킬…'내 전투...",
-              "publishedAgo": "1일 전",
-              "url": "https://www.sportschosun.com/entertainment/2026-08-23/202608230100133960008576"
-            }
-          ]
-        },
-        {
-          "id": "issue-1504",
-          "category": "AI",
-          "importance": "높음",
-          "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-          "summary": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 제휴를 체결하여 개방형 가중치의 AI 모델 개발에 나선다.",
-          "whyItMatters": "NVIDIA의 첨단 오픈소스 AI 모델 개발은 AI 생태계의 변화와 혁신을 가져올 수 있습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 엔비디아, AI 개발사 우회 인수…첨단 오픈",
-          "confidence": {
-            "level": "STRONG",
-            "articleCount": 3,
-            "independentSources": 3,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "CORROBORATED",
-            "synthesisEligible": true,
-            "establishedMediaCount": 3,
-            "discoveryMediaCount": 0,
-            "reason": "Independent reporting and at least one established or primary source corroborate this event."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · biz.sbs.co.kr",
-              "title": "엔비디아, 첨단 오픈소스 AI 개발사 우회 인수",
-              "publishedAgo": "23시간 전",
-              "url": "https://biz.sbs.co.kr/article_hub/20000330264?division=NAVER"
-            },
-            {
-              "outlet": "NAVER · biz.heraldcorp.com",
-              "title": "엔비디아, AI 개발사 ‘풀사이드’ 우회 인수…첨단 오픈소스 AI 개발",
-              "publishedAgo": "23시간 전",
-              "url": "https://biz.heraldcorp.com/article/10849367?ref=naver"
-            },
-            {
-              "outlet": "NAVER · yna.co.kr",
-              "title": "엔비디아, AI 개발사 우회 인수…첨단 오픈소스 AI 개발",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.yna.co.kr/view/AKR20260824008300009?input=1195m"
-            }
-          ]
-        },
-        {
-          "id": "issue-1507",
-          "category": "AI",
-          "importance": "높음",
-          "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-          "summary": "한국정보공학이 기업과 공공기관을 위한 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0'을 출시했으며, 다양한 LLM으로의 교체가 가능하도록 설계되었다.",
-          "whyItMatters": "폐쇄망 환경에서도 AI를 안전하게 활용할 수 있는 솔루션을 제공하여 시장의 투명성과 신뢰성을 높일 수 있습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 한국정보공학, 폐쇄망 전용 AI 업무 플랫폼",
-          "confidence": {
-            "level": "MODERATE",
-            "articleCount": 2,
-            "independentSources": 2,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "CORROBORATED",
-            "synthesisEligible": true,
-            "establishedMediaCount": 2,
-            "discoveryMediaCount": 0,
-            "reason": "Independent reporting and at least one established or primary source corroborate this event."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · edaily.co.kr",
-              "title": "한국정보공학, 폐쇄망 전용 AI 업무 플랫폼 'HARO.Assistant 1.0' 출시",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.edaily.co.kr/News/Read?newsId=02000806645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-            },
-            {
-              "outlet": "NAVER · hankyung.com",
-              "title": "한국정보공학, 폐쇄망 전용 생성형 AI 플랫폼 'HARO.Assistant 1.0' 출시",
-              "publishedAgo": "1일 전",
-              "url": "https://www.hankyung.com/article/202608214146O"
-            }
-          ]
-        },
-        {
-          "id": "issue-1497",
-          "category": "AI",
-          "importance": "높음",
-          "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-          "summary": "오픈AI는 캘리포니아에서 AI 규제를 강화할 것을 요구하며, 개발자들이 문제를 조기에 발견하고 안전성을 높이는 방법을 공유할 필요성을 강조했다.",
-          "whyItMatters": "오픈AI의 규제 강화 요구는 AI 기술의 안전성과 윤리적 사용을 보장하기 위한 중요한 움직임입니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 주별 규제 반대했던 오픈AI, 캘리포니아 A",
-          "confidence": {
-            "level": "MODERATE",
-            "articleCount": 2,
-            "independentSources": 2,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "CORROBORATED",
-            "synthesisEligible": true,
-            "establishedMediaCount": 2,
-            "discoveryMediaCount": 0,
-            "reason": "Independent reporting and at least one established or primary source corroborate this event."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · newsis.com",
-              "title": "주별 규제 경계하던 오픈AI, 캘리포니아에 AI법 강화 요구",
-              "publishedAgo": "1일 전",
-              "url": "https://www.newsis.com/view/NISX20260824_0003759147"
-            },
-            {
-              "outlet": "NAVER · ytn.co.kr",
-              "title": "주별 규제 반대했던 오픈AI, 캘리포니아 AI 규제 강화 요구",
-              "publishedAgo": "1일 전",
-              "url": "https://www.ytn.co.kr/_ln/0104_202608240536560112"
-            }
-          ]
-        },
-        {
-          "id": "issue-1509",
-          "category": "AI",
-          "importance": "보통",
-          "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-          "summary": "엔비디아가 오픈 웨이트 AI 모델 구축을 위해 스타트업 풀사이드와 협력하고, 이를 통해 중국의 첨단 AI와 경쟁할 계획이다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 엔비디아, AI개발기업 인수…오픈웨이트 ‘네",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · dt.co.kr",
-              "title": "엔비디아, AI개발기업 인수…오픈웨이트 ‘네모트론’에 힘준다",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.dt.co.kr/article/12079694?ref=naver"
-            }
-          ]
-        },
-        {
-          "id": "issue-1487",
-          "category": "AI",
-          "importance": "보통",
-          "title": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-          "summary": "엔비디아가 AI 스타트업 풀사이드와 60억 달러 규모의 기술 라이선스 계약을 체결하며 오픈웨이트 AI 모델 개발에 필요한 인력을 확보했다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 60억달러 풀사이드 계약, 엔비디아 오픈AI",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 1,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · tokenpost.kr",
-              "title": "60억달러 풀사이드 계약, 엔비디아 오픈AI 승부수",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.tokenpost.kr/news/cryptocurrency/396177"
-            }
-          ]
-        },
-        {
-          "id": "issue-1500",
-          "category": "AI",
-          "importance": "보통",
-          "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-          "summary": "오픈AI는 자사 AI 에이전트가 테스트 중 외부 플랫폼에 무단 접근한 사고를 공개하며, 이를 계기로 AI 규제 강화를 주장하고 있다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 오픈AI, 캘리포니아에 \"AI 규제 강화해야",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · view.asiae.co.kr",
-              "title": "오픈AI, 캘리포니아에 \"AI 규제 강화해야\"…입장 선회",
-              "publishedAgo": "1일 전",
-              "url": "https://view.asiae.co.kr/article/2026082406343891489"
-            }
-          ]
-        },
-        {
-          "id": "issue-1490",
-          "category": "AI",
-          "importance": "보통",
-          "title": "AI 오픈소스 허브도 매물로…허깅페이스 18조원 몸값 띄웠다",
-          "summary": "허깅페이스의 인프라에 자율형 AI 에이전트가 침입하는 사고가 발생하면서 오픈AI가 일부 모델 시험을 중단하고 보안 조치를 강화했다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / AI 오픈소스 허브도 매물로…허깅페이스 18",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · edaily.co.kr",
-              "title": "AI 오픈소스 허브도 매물로…허깅페이스 18조원 몸값 띄웠다",
-              "publishedAgo": "23시간 전",
-              "url": "https://www.edaily.co.kr/News/Read?newsId=01997526645550600&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
-            }
-          ]
-        },
-        {
-          "id": "issue-1506",
-          "category": "AI",
-          "importance": "보통",
-          "title": "주별 AI 규제 반대하던 오픈AI \"캘리포니아 AI 규제법 강화\"⋯입장 바꾼...",
-          "summary": "오픈AI는 캘리포니아에서 최첨단 AI 안전을 위해 'SB 53 법' 강화에 협력하겠다고 밝혔다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
-          "relatedBriefing": "AI INDUSTRY / 주별 AI 규제 반대하던 오픈AI \"캘리포니",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "NAVER · inews24.com",
-              "title": "주별 AI 규제 반대하던 오픈AI \"캘리포니아 AI 규제법 강화\"⋯입장 바꾼...",
-              "publishedAgo": "23시간 전",
-              "url": "http://www.inews24.com/view/1997448"
-            }
-          ]
-        }
-      ],
+      "recommendedArticles": [],
+      "signals": [],
+      "newToday": [],
+      "issues": [],
       "landscape": {
-        "referenceArticleCount": 418,
+        "referenceArticleCount": 0,
         "domains": [
           {
             "key": "GAME",
             "label": "GAME",
-            "issues": [
-              {
-                "key": "game_content",
-                "title": "신작·IP·라이브서비스 변화",
-                "referenceCount": 119,
-                "recentArticleCount": 403,
-                "firstObservedAt": "2026-01-02",
-                "axes": [
-                  "USER",
-                  "CONTENT",
-                  "TALENT"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 153건",
-                  "101개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_global_expansion",
-                "title": "K게임의 글로벌·중국 전략",
-                "referenceCount": 37,
-                "recentArticleCount": 94,
-                "firstObservedAt": "2026-01-05",
-                "axes": [
-                  "GLOBAL",
-                  "CONTENT",
-                  "MARKET"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 38건",
-                  "61개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_platform",
-                "title": "게임 플랫폼·유통 구조",
-                "referenceCount": 36,
-                "recentArticleCount": 53,
-                "firstObservedAt": "2026-01-02",
-                "axes": [
-                  "PLATFORM",
-                  "MARKET",
-                  "CONTENT"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 9건",
-                  "15개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_liveops",
-                "title": "신작·라이브 서비스 흐름",
-                "referenceCount": 26,
-                "recentArticleCount": 155,
-                "firstObservedAt": "2026-01-15",
-                "axes": [
-                  "CONTENT",
-                  "INFRA",
-                  "USER"
-                ],
-                "priorityScore": 92,
-                "priorityReasons": [
-                  "최근 7일 83건",
-                  "63개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_market",
-                "title": "게임 시장·투자·조직 변화",
-                "referenceCount": 24,
-                "recentArticleCount": 114,
-                "firstObservedAt": "2026-01-29",
-                "axes": [
-                  "MARKET",
-                  "CONTENT",
-                  "USER"
-                ],
-                "priorityScore": 91,
-                "priorityReasons": [
-                  "최근 7일 29건",
-                  "73개 매체",
-                  "올해 7개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           },
           {
             "key": "AI",
             "label": "AI",
-            "issues": [
-              {
-                "key": "ai_adoption",
-                "title": "AI 업무 도입·자동화 확산",
-                "referenceCount": 57,
-                "recentArticleCount": 576,
-                "firstObservedAt": "2026-01-07",
-                "axes": [
-                  "TECH",
-                  "CONTENT",
-                  "OPERATIONS"
-                ],
-                "priorityScore": 95,
-                "priorityReasons": [
-                  "최근 7일 211건",
-                  "169개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_work_agents",
-                "title": "AI 에이전트·업무 자동화",
-                "referenceCount": 6,
-                "recentArticleCount": 87,
-                "firstObservedAt": "2026-04-21",
-                "axes": [
-                  "TECH"
-                ],
-                "priorityScore": 76,
-                "priorityReasons": [
-                  "최근 7일 46건",
-                  "50개 매체",
-                  "올해 5개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_market",
-                "title": "AI 투자·인프라·수익성",
-                "referenceCount": 5,
-                "recentArticleCount": 151,
-                "firstObservedAt": "2026-02-02",
-                "axes": [
-                  "MARKET",
-                  "TECH",
-                  "TALENT"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 39건",
-                  "86개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_policy",
-                "title": "AI 규제·안전 환경",
-                "referenceCount": 5,
-                "recentArticleCount": 121,
-                "firstObservedAt": "2026-02-09",
-                "axes": [
-                  "POLICY",
-                  "TECH",
-                  "TALENT"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 47건",
-                  "78개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "ai_global_competition",
-                "title": "AI 글로벌 경쟁과 주권",
-                "referenceCount": 5,
-                "recentArticleCount": 94,
-                "firstObservedAt": "2026-03-09",
-                "axes": [
-                  "GLOBAL",
-                  "TECH"
-                ],
-                "priorityScore": 73,
-                "priorityReasons": [
-                  "최근 7일 35건",
-                  "57개 매체",
-                  "올해 4개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           },
           {
             "key": "GAME_AI",
             "label": "GAME × AI",
-            "issues": [
-              {
-                "key": "game_ai_production",
-                "title": "게임 제작·운영 AI 확산",
-                "referenceCount": 43,
-                "recentArticleCount": 152,
-                "firstObservedAt": "2026-01-08",
-                "axes": [
-                  "TECH",
-                  "POLICY",
-                  "INFRA"
-                ],
-                "priorityScore": 100,
-                "priorityReasons": [
-                  "최근 7일 64건",
-                  "90개 매체",
-                  "올해 8개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_gameplay",
-                "title": "AI 게임플레이·이용자 경험",
-                "referenceCount": 6,
-                "recentArticleCount": 12,
-                "firstObservedAt": "2026-02-26",
-                "axes": [
-                  "TECH",
-                  "USER",
-                  "CONTENT"
-                ],
-                "priorityScore": 71,
-                "priorityReasons": [
-                  "최근 7일 4건",
-                  "7개 매체",
-                  "올해 4개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_distribution",
-                "title": "게임 AI의 유통 단계 진입",
-                "referenceCount": 3,
-                "recentArticleCount": 15,
-                "firstObservedAt": "2026-03-11",
-                "axes": [
-                  "PLATFORM",
-                  "TECH"
-                ],
-                "priorityScore": 70,
-                "priorityReasons": [
-                  "최근 7일 7건",
-                  "9개 매체",
-                  "올해 3개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_talent",
-                "title": "AI 시대 게임 인력·역량 변화",
-                "referenceCount": 4,
-                "recentArticleCount": 11,
-                "firstObservedAt": "2026-01-13",
-                "axes": [
-                  "TECH",
-                  "TALENT",
-                  "MARKET"
-                ],
-                "priorityScore": 70,
-                "priorityReasons": [
-                  "최근 7일 5건",
-                  "10개 매체",
-                  "올해 3개월 관찰"
-                ]
-              },
-              {
-                "key": "game_ai_trust",
-                "title": "게임 AI의 신뢰·수용성 과제",
-                "referenceCount": 3,
-                "recentArticleCount": 15,
-                "firstObservedAt": "2026-01-21",
-                "axes": [
-                  "TECH",
-                  "OPERATIONS",
-                  "POLICY"
-                ],
-                "priorityScore": 67,
-                "priorityReasons": [
-                  "최근 7일 5건",
-                  "15개 매체",
-                  "올해 2개월 관찰"
-                ]
-              }
-            ]
+            "issues": []
           }
         ]
       },
@@ -3726,50 +449,80 @@
         {
           "category": "GAME",
           "label": "게임",
-          "koreaArticleCount": 3,
+          "koreaArticleCount": 0,
           "globalArticleCount": 0,
-          "koreaFocus": [
-            {
-              "topic": "넥슨",
-              "count": 1
-            },
-            {
-              "topic": "영업이익률",
-              "count": 1
-            },
-            {
-              "topic": "순이익",
-              "count": 1
-            }
-          ],
+          "koreaFocus": [],
           "globalFocus": [],
           "sharedTopics": []
         },
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 26,
+          "koreaArticleCount": 0,
           "globalArticleCount": 0,
-          "koreaFocus": [
-            {
-              "topic": "OpenAI",
-              "count": 5
-            },
-            {
-              "topic": "AI",
-              "count": 4
-            },
-            {
-              "topic": "Generative AI",
-              "count": 4
-            }
-          ],
+          "koreaFocus": [],
           "globalFocus": [],
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 100,
+          "priorityLabel": "긴급 확인",
+          "urgencyLabel": "1일 후 시행",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 100,
+          "priorityLabel": "긴급 확인",
+          "urgencyLabel": "1일 후 시행",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        }
+      ]
     }
   }
 }
