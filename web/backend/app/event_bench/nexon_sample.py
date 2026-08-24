@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shutil
 import subprocess
 from dataclasses import asdict, dataclass
 from datetime import date, datetime, timezone
@@ -105,14 +106,17 @@ def _event_format(event_url: str) -> str:
 
 
 def _fetch_talesweaver_html(url: str = TALESWEAVER_EVENTS_URL) -> str:
-    """Fetch the verified official TalesWeaver list via Windows curl.
+    """Fetch the verified official TalesWeaver list via curl.
 
     The site blocks urllib with HTTP 403 while accepting its public browser
     response path. This is used only for the explicitly verified list URL.
+    The binary is named "curl.exe" on Windows and "curl" on Linux (e.g. the
+    GitHub Actions runner); resolve whichever is actually on PATH.
     """
+    curl_bin = shutil.which("curl.exe") or shutil.which("curl") or "curl"
     result = subprocess.run(
         [
-            "curl.exe", "-L", "--fail", "--silent", "--show-error", "--max-time", "20",
+            curl_bin, "-L", "--fail", "--silent", "--show-error", "--max-time", "20",
             "-A", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139 Safari/537.36",
             "-H", "Accept-Language: ko-KR,ko;q=0.9",
             "-H", "Referer: https://tales.nexon.com/",
