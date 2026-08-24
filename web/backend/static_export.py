@@ -18,6 +18,7 @@ if str(BACKEND) not in sys.path:
 
 from sqlalchemy import select
 
+from app.config import BENCHMARK_DATA_DIR
 from app.database import Base, SessionLocal, engine
 from app.industry_brief import models as _industry_models  # noqa: F401
 from app.industry_brief.models import DailyBrief
@@ -27,7 +28,7 @@ from app.preregistration import models as _prereg_models  # noqa: F401
 from app.preregistration.models import GamePreRegistration
 from app.game_sites.routes import _load_event_sites, _load_official_sites, _last_refresh, SITE_TYPES
 
-EVENT_PATH = BACKEND / "data" / "event_bench" / "nexon_events_sample.json"
+EVENT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
 
 
 def _write(path: Path, payload: object) -> None:

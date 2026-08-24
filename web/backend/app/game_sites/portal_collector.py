@@ -15,6 +15,8 @@ from urllib.request import HTTPCookieProcessor, HTTPSHandler, Request, build_ope
 
 from bs4 import BeautifulSoup
 
+from ..config import BENCHMARK_DATA_DIR
+
 # Smilegate's crossfire.do 301-loops on a cookie-less first request but
 # succeeds once a cookie from an earlier smilegate.com request is attached
 # (confirmed live) — a shared jar lets that earlier request's cookie carry
@@ -27,7 +29,7 @@ _OPENER = build_opener(HTTPCookieProcessor(CookieJar()))
 # display — no credentials or user data ever go through this opener.
 _INSECURE_OPENER = build_opener(HTTPSHandler(context=ssl._create_unverified_context()))
 
-DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "game_sites"
+DATA_DIR = BENCHMARK_DATA_DIR / "game_sites"
 SNAPSHOT_PATH = DATA_DIR / "portal_snapshot.json"
 OFFICIAL_PATH = DATA_DIR / "official_sites.json"
 LAST_REFRESH_PATH = DATA_DIR / "last_refresh.json"

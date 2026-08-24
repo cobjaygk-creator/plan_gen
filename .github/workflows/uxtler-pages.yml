@@ -20,7 +20,12 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      DATABASE_URL: sqlite:///${{ github.workspace }}/web/backend/data/static_state.db
+      # A directory this job owns exclusively, separate from web/backend/data
+      # (local dev's working data) — event_bench/game_sites write their
+      # archives here instead, so this job's own commit below can never
+      # overwrite a developer's locally-accumulated archive on a later pull.
+      BENCHMARK_DATA_DIR: ${{ github.workspace }}/web/backend/data/ci
+      DATABASE_URL: sqlite:///${{ github.workspace }}/web/backend/data/ci/static_state.db
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       STATIC_CLASSIFY_LIMIT: 80
@@ -54,7 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f web/backend/data/static_state.db web/backend/data/event_bench web/backend/data/game_sites
+          git add -f web/backend/data/ci
           git add web/frontend/public/data
           git diff --cached --quiet || git commit -m "chore: refresh UXTLER benchmark data [skip ci]"
           git push

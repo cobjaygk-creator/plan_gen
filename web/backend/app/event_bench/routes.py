@@ -7,13 +7,14 @@ from threading import Lock
 
 from fastapi import APIRouter, Depends, HTTPException, status
 
+from ..config import BENCHMARK_DATA_DIR
 from ..deps import get_current_user
 from ..models import User
 
 
 router = APIRouter(prefix="/event-bench", tags=["event-bench"])
 _BACKEND_PATH = Path(__file__).resolve().parents[2]
-_SAMPLE_PATH = _BACKEND_PATH / "data" / "event_bench" / "nexon_events_sample.json"
+_SAMPLE_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
 _REFRESH_SCRIPT = _BACKEND_PATH / "event_bench_refresh.py"
 _REFRESH_LOCK = Lock()
 

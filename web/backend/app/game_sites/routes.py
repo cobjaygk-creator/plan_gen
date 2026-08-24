@@ -2,22 +2,22 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 from urllib.parse import urlparse
 
 from fastapi import APIRouter, Depends
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from ..config import BENCHMARK_DATA_DIR
 from ..database import get_db
 from ..deps import get_current_user
 from ..models import User
 from ..preregistration.models import GamePreRegistration
-from .portal_collector import LAST_REFRESH_PATH, refresh_portal_sites
+from .portal_collector import LAST_REFRESH_PATH, OFFICIAL_PATH, refresh_portal_sites
 
 router = APIRouter(prefix="/game-sites", tags=["game-sites"])
-_EVENT_PATH = Path(__file__).resolve().parents[2] / "data" / "event_bench" / "nexon_events_sample.json"
-_OFFICIAL_PATH = Path(__file__).resolve().parents[2] / "data" / "game_sites" / "official_sites.json"
+_EVENT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
+_OFFICIAL_PATH = OFFICIAL_PATH
 SITE_TYPES = ("OFFICIAL", "PREREGISTRATION", "TEASER", "MICROSITE", "PROMOTION")
 
 

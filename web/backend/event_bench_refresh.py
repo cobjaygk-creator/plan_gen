@@ -11,8 +11,8 @@ import json
 import logging
 from dataclasses import asdict
 from datetime import date, datetime, timezone
-from pathlib import Path
 
+from app.config import BENCHMARK_DATA_DIR
 from app.event_bench.nexon_sample import (
     collect_fc_online_events,
     collect_mabinogi_events,
@@ -31,7 +31,7 @@ from app.event_bench.nexon_sample import (
     collect_ragnarok_events,
 )
 
-OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "event_bench" / "nexon_events_sample.json"
+OUTPUT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
 LAST_GOOD_PATH = OUTPUT_PATH.with_name("nexon_events_last_good.json")
 LOG_PATH = OUTPUT_PATH.with_name("refresh.log")
 COLLECTORS = {
