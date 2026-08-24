@@ -7,8 +7,8 @@
     "PROMOTION"
   ],
   "total": 41,
-  "last_refreshed_at": "2026-08-24T23:28:02.531277+00:00",
-  "refreshed_site_count": 0,
+  "last_refreshed_at": "2026-08-24T23:59:11.163895+00:00",
+  "refreshed_site_count": 41,
   "sites": [
     {
       "id": "portal:NEXON:1",
@@ -19,12 +19,12 @@
       "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/9/lVd115091804991.png",
       "publisher": "NEXON",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2025-11-06",
       "source": "OFFICIAL_PORTAL:NEXON",
       "evidence_url": "https://oasisapi.nexon.com/game/mainlist",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:NEXON:2",
@@ -35,12 +35,12 @@
       "thumbnail_url": "https://lwi.nexon.com/m_mabinogim/global/en/main/meta.jpg",
       "publisher": "NEXON",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2025-02-27",
       "source": "OFFICIAL_PORTAL:NEXON",
       "evidence_url": "https://oasisapi.nexon.com/game/mainlist",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:NEXON:3",
@@ -51,12 +51,12 @@
       "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/24/10/qn8O17104218269.png",
       "publisher": "NEXON",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2025-03-28",
       "source": "OFFICIAL_PORTAL:NEXON",
       "evidence_url": "https://oasisapi.nexon.com/game/mainlist",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:NEXON:4",
@@ -67,12 +67,12 @@
       "thumbnail_url": "https://sht-vod.dn.nexoncdn.co.kr/arcraiders/static-assets/images/shared/arc-raiders-social.jpg",
       "publisher": "NEXON",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2025-04-30",
       "source": "OFFICIAL_PORTAL:NEXON",
       "evidence_url": "https://oasisapi.nexon.com/game/mainlist",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:NEXON:5",
@@ -83,12 +83,12 @@
       "thumbnail_url": "https://sht-vod.dn.nexoncdn.co.kr/overwatch/static-assets/images/shared/img_open_graph.webp",
       "publisher": "NEXON",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-08-12",
       "source": "OFFICIAL_PORTAL:NEXON",
       "evidence_url": "https://oasisapi.nexon.com/game/mainlist",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:NETMARBLE:6",
@@ -99,12 +99,12 @@
       "thumbnail_url": "https://sgimage.netmarble.com/images/netmarble/nanaori/20250529/n0561748500055486.jpg",
       "publisher": "NETMARBLE",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:NETMARBLE",
       "evidence_url": "https://www.netmarble.net/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:NETMARBLE:7",
@@ -115,12 +115,12 @@
       "thumbnail_url": "https://sgimage.netmarble.com/images/netmarble/sololvcs/20251114/0nnx1763083415589.jpg",
       "publisher": "NETMARBLE",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:NETMARBLE",
       "evidence_url": "https://www.netmarble.net/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:KAKAO_GAMES:8",
@@ -131,12 +131,12 @@
       "thumbnail_url": "https://chronoodyssey.kakaogames.com/og-image-ko.jpg",
       "publisher": "KAKAO GAMES",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:KAKAO_GAMES",
       "evidence_url": "https://web-contents-api.pcpf.kakaogames.com/contents/gametop?menu=main",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:KAKAO_GAMES:9",
@@ -147,12 +147,12 @@
       "thumbnail_url": null,
       "publisher": "KAKAO GAMES",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:KAKAO_GAMES",
       "evidence_url": "https://web-contents-api.pcpf.kakaogames.com/contents/gametop?menu=main",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:KAKAO_GAMES:10",
@@ -163,12 +163,12 @@
       "thumbnail_url": "https://qa-sminiz.kakaogames.com/og-image.webp",
       "publisher": "KAKAO GAMES",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:KAKAO_GAMES",
       "evidence_url": "https://web-contents-api.pcpf.kakaogames.com/contents/gametop?menu=main",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:WEBZEN:11",
@@ -179,12 +179,12 @@
       "thumbnail_url": "https://mimage.webzen.kr/mupocketknights/brand/share2.jpg",
       "publisher": "WEBZEN",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:WEBZEN",
       "evidence_url": "https://www.webzen.co.kr/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:WEBZEN:12",
@@ -195,12 +195,12 @@
       "thumbnail_url": "https://mimage.webzen.kr/event/r2orign/service/250619_r2origin_page/images/common/share.png",
       "publisher": "WEBZEN",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:WEBZEN",
       "evidence_url": "https://www.webzen.co.kr/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:WEBZEN:13",
@@ -211,12 +211,12 @@
       "thumbnail_url": "https://mimage.webzen.kr/dragon-sword/brand/share.jpg",
       "publisher": "WEBZEN",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:WEBZEN",
       "evidence_url": "https://www.webzen.co.kr/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:WEBZEN:14",
@@ -227,12 +227,12 @@
       "thumbnail_url": "https://mimage.webzen.kr/mumonarch2/official/v01/images/img_meta.jpg",
       "publisher": "WEBZEN",
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:WEBZEN",
       "evidence_url": "https://www.webzen.co.kr/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:15",
@@ -243,12 +243,12 @@
       "thumbnail_url": "https://website.xdcdn.net/poster/45213/image/Fh2X5Ny9.png",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-01-08",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:16",
@@ -259,12 +259,12 @@
       "thumbnail_url": "assets/og-image.png",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-02-05",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:17",
@@ -275,12 +275,12 @@
       "thumbnail_url": "https://fizz-download.playnccdn.com/download/v2/buckets/marketing-platform/files/19f45cf3ebc-e02b2388-75cd-45f1-a828-fb813f9df045",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-02-11",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:18",
@@ -291,12 +291,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/48/31/gm201267_260213-risell-uu3.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-02-13",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:19",
@@ -307,12 +307,12 @@
       "thumbnail_url": "https://esotericebb.com/assets/images/share.jpg?v=9eccbdb7",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-04",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:20",
@@ -323,12 +323,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/45/79/gm865048_pp_sn1.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-05",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:21",
@@ -339,12 +339,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/48/61/gm488917_pjh260309-5.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-06",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:22",
@@ -355,12 +355,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/28/21/gm627864_220926-risell-yy13.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-07",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:23",
@@ -371,12 +371,12 @@
       "thumbnail_url": "https://sgimage.netmarble.com/images/netmarble/nanaori/20250529/n0561748500055486.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-17",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:24",
@@ -387,12 +387,12 @@
       "thumbnail_url": "https://www.thecubesaveus.com/og.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-18",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:25",
@@ -403,12 +403,12 @@
       "thumbnail_url": "https://s1.pearlcdn.com/cd/brand/metatag/2025/09/25/1f1b11124fa20250925065603135.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-03-20",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:26",
@@ -419,12 +419,12 @@
       "thumbnail_url": "http://static1.squarespace.com/static/6991f0a1cda81c3c1cc9bb25/t/69925781855150430c6c1779/1771198337668/Road_to_Vostok_Background.jpg?format=1500w",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-07",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:27",
@@ -435,12 +435,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/48/47/gm844107_pjh260415-2.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-14",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:28",
@@ -451,12 +451,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/48/98/gm169198_260326-risell-yy3.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-16",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:29",
@@ -467,12 +467,12 @@
       "thumbnail_url": "https://static.wixstatic.com/media/d29177_4c1456204b8344b99c5e00bc671805bc~mv2.png/v1/fill/w_2500,h_1406,al_c/d29177_4c1456204b8344b99c5e00bc671805bc~mv2.png",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-17",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:30",
@@ -483,12 +483,12 @@
       "thumbnail_url": "https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt8409c2ec7041566a/6926318af4fa3f127a019f8a/D4_X2_OG.png?format=webp",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-28",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:31",
@@ -499,12 +499,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/49/69/gm790392_pjh260430-2.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-28",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:32",
@@ -515,12 +515,12 @@
       "thumbnail_url": "https://nte.perfectworld.com/public/images/share_ko.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-04-29",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:33",
@@ -531,12 +531,12 @@
       "thumbnail_url": "https://prod-wstatic.subnautica.com/static/og/og.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-05-15",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:34",
@@ -547,12 +547,12 @@
       "thumbnail_url": "https://cdn.forza.net/strapi-uploads/assets/Forza_Horizon_6_3840x2160_Hori_Final_ac7b0063ff.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-05-19",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:35",
@@ -563,12 +563,12 @@
       "thumbnail_url": "https://cms.ioi.dk/media/trgnchlr/007fl_seo-get-now.jpg?width=1200",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-05-27",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:36",
@@ -579,12 +579,12 @@
       "thumbnail_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/338OWx0jNPuD4hYNj3WFS9/94f21727b3f69010fad89ee9ac9f0393/AssassinsCreed_Visual_AllAssassins.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-07-09",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:37",
@@ -595,12 +595,12 @@
       "thumbnail_url": "https://nippon1.jp/consumer/honogurashi/img/ogp_released.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-07-30",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:38",
@@ -611,12 +611,12 @@
       "thumbnail_url": "https://sht-vod.dn.nexoncdn.co.kr/saz/icon/saz_social.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-07-30",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:39",
@@ -627,12 +627,12 @@
       "thumbnail_url": "https://cdn.gamemeca.com/gmdb/g001/51/20/gm677773_2407556685505.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-08-01",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:40",
@@ -643,12 +643,12 @@
       "thumbnail_url": "https://bigwalk.game/sharing-card.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-08-04",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     },
     {
       "id": "portal:GAMEMECA_SCHEDULE:41",
@@ -659,12 +659,12 @@
       "thumbnail_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6DU8EIVG5OBgn452ljNwC9/0b5d28fe607737b64cbcae0bcbfefd4b/UBS_Boxart_341x450.jpg",
       "publisher": null,
       "platform": [],
-      "discovered_at": "2026-08-24T23:12:27.651619+00:00",
+      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
       "published_on": "2026-10-01",
       "source": "OFFICIAL_PORTAL:GAMEMECA_SCHEDULE",
       "evidence_url": "https://www.gamemeca.com/game.php?rts=schedule",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:12:27.651619+00:00"
+      "verified_at": "2026-08-24T23:59:11.163895+00:00"
     }
   ]
 }
