@@ -54,6 +54,11 @@ function SiteThumbnail({ item }: { item: GameSite }) {
 
 type RefreshResult = { portals: number; discovered: number; new_sites: number; errors: Record<string, string>; refreshed_at: string };
 
+// GitHub Pages has no backend to run a live collection against — this build
+// links out to the workflow's manual-run page instead of hitting /game-sites/refresh.
+const IS_STATIC_SITE = import.meta.env.VITE_STATIC_SITE === "true";
+const WORKFLOW_DISPATCH_URL = "https://github.com/cobjaygk-creator/plan_gen/actions/workflows/uxtler-pages.yml";
+
 export function GameSitesPage() {
   const [data, setData] = useState<Payload | null>(null);
   const [failed, setFailed] = useState(false);
@@ -99,9 +104,15 @@ export function GameSitesPage() {
           <span>{"마지막 갱신 "}{formatRefreshedAt(data.last_refreshed_at)}</span>
           <strong>{data.refreshed_site_count}{"건 추가"}</strong>
         </span>
-        <button type="button" className="game-sites-refresh-btn" onClick={handleRefresh} disabled={refreshing}>
-          {refreshing ? "수집 중..." : "지금 수집"}
-        </button>
+        {IS_STATIC_SITE ? (
+          <a className="game-sites-refresh-btn" href={WORKFLOW_DISPATCH_URL} target="_blank" rel="noreferrer">
+            {"GitHub에서 수집 실행"}
+          </a>
+        ) : (
+          <button type="button" className="game-sites-refresh-btn" onClick={handleRefresh} disabled={refreshing}>
+            {refreshing ? "수집 중..." : "지금 수집"}
+          </button>
+        )}
       </div>
     </header>
     {refreshResult && !refreshError && (
