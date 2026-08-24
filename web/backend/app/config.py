@@ -12,7 +12,9 @@ BACKEND_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BACKEND_DIR / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-DATABASE_URL = f"sqlite:///{DATA_DIR / 'plan_gen.db'}"
+# Deployment jobs can point the isolated benchmark collector at a separate
+# SQLite file. Local use keeps the original database path unchanged.
+DATABASE_URL = os.environ.get("DATABASE_URL", f"sqlite:///{DATA_DIR / 'plan_gen.db'}")
 
 # Signs the session cookie (itsdangerous) — a real deployment must set this
 # in .env; the fallback is only for local dev and is not a secret anyone

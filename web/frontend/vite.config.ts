@@ -7,6 +7,7 @@ import react from '@vitejs/plugin-react'
 // same Nginx reverse proxy described in the architecture doc.
 export default defineConfig({
   plugins: [react()],
+  base: process.env.VITE_BASE_PATH || "/",
   server: {
     proxy: {
       '/auth': 'http://localhost:8000',

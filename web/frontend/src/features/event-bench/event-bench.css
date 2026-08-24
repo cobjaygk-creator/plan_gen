@@ -56,3 +56,5 @@
 .event-bench-card h2 a { color:inherit; text-decoration:none; }
 .event-bench-card h2 a:hover { text-decoration:underline; }
 
+body.static-site .event-bench-manual-refresh,
+body.static-site .event-bench-refresh-error { display: none; }

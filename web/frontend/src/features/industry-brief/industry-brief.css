@@ -1615,3 +1615,6 @@
 .ib-policy-timeline li p { margin: 4px 0 0; color: #888; font-size: 10px; }
 @media (max-width: 760px) { .ib-policy-grid { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .ib-policy-summary { grid-template-columns: repeat(2, 1fr); } .ib-policy-summary > div { border-bottom: 1px solid #e8e8e8; } }
+/* GitHub Pages is a read-only benchmark snapshot. */
+body.static-site .ib-feedback-manager,
+body.static-site .ib-refresh { display: none; }
