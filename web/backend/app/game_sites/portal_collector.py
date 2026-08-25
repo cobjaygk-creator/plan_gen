@@ -313,12 +313,19 @@ def _collect_pearlabyss() -> list[dict]:
     directly on its games page — unlike Smilegate/Krafton, these are real
     external sites, not self-hosted intro pages, so this can't reuse
     _collect_anchor_portal's single-domain allowlist. Filters out the ad-
-    tracking/store/social links mixed into the same page instead."""
+    tracking/store/social links mixed into the same page instead.
+
+    Restricted to class="btn_link" (confirmed live: the page's own "홈페이지
+    바로가기" anchor) rather than every <a href> — mobile titles also list an
+    app-store download link (class="btn_app", e.g. blackdesertm.com/Ocean/
+    Download) on the *same* domain as the real homepage, which a host-only
+    filter can't tell apart and previously stored as a separate "duplicate"
+    site."""
     raw, charset = _fetch(PORTALS["PEARL_ABYSS"])
     soup = BeautifulSoup(raw.decode(charset, "replace"), "html.parser")
     rows = []
     seen: set[str] = set()
-    for anchor in soup.select("a[href]"):
+    for anchor in soup.select("a.btn_link[href]"):
         url = _normalize_url(anchor.get("href", ""))
         if not url:
             continue

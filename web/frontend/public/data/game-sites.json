@@ -6,7 +6,7 @@
     "MICROSITE",
     "PROMOTION"
   ],
-  "total": 166,
+  "total": 164,
   "last_refreshed_at": "2026-08-25T06:38:52.817344+00:00",
   "refreshed_site_count": 3,
   "sites": [
@@ -43,22 +43,6 @@
       "verified_at": "2026-08-25T06:38:52.817344+00:00"
     },
     {
-      "id": "portal:PEARL_ABYSS:166",
-      "game_name": "Black Desert Mobile - Global",
-      "site_name": "Black Desert Mobile - Global",
-      "site_type": "OFFICIAL",
-      "url": "https://www.world.blackdesertm.com/Ocean/Download",
-      "thumbnail_url": "https://static.pearlcdn.com/asset/ocean/bdm_gl/Common/img/fb.jpg",
-      "publisher": "Pearl Abyss",
-      "platform": [],
-      "discovered_at": "2026-08-25T06:38:52.817344+00:00",
-      "published_on": null,
-      "source": "OFFICIAL_PORTAL:PEARL_ABYSS",
-      "evidence_url": "https://www.pearlabyss.com/Company/About/Games",
-      "status": "ACTIVE",
-      "verified_at": "2026-08-25T06:38:52.817344+00:00"
-    },
-    {
       "id": "portal:PEARL_ABYSS:42",
       "game_name": "검은사막 한국 – 하이퍼부스트로 초고속 성장 | Pearl Abyss",
       "site_name": "검은사막 한국 – 하이퍼부스트로 초고속 성장 | Pearl Abyss",
@@ -80,22 +64,6 @@
       "site_name": "2026 초특급 하이델 연회 보상 공개 | Pearl Abyss",
       "site_type": "OFFICIAL",
       "url": "https://www.blackdesertm.com/",
-      "thumbnail_url": "https://s1.blackdesertm.com/KR/Forum/BDM/Upload/OGMetaTag/a4839582d2020260707103341890.jpg",
-      "publisher": "Pearl Abyss",
-      "platform": [],
-      "discovered_at": "2026-08-25T06:21:25.370295+00:00",
-      "published_on": null,
-      "source": "OFFICIAL_PORTAL:PEARL_ABYSS",
-      "evidence_url": "https://www.pearlabyss.com/Company/About/Games",
-      "status": "ACTIVE",
-      "verified_at": "2026-08-25T06:21:25.370295+00:00"
-    },
-    {
-      "id": "portal:PEARL_ABYSS:44",
-      "game_name": "2026 초특급 하이델 연회 보상 공개 | Pearl Abyss",
-      "site_name": "2026 초특급 하이델 연회 보상 공개 | Pearl Abyss",
-      "site_type": "OFFICIAL",
-      "url": "https://www.blackdesertm.com/Ocean/Download",
       "thumbnail_url": "https://s1.blackdesertm.com/KR/Forum/BDM/Upload/OGMetaTag/a4839582d2020260707103341890.jpg",
       "publisher": "Pearl Abyss",
       "platform": [],
