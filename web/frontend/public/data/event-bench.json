@@ -2,9 +2,25 @@
   "mode": "static",
   "source": "공식 게임 이벤트 페이지",
   "description": "GitHub Actions가 수집한 이벤트 모음입니다.",
-  "last_refreshed_at": "2026-08-24T23:52:11.908224+00:00",
-  "refreshed_event_count": 166,
+  "last_refreshed_at": "2026-08-25T00:13:01.224381+00:00",
+  "refreshed_event_count": 0,
   "candidates": [
+    {
+      "publisher": "AtoZ Games",
+      "game": "거상",
+      "title": "카카오톡 채널 쿠폰 등록",
+      "event_url": "https://www.gersang.co.kr/event/2025/20250319_kakaoib2/main.gs",
+      "hero_image_url": "https://www.gersang.co.kr/event/2025/20250319_kakaoib2/img/1920x610.jpg",
+      "starts_on": null,
+      "ends_on": null,
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.026454+00:00",
+      "first_collected_at": "2026-08-24T23:33:00.331244+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
     {
       "publisher": "NEXON Korea",
       "game": "마비노기 영웅전",
@@ -16,9 +32,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -32,9 +48,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -48,9 +64,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -64,9 +80,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -80,9 +96,9 @@
       "published_on": "2026-08-23",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -96,9 +112,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -112,9 +128,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -128,9 +144,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -144,9 +160,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -160,9 +176,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -176,9 +192,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -192,9 +208,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -208,9 +224,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -224,9 +240,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -240,9 +256,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -256,9 +272,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -272,9 +288,9 @@
       "published_on": "2026-08-20",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -288,9 +304,9 @@
       "published_on": "2026-08-20",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -304,9 +320,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -320,9 +336,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -336,9 +352,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -352,9 +368,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -368,9 +384,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -384,9 +400,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -400,9 +416,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -416,9 +432,9 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -432,9 +448,57 @@
       "published_on": "2026-08-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "테일즈런너 2026 K-챔피언십",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/08/K-championship-qualifier",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/5Fldw1BGuN9gUW3yQvvLLk.png",
+      "starts_on": "2026-08-19",
+      "ends_on": "2026-09-16",
+      "published_on": "2026-08-19",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "2026 안산 e스포츠 페스티벌",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/08/ansan-esports-festival",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/1z3fesbk2q0LqtLPSWW9BL.png",
+      "starts_on": "2026-08-19",
+      "ends_on": "2026-08-31",
+      "published_on": "2026-08-19",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "AtoZ Games",
+      "game": "거상",
+      "title": "천하제일 낚시 대회!",
+      "event_url": "https://www.gersang.co.kr/event/2026/20260819_f1shh0o3/",
+      "hero_image_url": "https://www.gersang.co.kr/event/2026/20260819_f1shh0o3/img/1920x610.jpg",
+      "starts_on": "2026-08-19",
+      "ends_on": "2026-09-15",
+      "published_on": "2026-08-19",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.026454+00:00",
+      "first_collected_at": "2026-08-24T23:33:00.331244+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -448,9 +512,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -464,9 +528,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -480,9 +544,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -496,9 +560,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -512,9 +576,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -528,9 +592,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -544,9 +608,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -560,9 +624,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -576,9 +640,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -592,9 +656,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -608,9 +672,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -624,9 +688,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -640,9 +704,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -656,9 +720,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -672,9 +736,9 @@
       "published_on": "2026-08-13",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -688,9 +752,9 @@
       "published_on": "2026-08-12",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -704,9 +768,9 @@
       "published_on": "2026-08-12",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -720,9 +784,9 @@
       "published_on": "2026-08-12",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -736,9 +800,9 @@
       "published_on": "2026-08-12",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -752,9 +816,9 @@
       "published_on": "2026-08-11",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -768,9 +832,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -784,9 +848,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.625992+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.163921+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -800,9 +864,9 @@
       "published_on": "2026-08-06",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -816,9 +880,9 @@
       "published_on": "2026-08-06",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -832,9 +896,9 @@
       "published_on": "2026-08-06",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -848,9 +912,9 @@
       "published_on": "2026-08-06",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -864,9 +928,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -880,9 +944,9 @@
       "published_on": null,
       "status": "종료",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -896,9 +960,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -912,9 +976,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -928,9 +992,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -944,9 +1008,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -960,9 +1024,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -976,9 +1040,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -992,9 +1056,9 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1008,9 +1072,41 @@
       "published_on": "2026-08-05",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "슈가슈가룬 콜라보",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/08/Sugar-sugar-rune",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/0oraVE58IcWFK5nZcrLA0q.png",
+      "starts_on": "2026-08-05",
+      "ends_on": "2026-11-04",
+      "published_on": "2026-08-05",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "8월 생일 이벤트",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/08/birthday",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/7mEbCcMWdb2klv2XWtVGUW.jpg",
+      "starts_on": "2026-08-05",
+      "ends_on": "2026-09-02",
+      "published_on": "2026-08-05",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -1024,9 +1120,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1040,9 +1136,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1056,9 +1152,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1072,9 +1168,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1088,9 +1184,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1104,9 +1200,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1120,9 +1216,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1136,9 +1232,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1152,9 +1248,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1168,9 +1264,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1184,9 +1280,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1200,9 +1296,9 @@
       "published_on": "2026-07-30",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1216,9 +1312,9 @@
       "published_on": "2026-07-30",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1232,9 +1328,9 @@
       "published_on": "2026-07-30",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1248,9 +1344,9 @@
       "published_on": "2026-07-30",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1264,9 +1360,9 @@
       "published_on": "2026-07-30",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1280,9 +1376,9 @@
       "published_on": "2026-07-29",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1296,9 +1392,9 @@
       "published_on": "2026-07-29",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1312,9 +1408,9 @@
       "published_on": "2026-07-29",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1328,9 +1424,9 @@
       "published_on": "2026-07-29",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1344,9 +1440,9 @@
       "published_on": "2026-07-29",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1360,9 +1456,9 @@
       "published_on": "2026-07-27",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:56.554148+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.997674+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1376,9 +1472,9 @@
       "published_on": "2026-07-26",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1392,9 +1488,9 @@
       "published_on": "2026-07-25",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1408,9 +1504,9 @@
       "published_on": "2026-07-25",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1424,9 +1520,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1440,9 +1536,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1456,9 +1552,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1472,9 +1568,105 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.625992+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.163921+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "젤리삐의 부트캠프",
+      "event_url": "https://tales.nexon.com/260723/bootcamp",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125136589726418916",
+      "starts_on": "2026-07-23",
+      "ends_on": "2026-08-26",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "테일즈위버 2026 여름 라인업",
+      "event_url": "https://tales.nexon.com/260723/update",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413366927223425007",
+      "starts_on": "2026-07-23",
+      "ends_on": "2026-08-27",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "(추가) 신규 유저 특별 미션 넥슨플레이 이벤트",
+      "event_url": "https://tales.nexon.com/News/Event/904?pageSize=9",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5557534874677543491",
+      "starts_on": "2026-07-23",
+      "ends_on": "2026-08-26",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "board",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "New 버닝 러시",
+      "event_url": "https://tales.nexon.com/News/Event/903?pageSize=9",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764901061087462042",
+      "starts_on": "2026-07-23",
+      "ends_on": "2026-08-27",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "board",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "루미나의 회랑 공략 이벤트",
+      "event_url": "https://tales.nexon.com/News/Event/902?pageSize=9",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5485477697251443023",
+      "starts_on": "2026-07-23",
+      "ends_on": "2026-08-27",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "board",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "블루코럴 대소동 II - 일루미네이션 축제",
+      "event_url": "https://tales.nexon.com/News/Event/901?pageSize=9",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5197193960426048024",
+      "starts_on": "2026-07-23",
+      "ends_on": "2026-08-27",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "board",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -1488,9 +1680,9 @@
       "published_on": "2026-07-22",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1504,9 +1696,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1520,9 +1712,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1536,9 +1728,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1552,9 +1744,9 @@
       "published_on": "2026-07-16",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1568,9 +1760,9 @@
       "published_on": "2026-07-16",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1584,9 +1776,9 @@
       "published_on": "2026-07-16",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1600,9 +1792,9 @@
       "published_on": "2026-07-16",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1616,9 +1808,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1632,9 +1824,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1648,9 +1840,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1664,9 +1856,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1680,9 +1872,41 @@
       "published_on": "2026-07-09",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:54.329956+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:44.759750+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "매지컬 프리즈마 브랜드",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/07/magical-prisma-brand",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/6FKCyGn21c0QTRBAX9045d.jpg",
+      "starts_on": "2026-07-08",
+      "ends_on": "2026-10-07",
+      "published_on": "2026-07-08",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "신규 레이드&매직! 프리즈마 지크로니움",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/07/raid-skill",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/7UzhaMMWZRaUk2wW1KjAXK.jpg",
+      "starts_on": "2026-07-08",
+      "ends_on": "2026-10-07",
+      "published_on": "2026-07-08",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -1696,9 +1920,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1712,9 +1936,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1728,9 +1952,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1744,9 +1968,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1760,9 +1984,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1776,9 +2000,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1792,9 +2016,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1808,9 +2032,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1824,9 +2048,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1840,9 +2064,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1856,9 +2080,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1872,9 +2096,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1888,9 +2112,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1904,9 +2128,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1920,9 +2144,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1936,9 +2160,25 @@
       "published_on": "2026-06-25",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:54.329956+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:44.759750+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "캐릭캐릭 체인지 콜라보",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/06/Shugo-Chara1st",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/6YpxE4Q5JunRr7GymyDV95.jpg",
+      "starts_on": "2026-06-24",
+      "ends_on": "2026-10-07",
+      "published_on": "2026-06-24",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.172592+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -1952,9 +2192,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1968,9 +2208,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -1984,9 +2224,9 @@
       "published_on": null,
       "status": "종료",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2000,9 +2240,25 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "AtoZ Games",
+      "game": "거상",
+      "title": "새로운 대상인의 여정",
+      "event_url": "https://www.gersang.co.kr/event/2026/20260624_M2rchAntYF1N/intro.gs",
+      "hero_image_url": "https://www.gersang.co.kr/event/2026/20260624_M2rchAntYF1N/img/1920x610.jpg",
+      "starts_on": "2026-06-22",
+      "ends_on": "2026-08-25",
+      "published_on": "2026-06-22",
+      "status": "진행 중",
+      "event_format": "full_page",
+      "collected_at": "2026-08-24T23:33:16.026454+00:00",
+      "first_collected_at": "2026-08-24T23:33:00.331244+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -2016,9 +2272,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2032,9 +2288,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2048,9 +2304,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2064,9 +2320,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2080,9 +2336,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2096,9 +2352,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2112,9 +2368,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2128,9 +2384,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2144,9 +2400,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2160,9 +2416,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2176,9 +2432,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2192,9 +2448,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2208,9 +2464,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2224,9 +2480,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:01.652476+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:52.294057+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2240,9 +2496,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2256,9 +2512,9 @@
       "published_on": "2026-06-18",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2272,9 +2528,9 @@
       "published_on": "2026-06-18",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2288,9 +2544,9 @@
       "published_on": "2026-06-18",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2304,9 +2560,9 @@
       "published_on": "2026-06-18",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2320,9 +2576,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:02.085453+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:53.765706+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2336,9 +2592,9 @@
       "published_on": "2026-06-10",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2352,9 +2608,9 @@
       "published_on": null,
       "status": "종료",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:06.627555+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.166089+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2368,9 +2624,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2384,9 +2640,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2400,9 +2656,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2416,9 +2672,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2432,9 +2688,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2448,9 +2704,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2464,9 +2720,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2480,9 +2736,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2496,9 +2752,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2512,9 +2768,9 @@
       "published_on": "2026-06-04",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2528,9 +2784,9 @@
       "published_on": "2026-05-20",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:53.276297+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:43.584255+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2544,9 +2800,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.625992+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.163921+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2560,9 +2816,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:03.705787+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:55.241402+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2576,9 +2832,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2592,9 +2848,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:52:12.417378+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:01.599482+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2608,9 +2864,9 @@
       "published_on": "2026-01-01",
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:55.412917+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:45.661419+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2624,9 +2880,9 @@
       "published_on": "2025-11-19",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     },
     {
@@ -2640,9 +2896,25 @@
       "published_on": "2025-06-25",
       "status": "진행 중",
       "event_format": "board",
-      "collected_at": "2026-08-24T23:53:12.177650+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:14:03.563777+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
+      "is_active": true
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "테일즈위버",
+      "title": "프리미엄 PC방 접속 혜택",
+      "event_url": "https://tales.nexon.com/News/Event/803?pageSize=9",
+      "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4836906046070983275",
+      "starts_on": "2024-06-27",
+      "ends_on": "2030-12-31",
+      "published_on": null,
+      "status": "진행 중",
+      "event_format": "board",
+      "collected_at": "2026-08-24T23:33:12.665709+00:00",
+      "first_collected_at": "2026-08-24T23:32:17.231273+00:00",
+      "last_seen_at": "2026-08-24T23:33:00.331244+00:00",
       "is_active": true
     },
     {
@@ -2656,9 +2928,9 @@
       "published_on": null,
       "status": "진행 중",
       "event_format": "full_page",
-      "collected_at": "2026-08-24T23:53:06.625992+00:00",
-      "first_collected_at": "2026-08-24T23:52:11.908224+00:00",
-      "last_seen_at": "2026-08-24T23:52:11.908224+00:00",
+      "collected_at": "2026-08-25T00:13:58.163921+00:00",
+      "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
+      "last_seen_at": "2026-08-25T00:13:01.224381+00:00",
       "is_active": true
     }
   ]

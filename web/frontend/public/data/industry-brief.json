@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-24T23:59:53.753153+00:00",
+  "generated_at": "2026-08-25T00:21:57.895665+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-25",
-      "generatedAt": "2026-08-24T23:56:19.375553+00:00",
+      "generatedAt": "2026-08-25T00:18:50.561858+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 75,
+        "collected": 76,
         "analyzed": 0,
-        "pending": 75,
+        "pending": 76,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -140,13 +140,13 @@
     },
     "3d": {
       "briefDate": "2026-08-25",
-      "generatedAt": "2026-08-24T23:56:19.375553+00:00",
+      "generatedAt": "2026-08-25T00:18:50.561858+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 250,
+        "collected": 251,
         "analyzed": 0,
-        "pending": 250,
+        "pending": 251,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -291,13 +291,13 @@
           ],
           "priorityScore": 100,
           "priorityLabel": "긴급 확인",
-          "urgencyLabel": "1일 후 시행",
+          "urgencyLabel": "오늘 시행",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ],
@@ -320,26 +320,26 @@
           ],
           "priorityScore": 100,
           "priorityLabel": "긴급 확인",
-          "urgencyLabel": "1일 후 시행",
+          "urgencyLabel": "오늘 시행",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ]
     },
     "week": {
       "briefDate": "2026-08-25",
-      "generatedAt": "2026-08-24T23:56:19.375553+00:00",
+      "generatedAt": "2026-08-25T00:18:50.561858+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 213,
+        "collected": 214,
         "analyzed": 0,
-        "pending": 213,
+        "pending": 214,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -484,13 +484,13 @@
           ],
           "priorityScore": 100,
           "priorityLabel": "긴급 확인",
-          "urgencyLabel": "1일 후 시행",
+          "urgencyLabel": "오늘 시행",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ],
@@ -513,13 +513,13 @@
           ],
           "priorityScore": 100,
           "priorityLabel": "긴급 확인",
-          "urgencyLabel": "1일 후 시행",
+          "urgencyLabel": "오늘 시행",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 1일 후 시행",
+          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ]
