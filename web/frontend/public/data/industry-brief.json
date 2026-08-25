@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:28:19.336085+00:00",
+  "generated_at": "2026-08-25T06:38:54.598208+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-25",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 127,
+        "collected": 129,
         "analyzed": 60,
-        "pending": 67,
+        "pending": 69,
         "completionRate": 47,
         "analysisStatus": "PARTIAL",
         "relevant": 43,
@@ -279,7 +279,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "12시간 전",
+                "publishedAgo": "13시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -359,7 +359,7 @@
               {
                 "outlet": "인벤",
                 "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319875"
               }
             ]
@@ -955,7 +955,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "12시간 전",
+              "publishedAgo": "13시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -1271,7 +1271,7 @@
             {
               "outlet": "인벤",
               "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319875"
             }
           ]
@@ -1451,9 +1451,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 300,
+        "collected": 302,
         "analyzed": 65,
-        "pending": 235,
+        "pending": 237,
         "completionRate": 22,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 46,
@@ -1759,7 +1759,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "12시간 전",
+                "publishedAgo": "13시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -1826,7 +1826,7 @@
               {
                 "outlet": "인벤",
                 "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319875"
               }
             ]
@@ -2453,7 +2453,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "12시간 전",
+              "publishedAgo": "13시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -2769,7 +2769,7 @@
             {
               "outlet": "인벤",
               "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319875"
             }
           ]
@@ -2974,10 +2974,10 @@
       "periodLabel": "이번 주",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 265,
+        "collected": 267,
         "analyzed": 65,
-        "pending": 200,
-        "completionRate": 25,
+        "pending": 202,
+        "completionRate": 24,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 46,
         "issues": 16,
@@ -3282,7 +3282,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "12시간 전",
+                "publishedAgo": "13시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -3349,7 +3349,7 @@
               {
                 "outlet": "인벤",
                 "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319875"
               }
             ]
@@ -3976,7 +3976,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "12시간 전",
+              "publishedAgo": "13시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -4292,7 +4292,7 @@
             {
               "outlet": "인벤",
               "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319875"
             }
           ]
