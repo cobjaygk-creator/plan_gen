@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T07:03:03.756500+00:00",
+  "generated_at": "2026-08-25T07:16:55.764744+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-25",
@@ -7,11 +7,11 @@
       "periodLabel": "오늘",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 140,
+        "collected": 155,
         "analyzed": 61,
-        "pending": 79,
-        "completionRate": 44,
-        "analysisStatus": "PARTIAL",
+        "pending": 94,
+        "completionRate": 39,
+        "analysisStatus": "INSUFFICIENT",
         "relevant": 44,
         "issues": 16,
         "verifiedIssues": 6,
@@ -168,7 +168,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "5시간 전",
+                "publishedAgo": "6시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -266,7 +266,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "5시간 전",
+                "publishedAgo": "6시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -373,7 +373,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "7시간 전",
+                "publishedAgo": "8시간 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -924,7 +924,7 @@
             {
               "outlet": "인벤",
               "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-              "publishedAgo": "5시간 전",
+              "publishedAgo": "6시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319881"
             }
           ]
@@ -1302,7 +1302,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "7시간 전",
+              "publishedAgo": "8시간 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
@@ -1430,12 +1430,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1451,10 +1451,10 @@
       "periodLabel": "최근 3일",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 313,
+        "collected": 328,
         "analyzed": 66,
-        "pending": 247,
-        "completionRate": 21,
+        "pending": 262,
+        "completionRate": 20,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -1634,7 +1634,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "5시간 전",
+                "publishedAgo": "6시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -1746,7 +1746,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "5시간 전",
+                "publishedAgo": "6시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -1840,7 +1840,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "7시간 전",
+                "publishedAgo": "8시간 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -2422,7 +2422,7 @@
             {
               "outlet": "인벤",
               "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-              "publishedAgo": "5시간 전",
+              "publishedAgo": "6시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319881"
             }
           ]
@@ -2800,7 +2800,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "7시간 전",
+              "publishedAgo": "8시간 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
@@ -2897,12 +2897,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -2974,10 +2974,10 @@
       "periodLabel": "이번 주",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 278,
+        "collected": 293,
         "analyzed": 66,
-        "pending": 212,
-        "completionRate": 24,
+        "pending": 227,
+        "completionRate": 23,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -3157,7 +3157,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "5시간 전",
+                "publishedAgo": "6시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -3269,7 +3269,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "5시간 전",
+                "publishedAgo": "6시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -3363,7 +3363,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "7시간 전",
+                "publishedAgo": "8시간 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -3945,7 +3945,7 @@
             {
               "outlet": "인벤",
               "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-              "publishedAgo": "5시간 전",
+              "publishedAgo": "6시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319881"
             }
           ]
@@ -4323,7 +4323,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "7시간 전",
+              "publishedAgo": "8시간 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
@@ -4420,12 +4420,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
