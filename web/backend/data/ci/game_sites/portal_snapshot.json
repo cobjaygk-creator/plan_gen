@@ -1112,22 +1112,6 @@
     "portal": "PEARL_ABYSS"
   },
   {
-    "url": "https://www.world.blackdesertm.com/Ocean/Download",
-    "game_name": "Black Desert Mobile - Global",
-    "publisher": "Pearl Abyss",
-    "published_on": null,
-    "thumbnail_url": "https://static.pearlcdn.com/asset/ocean/bdm_gl/Common/img/fb.jpg",
-    "portal": "PEARL_ABYSS"
-  },
-  {
-    "url": "https://pearlabyss.gururang.com/",
-    "game_name": "펄어비스 기어",
-    "publisher": "Pearl Abyss",
-    "published_on": null,
-    "thumbnail_url": "https://static.gururang.com/img/pearlabyss/logo.png",
-    "portal": "PEARL_ABYSS"
-  },
-  {
     "url": "https://www.madngine.com/webdev2022",
     "game_name": "Heart ProjectTal",
     "publisher": "WEMADE",
@@ -1264,14 +1248,6 @@
     "portal": "WEMADE"
   },
   {
-    "url": "https://zeus.com2us.com/",
-    "game_name": "제우스: 오만의 신 새창",
-    "publisher": null,
-    "published_on": "2026-07-01",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1206773404.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://newslg-kr.biligames.com/",
     "game_name": "삼국지: 천하결전",
     "publisher": null,
@@ -1312,14 +1288,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://hna.hoyoverse.com/ko-kr",
-    "game_name": "붕괴: 넥서스 아니마 진화 테스트 새창",
-    "publisher": null,
-    "published_on": "2026-07-09",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2025/i1684597337.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://relink-ragnarok.granbluefantasy.com/ko",
     "game_name": "그랑블루 판타지 리링크 - 엔드리스 라그나로크",
     "publisher": null,
@@ -1336,43 +1304,11 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://bw.bilibili.com/",
-    "game_name": "빌리빌리월드 2026 새창",
-    "publisher": null,
-    "published_on": "2026-07-10",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1789006415.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://pokemongolive.com/",
-    "game_name": "포켓몬 GO 페스트 2026: 글로벌 새창",
-    "publisher": null,
-    "published_on": "2026-07-11",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1305028107.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://gamebulletin.nexon.com/dnfm/game.html",
-    "game_name": "던전앤파이터 모바일 아케이드 2026 온라인 새창",
-    "publisher": null,
-    "published_on": "2026-07-11",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1176736324.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://flywaygames.com/en/game/ascend-to-zero",
     "game_name": "어센드 투 제로",
     "publisher": null,
     "published_on": "2026-07-13",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1223140976.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://act.hoyoverse.com/puzzle/hkrpg/e2070703decyhdTakKink_c5fa06d9da/index.html",
-    "game_name": "붕괴: 스타레일 4.4 - 「적막이 깃든 순간, 울리는 경적」 새창",
-    "publisher": null,
-    "published_on": "2026-07-15",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1360281040.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -1392,14 +1328,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://kaleidorider.com/kr/index.html",
-    "game_name": "체이싱 칼레이도 라이더 CBT 새창",
-    "publisher": null,
-    "published_on": "2026-07-16",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1297614754.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://romc.gnjoy.com/",
     "game_name": "라그나로크M: Classic",
     "publisher": null,
@@ -1413,46 +1341,6 @@
     "publisher": null,
     "published_on": "2026-07-16",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1376044869.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://nikke-kr.com/",
-    "game_name": "승리의 여신: 니케 - Full Burst Live 콘서트 새창",
-    "publisher": null,
-    "published_on": "2026-07-18",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1243128149.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://s2026.siggraph.org/",
-    "game_name": "시그래프 2026 새창",
-    "publisher": null,
-    "published_on": "2026-07-20",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1775142063.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://uniteseoul.co.kr/",
-    "game_name": "유나이트 서울 2026 새창",
-    "publisher": null,
-    "published_on": "2026-07-21",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1982598483.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://cedec.cesa.or.jp/2026/en",
-    "game_name": "세덱 2026 새창",
-    "publisher": null,
-    "published_on": "2026-07-22",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1563256256.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://news.samsung.com/kr",
-    "game_name": "갤럭시 언팩 2026 새창",
-    "publisher": null,
-    "published_on": "2026-07-22",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1681505266.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -1576,14 +1464,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://en.chinajoy.net/",
-    "game_name": "차이나조이 2026 새창",
-    "publisher": null,
-    "published_on": "2026-07-31",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1983246961.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://phewphewgames.com/",
     "game_name": "어노말리 프레지던트",
     "publisher": null,
@@ -1640,14 +1520,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://bicfest.org/",
-    "game_name": "BIC2026 - 온라인 페스티벌 새창",
-    "publisher": null,
-    "published_on": "2026-08-07",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1582871995.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://www.playstation.com/ko-kr/games/marvel-tokon-fighting-souls",
     "game_name": "마블 투혼: 파이팅 소울즈",
     "publisher": null,
@@ -1661,14 +1533,6 @@
     "publisher": null,
     "published_on": "2026-08-07",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1345289008.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://cafe.naver.com/genshin",
-    "game_name": "원신 7.0 - 신이 사랑하지 않은 설국 새창",
-    "publisher": null,
-    "published_on": "2026-08-12",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1480147338.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -1760,14 +1624,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://bicfest.org/index",
-    "game_name": "BIC2026 - 오프라인 페스티벌 새창",
-    "publisher": null,
-    "published_on": "2026-08-15",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1957739897.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://frogwares.com/",
     "game_name": "더 싱킹 시티 2",
     "publisher": null,
@@ -1816,14 +1672,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://epiclounge.co.kr/unrealfest2026/index.php",
-    "game_name": "언리얼 페스트 서울 2026 새창",
-    "publisher": null,
-    "published_on": "2026-08-20",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1127891799.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://indieformer.com/scorchpot",
     "game_name": "피드 더 스코치팟",
     "publisher": null,
@@ -1864,19 +1712,11 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://www.gamescom.global/en/info/exhibitors/shows-and-events/gamescom-opening-night-live",
-    "game_name": "게임스컴 오프닝 나이트 라이브 새창",
-    "publisher": null,
-    "published_on": "2026-08-25",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1217276064.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.gamescom.global/en",
-    "game_name": "게임스컴 2026 새창",
+    "url": "https://zeus.com2us.com/",
+    "game_name": "제우스: 오만의 신",
     "publisher": null,
     "published_on": "2026-08-26",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1199712926.jpg",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1149118444.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -1984,14 +1824,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://west.paxsite.com/en-us.html",
-    "game_name": "PAX WEST 새창",
-    "publisher": null,
-    "published_on": "2026-09-05",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1455242462.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://eclipse.onstove.com/ko/home",
     "game_name": "이클립스: 더 어웨이크닝",
     "publisher": null,
@@ -2008,35 +1840,11 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://gxg.world/",
-    "game_name": "GXG 2026 새창",
-    "publisher": null,
-    "published_on": "2026-09-11",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1518721811.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.blizzard.com/ko-kr",
-    "game_name": "블리즈컨 2026 새창",
-    "publisher": null,
-    "published_on": "2026-09-13",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1902636955.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://www.playstation.com/ko-kr/games/marvels-wolverine",
     "game_name": "마블 울버린",
     "publisher": null,
     "published_on": "2026-09-15",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1945204850.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://events.nikkeibp.co.jp/tgs/2026/kr/exhibitor",
-    "game_name": "도쿄 게임쇼 2026 새창",
-    "publisher": null,
-    "published_on": "2026-09-17",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1805593402.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -2077,14 +1885,6 @@
     "publisher": null,
     "published_on": "2026-09-24",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1636831568.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://valorantesports.com/ko-KR",
-    "game_name": "VCT 챔피언스 상하이 새창",
-    "publisher": null,
-    "published_on": "2026-09-24",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1211210194.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -2152,14 +1952,6 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://aus.paxsite.com/en-us.html",
-    "game_name": "PAX AUS 새창",
-    "publisher": null,
-    "published_on": "2026-10-09",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1684614889.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://newblood.games/",
     "game_name": "테네브리스 솜니아",
     "publisher": null,
@@ -2181,14 +1973,6 @@
     "publisher": null,
     "published_on": "2026-10-23",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1773947141.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://gamescom.asia/",
-    "game_name": "게임스컴 아시아 새창",
-    "publisher": null,
-    "published_on": "2026-10-29",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine/calendar/2026/i1953355361.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {

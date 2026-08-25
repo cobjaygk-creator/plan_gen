@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T06:55:49.797080+00:00",
+  "generated_at": "2026-08-25T07:03:03.756500+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-25",
@@ -7,12 +7,12 @@
       "periodLabel": "오늘",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 129,
-        "analyzed": 60,
-        "pending": 69,
-        "completionRate": 47,
+        "collected": 140,
+        "analyzed": 61,
+        "pending": 79,
+        "completionRate": 44,
         "analysisStatus": "PARTIAL",
-        "relevant": 43,
+        "relevant": 44,
         "issues": 16,
         "verifiedIssues": 6,
         "singleSourceIssues": 10
@@ -92,7 +92,7 @@
           {
             "topic": "기술",
             "game": 0,
-            "ai": 6
+            "ai": 7
           },
           {
             "topic": "투자",
@@ -194,7 +194,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -213,7 +213,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -232,7 +232,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -251,7 +251,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -394,19 +394,19 @@
               {
                 "outlet": "대한민국 정책브리핑",
                 "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
               },
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -419,13 +419,13 @@
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -438,13 +438,13 @@
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -459,7 +459,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -472,7 +472,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -485,7 +485,7 @@
               {
                 "outlet": "대한민국 정책브리핑",
                 "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
               }
             ]
@@ -862,7 +862,7 @@
             {
               "outlet": "크래프톤",
               "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
             }
           ]
@@ -1116,7 +1116,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "13시간 전",
+              "publishedAgo": "14시간 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -1147,7 +1147,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -1178,7 +1178,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -1209,7 +1209,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -1240,7 +1240,7 @@
             {
               "outlet": "대한민국 정책브리핑",
               "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
             }
           ]
@@ -1333,7 +1333,7 @@
             {
               "outlet": "TechCrunch",
               "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
-              "publishedAgo": "10시간 전",
+              "publishedAgo": "11시간 전",
               "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/"
             }
           ]
@@ -1398,12 +1398,12 @@
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 15,
+          "koreaArticleCount": 16,
           "globalArticleCount": 8,
           "koreaFocus": [
             {
               "topic": "AI",
-              "count": 3
+              "count": 4
             },
             {
               "topic": "FPS",
@@ -1430,12 +1430,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1451,12 +1451,12 @@
       "periodLabel": "최근 3일",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 302,
-        "analyzed": 65,
-        "pending": 237,
-        "completionRate": 22,
+        "collected": 313,
+        "analyzed": 66,
+        "pending": 247,
+        "completionRate": 21,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 46,
+        "relevant": 47,
         "issues": 16,
         "verifiedIssues": 8,
         "singleSourceIssues": 8
@@ -1536,7 +1536,7 @@
           {
             "topic": "기술",
             "game": 0,
-            "ai": 6
+            "ai": 7
           },
           {
             "topic": "투자",
@@ -1661,7 +1661,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -1680,7 +1680,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -1699,7 +1699,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -1718,7 +1718,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -1861,19 +1861,19 @@
               {
                 "outlet": "대한민국 정책브리핑",
                 "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
               },
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -1886,13 +1886,13 @@
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -1905,13 +1905,13 @@
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -1926,7 +1926,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -1939,7 +1939,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -1952,7 +1952,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "18시간 전",
+                "publishedAgo": "19시간 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -2329,7 +2329,7 @@
             {
               "outlet": "크래프톤",
               "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
             }
           ]
@@ -2583,7 +2583,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "13시간 전",
+              "publishedAgo": "14시간 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -2614,7 +2614,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -2645,7 +2645,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -2676,7 +2676,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -2707,7 +2707,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "18시간 전",
+              "publishedAgo": "19시간 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
@@ -2738,7 +2738,7 @@
             {
               "outlet": "대한민국 정책브리핑",
               "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
             }
           ]
@@ -2865,12 +2865,12 @@
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 16,
+          "koreaArticleCount": 17,
           "globalArticleCount": 9,
           "koreaFocus": [
             {
               "topic": "AI",
-              "count": 3
+              "count": 4
             },
             {
               "topic": "FPS",
@@ -2897,12 +2897,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -2974,12 +2974,12 @@
       "periodLabel": "이번 주",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 267,
-        "analyzed": 65,
-        "pending": 202,
+        "collected": 278,
+        "analyzed": 66,
+        "pending": 212,
         "completionRate": 24,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 46,
+        "relevant": 47,
         "issues": 16,
         "verifiedIssues": 8,
         "singleSourceIssues": 8
@@ -3059,7 +3059,7 @@
           {
             "topic": "기술",
             "game": 0,
-            "ai": 6
+            "ai": 7
           },
           {
             "topic": "투자",
@@ -3184,7 +3184,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -3203,7 +3203,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -3222,7 +3222,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -3241,7 +3241,7 @@
               {
                 "outlet": "크래프톤",
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
               }
             ]
@@ -3384,19 +3384,19 @@
               {
                 "outlet": "대한민국 정책브리핑",
                 "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-                "publishedAgo": "6시간 전",
+                "publishedAgo": "7시간 전",
                 "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
               },
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -3409,13 +3409,13 @@
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -3428,13 +3428,13 @@
               {
                 "outlet": "NVIDIA",
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
               },
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -3449,7 +3449,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -3462,7 +3462,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "15시간 전",
+                "publishedAgo": "16시간 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -3475,7 +3475,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "18시간 전",
+                "publishedAgo": "19시간 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -3852,7 +3852,7 @@
             {
               "outlet": "크래프톤",
               "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
             }
           ]
@@ -4106,7 +4106,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "13시간 전",
+              "publishedAgo": "14시간 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -4137,7 +4137,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -4168,7 +4168,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -4199,7 +4199,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "15시간 전",
+              "publishedAgo": "16시간 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -4230,7 +4230,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "18시간 전",
+              "publishedAgo": "19시간 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
@@ -4261,7 +4261,7 @@
             {
               "outlet": "대한민국 정책브리핑",
               "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-              "publishedAgo": "6시간 전",
+              "publishedAgo": "7시간 전",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
             }
           ]
@@ -4388,12 +4388,12 @@
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 16,
+          "koreaArticleCount": 17,
           "globalArticleCount": 9,
           "koreaFocus": [
             {
               "topic": "AI",
-              "count": 3
+              "count": 4
             },
             {
               "topic": "FPS",
@@ -4420,12 +4420,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
