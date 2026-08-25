@@ -388,7 +388,12 @@ def _collect_inven_calendar() -> list[dict]:
     dedicated per-publisher scraper (and its client-rendering/bot-block
     failure modes, e.g. Neowiz/Devsisters/Line Games) for every title.
     Only titles carrying that badge are collected; untagged calendar
-    entries are skipped rather than guessed at.
+    entries are skipped rather than guessed at. The calendar also lists
+    industry events/conferences (class="calendar__item--event", e.g.
+    CEDEC, a Galaxy Unpacked phone launch — confirmed live, both carry
+    a "홈페이지" link too) under the same list as actual game releases
+    (class="calendar__item--normal"); restricted to --normal so those
+    don't get stored as if they were games.
 
     Scans a rolling window (last month through 2 months ahead) rather than
     the site's full archive — old entries would just be dropped by
@@ -405,7 +410,7 @@ def _collect_inven_calendar() -> list[dict]:
         except Exception:
             continue
         soup = BeautifulSoup(raw.decode(charset, "replace"), "html.parser")
-        for item in soup.select("li.calendar__item"):
+        for item in soup.select("li.calendar__item--normal"):
             anchor = item.select_one("a.calendar__btn--homepage[href]")
             if not anchor:
                 continue
