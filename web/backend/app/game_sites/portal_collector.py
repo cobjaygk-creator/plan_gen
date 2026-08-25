@@ -44,6 +44,7 @@ PORTALS = {
     "KRAFTON": "https://www.krafton.com/en/games/",
     "PEARL_ABYSS": "https://www.pearlabyss.com/Company/About/Games",
     "WEMADE": "https://www.wemade.com/games",
+    "INVEN_CALENDAR": "https://www.inven.co.kr/webzine/calendar/",
 }
 # NCSOFT, Com2uS: their game-list sections are client-rendered after page
 # load (the games never appear in the raw HTML this module fetches with
@@ -355,6 +356,65 @@ def _collect_wemade() -> list[dict]:
     return rows
 
 
+_INVEN_DATE_RE = re.compile(r"(\d{1,2})/(\d{1,2})")
+
+
+def _add_months(base: date, months: int) -> date:
+    month_index = base.month - 1 + months
+    return date(base.year + month_index // 12, month_index % 12 + 1, 1)
+
+
+def _parse_inven_date(text: str, page_year: int) -> str | None:
+    match = _INVEN_DATE_RE.search(text or "")
+    if not match:
+        return None
+    try:
+        return date(page_year, int(match.group(1)), int(match.group(2))).isoformat()
+    except ValueError:
+        return None
+
+
+def _collect_inven_calendar() -> list[dict]:
+    """Inven's release calendar (per publisher's own choice, not ours) tags
+    each title with a "홈페이지" button linking to that game's real official
+    site — a ready-made cross-publisher index that sidesteps needing a
+    dedicated per-publisher scraper (and its client-rendering/bot-block
+    failure modes, e.g. Neowiz/Devsisters/Line Games) for every title.
+    Only titles carrying that badge are collected; untagged calendar
+    entries are skipped rather than guessed at.
+
+    Scans a rolling window (last month through 2 months ahead) rather than
+    the site's full archive — old entries would just be dropped by
+    refresh_portal_sites' RECENT_DAYS filter anyway, so fetching them costs
+    real requests for no benefit."""
+    rows: list[dict] = []
+    seen: set[str] = set()
+    today = date.today()
+    for offset in range(-1, 3):
+        month_date = _add_months(today, offset)
+        url = f"{PORTALS['INVEN_CALENDAR']}{month_date.year}/{month_date.month}/"
+        try:
+            raw, charset = _fetch(url)
+        except Exception:
+            continue
+        soup = BeautifulSoup(raw.decode(charset, "replace"), "html.parser")
+        for item in soup.select("li.calendar__item"):
+            anchor = item.select_one("a.calendar__btn--homepage[href]")
+            if not anchor:
+                continue
+            game_url = _normalize_url(anchor.get("href", ""))
+            if not game_url or game_url in seen:
+                continue
+            seen.add(game_url)
+            title_tag = item.select_one("h3.calendar__title")
+            image_tag = item.select_one("figure.calendar__figure img")
+            date_tag = item.select_one("div.calendar__date")
+            published = _parse_inven_date(date_tag.get_text(" ", strip=True) if date_tag else "", month_date.year)
+            label = title_tag.get_text(" ", strip=True) if title_tag else urlparse(game_url).netloc.split(".")[0]
+            rows.append({"url": game_url, "game_name": label[:100], "publisher": None, "published_on": published, "thumbnail_url": image_tag.get("src") if image_tag else None, "portal": "INVEN_CALENDAR"})
+    return rows
+
+
 def discover_portal_sites() -> tuple[list[dict], dict[str, str]]:
     rows: list[dict] = []
     errors: dict[str, str] = {}
@@ -368,6 +428,7 @@ def discover_portal_sites() -> tuple[list[dict], dict[str, str]]:
         "KRAFTON": _collect_krafton,
         "PEARL_ABYSS": _collect_pearlabyss,
         "WEMADE": _collect_wemade,
+        "INVEN_CALENDAR": _collect_inven_calendar,
     }
     for name, collector in collectors.items():
         try:
