@@ -2590,5 +2590,21 @@
     "evidence_url": "https://www.pearlabyss.com/Company/About/Games",
     "status": "ACTIVE",
     "verified_at": "2026-08-25T06:38:52.817344+00:00"
+  },
+  {
+    "id": "portal:INVEN_CALENDAR:163",
+    "game_name": "하우 투 피시",
+    "site_name": "Dazed Games",
+    "site_type": "OFFICIAL",
+    "url": "https://dazed.games/",
+    "thumbnail_url": "https://dazed.games/assets/images/share.jpg?v=626b2b6c",
+    "publisher": null,
+    "platform": [],
+    "discovered_at": "2026-08-25T13:22:11.606176+00:00",
+    "published_on": "2026-08-20",
+    "source": "OFFICIAL_PORTAL:INVEN_CALENDAR",
+    "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
+    "status": "ACTIVE",
+    "verified_at": "2026-08-25T13:22:11.606176+00:00"
   }
 ]
