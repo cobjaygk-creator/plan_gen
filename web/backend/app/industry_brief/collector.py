@@ -3,16 +3,27 @@ URL dedup -> store). No AI classification/importance scoring yet (that's
 Phase 3) and no scheduler (Phase 7) — this is meant to be run by hand via
 web/backend/industry_brief_collect.py until then, matching the spec's
 "관리자 수동 재생성" MVP allowance."""
+import ssl
 import time
+import urllib.request
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 
+import certifi
 import feedparser
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .models import Article
 from .sources import SOURCES, Source
+
+# Some feeds (e.g. openai.com, techcrunch.com) chain through a root CA that
+# Windows' own certificate store doesn't trust on this machine, so urllib's
+# default SSL context rejects them with "certificate has expired" even
+# though the certificate is valid. certifi ships an up-to-date bundle that
+# does trust it, so fetch feeds with an explicit context built from it
+# instead of relying on the OS trust store.
+_SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
 
 @dataclass
@@ -50,9 +61,10 @@ def _collect_one(db: Session, source: Source) -> SourceResult:
                 ),
                 "Accept-Language": "ko-KR,ko;q=0.9",
             }
+        handlers = [urllib.request.HTTPSHandler(context=_SSL_CONTEXT)]
         feed = (
-            feedparser.parse(source.feed_url, request_headers=request_headers)
-            if request_headers else feedparser.parse(source.feed_url)
+            feedparser.parse(source.feed_url, request_headers=request_headers, handlers=handlers)
+            if request_headers else feedparser.parse(source.feed_url, handlers=handlers)
         )
     except Exception as e:
         return SourceResult(source.name, 0, 0, 0, error=f"{type(e).__name__}: {e}")
