@@ -91,7 +91,7 @@ def test_collect_records_error_without_crashing_other_sources(db_factory):
     good_feed = _fake_feed([_entry("기사", "https://example.com/1")])
     other_source = Source("Broken Outlet", "https://broken.example.com/feed", "AI", "media")
 
-    def fake_parse(url):
+    def fake_parse(url, **kwargs):
         if "broken" in url:
             raise ConnectionError("피드 서버에 연결할 수 없음")
         return good_feed
