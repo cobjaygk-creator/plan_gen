@@ -2606,5 +2606,21 @@
     "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
     "status": "ACTIVE",
     "verified_at": "2026-08-25T13:22:11.606176+00:00"
+  },
+  {
+    "id": "portal:INVEN_CALENDAR:164",
+    "game_name": "엘든 링: 빛바랜 자 에디션",
+    "site_name": "ELDEN RING Tarnished Edition | Official Website (EN)",
+    "site_type": "OFFICIAL",
+    "url": "https://en.bandainamcoent.eu/elden-ring/elden-ring-tarnished-edition",
+    "thumbnail_url": "https://static.bandainamcoent.eu/high/elden-ring/elden-ring-tarnished-edition/00-product-page/ERTE-Header-Mobile-2.png",
+    "publisher": null,
+    "platform": [],
+    "discovered_at": "2026-08-25T19:09:53.123289+00:00",
+    "published_on": "2026-08-28",
+    "source": "OFFICIAL_PORTAL:INVEN_CALENDAR",
+    "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
+    "status": "ACTIVE",
+    "verified_at": "2026-08-25T19:09:53.123289+00:00"
   }
 ]
