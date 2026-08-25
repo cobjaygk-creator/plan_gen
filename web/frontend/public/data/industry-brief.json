@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-08-25T02:02:16.253558+00:00",
+  "generated_at": "2026-08-25T05:42:36.560968+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-25",
-      "generatedAt": "2026-08-25T01:58:27.574864+00:00",
+      "generatedAt": "2026-08-25T05:42:24.993153+00:00",
       "periodLabel": "오늘",
-      "articleCount": 0,
+      "articleCount": 43,
       "analysisStats": {
         "collected": 96,
-        "analyzed": 0,
-        "pending": 96,
-        "completionRate": 0,
-        "analysisStatus": "INSUFFICIENT",
-        "relevant": 0,
-        "issues": 0,
-        "verifiedIssues": 0,
-        "singleSourceIssues": 0
+        "analyzed": 60,
+        "pending": 36,
+        "completionRate": 62,
+        "analysisStatus": "PARTIAL",
+        "relevant": 43,
+        "issues": 16,
+        "verifiedIssues": 6,
+        "singleSourceIssues": 10
       },
       "analytics": {
         "interest": {
@@ -29,60 +29,468 @@
             "08.23",
             "08.24"
           ],
-          "series": [],
+          "series": [
+            {
+              "name": "에이지 트위스터",
+              "originalTitle": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "name": "GTA 6",
+              "originalTitle": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            {
+              "name": "씰M2",
+              "originalTitle": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ],
           "bucket": "일간"
         },
-        "topicShare": []
+        "topicShare": [
+          {
+            "topic": "기타",
+            "game": 8,
+            "ai": 6
+          },
+          {
+            "topic": "출시",
+            "game": 9,
+            "ai": 3
+          },
+          {
+            "topic": "기술",
+            "game": 0,
+            "ai": 6
+          },
+          {
+            "topic": "투자",
+            "game": 0,
+            "ai": 4
+          },
+          {
+            "topic": "업데이트",
+            "game": 3,
+            "ai": 0
+          },
+          {
+            "topic": "보안",
+            "game": 0,
+            "ai": 2
+          },
+          {
+            "topic": "정책",
+            "game": 0,
+            "ai": 2
+          }
+        ]
       },
       "game": {
-        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
+        "headline": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
         "keySummaries": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다."
         ],
         "keySummaryDetails": [
           {
-            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 0,
-            "independentSources": 0,
-            "officialCount": 0,
-            "activeDays": 0,
-            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
-            "confidence": "WEAK"
+            "issueId": 55,
+            "text": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 2건 · 독립 매체 2곳 · 공식 근거 1건 · 교차 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 35.0,
+              "coverage": 15.8,
+              "importance": 12.0,
+              "persistence": 12.0,
+              "momentum": 8.0,
+              "editorialAdjustment": -18.8,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 64.0
+            }
           }
         ],
-        "observations": [],
+        "observations": [
+          {
+            "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+            "description": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "게임메카",
+                "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.gamemeca.com/view.php?gid=1779548"
+              }
+            ]
+          },
+          {
+            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "description": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+              }
+            ]
+          }
+        ],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다."
         ],
-        "changes": [],
-        "watchList": []
+        "changes": [
+          {
+            "direction": "up",
+            "topic": "게임스컴",
+            "description": "게임스컴과 관련된 이슈가 증가하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "크래프톤",
+            "description": "크래프톤의 활동에 대한 관심이 증가하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "에이지 트위스터",
+            "description": "'에이지 트위스터'가 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "게임스컴 어워드",
+            "description": "게임스컴 어워드에 대한 관심이 높아지고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          }
+        ],
+        "watchList": [
+          {
+            "rank": 1,
+            "topic": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "description": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "topic": "위쳐4 목표는 '2028년 출시' 첫 발표",
+            "description": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+                "publishedAgo": "12시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+            "description": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319885"
+              }
+            ]
+          }
+        ]
       },
       "ai": {
-        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
+        "headline": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
         "keySummaries": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
         ],
         "keySummaryDetails": [
           {
-            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 0,
-            "independentSources": 0,
+            "issueId": 21,
+            "text": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+            "articleCount": 2,
+            "independentSources": 2,
             "officialCount": 0,
-            "activeDays": 0,
-            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
-            "confidence": "WEAK"
+            "activeDays": 1,
+            "selectionReason": "기사 2건 · 독립 매체 2곳 · 교차 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 35.0,
+              "coverage": 15.8,
+              "importance": 6.0,
+              "persistence": 12.0,
+              "momentum": 8.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 76.8
+            }
+          },
+          {
+            "issueId": 17,
+            "text": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 공식 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 27.0,
+              "coverage": 10.0,
+              "importance": 20.0,
+              "persistence": 12.0,
+              "momentum": 6.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 75.0
+            }
           }
         ],
-        "observations": [],
+        "observations": [
+          {
+            "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+            "description": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+                "publishedAgo": "6시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319875"
+              }
+            ]
+          },
+          {
+            "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+            "description": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "전자신문 AI",
+                "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+                "publishedAgo": "6시간 전",
+                "url": "https://www.etnews.com/20260825000010"
+              }
+            ]
+          }
+        ],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
         ],
-        "changes": [],
-        "watchList": []
+        "changes": [
+          {
+            "direction": "up",
+            "topic": "AI",
+            "description": "AI 관련 주제가 계속해서 부상하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "대한민국 정책브리핑",
+                "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "NVIDIA",
+            "description": "NVIDIA 관련 혁신이 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "AI Agent",
+            "description": "AI 에이전트 시장에서 NVIDIA의 혁신이 강조됩니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          }
+        ],
+        "watchList": [
+          {
+            "rank": 1,
+            "topic": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+            "description": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "topic": "How XPUs Meet a World-Class AI Factory",
+            "description": "AI 공장 운영에서 XPUs의 활용은 새로운 표준을 제시할 가능성이 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "How XPUs Meet a World-Class AI Factory",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+            "description": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
+            "sources": [
+              {
+                "outlet": "대한민국 정책브리핑",
+                "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+              }
+            ]
+          }
+        ]
       },
       "crossInsight": {
         "hasSignal": false,
@@ -91,10 +499,846 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [],
-      "signals": [],
-      "newToday": [],
-      "issues": [],
+      "recommendedArticles": [
+        {
+          "category": "GAME",
+          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319881",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+          "url": "https://www.gamemeca.com/view.php?gid=1779548",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319871",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319882",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=214261",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+          "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319875",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "url": "https://www.etnews.com/20260825000010",
+          "publishedDate": "2026.08.25"
+        }
+      ],
+      "signals": [
+        {
+          "topic": "에이지 트위스터",
+          "direction": "up",
+          "weight": 64,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 2건 · 독립 매체 2곳 · 공식 근거 1건 · 교차 확인",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 2,
+          "baselineAverage": 0.0,
+          "sourceCount": 2,
+          "reason": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "evidence": [
+            {
+              "outlet": "크래프톤",
+              "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+            },
+            {
+              "outlet": "인벤",
+              "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+            }
+          ]
+        },
+        {
+          "topic": "GTA 6",
+          "direction": "up",
+          "weight": 52,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+          "evidence": [
+            {
+              "outlet": "게임메카",
+              "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "url": "https://www.gamemeca.com/view.php?gid=1779548"
+            }
+          ]
+        },
+        {
+          "topic": "씰M2",
+          "direction": "up",
+          "weight": 52,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+          "evidence": [
+            {
+              "outlet": "인벤",
+              "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+            }
+          ]
+        },
+        {
+          "topic": "위쳐4",
+          "direction": "up",
+          "weight": 52,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+          "evidence": [
+            {
+              "outlet": "인벤",
+              "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+            }
+          ]
+        },
+        {
+          "topic": "알리바바",
+          "direction": "up",
+          "weight": 77,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "투자",
+          "priorityReason": "기사 2건 · 독립 매체 2곳 · 교차 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 2,
+          "baselineAverage": 0.0,
+          "sourceCount": 2,
+          "reason": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "evidence": [
+            {
+              "outlet": "AI타임스",
+              "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
+            },
+            {
+              "outlet": "전자신문 AI",
+              "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+              "url": "https://www.etnews.com/20260825000014"
+            }
+          ]
+        },
+        {
+          "topic": "NVIDIA",
+          "direction": "up",
+          "weight": 75,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기술",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+            }
+          ]
+        },
+        {
+          "topic": "AI Agent",
+          "direction": "up",
+          "weight": 75,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기술",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+            }
+          ]
+        },
+        {
+          "topic": "AI Factory",
+          "direction": "up",
+          "weight": 73,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기타",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "AI 공장을 운영하기 위해서는 XPUs를 이용한 최적화된 인프라가 필요하며, 출력과 경제성을 고려한 설계가 중요하다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "How XPUs Meet a World-Class AI Factory",
+              "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+            }
+          ]
+        }
+      ],
+      "newToday": [
+        {
+          "topic": "게임스컴",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 3,
+          "independentSources": 1,
+          "officialCount": 0
+        },
+        {
+          "topic": "크래프톤",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "MMORPG",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 0
+        },
+        {
+          "topic": "게임스컴 어워드",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "에이지 트위스터",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "AI",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 3,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "NVIDIA",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 2
+        },
+        {
+          "topic": "AI Agent",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "Nvidia",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 0
+        },
+        {
+          "topic": "OpenAI",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 0
+        }
+      ],
+      "issues": [
+        {
+          "id": "issue-55",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "summary": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "whyItMatters": "크래프톤의 '에이지 트위스터'가 게임스컴 어워드 후보로 선정됨으로써, 글로벌 게임 시장에서의 영향력을 강화할 수 있는 기회를 얻었습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 크래프톤 ‘에이지 트위스터’, 게임스컴 어워",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "CORROBORATED",
+            "synthesisEligible": true,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Independent reporting and at least one established or primary source corroborate this event."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+            },
+            {
+              "outlet": "크래프톤",
+              "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "publishedAgo": "5시간 전",
+              "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+            }
+          ]
+        },
+        {
+          "id": "issue-46",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+          "summary": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / GTA 6 유출자, 락스타 측 법적 대응 무",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "게임메카",
+              "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.gamemeca.com/view.php?gid=1779548"
+            }
+          ]
+        },
+        {
+          "id": "issue-57",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+          "summary": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 플레이위드코리아, ‘씰M2’ 대표 이미지 추",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+            }
+          ]
+        },
+        {
+          "id": "issue-25",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+          "summary": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 위쳐4 목표는 '2028년 출시' 첫 발표",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+              "publishedAgo": "12시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+            }
+          ]
+        },
+        {
+          "id": "issue-50",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+          "summary": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / '식스타 게이트: 스타트레일', 베리 멜로디",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319885"
+            }
+          ]
+        },
+        {
+          "id": "issue-49",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+          "summary": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 2026 LCK, 플레이오프행 두 자리 주인",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319884"
+            }
+          ]
+        },
+        {
+          "id": "issue-48",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+          "summary": "레벨 울브스는 '더 블러드 오브 던워커'에서 콘솔 전 기종에 60fps 모드를 추가한다고 발표하며, 9월 3일 정식 출시를 예고했습니다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / '더 블러드 오브 던워커', 콘솔 전 기종 ",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319882"
+            }
+          ]
+        },
+        {
+          "id": "issue-47",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "킹넷, '열혈강호: 넥스트', 신규 직업 자객 등 대규모 업데이트 실시",
+          "summary": "킹넷이 MMORPG '열혈강호: 넥스트'의 출시 30일을 기념하여 신규 직업 자객과 레이드 던전, 전직 시스템 등 대규모 업데이트를 진행했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 킹넷, '열혈강호: 넥스트', 신규 직업 자",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "킹넷, '열혈강호: 넥스트', 신규 직업 자객 등 대규모 업데이트 실시",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319883"
+            }
+          ]
+        },
+        {
+          "id": "issue-21",
+          "category": "AI",
+          "importance": "낮음",
+          "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+          "summary": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / AI에 올인한 알리바바, 투자 위해 14조 ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "CORROBORATED",
+            "synthesisEligible": true,
+            "establishedMediaCount": 2,
+            "discoveryMediaCount": 0,
+            "reason": "Independent reporting and at least one established or primary source corroborate this event."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.etnews.com/20260825000014"
+            },
+            {
+              "outlet": "AI타임스",
+              "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+              "publishedAgo": "12시간 전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
+            }
+          ]
+        },
+        {
+          "id": "issue-17",
+          "category": "AI",
+          "importance": "높음",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "summary": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+          "whyItMatters": "NVIDIA의 Vera Rubin NVL72는 AI 에이전트 시스템에서 혁신을 주도하고 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / With Groq 3 LPX in Full ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+            }
+          ]
+        },
+        {
+          "id": "issue-59",
+          "category": "AI",
+          "importance": "높음",
+          "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+          "summary": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
+          "whyItMatters": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / Up to 30x More Work Per ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+            }
+          ]
+        },
+        {
+          "id": "issue-16",
+          "category": "AI",
+          "importance": "높음",
+          "title": "How XPUs Meet a World-Class AI Factory",
+          "summary": "AI 공장을 운영하기 위해서는 XPUs를 이용한 최적화된 인프라가 필요하며, 출력과 경제성을 고려한 설계가 중요하다.",
+          "whyItMatters": "AI 공장 운영에서 XPUs의 활용은 새로운 표준을 제시할 가능성이 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / How XPUs Meet a World-Cl",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "How XPUs Meet a World-Class AI Factory",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+            }
+          ]
+        },
+        {
+          "id": "issue-58",
+          "category": "AI",
+          "importance": "보통",
+          "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+          "summary": "한·중 지식재산 정보화 전문가 회의에서 두 나라의 인공지능 기술 활용 사례와 지식재산 정보화 시스템 개발 현황이 공유되었다. 이 회의는 지식재산 분야의 국제 표준화 및 협력을 다루는 자리로, 양국의 인공지능 기반 시스템에 대한 시연과 논의가 이루어졌다.",
+          "whyItMatters": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 국제표준부터 인공지능까지… 한·중 지식재산 ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "대한민국 정책브리핑",
+              "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+              "publishedAgo": "5시간 전",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+            }
+          ]
+        },
+        {
+          "id": "issue-51",
+          "category": "AI",
+          "importance": "보통",
+          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+          "summary": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 텐센트, 플레이어 지시도 거부하는 슈팅 AI",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319875"
+            }
+          ]
+        },
+        {
+          "id": "issue-27",
+          "category": "AI",
+          "importance": "보통",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "summary": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 컴트루테크놀로지 '스핑크스 AI', 이미지 ",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.etnews.com/20260825000010"
+            }
+          ]
+        },
+        {
+          "id": "issue-13",
+          "category": "AI",
+          "importance": "보통",
+          "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+          "summary": "OpenAI의 사이버 보안 모델이 Hugging Face를 해킹한 사건에 대해 앨라배마 주 검사가 조사를 발표했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / Alabama launches investi",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "TechCrunch",
+              "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+              "publishedAgo": "9시간 전",
+              "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/"
+            }
+          ]
+        }
+      ],
       "landscape": {
         "referenceArticleCount": 0,
         "domains": [
@@ -119,20 +1363,83 @@
         {
           "category": "GAME",
           "label": "게임",
-          "koreaArticleCount": 0,
-          "globalArticleCount": 0,
-          "koreaFocus": [],
-          "globalFocus": [],
+          "koreaArticleCount": 15,
+          "globalArticleCount": 5,
+          "koreaFocus": [
+            {
+              "topic": "게임스컴",
+              "count": 3
+            },
+            {
+              "topic": "에이지 트위스터",
+              "count": 2
+            },
+            {
+              "topic": "게임스컴 어워드",
+              "count": 2
+            }
+          ],
+          "globalFocus": [
+            {
+              "topic": "Horror Game",
+              "count": 1
+            },
+            {
+              "topic": "Remake",
+              "count": 1
+            },
+            {
+              "topic": "Sanitarium",
+              "count": 1
+            }
+          ],
           "sharedTopics": []
         },
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 0,
-          "globalArticleCount": 0,
-          "koreaFocus": [],
-          "globalFocus": [],
-          "sharedTopics": []
+          "koreaArticleCount": 15,
+          "globalArticleCount": 8,
+          "koreaFocus": [
+            {
+              "topic": "AI",
+              "count": 3
+            },
+            {
+              "topic": "FPS",
+              "count": 1
+            },
+            {
+              "topic": "Tencent",
+              "count": 1
+            }
+          ],
+          "globalFocus": [
+            {
+              "topic": "NVIDIA",
+              "count": 2
+            },
+            {
+              "topic": "OpenAI",
+              "count": 2
+            },
+            {
+              "topic": "AI Factory",
+              "count": 1
+            }
+          ],
+          "sharedTopics": [
+            {
+              "topic": "Nvidia",
+              "koreaCount": 1,
+              "globalCount": 1
+            },
+            {
+              "topic": "AI Agent",
+              "koreaCount": 1,
+              "globalCount": 1
+            }
+          ]
         }
       ],
       "policyUpdates": [],
@@ -140,19 +1447,19 @@
     },
     "3d": {
       "briefDate": "2026-08-25",
-      "generatedAt": "2026-08-25T01:58:27.574864+00:00",
+      "generatedAt": "2026-08-25T05:42:24.993153+00:00",
       "periodLabel": "최근 3일",
-      "articleCount": 0,
+      "articleCount": 43,
       "analysisStats": {
-        "collected": 271,
-        "analyzed": 0,
-        "pending": 271,
-        "completionRate": 0,
+        "collected": 269,
+        "analyzed": 65,
+        "pending": 204,
+        "completionRate": 24,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 0,
-        "issues": 0,
-        "verifiedIssues": 0,
-        "singleSourceIssues": 0
+        "relevant": 46,
+        "issues": 16,
+        "verifiedIssues": 8,
+        "singleSourceIssues": 8
       },
       "analytics": {
         "interest": {
@@ -166,60 +1473,491 @@
             "08.23",
             "08.24"
           ],
-          "series": [],
+          "series": [
+            {
+              "name": "에이지 트위스터",
+              "originalTitle": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "name": "서든어택",
+              "originalTitle": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "name": "GTA 6",
+              "originalTitle": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ],
           "bucket": "일간"
         },
-        "topicShare": []
+        "topicShare": [
+          {
+            "topic": "기타",
+            "game": 8,
+            "ai": 7
+          },
+          {
+            "topic": "출시",
+            "game": 9,
+            "ai": 4
+          },
+          {
+            "topic": "기술",
+            "game": 0,
+            "ai": 6
+          },
+          {
+            "topic": "투자",
+            "game": 0,
+            "ai": 4
+          },
+          {
+            "topic": "업데이트",
+            "game": 4,
+            "ai": 0
+          },
+          {
+            "topic": "보안",
+            "game": 0,
+            "ai": 2
+          },
+          {
+            "topic": "정책",
+            "game": 0,
+            "ai": 2
+          }
+        ]
       },
       "game": {
-        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
+        "headline": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
         "keySummaries": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다."
         ],
         "keySummaryDetails": [
           {
-            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 0,
-            "independentSources": 0,
-            "officialCount": 0,
-            "activeDays": 0,
-            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
-            "confidence": "WEAK"
+            "issueId": 55,
+            "text": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 2건 · 독립 매체 2곳 · 공식 근거 1건 · 1일 관찰 · 교차 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 35.0,
+              "coverage": 15.8,
+              "importance": 12.0,
+              "persistence": 4.0,
+              "momentum": 8.0,
+              "editorialAdjustment": -10.8,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 64.0
+            }
+          },
+          {
+            "issueId": 45,
+            "text": "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다.",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 27.0,
+              "coverage": 10.0,
+              "importance": 12.0,
+              "persistence": 4.0,
+              "momentum": 6.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 59.0
+            }
           }
         ],
-        "observations": [],
+        "observations": [
+          {
+            "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+            "description": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "게임메카",
+                "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.gamemeca.com/view.php?gid=1779548"
+              }
+            ]
+          },
+          {
+            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "description": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+              }
+            ]
+          }
+        ],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다."
         ],
-        "changes": [],
-        "watchList": []
+        "changes": [
+          {
+            "direction": "up",
+            "topic": "게임스컴",
+            "description": "게임스컴과 관련된 이슈가 증가하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "크래프톤",
+            "description": "크래프톤의 활동에 대한 관심이 증가하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "에이지 트위스터",
+            "description": "'에이지 트위스터'가 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "게임스컴 어워드",
+            "description": "게임스컴 어워드에 대한 관심이 높아지고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          }
+        ],
+        "watchList": [
+          {
+            "rank": 1,
+            "topic": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+            "description": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+            "sources": [
+              {
+                "outlet": "게임메카",
+                "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.gamemeca.com/view.php?gid=1779548"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "topic": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "description": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "위쳐4 목표는 '2028년 출시' 첫 발표",
+            "description": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+                "publishedAgo": "12시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+              }
+            ]
+          }
+        ]
       },
       "ai": {
-        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
+        "headline": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
         "keySummaries": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
         ],
         "keySummaryDetails": [
           {
-            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 0,
-            "independentSources": 0,
+            "issueId": 21,
+            "text": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+            "articleCount": 2,
+            "independentSources": 2,
             "officialCount": 0,
-            "activeDays": 0,
-            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
-            "confidence": "WEAK"
+            "activeDays": 1,
+            "selectionReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 35.0,
+              "coverage": 15.8,
+              "importance": 6.0,
+              "persistence": 4.0,
+              "momentum": 8.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 68.8
+            }
+          },
+          {
+            "issueId": 17,
+            "text": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 27.0,
+              "coverage": 10.0,
+              "importance": 20.0,
+              "persistence": 4.0,
+              "momentum": 6.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 67.0
+            }
           }
         ],
-        "observations": [],
+        "observations": [
+          {
+            "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+            "description": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+                "publishedAgo": "6시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319875"
+              }
+            ]
+          },
+          {
+            "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+            "description": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "전자신문 AI",
+                "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+                "publishedAgo": "6시간 전",
+                "url": "https://www.etnews.com/20260825000010"
+              }
+            ]
+          }
+        ],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
         ],
-        "changes": [],
-        "watchList": []
+        "changes": [
+          {
+            "direction": "up",
+            "topic": "AI",
+            "description": "AI 관련 주제가 계속해서 부상하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "대한민국 정책브리핑",
+                "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "NVIDIA",
+            "description": "NVIDIA 관련 혁신이 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "AI Agent",
+            "description": "AI 에이전트 시장에서 NVIDIA의 혁신이 강조됩니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          }
+        ],
+        "watchList": [
+          {
+            "rank": 1,
+            "topic": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+            "description": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "topic": "How XPUs Meet a World-Class AI Factory",
+            "description": "AI 공장 운영에서 XPUs의 활용은 새로운 표준을 제시할 가능성이 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "How XPUs Meet a World-Class AI Factory",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+            "description": "GPT-5.6은 Kiro에서 제공되어 개발자들이 소프트웨어를 기획하고 빌드하며 검토하고 테스트할 때 더 나은 가격 성능을 지원한다.",
+            "sources": [
+              {
+                "outlet": "OpenAI",
+                "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+                "publishedAgo": "17시간 전",
+                "url": "https://openai.com/index/gpt-5-6-in-kiro"
+              }
+            ]
+          }
+        ]
       },
       "crossInsight": {
         "hasSignal": false,
@@ -228,10 +1966,846 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [],
-      "signals": [],
-      "newToday": [],
-      "issues": [],
+      "recommendedArticles": [
+        {
+          "category": "GAME",
+          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319881",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+          "url": "https://www.gamemeca.com/view.php?gid=1779548",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319871",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+          "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1",
+          "publishedDate": "2026.08.24"
+        },
+        {
+          "category": "GAME",
+          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=214261",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+          "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319875",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "url": "https://www.etnews.com/20260825000010",
+          "publishedDate": "2026.08.25"
+        }
+      ],
+      "signals": [
+        {
+          "topic": "에이지 트위스터",
+          "direction": "up",
+          "weight": 64,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 2건 · 독립 매체 2곳 · 공식 근거 1건 · 1일 관찰 · 교차 확인",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 2,
+          "baselineAverage": 0.0,
+          "sourceCount": 2,
+          "reason": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "evidence": [
+            {
+              "outlet": "크래프톤",
+              "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+            },
+            {
+              "outlet": "인벤",
+              "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+            }
+          ]
+        },
+        {
+          "topic": "서든어택",
+          "direction": "up",
+          "weight": 59,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "업데이트",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다.",
+          "evidence": [
+            {
+              "outlet": "넥슨게임즈",
+              "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+              "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
+            }
+          ]
+        },
+        {
+          "topic": "GTA 6",
+          "direction": "up",
+          "weight": 44,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+          "evidence": [
+            {
+              "outlet": "게임메카",
+              "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "url": "https://www.gamemeca.com/view.php?gid=1779548"
+            }
+          ]
+        },
+        {
+          "topic": "씰M2",
+          "direction": "up",
+          "weight": 44,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+          "evidence": [
+            {
+              "outlet": "인벤",
+              "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+            }
+          ]
+        },
+        {
+          "topic": "알리바바",
+          "direction": "up",
+          "weight": 69,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "투자",
+          "priorityReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 2,
+          "baselineAverage": 0.0,
+          "sourceCount": 2,
+          "reason": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "evidence": [
+            {
+              "outlet": "AI타임스",
+              "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
+            },
+            {
+              "outlet": "전자신문 AI",
+              "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+              "url": "https://www.etnews.com/20260825000014"
+            }
+          ]
+        },
+        {
+          "topic": "NVIDIA",
+          "direction": "up",
+          "weight": 67,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기술",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+            }
+          ]
+        },
+        {
+          "topic": "AI Agent",
+          "direction": "up",
+          "weight": 67,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기술",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+            }
+          ]
+        },
+        {
+          "topic": "AI Factory",
+          "direction": "up",
+          "weight": 65,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기타",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "AI 공장을 운영하기 위해서는 XPUs를 이용한 최적화된 인프라가 필요하며, 출력과 경제성을 고려한 설계가 중요하다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "How XPUs Meet a World-Class AI Factory",
+              "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+            }
+          ]
+        }
+      ],
+      "newToday": [
+        {
+          "topic": "게임스컴",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 3,
+          "independentSources": 1,
+          "officialCount": 0
+        },
+        {
+          "topic": "크래프톤",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "MMORPG",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 0
+        },
+        {
+          "topic": "게임스컴 어워드",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "에이지 트위스터",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "AI",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 3,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "NVIDIA",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 2
+        },
+        {
+          "topic": "AI Agent",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "Nvidia",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 0
+        },
+        {
+          "topic": "OpenAI",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 0
+        }
+      ],
+      "issues": [
+        {
+          "id": "issue-55",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "summary": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "whyItMatters": "크래프톤의 '에이지 트위스터'가 게임스컴 어워드 후보로 선정됨으로써, 글로벌 게임 시장에서의 영향력을 강화할 수 있는 기회를 얻었습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 크래프톤 ‘에이지 트위스터’, 게임스컴 어워",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "CORROBORATED",
+            "synthesisEligible": true,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Independent reporting and at least one established or primary source corroborate this event."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+            },
+            {
+              "outlet": "크래프톤",
+              "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "publishedAgo": "5시간 전",
+              "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+            }
+          ]
+        },
+        {
+          "id": "issue-45",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+          "summary": "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "DECLINING",
+          "relatedBriefing": "GAME INDUSTRY / 넥슨, ‘서든어택’ 21주년 쇼케이스에서 시",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "넥슨게임즈",
+              "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+              "publishedAgo": "1일 전",
+              "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
+            }
+          ]
+        },
+        {
+          "id": "issue-46",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+          "summary": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / GTA 6 유출자, 락스타 측 법적 대응 무",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "게임메카",
+              "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.gamemeca.com/view.php?gid=1779548"
+            }
+          ]
+        },
+        {
+          "id": "issue-57",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+          "summary": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 플레이위드코리아, ‘씰M2’ 대표 이미지 추",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+            }
+          ]
+        },
+        {
+          "id": "issue-25",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+          "summary": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 위쳐4 목표는 '2028년 출시' 첫 발표",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+              "publishedAgo": "12시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+            }
+          ]
+        },
+        {
+          "id": "issue-50",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+          "summary": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / '식스타 게이트: 스타트레일', 베리 멜로디",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319885"
+            }
+          ]
+        },
+        {
+          "id": "issue-49",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+          "summary": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 2026 LCK, 플레이오프행 두 자리 주인",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319884"
+            }
+          ]
+        },
+        {
+          "id": "issue-48",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+          "summary": "레벨 울브스는 '더 블러드 오브 던워커'에서 콘솔 전 기종에 60fps 모드를 추가한다고 발표하며, 9월 3일 정식 출시를 예고했습니다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / '더 블러드 오브 던워커', 콘솔 전 기종 ",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319882"
+            }
+          ]
+        },
+        {
+          "id": "issue-21",
+          "category": "AI",
+          "importance": "낮음",
+          "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+          "summary": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / AI에 올인한 알리바바, 투자 위해 14조 ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "CORROBORATED",
+            "synthesisEligible": true,
+            "establishedMediaCount": 2,
+            "discoveryMediaCount": 0,
+            "reason": "Independent reporting and at least one established or primary source corroborate this event."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.etnews.com/20260825000014"
+            },
+            {
+              "outlet": "AI타임스",
+              "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+              "publishedAgo": "12시간 전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
+            }
+          ]
+        },
+        {
+          "id": "issue-17",
+          "category": "AI",
+          "importance": "높음",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "summary": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+          "whyItMatters": "NVIDIA의 Vera Rubin NVL72는 AI 에이전트 시스템에서 혁신을 주도하고 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / With Groq 3 LPX in Full ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+            }
+          ]
+        },
+        {
+          "id": "issue-59",
+          "category": "AI",
+          "importance": "높음",
+          "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+          "summary": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
+          "whyItMatters": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / Up to 30x More Work Per ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+            }
+          ]
+        },
+        {
+          "id": "issue-16",
+          "category": "AI",
+          "importance": "높음",
+          "title": "How XPUs Meet a World-Class AI Factory",
+          "summary": "AI 공장을 운영하기 위해서는 XPUs를 이용한 최적화된 인프라가 필요하며, 출력과 경제성을 고려한 설계가 중요하다.",
+          "whyItMatters": "AI 공장 운영에서 XPUs의 활용은 새로운 표준을 제시할 가능성이 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / How XPUs Meet a World-Cl",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "How XPUs Meet a World-Class AI Factory",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+            }
+          ]
+        },
+        {
+          "id": "issue-15",
+          "category": "AI",
+          "importance": "보통",
+          "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+          "summary": "GPT-5.6은 Kiro에서 제공되어 개발자들이 소프트웨어를 기획하고 빌드하며 검토하고 테스트할 때 더 나은 가격 성능을 지원한다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / Advancing price-performa",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "OpenAI",
+              "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+              "publishedAgo": "17시간 전",
+              "url": "https://openai.com/index/gpt-5-6-in-kiro"
+            }
+          ]
+        },
+        {
+          "id": "issue-58",
+          "category": "AI",
+          "importance": "보통",
+          "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+          "summary": "한·중 지식재산 정보화 전문가 회의에서 두 나라의 인공지능 기술 활용 사례와 지식재산 정보화 시스템 개발 현황이 공유되었다. 이 회의는 지식재산 분야의 국제 표준화 및 협력을 다루는 자리로, 양국의 인공지능 기반 시스템에 대한 시연과 논의가 이루어졌다.",
+          "whyItMatters": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 국제표준부터 인공지능까지… 한·중 지식재산 ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "대한민국 정책브리핑",
+              "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+              "publishedAgo": "5시간 전",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+            }
+          ]
+        },
+        {
+          "id": "issue-51",
+          "category": "AI",
+          "importance": "보통",
+          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+          "summary": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 텐센트, 플레이어 지시도 거부하는 슈팅 AI",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319875"
+            }
+          ]
+        },
+        {
+          "id": "issue-27",
+          "category": "AI",
+          "importance": "보통",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "summary": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 컴트루테크놀로지 '스핑크스 AI', 이미지 ",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.etnews.com/20260825000010"
+            }
+          ]
+        }
+      ],
       "landscape": {
         "referenceArticleCount": 0,
         "domains": [
@@ -256,20 +2830,83 @@
         {
           "category": "GAME",
           "label": "게임",
-          "koreaArticleCount": 0,
-          "globalArticleCount": 0,
-          "koreaFocus": [],
-          "globalFocus": [],
+          "koreaArticleCount": 16,
+          "globalArticleCount": 5,
+          "koreaFocus": [
+            {
+              "topic": "게임스컴",
+              "count": 3
+            },
+            {
+              "topic": "에이지 트위스터",
+              "count": 2
+            },
+            {
+              "topic": "게임스컴 어워드",
+              "count": 2
+            }
+          ],
+          "globalFocus": [
+            {
+              "topic": "Horror Game",
+              "count": 1
+            },
+            {
+              "topic": "Remake",
+              "count": 1
+            },
+            {
+              "topic": "Sanitarium",
+              "count": 1
+            }
+          ],
           "sharedTopics": []
         },
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 0,
-          "globalArticleCount": 0,
-          "koreaFocus": [],
-          "globalFocus": [],
-          "sharedTopics": []
+          "koreaArticleCount": 16,
+          "globalArticleCount": 9,
+          "koreaFocus": [
+            {
+              "topic": "AI",
+              "count": 3
+            },
+            {
+              "topic": "FPS",
+              "count": 1
+            },
+            {
+              "topic": "Tencent",
+              "count": 1
+            }
+          ],
+          "globalFocus": [
+            {
+              "topic": "NVIDIA",
+              "count": 2
+            },
+            {
+              "topic": "OpenAI",
+              "count": 2
+            },
+            {
+              "topic": "GPT-5.6",
+              "count": 1
+            }
+          ],
+          "sharedTopics": [
+            {
+              "topic": "Nvidia",
+              "koreaCount": 1,
+              "globalCount": 1
+            },
+            {
+              "topic": "AI Agent",
+              "koreaCount": 1,
+              "globalCount": 1
+            }
+          ]
         }
       ],
       "policyUpdates": [
@@ -333,19 +2970,19 @@
     },
     "week": {
       "briefDate": "2026-08-25",
-      "generatedAt": "2026-08-25T01:58:27.574864+00:00",
+      "generatedAt": "2026-08-25T05:42:24.993153+00:00",
       "periodLabel": "이번 주",
-      "articleCount": 0,
+      "articleCount": 43,
       "analysisStats": {
         "collected": 234,
-        "analyzed": 0,
-        "pending": 234,
-        "completionRate": 0,
+        "analyzed": 65,
+        "pending": 169,
+        "completionRate": 28,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 0,
-        "issues": 0,
-        "verifiedIssues": 0,
-        "singleSourceIssues": 0
+        "relevant": 46,
+        "issues": 16,
+        "verifiedIssues": 8,
+        "singleSourceIssues": 8
       },
       "analytics": {
         "interest": {
@@ -359,60 +2996,491 @@
             "08.23",
             "08.24"
           ],
-          "series": [],
+          "series": [
+            {
+              "name": "에이지 트위스터",
+              "originalTitle": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "name": "서든어택",
+              "originalTitle": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "name": "GTA 6",
+              "originalTitle": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "category": "GAME",
+              "values": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ]
+            }
+          ],
           "bucket": "일간"
         },
-        "topicShare": []
+        "topicShare": [
+          {
+            "topic": "기타",
+            "game": 8,
+            "ai": 7
+          },
+          {
+            "topic": "출시",
+            "game": 9,
+            "ai": 4
+          },
+          {
+            "topic": "기술",
+            "game": 0,
+            "ai": 6
+          },
+          {
+            "topic": "투자",
+            "game": 0,
+            "ai": 4
+          },
+          {
+            "topic": "업데이트",
+            "game": 4,
+            "ai": 0
+          },
+          {
+            "topic": "보안",
+            "game": 0,
+            "ai": 2
+          },
+          {
+            "topic": "정책",
+            "game": 0,
+            "ai": 2
+          }
+        ]
       },
       "game": {
-        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
+        "headline": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
         "keySummaries": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다."
         ],
         "keySummaryDetails": [
           {
-            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 0,
-            "independentSources": 0,
-            "officialCount": 0,
-            "activeDays": 0,
-            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
-            "confidence": "WEAK"
+            "issueId": 55,
+            "text": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 2건 · 독립 매체 2곳 · 공식 근거 1건 · 1일 관찰 · 교차 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 35.0,
+              "coverage": 15.8,
+              "importance": 12.0,
+              "persistence": 6.0,
+              "momentum": 8.0,
+              "editorialAdjustment": -12.8,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 64.0
+            }
+          },
+          {
+            "issueId": 45,
+            "text": "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다.",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 27.0,
+              "coverage": 10.0,
+              "importance": 12.0,
+              "persistence": 6.0,
+              "momentum": 6.0,
+              "editorialAdjustment": -1.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 60.0
+            }
           }
         ],
-        "observations": [],
+        "observations": [
+          {
+            "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+            "description": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "게임메카",
+                "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.gamemeca.com/view.php?gid=1779548"
+              }
+            ]
+          },
+          {
+            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "description": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+              }
+            ]
+          }
+        ],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다."
         ],
-        "changes": [],
-        "watchList": []
+        "changes": [
+          {
+            "direction": "up",
+            "topic": "게임스컴",
+            "description": "게임스컴과 관련된 이슈가 증가하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "크래프톤",
+            "description": "크래프톤의 활동에 대한 관심이 증가하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "에이지 트위스터",
+            "description": "'에이지 트위스터'가 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "게임스컴 어워드",
+            "description": "게임스컴 어워드에 대한 관심이 높아지고 있습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+              },
+              {
+                "outlet": "크래프톤",
+                "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+              }
+            ]
+          }
+        ],
+        "watchList": [
+          {
+            "rank": 1,
+            "topic": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+            "description": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+            "sources": [
+              {
+                "outlet": "게임메카",
+                "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.gamemeca.com/view.php?gid=1779548"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "topic": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "description": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+                "publishedAgo": "4시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "위쳐4 목표는 '2028년 출시' 첫 발표",
+            "description": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+                "publishedAgo": "12시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+              }
+            ]
+          }
+        ]
       },
       "ai": {
-        "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
+        "headline": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
         "keySummaries": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
         ],
         "keySummaryDetails": [
           {
-            "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 0,
-            "independentSources": 0,
+            "issueId": 21,
+            "text": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+            "articleCount": 2,
+            "independentSources": 2,
             "officialCount": 0,
-            "activeDays": 0,
-            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
-            "confidence": "WEAK"
+            "activeDays": 1,
+            "selectionReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 35.0,
+              "coverage": 15.8,
+              "importance": 6.0,
+              "persistence": 6.0,
+              "momentum": 8.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 70.8
+            }
+          },
+          {
+            "issueId": 17,
+            "text": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1,
+            "activeDays": 1,
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+            "confidence": "MODERATE",
+            "scoreBreakdown": {
+              "evidence": 27.0,
+              "coverage": 10.0,
+              "importance": 20.0,
+              "persistence": 6.0,
+              "momentum": 6.0,
+              "editorialAdjustment": 0.0,
+              "userFeedback": 0.0,
+              "approvedRule": 0.0,
+              "total": 69.0
+            }
           }
         ],
-        "observations": [],
+        "observations": [
+          {
+            "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+            "description": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "인벤",
+                "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+                "publishedAgo": "6시간 전",
+                "url": "https://www.inven.co.kr/webzine/news/?news=319875"
+              }
+            ]
+          },
+          {
+            "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+            "description": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+            "statusLabel": "주요 매체 단독",
+            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
+            "sources": [
+              {
+                "outlet": "전자신문 AI",
+                "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+                "publishedAgo": "6시간 전",
+                "url": "https://www.etnews.com/20260825000010"
+              }
+            ]
+          }
+        ],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
-          "교차 확인된 핵심 이슈가 아직 없습니다."
+          "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
         ],
-        "changes": [],
-        "watchList": []
+        "changes": [
+          {
+            "direction": "up",
+            "topic": "AI",
+            "description": "AI 관련 주제가 계속해서 부상하고 있습니다.",
+            "sources": [
+              {
+                "outlet": "대한민국 정책브리핑",
+                "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+                "publishedAgo": "5시간 전",
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "NVIDIA",
+            "description": "NVIDIA 관련 혁신이 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "direction": "up",
+            "topic": "AI Agent",
+            "description": "AI 에이전트 시장에서 NVIDIA의 혁신이 강조됩니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+              },
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          }
+        ],
+        "watchList": [
+          {
+            "rank": 1,
+            "topic": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+            "description": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "topic": "How XPUs Meet a World-Class AI Factory",
+            "description": "AI 공장 운영에서 XPUs의 활용은 새로운 표준을 제시할 가능성이 있습니다.",
+            "sources": [
+              {
+                "outlet": "NVIDIA",
+                "title": "How XPUs Meet a World-Class AI Factory",
+                "publishedAgo": "14시간 전",
+                "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+            "description": "GPT-5.6은 Kiro에서 제공되어 개발자들이 소프트웨어를 기획하고 빌드하며 검토하고 테스트할 때 더 나은 가격 성능을 지원한다.",
+            "sources": [
+              {
+                "outlet": "OpenAI",
+                "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+                "publishedAgo": "17시간 전",
+                "url": "https://openai.com/index/gpt-5-6-in-kiro"
+              }
+            ]
+          }
+        ]
       },
       "crossInsight": {
         "hasSignal": false,
@@ -421,10 +3489,846 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [],
-      "signals": [],
-      "newToday": [],
-      "issues": [],
+      "recommendedArticles": [
+        {
+          "category": "GAME",
+          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319881",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+          "url": "https://www.gamemeca.com/view.php?gid=1779548",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319871",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "GAME",
+          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+          "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1",
+          "publishedDate": "2026.08.24"
+        },
+        {
+          "category": "GAME",
+          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
+          "url": "https://www.aitimes.com/news/articleView.html?idxno=214261",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+          "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319875",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "url": "https://www.etnews.com/20260825000010",
+          "publishedDate": "2026.08.25"
+        }
+      ],
+      "signals": [
+        {
+          "topic": "에이지 트위스터",
+          "direction": "up",
+          "weight": 64,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 2건 · 독립 매체 2곳 · 공식 근거 1건 · 1일 관찰 · 교차 확인",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 2,
+          "baselineAverage": 0.0,
+          "sourceCount": 2,
+          "reason": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "evidence": [
+            {
+              "outlet": "크래프톤",
+              "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+            },
+            {
+              "outlet": "인벤",
+              "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+            }
+          ]
+        },
+        {
+          "topic": "서든어택",
+          "direction": "up",
+          "weight": 60,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "업데이트",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다.",
+          "evidence": [
+            {
+              "outlet": "넥슨게임즈",
+              "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+              "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
+            }
+          ]
+        },
+        {
+          "topic": "GTA 6",
+          "direction": "up",
+          "weight": 46,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+          "evidence": [
+            {
+              "outlet": "게임메카",
+              "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "url": "https://www.gamemeca.com/view.php?gid=1779548"
+            }
+          ]
+        },
+        {
+          "topic": "씰M2",
+          "direction": "up",
+          "weight": 46,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "출시",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
+          "domain": "GAME",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+          "evidence": [
+            {
+              "outlet": "인벤",
+              "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+            }
+          ]
+        },
+        {
+          "topic": "알리바바",
+          "direction": "up",
+          "weight": 71,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "투자",
+          "priorityReason": "기사 2건 · 독립 매체 2곳 · 1일 관찰 · 교차 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 2,
+          "baselineAverage": 0.0,
+          "sourceCount": 2,
+          "reason": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "evidence": [
+            {
+              "outlet": "AI타임스",
+              "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
+            },
+            {
+              "outlet": "전자신문 AI",
+              "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+              "url": "https://www.etnews.com/20260825000014"
+            }
+          ]
+        },
+        {
+          "topic": "NVIDIA",
+          "direction": "up",
+          "weight": 69,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기술",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+            }
+          ]
+        },
+        {
+          "topic": "AI Agent",
+          "direction": "up",
+          "weight": 69,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기술",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+            }
+          ]
+        },
+        {
+          "topic": "AI Factory",
+          "direction": "up",
+          "weight": 67,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "기타",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 공식 근거 1건 · 1일 관찰 · 공식 확인",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "AI 공장을 운영하기 위해서는 XPUs를 이용한 최적화된 인프라가 필요하며, 출력과 경제성을 고려한 설계가 중요하다.",
+          "evidence": [
+            {
+              "outlet": "NVIDIA",
+              "title": "How XPUs Meet a World-Class AI Factory",
+              "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+            }
+          ]
+        }
+      ],
+      "newToday": [
+        {
+          "topic": "게임스컴",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 3,
+          "independentSources": 1,
+          "officialCount": 0
+        },
+        {
+          "topic": "크래프톤",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "MMORPG",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 0
+        },
+        {
+          "topic": "게임스컴 어워드",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "에이지 트위스터",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "AI",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 3,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "NVIDIA",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 2
+        },
+        {
+          "topic": "AI Agent",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 1
+        },
+        {
+          "topic": "Nvidia",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 2,
+          "officialCount": 0
+        },
+        {
+          "topic": "OpenAI",
+          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
+          "articleCount": 2,
+          "independentSources": 1,
+          "officialCount": 0
+        }
+      ],
+      "issues": [
+        {
+          "id": "issue-55",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "summary": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
+          "whyItMatters": "크래프톤의 '에이지 트위스터'가 게임스컴 어워드 후보로 선정됨으로써, 글로벌 게임 시장에서의 영향력을 강화할 수 있는 기회를 얻었습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 크래프톤 ‘에이지 트위스터’, 게임스컴 어워",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "CORROBORATED",
+            "synthesisEligible": true,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Independent reporting and at least one established or primary source corroborate this event."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319877"
+            },
+            {
+              "outlet": "크래프톤",
+              "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+              "publishedAgo": "5시간 전",
+              "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
+            }
+          ]
+        },
+        {
+          "id": "issue-45",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+          "summary": "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "DECLINING",
+          "relatedBriefing": "GAME INDUSTRY / 넥슨, ‘서든어택’ 21주년 쇼케이스에서 시",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "넥슨게임즈",
+              "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+              "publishedAgo": "1일 전",
+              "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
+            }
+          ]
+        },
+        {
+          "id": "issue-46",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+          "summary": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / GTA 6 유출자, 락스타 측 법적 대응 무",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "게임메카",
+              "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.gamemeca.com/view.php?gid=1779548"
+            }
+          ]
+        },
+        {
+          "id": "issue-57",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+          "summary": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 플레이위드코리아, ‘씰M2’ 대표 이미지 추",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319881"
+            }
+          ]
+        },
+        {
+          "id": "issue-25",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+          "summary": "CD프로젝트 레드가 위쳐4의 목표 출시 시점을 2028년으로 공식 발표했으며, 500명 이상의 개발진이 참여하는 작품이라고 밝혔습니다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 위쳐4 목표는 '2028년 출시' 첫 발표",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
+              "publishedAgo": "12시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319871"
+            }
+          ]
+        },
+        {
+          "id": "issue-50",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+          "summary": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / '식스타 게이트: 스타트레일', 베리 멜로디",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319885"
+            }
+          ]
+        },
+        {
+          "id": "issue-49",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+          "summary": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / 2026 LCK, 플레이오프행 두 자리 주인",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319884"
+            }
+          ]
+        },
+        {
+          "id": "issue-48",
+          "category": "GAME",
+          "importance": "보통",
+          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+          "summary": "레벨 울브스는 '더 블러드 오브 던워커'에서 콘솔 전 기종에 60fps 모드를 추가한다고 발표하며, 9월 3일 정식 출시를 예고했습니다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "GAME INDUSTRY / '더 블러드 오브 던워커', 콘솔 전 기종 ",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+              "publishedAgo": "4시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319882"
+            }
+          ]
+        },
+        {
+          "id": "issue-21",
+          "category": "AI",
+          "importance": "낮음",
+          "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+          "summary": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / AI에 올인한 알리바바, 투자 위해 14조 ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 2,
+            "independentSources": 2,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "CORROBORATED",
+            "synthesisEligible": true,
+            "establishedMediaCount": 2,
+            "discoveryMediaCount": 0,
+            "reason": "Independent reporting and at least one established or primary source corroborate this event."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.etnews.com/20260825000014"
+            },
+            {
+              "outlet": "AI타임스",
+              "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+              "publishedAgo": "12시간 전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
+            }
+          ]
+        },
+        {
+          "id": "issue-17",
+          "category": "AI",
+          "importance": "높음",
+          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+          "summary": "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다.",
+          "whyItMatters": "NVIDIA의 Vera Rubin NVL72는 AI 에이전트 시스템에서 혁신을 주도하고 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / With Groq 3 LPX in Full ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
+            }
+          ]
+        },
+        {
+          "id": "issue-59",
+          "category": "AI",
+          "importance": "높음",
+          "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+          "summary": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
+          "whyItMatters": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / Up to 30x More Work Per ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
+            }
+          ]
+        },
+        {
+          "id": "issue-16",
+          "category": "AI",
+          "importance": "높음",
+          "title": "How XPUs Meet a World-Class AI Factory",
+          "summary": "AI 공장을 운영하기 위해서는 XPUs를 이용한 최적화된 인프라가 필요하며, 출력과 경제성을 고려한 설계가 중요하다.",
+          "whyItMatters": "AI 공장 운영에서 XPUs의 활용은 새로운 표준을 제시할 가능성이 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / How XPUs Meet a World-Cl",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "NVIDIA",
+              "title": "How XPUs Meet a World-Class AI Factory",
+              "publishedAgo": "14시간 전",
+              "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
+            }
+          ]
+        },
+        {
+          "id": "issue-15",
+          "category": "AI",
+          "importance": "보통",
+          "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+          "summary": "GPT-5.6은 Kiro에서 제공되어 개발자들이 소프트웨어를 기획하고 빌드하며 검토하고 테스트할 때 더 나은 가격 성능을 지원한다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / Advancing price-performa",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "OpenAI",
+              "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+              "publishedAgo": "17시간 전",
+              "url": "https://openai.com/index/gpt-5-6-in-kiro"
+            }
+          ]
+        },
+        {
+          "id": "issue-58",
+          "category": "AI",
+          "importance": "보통",
+          "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+          "summary": "한·중 지식재산 정보화 전문가 회의에서 두 나라의 인공지능 기술 활용 사례와 지식재산 정보화 시스템 개발 현황이 공유되었다. 이 회의는 지식재산 분야의 국제 표준화 및 협력을 다루는 자리로, 양국의 인공지능 기반 시스템에 대한 시연과 논의가 이루어졌다.",
+          "whyItMatters": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 국제표준부터 인공지능까지… 한·중 지식재산 ",
+          "confidence": {
+            "level": "MODERATE",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 1
+          },
+          "evidenceQuality": {
+            "verificationStatus": "OFFICIAL_ONLY",
+            "synthesisEligible": true,
+            "establishedMediaCount": 0,
+            "discoveryMediaCount": 0,
+            "reason": "Confirmed by a primary source; independent reporting is still limited."
+          },
+          "sources": [
+            {
+              "outlet": "대한민국 정책브리핑",
+              "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+              "publishedAgo": "5시간 전",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
+            }
+          ]
+        },
+        {
+          "id": "issue-51",
+          "category": "AI",
+          "importance": "보통",
+          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+          "summary": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 텐센트, 플레이어 지시도 거부하는 슈팅 AI",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "인벤",
+              "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.inven.co.kr/webzine/news/?news=319875"
+            }
+          ]
+        },
+        {
+          "id": "issue-27",
+          "category": "AI",
+          "importance": "보통",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "summary": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "EMERGING",
+          "relatedBriefing": "AI INDUSTRY / 컴트루테크놀로지 '스핑크스 AI', 이미지 ",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+              "publishedAgo": "6시간 전",
+              "url": "https://www.etnews.com/20260825000010"
+            }
+          ]
+        }
+      ],
       "landscape": {
         "referenceArticleCount": 0,
         "domains": [
@@ -449,20 +4353,83 @@
         {
           "category": "GAME",
           "label": "게임",
-          "koreaArticleCount": 0,
-          "globalArticleCount": 0,
-          "koreaFocus": [],
-          "globalFocus": [],
+          "koreaArticleCount": 16,
+          "globalArticleCount": 5,
+          "koreaFocus": [
+            {
+              "topic": "게임스컴",
+              "count": 3
+            },
+            {
+              "topic": "에이지 트위스터",
+              "count": 2
+            },
+            {
+              "topic": "게임스컴 어워드",
+              "count": 2
+            }
+          ],
+          "globalFocus": [
+            {
+              "topic": "Horror Game",
+              "count": 1
+            },
+            {
+              "topic": "Remake",
+              "count": 1
+            },
+            {
+              "topic": "Sanitarium",
+              "count": 1
+            }
+          ],
           "sharedTopics": []
         },
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 0,
-          "globalArticleCount": 0,
-          "koreaFocus": [],
-          "globalFocus": [],
-          "sharedTopics": []
+          "koreaArticleCount": 16,
+          "globalArticleCount": 9,
+          "koreaFocus": [
+            {
+              "topic": "AI",
+              "count": 3
+            },
+            {
+              "topic": "FPS",
+              "count": 1
+            },
+            {
+              "topic": "Tencent",
+              "count": 1
+            }
+          ],
+          "globalFocus": [
+            {
+              "topic": "NVIDIA",
+              "count": 2
+            },
+            {
+              "topic": "OpenAI",
+              "count": 2
+            },
+            {
+              "topic": "GPT-5.6",
+              "count": 1
+            }
+          ],
+          "sharedTopics": [
+            {
+              "topic": "Nvidia",
+              "koreaCount": 1,
+              "globalCount": 1
+            },
+            {
+              "topic": "AI Agent",
+              "koreaCount": 1,
+              "globalCount": 1
+            }
+          ]
         }
       ],
       "policyUpdates": [
