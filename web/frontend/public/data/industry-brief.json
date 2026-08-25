@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T05:42:36.560968+00:00",
+  "generated_at": "2026-08-25T05:51:45.973187+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-25",
@@ -7,10 +7,10 @@
       "periodLabel": "오늘",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 96,
+        "collected": 127,
         "analyzed": 60,
-        "pending": 36,
-        "completionRate": 62,
+        "pending": 67,
+        "completionRate": 47,
         "analysisStatus": "PARTIAL",
         "relevant": 43,
         "issues": 16,
@@ -188,7 +188,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -207,7 +207,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -226,7 +226,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -245,7 +245,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -856,7 +856,7 @@
             {
               "outlet": "인벤",
               "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "4시간 전",
+              "publishedAgo": "5시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319877"
             },
             {
@@ -1451,10 +1451,10 @@
       "periodLabel": "최근 3일",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 269,
+        "collected": 300,
         "analyzed": 65,
-        "pending": 204,
-        "completionRate": 24,
+        "pending": 235,
+        "completionRate": 22,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 46,
         "issues": 16,
@@ -1655,7 +1655,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -1674,7 +1674,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -1693,7 +1693,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -1712,7 +1712,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -2323,7 +2323,7 @@
             {
               "outlet": "인벤",
               "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "4시간 전",
+              "publishedAgo": "5시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319877"
             },
             {
@@ -2974,10 +2974,10 @@
       "periodLabel": "이번 주",
       "articleCount": 43,
       "analysisStats": {
-        "collected": 234,
+        "collected": 265,
         "analyzed": 65,
-        "pending": 169,
-        "completionRate": 28,
+        "pending": 200,
+        "completionRate": 25,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 46,
         "issues": 16,
@@ -3178,7 +3178,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -3197,7 +3197,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -3216,7 +3216,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -3235,7 +3235,7 @@
               {
                 "outlet": "인벤",
                 "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-                "publishedAgo": "4시간 전",
+                "publishedAgo": "5시간 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319877"
               },
               {
@@ -3846,7 +3846,7 @@
             {
               "outlet": "인벤",
               "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "4시간 전",
+              "publishedAgo": "5시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319877"
             },
             {
