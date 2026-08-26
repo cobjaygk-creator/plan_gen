@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-26T04:39:36.335009+00:00",
+  "generated_at": "2026-08-26T05:31:50.567369+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T03:42:21.015188+00:00",
+      "generatedAt": "2026-08-26T05:28:16.297320+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 226,
+        "collected": 277,
         "analyzed": 0,
-        "pending": 226,
+        "pending": 277,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -257,14 +257,14 @@
     },
     "3d": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T03:42:21.015188+00:00",
+      "generatedAt": "2026-08-26T05:28:16.297320+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 630,
+        "collected": 681,
         "analyzed": 69,
-        "pending": 561,
-        "completionRate": 11,
+        "pending": 612,
+        "completionRate": 10,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -1676,14 +1676,14 @@
     },
     "week": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T03:42:21.015188+00:00",
+      "generatedAt": "2026-08-26T05:28:16.297320+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 612,
+        "collected": 663,
         "analyzed": 69,
-        "pending": 543,
-        "completionRate": 11,
+        "pending": 594,
+        "completionRate": 10,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
