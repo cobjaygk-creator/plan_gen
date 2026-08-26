@@ -527,9 +527,18 @@ def collect_naver_section(db: Session, source: NaverSectionSource) -> SourceResu
         return SourceResult(f"NAVER 섹션 · {source.label}", 0, 0, 0, error=f"{type(exc).__name__}: {exc}")
 
     new_count = duplicates = 0
+    seen_this_batch: set[str] = set()
     for entry in entries:
         if not _passes_relevance(entry, source.relevance_terms):
             continue
+        # Naver's own listing repeats an entry (e.g. a "Hot" pick also shown
+        # in the regular list) within a single fetch — the DB check alone
+        # only catches rows already committed from a *previous* run, so a
+        # same-batch repeat still hits the url column's unique constraint.
+        if entry["url"] in seen_this_batch:
+            duplicates += 1
+            continue
+        seen_this_batch.add(entry["url"])
         if db.scalar(select(Article.id).where(Article.url == entry["url"])):
             duplicates += 1
             continue

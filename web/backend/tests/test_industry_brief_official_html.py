@@ -1,4 +1,5 @@
 from app.industry_brief.official_html import (
+    NAVER_SECTION_SOURCES,
     OFFICIAL_HTML_SOURCES,
     _parse_kocca,
     _parse_mcst,
@@ -10,6 +11,7 @@ from app.industry_brief.official_html import (
     _mcst_pdf_url,
     _page_url,
     collect_official_html,
+    collect_naver_section,
 )
 from app.industry_brief.models import Article
 
@@ -215,3 +217,35 @@ def test_official_collector_backfills_existing_mcst_summary(db_factory, monkeypa
     result = collect_official_html(db, OFFICIAL_HTML_SOURCES[1])
     assert result.duplicates == 1
     assert len(db.query(Article).one().summary) >= 500
+
+
+def test_naver_section_dedups_a_url_repeated_within_the_same_fetch(db_factory, monkeypatch):
+    # Naver's own listing repeats an entry (e.g. a "Hot" pick also shown in
+    # the regular list) within a single page fetch — this must not hit the
+    # url column's unique constraint when both rows are new in this run.
+    db = db_factory()
+    html = """
+    <ul>
+      <li class="sa_item">
+        <a class="sa_text_title" href="https://n.news.naver.com/mnews/article/000/0000001">
+          <strong class="sa_text_strong">중복되는 기사 제목</strong>
+        </a>
+        <div class="sa_text_lede">요약문</div>
+        <div class="sa_text_press">테스트언론사</div>
+        <div class="sa_text_datetime">1시간전</div>
+      </li>
+      <li class="sa_item">
+        <a class="sa_text_title" href="https://n.news.naver.com/mnews/article/000/0000001">
+          <strong class="sa_text_strong">중복되는 기사 제목</strong>
+        </a>
+        <div class="sa_text_lede">요약문</div>
+        <div class="sa_text_press">테스트언론사</div>
+        <div class="sa_text_datetime">1시간전</div>
+      </li>
+    </ul>
+    """
+    monkeypatch.setattr("app.industry_brief.official_html._fetch_html", lambda _: html)
+    result = collect_naver_section(db, NAVER_SECTION_SOURCES[0])
+    assert result.new == 1
+    assert result.duplicates == 1
+    assert db.query(Article).count() == 1
