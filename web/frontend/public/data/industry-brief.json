@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-26T03:07:33.834117+00:00",
+  "generated_at": "2026-08-26T03:46:44.984569+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T02:22:20.506230+00:00",
+      "generatedAt": "2026-08-26T03:42:21.015188+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 154,
+        "collected": 226,
         "analyzed": 0,
-        "pending": 154,
+        "pending": 226,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -196,19 +196,75 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        }
+      ]
     },
     "3d": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T02:22:20.506230+00:00",
+      "generatedAt": "2026-08-26T03:42:21.015188+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 559,
+        "collected": 632,
         "analyzed": 69,
-        "pending": 490,
-        "completionRate": 12,
+        "pending": 563,
+        "completionRate": 11,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -1439,12 +1495,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1478,9 +1534,117 @@
           "history": [],
           "selectionReason": "규제 시행 공식 발표 · 시행됨",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        },
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
         }
       ],
       "policyTimeline": [
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
+        },
         {
           "id": "1562",
           "type": "REGULATION",
@@ -1512,14 +1676,14 @@
     },
     "week": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T02:22:20.506230+00:00",
+      "generatedAt": "2026-08-26T03:42:21.015188+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 539,
+        "collected": 612,
         "analyzed": 69,
-        "pending": 470,
-        "completionRate": 13,
+        "pending": 543,
+        "completionRate": 11,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -2750,12 +2914,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -2789,9 +2953,117 @@
           "history": [],
           "selectionReason": "규제 시행 공식 발표 · 시행됨",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        },
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
         }
       ],
       "policyTimeline": [
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
+        },
         {
           "id": "1562",
           "type": "REGULATION",
