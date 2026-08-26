@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-26T02:11:16.705792+00:00",
+  "generated_at": "2026-08-26T02:25:14.789734+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T01:33:58.476206+00:00",
+      "generatedAt": "2026-08-26T02:22:20.506230+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 138,
+        "collected": 154,
         "analyzed": 0,
-        "pending": 138,
+        "pending": 154,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -201,14 +201,14 @@
     },
     "3d": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T01:33:58.476206+00:00",
+      "generatedAt": "2026-08-26T02:22:20.506230+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 543,
+        "collected": 559,
         "analyzed": 69,
-        "pending": 474,
-        "completionRate": 13,
+        "pending": 490,
+        "completionRate": 12,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -1007,7 +1007,7 @@
           "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
           "summary": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / '식스타 게이트: 스타트레일', 베리 멜로디",
           "confidence": {
             "level": "WEAK",
@@ -1439,12 +1439,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1512,13 +1512,13 @@
     },
     "week": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T01:33:58.476206+00:00",
+      "generatedAt": "2026-08-26T02:22:20.506230+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 523,
+        "collected": 539,
         "analyzed": 69,
-        "pending": 454,
+        "pending": 470,
         "completionRate": 13,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2318,7 +2318,7 @@
           "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
           "summary": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / '식스타 게이트: 스타트레일', 베리 멜로디",
           "confidence": {
             "level": "WEAK",
@@ -2750,12 +2750,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
