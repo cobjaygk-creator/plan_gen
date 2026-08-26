@@ -13,6 +13,7 @@ from dataclasses import asdict
 from datetime import date, datetime, timezone
 
 from app.config import BENCHMARK_DATA_DIR
+from app.media_cache import cache_thumbnail
 from app.event_bench.nexon_sample import (
     collect_fc_online_events,
     collect_mabinogi_events,
@@ -147,6 +148,12 @@ def main() -> None:
                 candidate["last_seen_at"] = now
                 candidate["status"] = display_status(candidate.get("ends_on"))
                 candidate["is_active"] = True
+                # Cached so the thumbnail survives the event page itself
+                # going down once the event ends (a routine occurrence).
+                candidate["hero_image_url"] = (
+                    cache_thumbnail(candidate.get("hero_image_url"), "event_bench")
+                    or candidate.get("hero_image_url")
+                )
                 records_by_url[candidate["event_url"]] = candidate
             refreshed_games.append(game)
             logging.info("%s: refreshed %s ongoing candidates", game, len(candidates))
