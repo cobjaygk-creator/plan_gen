@@ -1944,6 +1944,14 @@
     "portal": "INVEN_CALENDAR"
   },
   {
+    "url": "https://rawfury.com/games/rivage",
+    "game_name": "리바주",
+    "publisher": null,
+    "published_on": "2026-09-22",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1287754903.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
     "url": "https://www.devolverdigital.com/games/stick-it-to-the-stickman",
     "game_name": "스틱 잇 투 스틱맨",
     "publisher": null,
@@ -1976,6 +1984,14 @@
     "portal": "INVEN_CALENDAR"
   },
   {
+    "url": "https://www.ea.com/ko/games/ea-sports-fc/fc-27",
+    "game_name": "EA 스포츠 FC 25",
+    "publisher": null,
+    "published_on": "2026-09-25",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1894596690.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
     "url": "https://www.minecraft.net/ko-kr/about-dungeons-ii",
     "game_name": "마인크래프트 던전스2",
     "publisher": null,
@@ -1989,14 +2005,6 @@
     "publisher": null,
     "published_on": "2026-09-29",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1509996804.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.h2int.com/",
-    "game_name": "떙스, 라이트",
-    "publisher": null,
-    "published_on": null,
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1674590278.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -2021,6 +2029,14 @@
     "publisher": null,
     "published_on": "2026-10-06",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1483934214.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.h2int.com/",
+    "game_name": "땡스, 라이트",
+    "publisher": null,
+    "published_on": "2026-10-15",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1674590278.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
