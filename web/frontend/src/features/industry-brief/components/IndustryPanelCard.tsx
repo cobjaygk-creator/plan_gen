@@ -16,16 +16,24 @@ interface Props {
 }
 
 const MAX_CORE_ISSUES = 5;
+const RECOMMENDED_PAGE_SIZE = 6;
 
 function articleToSource(article: { title: string; url: string; source: string }): SourceItem {
   return { outlet: article.source.replace(/^NAVER · /, ""), title: article.title, url: article.url, publishedAgo: "" };
 }
 
-function DailyHighlightsBlock({ highlights }: { highlights: CategoryHighlights }) {
+function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHighlights; category: "game" | "ai" }) {
+  const [recommendedPage, setRecommendedPage] = useState(0);
+  const recommendedPageCount = Math.max(1, Math.ceil(highlights.recommended.length / RECOMMENDED_PAGE_SIZE));
+  const visibleRecommended = highlights.recommended.slice(
+    recommendedPage * RECOMMENDED_PAGE_SIZE, recommendedPage * RECOMMENDED_PAGE_SIZE + RECOMMENDED_PAGE_SIZE,
+  );
+  const recommendedLabel = `${category === "game" ? "게임" : "AI"}추천기사`;
+
   if (!highlights.hasSignal) {
     return (
       <div className="ib-highlight-section">
-        <div className="eyebrow">오늘의 핵심 이슈</div>
+        <div className="eyebrow">핵심이슈</div>
         <div className="ib-key-summary"><p className="headline">지난 24시간 동안 분석할 만큼 충분한 기사가 수집되지 않았습니다.</p></div>
       </div>
     );
@@ -34,7 +42,7 @@ function DailyHighlightsBlock({ highlights }: { highlights: CategoryHighlights }
   return (
     <>
       <div className="ib-highlight-section">
-        <div className="eyebrow">오늘의 핵심 이슈</div>
+        <div className="eyebrow">핵심이슈</div>
         <div className="ib-highlight-issue-list">
           {coreIssues.map((issue) => (
             <div className="ib-highlight-issue" key={issue.title}>
@@ -51,9 +59,20 @@ function DailyHighlightsBlock({ highlights }: { highlights: CategoryHighlights }
 
       {highlights.recommended.length > 0 && (
         <div className="ib-highlight-section">
-          <div className="section-label">추천 기사</div>
+          <div className="ib-recommended-head">
+            <span className="section-label">{recommendedLabel}</span>
+            {recommendedPageCount > 1 && (
+              <button
+                type="button"
+                className="ib-recommended-next"
+                onClick={() => setRecommendedPage((page) => (page + 1) % recommendedPageCount)}
+              >
+                다음
+              </button>
+            )}
+          </div>
           <div className="ib-recommended-list">
-            {highlights.recommended.map((article) => (
+            {visibleRecommended.map((article) => (
               <a key={article.url} href={article.url} target="_blank" rel="noreferrer" className="ib-recommended-item">
                 <div className="ib-recommended-top"><span className="outlet">{article.source.replace(/^NAVER · /, "")}</span></div>
                 <div className="title">{article.title}</div>
@@ -136,7 +155,9 @@ export function IndustryPanelCard({ title, panel, category, signals, periodLabel
         <span className="ib-panel-status">{periodLabel}</span>
       </div>
 
-      {highlights ? <DailyHighlightsBlock highlights={highlights} /> : (
+      {highlights ? (
+        <DailyHighlightsBlock highlights={highlights} category={category} />
+      ) : (
         <>
           <div className="eyebrow">핵심 요약</div>
           <div className="ib-key-summary-list">
@@ -169,41 +190,41 @@ export function IndustryPanelCard({ title, panel, category, signals, periodLabel
             <summary>관찰 종료 {panel.closedObservations!.length}건</summary>
             {panel.closedObservations!.map((item) => <div key={`${item.title}-${item.closedAt}`}><strong>{item.title}</strong><p>{item.reason}</p></div>)}
           </details>}
-        </>
-      )}
 
-      <details className="ib-analysis-detail">
-        <summary>상세 분석 보기</summary>
-        <div className="briefing">{panel.briefing.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
-      </details>
+          <details className="ib-analysis-detail">
+            <summary>상세 분석 보기</summary>
+            <div className="briefing">{panel.briefing.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
+          </details>
 
-      <div className="ib-highlight-section">
-        <div className="section-label">변화 시그널</div>
-        <div className="ib-change-grid">
-          {visibleSignals.map((signal, index) => (
-            <div className={`ib-change-tile ib-change-flap ${DIRECTION_CLASS[signal.direction]}`} key={signal.topic} style={{ animationDelay: `${((category === "game" ? index : index + 4) * 0.11).toFixed(2)}s` }}>
-              <div className="ib-tile-top"><span className="topic"><em className="ib-change-event">{signal.eventType}</em>{signal.topic}</span><span className="ib-tile-actions"><span className="dir">{DIRECTION_SYMBOL[signal.direction]}</span><EvidenceSources sources={signal.evidence.map((article) => ({ ...article, publishedAgo: "" }))} /></span></div>
-              <div className="desc">{signal.priorityReason ?? signal.reason}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="section-label">앞으로 볼 것</div>
-      <div className="ib-watch-list">
-        {panel.watchList.slice(0, 3).map((watch) => (
-          <div className="ib-watch-item" key={watch.rank}>
-            <span className="rank tabular">{String(watch.rank).padStart(2, "0")}</span>
-            <div className="body">
-              <div className="ib-item-topic-row">
-                <div className="topic">{watch.topic}</div>
-                <EvidenceSources sources={watch.sources ?? []} />
-              </div>
-              <div className="desc">{watch.description}</div>
+          <div className="ib-highlight-section">
+            <div className="section-label">변화 시그널</div>
+            <div className="ib-change-grid">
+              {visibleSignals.map((signal, index) => (
+                <div className={`ib-change-tile ib-change-flap ${DIRECTION_CLASS[signal.direction]}`} key={signal.topic} style={{ animationDelay: `${((category === "game" ? index : index + 4) * 0.11).toFixed(2)}s` }}>
+                  <div className="ib-tile-top"><span className="topic"><em className="ib-change-event">{signal.eventType}</em>{signal.topic}</span><span className="ib-tile-actions"><span className="dir">{DIRECTION_SYMBOL[signal.direction]}</span><EvidenceSources sources={signal.evidence.map((article) => ({ ...article, publishedAgo: "" }))} /></span></div>
+                  <div className="desc">{signal.priorityReason ?? signal.reason}</div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
+
+          <div className="section-label">앞으로 볼 것</div>
+          <div className="ib-watch-list">
+            {panel.watchList.slice(0, 3).map((watch) => (
+              <div className="ib-watch-item" key={watch.rank}>
+                <span className="rank tabular">{String(watch.rank).padStart(2, "0")}</span>
+                <div className="body">
+                  <div className="ib-item-topic-row">
+                    <div className="topic">{watch.topic}</div>
+                    <EvidenceSources sources={watch.sources ?? []} />
+                  </div>
+                  <div className="desc">{watch.description}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }

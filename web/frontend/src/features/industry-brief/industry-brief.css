@@ -1395,11 +1395,14 @@
 .ib-highlight-section:last-child { margin-bottom: 0; }
 .ib-highlight-section > .eyebrow,
 .ib-highlight-section > .section-label { margin-top: 0; }
-.ib-highlight-issue-list { display: grid; gap: 8px; margin: 0; }
+/* Fixed to 5 row-tracks regardless of how many issues actually render, so
+   a category with fewer issues still reserves the same total box height
+   as one with the full 5 — the GAME/AI columns grid up either way, with
+   the unused tracks just left blank rather than stretching real rows. */
+.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(5, 120px); gap: 8px; margin: 0; }
 .ib-highlight-issue {
   display: flex;
   flex-direction: column;
-  height: 118px;
   padding: 10px 12px;
   overflow: hidden;
   border: 1px solid #e3ebf4;
@@ -1429,6 +1432,10 @@
 }
 .ib-highlight-issue-foot { display: flex; flex: none; align-items: center; gap: 6px; margin-top: 6px; }
 .ib-highlight-issue-foot-label { color: var(--ink-faint); font-size: 10px; font-weight: 650; }
+.ib-recommended-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.ib-recommended-head .section-label { margin: 0; }
+.ib-recommended-next { padding: 3px 10px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--ink-muted); font-size: 10.5px; font-weight: 700; cursor: pointer; }
+.ib-recommended-next:hover { border-color: #285f9e; color: #285f9e; }
 .ib-recommended-list { display: grid; gap: 7px; }
 .ib-recommended-item { display: block; padding: 8px 11px; border: 1px solid var(--border); border-radius: 8px; background: #fff; text-decoration: none; }
 .ib-recommended-item:hover { border-color: #285f9e; }
