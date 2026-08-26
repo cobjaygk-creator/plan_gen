@@ -1411,7 +1411,6 @@
   display: flex;
   flex-direction: column;
   padding: 13px 16px;
-  overflow: hidden;
   border: 1px solid #e3ebf4;
   border-radius: 9px;
   background: #fff;
@@ -1437,7 +1436,7 @@
   font-size: 15px;
   line-height: 1.45;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
 }
 .ib-highlight-issue-foot { display: flex; flex: none; align-items: center; gap: 6px; margin-top: 6px; }
 .ib-highlight-issue-foot-label { color: var(--ink-faint); font-size: 13px; font-weight: 650; }
