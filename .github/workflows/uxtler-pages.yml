@@ -5,6 +5,12 @@ on:
     branches: [master]
   workflow_dispatch:
   schedule:
+    # Game sites/event benchmark are plain scraping (no LLM), so they run
+    # every hour. Industry brief (classify/synthesize) and preregistration
+    # both make real LLM calls, so those stay on the slower 6-hour cadence
+    # — matched by exact cron string in the "Determine refresh scope" step
+    # below via github.event.schedule.
+    - cron: "0 * * * *"
     - cron: "17 */6 * * *"
 
 permissions:
@@ -50,12 +56,21 @@ jobs:
       - name: Install backend dependencies
         run: python -m pip install -r web/backend/requirements.txt
 
-      - name: Refresh benchmark data when API credentials are configured
-        if: ${{ env.OPENAI_API_KEY != '' || env.ANTHROPIC_API_KEY != '' }}
+      - name: Determine refresh scope
+        id: scope
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "${{ github.event.schedule }}" = "17 */6 * * *" ]; then
+            echo "value=full" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=light" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh benchmark data
+        env:
+          STATIC_REFRESH_SCOPE: ${{ steps.scope.outputs.value }}
         run: python web/backend/static_refresh.py
 
       - name: Persist isolated collector state
-        if: ${{ env.OPENAI_API_KEY != '' || env.ANTHROPIC_API_KEY != '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -19,12 +19,17 @@ def run(script: str, *args: str) -> None:
 
 def main() -> None:
     run("event_bench_refresh.py")
-    run("industry_brief_collect.py")
-    run("industry_brief_classify.py", os.environ.get("STATIC_CLASSIFY_LIMIT", "80"))
-    run("industry_brief_cluster.py")
-    run("industry_brief_trends.py")
-    run("industry_brief_synthesize.py")
-    run("preregistration_refresh.py")
+    # "light" scope skips the LLM-calling steps (industry brief classify/
+    # synthesize, preregistration analysis) so this script can be run on a
+    # tighter schedule than those steps' API cost can bear — event bench and
+    # game sites are plain scraping, no LLM involved, so they run every time.
+    if os.environ.get("STATIC_REFRESH_SCOPE", "full") != "light":
+        run("industry_brief_collect.py")
+        run("industry_brief_classify.py", os.environ.get("STATIC_CLASSIFY_LIMIT", "80"))
+        run("industry_brief_cluster.py")
+        run("industry_brief_trends.py")
+        run("industry_brief_synthesize.py")
+        run("preregistration_refresh.py")
     run("game_sites_refresh.py")
     run("static_export.py")
 
