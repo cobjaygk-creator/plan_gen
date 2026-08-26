@@ -1,0 +1,5491 @@
+
+
+     
+
+    
+
+
+<!DOCTYPE HTML>
+<html lang="ko">
+
+	
+
+
+    
+	
+
+	
+	
+
+  <head>
+
+	
+	
+
+	<script>
+
+        var curUrl = window.location.href;
+
+		var isDev = window.location.host.includes("dev") || window.location.host.includes("preview") || window.location.host.includes("test");
+        var isStage = window.location.host.includes("stage");
+        var codDomain = isDev ? 'profile-dev' : isStage ? 'profile-stage' : 'profile';
+       // var domain = isDev || isStage || window.location.host.includes("profile") ? "s-dev" : "s";
+        var domain = isDev ? 's-dev': isStage ? 's-stage' : "s";
+        var siteId, fetchUrl;
+
+        if(curUrl.includes("callofduty.com") > 0) {
+            siteId = "cod";
+            fetchUrl = "https://" + codDomain + ".callofduty.com";
+        }
+        else if(curUrl.includes("crashbandicoot.com") > 0) {
+			siteId = "crash";
+            fetchUrl = "https://" + domain + ".crashbandicoot.com";
+        }
+        else if(curUrl.includes("tonyhawkthegame.com") > 0) {
+            siteId = "th";
+            fetchUrl = "https://" + domain + ".tonyhawkthegame.com";
+        }
+        else if(curUrl.includes("sekirothegame.com") > 0) {
+            siteId = "sekiro";
+            fetchUrl = "https://" + domain + ".sekirothegame.com";
+        }
+        else if(curUrl.includes("activision.com") > 0) {
+            siteId = "activision";
+            fetchUrl = "https://" + domain + ".activision.com";
+        }
+
+		var OneTrust = {
+				dataSubjectParams: {
+					id: "",
+					isAnonymous: false,
+					token : ""
+				}
+			};		
+			function otGetCookie (cookieName) {
+				var i = 0,
+					cookies = document.cookie.split(";"),
+					length = cookies.length,
+					trimRegex = /^\s+|\s+$/g,
+					cookiePair;
+
+				for (; i < length; i++) {
+					cookiePair = cookies[i].split('=');				
+					if (cookiePair[0].replace(trimRegex, '') === cookieName) return unescape(cookiePair[1]);
+				}
+			}
+			var loggedIn = otGetCookie("ACT_SSO_COOKIE") || otGetCookie("s_ACT_SSO_COOKIE") || false;
+			if(loggedIn) {
+
+				var xsrfToken = otGetCookie("XSRF-TOKEN");
+				var ssoCookieValue = otGetCookie("ACT_SSO_COOKIE");
+    			var headers = {
+        			'Cookie': "ACT_SSO_COOKIE=" + ssoCookieValue,
+					'X-XSRF-TOKEN': xsrfToken
+    			}
+
+				fetch(fetchUrl + "/" + siteId + "/regulations/onetrust/auth", {
+					method: "POST",
+            		credentials: 'include',
+            		mode: 'cors',
+					headers: headers
+				})
+				.then((response) => response.json())
+				.then((json) => { 
+					OneTrust = {
+						dataSubjectParams: {
+							id: json.userId,
+							isAnonymous: false,
+							token : json.token
+						}
+					};
+					console.log("OneTrust: ",OneTrust);
+				})
+        		.catch(error => {
+                    // Handle errors
+                    console.error('Fetch error:', error); 
+                });
+			}
+			window.addEventListener("OneTrustGroupsUpdated", handleOneTrustGroupsUpdated);
+		    function handleOneTrustGroupsUpdated() {
+				if(loggedIn) {
+        			var xsrfToken = otGetCookie("XSRF-TOKEN");
+                    var ssoCookieValue = otGetCookie("ACT_SSO_COOKIE");
+                    var headers = {
+            			'Cookie': "ACT_SSO_COOKIE=" + ssoCookieValue,
+                        'X-XSRF-TOKEN': xsrfToken
+                    };
+					fetch(fetchUrl + "/" + siteId + "/regulations/onetrust/preferences?activeGroups=" + OnetrustActiveGroups, {
+							method: "POST",
+							credentials: 'include',
+                			mode: 'cors',
+							headers: headers
+					})
+            		.catch(error => {
+                        // Handle errors
+                        console.error('Fetch error:', error);
+                    });
+
+				}
+			}
+
+	</script>
+
+
+
+    <meta charset="UTF-8"/>
+
+    <meta name="country" content="US"/>
+
+    
+    
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	
+    	<script src="//cdn.optimizely.com/js/18240914759.js" type="text/plain" class="opt-anon-category-2"></script>
+    
+
+
+	
+    
+
+         <script>var dataLayer = dataLayer || [],
+    	         digitalData = {"page":{"pageInfo":{"charSet":"UTF-8","language":"KO","country":"US","site":"callofduty","pageName":"callofduty:hub:home","siteSection":"hub","siteSubsection":"home"},"pageCategory":{"primaryCategory":"hub","pageType":"home","subCategory1":"home"},"targetEntity":{"locale":"ko_US","brand":"callofduty","categoryId":"['hub', 'hub:home', 'callofduty:hub:home']","pageURL":"https://www.callofduty.com/content/atvi/callofduty/hub/web/ko/home.html","id":"home","name":"Call of Duty® | Best-Selling Video Game Franchise"}}};
+    </script>
+
+    
+    
+
+     
+     
+    <base href="https://www.callofduty.com"/> 
+
+
+
+	
+    
+
+	
+		<script>
+			(function(w,d,s,l,i){
+    			w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;j.setAttributeNode(d.createAttribute('data-ot-ignore'));
+                j.addEventListener('load', function() { 
+                    var _ge = new CustomEvent('gtm_loaded', { bubbles: true }); 
+                    d.dispatchEvent(_ge);
+                });
+                f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-T6X8245');
+		</script>                                                                                                                                                                        
+    
+
+
+    
+    
+
+     <title>콜 오브 듀티® |​ 베스트셀러 비디오 게임 프랜차이즈</title>
+
+
+    
+    
+
+    <meta name="template" content="cod-hub-template"/>
+    <meta name="description" content="Pre-order Call of Duty: Modern Warfare 4 now.
+"/>
+
+
+
+    
+    
+
+    
+
+
+	
+
+    
+        
+       	
+    
+
+	<link rel="image_src" href="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/meta/MW4_LP_Meta.webp"/>
+
+    <meta property="og:title" content="콜 오브 듀티® |​ 베스트셀러 비디오 게임 프랜차이즈"/>
+    
+	
+	<meta property="og:description" content="Pre-order Call of Duty: Modern Warfare 4 now.
+"/>
+	<meta property="og:type" content="website"/>
+
+    <meta property="og:image" content="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/meta/MW4_LP_Meta.webp"/>
+    <meta property="og:image:url" content="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/meta/MW4_LP_Meta.webp"/>
+    <meta property="og:image:secure_url" content="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/meta/MW4_LP_Meta.webp"/>
+
+    <meta name="twitter:title" content="콜 오브 듀티® |​ 베스트셀러 비디오 게임 프랜차이즈"/>
+    
+	<meta name="twitter:description" content="Pre-order Call of Duty: Modern Warfare 4 now.
+"/>
+    <meta name="twitter:image" content="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/meta/MW4_LP_Meta.webp"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+	<meta name="twitter:site" content="@CallofDuty"/>
+    <meta name="twitter:url" content="https://www.callofduty.com"/>
+
+    <!-- END SHARE META TAGS -->
+
+
+    
+    
+		
+
+	 
+
+   
+
+	
+	
+
+	
+	
+
+	
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "VideoGame",
+          "author": {
+                "@type": "Organization", 
+                "name": [""]
+          },
+          "contentRating": "",
+          "datePublished": "",
+          "description": "",
+          "gamePlatform": [],
+          "genre": ["Action Shooter"],
+          "image": "",
+          "name": "",
+	      "contentLocation": [],
+		  "playMode": [],
+		  "isAccessibleForFree": "False",
+          "inLanguage": [
+                {
+                    "@type": "Language",
+                    "name": "English"
+                }
+            ],
+            "thumbnailUrl": "",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Activision Publishing",
+                "sameAs": [
+                    "http://www.activision.com",
+                    "https://www.youtube.com/user/ActivisionGames",
+                    "http://en.wikipedia.org/wiki/Activision"
+                ]
+
+            },        
+            "applicationCategory": "Game",
+            "operatingSystem": [],
+            "url": "",
+            "isPartOf": {
+                "@type":"VideoGameSeries",
+                "name":""
+            }
+        }
+
+    	</script>
+
+    
+    <!-- END SCHEMA TAGS -->
+
+    
+    
+    
+
+	<script> 
+        var ATVI = ATVI || {},
+			wcmmode;
+		if (false) wcmmode = 'edit';
+		if (false) wcmmode = 'design';
+		if (!false && !false) wcmmode = '';
+		ATVI.pageMode = wcmmode;
+		ATVI.pageEnv = ('www.callofduty.com'.indexOf('cmsauthor') > -1) ? 'dev' : 'prod';
+		ATVI.pageLocale = 'ko';
+	</script>
+
+
+
+    
+    
+
+   
+
+   
+    <script>
+		(function() {
+
+    		if(window.location.href.includes("callofduty")) {
+
+                var winUrl = window.location.hostname,
+                    url = 'https://profile.callofduty.com/resources/common/scripts/sso.bar.js',
+                    prev = 'https://profile-dev.callofduty.com/resources/common/scripts/sso.bar.js',
+                    stage = 'https://profile-stage.callofduty.com/resources/common/scripts/sso.bar.js',
+                    author = '',
+                    scriptTag = document.createElement('script');
+                if (winUrl.indexOf('preview.') > -1 || winUrl.indexOf('test.') > -1 && prev) url = prev; //switch between "prev" and "url" for support team.
+                if (winUrl.indexOf('stage.') > -1 && stage) url = stage;
+                if (winUrl.indexOf('dev.') > -1) url = prev;
+                if (winUrl.indexOf('cmsauthor') > -1 && author) url = author;
+                scriptTag.setAttribute('src', url);
+                scriptTag.id = 'sso-bar-script';
+                document.write(scriptTag.outerHTML);
+
+    		}
+        })();
+
+        var config = {
+			containerId: 'cdo-bar',
+    		locale: 'ko',
+			cms: true,
+    		communityId: 'cod',
+    		customSupportPath: '' || null
+        };
+
+    </script>
+
+    
+    	<script>
+        	(function() {
+                var initSsoLibrary = function() {
+                    if (typeof SSO == "object") {
+                        window.ssobar = new SSO.Bar(config);
+                	} else {
+                    	setTimeout(function() {
+                        	initSsoLibrary();
+                        }, 250);
+                    }
+                };
+
+        		if(window.location.href.includes("callofduty")) initSsoLibrary();
+
+			})();
+      	  </script>
+		
+   
+
+
+
+    
+    
+
+    
+
+	
+
+    
+
+	
+
+    
+
+    
+
+    
+    
+<link rel="stylesheet" href="/apps/atvi/global/clientlibs.3bf3f28740b0f13f93c845b52b11a008.css" type="text/css"><script type="text/javascript" src="/apps/atvi/global/clientlibs.3908e9bde27c6472d5a31a4c4fc89f54.js"></script>
+
+
+
+    
+        
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/hub/components/hub/hub-2023/clientlibs.894c04a4b3d06124c724bb1787d4a850.css" type="text/css"><script type="text/javascript" src="/apps/atvi/callofduty/hub/components/hub/hub-2023/clientlibs.9378cf035653b196dcdabce44d67df40.js" defer></script>
+
+
+    
+
+    
+
+
+
+
+	
+    
+	
+	 
+	 
+	
+	 
+
+	
+
+	
+        
+        
+
+            
+            
+				<link rel="alternate" hreflang="en-us" href="https://www.callofduty.com"/>
+                <link rel="alternate" hreflang="x-default" href="https://www.callofduty.com"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="en-ar" href="https://www.callofduty.com/ar/en"/>
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="en_za" href="https://www.callofduty.com/za/en"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="fi" href="https://www.callofduty.com/fi"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="nl" href="https://www.callofduty.com/nl"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="nl-be" href="https://www.callofduty.com/be/nl"/>
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="ar" href="https://www.callofduty.com/ar"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="ru" href="https://www.callofduty.com/ru"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="fr" href="https://www.callofduty.com/fr"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="de" href="https://www.callofduty.com/de"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="it" href="https://www.callofduty.com/it"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="es" href="https://www.callofduty.com/es"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+				<link rel="alternate" hreflang="en-ca" href="https://www.callofduty.com/ca/en"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="en-au" href="https://www.callofduty.com/au/en"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+				<link rel="alternate" hreflang="en-gb" href="https://www.callofduty.com/uk/en"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="fr-ca" href="https://www.callofduty.com/ca/fr"/>
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="pt" href="https://www.callofduty.com/pt"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="pt-br" href="https://www.callofduty.com/br/pt"/>
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="es-mx" href="https://www.callofduty.com/mx/es"/>
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="pl" href="https://www.callofduty.com/pl"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="ko" href="https://www.callofduty.com/ko"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="fr_be" href="https://www.callofduty.com/be/fr"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="zh-tw" href="https://www.callofduty.com/tw/zh"/>
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="zh-cn" href="https://www.callofduty.com/cn/zh"/>
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="ja" href="https://www.callofduty.com/ja"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="sv" href="https://www.callofduty.com/sv"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="no" href="https://www.callofduty.com/no"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="da" href="https://www.callofduty.com/da"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="is" href="https://www.callofduty.com/is"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+            
+            
+            
+            
+            
+				<link rel="alternate" hreflang="en-nz" href="https://www.callofduty.com/nz/en"/>
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="th" href="https://www.callofduty.com/th"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+        
+        
+
+            
+				<link rel="alternate" hreflang="tr" href="https://www.callofduty.com/tr"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+    
+
+	
+    
+    <link rel="canonical" href="https://www.callofduty.com/ko"/>
+
+  
+
+
+    
+    
+    
+    
+    
+    <link rel="icon" href="https://www.callofduty.com/favicon.ico"/>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="https://www.callofduty.com/favicon.ico"/>
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://www.callofduty.com/favicon.ico"/>
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=100"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<link rel="apple-touch-icon" href="https://www.activision.com/content/dam/atvi/global/apple-touch-icon.png"/>
+	<meta name="robots" content="max-image-preview:large"/>
+
+    
+	
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+    
+    
+        
+    
+
+    
+    
+
+
+
+    
+
+    <!--adobe launch header scripts-->
+        
+
+    <!--end adobe launch scripts-->
+
+
+	
+	
+
+	
+    	<meta name="google-site-verification" content="R-Kg5wv2g0DjQEL5i4ty-Xud4GcIXzVycLyo3wloQxw" />
+    
+    	<meta name="google-site-verification" content="s2qMEyHW3ReaYcgL7hWfFVwnTicJ_EjcJEVFadmg2ig" />
+    
+
+
+  </head>
+
+
+	
+    
+
+
+<body class=" ">
+
+
+		
+		
+
+    
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6X8245" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	
+
+
+
+        
+        
+	
+
+
+    
+
+        
+        <div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="atvi_experiencefragm_437982443" class=" atvi-module-container">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="cod-single-header aem-GridColumn aem-GridColumn--default--12">
+
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/global/components/structure/v2023/cod-single-header/clientlibs.d60040a369694337bce338d72ceb9544.css" type="text/css">
+<script src="/apps/atvi/callofduty/global/components/structure/v2023/cod-single-header/clientlibs.01de6d0a1edef75f194ff13daf97ea2f.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <header id="cod-single-header" role="banner" class="cod-default-header ">
+        <a class="skip-to-main-content-link" href="#main">Skip To Main Content</a>
+
+        <div class="cod-header_inner-container">
+            
+            <div class="cod-header_mobile-menu" data-menu="close">
+                
+                <div class="cod-header_mobile-button">
+                    <button aria-label="Menu dropdown" role="button" aria-controls="mobile-dropdown" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="visually-hidden">Menu dropdown</span>
+                    </button>
+                </div>
+
+                
+                <div id="mobile-dropdown" class="cod-header_mobile-dropdown">
+                    <div class="cod-header_mobile-dropdown-inner-container">
+                        
+                        
+
+                        
+                        <div class="cod-header_mobile-primary-menu">
+                            
+                            
+
+                            
+                            
+
+	 
+	
+
+	<ul class="cod-header_global-list" role="menu">
+		<li role="menuitem" aria-haspopup="true" data-index="0" class="dd" aria-expanded="false">
+			<a data-entext="Games" aria-controls="submenu-games">게임 <span class="expand-arrow"></span></a>
+    		<ul id="submenu-games" role="menu" class="nav-expand-content">
+				<li role="menuitem">
+
+	<a href="/ko/modernwarfare4" data-entext="Modern Warfare 4">Modern Warfare 4 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/ko/blackops7" data-entext="Black Ops 7">Black Ops 7 <span class="expand-arrow"></span></a>
+
+</li>
+                <li role="menuitem">
+
+	<a href="/ko/warzone" data-entext="COD: Warzone">COD: Warzone <span class="expand-arrow"></span></a>
+
+</li>
+				
+				<li role="menuitem">
+
+	<a href="/mobile" data-entext="Call of Duty Mobile">Call of Duty Mobile <span class="expand-arrow"></span></a>
+
+</li>
+    		</ul>
+    	</li>
+		<li role="menuitem" aria-haspopup="true" data-index="1" class="dd" aria-expanded="false">
+			<a data-entext="News" aria-controls="submenu-news">뉴스 <span class="expand-arrow"></span></a>
+            <ul id="submenu-news" role="menu" class="nav-expand-content">
+				<li role="menuitem">
+
+	<a href="/ko/blog" data-entext="Blogs">블로그 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/guides" data-entext="Guides">전략 가이드 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/ko/patchnotes" data-entext="Patch Notes">패치 정보
+ <span class="expand-arrow"></span></a>
+
+</li>
+            </ul>
+    	</li>
+		<li role="menuitem" data-index="2" aria-expanded="false">
+			
+
+	<a href="/ko/store" data-entext="Store">Store <span class="expand-arrow"></span></a>
+
+
+            
+		</li>
+		<li role="menuitem" aria-haspopup="true" data-index="3" class="dd" aria-expanded="false">
+			<a data-entext="Esports" aria-controls="submenu-esports">e스포츠 <span class="expand-arrow"></span></a>
+			<ul id="submenu-esports" role="menu" class="nav-expand-content">
+            	<li role="menuitem">
+					<a href="https://www.callofdutyleague.com/en-us/" aria-label="Visit the Call of Duty League website" target="_blank" data-entext="Call of Duty League">Call of Duty League</a>
+				</li>
+            	<li role="menuitem">
+					
+
+	<a href="/mobile/esports" data-entext="Call of Duty Mobile World Championship">Call of Duty Mobile World Championship <span class="expand-arrow"></span></a>
+
+
+				</li>
+            	<li role="menuitem">
+					<a href="https://www.worldseriesofwarzone.com/" aria-label="Visit the World Series of Warzone website" target="_blank" data-entext="World Series of Warzone">World Series of Warzone</a>
+				</li>
+            </ul>
+    	</li>
+		<li role="menuitem" aria-haspopup="false" data-index="4">
+			<a href="https://support.activision.com" data-entext="Support" aria-label="Visit the Activision Support website" target="_blank">고객지원</a>
+		</li>
+		
+		<li class="nav-ellipsis-dropdown">
+        	<button class="nav-ellipsis-dropdown-toggle" aria-label="See more links"><span>...</span></button>
+        	<ul role="menu" class="nav-ellipsis-dropdown-menu"></ul>
+        </li>
+    </ul>
+
+
+                        </div>
+
+                        
+                        <div class="cod-header_mobile-sso">
+                            <div class="logged-out">
+                                <a class="sso-login" href="https://profile.callofduty.com/cod/login" data-entext="Login">로그인</a>
+                                <span>|</span>
+                                <a href="https://profile.callofduty.com/cod/signup" class="sso-signup" aria-label="Sign up for a Call of Duty account" data-entext="Sign Up">가입</a>
+                            </div>
+
+                            <div class="logged-in" aria-expanded="false">
+                                <a class="sso-profile" href="https://profile.callofduty.com/cod/profile" aria-label="Visit your Call of Duty profile" data-entext="Profile">프로필</a>
+                                <span>|</span>
+                                <a class="sso-logout" href="https://profile.callofduty.com/do_logout" aria-label="Log out of your account" data-entext="Sign Out">회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+            
+            <div class="cod-header_primary-logo">
+                
+
+     
+    
+
+	<a href="https://www.callofduty.com/ko" aria-label="Visit the Call of Duty home page">
+
+		<img src="/content/dam/atvi/callofduty/cod-touchui/global/cod-logo.svg" alt="Call of Duty logo"/>
+
+	</a>	
+
+
+            </div>
+
+            
+            
+
+            
+            
+
+            
+            <div class="cod-header_top-nav">
+                <div class="cod-header_desktop-nav_links">
+                    <nav>
+                        
+                        
+
+	 
+	
+
+	<ul class="cod-header_global-list" role="menu">
+		<li role="menuitem" aria-haspopup="true" data-index="0" class="dd" aria-expanded="false">
+			<a data-entext="Games" aria-controls="submenu-games">게임 <span class="expand-arrow"></span></a>
+    		<ul id="submenu-games" role="menu" class="nav-expand-content">
+				<li role="menuitem">
+
+	<a href="/ko/modernwarfare4" data-entext="Modern Warfare 4">Modern Warfare 4 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/ko/blackops7" data-entext="Black Ops 7">Black Ops 7 <span class="expand-arrow"></span></a>
+
+</li>
+                <li role="menuitem">
+
+	<a href="/ko/warzone" data-entext="COD: Warzone">COD: Warzone <span class="expand-arrow"></span></a>
+
+</li>
+				
+				<li role="menuitem">
+
+	<a href="/mobile" data-entext="Call of Duty Mobile">Call of Duty Mobile <span class="expand-arrow"></span></a>
+
+</li>
+    		</ul>
+    	</li>
+		<li role="menuitem" aria-haspopup="true" data-index="1" class="dd" aria-expanded="false">
+			<a data-entext="News" aria-controls="submenu-news">뉴스 <span class="expand-arrow"></span></a>
+            <ul id="submenu-news" role="menu" class="nav-expand-content">
+				<li role="menuitem">
+
+	<a href="/ko/blog" data-entext="Blogs">블로그 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/guides" data-entext="Guides">전략 가이드 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/ko/patchnotes" data-entext="Patch Notes">패치 정보
+ <span class="expand-arrow"></span></a>
+
+</li>
+            </ul>
+    	</li>
+		<li role="menuitem" data-index="2" aria-expanded="false">
+			
+
+	<a href="/ko/store" data-entext="Store">Store <span class="expand-arrow"></span></a>
+
+
+            
+		</li>
+		<li role="menuitem" aria-haspopup="true" data-index="3" class="dd" aria-expanded="false">
+			<a data-entext="Esports" aria-controls="submenu-esports">e스포츠 <span class="expand-arrow"></span></a>
+			<ul id="submenu-esports" role="menu" class="nav-expand-content">
+            	<li role="menuitem">
+					<a href="https://www.callofdutyleague.com/en-us/" aria-label="Visit the Call of Duty League website" target="_blank" data-entext="Call of Duty League">Call of Duty League</a>
+				</li>
+            	<li role="menuitem">
+					
+
+	<a href="/mobile/esports" data-entext="Call of Duty Mobile World Championship">Call of Duty Mobile World Championship <span class="expand-arrow"></span></a>
+
+
+				</li>
+            	<li role="menuitem">
+					<a href="https://www.worldseriesofwarzone.com/" aria-label="Visit the World Series of Warzone website" target="_blank" data-entext="World Series of Warzone">World Series of Warzone</a>
+				</li>
+            </ul>
+    	</li>
+		<li role="menuitem" aria-haspopup="false" data-index="4">
+			<a href="https://support.activision.com" data-entext="Support" aria-label="Visit the Activision Support website" target="_blank">고객지원</a>
+		</li>
+		
+		<li class="nav-ellipsis-dropdown">
+        	<button class="nav-ellipsis-dropdown-toggle" aria-label="See more links"><span>...</span></button>
+        	<ul role="menu" class="nav-ellipsis-dropdown-menu"></ul>
+        </li>
+    </ul>
+
+
+
+                        
+                        
+                    </nav>
+                </div>
+            </div>
+
+            
+            <div class="cod-header_sso">
+                <div class="logged-out">
+                    
+                    <a href="https://profile.callofduty.com/cod/login" class="sso-login" aria-label="Log into your Call of Duty account" data-entext="Login">로그인</a>
+                </div>
+
+                <div class="logged-in">
+                    <div class="account-name">
+                        <button aria-label="Call of Duty Account Settings" aria-expanded="false">
+                            <img src="/content/dam/atvi/callofduty/global/global-nav/profile_icon.png" alt="Profile Avatar logo"/>
+                            <span id="username"></span>
+                        </button>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="https://profile.callofduty.com/cod/profile" class="sso-profile" data-entext="Profile">프로필</a>
+                        </li>
+						
+                        <li>
+                            <a href="https://profile.callofduty.com/do_logout" class="sso-logout" aria-label="Log out of your account" data-entext="Sign Out">회원가입</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            
+
+            
+            
+
+            
+            <div class="cod-header_cta">
+                
+                <a href="/ko/playnow/modernwarfare4" data-entext="Pre-Order Modern Warfare 4" aria-label="Modern Warfare 4 예약 구매">
+                    <span class="cod-header_cta-desktop">Modern Warfare 4 예약 구매</span>
+                    <span class="cod-header_cta-mobile">MW4 예약 구매</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+                <div id="mobile-sidebar" class="cod-header_mobile-sidebar"> 
+
+					<div class="cod-header_mobile-sidebar-inner-container">
+
+                        <div class="cod-header_mobile-sidebar_header">
+							<div class="cod-header_mobile-sidebar_header-back">
+
+                            </div>
+                            <button class="cod-header_mobile-sidebar_header-close">Close</button>
+                        </div>
+
+                        <div class="cod-header_mobile-sidebar_links">
+
+							<div class="menu-title"></div>
+							
+
+	 
+	
+
+	<ul class="cod-header_global-list" role="menu" aria-label="COD">
+		<li role="menuitem" aria-haspopup="true" data-index="0" class="dd" aria-expanded="false" data-menuname="게임">
+			<a data-entext="Games" aria-controls="submenu-games">게임 <span class="expand-arrow"></span></a>
+    		<ul id="submenu-games" role="menu" aria-label="Games" class="nav-expand-content">
+				<li role="menuitem">
+
+	<a href="/ko/blackops7" data-entext="Black Ops 7">Black Ops 7 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/ko/blackops6" data-entext="Black Ops 6">Black Ops 6 <span class="expand-arrow"></span></a>
+
+</li>
+                <li role="menuitem">
+
+	<a href="/ko/warzone" data-entext="COD: Warzone">COD: Warzone <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/mobile" data-entext="Call of Duty Mobile">Call of Duty Mobile <span class="expand-arrow"></span></a>
+
+</li>
+    		</ul>
+    	</li>
+		<li role="menuitem" aria-haspopup="true" data-index="1" class="dd" aria-expanded="false" data-menuname="뉴스">
+			<a data-entext="News" aria-controls="submenu-news">뉴스 <span class="expand-arrow"></span></a>
+            <ul id="submenu-news" role="menu" aria-label="News" class="nav-expand-content">
+				<li role="menuitem">
+
+	<a href="/ko/blog" data-entext="Blogs">블로그 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/guides" data-entext="Guides">전략 가이드 <span class="expand-arrow"></span></a>
+
+</li>
+				<li role="menuitem">
+
+	<a href="/ko/patchnotes" data-entext="Patch Notes">패치 정보
+ <span class="expand-arrow"></span></a>
+
+</li>
+            </ul>
+    	</li>
+		<li role="menuitem" data-index="2" aria-haspopup="false" data-menuname="Store">
+			
+
+	<a href="/ko/store" data-entext="Store">Store <span class="expand-arrow"></span></a>
+
+
+		</li>
+		<li role="menuitem" aria-haspopup="true" data-index="3" class="dd" aria-expanded="false" data-menuname="e스포츠">
+			<a data-entext="Esports" aria-controls="submenu-esports">e스포츠 <span class="expand-arrow"></span></a>
+			<ul id="submenu-esports" role="menu" aria-label="Esports" class="nav-expand-content">
+            	<li role="menuitem">
+					<a href="https://www.callofdutyleague.com/en-us/" aria-label="Visit the Call of Duty League website" target="_blank" data-entext="Call of Duty League">Call of Duty League</a>
+				</li>
+            	<li role="menuitem">
+					
+
+	<a href="/mobile/esports" data-entext="Call of Duty Mobile World Championship">Call of Duty Mobile World Championship <span class="expand-arrow"></span></a>
+
+
+				</li>
+            	<li role="menuitem">
+					<a href="https://www.worldseriesofwarzone.com/" aria-label="Visit the World Series of Warzone website" target="_blank" data-entext="World Series of Warzone">World Series of Warzone</a>
+				</li>
+            </ul>
+    	</li>
+		<li role="menuitem" aria-haspopup="false" data-index="4">
+			<a href="https://support.activision.com" data-entext="Support" aria-label="Visit the Activision Support website" target="_blank">고객지원</a>
+		</li>
+        
+    </ul>
+
+    <ul role="menu" id="cod-header_mobile-sidebar_secondary" class="nav-expand-content">
+
+		
+
+	</ul>
+
+
+
+                        </div>
+
+                        <div class="cod-header_mobile-sidebar_sso">
+
+							<div class="logged-out">
+                                <a class="sso-login" href="https://profile.callofduty.com/cod/login" data-entext="Login">로그인</a>
+                                <span>|</span>
+                                <a href="https://profile.callofduty.com/cod/signup" class="sso-signup" aria-label="Sign up for a Call of Duty account" data-entext="Sign Up">가입</a>
+                            </div>
+
+                            <div class="logged-in">
+                                <a class="sso-profile" href="https://profile.callofduty.com/cod/profile" aria-label="Visit your Call of Duty profile" data-entext="Profile">프로필</a>
+                                <span>|</span>
+                                <a class="sso-logout" href="https://profile.callofduty.com/do_logout" aria-label="Log out of your account" data-entext="Sign Out">회원가입</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+    
+    <main id="main-content" class="layout-container-element  atvi-module-container">
+
+        
+        <div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="countdown" class=" atvi-module-container">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element  atvi-module-container">
+
+    
+    <div class="atvi-card aem-GridColumn aem-GridColumn--default--12">
+
+    
+<link rel="stylesheet" href="/apps/atvi/global/components/content/atvi-card/clientlibs.eb0b7570aa26dfce49287a6146971c74.css" type="text/css">
+<script src="/apps/atvi/global/components/content/atvi-card/clientlibs.b38248af3d7989fe8ed667a7059b3ef4.js"></script>
+
+
+
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+	
+	
+
+        @media screen and (max-width: 600px) {
+
+    		
+            #atvi_card-1029201059.atvi-card-flexbox-layout > .atvi-card-inner-container {
+				flex-direction: column;
+                height: auto;
+            }
+
+            #atvi_card-1029201059.atvi-card-flexbox-layout > .atvi-card-inner-container .atvi-card-media-container,
+			#atvi_card-1029201059.atvi-card-flexbox-layout > .atvi-card-inner-container .atvi-card-content-container {
+                width: 100%;
+                position: unset;
+            }
+
+			
+			
+
+        }
+
+		
+		
+
+        @media screen and (max-width: 600px) {
+    
+        	#atvi_card-1029201059.atvi-card-flexbox-layout.atvi-card-overlay-text-bottom .atvi-card-inner-container .atvi-card-content-container,
+			#atvi_card-1029201059.atvi-card-flexbox-layout.atvi-card-overlay-text-center .atvi-card-inner-container .atvi-card-content-container {
+    
+                position: relative;
+                bottom: auto;
+                left: auto;
+                top: auto;
+                width: 100%;
+                //transform: translate(0,0);
+            }
+
+            #atvi_card-1029201059.atvi-card-flexbox-layout.atvi-card-overlay-text-center .atvi-card-inner-container .atvi-card-media-container .atvi-card-media {
+            	position: relative;
+                height: 100%;
+            }
+        }
+
+		
+
+
+    
+
+    
+	
+
+</style>
+
+
+<div id="atvi_card-1029201059" class="atvi-card-container  atvi-card-overlay-text-center atvi-card-flexbox-layout" data-atvi-card-type="image">
+
+	<div class="atvi-card-inner-container">
+
+		<div class="atvi-card-media-container">
+
+			<div class="atvi-card-media">
+
+				
+
+				
+
+                    
+                    
+
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    <div class="atvi-card-image">
+        
+        <picture>
+            <source media="(min-width: 1441px)" srcset="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/countdown/CODHP_BetaEAHero_XL.webp"/>
+            <source media="(min-width: 601px)" srcset="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/countdown/CODHP_BetaEAHero_Desktop.webp"/>
+            
+
+            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/countdown/CODHP_BetaEAHero_Mobile.webp" alt="Modern Warfare 4 Key Art" role="img"/>
+        </picture>
+    </div>
+
+    
+                    
+                    
+    
+                    
+                    
+
+				
+
+			</div> 
+
+		</div> 
+
+		<div class="atvi-card-content-container">
+
+			<div class="atvi-card-content">
+
+                
+				
+
+					
+					
+					<div class="atvi-card-custom-content">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element countdown-container atvi-module-container">
+
+    
+    <div class="atvi-image aem-GridColumn aem-GridColumn--default--12">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="atvi-image-875414-container" class="atvi-image-component atvi-image-container reg-width " data-emptytext="ATVI Image" data-type="imgTag">
+
+  
+  
+
+  
+	
+
+	
+	
+	
+
+	
+
+
+    
+
+	
+
+    
+    
+    
+
+    
+      <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mw4/common/MW4Beta_Logo.svg" alt="Modern Warfare 4 Beta logo"/>
+    
+
+	
+
+
+	
+
+	
+
+
+	
+
+
+    
+    
+
+
+	
+	
+
+     
+     
+
+  
+
+</div></div>
+<div class="atvi-countdown aem-GridColumn aem-GridColumn--default--12">
+    
+<link rel="stylesheet" href="/apps/atvi/global/components/content/atvi-countdown/clientlibs.0df9cc812a35bab754e2b6a3b5f24b78.css" type="text/css">
+<script src="/apps/atvi/global/components/content/atvi-countdown/clientlibs.3e43570f0d7122b735db847d0287e93d.js"></script>
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+    <div id="atvi_countdown" class="atvi-countdown-container" data-countdown-timestamp="1787936400000">
+        <div class="atvi-countdown-inner-container">
+            <div class="atvi-countdown-active-container">
+                <div class="atvi-countdown-active-caption">
+                    <p>The Modern Warfare 4 <span>Open Beta</span> starts in:</p>
+
+                </div>
+
+                <div class="atvi-countdown-active-timer" role="timer" aria-live="polite" aria-atomic="true">
+                    <div class="atvi-countdown-time-unit">
+                        <span class="atvi-countdown-time-value" data-countdown-unit="days">00</span>
+
+                        <span class="atvi-countdown-time-label"> Days </span>
+                    </div>
+
+                    <span class="atvi-countdown-separator" aria-hidden="true">:</span>
+
+                    <div class="atvi-countdown-time-unit">
+                        <span class="atvi-countdown-time-value" data-countdown-unit="hours">00</span>
+
+                        <span class="atvi-countdown-time-label"> Hours </span>
+                    </div>
+
+                    <span class="atvi-countdown-separator" aria-hidden="true">:</span>
+
+                    <div class="atvi-countdown-time-unit">
+                        <span class="atvi-countdown-time-value" data-countdown-unit="minutes">00</span>
+
+                        <span class="atvi-countdown-time-label"> Minutes </span>
+                    </div>
+
+                    <span class="atvi-countdown-separator" aria-hidden="true">:</span>
+
+                    <div class="atvi-countdown-time-unit">
+                        <span class="atvi-countdown-time-value" data-countdown-unit="seconds">00</span>
+
+                        <span class="atvi-countdown-time-label"> Seconds </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="atvi-countdown-inactive-container" hidden>
+                <div class="atvi-countdown-inactive-caption">
+                    <h2>NOW PLAYING!</h2>
+<p><span>Open Beta</span> runs from August 28th – September 1st</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="atvi-cta aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+<link rel="stylesheet" href="/apps/atvi/global/components/content/atvi-cta/clientlibs.3ad7342bfa1d7844085d3abe3fbeaa25.css" type="text/css">
+<script src="/apps/atvi/global/components/content/atvi-cta/clientlibs.f7c0994bf2c3143fbaa2e4cab9ae4627.js"></script>
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    <style>
+
+        
+    </style>
+
+    
+    
+        <div id="countdown-ctas" class="atvi-cta-container " data-agegate="false">
+            <ul style="display:flex; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; justify-content: center; align-items: stretch; align-content: flex-start; ">
+                
+                    
+                    
+
+                    
+                    
+
+                    <li id="countdown-ctas-button-1-listItem" class="learn-more" style=" order: 0;">
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        <a target="_blank" data-entext="Learn More" id="countdown-ctas-button-1" class="learn-more-link atvi-cta-link-item atvi-cta-item " style="display: block; text-align: center; " href="/ko/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-everything-you-need-to-know">
+                            
+                            <span class="cta-text">더 알아보기</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                
+            </ul>
+
+            
+            <div id="countdown-ctas-modal-overlay" class="atvi-cta-modal-overlay modal-overlay" role="dialog" tabindex="-1">
+                <div class="inner-modal">
+                    <button class="modal-close" aria-label="닫기">
+                        &times;
+                    </button>
+
+                    <div class="modal-content">
+                        <div class="media-content"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
+
+    
+
+</div>
+</div>
+
+				
+
+				
+				
+
+			</div> 
+
+		</div> 
+
+	</div> 
+
+</div>
+
+</div>
+
+    
+
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="mp-trailer" class=" atvi-module-container">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element  atvi-module-container">
+
+    
+    <div class="atvi-card aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+	
+	
+
+    
+	
+
+</style>
+
+
+<div id="atvi_card-2090532534" class="atvi-card-container  atvi-card-overlay-text-center atvi-card-flexbox-layout" data-atvi-card-type="video">
+
+	<div class="atvi-card-inner-container">
+
+		<div class="atvi-card-media-container">
+
+			<div class="atvi-card-media">
+
+				
+
+				
+
+                    
+                    
+
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    <div class="atvi-card-video">
+        <video class="atvi-card-video-desktop" autoplay loop muted playsinline>
+            <source src="https://www.callofduty.com/cdn/mw4/MW4_MPTrailer_BG_Compressed.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+
+        <video class="atvi-card-video-mobile" autoplay loop muted playsinline>
+            <source src="https://www.callofduty.com/cdn/mw4/MW4_MPTrailer_BG_Compressed.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="video-overlay">
+            <div class="custom-controls">
+                <button data-entext="Play Animation" class="play-btn hide atvi-cta-item">
+                    <span class="sr-only">play video</span>
+                    <span>재생</span>
+                    <!-- /* <svg id="video-play-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <g>
+                          <rect width="32" height="32" rx="8" fill="black" fill-opacity="0.8" />
+                          <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="#3C4147" />
+                          <path d="M10.9688 8L23.0312 16L10.9688 24V8Z" fill="#3C4147" />
+                      </g>
+                  </svg> */ -->
+                    <svg id="video-play-icon" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 0V14L11 7L0 0Z" fill="#FFF"/>
+                    </svg>
+                </button>
+                <button data-entext="Pause Animation" class="pause-btn atvi-cta-item">
+                    <span class="sr-only">pause video</span>
+                    <span>일시 중지</span>
+                    <!-- /* <svg id="video-pause-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                      <g>
+                          <rect width="32" height="32" rx="8" fill="black" fill-opacity="0.8" />
+                          <rect x="0.5" y="0.5" width="31" height="31" rx="7.5" stroke="#3C4147" />
+                          <rect x="11" y="8" width="2" height="16" fill="#3C4147" />
+                          <rect x="19" y="8" width="2" height="16" fill="#3C4147" />
+                      </g>
+                  </svg> */ -->
+                    <svg id="video-pause-icon" width="11" height="14" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H4.125V14H0V0ZM6.875 0H11V14H6.875V0Z" fill="#FFF"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+
+				
+
+			</div> 
+
+		</div> 
+
+		<div class="atvi-card-content-container">
+
+			<div class="atvi-card-content">
+
+                
+				
+
+					
+					
+					<div class="atvi-card-custom-content">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element watch-trailer-container atvi-module-container">
+
+    
+    <div class="atvi-text aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+     
+
+     <h2>WATCH THE MULTIPLAYER TRAILER</h2>
+
+
+</div>
+
+</div>
+<div class="atvi-cta aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    <style>
+
+        
+    </style>
+
+    
+    
+        <div id="atvi_cta" class="atvi-cta-container " data-agegate="true">
+            <ul style=" justify-content: flex-start; align-items: stretch; align-content: flex-start; ">
+                
+                    
+                    
+
+                    
+                    
+
+                    <li id="atvi_cta-button-1-listItem" class="trailer" style=" order: 0;">
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        <button id="atvi_cta-button-1" class="trailer-btn atvi-cta-btn-item atvi-cta-item " data-entext="Button" data-modal="true" data-type="video" data-ytid="4Abm4WrMNJQ" data-autoplay="true" data-agegate="true" aria-haspopup="dialog" aria-controls="atvi_cta-modal-overlay" aria-expanded="false" data-scroll-displacement="0">
+                            
+                            <span class="cta-text">Button</span>
+                        </button>
+                    </li>
+                
+            </ul>
+
+            
+            <div id="atvi_cta-modal-overlay" class="atvi-cta-modal-overlay modal-overlay" role="dialog" tabindex="-1">
+                <div class="inner-modal">
+                    <button class="modal-close" aria-label="닫기">
+                        &times;
+                    </button>
+
+                    <div class="modal-content">
+                        <div class="media-content"></div>
+                        
+
+	
+    
+<link rel="stylesheet" href="/apps/atvi/global/components/content/agegate/clientlibs.7efff85a34faca393ca3ee4569c8d4f7.css" type="text/css">
+<script src="/apps/atvi/global/components/content/agegate/clientlibs.eabc5e3d3221109af6b7ed66cb4085a4.js"></script>
+
+
+
+	
+    
+
+
+
+
+    <div id="atvi-agegate-972534" class="atvi-component atvi-agegate">
+
+        <div class="form">
+            <h2 class="dob-prompt">생년월일을 입력하세요.</h2>
+            <div class="fields">
+                
+                
+                    <span class="field-label date">날짜:</span>
+                    <input type="text" tabindex="1" class="day-input field" size="2" maxlength="2" placeholder="DD"/>
+                    <span class="field-label month">월:</span>
+                    <input type="text" tabindex="2" class="month-input field" size="2" maxlength="2" placeholder="MM"/>
+                
+                <span class="field-label year">Year:</span>
+                <input type="text" tabindex="3" class="year-input field" size="4" maxlength="4" placeholder="YYYY"/>
+            </div>
+            <div class="feedback-message">
+                <div class="error-message invalid-date">올바른 날짜를 입력하세요.</div>
+                <div class="error-message failure">현재 이 콘텐츠에 접근할 수 없습니다</div>
+            </div>
+            <div class="submit-wrapper">
+                <a href="#" tabindex="4" class="submit atvi-instrument atvi-instrument-agegate-submit-button">보내기</a> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function($) {
+            ATVI.library.withDependency("agegate", false, function() {
+                var config = {
+                    minimumAge: 18,
+                    disabled: Boolean(true && false)
+                };
+
+				var $el = $('#atvi-agegate-972534');
+
+                ATVI.components.agegate.register($el, config);
+                ATVI.components.agegate.engage($el, {autoplay: true});
+            });
+		})(jQuery);
+
+    </script>
+
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
+
+    
+
+</div>
+</div>
+
+				
+
+				
+				
+
+			</div> 
+
+		</div> 
+
+	</div> 
+
+</div>
+
+</div>
+
+    
+
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="vault-edition" class=" atvi-module-container">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element  atvi-module-container">
+
+    
+    <div class="atvi-card aem-GridColumn aem-GridColumn--default--12">
+
+    
+
+
+
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+	
+	
+
+        @media screen and (max-width: 600px) {
+
+    		
+            #atvi_card-517035702.atvi-card-flexbox-layout > .atvi-card-inner-container {
+				flex-direction: column;
+                height: auto;
+            }
+
+            #atvi_card-517035702.atvi-card-flexbox-layout > .atvi-card-inner-container .atvi-card-media-container,
+			#atvi_card-517035702.atvi-card-flexbox-layout > .atvi-card-inner-container .atvi-card-content-container {
+                width: 100%;
+                position: unset;
+            }
+
+			
+			
+
+        }
+
+		
+		
+
+        @media screen and (max-width: 600px) {
+    
+        	#atvi_card-517035702.atvi-card-flexbox-layout.atvi-card-overlay-text-bottom .atvi-card-inner-container .atvi-card-content-container,
+			#atvi_card-517035702.atvi-card-flexbox-layout.atvi-card-overlay-text-center .atvi-card-inner-container .atvi-card-content-container {
+    
+                position: relative;
+                bottom: auto;
+                left: auto;
+                top: auto;
+                width: 100%;
+                //transform: translate(0,0);
+            }
+
+            #atvi_card-517035702.atvi-card-flexbox-layout.atvi-card-overlay-text-center .atvi-card-inner-container .atvi-card-media-container .atvi-card-media {
+            	position: relative;
+                height: 100%;
+            }
+        }
+
+		
+
+
+    
+
+    
+	
+
+</style>
+
+
+<div id="atvi_card-517035702" class="atvi-card-container  atvi-card-overlay-text-center atvi-card-flexbox-layout" data-atvi-card-type="image">
+
+	<div class="atvi-card-inner-container">
+
+		<div class="atvi-card-media-container">
+
+			<div class="atvi-card-media">
+
+				
+
+				
+
+                    
+                    
+
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    
+                    
+                    
+    <div class="atvi-card-image">
+        
+        <picture>
+            <source media="(min-width: 1441px)" srcset="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/vault-edition/VE_800_XL.webp"/>
+            <source media="(min-width: 601px)" srcset="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/vault-edition/VE_800_L.webp"/>
+            
+
+            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/vault-edition/VE_Mobile.webp" alt="Modern Warfare 4 Key Art" role="img"/>
+        </picture>
+    </div>
+
+    
+                    
+                    
+    
+                    
+                    
+
+				
+
+			</div> 
+
+		</div> 
+
+		<div class="atvi-card-content-container">
+
+			<div class="atvi-card-content">
+
+                
+				
+
+					
+					
+					<div class="atvi-card-custom-content">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element vault-edition-container atvi-module-container">
+
+    
+    <div class="atvi-text aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+     
+
+     볼트 에디션
+
+</div>
+
+</div>
+<div class="atvi-image aem-GridColumn aem-GridColumn--default--12">
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="atvi-image-234006-container" class="atvi-image-component atvi-image-container reg-width " data-emptytext="ATVI Image" data-type="imgTag">
+
+  
+  
+
+  
+	
+
+	
+	
+	
+
+	
+
+
+    
+
+	
+
+    
+    
+    
+
+    
+      <img src="https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mw4/common/MW4_Logo.webp" alt="Modern Warfare 4 Logo"/>
+    
+
+	
+
+
+	
+
+	
+
+
+	
+
+
+    
+    
+
+
+	
+	
+
+     
+     
+
+  
+
+</div></div>
+<div class="atvi-cta aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    <style>
+
+        
+    </style>
+
+    
+    
+        <div id="atvi_cta" class="atvi-cta-container vault-edition" data-agegate="false">
+            <ul style=" justify-content: center; align-items: center; align-content: flex-start; ">
+                
+                    
+                    
+
+                    
+                    
+
+                    <li id="atvi_cta-button-1-listItem" class="pre-order" style=" order: 0;">
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        <a target="_self" data-entext="Pre-order Vault Edition" id="atvi_cta-button-1" class="pre-order-link atvi-cta-link-item atvi-cta-item " style="display: block; text-align: center; " href="/ko/playnow/modernwarfare4">
+                            
+                            <span class="cta-text">볼트 에디션 사전 예약</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                
+                    
+                    
+
+                    
+                    
+
+                    <li id="atvi_cta-button-2-listItem" class="learn-more" style=" order: 0;">
+                        
+
+                        
+                        
+
+                        
+                        
+
+                        
+                        <a target="_self" data-entext="Learn More" id="atvi_cta-button-2" class="learn-more-link atvi-cta-link-item atvi-cta-item " style="display: block; text-align: center; " href="/ko/modernwarfare4/vault-edition">
+                            
+                            <span class="cta-text">더 알아보기</span>
+                        </a>
+
+                        
+                        
+                    </li>
+                
+            </ul>
+
+            
+            <div id="atvi_cta-modal-overlay" class="atvi-cta-modal-overlay modal-overlay" role="dialog" tabindex="-1">
+                <div class="inner-modal">
+                    <button class="modal-close" aria-label="닫기">
+                        &times;
+                    </button>
+
+                    <div class="modal-content">
+                        <div class="media-content"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+</div>
+
+    
+
+</div>
+</div>
+
+				
+
+				
+				
+
+			</div> 
+
+		</div> 
+
+	</div> 
+
+</div>
+
+</div>
+
+    
+
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="from-the-ward" class=" atvi-module-container" data-analytics-container="from-the-ward">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element ward-wrapper atvi-module-container">
+
+    
+    <div class="atvi-text aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+     
+
+     <h2>병동에서</h2>
+<p>콜 오브 듀티: 모던 워페어 4의 제작 과정</p>
+
+
+</div>
+
+</div>
+<div class="cod-media-gallery aem-GridColumn aem-GridColumn--default--12">
+    
+<link rel="stylesheet" href="/apps/atvi/global/clientlibs/plugins/jquery-custom-scrollbar-clientlibs.a5f6c0f362405d1b0f5b7f20f48a15cb.css" type="text/css">
+<link rel="stylesheet" href="/apps/atvi/global/clientlibs/plugins/slick-accessible.7fee9656acdd3e8e6c6410b537c54e74.css" type="text/css">
+<link rel="stylesheet" href="/apps/atvi/callofduty/global/components/content/library/cod-media-gallery/clientlibs.145066ce82936afaa2c7fdf761b52714.css" type="text/css">
+<script src="/apps/atvi/global/clientlibs/plugins/jquery-custom-scrollbar-clientlibs.42a368e95b4a38989c8984c672d29ec0.js"></script>
+<script src="/apps/atvi/global/clientlibs/plugins/slick-accessible.aad8b8456695d9281144ccdbf7ee7f9c.js"></script>
+<script src="/apps/atvi/callofduty/global/components/content/library/cod-media-gallery/clientlibs.c2546db3fff5fdeb8c32210a40268e81.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="cod_media_gallery" class=" cod-media-gallery-container">
+  <div class="slick-media">
+    <div class="slick-container">
+      
+      
+      
+      
+        <div class="gallery-youtube">
+          
+            
+    
+    
+    
+
+    
+    
+    
+<link rel="stylesheet" href="/apps/atvi/global/components/content/atvi-video/clientlibs.ebece6c901eee3b875f5ff30e6a7cbfd.css" type="text/css">
+<script src="/apps/atvi/global/components/content/atvi-video/clientlibs.fc054749ec6a8a9abf0e77463734b581.js"></script>
+
+
+
+
+    
+    <script>
+        ATVI.components.video = ATVI.components.video || {};
+    </script>
+
+    
+    
+    
+
+    <div class="atvi-video">
+        <div id="atvi-video-255851" class="atvi-modal atvi-component atvi-video-component auto-play aspect-ratio-default youtube-video modal-video" data-youtube-id="5z_UQf3KVko" data-video-title="From the Ward - Episode 1">
+            
+            
+            
+    
+
+    <div class="player-part">
+
+        <div class="display"></div>
+
+        <div class="player-wrapper player-wrapper-atvi-video-255851">
+            
+	<div class="player atvi-instrument atvi-instrument-video-player">
+        <div id="atvi-video-255851-embed"></div>
+    </div>
+
+        </div>
+
+		<div class="playing-overlay"></div>
+
+        
+
+		<!-- /*
+        <div class="external-link-overlay">
+			<a class="external-link" target="_blank" href="https://www.youtube.com/watch?v=5z_UQf3KVko" tabindex=""></a>
+        </div>
+        */ -->
+
+    </div>
+
+
+
+            
+            
+
+	
+
+   	<script>
+        window.ATVIVideoEls = window.ATVIVideoEls || [];
+		window.ATVIVideoEls.push({
+            $el: $("#atvi-video-255851"),
+            config: {
+                youtubeId: "5z_UQf3KVko",
+                start: 0,
+                customControls: false
+            }
+		});
+     	(function($) {
+            ATVI.library.withDependency('atvi-video', true, function() {
+                if (!ATVI.components.video.YTScriptLoaded) ATVI.components.video.initYtAPI();
+            });
+        })(jQuery);
+    </script>
+
+
+            
+            
+            <div class="atvi-video-thumbnail-container" role="button">
+                <div class="thumbnail-play-icon">
+                    <button>Play</button>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-1/2026_06_10_Activision_CoD_FTW_ep_1_thumbs_16x9_KR.webp" alt="Video Thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+        </div>
+      
+    </div>
+  
+    <div class="slick-container">
+      
+      
+      
+      
+        <div class="gallery-youtube hide">
+          
+            
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    
+    <script>
+        ATVI.components.video = ATVI.components.video || {};
+    </script>
+
+    
+    
+    
+
+    <div class="atvi-video">
+        <div id="atvi-video-202408" class="atvi-modal atvi-component atvi-video-component auto-play aspect-ratio-default youtube-video modal-video" data-youtube-id="Z0FEsADdCT8" data-video-title="From the Ward - Episode 2">
+            
+            
+            
+    
+
+    <div class="player-part">
+
+        <div class="display"></div>
+
+        <div class="player-wrapper player-wrapper-atvi-video-202408">
+            
+	<div class="player atvi-instrument atvi-instrument-video-player">
+        <div id="atvi-video-202408-embed"></div>
+    </div>
+
+        </div>
+
+		<div class="playing-overlay"></div>
+
+        
+
+		<!-- /*
+        <div class="external-link-overlay">
+			<a class="external-link" target="_blank" href="https://www.youtube.com/watch?v=Z0FEsADdCT8" tabindex=""></a>
+        </div>
+        */ -->
+
+    </div>
+
+
+
+            
+            
+
+	
+
+   	<script>
+        window.ATVIVideoEls = window.ATVIVideoEls || [];
+		window.ATVIVideoEls.push({
+            $el: $("#atvi-video-202408"),
+            config: {
+                youtubeId: "Z0FEsADdCT8",
+                start: 0,
+                customControls: false
+            }
+		});
+     	(function($) {
+            ATVI.library.withDependency('atvi-video', true, function() {
+                if (!ATVI.components.video.YTScriptLoaded) ATVI.components.video.initYtAPI();
+            });
+        })(jQuery);
+    </script>
+
+
+            
+            
+            <div class="atvi-video-thumbnail-container" role="button">
+                <div class="thumbnail-play-icon">
+                    <button>Play</button>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-2/2026_06_10_Activision_CoD_FTW_ep_2_thumbs_16x9_KR.webp" alt="Video Thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+        </div>
+      
+    </div>
+  
+    <div class="slick-container">
+      
+      
+      
+      
+        <div class="gallery-youtube hide">
+          
+            
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    
+    <script>
+        ATVI.components.video = ATVI.components.video || {};
+    </script>
+
+    
+    
+    
+
+    <div class="atvi-video">
+        <div id="atvi-video-712593" class="atvi-modal atvi-component atvi-video-component auto-play aspect-ratio-default youtube-video modal-video" data-youtube-id="EZft1b3QCd4" data-video-title="From the Ward - Episode 3">
+            
+            
+            
+    
+
+    <div class="player-part">
+
+        <div class="display"></div>
+
+        <div class="player-wrapper player-wrapper-atvi-video-712593">
+            
+	<div class="player atvi-instrument atvi-instrument-video-player">
+        <div id="atvi-video-712593-embed"></div>
+    </div>
+
+        </div>
+
+		<div class="playing-overlay"></div>
+
+        
+
+		<!-- /*
+        <div class="external-link-overlay">
+			<a class="external-link" target="_blank" href="https://www.youtube.com/watch?v=EZft1b3QCd4" tabindex=""></a>
+        </div>
+        */ -->
+
+    </div>
+
+
+
+            
+            
+
+	
+
+   	<script>
+        window.ATVIVideoEls = window.ATVIVideoEls || [];
+		window.ATVIVideoEls.push({
+            $el: $("#atvi-video-712593"),
+            config: {
+                youtubeId: "EZft1b3QCd4",
+                start: 0,
+                customControls: false
+            }
+		});
+     	(function($) {
+            ATVI.library.withDependency('atvi-video', true, function() {
+                if (!ATVI.components.video.YTScriptLoaded) ATVI.components.video.initYtAPI();
+            });
+        })(jQuery);
+    </script>
+
+
+            
+            
+            <div class="atvi-video-thumbnail-container" role="button">
+                <div class="thumbnail-play-icon">
+                    <button>Play</button>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-3/2026_06_11_Activision_CoD_FTW_3_THUMBS_16x9_KR.webp" alt="Video Thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+        </div>
+      
+    </div>
+  
+    <div class="slick-container">
+      
+      
+      
+      
+        <div class="gallery-youtube hide">
+          
+            
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    
+    <script>
+        ATVI.components.video = ATVI.components.video || {};
+    </script>
+
+    
+    
+    
+
+    <div class="atvi-video">
+        <div id="atvi-video-207618" class="atvi-modal atvi-component atvi-video-component auto-play aspect-ratio-default youtube-video modal-video" data-youtube-id="PLjV0WC5djc" data-video-title="From the Ward - Episode 4">
+            
+            
+            
+    
+
+    <div class="player-part">
+
+        <div class="display"></div>
+
+        <div class="player-wrapper player-wrapper-atvi-video-207618">
+            
+	<div class="player atvi-instrument atvi-instrument-video-player">
+        <div id="atvi-video-207618-embed"></div>
+    </div>
+
+        </div>
+
+		<div class="playing-overlay"></div>
+
+        
+
+		<!-- /*
+        <div class="external-link-overlay">
+			<a class="external-link" target="_blank" href="https://www.youtube.com/watch?v=PLjV0WC5djc" tabindex=""></a>
+        </div>
+        */ -->
+
+    </div>
+
+
+
+            
+            
+
+	
+
+   	<script>
+        window.ATVIVideoEls = window.ATVIVideoEls || [];
+		window.ATVIVideoEls.push({
+            $el: $("#atvi-video-207618"),
+            config: {
+                youtubeId: "PLjV0WC5djc",
+                start: 0,
+                customControls: false
+            }
+		});
+     	(function($) {
+            ATVI.library.withDependency('atvi-video', true, function() {
+                if (!ATVI.components.video.YTScriptLoaded) ATVI.components.video.initYtAPI();
+            });
+        })(jQuery);
+    </script>
+
+
+            
+            
+
+	
+    
+
+
+
+	
+    
+
+
+
+
+     
+	
+
+    <div id="atvi-agegate-330337" class="atvi-component atvi-agegate">
+
+        <div class="form">
+            <h2 class="dob-prompt">생년월일을 입력하세요.</h2>
+            <div class="fields">
+                
+                
+                    <span class="field-label date">날짜:</span>
+                    <input type="text" tabindex="-1" class="day-input field" size="2" maxlength="2" placeholder="DD"/>
+                    <span class="field-label month">월:</span>
+                    <input type="text" tabindex="-1" class="month-input field" size="2" maxlength="2" placeholder="MM"/>
+                
+                <span class="field-label year">Year:</span>
+                <input type="text" tabindex="-1" class="year-input field" size="4" maxlength="4" placeholder="YYYY"/>
+            </div>
+            <div class="feedback-message">
+                <div class="error-message invalid-date">올바른 날짜를 입력하세요.</div>
+                <div class="error-message failure">최소 요건을 충족하지 못했습니다.</div>
+            </div>
+            <div class="submit-wrapper">
+                <a href="#" tabindex="-1" class="submit atvi-instrument atvi-instrument-agegate-submit-button">보내기</a> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function($) {
+            ATVI.library.withDependency("agegate", false, function() {
+                var config = {
+                    minimumAge: 18,
+                    disabled: Boolean(false && false)
+                };
+
+				var $el = $('#atvi-agegate-330337');
+
+                ATVI.components.agegate.register($el, config);
+                ATVI.components.agegate.engage($el, {autoplay: true});
+            });
+
+		})(jQuery);
+
+    </script>
+
+
+            <div class="atvi-video-thumbnail-container" role="button">
+                <div class="thumbnail-play-icon">
+                    <button>Play</button>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-4/2026_06_12_Activision_CoD_FTW_Ep_4_Thumbs_16x9_KR.webp" alt="Video Thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+        </div>
+      
+    </div>
+  
+    <div class="slick-container">
+      
+      
+      
+      
+        <div class="gallery-youtube hide">
+          
+            
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    
+    <script>
+        ATVI.components.video = ATVI.components.video || {};
+    </script>
+
+    
+    
+    
+
+    <div class="atvi-video">
+        <div id="atvi-video-834929" class="atvi-modal atvi-component atvi-video-component auto-play aspect-ratio-default youtube-video modal-video" data-youtube-id="oimPOdfhR00" data-video-title="From the Ward - Episode 5">
+            
+            
+            
+    
+
+    <div class="player-part">
+
+        <div class="display"></div>
+
+        <div class="player-wrapper player-wrapper-atvi-video-834929">
+            
+	<div class="player atvi-instrument atvi-instrument-video-player">
+        <div id="atvi-video-834929-embed"></div>
+    </div>
+
+        </div>
+
+		<div class="playing-overlay"></div>
+
+        
+
+		<!-- /*
+        <div class="external-link-overlay">
+			<a class="external-link" target="_blank" href="https://www.youtube.com/watch?v=oimPOdfhR00" tabindex=""></a>
+        </div>
+        */ -->
+
+    </div>
+
+
+
+            
+            
+
+	
+
+   	<script>
+        window.ATVIVideoEls = window.ATVIVideoEls || [];
+		window.ATVIVideoEls.push({
+            $el: $("#atvi-video-834929"),
+            config: {
+                youtubeId: "oimPOdfhR00",
+                start: 0,
+                customControls: false
+            }
+		});
+     	(function($) {
+            ATVI.library.withDependency('atvi-video', true, function() {
+                if (!ATVI.components.video.YTScriptLoaded) ATVI.components.video.initYtAPI();
+            });
+        })(jQuery);
+    </script>
+
+
+            
+            
+
+	
+    
+
+
+
+	
+    
+
+
+
+
+     
+	
+
+    <div id="atvi-agegate-117700" class="atvi-component atvi-agegate">
+
+        <div class="form">
+            <h2 class="dob-prompt">생년월일을 입력하세요.</h2>
+            <div class="fields">
+                
+                
+                    <span class="field-label date">날짜:</span>
+                    <input type="text" tabindex="-1" class="day-input field" size="2" maxlength="2" placeholder="DD"/>
+                    <span class="field-label month">월:</span>
+                    <input type="text" tabindex="-1" class="month-input field" size="2" maxlength="2" placeholder="MM"/>
+                
+                <span class="field-label year">Year:</span>
+                <input type="text" tabindex="-1" class="year-input field" size="4" maxlength="4" placeholder="YYYY"/>
+            </div>
+            <div class="feedback-message">
+                <div class="error-message invalid-date">올바른 날짜를 입력하세요.</div>
+                <div class="error-message failure">최소 요건을 충족하지 못했습니다.</div>
+            </div>
+            <div class="submit-wrapper">
+                <a href="#" tabindex="-1" class="submit atvi-instrument atvi-instrument-agegate-submit-button">보내기</a> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function($) {
+            ATVI.library.withDependency("agegate", false, function() {
+                var config = {
+                    minimumAge: 18,
+                    disabled: Boolean(false && false)
+                };
+
+				var $el = $('#atvi-agegate-117700');
+
+                ATVI.components.agegate.register($el, config);
+                ATVI.components.agegate.engage($el, {autoplay: true});
+            });
+
+		})(jQuery);
+
+    </script>
+
+
+            <div class="atvi-video-thumbnail-container" role="button">
+                <div class="thumbnail-play-icon">
+                    <button>Play</button>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-5/YT_FTW_Ep_5_Thumb_ENG.webp" alt="Video Thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+        </div>
+      
+    </div>
+  
+    <div class="slick-container">
+      
+      
+      
+      
+        <div class="gallery-youtube hide">
+          
+            
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    
+    <script>
+        ATVI.components.video = ATVI.components.video || {};
+    </script>
+
+    
+    
+    
+
+    <div class="atvi-video">
+        <div id="atvi-video-994871" class="atvi-modal atvi-component atvi-video-component auto-play aspect-ratio-default youtube-video modal-video" data-youtube-id="ZghSTdBv-y8" data-video-title="From the Ward - Episode 6">
+            
+            
+            
+    
+
+    <div class="player-part">
+
+        <div class="display"></div>
+
+        <div class="player-wrapper player-wrapper-atvi-video-994871">
+            
+	<div class="player atvi-instrument atvi-instrument-video-player">
+        <div id="atvi-video-994871-embed"></div>
+    </div>
+
+        </div>
+
+		<div class="playing-overlay"></div>
+
+        
+
+		<!-- /*
+        <div class="external-link-overlay">
+			<a class="external-link" target="_blank" href="https://www.youtube.com/watch?v=ZghSTdBv-y8" tabindex=""></a>
+        </div>
+        */ -->
+
+    </div>
+
+
+
+            
+            
+
+	
+
+   	<script>
+        window.ATVIVideoEls = window.ATVIVideoEls || [];
+		window.ATVIVideoEls.push({
+            $el: $("#atvi-video-994871"),
+            config: {
+                youtubeId: "ZghSTdBv-y8",
+                start: 0,
+                customControls: false
+            }
+		});
+     	(function($) {
+            ATVI.library.withDependency('atvi-video', true, function() {
+                if (!ATVI.components.video.YTScriptLoaded) ATVI.components.video.initYtAPI();
+            });
+        })(jQuery);
+    </script>
+
+
+            
+            
+
+	
+    
+
+
+
+	
+    
+
+
+
+
+     
+	
+
+    <div id="atvi-agegate-783288" class="atvi-component atvi-agegate">
+
+        <div class="form">
+            <h2 class="dob-prompt">생년월일을 입력하세요.</h2>
+            <div class="fields">
+                
+                
+                    <span class="field-label date">날짜:</span>
+                    <input type="text" tabindex="-1" class="day-input field" size="2" maxlength="2" placeholder="DD"/>
+                    <span class="field-label month">월:</span>
+                    <input type="text" tabindex="-1" class="month-input field" size="2" maxlength="2" placeholder="MM"/>
+                
+                <span class="field-label year">Year:</span>
+                <input type="text" tabindex="-1" class="year-input field" size="4" maxlength="4" placeholder="YYYY"/>
+            </div>
+            <div class="feedback-message">
+                <div class="error-message invalid-date">올바른 날짜를 입력하세요.</div>
+                <div class="error-message failure">최소 요건을 충족하지 못했습니다.</div>
+            </div>
+            <div class="submit-wrapper">
+                <a href="#" tabindex="-1" class="submit atvi-instrument atvi-instrument-agegate-submit-button">보내기</a> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function($) {
+            ATVI.library.withDependency("agegate", false, function() {
+                var config = {
+                    minimumAge: 18,
+                    disabled: Boolean(false && false)
+                };
+
+				var $el = $('#atvi-agegate-783288');
+
+                ATVI.components.agegate.register($el, config);
+                ATVI.components.agegate.engage($el, {autoplay: true});
+            });
+
+		})(jQuery);
+
+    </script>
+
+
+            <div class="atvi-video-thumbnail-container" role="button">
+                <div class="thumbnail-play-icon">
+                    <button>Play</button>
+                </div>
+                <div class="video-thumbnail">
+                    <img src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-6/FTW_Episode6_thumb_EN.webp" alt="Video Thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="media-list">
+    <div class="thumbnail-content">
+      
+      <div class="video-thumbnail-wrapper" data-index="0" role="button" tabindex="0" aria-label="Go to slide 1">
+        <img class="video-thumbnail" src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-1/2026_06_10_Activision_CoD_FTW_ep_1_thumbs_16x9_KR.webp" data-index="0"/>
+      </div>
+    </div>
+  
+    <div class="thumbnail-content">
+      
+      <div class="video-thumbnail-wrapper" data-index="1" role="button" tabindex="0" aria-label="Go to slide 2">
+        <img class="video-thumbnail" src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-2/2026_06_10_Activision_CoD_FTW_ep_2_thumbs_16x9_KR.webp" data-index="1"/>
+      </div>
+    </div>
+  
+    <div class="thumbnail-content">
+      
+      <div class="video-thumbnail-wrapper" data-index="2" role="button" tabindex="0" aria-label="Go to slide 3">
+        <img class="video-thumbnail" src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-3/2026_06_11_Activision_CoD_FTW_3_THUMBS_16x9_KR.webp" data-index="2"/>
+      </div>
+    </div>
+  
+    <div class="thumbnail-content">
+      
+      <div class="video-thumbnail-wrapper" data-index="3" role="button" tabindex="0" aria-label="Go to slide 4">
+        <img class="video-thumbnail" src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-4/2026_06_12_Activision_CoD_FTW_Ep_4_Thumbs_16x9_KR.webp" data-index="3"/>
+      </div>
+    </div>
+  
+    <div class="thumbnail-content">
+      
+      <div class="video-thumbnail-wrapper" data-index="4" role="button" tabindex="0" aria-label="Go to slide 5">
+        <img class="video-thumbnail" src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-5/YT_FTW_Ep_5_Thumb_ENG.webp" data-index="4"/>
+      </div>
+    </div>
+  
+    <div class="thumbnail-content">
+      
+      <div class="video-thumbnail-wrapper" data-index="5" role="button" tabindex="0" aria-label="Go to slide 6">
+        <img class="video-thumbnail" src="/content/dam/atvi/callofduty/cod-touchui/hub/v2026/from-the-ward/ep-6/FTW_Episode6_thumb_EN.webp" data-index="5"/>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    
+
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="news" class=" atvi-module-container">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+<div class="layout-container-element news-container atvi-module-container">
+
+    
+    <div class="cod-news aem-GridColumn aem-GridColumn--default--12">
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/global/components/content/cod-news/clientlibs.ed118cc5a5080f16669a8954b4044310.css" type="text/css"><script type="text/javascript" src="/apps/atvi/callofduty/global/components/content/cod-news/clientlibs.4d37859c118a51e94400c25096ea9e42.js" defer></script>
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="cod-news-container " data-size="14">
+
+        <div class="section-header">
+            <h2>최신 소식</h2>
+        </div>
+    
+        <div class="news-list"> 
+    
+            <ul>
+    
+                
+
+                    <li>
+						
+                        
+    
+    
+    
+    
+    
+
+	
+	
+        <div class="blog-card-item blog-card-md " data-game="mw4" data-tag="patch-notes">
+	
+
+        <div class="card-inner">
+
+            <div class="graphics">
+
+				
+                
+
+                    <a data-produrl="https://www.callofduty.com/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes" href="/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes" aria-labelledby="title-https://www.callofduty.com/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes">
+
+                
+
+                <div class="bg">
+
+                    
+                	
+
+                    
+                    
+                        
+
+                        <img aria-hidden="true" data-src="/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/mw4/mp/beta/MW4-BETA-PATCH-NOTES-TOUT.jpg" alt="Modern Warfare 4 Beta Patch Notes" src="/content/dam/atvi/callofduty/cod-touchui/patchnotes/body/mw4/mp/beta/MW4-BETA-PATCH-NOTES-TOUT.jpg" class="blog-image"/>
+                    
+
+                </div>
+
+                
+					</a>
+                
+            </div>
+
+            <div class="text">
+
+                <div class="date-line">
+					
+    
+
+    <ul class="game-list">
+        <li class="game-tile mw4">
+
+			
+            <a href="https://www.callofduty.com/ko/blog/modernwarfare4">MW4</a>
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+    
+            
+            
+    
+            
+            
+    
+            
+            
+
+            
+            
+
+            
+            
+    
+            
+            
+    
+            
+            
+    
+        </li>
+    </ul>
+
+
+					
+
+    
+         
+    
+        
+    
+        <div data-month="08" data-loc="ko" data-date="August 25, 2026" data-date-loc="8월 25, 2026" class="news-published">
+            <span class="date-ph" data-i18n-template="{0} days ago">...</span> 
+        </div>
+    
+
+                </div>
+
+                <div class="title" id="title-https://www.callofduty.com/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes">
+                    
+
+                        <a href="/patchnotes/2026/08/call-of-duty-modern-warfare-4-beta-patch-notes">
+							Modern Warfare 4 Beta Patch Notes
+						</a>
+                    
+                </div>
+
+                
+
+                
+
+    <ul class="tag-list">
+        <li class="tag-item" data-value="patch-notes">
+            
+            패치 정보
+
+        </li>
+    </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </li>
+    
+                
+    
+            
+    
+                
+
+                    <li>
+						
+                        
+    
+    
+    
+    
+    
+
+	
+	
+        <div class="blog-card-item blog-card-md " data-game="mw4" data-tag="news,news-announcements">
+	
+
+        <div class="card-inner">
+
+            <div class="graphics">
+
+				
+                
+
+                    <a data-produrl="https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-everything-you-need-to-know" href="/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-everything-you-need-to-know" aria-labelledby="title-https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-everything-you-need-to-know">
+
+                
+
+                <div class="bg">
+
+                    
+                	
+
+                    
+                    
+                        
+
+                        <img aria-hidden="true" data-src="/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/eyntk/MW4-BETA-EYNTK-TOUT.jpg" alt="MW4 Beta: Everything You Need to Know" src="/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/eyntk/MW4-BETA-EYNTK-TOUT.jpg" class="blog-image"/>
+                    
+
+                </div>
+
+                
+					</a>
+                
+            </div>
+
+            <div class="text">
+
+                <div class="date-line">
+					
+    
+
+    <ul class="game-list">
+        <li class="game-tile mw4">
+
+			
+            <a href="https://www.callofduty.com/ko/blog/modernwarfare4">MW4</a>
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+    
+            
+            
+    
+            
+            
+    
+            
+            
+
+            
+            
+
+            
+            
+    
+            
+            
+    
+            
+            
+    
+        </li>
+    </ul>
+
+
+					
+
+    
+         
+    
+        
+    
+        <div data-month="08" data-loc="ko" data-date="August 21, 2026" data-date-loc="8월 21, 2026" class="news-published">
+            <span class="date-ph" data-i18n-template="{0} days ago">...</span> 
+        </div>
+    
+
+                </div>
+
+                <div class="title" id="title-https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-everything-you-need-to-know">
+                    
+
+                        <a href="/blog/2026/08/call-of-duty-modern-warfare-4-open-beta-everything-you-need-to-know">
+							MW4 Beta: Everything You Need to Know
+						</a>
+                    
+                </div>
+
+                
+
+                
+
+    <ul class="tag-list">
+        <li class="tag-item" data-value="news">
+            
+            뉴스
+        </li>
+    
+        <li class="tag-item" data-value="news-announcements">
+            
+            공지 사항
+        </li>
+    </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </li>
+    
+                
+    
+            
+    
+                
+
+                    <li>
+						
+                        
+    
+    
+    
+    
+    
+
+	
+	
+        <div class="blog-card-item blog-card-md " data-game="mw4" data-tag="news,news-announcements,multiplayer">
+	
+
+        <div class="card-inner">
+
+            <div class="graphics">
+
+				
+                
+
+                    <a data-produrl="https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-next-highlights-multiplayer-gameplay-systems" href="/blog/2026/08/call-of-duty-modern-warfare-4-next-highlights-multiplayer-gameplay-systems" aria-labelledby="title-https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-next-highlights-multiplayer-gameplay-systems">
+
+                
+
+                <div class="bg">
+
+                    
+                	
+
+                    
+                    
+                        
+
+                        <img aria-hidden="true" data-src="/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/deep-dive/MW4-MP-DEEP-DIVE-TOUT.jpg" alt="Modern Warfare 4 Multiplayer: Gameplay Systems Deep Dive" src="/content/dam/atvi/callofduty/cod-touchui/blog/body/mw4/deep-dive/MW4-MP-DEEP-DIVE-TOUT.jpg" class="blog-image"/>
+                    
+
+                </div>
+
+                
+					</a>
+                
+            </div>
+
+            <div class="text">
+
+                <div class="date-line">
+					
+    
+
+    <ul class="game-list">
+        <li class="game-tile mw4">
+
+			
+            <a href="https://www.callofduty.com/ko/blog/modernwarfare4">MW4</a>
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+    
+            
+            
+    
+            
+            
+    
+            
+            
+
+            
+            
+
+            
+            
+    
+            
+            
+    
+            
+            
+    
+        </li>
+    </ul>
+
+
+					
+
+    
+         
+    
+        
+    
+        <div data-month="08" data-loc="ko" data-date="August 21, 2026" data-date-loc="8월 21, 2026" class="news-published">
+            <span class="date-ph" data-i18n-template="{0} days ago">...</span> 
+        </div>
+    
+
+                </div>
+
+                <div class="title" id="title-https://www.callofduty.com/blog/2026/08/call-of-duty-modern-warfare-4-next-highlights-multiplayer-gameplay-systems">
+                    
+
+                        <a href="/blog/2026/08/call-of-duty-modern-warfare-4-next-highlights-multiplayer-gameplay-systems">
+							Modern Warfare 4 Multiplayer: Gameplay Systems Deep Dive
+						</a>
+                    
+                </div>
+
+                
+
+                
+
+    <ul class="tag-list">
+        <li class="tag-item" data-value="news">
+            
+            뉴스
+        </li>
+    
+        <li class="tag-item" data-value="news-announcements">
+            
+            공지 사항
+        </li>
+    </ul>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                    </li>
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            
+    
+                
+    
+            </ul>
+    
+        </div>
+    
+        <div class="cta-container">
+            <div class="sideline left"></div>
+            <div class="news-cta test">
+                <span class="glint"></span>
+                <span class="glint"></span>
+                <span class="glint"></span>
+                <span class="glint"></span>
+				<a href="https://www.callofduty.com/ko/blog" class="atvi-cta-item" data-entext="Get More News">더 많은 소식 받기</a>
+            </div>
+            <div class="sideline right"></div>
+        </div>
+    
+    </div>
+
+
+</div>
+
+    
+
+</div>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="atvi-layout-container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+<div id="get-the-game" class="layout-container-element section-container atvi-module-container">
+
+    
+    <div class="hub-game-tiles aem-GridColumn aem-GridColumn--default--12">
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/hub/components/hub/hub-2023/hub-game-tiles/clientlibs.b8cd656ddbb50ee2ff07d8fbe1bce679.css" type="text/css">
+<script src="/apps/atvi/callofduty/hub/components/hub/hub-2023/hub-game-tiles/clientlibs.b570b531464d4dce638258e892e3fb43.js"></script>
+
+
+           
+
+
+
+<div id="cod-hub-games-tiles">
+
+    <div class="section-header">
+
+		<h2>게임 구매하기</h2>
+
+    </div>
+
+    <div class="cards-container">
+
+         
+
+         
+
+            <div class="card">
+
+                <a href="/ko/store/games/modernwarfare4" data-entext="Modern Warfare 4" data-gameid="mw4">
+
+                    <div class="card-media">
+
+                        <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/mw4/Rex_COD-HP_GTG.png" class="bg" alt="Key Art"/>
+        
+                        <div class="card-media-game-content">
+
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/mw4/common/CODMW4_LOGO_PRIMARY_RGB_NEG.png" class="logo" alt="Modern Warfare 4"/>
+
+                            
+                            
+
+                            
+    
+                        </div>
+    
+                    </div>
+        
+                    <div class="card-info">
+        
+                        <div class="info-inner-container">
+                            <div class="card-text games">
+                                <p class="eyebrow">Call of Duty</p>
+                                <h4>Modern Warfare 4</h4>
+                            </div>
+                            <div class="card-logos games">
+                                <img aria-label="Xbox" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-xbox.svg" alt="Xbox icon"/>
+								<img aria-label="Playstation" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-ps.svg" alt="PlayStation icon"/>
+                                
+                                <img aria-label="Battle.net" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-battlenet.svg" alt="Battle.net icon"/>
+                                <img aria-label="Steam" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-steam.svg" alt="Steam icon"/>
+                                
+                                
+                                <img aria-label="Switch 2" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-switch2.svg" alt="Switch 2 icon"/>
+                            </div>
+                        </div>
+    
+                    </div>
+
+                </a>
+
+            </div>
+
+         
+
+            <div class="card">
+
+                <a href="/ko/store/games/warzone" data-entext="Warzone" data-gameid="warzone">
+
+                    <div class="card-media">
+
+                        <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/wz/overview/bo6-season-3/COD-HP_WZ_Get-The-Game.webp" class="bg" alt="Key Art"/>
+        
+                        <div class="card-media-game-content">
+
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/warzone-logo-sm.png" class="logo" alt="워존"/>
+
+                            
+                            
+
+                            
+    
+                        </div>
+    
+                    </div>
+        
+                    <div class="card-info">
+        
+                        <div class="info-inner-container">
+                            <div class="card-text games">
+                                <p class="eyebrow">Call of Duty</p>
+                                <h4>워존</h4>
+                            </div>
+                            <div class="card-logos games">
+                                <img aria-label="Xbox" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-xbox.svg" alt="Xbox icon"/>
+								<img aria-label="Playstation" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-ps.svg" alt="PlayStation icon"/>
+                                
+                                <img aria-label="Battle.net" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-battlenet.svg" alt="Battle.net icon"/>
+                                <img aria-label="Steam" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-steam.svg" alt="Steam icon"/>
+                                
+                                
+                                
+                            </div>
+                        </div>
+    
+                    </div>
+
+                </a>
+
+            </div>
+
+         
+
+            <div class="card">
+
+                <a href="/ko/store/games/mobile" data-entext="Mobile" data-gameid="codm">
+
+                    <div class="card-media">
+
+                        <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/GamesPLP_CODM.webp" class="bg" alt="Key Art"/>
+        
+                        <div class="card-media-game-content">
+
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/codm-logo-sm.png" class="logo" alt="Mobile"/>
+
+                            
+                            
+
+                            
+    
+                        </div>
+    
+                    </div>
+        
+                    <div class="card-info">
+        
+                        <div class="info-inner-container">
+                            <div class="card-text games">
+                                <p class="eyebrow">Call of Duty</p>
+                                <h4>Mobile</h4>
+                            </div>
+                            <div class="card-logos games">
+                                
+								
+                                
+                                
+                                
+                                <img aria-label="Apple" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-apple.svg" alt="Platform logo"/>
+                                <img aria-label="Google" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-googleplay.svg" alt="Platform logo"/>
+                                
+                            </div>
+                        </div>
+    
+                    </div>
+
+                </a>
+
+            </div>
+
+         
+
+            <div class="card">
+
+                <a href="/ko/store/games/blackops7" data-entext="Black Ops 7" data-gameid="bo7">
+
+                    <div class="card-media">
+
+                        <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/bo7/Chimera_COD-HP_GTG.webp" class="bg" alt="Key Art"/>
+        
+                        <div class="card-media-game-content">
+
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/store/games/bo7/COD_BO7_LOGO_NEG.svg" class="logo" alt="Black Ops 7"/>
+
+                            
+                            
+
+                            
+    
+                        </div>
+    
+                    </div>
+        
+                    <div class="card-info">
+        
+                        <div class="info-inner-container">
+                            <div class="card-text games">
+                                <p class="eyebrow">Call of Duty</p>
+                                <h4>Black Ops 7</h4>
+                            </div>
+                            <div class="card-logos games">
+                                <img aria-label="Xbox" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-xbox.svg" alt="Xbox icon"/>
+								<img aria-label="Playstation" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-ps.svg" alt="PlayStation icon"/>
+                                
+                                <img aria-label="Battle.net" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-battlenet.svg" alt="Battle.net icon"/>
+                                <img aria-label="Steam" src="/content/dam/atvi/callofduty/cod-touchui/store/games/listings/logos/Icon-steam.svg" alt="Steam icon"/>
+                                
+                                
+                                
+                            </div>
+                        </div>
+    
+                    </div>
+
+                </a>
+
+            </div>
+
+        
+
+    </div>
+
+</div></div>
+<div class="see-more-in-store aem-GridColumn aem-GridColumn--default--12">
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/hub/components/hub/hub-2023/see-more-in-store/clientlibs.5bd37589cf6e232581bf6af0187db4c9.css" type="text/css"><script type="text/javascript" src="/apps/atvi/callofduty/hub/components/hub/hub-2023/see-more-in-store/clientlibs.11311215b12aafe552a82abd6a62500b.js"></script>
+
+           
+
+
+
+<div class="cod-hub-see-more-in-store">
+
+    <div class="cta-container">
+		<div class="sideline left"></div>
+        <div class="news-cta">
+            <span class="glint"></span>
+            <span class="glint"></span>
+            <span class="glint"></span>
+            <span class="glint"></span>
+            <a href="https://www.callofduty.com/ko/store/games" class="atvi-cta-item">스토어에서 더 보기</a>
+			
+        </div>
+		<div class="sideline right"></div>
+    </div>
+
+</div></div>
+<div class="atvi-text aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="promo-disclaimer" class="page-disclaimers">
+
+     
+
+     <p><sup>††</sup>Based on Suggested Retail Price. At Participating Retailers.</p>
+<p><sup>†</sup>Game Pass Ultimate 또는 Game Pass Console 또는 Game Pass PC의 활성 구독이 필요합니다.</p>
+
+
+</div>
+
+</div>
+
+    
+
+</div>
+</div>
+<div class="atvi-experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+    
+		<div id="atvi_experiencefragm_272275914" class=" atvi-module-container">
+			
+
+<section class="experience-fragment-container ">
+	
+
+	
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="cod-footer aem-GridColumn aem-GridColumn--default--12">            
+
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/global/components/structure/v2023/cod-footer/clientlibs.50f892f087b18204e7590fc75a2edfea.css" type="text/css"><script type="text/javascript" src="/apps/atvi/callofduty/global/components/structure/v2023/cod-footer/clientlibs.fe79ab00f5d0e5fad2180abf8b46135f.js" defer></script>
+
+
+
+
+
+
+
+<footer role="contentInfo" class="cod-global-footer ">
+
+	<div class="inner-footer">
+
+		<div class="legal-links">
+			
+                <ul>
+                    <li>
+						<a href="https://www.activision.com/legal" target="_blank">
+                        	법률 관련
+                    	</a>
+					</li>
+                
+                    <li>
+						<a href="https://www.activision.com/legal/terms-of-use" target="_blank">
+                        	이용 약관
+                    	</a>
+					</li>
+                
+                    <li>
+						<a href="https://www.activision.com/legal/privacy-policy" target="_blank">
+                        	개인정보 보호정책
+
+                    	</a>
+					</li>
+                
+                    <li>
+						<a href="https://careers.activision.com" target="_blank">
+                        	인재 채용
+                    	</a>
+					</li>
+                
+                    <li>
+						<a href="https://www.activision.com/legal/cookie-policy" target="_blank">
+                        	쿠키(Cookie) 정책
+                    	</a>
+					</li>
+                
+                    <li>
+						<a href="https://support.activision.com/" target="_blank">
+                        	고객지원
+                    	</a>
+					</li>
+                
+                    <li>
+						<a href="https://www.callofduty.com/ko/values" target="_blank">
+                        	준수 사항
+
+                    	</a>
+					</li>
+                </ul>
+            
+		</div>
+
+		<div class="studio-links">
+			
+                <ul>
+                    <li class="atvi-logo">
+                        <a href="https://www.activision.com" target="_blank" aria-label="Visit the Activision website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/activision-logo.png" alt="Activision logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="iw-logo">
+                        <a href="https://www.infinityward.com" target="_blank" aria-label="Visit the Infinity Ward website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/iw-logo-white.webp" alt="Infinity Ward logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="beenox-logo">
+                        <a href="https://www.beenox.com" target="_blank" aria-label="Visit the Beenox website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/beenox-logo.png" alt="Beenox logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="digital-logo">
+                        <a href="https://www.digital-legends.com" target="_blank" aria-label="Visit the Digital Legends Entertainment website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/digital-legends-logo.png" alt="Digital Legends Entertainment logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="shg-logo">
+                        <a href="https://www.sledgehammergames.com" target="_blank" aria-label="Visit the Sledgehammer Games website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/shg-logo.png" alt="Sledgehammer Games Logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="raven-logo">
+                        <a href="https://www.ravensoftware.com" target="_blank" aria-label="Visit the Raven Software website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/raven-logo.png" alt="Raven logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="treyarch-logo">
+                        <a href="https://www.treyarch.com" target="_blank" aria-label="Visit the Treyarch website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/treyarch-logo.png" alt="Treyarch Logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="shanghai-logo">
+                        <a href="https://www.activision.com/company/locations/shanghai" target="_blank" aria-label="Visit the Activision Shanghai Studio profile page">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/atvi-shanghai-logo.png" alt="Shanghai Studio logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="hms-logo">
+                        <a href="https://www.highmoonstudios.com" target="_blank" aria-label="Visit the Highmoon Studios website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/high-moon-logo.png" alt="High Moon Studios logo" loading="lazy"/>
+                        </a>
+                    </li>
+                
+                    <li class="dw-logo">
+                        <a href="https://www.demonware.net" target="_blank" aria-label="Visit the Demonware website">
+                            <img src="/content/dam/atvi/callofduty/cod-touchui/hub/studio-logos/demonware-logo.png" alt="Demonware logo" loading="lazy"/>
+                        </a>
+                    </li>
+                </ul>
+            
+		</div>
+
+        
+		<div class="rating-links">
+			<ul>
+                
+				<li class="non-na-logo">
+                    
+						<a class="rating-logo" aria-label="등급 위원회 웹사이트 방문	
+" href="https://www.grac.or.kr/"><img src="https://imgs.callofduty.com/content/dam/atvi/global/ratings/grac/grac-19.png" alt="Rating logo" loading="lazy"/></a>
+					
+                </li>
+            </ul>
+		</div>
+
+		<div class="copyright">
+
+            
+            
+            <p>©/TM/<b>®</b> 2026 Activision Publishing, Inc.</p>
+
+			
+		</div>
+
+		<div class="cookie-settings">
+			<button id="ot-sdk-btn" aria-label="Configure cookie settings" class="ot-sdk-show-settings">쿠키(Cookie) 설정</button>
+		</div>
+
+		<div class="footer-locale-selector">
+			<div>
+    
+<link rel="stylesheet" href="/apps/atvi/global/components/content/atvi-locale-selector/clientlibs.f7dc4b2d1fe73813c0a90a67b45b024e.css" type="text/css">
+<script src="/apps/atvi/global/components/content/atvi-locale-selector/clientlibs.4a13c2ab7a8ee37f2f7bf5b7d87826e0.js"></script>
+
+
+
+
+
+
+<div class="atvi-locale-selector  open-up " data-selectedLocale="ko" role="navigation" aria-label="locale-selector.ariaLabel">
+    <h2 class="visually-hidden">Choose your region</h2>
+
+    <p class="cur-locale-selector-btn">
+        <button id="locale-selector-toggle" aria-haspopup="listbox" aria-controls="locale-selector-list" aria-expanded="false" class="flag-button flag-ko" aria-label="선택 지역	
+ - 한국">
+            <span class="visually-hidden">선택 지역	
+ -
+                한국</span>
+            <span class="flag-icon" aria-hidden="true">한국</span>
+            
+        </button>
+    </p>
+
+    <div class="locale-panel" id="locale-selector-list" role="listbox">
+        <div class="locale-panel-inner-container">
+            <div class="locale-panel-header">
+                <p class="selected-region-text">
+                    <span class="label">선택 지역	
+:</span>
+                    <span class="locale-string">한국</span>
+                </p>
+                <p class="close-btn">
+                    <button type="button" aria-label="Close Menu">
+                        <span class="visually-hidden">Close Menu</span>+
+                    </button>
+                </p>
+            </div>
+
+            
+
+            
+
+            <ul>
+                <li class=" flag-en" data-lang="en" role="option">
+                    <a href="/home" aria-label="미국">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            미국
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-en_gb" data-lang="en_gb" role="option">
+                    <a href="/uk/en/home" aria-label="영국">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            영국
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-en_ca" data-lang="en_ca" role="option">
+                    <a href="/ca/en/home" aria-label="English 캐나다">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            English 캐나다
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-en_au" data-lang="en_au" role="option">
+                    <a href="/au/en/home" aria-label="호주">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            호주
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-en_ar" data-lang="en_ar" role="option">
+                    <a href="/ar/en/home" aria-label="아랍 에미리트 연합국">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            아랍 에미리트 연합국
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-en_nz" data-lang="en_nz" role="option">
+                    <a href="/nz/en/home" aria-label="뉴질랜드">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            뉴질랜드
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-en_za" data-lang="en_za" role="option">
+                    <a href="/za/en/home" aria-label="남아프리카">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            남아프리카
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-fr" data-lang="fr" role="option">
+                    <a href="/fr/home" aria-label="프랑스">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            프랑스
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-fr_ca" data-lang="fr_ca" role="option">
+                    <a href="/ca/fr/home" aria-label="캐나다 Français">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            캐나다 Français
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-fr_be" data-lang="fr_be" role="option">
+                    <a href="/be/fr/home" aria-label="벨기에 Français">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            벨기에 Français
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-de" data-lang="de" role="option">
+                    <a href="/de/home" aria-label="독일">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            독일
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-it" data-lang="it" role="option">
+                    <a href="/it/home" aria-label="이탈리아">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            이탈리아
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-es" data-lang="es" role="option">
+                    <a href="/es/home" aria-label="에스파냐">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            에스파냐
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-es_mx" data-lang="es_mx" role="option">
+                    <a href="/mx/es/home" aria-label="멕시코">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            멕시코
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-pt" data-lang="pt" role="option">
+                    <a href="/pt/home" aria-label="포르투갈">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            포르투갈
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-pt_br" data-lang="pt_br" role="option">
+                    <a href="/br/pt/home" aria-label="브라질">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            브라질
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-da" data-lang="da" role="option">
+                    <a href="/da/home" aria-label="덴마크">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            덴마크
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-nl" data-lang="nl" role="option">
+                    <a href="/nl/home" aria-label="네덜란드">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            네덜란드
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-nl_be" data-lang="nl_be" role="option">
+                    <a href="/be/nl/home" aria-label="벨기에">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            벨기에
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-fi" data-lang="fi" role="option">
+                    <a href="/fi/home" aria-label="핀란드">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            핀란드
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-no" data-lang="no" role="option">
+                    <a href="/no/home" aria-label="노르웨이">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            노르웨이
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-sv" data-lang="sv" role="option">
+                    <a href="/sv/home" aria-label="스웨덴">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            스웨덴
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-pl" data-lang="pl" role="option">
+                    <a href="/pl/home" aria-label="폴란드">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            폴란드
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-ru" data-lang="ru" role="option">
+                    <a href="/ru/home" aria-label="러시아">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            러시아
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-ar" data-lang="ar" role="option">
+                    <a href="/ar/home" aria-label="아랍어">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            아랍어
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-ja" data-lang="ja" role="option">
+                    <a href="/ja/home" aria-label="日本語">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            日本語
+                        </div>
+                    </a>
+                </li>
+            
+                <li class="active flag-ko" data-lang="ko" role="option" aria-selected>
+                    <a href="/ko/home" aria-label="한국">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            한국
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-zh_cn" data-lang="zh_cn" role="option">
+                    <a href="/cn/zh/home" aria-label="简体中文">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            简体中文
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-zh_tw" data-lang="zh_tw" role="option">
+                    <a href="/tw/zh/home" aria-label="繁體中文">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            繁體中文
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-tr" data-lang="tr" role="option">
+                    <a href="/tr/home" aria-label="Turkish">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            Turkish
+                        </div>
+                    </a>
+                </li>
+            
+                <li class=" flag-th" data-lang="th" role="option">
+                    <a href="/th/home" aria-label="태국">
+                        <div class="flag-icon" aria-hidden="true"></div>
+                        <div class="region">
+                            태국
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+		</div>
+
+	</div>
+
+</footer>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+</section>
+		</div>
+	
+</div>
+<div class="survey-popup aem-GridColumn aem-GridColumn--default--12">
+    
+<link rel="stylesheet" href="/apps/atvi/callofduty/global/components/content/survey-popup/clientlibs.ad746a416e3fc6ba2b383255d35b80ba.css" type="text/css">
+<script src="/apps/atvi/callofduty/global/components/content/survey-popup/clientlibs.6a93c45a9155f34cf49ea986d7ba6251.js"></script>
+
+
+
+
+<div id="cod-popup-survey" class="cod-popup-survey-container">
+
+	<div class="survey-inner-container">
+
+		<div class="survey-popup-modal">
+
+			
+			<div class="popup-image">
+				<button class="popup-close" aria-label="Close Survey">&times;</button>
+            </div>
+
+			
+			<div class="popup-text"> 
+
+                <p>Are you interested in taking a survey and improving <b>callofduty.com</b>?</p>
+    
+                <ul>
+                    
+                    
+                    
+                    <li><a class="modal-yes atvi-cta-item" target="_blank" href="https://urldefense.com/v3/__https://m.survey.bz/U75?I.Project=P2501163&i.user1=3&ID=CAPIUSER&SMP=89__;!!Ci6f514n9QsL8ck!l-oBz9OUELfcx5uCpjlBZSeogXu45h6MNHWjmCfN7uQtEUVwS3o_G36qI1niuE6Ki5jnHtsYPosgfIXF4NYIfGfwC-gKKw$">YES, I'LL TAKE THE SURVEY</a></li>
+                    <li><button class="modal-no atvi-cta-item">No Thanks</button></li>
+                </ul>
+
+            </div>
+
+		</div>
+
+	</div>
+
+</div></div>
+
+        
+    
+    </main>
+    
+
+
+
+
+
+</div>
+
+    
+</div>
+</div>
+
+    
+
+        
+        
+
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+    
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+        
+
+
+
+
+		
+		
+
+        <script type="text/javascript">
+            if (typeof _satellite !== 'undefined') {
+       			 _satellite.pageBottom(); // Execute if _satellite exists
+      		}
+    	</script>
+
+    </body>
+
+
+</html>
