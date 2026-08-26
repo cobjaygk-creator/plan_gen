@@ -145,6 +145,7 @@ export function IndustryPanelCard({ title, panel, category, periodLabel, highlig
         <DailyHighlightsBlock highlights={highlights} category={category} />
       ) : (
         <>
+          <div className="ib-highlight-section">
           <div className="eyebrow">핵심 요약</div>
           <div className="ib-key-summary-list">
             {keySummaries.map((summary, index) => {
@@ -152,6 +153,7 @@ export function IndustryPanelCard({ title, panel, category, periodLabel, highlig
               if (detail?.issueId && dismissedIssues.has(detail.issueId)) return <div className="ib-feedback-applied" key={`${index}-${summary}`}>핵심 아님 의견이 반영됐습니다.<button type="button" onClick={() => void undoNotCore(detail.issueId!)}>취소</button></div>;
               return <div className="ib-key-summary" key={`${index}-${summary}`}><p className="headline">{summary}</p>{detail && <><div className="ib-key-summary-meta"><p className="ib-key-summary-reason">{detail.selectionReason}</p>{detail.issueId && <button type="button" onClick={() => setReasonIssue((current) => current === detail.issueId ? null : detail.issueId!)}>{feedbackError === detail.issueId ? "저장 실패" : "핵심 아님"}</button>}</div>{detail.issueId && reasonIssue === detail.issueId && <div className="ib-feedback-reasons"><span>제외 사유</span>{([['PROMOTIONAL','홍보성'],['LOW_IMPORTANCE','중요도 낮음'],['DUPLICATE','중복'],['LOW_IMPACT','업계 영향 부족'],['OTHER','기타']] as Array<[CoreFeedbackReason,string]>).map(([value,label]) => <button type="button" key={value} onClick={() => void markNotCore(detail.issueId!, value)}>{label}</button>)}</div>}</>}{detail?.scoreBreakdown && <details className="ib-score-breakdown"><summary>선정 점수 <strong>{detail.scoreBreakdown.total}</strong>점</summary><div className="ib-score-grid"><span>근거 신뢰도 <b>{detail.scoreBreakdown.evidence}</b></span><span>기사 확산 <b>{detail.scoreBreakdown.coverage}</b></span><span>중요도 <b>{detail.scoreBreakdown.importance}</b></span><span>지속성 <b>{detail.scoreBreakdown.persistence}</b></span><span>증가세 <b>{detail.scoreBreakdown.momentum}</b></span>{detail.scoreBreakdown.editorialAdjustment !== 0 && <span className="adjustment">편집 기준 <b>{detail.scoreBreakdown.editorialAdjustment}</b></span>}{detail.scoreBreakdown.userFeedback !== 0 && <span className="adjustment">사용자 판단 <b>{detail.scoreBreakdown.userFeedback}</b></span>}{detail.scoreBreakdown.approvedRule !== 0 && <span className="adjustment">승인 규칙 <b>{detail.scoreBreakdown.approvedRule}</b></span>}</div></details>}</div>;
             })}
+          </div>
           </div>
 
           {(panel.observations?.length ?? 0) > 0 && <div className="ib-observation-block">
@@ -177,6 +179,7 @@ export function IndustryPanelCard({ title, panel, category, periodLabel, highlig
             {panel.closedObservations!.map((item) => <div key={`${item.title}-${item.closedAt}`}><strong>{item.title}</strong><p>{item.reason}</p></div>)}
           </details>}
 
+          <div className="ib-highlight-section">
           <div className="section-label">앞으로 볼 것</div>
           <div className="ib-watch-list">
             {panel.watchList.slice(0, 3).map((watch) => (
@@ -191,6 +194,7 @@ export function IndustryPanelCard({ title, panel, category, periodLabel, highlig
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </>
       )}
