@@ -4518,3 +4518,147 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 2026-08-26 13:50:48,139 INFO 마비노기 영웅전: refreshed 17 ongoing candidates
 2026-08-26 13:50:50,458 INFO 라그나로크: refreshed 10 ongoing candidates
 2026-08-26 13:50:50,462 INFO Refresh complete: 192 total archived / 181 active candidates
+2026-08-26 14:37:14,109 INFO FC ONLINE: refreshed 17 ongoing candidates
+2026-08-26 14:37:41,535 INFO 메이플스토리: refreshed 20 ongoing candidates
+2026-08-26 14:37:41,642 ERROR 마비노기: refresh failed; kept previous archive state: HTTP Error 403: Forbidden
+Traceback (most recent call last):
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/event_bench_refresh.py", line 134, in main
+    candidates = [asdict(item) for item in collector()]
+                                           ^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 219, in collect_mabinogi_events
+    first_soup = BeautifulSoup(_fetch_html(MABINOGI_EVENTS_URL), "html.parser")
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 58, in _fetch_html
+    with urlopen(request, timeout=20) as response:  # noqa: S310 - explicit verified official URLs
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+2026-08-26 14:37:41,781 ERROR 테일즈위버: refresh failed; kept previous archive state: Command '['/usr/bin/curl', '-L', '--fail', '--silent', '--show-error', '--max-time', '20', '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139 Safari/537.36', '-H', 'Accept-Language: ko-KR,ko;q=0.9', '-H', 'Referer: https://tales.nexon.com/', 'https://tales.nexon.com/News/Event']' returned non-zero exit status 22.
+Traceback (most recent call last):
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/event_bench_refresh.py", line 134, in main
+    candidates = [asdict(item) for item in collector()]
+                                           ^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 248, in collect_talesweaver_events
+    first_soup = BeautifulSoup(_fetch_talesweaver_html(), "html.parser")
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 117, in _fetch_talesweaver_html
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/curl', '-L', '--fail', '--silent', '--show-error', '--max-time', '20', '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139 Safari/537.36', '-H', 'Accept-Language: ko-KR,ko;q=0.9', '-H', 'Referer: https://tales.nexon.com/', 'https://tales.nexon.com/News/Event']' returned non-zero exit status 22.
+2026-08-26 14:38:18,575 INFO 엘소드: refreshed 24 ongoing candidates
+2026-08-26 14:38:23,744 INFO 바람의나라: refreshed 4 ongoing candidates
+2026-08-26 14:38:35,974 INFO 로스트아크: refreshed 10 ongoing candidates
+2026-08-26 14:38:36,682 ERROR 리니지: refresh failed; kept previous archive state: collector returned no candidates
+Traceback (most recent call last):
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/event_bench_refresh.py", line 136, in main
+    raise RuntimeError("collector returned no candidates")
+RuntimeError: collector returned no candidates
+2026-08-26 14:39:17,140 INFO 검은사막: refreshed 23 ongoing candidates
+2026-08-26 14:39:17,924 ERROR 거상: refresh failed; kept previous archive state: <urlopen error [Errno 104] Connection reset by peer>
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py", line 1141, in _send_output
+    self.send(msg)
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py", line 1085, in send
+    self.connect()
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/http/client.py", line 1527, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/ssl.py", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/event_bench_refresh.py", line 134, in main
+    candidates = [asdict(item) for item in collector()]
+                                           ^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 366, in collect_gersang_events
+    soup = BeautifulSoup(_fetch_html(GERSANG_EVENTS_URL), "html.parser")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 58, in _fetch_html
+    with urlopen(request, timeout=20) as response:  # noqa: S310 - explicit verified official URLs
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 104] Connection reset by peer>
+2026-08-26 14:39:38,965 INFO 던전앤파이터: refreshed 26 ongoing candidates
+2026-08-26 14:39:39,848 ERROR 테일즈런너: refresh failed; kept previous archive state: HTTP Error 403: Forbidden
+Traceback (most recent call last):
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/event_bench_refresh.py", line 134, in main
+    candidates = [asdict(item) for item in collector()]
+                                           ^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 514, in collect_talesrunner_events
+    payload = json.loads(_fetch_html(TALESRUNNER_EVENT_API_URL))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/plan_gen/plan_gen/web/backend/app/event_bench/nexon_sample.py", line 58, in _fetch_html
+    with urlopen(request, timeout=20) as response:  # noqa: S310 - explicit verified official URLs
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+2026-08-26 14:39:43,472 INFO 카운터스트라이크 온라인: refreshed 2 ongoing candidates
+2026-08-26 14:39:49,737 INFO 마비노기 영웅전: refreshed 17 ongoing candidates
+2026-08-26 14:39:50,721 INFO 라그나로크: refreshed 10 ongoing candidates
+2026-08-26 14:39:50,724 INFO Refresh complete: 192 total archived / 181 active candidates
