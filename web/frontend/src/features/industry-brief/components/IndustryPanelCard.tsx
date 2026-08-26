@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { IndustryPanel, SourceItem } from "../types";
-import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason } from "../api/client";
+import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason, type RecommendedArticle } from "../api/client";
 
 interface Props {
 
@@ -20,17 +20,25 @@ function articleToSource(article: { title: string; url: string; source: string }
   return { outlet: article.source.replace(/^NAVER · /, ""), title: article.title, url: article.url, publishedAgo: "" };
 }
 
+function pickRandom(articles: RecommendedArticle[], count: number): RecommendedArticle[] {
+  const shuffled = [...articles];
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled.slice(0, count);
+}
+
 function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHighlights; category: "game" | "ai" }) {
-  const [recommendedPage, setRecommendedPage] = useState(0);
-  const recommendedPageCount = Math.max(1, Math.ceil(highlights.recommended.length / RECOMMENDED_PAGE_SIZE));
-  const visibleRecommended = highlights.recommended.slice(
-    recommendedPage * RECOMMENDED_PAGE_SIZE, recommendedPage * RECOMMENDED_PAGE_SIZE + RECOMMENDED_PAGE_SIZE,
-  );
+  const [visibleRecommended, setVisibleRecommended] = useState<RecommendedArticle[]>(() => pickRandom(highlights.recommended, RECOMMENDED_PAGE_SIZE));
+  useEffect(() => {
+    setVisibleRecommended(pickRandom(highlights.recommended, RECOMMENDED_PAGE_SIZE));
+  }, [highlights.recommended]);
   const recommendedLabel = `${category === "game" ? "게임" : "AI"}추천기사`;
 
   if (!highlights.hasSignal) {
     return (
-      <div className="ib-highlight-section">
+      <div className="ib-daily-highlights ib-highlight-section">
         <div className="eyebrow">핵심이슈</div>
         <div className="ib-key-summary"><p className="headline">지난 24시간 동안 분석할 만큼 충분한 기사가 수집되지 않았습니다.</p></div>
       </div>
@@ -38,7 +46,7 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
   }
   const coreIssues = highlights.coreIssues.slice(0, MAX_CORE_ISSUES);
   return (
-    <>
+    <div className="ib-daily-highlights">
       <div className="ib-highlight-section">
         <div className="eyebrow">핵심이슈</div>
         <div className="ib-highlight-issue-list">
@@ -59,11 +67,11 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
         <div className="ib-highlight-section">
           <div className="ib-recommended-head">
             <span className="section-label">{recommendedLabel}</span>
-            {recommendedPageCount > 1 && (
+            {highlights.recommended.length > RECOMMENDED_PAGE_SIZE && (
               <button
                 type="button"
                 className="ib-recommended-next"
-                onClick={() => setRecommendedPage((page) => (page + 1) % recommendedPageCount)}
+                onClick={() => setVisibleRecommended(pickRandom(highlights.recommended, RECOMMENDED_PAGE_SIZE))}
               >
                 다음
               </button>
@@ -80,7 +88,7 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
