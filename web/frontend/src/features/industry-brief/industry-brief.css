@@ -1408,7 +1408,11 @@
 .ib-highlight-issue {
   display: flex;
   flex-direction: column;
+  padding: 13px 16px;
   overflow: hidden;
+  border: 1px solid #e3ebf4;
+  border-radius: 9px;
+  background: #fff;
 }
 .ib-highlight-issue .headline {
   display: -webkit-box;
@@ -1437,9 +1441,9 @@
 .ib-recommended-head .section-label { margin: 0; }
 .ib-recommended-next { padding: 4px 13px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--ink-muted); font-size: 13.5px; font-weight: 700; cursor: pointer; }
 .ib-recommended-next:hover { border-color: #285f9e; color: #285f9e; }
-.ib-recommended-list { display: grid; gap: 10px; }
-.ib-recommended-item { display: block; padding: 0; text-decoration: none; }
-.ib-recommended-item:hover .title { color: #285f9e; text-decoration: underline; }
+.ib-recommended-list { display: grid; gap: 7px; }
+.ib-recommended-item { display: block; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: #fff; text-decoration: none; }
+.ib-recommended-item:hover { border-color: #285f9e; }
 .ib-recommended-top { margin-bottom: 2px; }
 .ib-recommended-top .outlet { color: #285f9e; font-size: 12.5px; font-weight: 750; }
 .ib-recommended-item .title { color: var(--ink); font-size: 15.5px; font-weight: 650; line-height: 1.35; }

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { IndustryPanel, SourceItem } from "../types";
-import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason, type RecommendedArticle } from "../api/client";
+import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason } from "../api/client";
 
 interface Props {
 
@@ -20,20 +20,12 @@ function articleToSource(article: { title: string; url: string; source: string }
   return { outlet: article.source.replace(/^NAVER · /, ""), title: article.title, url: article.url, publishedAgo: "" };
 }
 
-function pickRandom(articles: RecommendedArticle[], count: number): RecommendedArticle[] {
-  const shuffled = [...articles];
-  for (let i = shuffled.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled.slice(0, count);
-}
-
 function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHighlights; category: "game" | "ai" }) {
-  const [visibleRecommended, setVisibleRecommended] = useState<RecommendedArticle[]>(() => pickRandom(highlights.recommended, RECOMMENDED_PAGE_SIZE));
-  useEffect(() => {
-    setVisibleRecommended(pickRandom(highlights.recommended, RECOMMENDED_PAGE_SIZE));
-  }, [highlights.recommended]);
+  const [recommendedPage, setRecommendedPage] = useState(0);
+  const recommendedPageCount = Math.max(1, Math.ceil(highlights.recommended.length / RECOMMENDED_PAGE_SIZE));
+  const visibleRecommended = highlights.recommended.slice(
+    recommendedPage * RECOMMENDED_PAGE_SIZE, recommendedPage * RECOMMENDED_PAGE_SIZE + RECOMMENDED_PAGE_SIZE,
+  );
   const recommendedLabel = `${category === "game" ? "게임" : "AI"}추천기사`;
 
   if (!highlights.hasSignal) {
@@ -67,11 +59,11 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
         <div className="ib-highlight-section">
           <div className="ib-recommended-head">
             <span className="section-label">{recommendedLabel}</span>
-            {highlights.recommended.length > RECOMMENDED_PAGE_SIZE && (
+            {recommendedPageCount > 1 && (
               <button
                 type="button"
                 className="ib-recommended-next"
-                onClick={() => setVisibleRecommended(pickRandom(highlights.recommended, RECOMMENDED_PAGE_SIZE))}
+                onClick={() => setRecommendedPage((page) => (page + 1) % recommendedPageCount)}
               >
                 다음
               </button>
