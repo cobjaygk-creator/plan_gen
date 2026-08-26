@@ -5,7 +5,6 @@ of the app — Industry Brief has no writes of its own, so that's the only
 piece of existing infrastructure this reuses."""
 import json
 import math
-import os
 from threading import Lock
 from datetime import datetime, timedelta, timezone
 from typing import Optional
@@ -18,7 +17,6 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from ..deps import get_current_user
 from ..models import User
-from .classifier import classify_pending
 from .collector import collect_all
 from .models import Article, DailyBrief, EditorialRule, EditorialRuleAudit, Issue, IssueArticle, IssueFeedback
 from .highlights import load_latest_highlights, refresh_and_save_highlights, to_api_dict
@@ -867,12 +865,19 @@ def get_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get
 def refresh_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     """Collects fresh articles from the two NAVER sections, then has the AI
     re-judge today's 핵심 이슈/추천 기사 for both categories. Reuses the same
-    process-local lock as /refresh so the two can't run concurrently."""
+    process-local lock as /refresh so the two can't run concurrently.
+
+    Deliberately skips classify_pending(): _fetch_window_articles() in
+    highlights.py reads straight off category/source/collected_at, not
+    classified_at, so classification adds nothing here — it was only
+    burning minutes grinding through the (large, mostly unrelated)
+    classification backlog shared with /refresh, which made this endpoint
+    look hung and left every concurrent refresh attempt bouncing off the
+    shared lock with a 409."""
     if not _REFRESH_LOCK.acquire(blocking=False):
         raise HTTPException(status.HTTP_409_CONFLICT, "이미 업계 동향을 업데이트하고 있습니다.")
     try:
         collect_all(db)
-        classify_pending(db, limit=int(os.environ.get("STATIC_CLASSIFY_LIMIT", "80")))
         now = datetime.now(timezone.utc)
         game = refresh_and_save_highlights(db, "GAME", now)
         ai = refresh_and_save_highlights(db, "AI", now)
