@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T16:21:45.611375+00:00",
+  "generated_at": "2026-08-26T19:02:03.459226+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 11,
+        "collected": 22,
         "analyzed": 0,
-        "pending": 11,
+        "pending": 22,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -205,9 +205,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 898,
+        "collected": 902,
         "analyzed": 69,
-        "pending": 829,
+        "pending": 833,
         "completionRate": 8,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -436,7 +436,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -995,7 +995,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -1125,7 +1125,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -1439,12 +1439,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1624,9 +1624,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 904,
+        "collected": 915,
         "analyzed": 69,
-        "pending": 835,
+        "pending": 846,
         "completionRate": 8,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1855,7 +1855,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -2414,7 +2414,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -2544,7 +2544,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -2858,12 +2858,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
