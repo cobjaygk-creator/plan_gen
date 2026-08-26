@@ -1430,7 +1430,7 @@
   display: -webkit-box;
   overflow: hidden;
   flex: 1;
-  margin: 0;
+  margin: 5px 0 0;
   color: var(--ink-muted);
   font-size: 15px;
   line-height: 1.45;
