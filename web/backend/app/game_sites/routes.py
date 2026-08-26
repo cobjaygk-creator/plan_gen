@@ -11,6 +11,7 @@ from sqlalchemy.orm import Session
 from ..config import BENCHMARK_DATA_DIR
 from ..database import get_db
 from ..deps import get_current_user
+from ..media_cache import as_absolute_path
 from ..models import User
 from ..preregistration.models import GamePreRegistration
 from .portal_collector import LAST_REFRESH_PATH, OFFICIAL_PATH, refresh_portal_sites
@@ -49,7 +50,7 @@ def _load_event_sites() -> list[dict]:
             "site_name": item.get("title") or item.get("game") or "Game site",
             "site_type": _event_site_type(item["event_url"], item.get("title") or ""),
             "url": item["event_url"],
-            "thumbnail_url": item.get("hero_image_url"),
+            "thumbnail_url": as_absolute_path(item.get("hero_image_url")),
             "publisher": item.get("publisher"),
             "platform": [],
             "discovered_at": item.get("first_collected_at") or item.get("collected_at"),
@@ -104,7 +105,7 @@ def list_game_sites(
             "site_name": item.campaign_name,
             "site_type": "PREREGISTRATION",
             "url": url,
-            "thumbnail_url": item.main_visual_url or item.thumbnail_url,
+            "thumbnail_url": as_absolute_path(item.main_visual_url or item.thumbnail_url),
             "publisher": item.publisher,
             "platform": item.platform.split(",") if item.platform else [],
             "discovered_at": item.discovered_at,
@@ -112,7 +113,7 @@ def list_game_sites(
             "status": item.status.upper(),
         }
     for item in _load_official_sites():
-        by_url.setdefault(item["url"], item)
+        by_url.setdefault(item["url"], {**item, "thumbnail_url": as_absolute_path(item.get("thumbnail_url"))})
     # Event Benchmark full pages are campaign/event landing pages for games
     # already in service. They are intentionally excluded from this feature,
     # whose scope is the game itself: official, teaser, and preregistration sites.

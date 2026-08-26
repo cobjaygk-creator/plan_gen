@@ -9,6 +9,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 
 from ..config import BENCHMARK_DATA_DIR
 from ..deps import get_current_user
+from ..media_cache import as_absolute_path
 from ..models import User
 
 
@@ -28,6 +29,10 @@ def list_candidates(user: User = Depends(get_current_user)):
         candidates = json.loads(_SAMPLE_PATH.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, "이벤트 벤치마크 샘플을 읽지 못했습니다.") from exc
+    candidates = [
+        {**item, "hero_image_url": as_absolute_path(item.get("hero_image_url"))}
+        for item in candidates
+    ]
     last_refreshed_at = max(
         (item.get("last_seen_at", "") for item in candidates),
         default="",

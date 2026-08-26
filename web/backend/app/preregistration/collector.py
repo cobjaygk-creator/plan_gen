@@ -16,6 +16,7 @@ REPO_ROOT = Path(__file__).resolve().parents[4]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 from tools.ai_client import ClassificationError, classify
+from ..media_cache import cache_thumbnail
 from .models import GamePreRegistration, PreRegistrationType
 
 NAVER_WEBKR_URL = "https://naverapihub.apigw.ntruss.com/search/v1/webkr"
@@ -162,6 +163,7 @@ def collect_and_store(db: Session, queries: Iterable[str]=DISCOVERY_QUERIES) -> 
             if not analysis or not analysis.is_game_preregistration or not analysis.is_official_landing or not analysis.game_name or not analysis.campaign_name or not _is_recent(analysis) or _has_historical_year(candidate, analysis): continue
             if any(term in analysis.game_name.casefold() for term in (*_GENERIC_GAME_NAMES, *_LEGACY_EXCLUDED_GAMES)) or any(term in analysis.campaign_name.casefold() for term in _GENERIC_CAMPAIGN_TERMS): continue
             analysis.preregistration_type = _title_type_hint(candidate, analysis)
+            image_url = cache_thumbnail(image_url, "preregistration") or image_url
             stats["verified"]+=1
             existing=db.scalar(select(GamePreRegistration).where(GamePreRegistration.preregistration_url==candidate.url))
             values={"game_name":analysis.game_name,"normalized_game_name":analysis.normalized_game_name or analysis.game_name,"campaign_name":analysis.campaign_name,"preregistration_type":analysis.preregistration_type.value,"developer":analysis.developer,"publisher":analysis.publisher,"genre":analysis.genre,"platform":",".join(analysis.platform),"preregistration_start_date":analysis.preregistration_start_date,"preregistration_end_date":analysis.preregistration_end_date,"release_date":analysis.release_date,"update_date":analysis.update_date,"official_url":candidate.url,"preregistration_url":candidate.url,"thumbnail_url":image_url,"main_visual_url":image_url,"status":analysis.status if analysis.status in {"ongoing","upcoming","ended"} else "ongoing","is_game_preregistration":True,"confidence_score":analysis.confidence_score,"verified_at":now}

@@ -1,0 +1,7 @@
+web/frontend/public/data/thumbnails/** -text
+*.jpg -text
+*.jpeg -text
+*.png -text
+*.webp -text
+*.gif -text
+*.db binary

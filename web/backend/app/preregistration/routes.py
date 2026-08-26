@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 
 from ..database import get_db
 from ..deps import get_current_user
+from ..media_cache import as_absolute_path
 from ..models import User
 from .models import GamePreRegistration, PreRegistrationType
 
@@ -41,8 +42,8 @@ def list_campaigns(
                 "update_date": item.update_date,
                 "official_url": item.official_url,
                 "preregistration_url": item.preregistration_url,
-                "thumbnail_url": item.thumbnail_url,
-                "main_visual_url": item.main_visual_url,
+                "thumbnail_url": as_absolute_path(item.thumbnail_url),
+                "main_visual_url": as_absolute_path(item.main_visual_url),
                 "status": item.status,
                 "confidence_score": item.confidence_score,
                 "discovered_at": item.discovered_at,

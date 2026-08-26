@@ -16,6 +16,7 @@ from urllib.request import HTTPCookieProcessor, HTTPSHandler, Request, build_ope
 from bs4 import BeautifulSoup
 
 from ..config import BENCHMARK_DATA_DIR
+from ..media_cache import cache_thumbnail
 
 # Smilegate's crossfire.do 301-loops on a cookie-less first request but
 # succeeds once a cookie from an earlier smilegate.com request is attached
@@ -557,7 +558,12 @@ def refresh_portal_sites() -> dict[str, Any]:
         if item["url"] in official_urls or not (recent_dated or verified_recent or is_new):
             continue
         title, image = _page_metadata(item["url"])
-        existing.append({"id": f"portal:{item['portal']}:{len(existing)+1}", "game_name": item["game_name"], "site_name": title or item["game_name"], "site_type": "OFFICIAL", "url": item["url"], "thumbnail_url": image or item.get("thumbnail_url"), "publisher": item["publisher"], "platform": [], "discovered_at": now.isoformat(), "published_on": published, "source": f"OFFICIAL_PORTAL:{item['portal']}", "evidence_url": PORTALS[item["portal"]], "status": "ACTIVE", "verified_at": now.isoformat()})
+        image = image or item.get("thumbnail_url")
+        # Cached so the thumbnail survives the source game's own site going
+        # down or dropping the image later — falls back to the live URL
+        # (the previous behavior) if the download itself fails.
+        thumbnail = cache_thumbnail(image, "game_sites") or image
+        existing.append({"id": f"portal:{item['portal']}:{len(existing)+1}", "game_name": item["game_name"], "site_name": title or item["game_name"], "site_type": "OFFICIAL", "url": item["url"], "thumbnail_url": thumbnail, "publisher": item["publisher"], "platform": [], "discovered_at": now.isoformat(), "published_on": published, "source": f"OFFICIAL_PORTAL:{item['portal']}", "evidence_url": PORTALS[item["portal"]], "status": "ACTIVE", "verified_at": now.isoformat()})
         official_urls.add(item["url"])
         added += 1
     OFFICIAL_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8")
