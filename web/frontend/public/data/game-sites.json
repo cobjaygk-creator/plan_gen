@@ -6,10 +6,26 @@
     "MICROSITE",
     "PROMOTION"
   ],
-  "total": 164,
-  "last_refreshed_at": "2026-08-25T19:09:53.123289+00:00",
+  "total": 165,
+  "last_refreshed_at": "2026-08-26T01:37:29.564365+00:00",
   "refreshed_site_count": 1,
   "sites": [
+    {
+      "id": "portal:INVEN_CALENDAR:165",
+      "game_name": "스틱 잇 투 스틱맨",
+      "site_name": "스틱 잇 투 스틱맨",
+      "site_type": "OFFICIAL",
+      "url": "https://www.devolverdigital.com/games/stick-it-to-the-stickman",
+      "thumbnail_url": "data/thumbnails/game_sites/d82906ec594206b6aaea899b.jpg",
+      "publisher": null,
+      "platform": [],
+      "discovered_at": "2026-08-26T01:37:29.564365+00:00",
+      "published_on": "2026-09-23",
+      "source": "OFFICIAL_PORTAL:INVEN_CALENDAR",
+      "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
+      "status": "ACTIVE",
+      "verified_at": "2026-08-26T01:37:29.564365+00:00"
+    },
     {
       "id": "portal:INVEN_CALENDAR:164",
       "game_name": "엘든 링: 빛바랜 자 에디션",

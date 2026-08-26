@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-25T19:09:54.901976+00:00",
+  "generated_at": "2026-08-26T01:37:32.721626+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-25T19:05:30.648778+00:00",
+      "generatedAt": "2026-08-26T01:33:58.476206+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 66,
+        "collected": 138,
         "analyzed": 0,
-        "pending": 66,
+        "pending": 138,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -154,43 +154,7 @@
         }
       ],
       "signals": [],
-      "newToday": [
-        {
-          "topic": "게임스컴",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 3,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "게임스컴 어워드",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "에이지 트위스터",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "크래프톤",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "MMORPG",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        }
-      ],
+      "newToday": [],
       "issues": [],
       "landscape": {
         "referenceArticleCount": 0,
@@ -237,14 +201,14 @@
     },
     "3d": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-25T19:05:30.648778+00:00",
+      "generatedAt": "2026-08-26T01:33:58.476206+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 474,
+        "collected": 543,
         "analyzed": 69,
-        "pending": 405,
-        "completionRate": 15,
+        "pending": 474,
+        "completionRate": 13,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -275,8 +239,8 @@
                 0,
                 0,
                 0,
-                0,
-                2
+                2,
+                0
               ]
             },
             {
@@ -289,8 +253,8 @@
                 0,
                 0,
                 0,
-                0,
                 1,
+                0,
                 0
               ]
             },
@@ -305,8 +269,8 @@
                 0,
                 0,
                 0,
-                0,
-                1
+                1,
+                0
               ]
             }
           ],
@@ -410,7 +374,7 @@
               {
                 "outlet": "게임메카",
                 "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.gamemeca.com/view.php?gid=1779548"
               }
             ]
@@ -424,7 +388,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -446,7 +410,7 @@
               {
                 "outlet": "게임메카",
                 "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.gamemeca.com/view.php?gid=1779548"
               }
             ]
@@ -459,7 +423,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -539,7 +503,7 @@
               {
                 "outlet": "인벤",
                 "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-                "publishedAgo": "19시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319875"
               }
             ]
@@ -553,7 +517,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "20시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -873,43 +837,7 @@
           ]
         }
       ],
-      "newToday": [
-        {
-          "topic": "게임스컴",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 3,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "게임스컴 어워드",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "에이지 트위스터",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "크래프톤",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "MMORPG",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        }
-      ],
+      "newToday": [],
       "issues": [
         {
           "id": "issue-55",
@@ -918,7 +846,7 @@
           "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
           "summary": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
           "whyItMatters": "크래프톤의 '에이지 트위스터'가 게임스컴 어워드 후보로 선정됨으로써, 글로벌 게임 시장에서의 영향력을 강화할 수 있는 기회를 얻었습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / 크래프톤 ‘에이지 트위스터’, 게임스컴 어워",
           "confidence": {
             "level": "MODERATE",
@@ -937,13 +865,13 @@
             {
               "outlet": "인벤",
               "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "18시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319877"
             },
             {
               "outlet": "크래프톤",
               "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
             }
           ]
@@ -974,7 +902,7 @@
             {
               "outlet": "넥슨게임즈",
               "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
             }
           ]
@@ -986,7 +914,7 @@
           "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
           "summary": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / GTA 6 유출자, 락스타 측 법적 대응 무",
           "confidence": {
             "level": "WEAK",
@@ -1005,7 +933,7 @@
             {
               "outlet": "게임메카",
               "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.gamemeca.com/view.php?gid=1779548"
             }
           ]
@@ -1017,7 +945,7 @@
           "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
           "summary": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / 플레이위드코리아, ‘씰M2’ 대표 이미지 추",
           "confidence": {
             "level": "WEAK",
@@ -1036,7 +964,7 @@
             {
               "outlet": "인벤",
               "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319881"
             }
           ]
@@ -1098,7 +1026,7 @@
             {
               "outlet": "인벤",
               "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "23시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319885"
             }
           ]
@@ -1110,7 +1038,7 @@
           "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
           "summary": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / 2026 LCK, 플레이오프행 두 자리 주인",
           "confidence": {
             "level": "WEAK",
@@ -1129,7 +1057,7 @@
             {
               "outlet": "인벤",
               "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319884"
             }
           ]
@@ -1141,7 +1069,7 @@
           "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
           "summary": "레벨 울브스는 '더 블러드 오브 던워커'에서 콘솔 전 기종에 60fps 모드를 추가한다고 발표하며, 9월 3일 정식 출시를 예고했습니다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / '더 블러드 오브 던워커', 콘솔 전 기종 ",
           "confidence": {
             "level": "WEAK",
@@ -1160,7 +1088,7 @@
             {
               "outlet": "인벤",
               "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319882"
             }
           ]
@@ -1191,7 +1119,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.etnews.com/20260825000014"
             },
             {
@@ -1240,7 +1168,7 @@
           "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
           "summary": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
           "whyItMatters": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / Up to 30x More Work Per ",
           "confidence": {
             "level": "MODERATE",
@@ -1352,7 +1280,7 @@
             {
               "outlet": "대한민국 정책브리핑",
               "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
             }
           ]
@@ -1364,7 +1292,7 @@
           "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
           "summary": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / 텐센트, 플레이어 지시도 거부하는 슈팅 AI",
           "confidence": {
             "level": "WEAK",
@@ -1383,7 +1311,7 @@
             {
               "outlet": "인벤",
               "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319875"
             }
           ]
@@ -1395,7 +1323,7 @@
           "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
           "summary": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / 컴트루테크놀로지 '스핑크스 AI', 이미지 ",
           "confidence": {
             "level": "WEAK",
@@ -1414,7 +1342,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "20시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
@@ -1511,12 +1439,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1540,15 +1468,15 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 100,
-          "priorityLabel": "긴급 확인",
-          "urgencyLabel": "오늘 시행",
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ],
@@ -1569,29 +1497,29 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 100,
-          "priorityLabel": "긴급 확인",
-          "urgencyLabel": "오늘 시행",
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ]
     },
     "week": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-25T19:05:30.648778+00:00",
+      "generatedAt": "2026-08-26T01:33:58.476206+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 451,
+        "collected": 523,
         "analyzed": 69,
-        "pending": 382,
-        "completionRate": 15,
+        "pending": 454,
+        "completionRate": 13,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -1622,8 +1550,8 @@
                 0,
                 0,
                 0,
-                0,
-                2
+                2,
+                0
               ]
             },
             {
@@ -1636,8 +1564,8 @@
                 0,
                 0,
                 0,
-                0,
                 1,
+                0,
                 0
               ]
             },
@@ -1652,8 +1580,8 @@
                 0,
                 0,
                 0,
-                0,
-                1
+                1,
+                0
               ]
             }
           ],
@@ -1757,7 +1685,7 @@
               {
                 "outlet": "게임메카",
                 "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.gamemeca.com/view.php?gid=1779548"
               }
             ]
@@ -1771,7 +1699,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -1793,7 +1721,7 @@
               {
                 "outlet": "게임메카",
                 "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.gamemeca.com/view.php?gid=1779548"
               }
             ]
@@ -1806,7 +1734,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "17시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -1886,7 +1814,7 @@
               {
                 "outlet": "인벤",
                 "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-                "publishedAgo": "19시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319875"
               }
             ]
@@ -1900,7 +1828,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "20시간 전",
+                "publishedAgo": "1일 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -2220,43 +2148,7 @@
           ]
         }
       ],
-      "newToday": [
-        {
-          "topic": "게임스컴",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 3,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "게임스컴 어워드",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "에이지 트위스터",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "크래프톤",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        },
-        {
-          "topic": "MMORPG",
-          "description": "오늘 관련 발표와 보도가 처음 크게 증가했습니다.",
-          "articleCount": 2,
-          "independentSources": 0,
-          "officialCount": 0
-        }
-      ],
+      "newToday": [],
       "issues": [
         {
           "id": "issue-55",
@@ -2265,7 +2157,7 @@
           "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
           "summary": "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
           "whyItMatters": "크래프톤의 '에이지 트위스터'가 게임스컴 어워드 후보로 선정됨으로써, 글로벌 게임 시장에서의 영향력을 강화할 수 있는 기회를 얻었습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / 크래프톤 ‘에이지 트위스터’, 게임스컴 어워",
           "confidence": {
             "level": "MODERATE",
@@ -2284,13 +2176,13 @@
             {
               "outlet": "인벤",
               "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "18시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319877"
             },
             {
               "outlet": "크래프톤",
               "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
             }
           ]
@@ -2321,7 +2213,7 @@
             {
               "outlet": "넥슨게임즈",
               "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
             }
           ]
@@ -2333,7 +2225,7 @@
           "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
           "summary": "GTA 6 영상 유출 사건과 관련해 락스타의 모회사인 테이크투 인터랙티브가 유출자에 대한 법적 절차를 시작했으나, 유출은 계속되고 있으며 추가 영상이 공개되었다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / GTA 6 유출자, 락스타 측 법적 대응 무",
           "confidence": {
             "level": "WEAK",
@@ -2352,7 +2244,7 @@
             {
               "outlet": "게임메카",
               "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.gamemeca.com/view.php?gid=1779548"
             }
           ]
@@ -2364,7 +2256,7 @@
           "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
           "summary": "플레이위드코리아는 신규 MMORPG ‘씰M2’의 대표 이미지를 공개하고, 올 4분기에 정식 출시할 계획이라고 밝혔다. 이 게임은 기존 씰 시리즈의 감성을 유지하면서 독창적인 세계관을 추가하여 차별화된 모험을 제공할 예정이다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / 플레이위드코리아, ‘씰M2’ 대표 이미지 추",
           "confidence": {
             "level": "WEAK",
@@ -2383,7 +2275,7 @@
             {
               "outlet": "인벤",
               "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319881"
             }
           ]
@@ -2445,7 +2337,7 @@
             {
               "outlet": "인벤",
               "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "23시간 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319885"
             }
           ]
@@ -2457,7 +2349,7 @@
           "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
           "summary": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / 2026 LCK, 플레이오프행 두 자리 주인",
           "confidence": {
             "level": "WEAK",
@@ -2476,7 +2368,7 @@
             {
               "outlet": "인벤",
               "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319884"
             }
           ]
@@ -2488,7 +2380,7 @@
           "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
           "summary": "레벨 울브스는 '더 블러드 오브 던워커'에서 콘솔 전 기종에 60fps 모드를 추가한다고 발표하며, 9월 3일 정식 출시를 예고했습니다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "GAME INDUSTRY / '더 블러드 오브 던워커', 콘솔 전 기종 ",
           "confidence": {
             "level": "WEAK",
@@ -2507,7 +2399,7 @@
             {
               "outlet": "인벤",
               "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
-              "publishedAgo": "17시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319882"
             }
           ]
@@ -2538,7 +2430,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.etnews.com/20260825000014"
             },
             {
@@ -2587,7 +2479,7 @@
           "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
           "summary": "NVIDIA Vera Rubin NVL72는 AI 에이전트의 효율성 표준을 새롭게 설정하며, 에이전틱 AI 작업이 단순 채팅 요청에 비해 더 많은 토큰을 소비하는 이유를 설명한다.",
           "whyItMatters": "NVIDIA Vera Rubin NVL72는 AI 작업의 효율성 혁신을 통해 시장에서 주목받고 있습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / Up to 30x More Work Per ",
           "confidence": {
             "level": "MODERATE",
@@ -2699,7 +2591,7 @@
             {
               "outlet": "대한민국 정책브리핑",
               "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
             }
           ]
@@ -2711,7 +2603,7 @@
           "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
           "summary": "텐센트게임즈가 자율적으로 플레이어의 지시를 판단하는 1인칭 슈팅(FPS) AI 에이전트를 공개했다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / 텐센트, 플레이어 지시도 거부하는 슈팅 AI",
           "confidence": {
             "level": "WEAK",
@@ -2730,7 +2622,7 @@
             {
               "outlet": "인벤",
               "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-              "publishedAgo": "19시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319875"
             }
           ]
@@ -2742,7 +2634,7 @@
           "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
           "summary": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "EMERGING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / 컴트루테크놀로지 '스핑크스 AI', 이미지 ",
           "confidence": {
             "level": "WEAK",
@@ -2761,7 +2653,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "20시간 전",
+              "publishedAgo": "1일 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
@@ -2858,12 +2750,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -2887,15 +2779,15 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 100,
-          "priorityLabel": "긴급 확인",
-          "urgencyLabel": "오늘 시행",
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ],
@@ -2916,15 +2808,15 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 100,
-          "priorityLabel": "긴급 확인",
-          "urgencyLabel": "오늘 시행",
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
           "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
           "changeType": "NEW",
           "changeLabel": "신규 정책",
           "historyCount": 0,
           "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 오늘 시행",
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
           "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
         }
       ]
