@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-26T06:50:54.094607+00:00",
+  "generated_at": "2026-08-26T07:02:25.346831+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T06:47:14.874674+00:00",
+      "generatedAt": "2026-08-26T07:00:10.844275+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 354,
+        "collected": 361,
         "analyzed": 0,
-        "pending": 354,
+        "pending": 361,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -257,13 +257,13 @@
     },
     "3d": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T06:47:14.874674+00:00",
+      "generatedAt": "2026-08-26T07:00:10.844275+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 758,
+        "collected": 763,
         "analyzed": 69,
-        "pending": 689,
+        "pending": 694,
         "completionRate": 9,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1156,7 +1156,7 @@
           "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
           "summary": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / AI에 올인한 알리바바, 투자 위해 14조 ",
           "confidence": {
             "level": "MODERATE",
@@ -1317,7 +1317,7 @@
           "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
           "summary": "한·중 지식재산 정보화 전문가 회의에서 두 나라의 인공지능 기술 활용 사례와 지식재산 정보화 시스템 개발 현황이 공유되었다. 이 회의는 지식재산 분야의 국제 표준화 및 협력을 다루는 자리로, 양국의 인공지능 기반 시스템에 대한 시연과 논의가 이루어졌다.",
           "whyItMatters": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / 국제표준부터 인공지능까지… 한·중 지식재산 ",
           "confidence": {
             "level": "MODERATE",
@@ -1676,13 +1676,13 @@
     },
     "week": {
       "briefDate": "2026-08-26",
-      "generatedAt": "2026-08-26T06:47:14.874674+00:00",
+      "generatedAt": "2026-08-26T07:00:10.844275+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 740,
+        "collected": 747,
         "analyzed": 69,
-        "pending": 671,
+        "pending": 678,
         "completionRate": 9,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2575,7 +2575,7 @@
           "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
           "summary": "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
           "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / AI에 올인한 알리바바, 투자 위해 14조 ",
           "confidence": {
             "level": "MODERATE",
@@ -2736,7 +2736,7 @@
           "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
           "summary": "한·중 지식재산 정보화 전문가 회의에서 두 나라의 인공지능 기술 활용 사례와 지식재산 정보화 시스템 개발 현황이 공유되었다. 이 회의는 지식재산 분야의 국제 표준화 및 협력을 다루는 자리로, 양국의 인공지능 기반 시스템에 대한 시연과 논의가 이루어졌다.",
           "whyItMatters": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
-          "lifecycle": "GROWING",
+          "lifecycle": "DECLINING",
           "relatedBriefing": "AI INDUSTRY / 국제표준부터 인공지능까지… 한·중 지식재산 ",
           "confidence": {
             "level": "MODERATE",
