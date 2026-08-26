@@ -44,7 +44,12 @@ export function IndustryBriefView() {
     setError(false);
     try {
       if (manual) {
-        const [nextBrief, nextHighlights] = await Promise.all([refreshIndustryBrief(), refreshDailyHighlights()]);
+        // Sequential, not Promise.all: /refresh and /highlights/refresh share
+        // one process-local lock on the backend, so firing them concurrently
+        // guarantees one instantly 409s and the whole refresh reports failure
+        // no matter how fast either endpoint is.
+        const nextBrief = await refreshIndustryBrief();
+        const nextHighlights = await refreshDailyHighlights();
         setBrief(nextBrief);
         setHighlights(nextHighlights);
       } else {
