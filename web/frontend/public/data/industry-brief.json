@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T08:40:15.776212+00:00",
+  "generated_at": "2026-08-26T09:38:09.743779+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
@@ -1495,12 +1495,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -2914,12 +2914,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
