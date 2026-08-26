@@ -103,8 +103,8 @@ export function IndustryBriefView() {
         <EditorialFeedbackManager onRestore={() => void reloadActivePeriod()} />
       </div>
       <div className="ib-two-col">
-        <IndustryPanelCard title="GAME" panel={brief.game} category="game" signals={brief.signals} periodLabel={brief.periodLabel} highlights={activePeriod === "today" ? highlights?.game : undefined} />
-        <IndustryPanelCard title="AI" panel={brief.ai} category="ai" signals={brief.signals} periodLabel={brief.periodLabel} highlights={activePeriod === "today" ? highlights?.ai : undefined} />
+        <IndustryPanelCard title="GAME" panel={brief.game} category="game" periodLabel={brief.periodLabel} highlights={activePeriod === "today" ? highlights?.game : undefined} />
+        <IndustryPanelCard title="AI" panel={brief.ai} category="ai" periodLabel={brief.periodLabel} highlights={activePeriod === "today" ? highlights?.ai : undefined} />
       </div>
       {brief.analytics && <BriefAnalyticsPanel analytics={brief.analytics} periodLabel={brief.periodLabel} />}
       {brief.policyUpdates && <PolicyUpdatesPanel updates={brief.policyUpdates} timeline={brief.policyTimeline ?? brief.policyUpdates} />}

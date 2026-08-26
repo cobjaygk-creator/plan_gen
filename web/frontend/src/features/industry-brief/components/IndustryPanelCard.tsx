@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import type { IndustryPanel, Signal, SourceItem } from "../types";
-import { DIRECTION_CLASS, DIRECTION_SYMBOL } from "../utils/format";
+import { useState } from "react";
+import type { IndustryPanel, SourceItem } from "../types";
 import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason } from "../api/client";
 
 interface Props {
@@ -8,7 +7,6 @@ interface Props {
   title: string;
   panel: IndustryPanel;
   category: "game" | "ai";
-  signals: Signal[];
   periodLabel: string;
   /** When set (오늘 tab only), replaces the old cross-verification-gated
    * key-summary block with the AI-judged 핵심 이슈 + 추천 기사 list. */
@@ -111,13 +109,8 @@ function EvidenceSources({ sources }: { sources: SourceItem[] }) {
   );
 }
 
-export function IndustryPanelCard({ title, panel, category, signals, periodLabel, highlights }: Props) {
+export function IndustryPanelCard({ title, panel, category, periodLabel, highlights }: Props) {
   const keySummaries = panel.keySummaries?.length ? panel.keySummaries.slice(0, 2) : [panel.headline];
-  const signalDomain = category === "game" ? "GAME" : "AI";
-  const eventSignals = Array.from(new Map(
-    signals.filter((signal) => signal.domain === signalDomain || signal.domain === "GAME_AI").map((signal) => [signal.topic, signal]),
-  ).values()).slice(0, 12);
-  const [signalPage, setSignalPage] = useState(0);
   const [dismissedIssues, setDismissedIssues] = useState<Set<number>>(new Set());
   const [feedbackError, setFeedbackError] = useState<number | null>(null);
   const [reasonIssue, setReasonIssue] = useState<number | null>(null);
@@ -140,13 +133,6 @@ export function IndustryPanelCard({ title, panel, category, signals, periodLabel
       setFeedbackError(null);
     } catch { setFeedbackError(issueId); }
   };
-  const pageCount = Math.max(1, Math.ceil(eventSignals.length / 4));
-  useEffect(() => {
-    if (pageCount <= 1) return;
-    const timer = window.setInterval(() => setSignalPage((page) => (page + 1) % pageCount), 6500);
-    return () => window.clearInterval(timer);
-  }, [pageCount]);
-  const visibleSignals = Array.from({ length: Math.min(4, eventSignals.length) }, (_, offset) => eventSignals[(signalPage * 4 + offset) % eventSignals.length]);
   return (
     <section className={`card ib-panel ib-panel-${category}`}>
 
@@ -190,23 +176,6 @@ export function IndustryPanelCard({ title, panel, category, signals, periodLabel
             <summary>관찰 종료 {panel.closedObservations!.length}건</summary>
             {panel.closedObservations!.map((item) => <div key={`${item.title}-${item.closedAt}`}><strong>{item.title}</strong><p>{item.reason}</p></div>)}
           </details>}
-
-          <details className="ib-analysis-detail">
-            <summary>상세 분석 보기</summary>
-            <div className="briefing">{panel.briefing.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
-          </details>
-
-          <div className="ib-highlight-section">
-            <div className="section-label">변화 시그널</div>
-            <div className="ib-change-grid">
-              {visibleSignals.map((signal, index) => (
-                <div className={`ib-change-tile ib-change-flap ${DIRECTION_CLASS[signal.direction]}`} key={signal.topic} style={{ animationDelay: `${((category === "game" ? index : index + 4) * 0.11).toFixed(2)}s` }}>
-                  <div className="ib-tile-top"><span className="topic"><em className="ib-change-event">{signal.eventType}</em>{signal.topic}</span><span className="ib-tile-actions"><span className="dir">{DIRECTION_SYMBOL[signal.direction]}</span><EvidenceSources sources={signal.evidence.map((article) => ({ ...article, publishedAgo: "" }))} /></span></div>
-                  <div className="desc">{signal.priorityReason ?? signal.reason}</div>
-                </div>
-              ))}
-            </div>
-          </div>
 
           <div className="section-label">앞으로 볼 것</div>
           <div className="ib-watch-list">
