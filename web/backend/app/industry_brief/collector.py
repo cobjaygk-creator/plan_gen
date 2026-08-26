@@ -107,8 +107,7 @@ def collect_all(db: Session, sources: list[Source] | None = None) -> CollectResu
     # Explicit source lists are used by tests/manual RSS-only runs. NAVER is
     # only part of the normal full Industry Brief collection.
     if sources is None:
-        from .official_html import collect_all_official_html
-        from .naver_news import collect_naver_news
+        from .official_html import collect_all_official_html, collect_all_naver_sections
         result.sources.extend(collect_all_official_html(db))
-        result.sources.append(collect_naver_news(db))
+        result.sources.extend(collect_all_naver_sections(db))
     return result

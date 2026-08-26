@@ -5,6 +5,7 @@ of the app — Industry Brief has no writes of its own, so that's the only
 piece of existing infrastructure this reuses."""
 import json
 import math
+import os
 from threading import Lock
 from datetime import datetime, timedelta, timezone
 from typing import Optional
@@ -17,7 +18,10 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from ..deps import get_current_user
 from ..models import User
+from .classifier import classify_pending
+from .collector import collect_all
 from .models import Article, DailyBrief, EditorialRule, EditorialRuleAudit, Issue, IssueArticle, IssueFeedback
+from .highlights import load_latest_highlights, refresh_and_save_highlights, to_api_dict
 from .synthesis import NO_CROSS_OPINION_TEXT, NO_CROSS_SIGNAL_TEXT, TOP_ISSUES_PER_CATEGORY
 from .landscape import build_issue_detail, build_landscape
 from .comparison import build_market_comparison
@@ -842,6 +846,37 @@ def refresh_latest_brief(user: User = Depends(get_current_user), db: Session = D
                 "appendedToIssues": result.appended_to_issues,
             },
         }
+    finally:
+        _REFRESH_LOCK.release()
+
+
+@router.get("/highlights")
+def get_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    """AI-judged 핵심 이슈(3~5) + 추천 기사 for the last 24h, per category — see
+    highlights.py. Serves the latest saved snapshot; use the refresh endpoint
+    to recompute. Returns has_signal=false placeholders for a category with
+    no snapshot yet rather than triggering an LLM call on a simple page load."""
+    now = datetime.now(timezone.utc)
+    return {
+        "game": to_api_dict(load_latest_highlights(db, "GAME"), "GAME", now),
+        "ai": to_api_dict(load_latest_highlights(db, "AI"), "AI", now),
+    }
+
+
+@router.post("/highlights/refresh")
+def refresh_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    """Collects fresh articles from the two NAVER sections, then has the AI
+    re-judge today's 핵심 이슈/추천 기사 for both categories. Reuses the same
+    process-local lock as /refresh so the two can't run concurrently."""
+    if not _REFRESH_LOCK.acquire(blocking=False):
+        raise HTTPException(status.HTTP_409_CONFLICT, "이미 업계 동향을 업데이트하고 있습니다.")
+    try:
+        collect_all(db)
+        classify_pending(db, limit=int(os.environ.get("STATIC_CLASSIFY_LIMIT", "80")))
+        now = datetime.now(timezone.utc)
+        game = refresh_and_save_highlights(db, "GAME", now)
+        ai = refresh_and_save_highlights(db, "AI", now)
+        return {"game": to_api_dict(game, "GAME", now), "ai": to_api_dict(ai, "AI", now)}
     finally:
         _REFRESH_LOCK.release()
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { IndustryPanel, Signal, SourceItem } from "../types";
 import { DIRECTION_CLASS, DIRECTION_SYMBOL } from "../utils/format";
-import { clearIssueFeedback, submitIssueFeedback, type CoreFeedbackReason } from "../api/client";
+import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason } from "../api/client";
 
 interface Props {
 
@@ -10,6 +10,50 @@ interface Props {
   category: "game" | "ai";
   signals: Signal[];
   periodLabel: string;
+  /** When set (오늘 tab only), replaces the old cross-verification-gated
+   * key-summary block with the AI-judged 핵심 이슈 + 추천 기사 list. */
+  highlights?: CategoryHighlights;
+}
+
+function DailyHighlightsBlock({ highlights }: { highlights: CategoryHighlights }) {
+  if (!highlights.hasSignal) {
+    return <div className="ib-key-summary"><p className="headline">지난 24시간 동안 분석할 만큼 충분한 기사가 수집되지 않았습니다.</p></div>;
+  }
+  return (
+    <>
+      <div className="eyebrow">오늘의 핵심 이슈</div>
+      <div className="ib-highlight-issue-list">
+        {highlights.coreIssues.map((issue) => (
+          <div className="ib-highlight-issue" key={issue.title}>
+            <p className="headline">{issue.title}</p>
+            <p className="ib-highlight-summary">{issue.summary}</p>
+            <div className="ib-highlight-articles">
+              {issue.articles.map((article) => (
+                <a key={article.url} href={article.url} target="_blank" rel="noreferrer" className="ib-highlight-article">
+                  <span className="outlet">{article.source.replace(/^NAVER · /, "")}</span>
+                  <span className="title">{article.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      {highlights.recommended.length > 0 && (
+        <>
+          <div className="section-label">추천 기사</div>
+          <div className="ib-recommended-list">
+            {highlights.recommended.map((article) => (
+              <a key={article.url} href={article.url} target="_blank" rel="noreferrer" className="ib-recommended-item">
+                <div className="ib-recommended-top"><span className="outlet">{article.source.replace(/^NAVER · /, "")}</span></div>
+                <div className="title">{article.title}</div>
+                <div className="reason">{article.reason}</div>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+    </>
+  );
 }
 
 function EvidenceSources({ sources }: { sources: SourceItem[] }) {
@@ -37,7 +81,7 @@ function EvidenceSources({ sources }: { sources: SourceItem[] }) {
   );
 }
 
-export function IndustryPanelCard({ title, panel, category, signals, periodLabel }: Props) {
+export function IndustryPanelCard({ title, panel, category, signals, periodLabel, highlights }: Props) {
   const keySummaries = panel.keySummaries?.length ? panel.keySummaries.slice(0, 2) : [panel.headline];
   const signalDomain = category === "game" ? "GAME" : "AI";
   const eventSignals = Array.from(new Map(
@@ -81,37 +125,41 @@ export function IndustryPanelCard({ title, panel, category, signals, periodLabel
         <span className="ib-panel-status">{periodLabel}</span>
       </div>
 
-      <div className="eyebrow">핵심 요약</div>
-      <div className="ib-key-summary-list">
-        {keySummaries.map((summary, index) => {
-          const detail = panel.keySummaryDetails?.[index];
-          if (detail?.issueId && dismissedIssues.has(detail.issueId)) return <div className="ib-feedback-applied" key={`${index}-${summary}`}>핵심 아님 의견이 반영됐습니다.<button type="button" onClick={() => void undoNotCore(detail.issueId!)}>취소</button></div>;
-          return <div className="ib-key-summary" key={`${index}-${summary}`}><p className="headline">{summary}</p>{detail && <><div className="ib-key-summary-meta"><p className="ib-key-summary-reason">{detail.selectionReason}</p>{detail.issueId && <button type="button" onClick={() => setReasonIssue((current) => current === detail.issueId ? null : detail.issueId!)}>{feedbackError === detail.issueId ? "저장 실패" : "핵심 아님"}</button>}</div>{detail.issueId && reasonIssue === detail.issueId && <div className="ib-feedback-reasons"><span>제외 사유</span>{([['PROMOTIONAL','홍보성'],['LOW_IMPORTANCE','중요도 낮음'],['DUPLICATE','중복'],['LOW_IMPACT','업계 영향 부족'],['OTHER','기타']] as Array<[CoreFeedbackReason,string]>).map(([value,label]) => <button type="button" key={value} onClick={() => void markNotCore(detail.issueId!, value)}>{label}</button>)}</div>}</>}{detail?.scoreBreakdown && <details className="ib-score-breakdown"><summary>선정 점수 <strong>{detail.scoreBreakdown.total}</strong>점</summary><div className="ib-score-grid"><span>근거 신뢰도 <b>{detail.scoreBreakdown.evidence}</b></span><span>기사 확산 <b>{detail.scoreBreakdown.coverage}</b></span><span>중요도 <b>{detail.scoreBreakdown.importance}</b></span><span>지속성 <b>{detail.scoreBreakdown.persistence}</b></span><span>증가세 <b>{detail.scoreBreakdown.momentum}</b></span>{detail.scoreBreakdown.editorialAdjustment !== 0 && <span className="adjustment">편집 기준 <b>{detail.scoreBreakdown.editorialAdjustment}</b></span>}{detail.scoreBreakdown.userFeedback !== 0 && <span className="adjustment">사용자 판단 <b>{detail.scoreBreakdown.userFeedback}</b></span>}{detail.scoreBreakdown.approvedRule !== 0 && <span className="adjustment">승인 규칙 <b>{detail.scoreBreakdown.approvedRule}</b></span>}</div></details>}</div>;
-        })}
-      </div>
-
-      {(panel.observations?.length ?? 0) > 0 && <div className="ib-observation-block">
-        <div className="ib-observation-heading"><span>공식·주요 매체 관찰</span><small>추가 보도 확인 중</small></div>
-        <div className="ib-observation-list">{panel.observations!.map((observation) => (
-          <div className="ib-observation-item" key={observation.title}>
-            <span className="ib-observation-status">{observation.statusLabel}</span>
-            <div className="ib-observation-copy"><strong>{observation.title}</strong><p>{observation.description}</p><small>{observation.selectionReason}</small></div>
-            <EvidenceSources sources={observation.sources} />
+      {highlights ? <DailyHighlightsBlock highlights={highlights} /> : (
+        <>
+          <div className="eyebrow">핵심 요약</div>
+          <div className="ib-key-summary-list">
+            {keySummaries.map((summary, index) => {
+              const detail = panel.keySummaryDetails?.[index];
+              if (detail?.issueId && dismissedIssues.has(detail.issueId)) return <div className="ib-feedback-applied" key={`${index}-${summary}`}>핵심 아님 의견이 반영됐습니다.<button type="button" onClick={() => void undoNotCore(detail.issueId!)}>취소</button></div>;
+              return <div className="ib-key-summary" key={`${index}-${summary}`}><p className="headline">{summary}</p>{detail && <><div className="ib-key-summary-meta"><p className="ib-key-summary-reason">{detail.selectionReason}</p>{detail.issueId && <button type="button" onClick={() => setReasonIssue((current) => current === detail.issueId ? null : detail.issueId!)}>{feedbackError === detail.issueId ? "저장 실패" : "핵심 아님"}</button>}</div>{detail.issueId && reasonIssue === detail.issueId && <div className="ib-feedback-reasons"><span>제외 사유</span>{([['PROMOTIONAL','홍보성'],['LOW_IMPORTANCE','중요도 낮음'],['DUPLICATE','중복'],['LOW_IMPACT','업계 영향 부족'],['OTHER','기타']] as Array<[CoreFeedbackReason,string]>).map(([value,label]) => <button type="button" key={value} onClick={() => void markNotCore(detail.issueId!, value)}>{label}</button>)}</div>}</>}{detail?.scoreBreakdown && <details className="ib-score-breakdown"><summary>선정 점수 <strong>{detail.scoreBreakdown.total}</strong>점</summary><div className="ib-score-grid"><span>근거 신뢰도 <b>{detail.scoreBreakdown.evidence}</b></span><span>기사 확산 <b>{detail.scoreBreakdown.coverage}</b></span><span>중요도 <b>{detail.scoreBreakdown.importance}</b></span><span>지속성 <b>{detail.scoreBreakdown.persistence}</b></span><span>증가세 <b>{detail.scoreBreakdown.momentum}</b></span>{detail.scoreBreakdown.editorialAdjustment !== 0 && <span className="adjustment">편집 기준 <b>{detail.scoreBreakdown.editorialAdjustment}</b></span>}{detail.scoreBreakdown.userFeedback !== 0 && <span className="adjustment">사용자 판단 <b>{detail.scoreBreakdown.userFeedback}</b></span>}{detail.scoreBreakdown.approvedRule !== 0 && <span className="adjustment">승인 규칙 <b>{detail.scoreBreakdown.approvedRule}</b></span>}</div></details>}</div>;
+            })}
           </div>
-        ))}</div>
-      </div>}
 
-      {(panel.promotions?.length ?? 0) > 0 && <div className="ib-promotion-block">
-        <div className="ib-promotion-heading">관찰에서 핵심으로 승격</div>
-        {panel.promotions!.map((promotion) => <div className="ib-promotion-item" key={`${promotion.title}-${promotion.promotedAt}`}>
-          <span>승격</span><div><strong>{promotion.title}</strong><p>{promotion.reason}</p></div>
-        </div>)}
-      </div>}
+          {(panel.observations?.length ?? 0) > 0 && <div className="ib-observation-block">
+            <div className="ib-observation-heading"><span>공식·주요 매체 관찰</span><small>추가 보도 확인 중</small></div>
+            <div className="ib-observation-list">{panel.observations!.map((observation) => (
+              <div className="ib-observation-item" key={observation.title}>
+                <span className="ib-observation-status">{observation.statusLabel}</span>
+                <div className="ib-observation-copy"><strong>{observation.title}</strong><p>{observation.description}</p><small>{observation.selectionReason}</small></div>
+                <EvidenceSources sources={observation.sources} />
+              </div>
+            ))}</div>
+          </div>}
 
-      {(panel.closedObservations?.length ?? 0) > 0 && <details className="ib-closed-observations">
-        <summary>관찰 종료 {panel.closedObservations!.length}건</summary>
-        {panel.closedObservations!.map((item) => <div key={`${item.title}-${item.closedAt}`}><strong>{item.title}</strong><p>{item.reason}</p></div>)}
-      </details>}
+          {(panel.promotions?.length ?? 0) > 0 && <div className="ib-promotion-block">
+            <div className="ib-promotion-heading">관찰에서 핵심으로 승격</div>
+            {panel.promotions!.map((promotion) => <div className="ib-promotion-item" key={`${promotion.title}-${promotion.promotedAt}`}>
+              <span>승격</span><div><strong>{promotion.title}</strong><p>{promotion.reason}</p></div>
+            </div>)}
+          </div>}
+
+          {(panel.closedObservations?.length ?? 0) > 0 && <details className="ib-closed-observations">
+            <summary>관찰 종료 {panel.closedObservations!.length}건</summary>
+            {panel.closedObservations!.map((item) => <div key={`${item.title}-${item.closedAt}`}><strong>{item.title}</strong><p>{item.reason}</p></div>)}
+          </details>}
+        </>
+      )}
 
       <details className="ib-analysis-detail">
         <summary>상세 분석 보기</summary>

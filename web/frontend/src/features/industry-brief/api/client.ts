@@ -42,6 +42,60 @@ export async function refreshIndustryBrief(): Promise<IndustryBrief> {
   const body = await res.json() as { brief: IndustryBrief };
   return body.brief;
 }
+export interface HighlightArticle {
+  title: string;
+  url: string;
+  source: string;
+}
+
+export interface HighlightIssue {
+  title: string;
+  summary: string;
+  articles: HighlightArticle[];
+}
+
+export interface RecommendedArticle {
+  title: string;
+  url: string;
+  source: string;
+  reason: string;
+}
+
+export interface CategoryHighlights {
+  category: "GAME" | "AI";
+  hasSignal: boolean;
+  articleCount: number;
+  generatedAt: string;
+  coreIssues: HighlightIssue[];
+  recommended: RecommendedArticle[];
+}
+
+export interface DailyHighlightsResponse {
+  game: CategoryHighlights;
+  ai: CategoryHighlights;
+}
+
+export async function fetchDailyHighlights(): Promise<DailyHighlightsResponse> {
+  const res = await fetch("/industry-brief/highlights", { credentials: "include" });
+  if (!res.ok) throw new Error("오늘의 핵심 이슈를 불러오지 못했습니다.");
+  return res.json() as Promise<DailyHighlightsResponse>;
+}
+
+export async function refreshDailyHighlights(): Promise<DailyHighlightsResponse> {
+  const res = await fetch("/industry-brief/highlights/refresh", { method: "POST", credentials: "include" });
+  if (!res.ok) {
+    let detail = `업데이트에 실패했습니다 (${res.status})`;
+    try {
+      const body = await res.json();
+      if (body?.detail) detail = body.detail;
+    } catch {
+      // response wasn't JSON — keep the generic message
+    }
+    throw new Error(detail);
+  }
+  return res.json() as Promise<DailyHighlightsResponse>;
+}
+
 export type BriefPeriod = "today" | "3d" | "week";
 
 export async function fetchPeriodBrief(period: BriefPeriod): Promise<IndustryBrief> {

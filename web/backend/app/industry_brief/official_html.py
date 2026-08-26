@@ -449,3 +449,103 @@ def collect_official_html(db: Session, source: OfficialHtmlSource) -> SourceResu
 
 def collect_all_official_html(db: Session) -> list[SourceResult]:
     return [collect_official_html(db, source) for source in OFFICIAL_HTML_SOURCES]
+
+
+# Naver's own editorial category listing (e.g. IT/과학 > 게임/리뷰) aggregates
+# every partner press outlet Naver tagged under that category — including
+# business dailies like 한국경제 that aren't in SOURCES. Comprehensive by
+# category instead of by how well a hand-picked search-keyword list happens
+# to match, at the cost of only ever seeing roughly the latest ~30 articles
+# per section (the page doesn't paginate server-side), so this needs to be
+# collected reasonably often to not miss anything.
+@dataclass(frozen=True)
+class NaverSectionSource:
+    label: str
+    url: str
+    category: str
+    # Naver has no dedicated AI section, so the AI lane uses the whole
+    # IT/과학 category and needs a relevance check before storing —
+    # otherwise every telecom-plan and phone-review story in IT/과학 floods
+    # the classification queue too. None = no filter (게임/리뷰 is already
+    # narrow enough on its own).
+    relevance_terms: tuple[str, ...] | None = None
+
+
+NAVER_SECTION_SOURCES: tuple[NaverSectionSource, ...] = (
+    NaverSectionSource("게임/리뷰", "https://news.naver.com/breakingnews/section/105/229", "GAME"),
+    NaverSectionSource(
+        "IT/과학", "https://news.naver.com/section/105", "AI",
+        relevance_terms=("인공지능", "생성형", "머신러닝", "딥러닝", "챗gpt", "llm", "에이전트"),
+    ),
+)
+
+_RELATIVE_TIME_RE = re.compile(r"(\d+)\s*(분|시간|일)\s*전")
+_AI_TOKEN_RE = re.compile(r"(?<![a-z0-9])ai(?![a-z0-9])")
+
+
+def _relative_datetime(text: str) -> datetime | None:
+    match = _RELATIVE_TIME_RE.search(text)
+    if not match:
+        return _date(text)
+    amount, unit = int(match.group(1)), match.group(2)
+    delta = {"분": timedelta(minutes=amount), "시간": timedelta(hours=amount), "일": timedelta(days=amount)}[unit]
+    return datetime.now(timezone.utc) - delta
+
+
+def _parse_naver_section(html: str) -> list[dict]:
+    soup = BeautifulSoup(html, "html.parser")
+    entries = []
+    for item in soup.select("li.sa_item"):
+        link = item.select_one("a.sa_text_title[href]")
+        title_node = item.select_one(".sa_text_strong")
+        if not link or not title_node:
+            continue
+        lede_node = item.select_one(".sa_text_lede")
+        press_node = item.select_one(".sa_text_press")
+        time_node = item.select_one(".sa_text_datetime")
+        entries.append({
+            "title": title_node.get_text(" ", strip=True),
+            "url": link["href"].strip(),
+            "summary": lede_node.get_text(" ", strip=True) if lede_node else "",
+            "published_at": _relative_datetime(time_node.get_text(" ", strip=True) if time_node else ""),
+            "press": press_node.get_text(" ", strip=True) if press_node else "네이버뉴스",
+        })
+    return entries
+
+
+def _passes_relevance(entry: dict, relevance_terms: tuple[str, ...] | None) -> bool:
+    if relevance_terms is None:
+        return True
+    text = f" {entry['title']} {entry.get('summary', '')} ".casefold()
+    return bool(_AI_TOKEN_RE.search(text)) or any(term in text for term in relevance_terms)
+
+
+def collect_naver_section(db: Session, source: NaverSectionSource) -> SourceResult:
+    try:
+        entries = _parse_naver_section(_fetch_html(source.url))
+    except Exception as exc:
+        return SourceResult(f"NAVER 섹션 · {source.label}", 0, 0, 0, error=f"{type(exc).__name__}: {exc}")
+
+    new_count = duplicates = 0
+    for entry in entries:
+        if not _passes_relevance(entry, source.relevance_terms):
+            continue
+        if db.scalar(select(Article.id).where(Article.url == entry["url"])):
+            duplicates += 1
+            continue
+        db.add(Article(
+            source=f"NAVER · {entry['press']}",
+            source_type="media",
+            category=source.category,
+            title=entry["title"][:500],
+            url=entry["url"],
+            published_at=entry["published_at"],
+            summary=(entry["summary"][:2000] or None),
+        ))
+        new_count += 1
+    db.commit()
+    return SourceResult(f"NAVER 섹션 · {source.label}", len(entries), new_count, duplicates)
+
+
+def collect_all_naver_sections(db: Session) -> list[SourceResult]:
+    return [collect_naver_section(db, source) for source in NAVER_SECTION_SOURCES]

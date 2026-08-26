@@ -194,3 +194,19 @@ class IssueHistory(Base):
     before_summary: Mapped[str | None] = mapped_column(Text, nullable=True)
     now_summary: Mapped[str | None] = mapped_column(Text, nullable=True)
     evidence_article_ids: Mapped[str] = mapped_column(Text, default="[]")
+
+
+class DailyHighlightSnapshot(Base):
+    """AI-judged "오늘의 핵심 이슈 + 추천 기사" for one category (see
+    highlights.py) — replaces the old cross-verification-gated key summary
+    for the rolling-24h "오늘" period. One row per (category, refresh); the
+    latest row per category is what the API serves, older rows are kept as
+    a simple history rather than overwritten in place."""
+    __tablename__ = "industry_brief_highlight_snapshots"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    category: Mapped[str] = mapped_column(String(10), index=True)  # "GAME" | "AI"
+    generated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow, index=True)
+    has_signal: Mapped[bool] = mapped_column(default=False)
+    article_count: Mapped[int] = mapped_column(default=0)
+    payload: Mapped[str] = mapped_column(Text)  # JSON-encoded DailyHighlights

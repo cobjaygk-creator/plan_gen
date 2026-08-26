@@ -1,6 +1,9 @@
 ﻿import { useCallback, useEffect, useState } from "react";
 import type { IndustryBrief } from "../types";
-import { fetchPeriodBrief, refreshIndustryBrief, type BriefPeriod } from "../api/client";
+import {
+  fetchDailyHighlights, fetchPeriodBrief, refreshDailyHighlights, refreshIndustryBrief,
+  type BriefPeriod, type DailyHighlightsResponse,
+} from "../api/client";
 import { formatKoreanDateTime } from "../utils/format";
 import { BriefHeader } from "./BriefHeader";
 import { BriefPeriodTabs } from "./BriefPeriodTabs";
@@ -34,12 +37,21 @@ export function IndustryBriefView() {
   const [refreshing, setRefreshing] = useState(false);
   const [periodLoading, setPeriodLoading] = useState(false);
   const [activePeriod, setActivePeriod] = useState<BriefPeriod>("today");
+  const [highlights, setHighlights] = useState<DailyHighlightsResponse | null>(null);
 
   const loadBrief = useCallback(async (manual = false) => {
     if (manual) setRefreshing(true);
     setError(false);
     try {
-      setBrief(manual ? await refreshIndustryBrief() : await fetchPeriodBrief("today"));
+      if (manual) {
+        const [nextBrief, nextHighlights] = await Promise.all([refreshIndustryBrief(), refreshDailyHighlights()]);
+        setBrief(nextBrief);
+        setHighlights(nextHighlights);
+      } else {
+        const [nextBrief, nextHighlights] = await Promise.all([fetchPeriodBrief("today"), fetchDailyHighlights()]);
+        setBrief(nextBrief);
+        setHighlights(nextHighlights);
+      }
     } catch {
       setError(true);
     } finally {
@@ -53,7 +65,13 @@ export function IndustryBriefView() {
     setPeriodLoading(true);
     setError(false);
     try {
-      setBrief(await fetchPeriodBrief(period));
+      if (period === "today") {
+        const [nextBrief, nextHighlights] = await Promise.all([fetchPeriodBrief(period), fetchDailyHighlights()]);
+        setBrief(nextBrief);
+        setHighlights(nextHighlights);
+      } else {
+        setBrief(await fetchPeriodBrief(period));
+      }
       setActivePeriod(period);
     } catch {
       setError(true);
@@ -85,8 +103,8 @@ export function IndustryBriefView() {
         <EditorialFeedbackManager onRestore={() => void reloadActivePeriod()} />
       </div>
       <div className="ib-two-col">
-        <IndustryPanelCard title="GAME" panel={brief.game} category="game" signals={brief.signals} periodLabel={brief.periodLabel} />
-        <IndustryPanelCard title="AI" panel={brief.ai} category="ai" signals={brief.signals} periodLabel={brief.periodLabel} />
+        <IndustryPanelCard title="GAME" panel={brief.game} category="game" signals={brief.signals} periodLabel={brief.periodLabel} highlights={activePeriod === "today" ? highlights?.game : undefined} />
+        <IndustryPanelCard title="AI" panel={brief.ai} category="ai" signals={brief.signals} periodLabel={brief.periodLabel} highlights={activePeriod === "today" ? highlights?.ai : undefined} />
       </div>
       {brief.analytics && <BriefAnalyticsPanel analytics={brief.analytics} periodLabel={brief.periodLabel} />}
       {brief.policyUpdates && <PolicyUpdatesPanel updates={brief.policyUpdates} timeline={brief.policyTimeline ?? brief.policyUpdates} />}
