@@ -15,31 +15,42 @@ interface Props {
   highlights?: CategoryHighlights;
 }
 
+const MAX_CORE_ISSUES = 5;
+
+function articleToSource(article: { title: string; url: string; source: string }): SourceItem {
+  return { outlet: article.source.replace(/^NAVER · /, ""), title: article.title, url: article.url, publishedAgo: "" };
+}
+
 function DailyHighlightsBlock({ highlights }: { highlights: CategoryHighlights }) {
   if (!highlights.hasSignal) {
-    return <div className="ib-key-summary"><p className="headline">지난 24시간 동안 분석할 만큼 충분한 기사가 수집되지 않았습니다.</p></div>;
+    return (
+      <div className="ib-highlight-section">
+        <div className="eyebrow">오늘의 핵심 이슈</div>
+        <div className="ib-key-summary"><p className="headline">지난 24시간 동안 분석할 만큼 충분한 기사가 수집되지 않았습니다.</p></div>
+      </div>
+    );
   }
+  const coreIssues = highlights.coreIssues.slice(0, MAX_CORE_ISSUES);
   return (
     <>
-      <div className="eyebrow">오늘의 핵심 이슈</div>
-      <div className="ib-highlight-issue-list">
-        {highlights.coreIssues.map((issue) => (
-          <div className="ib-highlight-issue" key={issue.title}>
-            <p className="headline">{issue.title}</p>
-            <p className="ib-highlight-summary">{issue.summary}</p>
-            <div className="ib-highlight-articles">
-              {issue.articles.map((article) => (
-                <a key={article.url} href={article.url} target="_blank" rel="noreferrer" className="ib-highlight-article">
-                  <span className="outlet">{article.source.replace(/^NAVER · /, "")}</span>
-                  <span className="title">{article.title}</span>
-                </a>
-              ))}
+      <div className="ib-highlight-section">
+        <div className="eyebrow">오늘의 핵심 이슈</div>
+        <div className="ib-highlight-issue-list">
+          {coreIssues.map((issue) => (
+            <div className="ib-highlight-issue" key={issue.title}>
+              <p className="headline">{issue.title}</p>
+              <p className="ib-highlight-summary">{issue.summary}</p>
+              <div className="ib-highlight-issue-foot">
+                <span className="ib-highlight-issue-foot-label">관련 기사</span>
+                <EvidenceSources sources={issue.articles.map(articleToSource)} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
       {highlights.recommended.length > 0 && (
-        <>
+        <div className="ib-highlight-section">
           <div className="section-label">추천 기사</div>
           <div className="ib-recommended-list">
             {highlights.recommended.map((article) => (
@@ -50,7 +61,7 @@ function DailyHighlightsBlock({ highlights }: { highlights: CategoryHighlights }
               </a>
             ))}
           </div>
-        </>
+        </div>
       )}
     </>
   );
@@ -166,14 +177,16 @@ export function IndustryPanelCard({ title, panel, category, signals, periodLabel
         <div className="briefing">{panel.briefing.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
       </details>
 
-      <div className="section-label">변화 시그널</div>
-      <div className="ib-change-grid">
-        {visibleSignals.map((signal, index) => (
-          <div className={`ib-change-tile ib-change-flap ${DIRECTION_CLASS[signal.direction]}`} key={signal.topic} style={{ animationDelay: `${((category === "game" ? index : index + 4) * 0.11).toFixed(2)}s` }}>
-            <div className="ib-tile-top"><span className="topic"><em className="ib-change-event">{signal.eventType}</em>{signal.topic}</span><span className="ib-tile-actions"><span className="dir">{DIRECTION_SYMBOL[signal.direction]}</span><EvidenceSources sources={signal.evidence.map((article) => ({ ...article, publishedAgo: "" }))} /></span></div>
-            <div className="desc">{signal.priorityReason ?? signal.reason}</div>
-          </div>
-        ))}
+      <div className="ib-highlight-section">
+        <div className="section-label">변화 시그널</div>
+        <div className="ib-change-grid">
+          {visibleSignals.map((signal, index) => (
+            <div className={`ib-change-tile ib-change-flap ${DIRECTION_CLASS[signal.direction]}`} key={signal.topic} style={{ animationDelay: `${((category === "game" ? index : index + 4) * 0.11).toFixed(2)}s` }}>
+              <div className="ib-tile-top"><span className="topic"><em className="ib-change-event">{signal.eventType}</em>{signal.topic}</span><span className="ib-tile-actions"><span className="dir">{DIRECTION_SYMBOL[signal.direction]}</span><EvidenceSources sources={signal.evidence.map((article) => ({ ...article, publishedAgo: "" }))} /></span></div>
+              <div className="desc">{signal.priorityReason ?? signal.reason}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="section-label">앞으로 볼 것</div>

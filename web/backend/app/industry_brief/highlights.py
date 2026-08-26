@@ -39,6 +39,7 @@ NO_DATA_TEXT = "지난 24시간 동안 분석할 만큼 충분한 기사가 수�
 _ARTICLE_WINDOW_HOURS = 24
 _MAX_ARTICLES_TO_MODEL = 120
 _MAX_RECOMMENDED = 8
+_MAX_CORE_ISSUES = 5
 
 SYSTEM_PROMPT = """\
 너는 게임업계·AI업계 뉴스를 매일 정리하는 시니어 에디터다. 아래 기사 목록(지난
@@ -147,7 +148,10 @@ def generate_daily_highlights(db: Session, category: str, now: datetime | None =
         return DailyHighlights(category=category, has_signal=False, article_count=len(articles), generated_at=now)
 
     core_issues = []
-    for issue in result.core_issues:
+    # The prompt already asks for 3-5, but nothing stops the model from
+    # returning more on an unusually busy day — enforce the cap here rather
+    # than trust it, since the frontend grid assumes a bounded list.
+    for issue in result.core_issues[:_MAX_CORE_ISSUES]:
         members = [articles[i] for i in issue.article_indices if 0 <= i < len(articles)]
         if not members:
             continue
