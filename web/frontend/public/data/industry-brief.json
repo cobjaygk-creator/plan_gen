@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T14:43:13.965698+00:00",
+  "generated_at": "2026-08-26T16:21:45.611375+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 507,
+        "collected": 11,
         "analyzed": 0,
-        "pending": 507,
+        "pending": 11,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,14 +20,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.18",
             "08.19",
             "08.20",
             "08.21",
             "08.22",
             "08.23",
             "08.24",
-            "08.25"
+            "08.25",
+            "08.26"
           ],
           "series": [],
           "bucket": "일간"
@@ -196,64 +196,8 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [
-        {
-          "id": "2020",
-          "type": "TALENT",
-          "typeLabel": "인재",
-          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
-          "publishedDate": "2026.08.26",
-          "effectiveDate": null,
-          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
-          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
-          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
-          "responseChecklist": [
-            "참여 대상과 교육 일정 확인",
-            "채용·재교육 계획 연계 가능성 검토"
-          ],
-          "priorityScore": 28,
-          "priorityLabel": "관찰",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "인재 공식 발표",
-          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
-        }
-      ],
-      "policyTimeline": [
-        {
-          "id": "2020",
-          "type": "TALENT",
-          "typeLabel": "인재",
-          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
-          "publishedDate": "2026.08.26",
-          "effectiveDate": null,
-          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
-          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
-          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
-          "responseChecklist": [
-            "참여 대상과 교육 일정 확인",
-            "채용·재교육 계획 연계 가능성 검토"
-          ],
-          "priorityScore": 28,
-          "priorityLabel": "관찰",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "인재 공식 발표",
-          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
-        }
-      ]
+      "policyUpdates": [],
+      "policyTimeline": []
     },
     "3d": {
       "briefDate": "2026-08-26",
@@ -261,9 +205,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 893,
+        "collected": 898,
         "analyzed": 69,
-        "pending": 824,
+        "pending": 829,
         "completionRate": 8,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -274,14 +218,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.18",
             "08.19",
             "08.20",
             "08.21",
             "08.22",
             "08.23",
             "08.24",
-            "08.25"
+            "08.25",
+            "08.26"
           ],
           "series": [
             {
@@ -595,7 +539,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -608,7 +552,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -1212,7 +1156,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -1243,7 +1187,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -1274,7 +1218,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -1495,12 +1439,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1680,9 +1624,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 893,
+        "collected": 904,
         "analyzed": 69,
-        "pending": 824,
+        "pending": 835,
         "completionRate": 8,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1693,14 +1637,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.18",
             "08.19",
             "08.20",
             "08.21",
             "08.22",
             "08.23",
             "08.24",
-            "08.25"
+            "08.25",
+            "08.26"
           ],
           "series": [
             {
@@ -1809,9 +1753,9 @@
               "evidence": 35.0,
               "coverage": 15.8,
               "importance": 12.0,
-              "persistence": 4.0,
+              "persistence": 3.0,
               "momentum": 8.0,
-              "editorialAdjustment": -10.8,
+              "editorialAdjustment": -9.8,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
               "total": 64.0
@@ -1830,12 +1774,12 @@
               "evidence": 27.0,
               "coverage": 10.0,
               "importance": 12.0,
-              "persistence": 4.0,
+              "persistence": 3.0,
               "momentum": 6.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 59.0
+              "total": 58.0
             }
           }
         ],
@@ -1938,12 +1882,12 @@
               "evidence": 35.0,
               "coverage": 15.8,
               "importance": 6.0,
-              "persistence": 4.0,
+              "persistence": 3.0,
               "momentum": 8.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 68.8
+              "total": 67.8
             }
           },
           {
@@ -1959,12 +1903,12 @@
               "evidence": 27.0,
               "coverage": 10.0,
               "importance": 20.0,
-              "persistence": 4.0,
+              "persistence": 3.0,
               "momentum": 6.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 67.0
+              "total": 66.0
             }
           }
         ],
@@ -2014,7 +1958,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -2027,7 +1971,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -2148,7 +2092,7 @@
         {
           "topic": "서든어택",
           "direction": "up",
-          "weight": 59,
+          "weight": 58,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "업데이트",
@@ -2171,7 +2115,7 @@
         {
           "topic": "GTA 6",
           "direction": "up",
-          "weight": 44,
+          "weight": 43,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "출시",
@@ -2194,7 +2138,7 @@
         {
           "topic": "씰M2",
           "direction": "up",
-          "weight": 44,
+          "weight": 43,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "출시",
@@ -2217,7 +2161,7 @@
         {
           "topic": "알리바바",
           "direction": "up",
-          "weight": 69,
+          "weight": 68,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "투자",
@@ -2245,7 +2189,7 @@
         {
           "topic": "NVIDIA",
           "direction": "up",
-          "weight": 67,
+          "weight": 66,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "기술",
@@ -2268,7 +2212,7 @@
         {
           "topic": "AI Agent",
           "direction": "up",
-          "weight": 67,
+          "weight": 66,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "기술",
@@ -2291,7 +2235,7 @@
         {
           "topic": "AI Factory",
           "direction": "up",
-          "weight": 65,
+          "weight": 64,
           "kind": "INDUSTRY",
           "kindLabel": "기간 이슈",
           "eventType": "기타",
@@ -2631,7 +2575,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -2662,7 +2606,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -2693,7 +2637,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -2914,12 +2858,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
