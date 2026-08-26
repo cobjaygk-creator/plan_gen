@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { IndustryPanel, SourceItem } from "../types";
 import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason } from "../api/client";
 
@@ -14,6 +14,7 @@ interface Props {
 }
 
 const MAX_CORE_ISSUES = 5;
+const VISIBLE_CORE_ISSUES = 3;
 const RECOMMENDED_PAGE_SIZE = 6;
 
 function articleToSource(article: { title: string; url: string; source: string }): SourceItem {
@@ -21,12 +22,20 @@ function articleToSource(article: { title: string; url: string; source: string }
 }
 
 function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHighlights; category: "game" | "ai" }) {
+  const [issuePage, setIssuePage] = useState(0);
   const [recommendedPage, setRecommendedPage] = useState(0);
   const recommendedPageCount = Math.max(1, Math.ceil(highlights.recommended.length / RECOMMENDED_PAGE_SIZE));
   const visibleRecommended = highlights.recommended.slice(
     recommendedPage * RECOMMENDED_PAGE_SIZE, recommendedPage * RECOMMENDED_PAGE_SIZE + RECOMMENDED_PAGE_SIZE,
   );
   const recommendedLabel = `${category === "game" ? "게임" : "AI"}추천기사`;
+  const coreIssues = highlights.coreIssues.slice(0, MAX_CORE_ISSUES);
+  const issuePageCount = Math.max(1, Math.ceil(coreIssues.length / VISIBLE_CORE_ISSUES));
+  useEffect(() => {
+    if (issuePageCount <= 1) return;
+    const timer = window.setInterval(() => setIssuePage((page) => (page + 1) % issuePageCount), 6500);
+    return () => window.clearInterval(timer);
+  }, [issuePageCount]);
 
   if (!highlights.hasSignal) {
     return (
@@ -36,14 +45,18 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
       </div>
     );
   }
-  const coreIssues = highlights.coreIssues.slice(0, MAX_CORE_ISSUES);
+  const visibleIssueCount = Math.min(VISIBLE_CORE_ISSUES, coreIssues.length);
+  const visibleIssues = Array.from(
+    { length: visibleIssueCount },
+    (_, offset) => coreIssues[(issuePage * VISIBLE_CORE_ISSUES + offset) % coreIssues.length],
+  );
   return (
     <div className="ib-daily-highlights">
       <div className="ib-highlight-section">
         <div className="eyebrow">핵심이슈</div>
         <div className="ib-highlight-issue-list">
-          {coreIssues.map((issue) => (
-            <div className="ib-highlight-issue" key={issue.title}>
+          {visibleIssues.map((issue, index) => (
+            <div className="ib-highlight-issue ib-change-flap" key={issue.title} style={{ animationDelay: `${(index * 0.11).toFixed(2)}s` }}>
               <p className="headline">{issue.title}</p>
               <p className="ib-highlight-summary">{issue.summary}</p>
               <div className="ib-highlight-issue-foot">

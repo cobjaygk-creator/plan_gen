@@ -1400,11 +1400,13 @@
 .ib-highlight-section:last-child { margin-bottom: 0; }
 .ib-highlight-section > .eyebrow,
 .ib-highlight-section > .section-label { margin-top: 0; }
-/* Fixed to 5 row-tracks regardless of how many issues actually render, so
+/* Fixed to 3 row-tracks regardless of how many issues actually render, so
    a category with fewer issues still reserves the same total box height
-   as one with the full 5 — the GAME/AI columns grid up either way, with
-   the unused tracks just left blank rather than stretching real rows. */
-.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(5, 156px); gap: 8px; margin: 0; }
+   as one showing the full 3 — the GAME/AI columns line up either way, with
+   unused tracks left blank rather than stretching real rows. Beyond 3
+   issues, DailyHighlightsBlock rotates the visible window every 6.5s
+   instead of growing the grid. */
+.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(3, 156px); gap: 8px; margin: 0; }
 .ib-highlight-issue {
   display: flex;
   flex-direction: column;
