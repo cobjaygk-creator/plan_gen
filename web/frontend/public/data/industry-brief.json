@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-26T11:28:06.545995+00:00",
+  "generated_at": "2026-08-26T12:44:28.219943+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-26",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 393,
+        "collected": 398,
         "analyzed": 0,
-        "pending": 393,
+        "pending": 398,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -621,7 +621,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -1305,7 +1305,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
@@ -1495,12 +1495,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1680,9 +1680,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 779,
+        "collected": 784,
         "analyzed": 69,
-        "pending": 710,
+        "pending": 715,
         "completionRate": 9,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2040,7 +2040,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "1일 전",
+                "publishedAgo": "2일 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -2724,7 +2724,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "1일 전",
+              "publishedAgo": "2일 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
@@ -2914,12 +2914,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
