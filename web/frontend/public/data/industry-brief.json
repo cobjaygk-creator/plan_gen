@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T10:10:19.375588+00:00",
+  "generated_at": "2026-08-27T13:32:37.256764+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-27",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 289,
+        "collected": 301,
         "analyzed": 0,
-        "pending": 289,
+        "pending": 301,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -205,15 +205,15 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1106,
-        "analyzed": 66,
-        "pending": 1040,
+        "collected": 1095,
+        "analyzed": 65,
+        "pending": 1030,
         "completionRate": 6,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 46,
+        "relevant": 45,
         "issues": 16,
-        "verifiedIssues": 7,
-        "singleSourceIssues": 9
+        "verifiedIssues": 6,
+        "singleSourceIssues": 10
       },
       "analytics": {
         "interest": {
@@ -280,7 +280,7 @@
           {
             "topic": "기타",
             "game": 8,
-            "ai": 7
+            "ai": 6
           },
           {
             "topic": "출시",
@@ -536,14 +536,14 @@
           },
           {
             "rank": 3,
-            "topic": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-            "description": "GPT-5.6은 Kiro에서 제공되어 개발자들이 소프트웨어를 기획하고 빌드하며 검토하고 테스트할 때 더 나은 가격 성능을 지원한다.",
+            "topic": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+            "description": "한중 협력은 AI 기술 및 지식재산 정보화의 국제 표준화에 기여할 수 있습니다.",
             "sources": [
               {
-                "outlet": "OpenAI",
-                "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+                "outlet": "대한민국 정책브리핑",
+                "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
                 "publishedAgo": "2일 전",
-                "url": "https://openai.com/index/gpt-5-6-in-kiro"
+                "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
               }
             ]
           }
@@ -1201,37 +1201,6 @@
           ]
         },
         {
-          "id": "issue-15",
-          "category": "AI",
-          "importance": "보통",
-          "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-          "summary": "GPT-5.6은 Kiro에서 제공되어 개발자들이 소프트웨어를 기획하고 빌드하며 검토하고 테스트할 때 더 나은 가격 성능을 지원한다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "DECLINING",
-          "relatedBriefing": "AI INDUSTRY / Advancing price-performa",
-          "confidence": {
-            "level": "MODERATE",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 1
-          },
-          "evidenceQuality": {
-            "verificationStatus": "OFFICIAL_ONLY",
-            "synthesisEligible": true,
-            "establishedMediaCount": 0,
-            "discoveryMediaCount": 0,
-            "reason": "Confirmed by a primary source; independent reporting is still limited."
-          },
-          "sources": [
-            {
-              "outlet": "OpenAI",
-              "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "2일 전",
-              "url": "https://openai.com/index/gpt-5-6-in-kiro"
-            }
-          ]
-        },
-        {
           "id": "issue-58",
           "category": "AI",
           "importance": "보통",
@@ -1323,6 +1292,37 @@
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
+        },
+        {
+          "id": "issue-13",
+          "category": "AI",
+          "importance": "보통",
+          "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+          "summary": "OpenAI의 사이버 보안 모델이 Hugging Face를 해킹한 사건에 대해 앨라배마 주 검사가 조사를 발표했다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "DECLINING",
+          "relatedBriefing": "AI INDUSTRY / Alabama launches investi",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "TechCrunch",
+              "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+              "publishedAgo": "2일 전",
+              "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/"
+            }
+          ]
         }
       ],
       "landscape": {
@@ -1385,7 +1385,7 @@
           "category": "AI",
           "label": "AI",
           "koreaArticleCount": 17,
-          "globalArticleCount": 9,
+          "globalArticleCount": 8,
           "koreaFocus": [
             {
               "topic": "AI",
@@ -1410,7 +1410,7 @@
               "count": 2
             },
             {
-              "topic": "GPT-5.6",
+              "topic": "AI Factory",
               "count": 1
             }
           ],
@@ -1601,9 +1601,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1200,
+        "collected": 1212,
         "analyzed": 69,
-        "pending": 1131,
+        "pending": 1143,
         "completionRate": 6,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1961,7 +1961,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "2일 전",
+                "publishedAgo": "3일 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -2645,7 +2645,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "2일 전",
+              "publishedAgo": "3일 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
