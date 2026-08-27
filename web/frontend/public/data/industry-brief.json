@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T22:28:34.693625+00:00",
+  "generated_at": "2026-08-27T23:33:09.178853+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
@@ -205,12 +205,12 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1206,
-        "analyzed": 34,
+        "collected": 1200,
+        "analyzed": 28,
         "pending": 1172,
-        "completionRate": 3,
+        "completionRate": 2,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 26,
+        "relevant": 22,
         "issues": 16,
         "verifiedIssues": 2,
         "singleSourceIssues": 14
@@ -284,7 +284,7 @@
           },
           {
             "topic": "기타",
-            "game": 5,
+            "game": 4,
             "ai": 2
           },
           {
@@ -293,22 +293,17 @@
             "ai": 0
           },
           {
-            "topic": "기술",
-            "game": 0,
-            "ai": 3
-          },
-          {
             "topic": "정책",
             "game": 0,
             "ai": 2
           },
           {
-            "topic": "투자",
+            "topic": "기술",
             "game": 0,
             "ai": 2
           },
           {
-            "topic": "보안",
+            "topic": "투자",
             "game": 0,
             "ai": 1
           }
@@ -464,16 +459,16 @@
             ]
           },
           {
-            "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-            "description": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
+            "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
+            "description": "중국 베이징에서 열린 로봇 관련 행사에서 휴머노이드 로봇의 체육 능력이 크게 발전했으며, 로봇의 인공지능 수준은 'GPT-2'에 해당한다고 보도되었다.",
             "statusLabel": "주요 매체 단독",
             "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
             "sources": [
               {
-                "outlet": "전자신문 AI",
-                "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+                "outlet": "AI타임스",
+                "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
                 "publishedAgo": "2일 전",
-                "url": "https://www.etnews.com/20260825000010"
+                "url": "https://www.aitimes.com/news/articleView.html?idxno=214278"
               }
             ]
           }
@@ -487,19 +482,6 @@
         "watchList": [
           {
             "rank": 1,
-            "topic": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-            "description": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
-            "sources": [
-              {
-                "outlet": "전자신문 AI",
-                "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "2일 전",
-                "url": "https://www.etnews.com/20260825000010"
-              }
-            ]
-          },
-          {
-            "rank": 2,
             "topic": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
             "description": "중국 베이징에서 열린 로봇 관련 행사에서 휴머노이드 로봇의 체육 능력이 크게 발전했으며, 로봇의 인공지능 수준은 'GPT-2'에 해당한다고 보도되었다.",
             "sources": [
@@ -512,7 +494,7 @@
             ]
           },
           {
-            "rank": 3,
+            "rank": 2,
             "topic": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
             "description": "코딧이 정부의 ICT 규제샌드박스 AI 기반 규제확인 서비스 운영사로 선정되어, 기업들이 빠르게 규제 정보를 확인할 수 있는 시스템을 제공할 예정이다.",
             "sources": [
@@ -521,6 +503,19 @@
                 "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
                 "publishedAgo": "2일 전",
                 "url": "https://www.etnews.com/20260825000050"
+              }
+            ]
+          },
+          {
+            "rank": 3,
+            "topic": "플리토, 전국 26개 초·중·고·특수학교에 AI 통번역 지원",
+            "description": "플리토는 26개 초·중·고 및 특수학교에 AI 통번역 솔루션을 공급하며 다문화 교육 현장에서의 언어 장벽 해소를 목표로 한다.",
+            "sources": [
+              {
+                "outlet": "전자신문 AI",
+                "title": "플리토, 전국 26개 초·중·고·특수학교에 AI 통번역 지원",
+                "publishedAgo": "2일 전",
+                "url": "https://www.etnews.com/20260825000066"
               }
             ]
           }
@@ -572,12 +567,6 @@
         },
         {
           "category": "AI",
-          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-          "url": "https://www.etnews.com/20260825000010",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
           "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
           "url": "https://www.aitimes.com/news/articleView.html?idxno=214261",
           "publishedDate": "2026.08.25"
@@ -592,6 +581,12 @@
           "category": "AI",
           "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
           "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
+          "url": "https://www.etnews.com/20260825000010",
           "publishedDate": "2026.08.25"
         }
       ],
@@ -740,29 +735,6 @@
           ]
         },
         {
-          "topic": "Generative AI",
-          "direction": "up",
-          "weight": 46,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "보안",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
-          "evidence": [
-            {
-              "outlet": "전자신문 AI",
-              "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "url": "https://www.etnews.com/20260825000010"
-            }
-          ]
-        },
-        {
           "topic": "로봇",
           "direction": "up",
           "weight": 40,
@@ -782,6 +754,29 @@
               "outlet": "AI타임스",
               "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214278"
+            }
+          ]
+        },
+        {
+          "topic": "ICT 규제샌드박스",
+          "direction": "up",
+          "weight": 40,
+          "kind": "INDUSTRY",
+          "kindLabel": "기간 이슈",
+          "eventType": "정책",
+          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
+          "domain": "AI",
+          "state": "GROWING",
+          "stateLabel": "증가 중",
+          "todayCount": 1,
+          "baselineAverage": 0.0,
+          "sourceCount": 1,
+          "reason": "코딧이 정부의 ICT 규제샌드박스 AI 기반 규제확인 서비스 운영사로 선정되어, 기업들이 빠르게 규제 정보를 확인할 수 있는 시스템을 제공할 예정이다.",
+          "evidence": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
+              "url": "https://www.etnews.com/20260825000050"
             }
           ]
         }
@@ -1105,37 +1100,6 @@
           ]
         },
         {
-          "id": "issue-27",
-          "category": "AI",
-          "importance": "보통",
-          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-          "summary": "컴트루테크놀로지가 생성형 AI 보안 솔루션 '스핑크스 AI'에 이미지 기밀정보 유사도 분석 기능을 추가하여, 보안 사각지대에 대응하고자 한다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "DECLINING",
-          "relatedBriefing": "AI INDUSTRY / 컴트루테크놀로지 '스핑크스 AI', 이미지 ",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "전자신문 AI",
-              "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "2일 전",
-              "url": "https://www.etnews.com/20260825000010"
-            }
-          ]
-        },
-        {
           "id": "issue-54",
           "category": "AI",
           "importance": "보통",
@@ -1289,6 +1253,37 @@
               "url": "https://techcrunch.com/2026/08/24/situational-awareness-star-ai-hedge-fund-that-nearly-imploded-now-being-probed-by-the-sec/"
             }
           ]
+        },
+        {
+          "id": "issue-56",
+          "category": "AI",
+          "importance": "낮음",
+          "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
+          "summary": "라이너가 500억원 규모의 시리즈C 투자를 유치하며, 기업가치를 3000억원 이상으로 끌어올렸다. AI 검색 서비스와 B2B AX 비즈니스의 성장이 주요 요인으로 지목된다.",
+          "whyItMatters": "아직 분석되지 않았습니다.",
+          "lifecycle": "DECLINING",
+          "relatedBriefing": "AI INDUSTRY / 라이너, 시리즈C 투자 500억원 확보…글로",
+          "confidence": {
+            "level": "WEAK",
+            "articleCount": 1,
+            "independentSources": 1,
+            "officialCount": 0
+          },
+          "evidenceQuality": {
+            "verificationStatus": "SINGLE_SOURCE",
+            "synthesisEligible": false,
+            "establishedMediaCount": 1,
+            "discoveryMediaCount": 0,
+            "reason": "Only one non-primary source is available; additional confirmation is required."
+          },
+          "sources": [
+            {
+              "outlet": "전자신문 AI",
+              "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
+              "publishedAgo": "2일 전",
+              "url": "https://www.etnews.com/20260825000113"
+            }
+          ]
         }
       ],
       "landscape": {
@@ -1316,7 +1311,7 @@
           "category": "GAME",
           "label": "게임",
           "koreaArticleCount": 12,
-          "globalArticleCount": 3,
+          "globalArticleCount": 2,
           "koreaFocus": [
             {
               "topic": "에이지 트위스터",
@@ -1350,7 +1345,7 @@
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 10,
+          "koreaArticleCount": 7,
           "globalArticleCount": 1,
           "koreaFocus": [
             {
@@ -1868,7 +1863,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "2일 전",
+                "publishedAgo": "3일 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -2470,7 +2465,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
-              "publishedAgo": "2일 전",
+              "publishedAgo": "3일 전",
               "url": "https://www.etnews.com/20260825000014"
             },
             {
@@ -2693,7 +2688,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "2일 전",
+              "publishedAgo": "3일 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
