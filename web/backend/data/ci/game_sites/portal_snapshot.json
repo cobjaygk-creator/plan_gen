@@ -1100,7 +1100,7 @@
     "game_name": "Black Desert NA/EU – Level Up Faster with HYPERBOOST | Pearl Abyss",
     "publisher": "Pearl Abyss",
     "published_on": null,
-    "thumbnail_url": "https://s1.pearlcdn.com/NAEU/Upload/Manager/MetaTag/b24ebc0e8ba20260730093125963.jpg?v=639227190295312596",
+    "thumbnail_url": "https://s1.pearlcdn.com/NAEU/Upload/Manager/MetaTag/b24ebc0e8ba20260730093125963.jpg?v=639232409880864994",
     "portal": "PEARL_ABYSS"
   },
   {
@@ -1896,6 +1896,14 @@
     "portal": "INVEN_CALENDAR"
   },
   {
+    "url": "https://lumi.biligames.com/kr",
+    "game_name": "루미마스터",
+    "publisher": null,
+    "published_on": "2026-09-17",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1125895335.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
     "url": "https://www.cloudedleopardent.com/game/sora2/kr",
     "game_name": "하늘의 궤적 the 2nd",
     "publisher": null,
@@ -2013,6 +2021,14 @@
     "publisher": null,
     "published_on": "2026-09-30",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1472597660.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.veewo.com/neonabyss2",
+    "game_name": "네온 어비스2",
+    "publisher": null,
+    "published_on": null,
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1385560344.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {

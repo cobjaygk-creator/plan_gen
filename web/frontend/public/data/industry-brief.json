@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-27T02:33:59.402094+00:00",
+  "generated_at": "2026-08-27T10:10:19.375588+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-27",
-      "generatedAt": "2026-08-26T23:47:33.746652+00:00",
+      "generatedAt": "2026-08-27T10:05:52.647700+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 167,
+        "collected": 289,
         "analyzed": 0,
-        "pending": 167,
+        "pending": 289,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -201,14 +201,14 @@
     },
     "3d": {
       "briefDate": "2026-08-27",
-      "generatedAt": "2026-08-26T23:47:33.746652+00:00",
+      "generatedAt": "2026-08-27T10:05:52.647700+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1046,
-        "analyzed": 68,
-        "pending": 978,
-        "completionRate": 7,
+        "collected": 1106,
+        "analyzed": 66,
+        "pending": 1040,
+        "completionRate": 6,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 46,
         "issues": 16,
@@ -1416,12 +1416,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
@@ -1597,13 +1597,13 @@
     },
     "week": {
       "briefDate": "2026-08-27",
-      "generatedAt": "2026-08-26T23:47:33.746652+00:00",
+      "generatedAt": "2026-08-27T10:05:52.647700+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1078,
+        "collected": 1200,
         "analyzed": 69,
-        "pending": 1009,
+        "pending": 1131,
         "completionRate": 6,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2835,12 +2835,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
