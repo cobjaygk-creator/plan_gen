@@ -1,3 +1,11 @@
+:root {
+  /* 업계동향 전용 웜톤 팔레트 — 기획 리뷰 목업에서 가져옴. 앱 전역 토큰과는
+     별개 네임스페이스(--ib-*)라 다른 화면에는 영향 없음. */
+  --ib-paper: #eeede6;
+  --ib-surface: #fbfaf7;
+  --ib-line: #ddd8ca;
+  --ib-ink: #211f1a;
+}
 .ib-stack {
   display: flex;
   flex-direction: column;
@@ -872,12 +880,13 @@
   margin: 0 auto;
   padding: 28px 22px 44px;
   gap: 14px;
-  color: #111;
+  background: var(--ib-paper);
+  color: var(--ib-ink);
 }
 .ib-stack .card {
-  border: 1px solid #dedede;
+  border: 1px solid var(--ib-line);
   border-radius: 12px;
-  background: #fff;
+  background: var(--ib-surface);
   box-shadow: none;
 }
 /* Top-level 업계동향 IA — scoped to this feature; the app's own left rail
@@ -887,7 +896,7 @@
   align-items: center;
   gap: 4px;
   margin-bottom: 14px;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid var(--ib-line);
 }
 .ib-submenu-item {
   padding: 9px 14px;
@@ -897,8 +906,8 @@
   color: #999;
 }
 .ib-submenu-item.is-active {
-  color: #111;
-  border-bottom-color: #111;
+  color: var(--ib-ink);
+  border-bottom-color: var(--ib-ink);
 }
 .ib-submenu-item.is-disabled {
   color: #c4c4c4;
@@ -923,7 +932,7 @@
 }
 .ib-page-header h1 {
   margin: 0;
-  color: #111;
+  color: var(--ib-ink);
   font-size: 28px;
   letter-spacing: -.055em;
 }
@@ -1503,15 +1512,15 @@
    unused tracks left blank rather than stretching real rows. Beyond 3
    issues, DailyHighlightsBlock rotates the visible window every 6.5s
    instead of growing the grid. */
-.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(3, 156px); gap: 8px; margin: 0; }
+.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(3, 156px); gap: 0; margin: 0; }
 .ib-highlight-issue {
   display: flex;
   flex-direction: column;
-  padding: 13px 16px;
-  border: 1px solid #e3ebf4;
-  border-radius: 9px;
-  background: #fff;
+  justify-content: center;
+  padding: 13px 2px;
+  border-top: 1px solid var(--ib-line);
 }
+.ib-highlight-issue:first-child { border-top: 0; }
 .ib-highlight-issue .headline {
   display: -webkit-box;
   overflow: hidden;
@@ -1541,9 +1550,10 @@
 .ib-recommended-head .section-label { margin: 0; }
 .ib-recommended-next { padding: 4px 13px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--ink-muted); font-size: 13.5px; font-weight: 700; cursor: pointer; }
 .ib-recommended-next:hover { border-color: #285f9e; color: #285f9e; }
-.ib-recommended-list { display: grid; gap: 7px; }
-.ib-recommended-item { display: block; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; background: #fff; text-decoration: none; }
-.ib-recommended-item:hover { border-color: #285f9e; }
+.ib-recommended-list { display: grid; gap: 0; }
+.ib-recommended-item { display: block; padding: 10px 2px; border-top: 1px solid var(--ib-line); text-decoration: none; }
+.ib-recommended-item:first-child { border-top: 0; }
+.ib-recommended-item:hover .title { color: #285f9e; text-decoration: underline; }
 .ib-recommended-top { margin-bottom: 2px; }
 .ib-recommended-top .outlet { color: #285f9e; font-size: 12.5px; font-weight: 750; }
 .ib-recommended-item .title { color: var(--ink); font-size: 15.5px; font-weight: 650; line-height: 1.35; }
@@ -1551,7 +1561,14 @@
 /* 오늘 탭 핵심이슈/추천기사만 전반적으로 글씨 130% 확대 */
 .ib-daily-highlights .eyebrow,
 .ib-daily-highlights .section-label { font-size: 15px; }
-.ib-daily-highlights .ib-evidence-count { min-width: 32px; height: 23px; padding: 0 8px; font-size: 13.5px; line-height: 21px; }
+.ib-daily-highlights .ib-evidence-count {
+  min-width: 0; height: auto; padding: 0; border: 0; border-radius: 0;
+  background: transparent; font-size: 13px; font-weight: 600; line-height: 1;
+}
+.ib-daily-highlights .ib-evidence-count:hover,
+.ib-daily-highlights .ib-evidence-count[aria-expanded="true"] {
+  background: transparent; text-decoration: underline;
+}
 .ib-feedback-applied { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 10px; border-radius: 7px; background: #f5f5f5; color: #777; font-size: 10.5px; }
 .ib-feedback-applied button { border: 0; background: transparent; color: #285f9e; font-size: 10px; font-weight: 700; cursor: pointer; }
 .ib-feedback-manager { width: min(760px, calc(100% - 40px)); margin: -4px auto 4px; text-align: right; }
