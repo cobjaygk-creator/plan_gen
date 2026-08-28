@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-28T20:38:34.111075+00:00",
+  "generated_at": "2026-08-28T22:39:10.361679+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T11:36:10.724731+00:00",
+      "briefDate": "2026-08-29",
+      "generatedAt": "2026-08-28T22:33:41.799102+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 23,
+        "collected": 62,
         "analyzed": 0,
-        "pending": 23,
+        "pending": 62,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -176,7 +176,74 @@
           }
         ]
       },
-      "techRadar": [],
+      "techRadar": [
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 6,
+          "articles": [
+            {
+              "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
+              "url": "https://n.news.naver.com/mnews/article/031/0001053461",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "中 CXMT, 상반기 매출 10배로 늘었다...메모리 품귀 수혜",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995480",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "“29만원 꼭지에서 물렸어요” “난 30만원이다” 전국민 열풍 난리더니 ‘아우성’…국민 포털 무슨 일이",
+              "url": "https://n.news.naver.com/mnews/article/016/0002689967",
+              "source": "NAVER · 헤럴드경제"
+            },
+            {
+              "title": "5000억달러 ‘엔비디아 GPU 동맹’ 해부… 월가의 베팅, 금융 법칙 바꿀까",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189033",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "DLSS 5 leaked and modders are putting Nvidia&#8217;s AI effects on everything",
+              "url": "https://www.theverge.com/games/986197/nvidia-dlss-5-leak-ai",
+              "source": "The Verge"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "베일 벗은 '모두의 AI'…SKT·카카오·KT가 만들 국민 AI 모습은",
+              "url": "https://n.news.naver.com/mnews/article/293/0000089734",
+              "source": "NAVER · 블로터"
+            },
+            {
+              "title": "“너도 내 공격법 써봐”…오픈AI 해킹사태, 1200개 AI 뭉친 합동작전이었다",
+              "url": "https://n.news.naver.com/mnews/article/020/0003744180",
+              "source": "NAVER · 동아일보"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
+              "url": "https://n.news.naver.com/mnews/article/469/0000950787",
+              "source": "NAVER · 한국일보"
+            },
+            {
+              "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102313",
+              "source": "NAVER · 이코노미스트"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -201,14 +268,14 @@
       "policyTimeline": []
     },
     "3d": {
-      "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T11:36:10.724731+00:00",
+      "briefDate": "2026-08-29",
+      "generatedAt": "2026-08-28T22:33:41.799102+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1175,
+        "collected": 1246,
         "analyzed": 0,
-        "pending": 1175,
+        "pending": 1246,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -411,40 +478,50 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 64,
+          "articleCount": 70,
           "articles": [
             {
-              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
-              "source": "AI타임스"
+              "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
+              "url": "https://n.news.naver.com/mnews/article/031/0001053461",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "구글, 안드로이드 앱 메모리 절감 의무화…미준수 시 노출 제한",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214558",
-              "source": "AI타임스"
+              "title": "中 CXMT, 상반기 매출 10배로 늘었다...메모리 품귀 수혜",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995480",
+              "source": "NAVER · 조선일보"
             },
             {
-              "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
-              "source": "AI타임스"
+              "title": "“29만원 꼭지에서 물렸어요” “난 30만원이다” 전국민 열풍 난리더니 ‘아우성’…국민 포털 무슨 일이",
+              "url": "https://n.news.naver.com/mnews/article/016/0002689967",
+              "source": "NAVER · 헤럴드경제"
             },
             {
-              "title": "머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214545",
-              "source": "AI타임스"
+              "title": "5000억달러 ‘엔비디아 GPU 동맹’ 해부… 월가의 베팅, 금융 법칙 바꿀까",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189033",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
-              "source": "AI타임스"
+              "title": "DLSS 5 leaked and modders are putting Nvidia&#8217;s AI effects on everything",
+              "url": "https://www.theverge.com/games/986197/nvidia-dlss-5-leak-ai",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 42,
+          "articleCount": 44,
           "articles": [
+            {
+              "title": "베일 벗은 '모두의 AI'…SKT·카카오·KT가 만들 국민 AI 모습은",
+              "url": "https://n.news.naver.com/mnews/article/293/0000089734",
+              "source": "NAVER · 블로터"
+            },
+            {
+              "title": "“너도 내 공격법 써봐”…오픈AI 해킹사태, 1200개 AI 뭉친 합동작전이었다",
+              "url": "https://n.news.naver.com/mnews/article/020/0003744180",
+              "source": "NAVER · 동아일보"
+            },
             {
               "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
@@ -459,24 +536,24 @@
               "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
               "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239346",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 24,
+          "articleCount": 26,
           "articles": [
+            {
+              "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
+              "url": "https://n.news.naver.com/mnews/article/469/0000950787",
+              "source": "NAVER · 한국일보"
+            },
+            {
+              "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102313",
+              "source": "NAVER · 이코노미스트"
+            },
             {
               "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
@@ -491,16 +568,6 @@
               "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
               "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
-              "url": "https://www.etnews.com/20260828000104",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -742,14 +809,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T11:36:10.724731+00:00",
+      "briefDate": "2026-08-29",
+      "generatedAt": "2026-08-28T22:33:41.799102+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1649,
+        "collected": 1746,
         "analyzed": 69,
-        "pending": 1580,
+        "pending": 1677,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1946,8 +2013,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 212,
+          "articleCount": 214,
           "articles": [
+            {
+              "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
+              "url": "https://n.news.naver.com/mnews/article/469/0000950787",
+              "source": "NAVER · 한국일보"
+            },
+            {
+              "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102313",
+              "source": "NAVER · 이코노미스트"
+            },
             {
               "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
@@ -1962,24 +2039,24 @@
               "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
               "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
-              "url": "https://www.etnews.com/20260828000104",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 203,
+          "articleCount": 205,
           "articles": [
+            {
+              "title": "베일 벗은 '모두의 AI'…SKT·카카오·KT가 만들 국민 AI 모습은",
+              "url": "https://n.news.naver.com/mnews/article/293/0000089734",
+              "source": "NAVER · 블로터"
+            },
+            {
+              "title": "“너도 내 공격법 써봐”…오픈AI 해킹사태, 1200개 AI 뭉친 합동작전이었다",
+              "url": "https://n.news.naver.com/mnews/article/020/0003744180",
+              "source": "NAVER · 동아일보"
+            },
             {
               "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
@@ -1994,48 +2071,38 @@
               "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
               "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239346",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 110,
+          "articleCount": 116,
           "articles": [
             {
-              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
-              "source": "AI타임스"
+              "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
+              "url": "https://n.news.naver.com/mnews/article/031/0001053461",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "구글, 안드로이드 앱 메모리 절감 의무화…미준수 시 노출 제한",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214558",
-              "source": "AI타임스"
+              "title": "中 CXMT, 상반기 매출 10배로 늘었다...메모리 품귀 수혜",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995480",
+              "source": "NAVER · 조선일보"
             },
             {
-              "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
-              "source": "AI타임스"
+              "title": "“29만원 꼭지에서 물렸어요” “난 30만원이다” 전국민 열풍 난리더니 ‘아우성’…국민 포털 무슨 일이",
+              "url": "https://n.news.naver.com/mnews/article/016/0002689967",
+              "source": "NAVER · 헤럴드경제"
             },
             {
-              "title": "머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214545",
-              "source": "AI타임스"
+              "title": "5000억달러 ‘엔비디아 GPU 동맹’ 해부… 월가의 베팅, 금융 법칙 바꿀까",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189033",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
-              "source": "AI타임스"
+              "title": "DLSS 5 leaked and modders are putting Nvidia&#8217;s AI effects on everything",
+              "url": "https://www.theverge.com/games/986197/nvidia-dlss-5-leak-ai",
+              "source": "The Verge"
             }
           ]
         },
