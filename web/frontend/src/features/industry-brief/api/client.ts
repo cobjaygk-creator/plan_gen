@@ -105,6 +105,21 @@ export async function fetchPeriodBrief(period: BriefPeriod): Promise<IndustryBri
   return res.json() as Promise<IndustryBrief>;
 }
 
+/** date: "YYYY-MM-DD" (KST calendar day) — the single-date browser that
+ * replaced the 오늘/3일/이번주 tabs. Reads already-stored data, same as
+ * fetchPeriodBrief; never collects or calls AI. */
+export async function fetchBriefForDate(date: string): Promise<IndustryBrief> {
+  const res = await fetch(`/industry-brief/day/${date}`, { method: "POST", credentials: "include" });
+  if (!res.ok) throw new Error("해당 날짜의 동향을 불러오지 못했습니다.");
+  return res.json() as Promise<IndustryBrief>;
+}
+
+export async function fetchHighlightsForDate(date: string): Promise<DailyHighlightsResponse> {
+  const res = await fetch(`/industry-brief/highlights/day/${date}`, { credentials: "include" });
+  if (!res.ok) throw new Error("해당 날짜의 핵심 이슈를 불러오지 못했습니다.");
+  return res.json() as Promise<DailyHighlightsResponse>;
+}
+
 export type CoreFeedbackReason = "PROMOTIONAL" | "LOW_IMPORTANCE" | "DUPLICATE" | "LOW_IMPACT" | "OTHER";
 
 export async function submitIssueFeedback(issueId: number, verdict: "NOT_CORE", reason: CoreFeedbackReason): Promise<void> {

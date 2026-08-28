@@ -148,6 +148,51 @@ def test_period_tab_reads_stored_data_without_creating_brief(client, make_user, 
     assert db.query(DailyBrief).count() == before
 
 
+def test_day_endpoint_reads_stored_data_without_creating_brief(client, make_user, db_factory):
+    _login(client, make_user)
+    db = db_factory()
+    _seed_brief(db)
+    before = db.query(DailyBrief).count()
+
+    res = client.post("/industry-brief/day/2026-08-10")
+
+    assert res.status_code == 200
+    assert res.json()["periodLabel"] == "2026-08-10"
+    assert db.query(DailyBrief).count() == before
+
+
+def test_day_endpoint_rejects_malformed_date(client, make_user, db_factory):
+    _login(client, make_user)
+    db_factory()
+    res = client.post("/industry-brief/day/not-a-date")
+    assert res.status_code == 422
+
+
+def test_day_endpoint_404s_when_no_brief_exists(client, make_user, db_factory):
+    _login(client, make_user)
+    db_factory()
+    res = client.post("/industry-brief/day/2026-08-10")
+    assert res.status_code == 404
+
+
+def test_day_highlights_placeholder_when_nothing_generated_that_day(client, make_user, db_factory):
+    _login(client, make_user)
+    db_factory()
+    res = client.get("/industry-brief/highlights/day/2026-08-10")
+    assert res.status_code == 200
+    body = res.json()
+    assert body["game"]["hasSignal"] is False
+    assert body["game"]["articleCount"] == 0
+    assert body["ai"]["hasSignal"] is False
+
+
+def test_day_highlights_rejects_malformed_date(client, make_user, db_factory):
+    _login(client, make_user)
+    db_factory()
+    res = client.get("/industry-brief/highlights/day/20260810")
+    assert res.status_code == 422
+
+
 def test_period_ranking_attaches_matching_first_party_announcement(db_factory):
     db = db_factory()
     now = datetime.now(timezone.utc)

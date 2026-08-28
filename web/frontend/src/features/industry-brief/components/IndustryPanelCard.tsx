@@ -41,7 +41,7 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
     return (
       <div className="ib-daily-highlights ib-highlight-section">
         <div className="eyebrow">핵심이슈</div>
-        <div className="ib-key-summary"><p className="headline">지난 24시간 동안 분석할 만큼 충분한 기사가 수집되지 않았습니다.</p></div>
+        <div className="ib-key-summary"><p className="headline">이 날짜엔 핵심 이슈로 뽑을 만큼 기사가 모이지 않았습니다.</p></div>
       </div>
     );
   }

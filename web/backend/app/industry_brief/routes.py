@@ -19,12 +19,12 @@ from ..deps import get_current_user
 from ..models import User
 from .collector import collect_all
 from .models import Article, DailyBrief, EditorialRule, EditorialRuleAudit, Issue, IssueArticle, IssueFeedback
-from .highlights import load_latest_highlights, refresh_and_save_highlights, to_api_dict
+from .highlights import load_highlights_for_date, load_latest_highlights, refresh_and_save_highlights, to_api_dict
 from .synthesis import NO_CROSS_OPINION_TEXT, NO_CROSS_SIGNAL_TEXT, TOP_ISSUES_PER_CATEGORY
 from .landscape import build_issue_detail, build_landscape
 from .comparison import build_market_comparison
 from .refresh import refresh_industry_brief
-from .periods import KST, PERIOD_LABELS, period_window
+from .periods import KST, PERIOD_LABELS, day_window, period_window
 from .policy_intelligence import build_policy_updates
 from .recommendation_policy import event_key, is_promotional, recommendation_score
 from .trust import evaluate_evidence, source_tier, trusted_issue_score
@@ -821,6 +821,45 @@ def get_period_brief(period: str, user: User = Depends(get_current_user), db: Se
     payload = _serialize_brief(db, base, stats_period_start=start, stats_period_end=end)
     payload["periodLabel"] = PERIOD_LABELS[period]
     return payload
+
+
+@router.post("/day/{date}")
+def get_day_brief(date: str, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    """The single-date browser that replaced the 오늘/3일/이번주 tabs —
+    same computation as /period/{period}, just windowed to one KST calendar
+    day instead of a rolling period. `date` is "YYYY-MM-DD"."""
+    try:
+        start, end = day_window(date)
+    except ValueError:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "날짜 형식이 올바르지 않습니다 (YYYY-MM-DD).")
+    base = db.execute(
+        select(DailyBrief).where(~DailyBrief.brief_date.contains(":"))
+        .order_by(DailyBrief.generated_at.desc(), DailyBrief.id.desc())
+    ).scalars().first()
+    if base is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "아직 생성된 브리핑이 없습니다.")
+    payload = _serialize_brief(db, base, stats_period_start=start, stats_period_end=end)
+    payload["periodLabel"] = date
+    return payload
+
+
+@router.get("/highlights/day/{date}")
+def get_day_highlights(date: str, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    """핵심 이슈/추천 기사 for one specific calendar date, from whichever
+    snapshot(s) were generated that day — see DailyHighlightSnapshot's
+    "kept as history, not overwritten" note. Placeholder (hasSignal=false,
+    articleCount=0) when no snapshot was ever generated that day, same
+    shape as a low-signal day so the frontend needs no separate case."""
+    try:
+        start, end = day_window(date)
+    except ValueError:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "날짜 형식이 올바르지 않습니다 (YYYY-MM-DD).")
+    now = datetime.now(timezone.utc)
+    return {
+        "game": to_api_dict(load_highlights_for_date(db, "GAME", start, end), "GAME", now),
+        "ai": to_api_dict(load_highlights_for_date(db, "AI", start, end), "AI", now),
+    }
+
 
 @router.post("/refresh")
 def refresh_latest_brief(user: User = Depends(get_current_user), db: Session = Depends(get_db)):

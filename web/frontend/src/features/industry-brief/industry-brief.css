@@ -849,6 +849,30 @@
   background: #fff;
   box-shadow: none;
 }
+/* Top-level 업계동향 IA — scoped to this feature; the app's own left rail
+   (other systems' top menus) is untouched. Only "오늘" is wired in Phase 1. */
+.ib-submenu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.ib-submenu-item {
+  padding: 9px 14px;
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: #999;
+}
+.ib-submenu-item.is-active {
+  color: #111;
+  border-bottom-color: #111;
+}
+.ib-submenu-item.is-disabled {
+  color: #c4c4c4;
+  cursor: not-allowed;
+}
 .ib-page-header {
   display: flex;
   justify-content: space-between;
@@ -1257,7 +1281,7 @@
   gap: 12px;
   flex-wrap: wrap;
 }
-.ib-period-tabs {
+.ib-date-nav {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1266,24 +1290,56 @@
   border-radius: 10px;
   background: #fff;
 }
-.ib-period-tabs button {
+.ib-date-nav-arrow {
   border: 0;
   border-radius: 6px;
   background: transparent;
   color: #777;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 7px 11px;
+}
+.ib-date-nav-arrow:hover:not(:disabled) { background: #f3f3f3; color: #222; }
+.ib-date-nav-arrow:disabled { cursor: not-allowed; opacity: .35; }
+.ib-date-nav-label {
+  padding: 0 6px;
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+.ib-date-nav-today {
+  margin-left: 2px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #285f9e;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 9px;
+}
+.ib-date-nav-today:hover:not(:disabled) { text-decoration: underline; }
+.ib-week-toggle {
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  font-size: 11.5px;
+  font-weight: 650;
   padding: 8px 14px;
 }
-.ib-period-tabs button:hover:not(:disabled) { background: #f3f3f3; color: #222; }
-.ib-period-tabs button.is-active { background: #111; color: #fff; }
-.ib-period-tabs button:disabled { cursor: wait; opacity: .55; }
+.ib-week-toggle:hover { border-color: #b7b7b7; color: #222; }
+.ib-week-toggle.is-active { border-color: #111; background: #111; color: #fff; }
+.ib-week-trend { margin-top: -6px; }
 .ib-period-row .ib-feedback-manager { width: auto; margin: 0; }
 @media (max-width: 560px) {
   .ib-period-row { flex-direction: column; align-items: stretch; }
-  .ib-period-tabs { justify-content: space-between; gap: 1px; }
-  .ib-period-tabs button { padding: 8px 7px; font-size: 11px; }
+  .ib-date-nav { justify-content: space-between; }
 }
 .ib-signal-tile.is-keyword .topic { line-height: 1.35; min-height: 2.7em; }
 .ib-signal-tile.is-keyword { align-items: flex-start; }

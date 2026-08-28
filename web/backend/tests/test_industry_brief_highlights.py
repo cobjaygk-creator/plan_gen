@@ -7,7 +7,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.industry_brief.highlights import (
     DailyHighlights, _CoreIssue, _HighlightsResult, _RecommendedArticle,
-    generate_daily_highlights, load_latest_highlights, refresh_and_save_highlights, to_api_dict,
+    generate_daily_highlights, load_highlights_for_date, load_latest_highlights,
+    refresh_and_save_highlights, save_highlights, to_api_dict,
 )
 from app.industry_brief.models import Article
 from tools.ai_client import ClassificationError
@@ -131,3 +132,34 @@ def test_to_api_dict_placeholder_for_missing_snapshot():
     now = datetime.now(timezone.utc)
     payload = to_api_dict(None, "AI", now)
     assert payload == {"category": "AI", "hasSignal": False, "articleCount": 0, "generatedAt": now.isoformat(), "coreIssues": [], "recommended": []}
+
+
+def test_load_for_date_finds_snapshot_within_window(db_factory):
+    db = db_factory()
+    generated_at = datetime(2026, 8, 20, 6, 0, tzinfo=timezone.utc)  # 2026-08-20 15:00 KST
+    save_highlights(db, DailyHighlights(category="GAME", has_signal=True, article_count=6, generated_at=generated_at))
+    start = datetime(2026, 8, 20, 0, 0, tzinfo=timezone.utc)
+    end = datetime(2026, 8, 21, 0, 0, tzinfo=timezone.utc)
+    loaded = load_highlights_for_date(db, "GAME", start, end)
+    assert loaded is not None
+    assert loaded.article_count == 6
+
+
+def test_load_for_date_ignores_snapshots_outside_window(db_factory):
+    db = db_factory()
+    generated_at = datetime(2026, 8, 19, 23, 0, tzinfo=timezone.utc)  # a day before the queried window
+    save_highlights(db, DailyHighlights(category="GAME", has_signal=True, article_count=6, generated_at=generated_at))
+    start = datetime(2026, 8, 20, 0, 0, tzinfo=timezone.utc)
+    end = datetime(2026, 8, 21, 0, 0, tzinfo=timezone.utc)
+    assert load_highlights_for_date(db, "GAME", start, end) is None
+
+
+def test_load_for_date_picks_the_latest_snapshot_in_window(db_factory):
+    db = db_factory()
+    start = datetime(2026, 8, 20, 0, 0, tzinfo=timezone.utc)
+    end = datetime(2026, 8, 21, 0, 0, tzinfo=timezone.utc)
+    save_highlights(db, DailyHighlights(category="GAME", has_signal=True, article_count=5, generated_at=datetime(2026, 8, 20, 3, 0, tzinfo=timezone.utc)))
+    save_highlights(db, DailyHighlights(category="GAME", has_signal=True, article_count=9, generated_at=datetime(2026, 8, 20, 20, 0, tzinfo=timezone.utc)))
+    loaded = load_highlights_for_date(db, "GAME", start, end)
+    assert loaded is not None
+    assert loaded.article_count == 9
