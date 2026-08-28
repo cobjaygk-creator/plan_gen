@@ -23,6 +23,7 @@ from .highlights import load_highlights_for_date, load_latest_highlights, refres
 from .synthesis import NO_CROSS_OPINION_TEXT, NO_CROSS_SIGNAL_TEXT, TOP_ISSUES_PER_CATEGORY
 from .landscape import build_issue_detail, build_landscape
 from .comparison import build_market_comparison
+from .tech_radar import build_tech_radar
 from .refresh import refresh_industry_brief
 from .periods import KST, PERIOD_LABELS, day_window, period_window
 from .policy_intelligence import build_policy_updates
@@ -785,6 +786,7 @@ def _serialize_brief(
             for item in game_ranked + ai_ranked
         ],
         "landscape": build_landscape(db),
+        "techRadar": build_tech_radar(db, stats_period_start, stats_period_end),
         "marketComparison": build_market_comparison(db, stats_period_start, stats_period_end),
         "policyUpdates": policy_timeline[:6],
         "policyTimeline": sorted(

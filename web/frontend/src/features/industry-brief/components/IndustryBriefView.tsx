@@ -13,6 +13,7 @@ import { CrossInsightPanel } from "./CrossInsightPanel";
 import { SignalsPanel } from "./SignalsPanel";
 import { ImportantIssuesPanel } from "./ImportantIssuesPanel";
 import { IndustryLandscapePanel } from "./IndustryLandscapePanel";
+import { TechRadarPanel } from "./TechRadarPanel";
 import { MarketComparisonPanel } from "./MarketComparisonPanel";
 import { PolicyUpdatesPanel } from "./PolicyUpdatesPanel";
 import { BriefAnalyticsPanel } from "./BriefAnalyticsPanel";
@@ -146,6 +147,7 @@ export function IndustryBriefView() {
             <IndustryPanelCard title="GAME" panel={brief.game} category="game" periodLabel={formatDateLabel(selectedDate)} highlights={highlights?.game} />
             <IndustryPanelCard title="AI" panel={brief.ai} category="ai" periodLabel={formatDateLabel(selectedDate)} highlights={highlights?.ai} />
           </div>
+          {brief.techRadar && brief.techRadar.length > 0 && <TechRadarPanel items={brief.techRadar} limit={2} />}
           {showWeekTrend && (
             weekLoading || !weekBrief ? (
               <div className="card ib-notice">이번주 추세를 불러오는 중입니다.</div>
@@ -173,6 +175,8 @@ export function IndustryBriefView() {
           {brief.landscape && <IndustryLandscapePanel landscape={brief.landscape} limit={8} />}
         </>
       )}
+
+      {activeScreen === "tech" && <TechRadarPanel items={brief.techRadar ?? []} />}
 
       {activeScreen === "trend" && <SignalsPanel signals={brief.signals} limit={30} />}
     </div>

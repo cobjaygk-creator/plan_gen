@@ -245,6 +245,18 @@ export interface PolicyUpdate {
   selectionReason: string;
   evidenceSentence: string;
 }
+export interface TechRadarArticle {
+  title: string;
+  url: string;
+  source: string;
+}
+export interface TechRadarItem {
+  key: string;
+  label: string;
+  articleCount: number;
+  articles: TechRadarArticle[];
+}
+
 export interface IndustryBrief {
   briefDate: string;
   generatedAt: string;
@@ -263,6 +275,7 @@ export interface IndustryBrief {
   newToday: NewTodayItem[];
   issues: IssueCard[];
   landscape?: IndustryLandscape;
+  techRadar?: TechRadarItem[];
   marketComparison?: MarketComparisonPanel[];
   policyUpdates?: PolicyUpdate[];
   policyTimeline?: PolicyUpdate[];
