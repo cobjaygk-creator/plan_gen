@@ -2798,5 +2798,21 @@
     "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
     "status": "ACTIVE",
     "verified_at": "2026-08-27T10:10:15.927716+00:00"
+  },
+  {
+    "id": "portal:KRAFTON:176",
+    "game_name": "Undusted: Letters from the Past Simulation PC Console More 5minlab",
+    "site_name": "Undusted: Letters from the Past Simulation PC Console More 5minlab",
+    "site_type": "OFFICIAL",
+    "url": "https://5minlab.com/ko/undusted_en",
+    "thumbnail_url": null,
+    "publisher": "KRAFTON",
+    "platform": [],
+    "discovered_at": "2026-08-28T04:06:50.265139+00:00",
+    "published_on": null,
+    "source": "OFFICIAL_PORTAL:KRAFTON",
+    "evidence_url": "https://www.krafton.com/en/games/",
+    "status": "ACTIVE",
+    "verified_at": "2026-08-28T04:06:50.265139+00:00"
   }
 ]

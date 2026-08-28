@@ -6,10 +6,26 @@
     "MICROSITE",
     "PROMOTION"
   ],
-  "total": 175,
-  "last_refreshed_at": "2026-08-28T02:14:24.715641+00:00",
-  "refreshed_site_count": 0,
+  "total": 176,
+  "last_refreshed_at": "2026-08-28T04:06:50.265139+00:00",
+  "refreshed_site_count": 1,
   "sites": [
+    {
+      "id": "portal:KRAFTON:176",
+      "game_name": "Undusted: Letters from the Past Simulation PC Console More 5minlab",
+      "site_name": "Undusted: Letters from the Past Simulation PC Console More 5minlab",
+      "site_type": "OFFICIAL",
+      "url": "https://5minlab.com/ko/undusted_en",
+      "thumbnail_url": null,
+      "publisher": "KRAFTON",
+      "platform": [],
+      "discovered_at": "2026-08-28T04:06:50.265139+00:00",
+      "published_on": null,
+      "source": "OFFICIAL_PORTAL:KRAFTON",
+      "evidence_url": "https://www.krafton.com/en/games/",
+      "status": "ACTIVE",
+      "verified_at": "2026-08-28T04:06:50.265139+00:00"
+    },
     {
       "id": "portal:INVEN_CALENDAR:174",
       "game_name": "루미마스터",
