@@ -54,7 +54,26 @@ class EventCandidate:
 
 
 def _fetch_html(url: str) -> str:
-    request = Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; EventBenchSample/0.1)"})
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; EventBenchSample/0.1)"}
+    if "mabinogi.nexon.com" in url:
+        # mabinogi.nexon.com's WAF has been returning a blanket 403 to every
+        # GitHub Actions run since 2026-08-25 01:47 (confirmed via
+        # data/ci/event_bench/refresh.log — every other Nexon-family source
+        # in the same run succeeds, so this is specific to this one host's
+        # bot check, not an IP-range ban on all of nexon.com). The generic
+        # self-identifying UA above is exactly what a WAF keys on; a real
+        # browser UA + the headers a browser actually sends is the same fix
+        # already used for 삼성전자 뉴스룸 in collector.py.
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+            ),
+            "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Referer": "https://mabinogi.nexon.com/",
+        }
+    request = Request(url, headers=headers)
     with urlopen(request, timeout=20) as response:  # noqa: S310 - explicit verified official URLs
         # Mabinogi is EUC-KR; the other verified official lists deliver UTF-8
         # despite inconsistent legacy headers.
