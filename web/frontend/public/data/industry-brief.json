@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T07:05:36.826608+00:00",
+  "generated_at": "2026-08-28T08:14:58.319896+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 255,
+        "collected": 256,
         "analyzed": 0,
-        "pending": 255,
+        "pending": 256,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -347,9 +347,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1283,
-        "analyzed": 3,
-        "pending": 1280,
+        "collected": 1273,
+        "analyzed": 0,
+        "pending": 1273,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -584,7 +584,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 50,
+          "articleCount": 46,
           "articles": [
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
@@ -883,9 +883,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1582,
+        "collected": 1583,
         "analyzed": 69,
-        "pending": 1513,
+        "pending": 1514,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
