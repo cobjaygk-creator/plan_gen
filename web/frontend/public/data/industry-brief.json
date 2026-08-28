@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-28T04:06:52.912166+00:00",
+  "generated_at": "2026-08-28T07:05:36.826608+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T04:03:16.377783+00:00",
+      "generatedAt": "2026-08-28T07:02:14.869791+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 238,
+        "collected": 255,
         "analyzed": 0,
-        "pending": 238,
+        "pending": 255,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -52,7 +52,23 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [],
+        "closedObservations": [
+          {
+            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          }
+        ],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -77,7 +93,23 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [],
+        "closedObservations": [
+          {
+            "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "이파피루스, 'AI정부 혁신 콘퍼런스'서 공공 맞춤형 문서 AI 솔루션 공개",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          }
+        ],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -180,8 +212,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 20,
+          "articleCount": 23,
           "articles": [
+            {
+              "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
+              "source": "AI타임스"
+            },
+            {
+              "title": "머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214545",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
+              "source": "AI타임스"
+            },
             {
               "title": "AI 반도체 훈풍에 파운드리 시장 29% 성장…1위는 TSMC",
               "url": "https://n.news.naver.com/mnews/article/001/0016276354",
@@ -191,29 +238,19 @@
               "title": "SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214537",
               "source": "AI타임스"
-            },
-            {
-              "title": "SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214527",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[AI 클로즈업] 래블업, 코스닥 상장 도전… AI 인프라 SW 대표주 될까",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239296",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "곽노정 \"메모리 공급 부족 2030년까지⋯美 추가 투자도 열려 있어\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053242",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 10,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
               "url": "https://n.news.naver.com/mnews/article/138/0002239346",
@@ -233,19 +270,19 @@
               "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
               "url": "https://n.news.naver.com/mnews/article/138/0002239304",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "스노우플레이크, 기업 AX 전략 제시…“데이터부터 에이전트까지 통합 관리”",
-              "url": "https://www.etnews.com/20260827000266",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
               "url": "https://www.etnews.com/20260828000104",
@@ -266,8 +303,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
@@ -301,19 +343,19 @@
     },
     "3d": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T04:03:16.377783+00:00",
+      "generatedAt": "2026-08-28T07:02:14.869791+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1303,
-        "analyzed": 4,
-        "pending": 1299,
+        "collected": 1283,
+        "analyzed": 3,
+        "pending": 1280,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 1,
-        "issues": 1,
+        "relevant": 0,
+        "issues": 0,
         "verifiedIssues": 0,
-        "singleSourceIssues": 1
+        "singleSourceIssues": 0
       },
       "analytics": {
         "interest": {
@@ -327,32 +369,10 @@
             "08.26",
             "08.27"
           ],
-          "series": [
-            {
-              "name": "로봇",
-              "originalTitle": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-              "category": "AI",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0
-              ]
-            }
-          ],
+          "series": [],
           "bucket": "일간"
         },
-        "topicShare": [
-          {
-            "topic": "기술",
-            "game": 0,
-            "ai": 1
-          }
-        ]
+        "topicShare": []
       },
       "game": {
         "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
@@ -372,7 +392,23 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [],
+        "closedObservations": [
+          {
+            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          }
+        ],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -387,32 +423,33 @@
         "keySummaryDetails": [
           {
             "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 1,
+            "articleCount": 0,
             "independentSources": 0,
             "officialCount": 0,
             "activeDays": 0,
-            "selectionReason": "관찰 후보 1건 · 공식·주요 매체 근거 보강 필요",
+            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
             "confidence": "WEAK"
           }
         ],
-        "observations": [
+        "observations": [],
+        "promotions": [],
+        "closedObservations": [
           {
-            "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-            "description": "중국 베이징에서 열린 로봇 관련 행사에서 휴머노이드 로봇의 체육 능력이 크게 발전했으며, 로봇의 인공지능 수준은 'GPT-2'에 해당한다고 보도되었다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "AI타임스",
-                "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-                "publishedAgo": "2일 전",
-                "url": "https://www.aitimes.com/news/articleView.html?idxno=214278"
-              }
-            ]
+            "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "이파피루스, 'AI정부 혁신 콘퍼런스'서 공공 맞춤형 문서 AI 솔루션 공개",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
           }
         ],
-        "promotions": [],
-        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -488,65 +525,9 @@
           "publishedDate": "2026.08.25"
         }
       ],
-      "signals": [
-        {
-          "topic": "로봇",
-          "direction": "up",
-          "weight": 40,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "기술",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "AI",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "중국 베이징에서 열린 로봇 관련 행사에서 휴머노이드 로봇의 체육 능력이 크게 발전했으며, 로봇의 인공지능 수준은 'GPT-2'에 해당한다고 보도되었다.",
-          "evidence": [
-            {
-              "outlet": "AI타임스",
-              "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214278"
-            }
-          ]
-        }
-      ],
+      "signals": [],
       "newToday": [],
-      "issues": [
-        {
-          "id": "issue-54",
-          "category": "AI",
-          "importance": "보통",
-          "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-          "summary": "중국 베이징에서 열린 로봇 관련 행사에서 휴머노이드 로봇의 체육 능력이 크게 발전했으며, 로봇의 인공지능 수준은 'GPT-2'에 해당한다고 보도되었다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "DECLINING",
-          "relatedBriefing": "AI INDUSTRY / [8월24일] 중국 로봇, 1년 만에 100",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "AI타임스",
-              "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-              "publishedAgo": "2일 전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214278"
-            }
-          ]
-        }
-      ],
+      "issues": [],
       "landscape": {
         "referenceArticleCount": 0,
         "domains": [
@@ -571,8 +552,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 68,
+          "articleCount": 67,
           "articles": [
+            {
+              "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
+              "source": "AI타임스"
+            },
+            {
+              "title": "머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214545",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
+              "source": "AI타임스"
+            },
             {
               "title": "AI 반도체 훈풍에 파운드리 시장 29% 성장…1위는 TSMC",
               "url": "https://n.news.naver.com/mnews/article/001/0016276354",
@@ -582,29 +578,19 @@
               "title": "SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214537",
               "source": "AI타임스"
-            },
-            {
-              "title": "SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214527",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[AI 클로즈업] 래블업, 코스닥 상장 도전… AI 인프라 SW 대표주 될까",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239296",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "곽노정 \"메모리 공급 부족 2030년까지⋯美 추가 투자도 열려 있어\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053242",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 60,
+          "articleCount": 50,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
               "url": "https://n.news.naver.com/mnews/article/138/0002239346",
@@ -624,11 +610,6 @@
               "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
               "url": "https://n.news.naver.com/mnews/article/138/0002239304",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "스노우플레이크, 기업 AX 전략 제시…“데이터부터 에이전트까지 통합 관리”",
-              "url": "https://www.etnews.com/20260827000266",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -637,6 +618,11 @@
           "label": "신규 모델",
           "articleCount": 23,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
               "url": "https://www.etnews.com/20260828000104",
@@ -656,19 +642,19 @@
               "title": "“최신 AI, 서울에서 돌려주세요”…금융권, ‘서울 클로드’ 기다린다",
               "url": "https://n.news.naver.com/mnews/article/003/0014153342",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "국적 공개 않고 美서 돌풍 일으킨 ‘옥스 알파’...알고보니 중국 AI",
-              "url": "https://n.news.naver.com/mnews/article/023/0003995282",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
@@ -688,11 +674,6 @@
               "title": "울산 AI디지털배움터, 바이브코딩에서 클로드까지 '실무형 특강' 순항",
               "url": "https://www.etnews.com/20260826000332",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…\"회사 자산 구축·비용 절감\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214422",
-              "source": "AI타임스"
             }
           ]
         },
@@ -722,22 +703,9 @@
         {
           "category": "AI",
           "label": "AI",
-          "koreaArticleCount": 1,
+          "koreaArticleCount": 0,
           "globalArticleCount": 0,
-          "koreaFocus": [
-            {
-              "topic": "로봇",
-              "count": 1
-            },
-            {
-              "topic": "휴머노이드",
-              "count": 1
-            },
-            {
-              "topic": "AI",
-              "count": 1
-            }
-          ],
+          "koreaFocus": [],
           "globalFocus": [],
           "sharedTopics": []
         }
@@ -911,13 +879,13 @@
     },
     "week": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T04:03:16.377783+00:00",
+      "generatedAt": "2026-08-28T07:02:14.869791+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1565,
+        "collected": 1582,
         "analyzed": 69,
-        "pending": 1496,
+        "pending": 1513,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1105,7 +1073,23 @@
           }
         ],
         "promotions": [],
-        "closedObservations": [],
+        "closedObservations": [
+          {
+            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          }
+        ],
         "briefing": [
           "크래프톤의 신작 '에이지 트위스터'가 게임스컴 어워드 2026에서 Most Wholesome 부문 후보로 선정되었고, 행사에서는 5종의 신작을 공개합니다.",
           "넥슨은 ‘서든어택’의 21주년 기념 쇼케이스에서 시즌4 ‘문라이즈’의 개발 계획을 공개했다."
@@ -1234,7 +1218,23 @@
           }
         ],
         "promotions": [],
-        "closedObservations": [],
+        "closedObservations": [
+          {
+            "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "이파피루스, 'AI정부 혁신 콘퍼런스'서 공공 맞춤형 문서 AI 솔루션 공개",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          },
+          {
+            "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
+            "closedAt": "2026-08-28T07:02:14.814460+00:00",
+            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
+          }
+        ],
         "briefing": [
           "알리바바가 AI 경쟁력을 강화하기 위해 약 14조원의 대규모 자금을 조달하기로 했으며, 이는 홍콩 증시에서 사상 최대 규모의 주식 매각으로 기록될 예정이다.",
           "NVIDIA는 에이전트 시스템을 위한 빠른 토큰 생성을 제공하는 Vera Rubin NVL72를 확장하여 AI 추론의 새로운 시대를 정의하고 있다."
@@ -2082,8 +2082,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 208,
+          "articleCount": 209,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
               "url": "https://www.etnews.com/20260828000104",
@@ -2103,19 +2108,19 @@
               "title": "“최신 AI, 서울에서 돌려주세요”…금융권, ‘서울 클로드’ 기다린다",
               "url": "https://n.news.naver.com/mnews/article/003/0014153342",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "국적 공개 않고 美서 돌풍 일으킨 ‘옥스 알파’...알고보니 중국 AI",
-              "url": "https://n.news.naver.com/mnews/article/023/0003995282",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 199,
+          "articleCount": 200,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
               "url": "https://n.news.naver.com/mnews/article/138/0002239346",
@@ -2135,19 +2140,29 @@
               "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
               "url": "https://n.news.naver.com/mnews/article/138/0002239304",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "스노우플레이크, 기업 AX 전략 제시…“데이터부터 에이전트까지 통합 관리”",
-              "url": "https://www.etnews.com/20260827000266",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 105,
+          "articleCount": 108,
           "articles": [
+            {
+              "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
+              "source": "AI타임스"
+            },
+            {
+              "title": "머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214545",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
+              "source": "AI타임스"
+            },
             {
               "title": "AI 반도체 훈풍에 파운드리 시장 29% 성장…1위는 TSMC",
               "url": "https://n.news.naver.com/mnews/article/001/0016276354",
@@ -2157,21 +2172,6 @@
               "title": "SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214537",
               "source": "AI타임스"
-            },
-            {
-              "title": "SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214527",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[AI 클로즈업] 래블업, 코스닥 상장 도전… AI 인프라 SW 대표주 될까",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239296",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "곽노정 \"메모리 공급 부족 2030년까지⋯美 추가 투자도 열려 있어\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053242",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
@@ -2210,8 +2210,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 16,
+          "articleCount": 17,
           "articles": [
+            {
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
             {
               "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
@@ -2231,11 +2236,6 @@
               "title": "울산 AI디지털배움터, 바이브코딩에서 클로드까지 '실무형 특강' 순항",
               "url": "https://www.etnews.com/20260826000332",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…\"회사 자산 구축·비용 절감\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214422",
-              "source": "AI타임스"
             }
           ]
         }
@@ -2311,12 +2311,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
