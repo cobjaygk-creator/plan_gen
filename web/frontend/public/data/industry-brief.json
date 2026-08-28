@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T11:40:55.245019+00:00",
+  "generated_at": "2026-08-28T20:38:34.111075+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 288,
+        "collected": 23,
         "analyzed": 0,
-        "pending": 288,
+        "pending": 23,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,14 +20,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.20",
             "08.21",
             "08.22",
             "08.23",
             "08.24",
             "08.25",
             "08.26",
-            "08.27"
+            "08.27",
+            "08.28"
           ],
           "series": [],
           "bucket": "일간"
@@ -52,23 +52,7 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -93,23 +77,7 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "이파피루스, 'AI정부 혁신 콘퍼런스'서 공공 맞춤형 문서 AI 솔루션 공개",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -208,143 +176,7 @@
           }
         ]
       },
-      "techRadar": [
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 25,
-          "articles": [
-            {
-              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 안드로이드 앱 메모리 절감 의무화…미준수 시 노출 제한",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214558",
-              "source": "AI타임스"
-            },
-            {
-              "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
-              "source": "AI타임스"
-            },
-            {
-              "title": "머스크·알트먼·젠슨 황 집결...미국, G20서 AI '자율 규제' 카드 꺼낸다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214545",
-              "source": "AI타임스"
-            },
-            {
-              "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 14,
-          "articles": [
-            {
-              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
-              "source": "AI타임스"
-            },
-            {
-              "title": "딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214578",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239346",
-              "source": "NAVER · 디지털데일리"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 7,
-          "articles": [
-            {
-              "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
-              "url": "https://www.etnews.com/20260828000104",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
-              "url": "https://www.etnews.com/20260828000246",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            }
-          ]
-        },
-        {
-          "key": "media_gen",
-          "label": "이미지 · 영상 생성",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
-              "source": "AI타임스"
-            }
-          ]
-        }
-      ],
+      "techRadar": [],
       "marketComparison": [
         {
           "category": "GAME",
@@ -374,9 +206,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1283,
+        "collected": 1175,
         "analyzed": 0,
-        "pending": 1283,
+        "pending": 1175,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -387,14 +219,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.20",
             "08.21",
             "08.22",
             "08.23",
             "08.24",
             "08.25",
             "08.26",
-            "08.27"
+            "08.27",
+            "08.28"
           ],
           "series": [],
           "bucket": "일간"
@@ -579,7 +411,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 69,
+          "articleCount": 64,
           "articles": [
             {
               "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
@@ -611,7 +443,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 49,
+          "articleCount": 42,
           "articles": [
             {
               "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
@@ -643,7 +475,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 26,
+          "articleCount": 24,
           "articles": [
             {
               "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
@@ -675,7 +507,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 10,
+          "articleCount": 9,
           "articles": [
             {
               "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
@@ -915,9 +747,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1615,
+        "collected": 1649,
         "analyzed": 69,
-        "pending": 1546,
+        "pending": 1580,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -928,14 +760,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.20",
             "08.21",
             "08.22",
             "08.23",
             "08.24",
             "08.25",
             "08.26",
-            "08.27"
+            "08.27",
+            "08.28"
           ],
           "series": [
             {
@@ -1044,9 +876,9 @@
               "evidence": 35.0,
               "coverage": 15.8,
               "importance": 12.0,
-              "persistence": 2.4,
+              "persistence": 2.0,
               "momentum": 8.0,
-              "editorialAdjustment": -9.2,
+              "editorialAdjustment": -8.8,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
               "total": 64.0
@@ -1065,12 +897,12 @@
               "evidence": 27.0,
               "coverage": 10.0,
               "importance": 12.0,
-              "persistence": 2.4,
+              "persistence": 2.0,
               "momentum": 6.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 57.4
+              "total": 57.0
             }
           }
         ],
@@ -1162,7 +994,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "3일 전",
+                "publishedAgo": "4일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -1189,12 +1021,12 @@
               "evidence": 35.0,
               "coverage": 15.8,
               "importance": 6.0,
-              "persistence": 2.4,
+              "persistence": 2.0,
               "momentum": 8.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 67.2
+              "total": 66.8
             }
           },
           {
@@ -1210,12 +1042,12 @@
               "evidence": 27.0,
               "coverage": 10.0,
               "importance": 20.0,
-              "persistence": 2.4,
+              "persistence": 2.0,
               "momentum": 6.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 65.4
+              "total": 65.0
             }
           }
         ],
@@ -1281,7 +1113,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "3일 전",
+                "publishedAgo": "4일 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -1294,7 +1126,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "3일 전",
+                "publishedAgo": "4일 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -1307,7 +1139,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "3일 전",
+                "publishedAgo": "4일 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -1737,7 +1569,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "3일 전",
+              "publishedAgo": "4일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -1867,7 +1699,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "3일 전",
+              "publishedAgo": "4일 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -1898,7 +1730,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "3일 전",
+              "publishedAgo": "4일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -1929,7 +1761,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "3일 전",
+              "publishedAgo": "4일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -1960,7 +1792,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "3일 전",
+              "publishedAgo": "4일 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -1991,7 +1823,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "3일 전",
+              "publishedAgo": "4일 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
@@ -2343,12 +2175,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
