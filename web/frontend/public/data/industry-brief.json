@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-28T01:56:32.462451+00:00",
+  "generated_at": "2026-08-28T02:14:25.731546+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T01:52:05.544042+00:00",
+      "generatedAt": "2026-08-28T02:11:47.075032+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 193,
+        "collected": 204,
         "analyzed": 0,
-        "pending": 193,
+        "pending": 204,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -176,6 +176,106 @@
           }
         ]
       },
+      "techRadar": [
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 18,
+          "articles": [
+            {
+              "title": "SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214527",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[AI 클로즈업] 래블업, 코스닥 상장 도전… AI 인프라 SW 대표주 될까",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239296",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "곽노정 \"메모리 공급 부족 2030년까지⋯美 추가 투자도 열려 있어\"",
+              "url": "https://n.news.naver.com/mnews/article/031/0001053242",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
+              "url": "https://www.etnews.com/20260828000039",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 하루 만에 시총 610조원 증가…역대 두 번째 기록",
+              "url": "https://n.news.naver.com/mnews/article/009/0005726982",
+              "source": "NAVER · 매일경제"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 9,
+          "articles": [
+            {
+              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
+              "url": "https://www.etnews.com/20260828000104",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
+              "url": "https://www.etnews.com/20260828000039",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239304",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "스노우플레이크, 기업 AX 전략 제시…“데이터부터 에이전트까지 통합 관리”",
+              "url": "https://www.etnews.com/20260827000266",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "How OpenAI let a mob of LLM agents game a test and ransack Hugging Face",
+              "url": "https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/",
+              "source": "Ars Technica"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
+              "url": "https://www.etnews.com/20260828000104",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "유니트리 주가 급락…휴머노이드 병목은 'AI 두뇌'",
+              "url": "https://www.etnews.com/20260827000099",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[8월27일] 'SaaS 종말론' 6개월 만에 세일즈포스가 '클로드' 안으로 들어간 이유",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214454",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -201,13 +301,13 @@
     },
     "3d": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T01:52:05.544042+00:00",
+      "generatedAt": "2026-08-28T02:11:47.075032+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1275,
+        "collected": 1281,
         "analyzed": 4,
-        "pending": 1271,
+        "pending": 1277,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 1,
@@ -467,6 +567,148 @@
           }
         ]
       },
+      "techRadar": [
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 66,
+          "articles": [
+            {
+              "title": "SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214527",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[AI 클로즈업] 래블업, 코스닥 상장 도전… AI 인프라 SW 대표주 될까",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239296",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "곽노정 \"메모리 공급 부족 2030년까지⋯美 추가 투자도 열려 있어\"",
+              "url": "https://n.news.naver.com/mnews/article/031/0001053242",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
+              "url": "https://www.etnews.com/20260828000039",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 하루 만에 시총 610조원 증가…역대 두 번째 기록",
+              "url": "https://n.news.naver.com/mnews/article/009/0005726982",
+              "source": "NAVER · 매일경제"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 59,
+          "articles": [
+            {
+              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
+              "url": "https://www.etnews.com/20260828000104",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
+              "url": "https://www.etnews.com/20260828000039",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239304",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "스노우플레이크, 기업 AX 전략 제시…“데이터부터 에이전트까지 통합 관리”",
+              "url": "https://www.etnews.com/20260827000266",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "How OpenAI let a mob of LLM agents game a test and ransack Hugging Face",
+              "url": "https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/",
+              "source": "Ars Technica"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 23,
+          "articles": [
+            {
+              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
+              "url": "https://www.etnews.com/20260828000104",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "유니트리 주가 급락…휴머노이드 병목은 'AI 두뇌'",
+              "url": "https://www.etnews.com/20260827000099",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[8월27일] 'SaaS 종말론' 6개월 만에 세일즈포스가 '클로드' 안으로 들어간 이유",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214454",
+              "source": "AI타임스"
+            },
+            {
+              "title": "“최신 AI, 서울에서 돌려주세요”…금융권, ‘서울 클로드’ 기다린다",
+              "url": "https://n.news.naver.com/mnews/article/003/0014153342",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "국적 공개 않고 美서 돌풍 일으킨 ‘옥스 알파’...알고보니 중국 AI",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995282",
+              "source": "NAVER · 조선일보"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 9,
+          "articles": [
+            {
+              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[8월26일] 오픈AI가 '챗GPT'를 바꾸고 있다…티보가 밝힌 다음 단계는 ‘일하는 AI’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214377",
+              "source": "AI타임스"
+            },
+            {
+              "title": "울산 AI디지털배움터, 바이브코딩에서 클로드까지 '실무형 특강' 순항",
+              "url": "https://www.etnews.com/20260826000332",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…\"회사 자산 구축·비용 절감\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214422",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "media_gen",
+          "label": "이미지 · 영상 생성",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214404",
+              "source": "AI타임스"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -669,13 +911,13 @@
     },
     "week": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T01:52:05.544042+00:00",
+      "generatedAt": "2026-08-28T02:11:47.075032+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1520,
+        "collected": 1531,
         "analyzed": 69,
-        "pending": 1451,
+        "pending": 1462,
         "completionRate": 5,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1836,6 +2078,168 @@
           }
         ]
       },
+      "techRadar": [
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 208,
+          "articles": [
+            {
+              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
+              "url": "https://www.etnews.com/20260828000104",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "유니트리 주가 급락…휴머노이드 병목은 'AI 두뇌'",
+              "url": "https://www.etnews.com/20260827000099",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[8월27일] 'SaaS 종말론' 6개월 만에 세일즈포스가 '클로드' 안으로 들어간 이유",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214454",
+              "source": "AI타임스"
+            },
+            {
+              "title": "“최신 AI, 서울에서 돌려주세요”…금융권, ‘서울 클로드’ 기다린다",
+              "url": "https://n.news.naver.com/mnews/article/003/0014153342",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "국적 공개 않고 美서 돌풍 일으킨 ‘옥스 알파’...알고보니 중국 AI",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995282",
+              "source": "NAVER · 조선일보"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 198,
+          "articles": [
+            {
+              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
+              "url": "https://www.etnews.com/20260828000104",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
+              "url": "https://www.etnews.com/20260828000039",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239304",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "스노우플레이크, 기업 AX 전략 제시…“데이터부터 에이전트까지 통합 관리”",
+              "url": "https://www.etnews.com/20260827000266",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "How OpenAI let a mob of LLM agents game a test and ransack Hugging Face",
+              "url": "https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/",
+              "source": "Ars Technica"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 103,
+          "articles": [
+            {
+              "title": "SKT·카카오·KT, 모두의 AI 사업자 선정…“연내 전 국민 서비스 개시”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214527",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[AI 클로즈업] 래블업, 코스닥 상장 도전… AI 인프라 SW 대표주 될까",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239296",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "곽노정 \"메모리 공급 부족 2030년까지⋯美 추가 투자도 열려 있어\"",
+              "url": "https://n.news.naver.com/mnews/article/031/0001053242",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
+              "url": "https://www.etnews.com/20260828000039",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 하루 만에 시총 610조원 증가…역대 두 번째 기록",
+              "url": "https://n.news.naver.com/mnews/article/009/0005726982",
+              "source": "NAVER · 매일경제"
+            }
+          ]
+        },
+        {
+          "key": "media_gen",
+          "label": "이미지 · 영상 생성",
+          "articleCount": 18,
+          "articles": [
+            {
+              "title": "'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214404",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"누끼 제거는 옛말\"…오픈AI, API로 '배경 없는 투명 이미지' 직접 생성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214301",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Video generation models as world simulators",
+              "url": "https://openai.com/index/video-generation-models-as-world-simulators",
+              "source": "OpenAI"
+            },
+            {
+              "title": "Sora first impressions",
+              "url": "https://openai.com/index/sora-first-impressions",
+              "source": "OpenAI"
+            },
+            {
+              "title": "Animator Lyndon Barrois creates new worlds with Sora",
+              "url": "https://openai.com/index/sora-lyndon-barrois",
+              "source": "OpenAI"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 16,
+          "articles": [
+            {
+              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[8월26일] 오픈AI가 '챗GPT'를 바꾸고 있다…티보가 밝힌 다음 단계는 ‘일하는 AI’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214377",
+              "source": "AI타임스"
+            },
+            {
+              "title": "울산 AI디지털배움터, 바이브코딩에서 클로드까지 '실무형 특강' 순항",
+              "url": "https://www.etnews.com/20260826000332",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "버즈니, 기업 코딩 플랫폼 ‘세이코드’ 출시…\"회사 자산 구축·비용 절감\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214422",
+              "source": "AI타임스"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -1907,12 +2311,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
