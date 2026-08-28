@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-28T08:14:58.319896+00:00",
+  "generated_at": "2026-08-28T11:40:55.245019+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T07:02:14.869791+00:00",
+      "generatedAt": "2026-08-28T11:36:10.724731+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 256,
+        "collected": 288,
         "analyzed": 0,
-        "pending": 256,
+        "pending": 288,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -212,8 +212,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 23,
+          "articleCount": 25,
           "articles": [
+            {
+              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 안드로이드 앱 메모리 절감 의무화…미준수 시 노출 제한",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214558",
+              "source": "AI타임스"
+            },
             {
               "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
@@ -228,24 +238,29 @@
               "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
               "source": "AI타임스"
-            },
-            {
-              "title": "AI 반도체 훈풍에 파운드리 시장 29% 성장…1위는 TSMC",
-              "url": "https://n.news.naver.com/mnews/article/001/0016276354",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214537",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 11,
+          "articleCount": 14,
           "articles": [
+            {
+              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "source": "AI타임스"
+            },
+            {
+              "title": "딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214578",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -255,29 +270,29 @@
               "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
               "url": "https://n.news.naver.com/mnews/article/138/0002239346",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
-              "url": "https://www.etnews.com/20260828000104",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
-              "url": "https://www.etnews.com/20260828000039",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239304",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 4,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -287,24 +302,24 @@
               "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
               "url": "https://www.etnews.com/20260828000104",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "유니트리 주가 급락…휴머노이드 병목은 'AI 두뇌'",
-              "url": "https://www.etnews.com/20260827000099",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[8월27일] 'SaaS 종말론' 6개월 만에 세일즈포스가 '클로드' 안으로 들어간 이유",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214454",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 2,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
+              "url": "https://www.etnews.com/20260828000246",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -314,6 +329,18 @@
               "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
               "source": "대한민국 정책브리핑"
+            }
+          ]
+        },
+        {
+          "key": "media_gen",
+          "label": "이미지 · 영상 생성",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
+              "source": "AI타임스"
             }
           ]
         }
@@ -343,13 +370,13 @@
     },
     "3d": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T07:02:14.869791+00:00",
+      "generatedAt": "2026-08-28T11:36:10.724731+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1273,
+        "collected": 1283,
         "analyzed": 0,
-        "pending": 1273,
+        "pending": 1283,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -552,8 +579,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 67,
+          "articleCount": 69,
           "articles": [
+            {
+              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 안드로이드 앱 메모리 절감 의무화…미준수 시 노출 제한",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214558",
+              "source": "AI타임스"
+            },
             {
               "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
@@ -568,24 +605,29 @@
               "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
               "source": "AI타임스"
-            },
-            {
-              "title": "AI 반도체 훈풍에 파운드리 시장 29% 성장…1위는 TSMC",
-              "url": "https://n.news.naver.com/mnews/article/001/0016276354",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214537",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 46,
+          "articleCount": 49,
           "articles": [
+            {
+              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "source": "AI타임스"
+            },
+            {
+              "title": "딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214578",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -595,29 +637,29 @@
               "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
               "url": "https://n.news.naver.com/mnews/article/138/0002239346",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
-              "url": "https://www.etnews.com/20260828000104",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
-              "url": "https://www.etnews.com/20260828000039",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239304",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 23,
+          "articleCount": 26,
           "articles": [
+            {
+              "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -627,29 +669,24 @@
               "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
               "url": "https://www.etnews.com/20260828000104",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "유니트리 주가 급락…휴머노이드 병목은 'AI 두뇌'",
-              "url": "https://www.etnews.com/20260827000099",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[8월27일] 'SaaS 종말론' 6개월 만에 세일즈포스가 '클로드' 안으로 들어간 이유",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214454",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“최신 AI, 서울에서 돌려주세요”…금융권, ‘서울 클로드’ 기다린다",
-              "url": "https://n.news.naver.com/mnews/article/003/0014153342",
-              "source": "NAVER · 뉴시스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
+              "url": "https://www.etnews.com/20260828000246",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -664,24 +701,19 @@
               "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
               "source": "AI타임스"
-            },
-            {
-              "title": "[8월26일] 오픈AI가 '챗GPT'를 바꾸고 있다…티보가 밝힌 다음 단계는 ‘일하는 AI’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214377",
-              "source": "AI타임스"
-            },
-            {
-              "title": "울산 AI디지털배움터, 바이브코딩에서 클로드까지 '실무형 특강' 순항",
-              "url": "https://www.etnews.com/20260826000332",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
+              "source": "AI타임스"
+            },
             {
               "title": "'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214404",
@@ -879,13 +911,13 @@
     },
     "week": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T07:02:14.869791+00:00",
+      "generatedAt": "2026-08-28T11:36:10.724731+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1583,
+        "collected": 1615,
         "analyzed": 69,
-        "pending": 1514,
+        "pending": 1546,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2082,8 +2114,23 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 209,
+          "articleCount": 212,
           "articles": [
+            {
+              "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -2093,29 +2140,29 @@
               "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
               "url": "https://www.etnews.com/20260828000104",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "유니트리 주가 급락…휴머노이드 병목은 'AI 두뇌'",
-              "url": "https://www.etnews.com/20260827000099",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[8월27일] 'SaaS 종말론' 6개월 만에 세일즈포스가 '클로드' 안으로 들어간 이유",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214454",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“최신 AI, 서울에서 돌려주세요”…금융권, ‘서울 클로드’ 기다린다",
-              "url": "https://n.news.naver.com/mnews/article/003/0014153342",
-              "source": "NAVER · 뉴시스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 200,
+          "articleCount": 203,
           "articles": [
+            {
+              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "source": "AI타임스"
+            },
+            {
+              "title": "딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214578",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
+              "source": "AI타임스"
+            },
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
@@ -2125,29 +2172,24 @@
               "title": "'모두의 AI' 최종 3사…SKT·KT·카카오, 행동형 AI 경쟁(종합)",
               "url": "https://n.news.naver.com/mnews/article/138/0002239346",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "세일즈포스·앤트로픽, '클로드포스' 발표…파트너십 강화",
-              "url": "https://www.etnews.com/20260828000104",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "모두의 AI, SK텔레콤·카카오·KT 선정…2대 1 경쟁 돌파",
-              "url": "https://www.etnews.com/20260828000039",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[AI Innovation 2026①] 진단만 하던 AI는 옛말…병원의 개혁, ‘의료 AX’",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239304",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 108,
+          "articleCount": 110,
           "articles": [
+            {
+              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 안드로이드 앱 메모리 절감 의무화…미준수 시 노출 제한",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214558",
+              "source": "AI타임스"
+            },
             {
               "title": "엔비디아, 직원 주도 정치자금 모금기구 설립...정치권 영향력 확대",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214541",
@@ -2162,15 +2204,37 @@
               "title": "미국, 반도체 2차 관세 검토…노트북·서버 등 완제품까지 포함하나",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214554",
               "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 19,
+          "articles": [
+            {
+              "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
+              "url": "https://www.etnews.com/20260828000246",
+              "source": "전자신문 AI"
             },
             {
-              "title": "AI 반도체 훈풍에 파운드리 시장 29% 성장…1위는 TSMC",
-              "url": "https://n.news.naver.com/mnews/article/001/0016276354",
-              "source": "NAVER · 연합뉴스"
+              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
+              "source": "AI타임스"
             },
             {
-              "title": "SK하이닉스, 인디애나 공장 착공...2029년 양산·키옥시아 협력 확대 모색",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214537",
+              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
+              "source": "AI타임스"
+            },
+            {
+              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
               "source": "AI타임스"
             }
           ]
@@ -2178,8 +2242,13 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 18,
+          "articleCount": 19,
           "articles": [
+            {
+              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
+              "source": "AI타임스"
+            },
             {
               "title": "'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214404",
@@ -2199,43 +2268,6 @@
               "title": "Sora first impressions",
               "url": "https://openai.com/index/sora-first-impressions",
               "source": "OpenAI"
-            },
-            {
-              "title": "Animator Lyndon Barrois creates new worlds with Sora",
-              "url": "https://openai.com/index/sora-lyndon-barrois",
-              "source": "OpenAI"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 17,
-          "articles": [
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[8월26일] 오픈AI가 '챗GPT'를 바꾸고 있다…티보가 밝힌 다음 단계는 ‘일하는 AI’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214377",
-              "source": "AI타임스"
-            },
-            {
-              "title": "울산 AI디지털배움터, 바이브코딩에서 클로드까지 '실무형 특강' 순항",
-              "url": "https://www.etnews.com/20260826000332",
-              "source": "전자신문 AI"
             }
           ]
         }
