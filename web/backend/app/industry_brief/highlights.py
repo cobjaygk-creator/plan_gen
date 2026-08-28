@@ -64,7 +64,30 @@ SYSTEM_PROMPT = """\
 - 기사 목록에 실제로 없는 내용은 만들어내지 마라. article_indices와 index는
   반드시 제공된 목록의 index 값이어야 한다.
 - 오늘 자료가 너무 적거나(예: 10건 미만) 의미 있는 이슈를 뽑기 어려우면
-  has_signal을 false로 설정하고 core_issues/recommended는 빈 배열로 둬라."""
+  has_signal을 false로 설정하고 core_issues/recommended는 빈 배열로 둬라.
+{category_priority}"""
+
+# 실제 8개월치 공유 이력(461건)을 훑어 확인한 카테고리별 우선순위 — 단신 발표보다
+# "왜 중요한가" 프레이밍이 있는 기사가 실제로 선택되어 온 패턴, AI 쪽은 게임과
+# 무관한 순수 LLM/인프라 뉴스도 꾸준히 선택되어 온 패턴을 반영한다.
+_CATEGORY_PRIORITY = {
+    "GAME": (
+        "GAME 카테고리 추가 기준: 이벤트 참가·신작 출시 발표 자체보다, 그 사건이 "
+        "산업적으로 왜 중요한지를 짚은 기사를 우선한다 (예: 단순 '게임스컴 참가' "
+        "보다 '게임스컴이 특별한 이유'나 실적·글로벌 진출·정책 변화 관점을 담은 "
+        "기사). 반복 축: 글로벌·중국 시장 진출, 정책/규제 변화, 게임사 실적."
+    ),
+    "AI": (
+        "AI 카테고리 추가 기준: 게임과 무관한 순수 LLM/AI 인프라 뉴스(모델 경쟁 "
+        "구도, GPU/컴퓨팅 비용, AI 에이전트 등)도 게임 산업과의 접점이 없다는 "
+        "이유만으로 배제하지 마라 — 조직/업무 방식의 변화를 다루는 기사도 이 "
+        "카테고리의 핵심 축이다."
+    ),
+}
+
+
+def _system_prompt_for(category: str) -> str:
+    return SYSTEM_PROMPT.format(category_priority=_CATEGORY_PRIORITY.get(category, ""))
 
 
 class _CoreIssue(BaseModel):
@@ -138,7 +161,7 @@ def generate_daily_highlights(db: Session, category: str, now: datetime | None =
 
     try:
         result = classify(
-            SYSTEM_PROMPT, _build_user_prompt(articles), _HighlightsResult,
+            _system_prompt_for(category), _build_user_prompt(articles), _HighlightsResult,
             HIGHLIGHTS_MODEL, provider=HIGHLIGHTS_AI_PROVIDER,
         )
     except ClassificationError:
@@ -199,6 +222,24 @@ def load_latest_highlights(db: Session, category: str) -> DailyHighlights | None
     row = db.scalar(
         select(DailyHighlightSnapshot)
         .where(DailyHighlightSnapshot.category == category)
+        .order_by(DailyHighlightSnapshot.generated_at.desc())
+    )
+    if row is None:
+        return None
+    return DailyHighlights.model_validate(json.loads(row.payload))
+
+
+def load_highlights_for_date(db: Session, category: str, start: datetime, end: datetime) -> DailyHighlights | None:
+    """The date-browser's per-day 핵심이슈: snapshots aren't overwritten
+    (see DailyHighlightSnapshot's docstring), so this just picks the latest
+    one whose generated_at falls within the given day's [start, end)."""
+    row = db.scalar(
+        select(DailyHighlightSnapshot)
+        .where(
+            DailyHighlightSnapshot.category == category,
+            DailyHighlightSnapshot.generated_at >= start,
+            DailyHighlightSnapshot.generated_at < end,
+        )
         .order_by(DailyHighlightSnapshot.generated_at.desc())
     )
     if row is None:

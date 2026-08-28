@@ -475,7 +475,13 @@ NAVER_SECTION_SOURCES: tuple[NaverSectionSource, ...] = (
     NaverSectionSource("게임/리뷰", "https://news.naver.com/breakingnews/section/105/229", "GAME"),
     NaverSectionSource(
         "IT/과학", "https://news.naver.com/section/105", "AI",
-        relevance_terms=("인공지능", "생성형", "머신러닝", "딥러닝", "챗gpt", "llm", "에이전트"),
+        # "AI"라는 단어가 없어도 모델/기업 고유명사만으로 쓰인 헤드라인(예: "지푸
+        # GLM-5.2, 앤트로픽 턱밑 추격")은 _AI_TOKEN_RE의 bare "ai" 매치를 못
+        # 타므로 별도로 추가 — 8개월 공유 이력 검토에서 실제로 놓치던 유형.
+        relevance_terms=(
+            "인공지능", "생성형", "머신러닝", "딥러닝", "챗gpt", "llm", "에이전트",
+            "앤트로픽", "클로드", "제미나이", "오픈ai", "딥마인드", "지피티",
+        ),
     ),
 )
 

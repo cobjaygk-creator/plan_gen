@@ -10,10 +10,25 @@ from app.industry_brief.official_html import (
     _parse_netmarble,
     _mcst_pdf_url,
     _page_url,
+    _passes_relevance,
     collect_official_html,
     collect_naver_section,
 )
 from app.industry_brief.models import Article
+
+
+def test_ai_relevance_passes_vendor_proper_nouns_without_the_word_ai():
+    ai_source = next(s for s in NAVER_SECTION_SOURCES if s.category == "AI")
+    # No literal "AI"/"LLM"/에이전트 token — only a vendor/model proper noun.
+    # These were confirmed as real gaps by reviewing 8 months of actual
+    # share history (461 articles) — headlines like this were being dropped.
+    for title in ["지푸 GLM-5.2, 앤트로픽 턱밑 추격", "클로드 오퍼스4.8 출시", "제미나이 3.5 공개"]:
+        assert _passes_relevance({"title": title, "summary": ""}, ai_source.relevance_terms) is True
+
+
+def test_ai_relevance_still_rejects_unrelated_it_news():
+    ai_source = next(s for s in NAVER_SECTION_SOURCES if s.category == "AI")
+    assert _passes_relevance({"title": "5G 요금제 개편, 통신 3사 반응은", "summary": ""}, ai_source.relevance_terms) is False
 
 
 def test_kocca_parser_keeps_game_policy_and_filters_unrelated_content():
