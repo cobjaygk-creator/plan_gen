@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-28T01:23:09.865502+00:00",
+  "generated_at": "2026-08-28T01:56:32.462451+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T01:19:03.732102+00:00",
+      "generatedAt": "2026-08-28T01:52:05.544042+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 155,
+        "collected": 193,
         "analyzed": 0,
-        "pending": 155,
+        "pending": 193,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -201,19 +201,19 @@
     },
     "3d": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T01:19:03.732102+00:00",
+      "generatedAt": "2026-08-28T01:52:05.544042+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1242,
-        "analyzed": 6,
-        "pending": 1236,
+        "collected": 1275,
+        "analyzed": 4,
+        "pending": 1271,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
-        "relevant": 3,
-        "issues": 3,
+        "relevant": 1,
+        "issues": 1,
         "verifiedIssues": 0,
-        "singleSourceIssues": 3
+        "singleSourceIssues": 1
       },
       "analytics": {
         "interest": {
@@ -228,36 +228,6 @@
             "08.27"
           ],
           "series": [
-            {
-              "name": "콜라보레이션 팩",
-              "originalTitle": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0
-              ]
-            },
-            {
-              "name": "LCK",
-              "originalTitle": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "category": "GAME",
-              "values": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0
-              ]
-            },
             {
               "name": "로봇",
               "originalTitle": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
@@ -278,19 +248,9 @@
         },
         "topicShare": [
           {
-            "topic": "업데이트",
-            "game": 1,
-            "ai": 0
-          },
-          {
             "topic": "기술",
             "game": 0,
             "ai": 1
-          },
-          {
-            "topic": "기타",
-            "game": 1,
-            "ai": 0
           }
         ]
       },
@@ -302,44 +262,15 @@
         "keySummaryDetails": [
           {
             "text": "교차 확인된 핵심 이슈가 아직 없습니다.",
-            "articleCount": 2,
+            "articleCount": 0,
             "independentSources": 0,
             "officialCount": 0,
             "activeDays": 0,
-            "selectionReason": "관찰 후보 2건 · 공식·주요 매체 근거 보강 필요",
+            "selectionReason": "관찰 후보 0건 · 공식·주요 매체 근거 보강 필요",
             "confidence": "WEAK"
           }
         ],
-        "observations": [
-          {
-            "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-            "description": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "인벤",
-                "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-                "publishedAgo": "2일 전",
-                "url": "https://www.inven.co.kr/webzine/news/?news=319885"
-              }
-            ]
-          },
-          {
-            "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-            "description": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
-            "statusLabel": "주요 매체 단독",
-            "selectionReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처 · 교차 보도 대기",
-            "sources": [
-              {
-                "outlet": "인벤",
-                "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-                "publishedAgo": "2일 전",
-                "url": "https://www.inven.co.kr/webzine/news/?news=319884"
-              }
-            ]
-          }
-        ],
+        "observations": [],
         "promotions": [],
         "closedObservations": [],
         "briefing": [
@@ -416,14 +347,14 @@
         },
         {
           "category": "GAME",
-          "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319885",
-          "publishedDate": "2026.08.25"
+          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
+          "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1",
+          "publishedDate": "2026.08.24"
         },
         {
           "category": "GAME",
-          "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319884",
+          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
           "publishedDate": "2026.08.25"
         },
         {
@@ -459,52 +390,6 @@
       ],
       "signals": [
         {
-          "topic": "콜라보레이션 팩",
-          "direction": "up",
-          "weight": 38,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "기타",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
-          "evidence": [
-            {
-              "outlet": "인벤",
-              "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "url": "https://www.inven.co.kr/webzine/news/?news=319885"
-            }
-          ]
-        },
-        {
-          "topic": "LCK",
-          "direction": "up",
-          "weight": 38,
-          "kind": "INDUSTRY",
-          "kindLabel": "기간 이슈",
-          "eventType": "업데이트",
-          "priorityReason": "기사 1건 · 독립 매체 1곳 · 1일 관찰 · 단일 출처",
-          "domain": "GAME",
-          "state": "GROWING",
-          "stateLabel": "증가 중",
-          "todayCount": 1,
-          "baselineAverage": 0.0,
-          "sourceCount": 1,
-          "reason": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
-          "evidence": [
-            {
-              "outlet": "인벤",
-              "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "url": "https://www.inven.co.kr/webzine/news/?news=319884"
-            }
-          ]
-        },
-        {
           "topic": "로봇",
           "direction": "up",
           "weight": 40,
@@ -530,68 +415,6 @@
       ],
       "newToday": [],
       "issues": [
-        {
-          "id": "issue-50",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-          "summary": "글로벌 게임사 CFK가 닌텐도 스위치용 리듬 게임 '식스타 게이트: 스타트레일'에 신규 콜라보레이션 팩 '베리 멜로디'를 발매했다. 이번 팩은 10곡의 악곡으로 구성되어 리듬 게임 팬들에게 기대감을 모으고 있다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "DECLINING",
-          "relatedBriefing": "GAME INDUSTRY / '식스타 게이트: 스타트레일', 베리 멜로디",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "인벤",
-              "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "publishedAgo": "2일 전",
-              "url": "https://www.inven.co.kr/webzine/news/?news=319885"
-            }
-          ]
-        },
-        {
-          "id": "issue-49",
-          "category": "GAME",
-          "importance": "보통",
-          "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-          "summary": "2026 LCK의 정규 시즌 종료 후, 플레이오프 진출을 위한 플레이-인이 진행되며, 최종 우승팀이 KSPO돔에서 결정된다.",
-          "whyItMatters": "아직 분석되지 않았습니다.",
-          "lifecycle": "DECLINING",
-          "relatedBriefing": "GAME INDUSTRY / 2026 LCK, 플레이오프행 두 자리 주인",
-          "confidence": {
-            "level": "WEAK",
-            "articleCount": 1,
-            "independentSources": 1,
-            "officialCount": 0
-          },
-          "evidenceQuality": {
-            "verificationStatus": "SINGLE_SOURCE",
-            "synthesisEligible": false,
-            "establishedMediaCount": 1,
-            "discoveryMediaCount": 0,
-            "reason": "Only one non-primary source is available; additional confirmation is required."
-          },
-          "sources": [
-            {
-              "outlet": "인벤",
-              "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "publishedAgo": "2일 전",
-              "url": "https://www.inven.co.kr/webzine/news/?news=319884"
-            }
-          ]
-        },
         {
           "id": "issue-54",
           "category": "AI",
@@ -648,22 +471,9 @@
         {
           "category": "GAME",
           "label": "게임",
-          "koreaArticleCount": 2,
+          "koreaArticleCount": 0,
           "globalArticleCount": 0,
-          "koreaFocus": [
-            {
-              "topic": "콜라보레이션 팩",
-              "count": 1
-            },
-            {
-              "topic": "리듬 게임",
-              "count": 1
-            },
-            {
-              "topic": "닌텐도 스위치",
-              "count": 1
-            }
-          ],
+          "koreaFocus": [],
           "globalFocus": [],
           "sharedTopics": []
         },
@@ -859,13 +669,13 @@
     },
     "week": {
       "briefDate": "2026-08-28",
-      "generatedAt": "2026-08-28T01:19:03.732102+00:00",
+      "generatedAt": "2026-08-28T01:52:05.544042+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1482,
+        "collected": 1520,
         "analyzed": 69,
-        "pending": 1413,
+        "pending": 1451,
         "completionRate": 5,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1684,7 +1494,7 @@
             {
               "outlet": "인벤",
               "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "publishedAgo": "2일 전",
+              "publishedAgo": "3일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319885"
             }
           ]
@@ -1715,7 +1525,7 @@
             {
               "outlet": "인벤",
               "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "publishedAgo": "2일 전",
+              "publishedAgo": "3일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319884"
             }
           ]
@@ -2097,12 +1907,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
