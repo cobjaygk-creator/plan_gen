@@ -366,6 +366,20 @@
 .ib-issues {
   padding: 20px 24px;
 }
+.ib-issues-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ib-issues-head h2 { margin: 0; }
+.ib-issues-viewall {
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border: 1px solid #dedede;
+  border-radius: 999px;
+  background: #fff;
+  color: #555;
+  font-size: 11.5px;
+  font-weight: 650;
+  cursor: pointer;
+}
+.ib-issues-viewall:hover { border-color: #999; color: #222; }
 .ib-issues h2 {
   font-size: 13px;
   font-weight: 700;
@@ -873,6 +887,16 @@
   color: #c4c4c4;
   cursor: not-allowed;
 }
+.ib-today-change { padding: 16px 20px; }
+.ib-today-change p { display: flex; align-items: baseline; gap: 8px; font-size: 14px; line-height: 1.55; margin: 0; }
+.ib-today-change p + p { margin-top: 8px; }
+.ib-axis { display: inline-flex; align-items: center; gap: 5px; flex: none; font-size: 10.5px; font-weight: 700; padding: 2px 8px 2px 6px; border-radius: 999px; }
+.ib-axis::before { content: ""; width: 5px; height: 5px; border-radius: 50%; }
+.ib-axis.game { background: #f3e1d6; color: #7a3115; }
+.ib-axis.game::before { background: #b14f2c; }
+.ib-axis.tech { background: #dceae5; color: #12463e; }
+.ib-axis.tech::before { background: #1d6e62; }
+
 .ib-page-header {
   display: flex;
   justify-content: space-between;

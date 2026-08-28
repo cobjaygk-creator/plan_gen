@@ -14,7 +14,7 @@ function SignalCards({ signals, onSelect }: { signals: Signal[]; onSelect: (topi
   ))}</div>;
 }
 
-export function SignalsPanel({ signals }: { signals: Signal[] }) {
+export function SignalsPanel({ signals, limit = 8 }: { signals: Signal[]; limit?: number }) {
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [domain, setDomain] = useState<Domain>("ALL");
   const selected = signals.find((signal) => signal.topic === selectedTopic);
@@ -28,7 +28,7 @@ export function SignalsPanel({ signals }: { signals: Signal[] }) {
       <div className="ib-signal-filters" role="tablist" aria-label="시그널 영역 필터">
         {filters.map(([value, label]) => <button key={value} type="button" className={domain === value ? "is-active" : ""} onClick={() => setDomain(value)}>{label}</button>)}
       </div>
-      {filtered.length ? <SignalCards signals={filtered.slice(0, 8)} onSelect={setSelectedTopic} /> : <p className="ib-signal-empty">이 기간에는 해당 영역의 주요 신호가 없습니다.</p>}
+      {filtered.length ? <SignalCards signals={filtered.slice(0, limit)} onSelect={setSelectedTopic} /> : <p className="ib-signal-empty">이 기간에는 해당 영역의 주요 신호가 없습니다.</p>}
       {selected && <div className="ib-signal-modal-backdrop" role="presentation" onClick={close}>
         <section className="ib-signal-modal" role="dialog" aria-modal="true" aria-label={`${selected.topic} 변화 상세`} onClick={(event) => event.stopPropagation()}>
           <button type="button" className="ib-signal-modal-close" onClick={close} aria-label="닫기">×</button>
