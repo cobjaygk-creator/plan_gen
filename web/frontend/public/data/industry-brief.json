@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-29T03:08:01.719661+00:00",
+  "generated_at": "2026-08-29T07:21:20.027816+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-29",
-      "generatedAt": "2026-08-28T22:33:41.799102+00:00",
+      "generatedAt": "2026-08-29T07:17:31.671368+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 62,
+        "collected": 125,
         "analyzed": 0,
-        "pending": 62,
+        "pending": 125,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -180,57 +180,82 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 6,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102318",
+              "source": "NAVER · 이코노미스트"
+            },
+            {
+              "title": "[8월28일] 엔비디아는 왜 허깅페이스를 인수할까…\"오픈 모델 다운에서 배포로\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214542",
+              "source": "AI타임스"
+            },
+            {
+              "title": "전남광주 4개 산업 ‘5극3특 성장엔진’ 선정…기업 투자 확대 기대",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214571",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214602",
+              "source": "AI타임스"
+            },
             {
               "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
               "url": "https://n.news.naver.com/mnews/article/031/0001053461",
               "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "中 CXMT, 상반기 매출 10배로 늘었다...메모리 품귀 수혜",
-              "url": "https://n.news.naver.com/mnews/article/023/0003995480",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "“29만원 꼭지에서 물렸어요” “난 30만원이다” 전국민 열풍 난리더니 ‘아우성’…국민 포털 무슨 일이",
-              "url": "https://n.news.naver.com/mnews/article/016/0002689967",
-              "source": "NAVER · 헤럴드경제"
-            },
-            {
-              "title": "5000억달러 ‘엔비디아 GPU 동맹’ 해부… 월가의 베팅, 금융 법칙 바꿀까",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189033",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "DLSS 5 leaked and modders are putting Nvidia&#8217;s AI effects on everything",
-              "url": "https://www.theverge.com/games/986197/nvidia-dlss-5-leak-ai",
-              "source": "The Verge"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 2,
+          "articleCount": 7,
           "articles": [
             {
-              "title": "베일 벗은 '모두의 AI'…SKT·카카오·KT가 만들 국민 AI 모습은",
-              "url": "https://n.news.naver.com/mnews/article/293/0000089734",
-              "source": "NAVER · 블로터"
+              "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
+              "url": "https://n.news.naver.com/mnews/article/003/0014155840",
+              "source": "NAVER · 뉴시스"
             },
             {
-              "title": "“너도 내 공격법 써봐”…오픈AI 해킹사태, 1200개 AI 뭉친 합동작전이었다",
-              "url": "https://n.news.naver.com/mnews/article/020/0003744180",
-              "source": "NAVER · 동아일보"
+              "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727447",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "'딸깍!'...\"유튜브 숏폼 하나 완성됐습니다\"",
+              "url": "https://n.news.naver.com/mnews/article/018/0006360057",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "source": "AI타임스"
+            },
+            {
+              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 2,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "source": "AI타임스"
+            },
+            {
+              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "source": "AI타임스"
+            },
             {
               "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
               "url": "https://n.news.naver.com/mnews/article/469/0000950787",
@@ -240,6 +265,23 @@
               "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
               "url": "https://n.news.naver.com/mnews/article/243/0000102313",
               "source": "NAVER · 이코노미스트"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214596",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Our decision on Cursor following its acquisition by SpaceX",
+              "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+              "source": "OpenAI"
             }
           ]
         }
@@ -269,13 +311,13 @@
     },
     "3d": {
       "briefDate": "2026-08-29",
-      "generatedAt": "2026-08-28T22:33:41.799102+00:00",
+      "generatedAt": "2026-08-29T07:17:31.671368+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1144,
+        "collected": 1037,
         "analyzed": 0,
-        "pending": 1144,
+        "pending": 1037,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -478,63 +520,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 69,
+          "articleCount": 59,
           "articles": [
+            {
+              "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102318",
+              "source": "NAVER · 이코노미스트"
+            },
+            {
+              "title": "[8월28일] 엔비디아는 왜 허깅페이스를 인수할까…\"오픈 모델 다운에서 배포로\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214542",
+              "source": "AI타임스"
+            },
+            {
+              "title": "전남광주 4개 산업 ‘5극3특 성장엔진’ 선정…기업 투자 확대 기대",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214571",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214602",
+              "source": "AI타임스"
+            },
             {
               "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
               "url": "https://n.news.naver.com/mnews/article/031/0001053461",
               "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "中 CXMT, 상반기 매출 10배로 늘었다...메모리 품귀 수혜",
-              "url": "https://n.news.naver.com/mnews/article/023/0003995480",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "“29만원 꼭지에서 물렸어요” “난 30만원이다” 전국민 열풍 난리더니 ‘아우성’…국민 포털 무슨 일이",
-              "url": "https://n.news.naver.com/mnews/article/016/0002689967",
-              "source": "NAVER · 헤럴드경제"
-            },
-            {
-              "title": "5000억달러 ‘엔비디아 GPU 동맹’ 해부… 월가의 베팅, 금융 법칙 바꿀까",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189033",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "DLSS 5 leaked and modders are putting Nvidia&#8217;s AI effects on everything",
-              "url": "https://www.theverge.com/games/986197/nvidia-dlss-5-leak-ai",
-              "source": "The Verge"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 44,
+          "articleCount": 39,
           "articles": [
             {
-              "title": "베일 벗은 '모두의 AI'…SKT·카카오·KT가 만들 국민 AI 모습은",
-              "url": "https://n.news.naver.com/mnews/article/293/0000089734",
-              "source": "NAVER · 블로터"
+              "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
+              "url": "https://n.news.naver.com/mnews/article/003/0014155840",
+              "source": "NAVER · 뉴시스"
             },
             {
-              "title": "“너도 내 공격법 써봐”…오픈AI 해킹사태, 1200개 AI 뭉친 합동작전이었다",
-              "url": "https://n.news.naver.com/mnews/article/020/0003744180",
-              "source": "NAVER · 동아일보"
+              "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727447",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "title": "'딸깍!'...\"유튜브 숏폼 하나 완성됐습니다\"",
+              "url": "https://n.news.naver.com/mnews/article/018/0006360057",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
               "source": "AI타임스"
             },
             {
-              "title": "딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214578",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
+              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
               "source": "AI타임스"
             }
           ]
@@ -542,8 +584,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 26,
+          "articleCount": 22,
           "articles": [
+            {
+              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "source": "AI타임스"
+            },
+            {
+              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "source": "AI타임스"
+            },
             {
               "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
               "url": "https://n.news.naver.com/mnews/article/469/0000950787",
@@ -558,24 +610,24 @@
               "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
               "source": "AI타임스"
-            },
-            {
-              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214596",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Our decision on Cursor following its acquisition by SpaceX",
+              "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+              "source": "OpenAI"
+            },
             {
               "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
               "url": "https://www.etnews.com/20260828000246",
@@ -589,16 +641,6 @@
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
               "source": "AI타임스"
             }
           ]
@@ -702,13 +744,13 @@
     },
     "week": {
       "briefDate": "2026-08-29",
-      "generatedAt": "2026-08-28T22:33:41.799102+00:00",
+      "generatedAt": "2026-08-29T07:17:31.671368+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1746,
+        "collected": 1816,
         "analyzed": 69,
-        "pending": 1677,
+        "pending": 1747,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1905,8 +1947,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 214,
+          "articleCount": 216,
           "articles": [
+            {
+              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "source": "AI타임스"
+            },
+            {
+              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "source": "AI타임스"
+            },
             {
               "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
               "url": "https://n.news.naver.com/mnews/article/469/0000950787",
@@ -1921,47 +1973,37 @@
               "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
               "source": "AI타임스"
-            },
-            {
-              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 205,
+          "articleCount": 210,
           "articles": [
             {
-              "title": "베일 벗은 '모두의 AI'…SKT·카카오·KT가 만들 국민 AI 모습은",
-              "url": "https://n.news.naver.com/mnews/article/293/0000089734",
-              "source": "NAVER · 블로터"
+              "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
+              "url": "https://n.news.naver.com/mnews/article/003/0014155840",
+              "source": "NAVER · 뉴시스"
             },
             {
-              "title": "“너도 내 공격법 써봐”…오픈AI 해킹사태, 1200개 AI 뭉친 합동작전이었다",
-              "url": "https://n.news.naver.com/mnews/article/020/0003744180",
-              "source": "NAVER · 동아일보"
+              "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727447",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "에임인텔리전스, AI 퍼플티밍으로 '엔비디아 인셉션 챌린지' 결승 진출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214584",
+              "title": "'딸깍!'...\"유튜브 숏폼 하나 완성됐습니다\"",
+              "url": "https://n.news.naver.com/mnews/article/018/0006360057",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
               "source": "AI타임스"
             },
             {
-              "title": "딥노이드, “의료 판독 자동화 라인업 확대...AI 의료 에이전트 본격화”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214578",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, AI와 물리 장비 잇는 'MHS' 공개...\"MCP 피지컬 AI 버전\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214531",
+              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
               "source": "AI타임스"
             }
           ]
@@ -1969,40 +2011,50 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 116,
+          "articleCount": 120,
           "articles": [
+            {
+              "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102318",
+              "source": "NAVER · 이코노미스트"
+            },
+            {
+              "title": "[8월28일] 엔비디아는 왜 허깅페이스를 인수할까…\"오픈 모델 다운에서 배포로\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214542",
+              "source": "AI타임스"
+            },
+            {
+              "title": "전남광주 4개 산업 ‘5극3특 성장엔진’ 선정…기업 투자 확대 기대",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214571",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214602",
+              "source": "AI타임스"
+            },
             {
               "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
               "url": "https://n.news.naver.com/mnews/article/031/0001053461",
               "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "中 CXMT, 상반기 매출 10배로 늘었다...메모리 품귀 수혜",
-              "url": "https://n.news.naver.com/mnews/article/023/0003995480",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "“29만원 꼭지에서 물렸어요” “난 30만원이다” 전국민 열풍 난리더니 ‘아우성’…국민 포털 무슨 일이",
-              "url": "https://n.news.naver.com/mnews/article/016/0002689967",
-              "source": "NAVER · 헤럴드경제"
-            },
-            {
-              "title": "5000억달러 ‘엔비디아 GPU 동맹’ 해부… 월가의 베팅, 금융 법칙 바꿀까",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189033",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "DLSS 5 leaked and modders are putting Nvidia&#8217;s AI effects on everything",
-              "url": "https://www.theverge.com/games/986197/nvidia-dlss-5-leak-ai",
-              "source": "The Verge"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 19,
+          "articleCount": 21,
           "articles": [
+            {
+              "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214596",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Our decision on Cursor following its acquisition by SpaceX",
+              "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+              "source": "OpenAI"
+            },
             {
               "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
               "url": "https://www.etnews.com/20260828000246",
@@ -2016,16 +2068,6 @@
             {
               "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
-              "source": "AI타임스"
-            },
-            {
-              "title": "지식재산처, '직접 만들고 함께 쓰는' 인공지능 업무혁신 본격화",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775686&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "‘옥스 알파’ 정체는 GLM-5.3-플래시...“오퍼스급 성능에 비용은 10%”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214438",
               "source": "AI타임스"
             }
           ]
