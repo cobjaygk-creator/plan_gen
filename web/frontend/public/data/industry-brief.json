@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T07:21:20.027816+00:00",
+  "generated_at": "2026-08-29T09:52:57.095142+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-29",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 125,
+        "collected": 132,
         "analyzed": 0,
-        "pending": 125,
+        "pending": 132,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -315,9 +315,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1037,
+        "collected": 984,
         "analyzed": 0,
-        "pending": 1037,
+        "pending": 984,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -748,9 +748,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1816,
+        "collected": 1823,
         "analyzed": 69,
-        "pending": 1747,
+        "pending": 1754,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2176,12 +2176,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }

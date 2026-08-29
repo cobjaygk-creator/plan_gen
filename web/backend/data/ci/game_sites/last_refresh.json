@@ -1,7 +1,9 @@
 {
   "portals": 10,
-  "discovered": 263,
+  "discovered": 241,
   "new_sites": 0,
-  "errors": {},
-  "refreshed_at": "2026-08-29T07:21:18.998638+00:00"
+  "errors": {
+    "NETMARBLE": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "refreshed_at": "2026-08-29T09:52:56.114960+00:00"
 }
