@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-29T18:13:36.723453+00:00",
+  "generated_at": "2026-08-29T21:08:24.753653+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-29T16:52:21.968094+00:00",
+      "generatedAt": "2026-08-29T21:04:17.210034+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 11,
+        "collected": 28,
         "analyzed": 0,
-        "pending": 11,
+        "pending": 28,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -284,13 +284,13 @@
     },
     "3d": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-29T16:52:21.968094+00:00",
+      "generatedAt": "2026-08-29T21:04:17.210034+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 891,
+        "collected": 862,
         "analyzed": 0,
-        "pending": 891,
+        "pending": 862,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -493,7 +493,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 58,
+          "articleCount": 57,
           "articles": [
             {
               "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
@@ -525,7 +525,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 37,
+          "articleCount": 36,
           "articles": [
             {
               "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
@@ -712,13 +712,13 @@
     },
     "week": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-29T16:52:21.968094+00:00",
+      "generatedAt": "2026-08-29T21:04:17.210034+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1866,
+        "collected": 1883,
         "analyzed": 69,
-        "pending": 1797,
+        "pending": 1814,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -2144,12 +2144,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
