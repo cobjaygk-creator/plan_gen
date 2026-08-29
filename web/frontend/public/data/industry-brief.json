@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T21:32:48.234654+00:00",
+  "generated_at": "2026-08-29T23:52:38.671056+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-30",
@@ -288,9 +288,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 861,
+        "collected": 805,
         "analyzed": 0,
-        "pending": 861,
+        "pending": 805,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -493,7 +493,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 57,
+          "articleCount": 48,
           "articles": [
             {
               "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
@@ -525,7 +525,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 36,
+          "articleCount": 29,
           "articles": [
             {
               "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
@@ -557,7 +557,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 24,
+          "articleCount": 23,
           "articles": [
             {
               "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
@@ -589,7 +589,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 7,
           "articles": [
             {
               "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
@@ -1030,7 +1030,7 @@
               {
                 "outlet": "인벤",
                 "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319875"
               }
             ]
@@ -1044,7 +1044,7 @@
               {
                 "outlet": "전자신문 AI",
                 "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.etnews.com/20260825000010"
               }
             ]
@@ -1662,7 +1662,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.etnews.com/20260825000014"
             },
             {
@@ -1854,7 +1854,7 @@
             {
               "outlet": "인벤",
               "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319875"
             }
           ]
@@ -1885,7 +1885,7 @@
             {
               "outlet": "전자신문 AI",
               "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.etnews.com/20260825000010"
             }
           ]
