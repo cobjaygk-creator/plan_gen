@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T09:52:57.095142+00:00",
+  "generated_at": "2026-08-29T14:58:50.530742+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-29",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 132,
+        "collected": 136,
         "analyzed": 0,
-        "pending": 132,
+        "pending": 136,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -315,9 +315,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 984,
+        "collected": 916,
         "analyzed": 0,
-        "pending": 984,
+        "pending": 916,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -520,7 +520,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 59,
+          "articleCount": 54,
           "articles": [
             {
               "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
@@ -552,7 +552,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 39,
+          "articleCount": 34,
           "articles": [
             {
               "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
@@ -584,7 +584,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 22,
+          "articleCount": 19,
           "articles": [
             {
               "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
@@ -616,7 +616,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 10,
+          "articleCount": 8,
           "articles": [
             {
               "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
@@ -648,16 +648,11 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 2,
+          "articleCount": 1,
           "articles": [
             {
               "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'스테이블 디퓨전' 제작사, 1000억 투자 유치…이미지 넘어 음악·게임으로 영역 확장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214404",
               "source": "AI타임스"
             }
           ]
@@ -748,9 +743,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1823,
+        "collected": 1827,
         "analyzed": 69,
-        "pending": 1754,
+        "pending": 1758,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1140,7 +1135,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -1824,7 +1819,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]

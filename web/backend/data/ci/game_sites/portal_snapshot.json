@@ -312,6 +312,182 @@
     "portal": "NEXON"
   },
   {
+    "url": "https://7origin.netmarble.com/ko",
+    "game_name": "일곱 개의 대죄: Origin",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://c1.img.netmarble.kr/web/netmarble/main/v2/img/p-11.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://slvariseoverdrive.netmarble.com/ko",
+    "game_name": "나 혼자만 레벨업: 어라이즈 오버드라이브",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://c1.img.netmarble.kr/web/netmarble/main/v2/img/p-10.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://ma9.netmarble.net/main.asp",
+    "game_name": "ma9",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://baduk.netmarble.net/",
+    "game_name": "baduk",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://modoo.netmarble.net/",
+    "game_name": "modoo",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/shanghai",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/Sachunsung",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://chat.netmarble.net/famchat",
+    "game_name": "chat",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://dho.netmarble.net/main.asp",
+    "game_name": "dho",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://cmind.netmarble.net/main.asp",
+    "game_name": "cmind",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/igame/bcrossplus",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://avatar.netmarble.net/",
+    "game_name": "avatar",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/poweral",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/yutgame",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/igame/richmarble",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://yaburi.netmarble.net/",
+    "game_name": "yaburi",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/kkoongda",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/igame/janggi",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/igame/picture",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/assult",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/omok",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://game2.netmarble.net/igame/bill4",
+    "game_name": "game2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "NETMARBLE"
+  },
+  {
     "url": "https://dokkaebi.kakaogames.com/preregister",
     "game_name": "도깨비의세계",
     "publisher": "KAKAO GAMES",
