@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T16:56:35.384413+00:00",
+  "generated_at": "2026-08-29T18:13:36.723453+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-30",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 8,
+        "collected": 11,
         "analyzed": 0,
-        "pending": 8,
+        "pending": 11,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -288,9 +288,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 914,
+        "collected": 891,
         "analyzed": 0,
-        "pending": 914,
+        "pending": 891,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -716,9 +716,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1863,
+        "collected": 1866,
         "analyzed": 69,
-        "pending": 1794,
+        "pending": 1797,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -963,7 +963,7 @@
               {
                 "outlet": "인벤",
                 "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319871"
               }
             ]
@@ -1538,7 +1538,7 @@
             {
               "outlet": "인벤",
               "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319871"
             }
           ]
@@ -2144,12 +2144,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
