@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-29T14:58:50.530742+00:00",
+  "generated_at": "2026-08-29T16:56:35.384413+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-08-29",
-      "generatedAt": "2026-08-29T07:17:31.671368+00:00",
+      "briefDate": "2026-08-30",
+      "generatedAt": "2026-08-29T16:52:21.968094+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 136,
+        "collected": 8,
         "analyzed": 0,
-        "pending": 136,
+        "pending": 8,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,14 +20,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.21",
             "08.22",
             "08.23",
             "08.24",
             "08.25",
             "08.26",
             "08.27",
-            "08.28"
+            "08.28",
+            "08.29"
           ],
           "series": [],
           "bucket": "일간"
@@ -178,110 +178,83 @@
       },
       "techRadar": [
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 10,
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 5,
           "articles": [
             {
-              "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
-              "url": "https://n.news.naver.com/mnews/article/243/0000102318",
-              "source": "NAVER · 이코노미스트"
-            },
-            {
-              "title": "[8월28일] 엔비디아는 왜 허깅페이스를 인수할까…\"오픈 모델 다운에서 배포로\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214542",
+              "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
               "source": "AI타임스"
             },
             {
-              "title": "전남광주 4개 산업 ‘5극3특 성장엔진’ 선정…기업 투자 확대 기대",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214571",
+              "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
             },
             {
-              "title": "미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214602",
+              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
               "source": "AI타임스"
             },
             {
-              "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053461",
-              "source": "NAVER · 아이뉴스24"
+              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 4,
+          "articles": [
+            {
+              "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
+              "url": "https://www.etnews.com/20260829000027",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214606",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia’s AI advantage is moving beyond the GPU",
+              "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+              "source": "TechCrunch"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 7,
+          "articleCount": 3,
           "articles": [
             {
-              "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
-              "url": "https://n.news.naver.com/mnews/article/003/0014155840",
-              "source": "NAVER · 뉴시스"
+              "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
+              "url": "https://www.etnews.com/20260828000213",
+              "source": "전자신문 AI"
             },
             {
-              "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
-              "url": "https://n.news.naver.com/mnews/article/009/0005727447",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "'딸깍!'...\"유튜브 숏폼 하나 완성됐습니다\"",
-              "url": "https://n.news.naver.com/mnews/article/018/0006360057",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
               "source": "AI타임스"
             },
             {
-              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
               "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
-              "source": "AI타임스"
-            },
-            {
-              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
-              "url": "https://n.news.naver.com/mnews/article/469/0000950787",
-              "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
-              "url": "https://n.news.naver.com/mnews/article/243/0000102313",
-              "source": "NAVER · 이코노미스트"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 2,
-          "articles": [
-            {
-              "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214596",
-              "source": "AI타임스"
-            },
-            {
-              "title": "Our decision on Cursor following its acquisition by SpaceX",
-              "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-              "source": "OpenAI"
             }
           ]
         }
@@ -310,14 +283,14 @@
       "policyTimeline": []
     },
     "3d": {
-      "briefDate": "2026-08-29",
-      "generatedAt": "2026-08-29T07:17:31.671368+00:00",
+      "briefDate": "2026-08-30",
+      "generatedAt": "2026-08-29T16:52:21.968094+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 916,
+        "collected": 914,
         "analyzed": 0,
-        "pending": 916,
+        "pending": 914,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -328,14 +301,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.21",
             "08.22",
             "08.23",
             "08.24",
             "08.25",
             "08.26",
             "08.27",
-            "08.28"
+            "08.28",
+            "08.29"
           ],
           "series": [],
           "bucket": "일간"
@@ -520,40 +493,55 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 54,
+          "articleCount": 58,
           "articles": [
+            {
+              "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
+              "url": "https://www.etnews.com/20260829000027",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214606",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia’s AI advantage is moving beyond the GPU",
+              "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+              "source": "TechCrunch"
+            },
             {
               "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
               "url": "https://n.news.naver.com/mnews/article/243/0000102318",
               "source": "NAVER · 이코노미스트"
-            },
-            {
-              "title": "[8월28일] 엔비디아는 왜 허깅페이스를 인수할까…\"오픈 모델 다운에서 배포로\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214542",
-              "source": "AI타임스"
-            },
-            {
-              "title": "전남광주 4개 산업 ‘5극3특 성장엔진’ 선정…기업 투자 확대 기대",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214571",
-              "source": "AI타임스"
-            },
-            {
-              "title": "미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214602",
-              "source": "AI타임스"
-            },
-            {
-              "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053461",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 34,
+          "articleCount": 37,
           "articles": [
+            {
+              "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
+              "url": "https://www.etnews.com/20260828000213",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
+              "source": "AI타임스"
+            },
             {
               "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
               "url": "https://n.news.naver.com/mnews/article/003/0014155840",
@@ -563,52 +551,37 @@
               "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
               "url": "https://n.news.naver.com/mnews/article/009/0005727447",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "'딸깍!'...\"유튜브 숏폼 하나 완성됐습니다\"",
-              "url": "https://n.news.naver.com/mnews/article/018/0006360057",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
-              "source": "AI타임스"
-            },
-            {
-              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 19,
+          "articleCount": 24,
           "articles": [
             {
-              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
               "source": "AI타임스"
             },
             {
-              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
-              "url": "https://n.news.naver.com/mnews/article/469/0000950787",
-              "source": "NAVER · 한국일보"
+              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
+              "source": "AI타임스"
             },
             {
-              "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
-              "url": "https://n.news.naver.com/mnews/article/243/0000102313",
-              "source": "NAVER · 이코노미스트"
+              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "source": "AI타임스"
             },
             {
-              "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
+              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
               "source": "AI타임스"
             }
           ]
@@ -738,14 +711,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-08-29",
-      "generatedAt": "2026-08-29T07:17:31.671368+00:00",
+      "briefDate": "2026-08-30",
+      "generatedAt": "2026-08-29T16:52:21.968094+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1827,
+        "collected": 1863,
         "analyzed": 69,
-        "pending": 1758,
+        "pending": 1794,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -756,14 +729,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.21",
             "08.22",
             "08.23",
             "08.24",
             "08.25",
             "08.26",
             "08.27",
-            "08.28"
+            "08.28",
+            "08.29"
           ],
           "series": [
             {
@@ -872,9 +845,9 @@
               "evidence": 35.0,
               "coverage": 15.8,
               "importance": 12.0,
-              "persistence": 2.0,
+              "persistence": 1.7,
               "momentum": 8.0,
-              "editorialAdjustment": -8.8,
+              "editorialAdjustment": -8.6,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
               "total": 64.0
@@ -893,12 +866,12 @@
               "evidence": 27.0,
               "coverage": 10.0,
               "importance": 12.0,
-              "persistence": 2.0,
+              "persistence": 1.7,
               "momentum": 6.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 57.0
+              "total": 56.7
             }
           }
         ],
@@ -1017,12 +990,12 @@
               "evidence": 35.0,
               "coverage": 15.8,
               "importance": 6.0,
-              "persistence": 2.0,
+              "persistence": 1.7,
               "momentum": 8.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 66.8
+              "total": 66.6
             }
           },
           {
@@ -1038,12 +1011,12 @@
               "evidence": 27.0,
               "coverage": 10.0,
               "importance": 20.0,
-              "persistence": 2.0,
+              "persistence": 1.7,
               "momentum": 6.0,
               "editorialAdjustment": 0.0,
               "userFeedback": 0.0,
               "approvedRule": 0.0,
-              "total": 65.0
+              "total": 64.7
             }
           }
         ],
@@ -1109,7 +1082,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
               }
             ]
@@ -1122,7 +1095,7 @@
               {
                 "outlet": "NVIDIA",
                 "title": "How XPUs Meet a World-Class AI Factory",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
               }
             ]
@@ -1695,7 +1668,7 @@
             {
               "outlet": "AI타임스",
               "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214284"
             }
           ]
@@ -1726,7 +1699,7 @@
             {
               "outlet": "NVIDIA",
               "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/"
             }
           ]
@@ -1757,7 +1730,7 @@
             {
               "outlet": "NVIDIA",
               "title": "Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"
             }
           ]
@@ -1788,7 +1761,7 @@
             {
               "outlet": "NVIDIA",
               "title": "How XPUs Meet a World-Class AI Factory",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/"
             }
           ]
@@ -1942,31 +1915,31 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 216,
+          "articleCount": 221,
           "articles": [
             {
-              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
+              "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
               "source": "AI타임스"
             },
             {
-              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
+              "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽 초대형 IPO 신청 앞두고 테크업계 기대... 누가 먼저 득 볼까",
-              "url": "https://n.news.naver.com/mnews/article/469/0000950787",
-              "source": "NAVER · 한국일보"
+              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
+              "source": "AI타임스"
             },
             {
-              "title": "독파모 정예 3사, 챗GPT·제미나이 독주 흔들까 [AI 주권 미래는]①",
-              "url": "https://n.news.naver.com/mnews/article/243/0000102313",
-              "source": "NAVER · 이코노미스트"
+              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "source": "AI타임스"
             },
             {
-              "title": "\"일회성 대화도 저장 가능\"...오픈AI, 챗GPT 임시 채팅 기능 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214569",
+              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
               "source": "AI타임스"
             }
           ]
@@ -1974,8 +1947,23 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 210,
+          "articleCount": 213,
           "articles": [
+            {
+              "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
+              "url": "https://www.etnews.com/20260828000213",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
+              "source": "AI타임스"
+            },
             {
               "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
               "url": "https://n.news.naver.com/mnews/article/003/0014155840",
@@ -1985,53 +1973,38 @@
               "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
               "url": "https://n.news.naver.com/mnews/article/009/0005727447",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "'딸깍!'...\"유튜브 숏폼 하나 완성됐습니다\"",
-              "url": "https://n.news.naver.com/mnews/article/018/0006360057",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "메타, 80억 소형 AI로 ‘클로드 오퍼스 4.5’급 성능 구현…‘에보하네스-RL’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214593",
-              "source": "AI타임스"
-            },
-            {
-              "title": "클로드, 테스트 중 700GB 홈 디렉터리 삭제...\"안전 분류기가 사고 키웠다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214594",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 120,
+          "articleCount": 124,
           "articles": [
+            {
+              "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
+              "url": "https://www.etnews.com/20260829000027",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214606",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia’s AI advantage is moving beyond the GPU",
+              "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+              "source": "TechCrunch"
+            },
             {
               "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
               "url": "https://n.news.naver.com/mnews/article/243/0000102318",
               "source": "NAVER · 이코노미스트"
-            },
-            {
-              "title": "[8월28일] 엔비디아는 왜 허깅페이스를 인수할까…\"오픈 모델 다운에서 배포로\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214542",
-              "source": "AI타임스"
-            },
-            {
-              "title": "전남광주 4개 산업 ‘5극3특 성장엔진’ 선정…기업 투자 확대 기대",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214571",
-              "source": "AI타임스"
-            },
-            {
-              "title": "미국, 중국의 AI 칩 '우회 원격 접속' 차단 추진…수출 통제 허점 막는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214602",
-              "source": "AI타임스"
-            },
-            {
-              "title": "SK하이닉스, 美 패키징 이어 전공정 투자도 검토…반도체 관세는 변수(종합)",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053461",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
