@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T23:52:38.671056+00:00",
+  "generated_at": "2026-08-30T02:48:42.800740+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-30",
@@ -288,9 +288,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 805,
+        "collected": 776,
         "analyzed": 0,
-        "pending": 805,
+        "pending": 776,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -651,64 +651,8 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [
-        {
-          "id": "2883",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-          "publishedDate": "2026.08.27",
-          "effectiveDate": null,
-          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "인공지능서비스불법유해정보대응해야",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표",
-          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
-        }
-      ],
-      "policyTimeline": [
-        {
-          "id": "2883",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-          "publishedDate": "2026.08.27",
-          "effectiveDate": null,
-          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "인공지능서비스불법유해정보대응해야",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표",
-          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
-        }
-      ]
+      "policyUpdates": [],
+      "policyTimeline": []
     },
     "week": {
       "briefDate": "2026-08-30",
@@ -746,8 +690,8 @@
               "values": [
                 0,
                 0,
-                0,
                 2,
+                0,
                 0,
                 0,
                 0,
@@ -760,8 +704,8 @@
               "category": "GAME",
               "values": [
                 0,
-                0,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -776,8 +720,8 @@
               "values": [
                 0,
                 0,
-                0,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -885,7 +829,7 @@
               {
                 "outlet": "게임메카",
                 "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.gamemeca.com/view.php?gid=1779548"
               }
             ]
@@ -899,7 +843,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -937,7 +881,7 @@
               {
                 "outlet": "게임메카",
                 "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.gamemeca.com/view.php?gid=1779548"
               }
             ]
@@ -950,7 +894,7 @@
               {
                 "outlet": "인벤",
                 "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-                "publishedAgo": "4일 전",
+                "publishedAgo": "5일 전",
                 "url": "https://www.inven.co.kr/webzine/news/?news=319881"
               }
             ]
@@ -1408,13 +1352,13 @@
             {
               "outlet": "인벤",
               "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319877"
             },
             {
               "outlet": "크래프톤",
               "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/"
             }
           ]
@@ -1445,7 +1389,7 @@
             {
               "outlet": "넥슨게임즈",
               "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
-              "publishedAgo": "5일 전",
+              "publishedAgo": "6일 전",
               "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1"
             }
           ]
@@ -1476,7 +1420,7 @@
             {
               "outlet": "게임메카",
               "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.gamemeca.com/view.php?gid=1779548"
             }
           ]
@@ -1507,7 +1451,7 @@
             {
               "outlet": "인벤",
               "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319881"
             }
           ]
@@ -1569,7 +1513,7 @@
             {
               "outlet": "인벤",
               "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319885"
             }
           ]
@@ -1600,7 +1544,7 @@
             {
               "outlet": "인벤",
               "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319884"
             }
           ]
@@ -1631,7 +1575,7 @@
             {
               "outlet": "인벤",
               "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.inven.co.kr/webzine/news/?news=319882"
             }
           ]
@@ -1823,7 +1767,7 @@
             {
               "outlet": "대한민국 정책브리핑",
               "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-              "publishedAgo": "4일 전",
+              "publishedAgo": "5일 전",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period="
             }
           ]
@@ -2144,12 +2088,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
