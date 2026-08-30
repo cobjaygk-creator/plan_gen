@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-30T02:48:42.800740+00:00",
+  "generated_at": "2026-08-30T05:42:03.932543+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-29T21:04:17.210034+00:00",
+      "generatedAt": "2026-08-30T05:38:32.311634+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 29,
+        "collected": 86,
         "analyzed": 0,
-        "pending": 29,
+        "pending": 86,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -180,8 +180,23 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 5,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "source": "AI타임스"
+            },
+            {
+              "title": "'클로드 코드' 주간 한도 25% 인상…실제 17% 감소에 개발자 '발끈'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214616",
+              "source": "AI타임스"
+            },
+            {
+              "title": "소니·워너, 앤트로픽에 저작권 소송...\"클로드 훈련용 음악 무단 취득\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214614",
+              "source": "AI타임스"
+            },
             {
               "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
@@ -191,15 +206,32 @@
               "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 5,
+          "articles": [
+            {
+              "title": "KT, 서울대·KAIST와 AI 공동연구 최종 성과 공유...핵심 기술 내재화 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214609",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "source": "AI타임스"
+            },
+            {
+              "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
+              "url": "https://www.etnews.com/20260828000213",
+              "source": "전자신문 AI"
             },
             {
               "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
               "source": "AI타임스"
             },
             {
@@ -237,23 +269,13 @@
           ]
         },
         {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 3,
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
           "articles": [
             {
-              "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
-              "url": "https://www.etnews.com/20260828000213",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
+              "title": "오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214610",
               "source": "AI타임스"
             }
           ]
@@ -284,13 +306,13 @@
     },
     "3d": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-29T21:04:17.210034+00:00",
+      "generatedAt": "2026-08-30T05:38:32.311634+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 776,
+        "collected": 812,
         "analyzed": 0,
-        "pending": 776,
+        "pending": 812,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -525,8 +547,18 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 29,
+          "articleCount": 31,
           "articles": [
+            {
+              "title": "KT, 서울대·KAIST와 AI 공동연구 최종 성과 공유...핵심 기술 내재화 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214609",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "source": "AI타임스"
+            },
             {
               "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
               "url": "https://www.etnews.com/20260828000213",
@@ -541,24 +573,29 @@
               "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
               "source": "AI타임스"
-            },
-            {
-              "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
-              "url": "https://n.news.naver.com/mnews/article/003/0014155840",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
-              "url": "https://n.news.naver.com/mnews/article/009/0005727447",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 23,
+          "articleCount": 26,
           "articles": [
+            {
+              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "source": "AI타임스"
+            },
+            {
+              "title": "'클로드 코드' 주간 한도 25% 인상…실제 17% 감소에 개발자 '발끈'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214616",
+              "source": "AI타임스"
+            },
+            {
+              "title": "소니·워너, 앤트로픽에 저작권 소송...\"클로드 훈련용 음악 무단 취득\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214614",
+              "source": "AI타임스"
+            },
             {
               "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
@@ -568,29 +605,19 @@
               "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
-            },
-            {
-              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214610",
+              "source": "AI타임스"
+            },
             {
               "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214596",
@@ -609,11 +636,6 @@
             {
               "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
               "source": "AI타임스"
             }
           ]
@@ -656,13 +678,13 @@
     },
     "week": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-29T21:04:17.210034+00:00",
+      "generatedAt": "2026-08-30T05:38:32.311634+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1884,
+        "collected": 1950,
         "analyzed": 69,
-        "pending": 1815,
+        "pending": 1881,
         "completionRate": 4,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
@@ -1859,8 +1881,23 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 221,
+          "articleCount": 224,
           "articles": [
+            {
+              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "source": "AI타임스"
+            },
+            {
+              "title": "'클로드 코드' 주간 한도 25% 인상…실제 17% 감소에 개발자 '발끈'",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214616",
+              "source": "AI타임스"
+            },
+            {
+              "title": "소니·워너, 앤트로픽에 저작권 소송...\"클로드 훈련용 음악 무단 취득\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214614",
+              "source": "AI타임스"
+            },
             {
               "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
@@ -1870,29 +1907,24 @@
               "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
-            },
-            {
-              "title": "구글, '제미나이 라이브'에 에이전트 탑재…음성으로 일정·이메일 제어",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214599",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 213,
+          "articleCount": 215,
           "articles": [
+            {
+              "title": "KT, 서울대·KAIST와 AI 공동연구 최종 성과 공유...핵심 기술 내재화 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214609",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "source": "AI타임스"
+            },
             {
               "title": "“AI 에이전트 시대, '토큰 거버넌스' 필요”…SK, '토큰 이코노미' 사내서 낸다",
               "url": "https://www.etnews.com/20260828000213",
@@ -1907,16 +1939,6 @@
               "title": "앤트로픽 \"AI가 인간 대신 정렬 작업 수행…안전성 크게 높였다\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214608",
               "source": "AI타임스"
-            },
-            {
-              "title": "AI끼리 비밀 게시판 파고 해킹 공조…오픈AI 에이전트 '초유의 반란' 사건 전말",
-              "url": "https://n.news.naver.com/mnews/article/003/0014155840",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "“이거 내가 하지 말고 AI한테 시키면 안 되나?”…10년차 기자의 AI에이전트 제작 도전기",
-              "url": "https://n.news.naver.com/mnews/article/009/0005727447",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
@@ -1955,8 +1977,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 21,
+          "articleCount": 22,
           "articles": [
+            {
+              "title": "오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214610",
+              "source": "AI타임스"
+            },
             {
               "title": "텐센트, 차세대 모델 'Hy4 프리뷰' 오픈 출시로 기업용 시장 정조준",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214596",
@@ -1975,11 +2002,6 @@
             {
               "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'사후학습 전문가' 배럿 조프 구글행...제미나이·에이전트 고도화에 합류",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214547",
               "source": "AI타임스"
             }
           ]
@@ -2088,12 +2110,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             }
