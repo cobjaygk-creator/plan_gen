@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-30T08:54:18.381786+00:00",
+  "generated_at": "2026-08-30T12:12:56.807058+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-30T05:38:32.311634+00:00",
+      "generatedAt": "2026-08-30T12:08:51.135760+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 88,
+        "collected": 145,
         "analyzed": 0,
-        "pending": 88,
+        "pending": 145,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -178,6 +178,38 @@
       },
       "techRadar": [
         {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 9,
+          "articles": [
+            {
+              "title": "[특별기고] AI 데이터센터를 제2의 반도체 신화로",
+              "url": "https://n.news.naver.com/mnews/article/030/0003461596",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "필요한 칩 조합해 쓰는 시대 … 韓 AI 반도체에 기회 열려",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727717",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "3차 ESS 시장 커지나…배터리 업계 셈법도 바뀐다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003461609",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "“한국 AI 반도체 골든타임 3년…AMD와 설계 단계부터 같이 짜야”",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727814",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "\"AI가 AI 칩을 만든다\"...'핫칩스 2026'서 확인된 반도체 설계의 대변혁",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214627",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
           "key": "model",
           "label": "신규 모델",
           "articleCount": 8,
@@ -242,37 +274,20 @@
           ]
         },
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
-              "url": "https://www.etnews.com/20260829000027",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214606",
-              "source": "AI타임스"
-            },
-            {
-              "title": "Nvidia’s AI advantage is moving beyond the GPU",
-              "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-              "source": "TechCrunch"
-            }
-          ]
-        },
-        {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 1,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "샘 올트먼, ‘앙숙’ 머스크가 인수한 코딩 도구 ‘커서’와 결별 선언",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995671",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "오픈AI, 스페이스X 인수된 커서 계약 해지…머스크, “사기꾼” 비난",
+              "url": "https://n.news.naver.com/mnews/article/056/0012247244",
+              "source": "NAVER · KBS"
+            },
             {
               "title": "오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214610",
@@ -306,13 +321,13 @@
     },
     "3d": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-30T05:38:32.311634+00:00",
+      "generatedAt": "2026-08-30T12:08:51.135760+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 749,
+        "collected": 728,
         "analyzed": 0,
-        "pending": 749,
+        "pending": 728,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -515,39 +530,39 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 48,
+          "articleCount": 44,
           "articles": [
             {
-              "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
-              "url": "https://www.etnews.com/20260829000027",
-              "source": "전자신문 AI"
+              "title": "[특별기고] AI 데이터센터를 제2의 반도체 신화로",
+              "url": "https://n.news.naver.com/mnews/article/030/0003461596",
+              "source": "NAVER · 전자신문"
             },
             {
-              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "title": "필요한 칩 조합해 쓰는 시대 … 韓 AI 반도체에 기회 열려",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727717",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "3차 ESS 시장 커지나…배터리 업계 셈법도 바뀐다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003461609",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "“한국 AI 반도체 골든타임 3년…AMD와 설계 단계부터 같이 짜야”",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727814",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "\"AI가 AI 칩을 만든다\"...'핫칩스 2026'서 확인된 반도체 설계의 대변혁",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214627",
               "source": "AI타임스"
-            },
-            {
-              "title": "[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214606",
-              "source": "AI타임스"
-            },
-            {
-              "title": "Nvidia’s AI advantage is moving beyond the GPU",
-              "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-              "source": "TechCrunch"
-            },
-            {
-              "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
-              "url": "https://n.news.naver.com/mnews/article/243/0000102318",
-              "source": "NAVER · 이코노미스트"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 31,
+          "articleCount": 26,
           "articles": [
             {
               "title": "KT, 서울대·KAIST와 AI 공동연구 최종 성과 공유...핵심 기술 내재화 추진",
@@ -579,7 +594,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 26,
+          "articleCount": 19,
           "articles": [
             {
               "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
@@ -611,8 +626,18 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "샘 올트먼, ‘앙숙’ 머스크가 인수한 코딩 도구 ‘커서’와 결별 선언",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995671",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "오픈AI, 스페이스X 인수된 커서 계약 해지…머스크, “사기꾼” 비난",
+              "url": "https://n.news.naver.com/mnews/article/056/0012247244",
+              "source": "NAVER · KBS"
+            },
             {
               "title": "오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214610",
@@ -627,16 +652,6 @@
               "title": "Our decision on Cursor following its acquisition by SpaceX",
               "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
               "source": "OpenAI"
-            },
-            {
-              "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
-              "url": "https://www.etnews.com/20260828000246",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
             }
           ]
         },
@@ -678,14 +693,14 @@
     },
     "week": {
       "briefDate": "2026-08-30",
-      "generatedAt": "2026-08-30T05:38:32.311634+00:00",
+      "generatedAt": "2026-08-30T12:08:51.135760+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1952,
+        "collected": 2009,
         "analyzed": 69,
-        "pending": 1883,
-        "completionRate": 4,
+        "pending": 1940,
+        "completionRate": 3,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 47,
         "issues": 16,
@@ -1074,7 +1089,7 @@
               {
                 "outlet": "OpenAI",
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                "publishedAgo": "5일 전",
+                "publishedAgo": "6일 전",
                 "url": "https://openai.com/index/gpt-5-6-in-kiro"
               }
             ]
@@ -1758,7 +1773,7 @@
             {
               "outlet": "OpenAI",
               "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-              "publishedAgo": "5일 전",
+              "publishedAgo": "6일 전",
               "url": "https://openai.com/index/gpt-5-6-in-kiro"
             }
           ]
@@ -1945,40 +1960,50 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 124,
+          "articleCount": 129,
           "articles": [
             {
-              "title": "이천시, 6·7급 공무원 대상 반도체 현장교육 실시",
-              "url": "https://www.etnews.com/20260829000027",
-              "source": "전자신문 AI"
+              "title": "[특별기고] AI 데이터센터를 제2의 반도체 신화로",
+              "url": "https://n.news.naver.com/mnews/article/030/0003461596",
+              "source": "NAVER · 전자신문"
             },
             {
-              "title": "앤트로픽, 엔스케일 계약 이어 칩 스타트업 협상…컴퓨팅 용량 확보 '총력전'",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214604",
+              "title": "필요한 칩 조합해 쓰는 시대 … 韓 AI 반도체에 기회 열려",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727717",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "3차 ESS 시장 커지나…배터리 업계 셈법도 바뀐다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003461609",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "“한국 AI 반도체 골든타임 3년…AMD와 설계 단계부터 같이 짜야”",
+              "url": "https://n.news.naver.com/mnews/article/009/0005727814",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "\"AI가 AI 칩을 만든다\"...'핫칩스 2026'서 확인된 반도체 설계의 대변혁",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214627",
               "source": "AI타임스"
-            },
-            {
-              "title": "[AI 이슈트렌드] 엔비디아 호재 안 통한 삼전·하이닉스…박위 사고·제주 실종 파장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214606",
-              "source": "AI타임스"
-            },
-            {
-              "title": "Nvidia’s AI advantage is moving beyond the GPU",
-              "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-              "source": "TechCrunch"
-            },
-            {
-              "title": "SK스퀘어엔 ‘하이닉스’ 있는데…쪼개는 카카오 ‘국민 메신저’ 한계 넘을까",
-              "url": "https://n.news.naver.com/mnews/article/243/0000102318",
-              "source": "NAVER · 이코노미스트"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 22,
+          "articleCount": 24,
           "articles": [
+            {
+              "title": "샘 올트먼, ‘앙숙’ 머스크가 인수한 코딩 도구 ‘커서’와 결별 선언",
+              "url": "https://n.news.naver.com/mnews/article/023/0003995671",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "오픈AI, 스페이스X 인수된 커서 계약 해지…머스크, “사기꾼” 비난",
+              "url": "https://n.news.naver.com/mnews/article/056/0012247244",
+              "source": "NAVER · KBS"
+            },
             {
               "title": "오픈AI, 스페이스X 인수 '커서'에 모델 제공 중단...머스크와 갈등 격화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214610",
@@ -1993,16 +2018,6 @@
               "title": "Our decision on Cursor following its acquisition by SpaceX",
               "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
               "source": "OpenAI"
-            },
-            {
-              "title": "NIA, AI 정부 실험실 이용자 설명회 개최…공공 AX 활성화 추진",
-              "url": "https://www.etnews.com/20260828000246",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "구글, '제미나이 3.8 플래시' 내부 테스트 포착...'월간 출시' 속도전",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214546",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2110,12 +2125,12 @@
           ],
           "sharedTopics": [
             {
-              "topic": "Nvidia",
+              "topic": "AI Agent",
               "koreaCount": 1,
               "globalCount": 1
             },
             {
-              "topic": "AI Agent",
+              "topic": "Nvidia",
               "koreaCount": 1,
               "globalCount": 1
             }
