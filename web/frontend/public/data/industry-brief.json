@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-30T21:56:35.410873+00:00",
+  "generated_at": "2026-08-30T23:05:28.414574+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-30T21:20:55.757472+00:00",
+      "generatedAt": "2026-08-30T23:00:13.606444+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 36,
+        "collected": 52,
         "analyzed": 0,
-        "pending": 36,
+        "pending": 52,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -205,22 +205,15 @@
           ]
         },
         {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
-              "url": "https://www.etnews.com/20260830000059",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "[모두의AI ㊤] SKT·KT·카카오 3곳 낙점… 업계 “국민 선택받는 품질 관건”",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239505",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
               "url": "https://n.news.naver.com/mnews/article/025/0003547748",
@@ -231,11 +224,28 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "“말하지 않아도 알아요”… 카톡 속 ‘5000만 AI 비서’ 어떻게 만들까 [핫 IT(잇)슈]",
+              "url": "https://n.news.naver.com/mnews/article/022/0004154966",
+              "source": "NAVER · 세계일보"
+            },
             {
               "title": "SKT·카카오·KT, '모두의 AI' 개발 시동…1000만 MAU 목표",
               "url": "https://www.etnews.com/20260828000220",
+              "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
+              "url": "https://www.etnews.com/20260830000059",
               "source": "전자신문 AI"
             }
           ]
@@ -266,13 +276,13 @@
     },
     "3d": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-30T21:20:55.757472+00:00",
+      "generatedAt": "2026-08-30T23:00:13.606444+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 663,
+        "collected": 672,
         "analyzed": 0,
-        "pending": 663,
+        "pending": 672,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -475,8 +485,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 45,
+          "articleCount": 35,
           "articles": [
+            {
+              "title": "“말하지 않아도 알아요”… 카톡 속 ‘5000만 AI 비서’ 어떻게 만들까 [핫 IT(잇)슈]",
+              "url": "https://n.news.naver.com/mnews/article/022/0004154966",
+              "source": "NAVER · 세계일보"
+            },
             {
               "title": "SKT·카카오·KT, '모두의 AI' 개발 시동…1000만 MAU 목표",
               "url": "https://www.etnews.com/20260828000220",
@@ -496,18 +511,13 @@
               "title": "3차 ESS 시장 커지나…배터리 업계 셈법도 바뀐다",
               "url": "https://n.news.naver.com/mnews/article/030/0003461609",
               "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "“한국 AI 반도체 골든타임 3년…AMD와 설계 단계부터 같이 짜야”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005727814",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 30,
+          "articleCount": 24,
           "articles": [
             {
               "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
@@ -539,8 +549,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 20,
+          "articleCount": 19,
           "articles": [
+            {
+              "title": "[모두의AI ㊤] SKT·KT·카카오 3곳 낙점… 업계 “국민 선택받는 품질 관건”",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239505",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
               "url": "https://n.news.naver.com/mnews/article/025/0003547748",
@@ -559,11 +574,6 @@
             {
               "title": "소니·워너, 앤트로픽에 저작권 소송...\"클로드 훈련용 음악 무단 취득\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214614",
-              "source": "AI타임스"
-            },
-            {
-              "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
               "source": "AI타임스"
             }
           ]
@@ -694,13 +704,13 @@
     },
     "week": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-30T21:20:55.757472+00:00",
+      "generatedAt": "2026-08-30T23:00:13.606444+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 36,
+        "collected": 52,
         "analyzed": 0,
-        "pending": 36,
+        "pending": 52,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -896,22 +906,15 @@
           ]
         },
         {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
-              "url": "https://www.etnews.com/20260830000059",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "[모두의AI ㊤] SKT·KT·카카오 3곳 낙점… 업계 “국민 선택받는 품질 관건”",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239505",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
               "url": "https://n.news.naver.com/mnews/article/025/0003547748",
@@ -922,11 +925,28 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "“말하지 않아도 알아요”… 카톡 속 ‘5000만 AI 비서’ 어떻게 만들까 [핫 IT(잇)슈]",
+              "url": "https://n.news.naver.com/mnews/article/022/0004154966",
+              "source": "NAVER · 세계일보"
+            },
             {
               "title": "SKT·카카오·KT, '모두의 AI' 개발 시동…1000만 MAU 목표",
               "url": "https://www.etnews.com/20260828000220",
+              "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
+              "url": "https://www.etnews.com/20260830000059",
               "source": "전자신문 AI"
             }
           ]

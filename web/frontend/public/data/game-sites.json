@@ -6,8 +6,8 @@
     "MICROSITE",
     "PROMOTION"
   ],
-  "total": 197,
-  "last_refreshed_at": "2026-08-30T21:56:34.447894+00:00",
+  "total": 196,
+  "last_refreshed_at": "2026-08-30T23:05:27.509693+00:00",
   "refreshed_site_count": 0,
   "sites": [
     {
@@ -2155,22 +2155,6 @@
       "verified_at": "2026-08-25T06:21:25.370295+00:00"
     },
     {
-      "id": "portal:INVEN_CALENDAR:163",
-      "game_name": "그레이브 시즌",
-      "site_name": "Dazed Games",
-      "site_type": "OFFICIAL",
-      "url": "https://www.perfectgarbage.com/grave-seasons",
-      "thumbnail_url": "data/thumbnails/game_sites/7174285f9923a579a019aa52.png",
-      "publisher": null,
-      "platform": [],
-      "discovered_at": "2026-08-25T06:21:25.370295+00:00",
-      "published_on": null,
-      "source": "OFFICIAL_PORTAL:INVEN_CALENDAR",
-      "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
-      "status": "ACTIVE",
-      "verified_at": "2026-08-25T06:21:25.370295+00:00"
-    },
-    {
       "id": "portal:NEXON:1",
       "game_name": "메이플 키우기",
       "site_name": "메이플 키우기",
@@ -2268,19 +2252,19 @@
     },
     {
       "id": "portal:NETMARBLE:7",
-      "game_name": "나 혼자만 레벨업: 어라이즈 오버드라이브",
-      "site_name": "나 혼자만 레벨업: 어라이즈 오버드라이브",
+      "game_name": "세븐나이츠 키우기",
+      "site_name": "세븐나이츠 키우기",
       "site_type": "OFFICIAL",
-      "url": "https://slvariseoverdrive.netmarble.com/ko",
-      "thumbnail_url": "data/thumbnails/game_sites/9de0e86d5eda4e9c3bf24c2e.jpg",
+      "url": "https://skidle.netmarble.com/",
+      "thumbnail_url": "data/thumbnails/game_sites/2bec58ce7922a238a7981904.jpg",
       "publisher": "NETMARBLE",
       "platform": [],
-      "discovered_at": "2026-08-24T23:59:11.163895+00:00",
+      "discovered_at": "2026-08-30T23:03:19.495108+00:00",
       "published_on": null,
       "source": "OFFICIAL_PORTAL:NETMARBLE",
       "evidence_url": "https://www.netmarble.net/",
       "status": "ACTIVE",
-      "verified_at": "2026-08-24T23:59:11.163895+00:00"
+      "verified_at": "2026-08-30T23:03:19.495108+00:00"
     },
     {
       "id": "portal:KAKAO_GAMES:8",
