@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-30T18:26:48.187006+00:00",
+  "generated_at": "2026-08-30T21:25:06.087866+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-30T16:52:33.642361+00:00",
+      "generatedAt": "2026-08-30T21:20:55.757472+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 17,
+        "collected": 36,
         "analyzed": 0,
-        "pending": 17,
+        "pending": 36,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -180,8 +180,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775912&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "[중소기업 AI 상담 전환, 온피아④·끝]콜센터 AI도 구독형 시대…좌석당 월 10만원대",
               "url": "https://www.etnews.com/20260828000062",
@@ -208,6 +213,18 @@
               "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
               "url": "https://www.etnews.com/20260830000059",
               "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
+              "url": "https://n.news.naver.com/mnews/article/025/0003547748",
+              "source": "NAVER · 중앙일보"
             }
           ]
         },
@@ -249,13 +266,13 @@
     },
     "3d": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-30T16:52:33.642361+00:00",
+      "generatedAt": "2026-08-30T21:20:55.757472+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 670,
+        "collected": 664,
         "analyzed": 0,
-        "pending": 670,
+        "pending": 664,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -490,8 +507,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 29,
+          "articleCount": 30,
           "articles": [
+            {
+              "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775912&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "[중소기업 AI 상담 전환, 온피아④·끝]콜센터 AI도 구독형 시대…좌석당 월 10만원대",
               "url": "https://www.etnews.com/20260828000062",
@@ -511,19 +533,19 @@
               "title": "KT, 서울대·KAIST와 AI 공동연구 최종 성과 공유...핵심 기술 내재화 추진",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214609",
               "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 19,
+          "articleCount": 20,
           "articles": [
+            {
+              "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
+              "url": "https://n.news.naver.com/mnews/article/025/0003547748",
+              "source": "NAVER · 중앙일보"
+            },
             {
               "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
@@ -542,11 +564,6 @@
             {
               "title": "320B '옥스 알파'를 PC서 구동…'GLM-5.3-플래시' 용량 81% 줄여",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214598",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 구매한 전자책과 '제미나이 노트북' 연결…‘전문가 인텔리전스’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214600",
               "source": "AI타임스"
             }
           ]
@@ -616,18 +633,74 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        }
+      ]
     },
     "week": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-30T16:52:33.642361+00:00",
+      "generatedAt": "2026-08-30T21:20:55.757472+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 17,
+        "collected": 36,
         "analyzed": 0,
-        "pending": 17,
+        "pending": 36,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -798,8 +871,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775912&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "[중소기업 AI 상담 전환, 온피아④·끝]콜센터 AI도 구독형 시대…좌석당 월 10만원대",
               "url": "https://www.etnews.com/20260828000062",
@@ -826,6 +904,18 @@
               "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
               "url": "https://www.etnews.com/20260830000059",
               "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
+              "url": "https://n.news.naver.com/mnews/article/025/0003547748",
+              "source": "NAVER · 중앙일보"
             }
           ]
         },
