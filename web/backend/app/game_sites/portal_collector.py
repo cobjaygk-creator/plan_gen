@@ -91,7 +91,23 @@ def _fetch(url: str, *, insecure: bool = False) -> tuple[bytes, str]:
     req = Request(url, headers=headers)
     opener = _INSECURE_OPENER if insecure else _OPENER
     with opener.open(req, timeout=25) as response:
-        return response.read(2_000_000), response.headers.get_content_charset() or "utf-8"
+        raw = response.read(2_000_000)
+        charset = response.headers.get_content_charset()
+        if charset is None:
+            # No Content-Type charset (confirmed live: several legacy
+            # *.netmarble.net mini-sites — ma9/baduk/modoo/game2/chat/dho/
+            # cmind — send none at all). Defaulting straight to utf-8 there
+            # silently corrupted every title into replacement characters
+            # once decoded with errors="replace", since the pages are
+            # actually EUC-KR. Real UTF-8 always round-trips through a
+            # strict decode; EUC-KR/CP949 Korean text essentially never
+            # does, so this disambiguates without hardcoding hostnames.
+            try:
+                raw.decode("utf-8")
+                charset = "utf-8"
+            except UnicodeDecodeError:
+                charset = "cp949"
+        return raw, charset
 
 
 def _normalize_url(value: str) -> str | None:
