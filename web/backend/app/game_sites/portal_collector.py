@@ -145,16 +145,41 @@ def _collect_nexon() -> list[dict]:
 
 
 def _collect_netmarble() -> list[dict]:
-    raw, charset = _fetch(PORTALS["NETMARBLE"])
-    soup = BeautifulSoup(raw.decode(charset, "replace"), "html.parser")
+    """Only titles that publish a distinct official homepage — confirmed
+    live via a per-game page (netmarble.net/mobile/<code>), each of which
+    lists 구글플레이/앱스토어/커뮤니티/공식홈페이지 as separate links when
+    they exist. The previous approach scraped netmarble.net's root-page
+    "PC game" quick-links widget, which mostly pointed at Netmarble's own
+    legacy single-page PC minigame microsites (ma9/baduk/modoo/game2/...)
+    that have no real official-homepage concept — not what "사이트 모음"
+    is meant to catalog, and the source of a separate encoding bug fixed
+    earlier. The game list itself is a `var gameListByPouplar = [...]`
+    JSON blob embedded in /mobile/'s own HTML (no separate API call, no
+    JS rendering needed)."""
+    raw, charset = _fetch(f"{PORTALS['NETMARBLE']}mobile/")
+    match = re.search(r"var\s+gameListByPouplar\s*=\s*(\[.*?\]);", raw.decode(charset, "replace"), re.S)
+    if not match:
+        return []
+    try:
+        games = json.loads(match.group(1))
+    except json.JSONDecodeError:
+        return []
     rows = []
-    for anchor in soup.select('a[data-trcode="pc_pcgame_link"][href]'):
-        url = _normalize_url(anchor.get("href", ""))
-        if not url or not urlparse(url).netloc.lower().endswith(("netmarble.com", "netmarble.net")):
+    for game in games:
+        detail_url = game.get("siteUrl")
+        game_name = game.get("gameName")
+        if not detail_url or not game_name:
             continue
-        title = anchor.select_one(".title")
-        image = anchor.select_one("img")
-        rows.append({"url": url, "game_name": title.get_text(" ", strip=True) if title else urlparse(url).netloc.split(".")[0], "publisher": "NETMARBLE", "published_on": None, "thumbnail_url": image.get("src") if image else None, "portal": "NETMARBLE"})
+        try:
+            detail_raw, detail_charset = _fetch(detail_url)
+            detail_soup = BeautifulSoup(detail_raw.decode(detail_charset, "replace"), "html.parser")
+            home_anchor = detail_soup.select_one("a:has(span.ico.home)")
+            official_url = _normalize_url(home_anchor.get("href", "")) if home_anchor else None
+        except Exception:
+            official_url = None
+        if not official_url:
+            continue
+        rows.append({"url": official_url, "game_name": game_name, "publisher": "NETMARBLE", "published_on": None, "thumbnail_url": game.get("thumbMobile"), "portal": "NETMARBLE"})
     return rows
 
 
