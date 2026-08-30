@@ -7,7 +7,7 @@
     "PROMOTION"
   ],
   "total": 196,
-  "last_refreshed_at": "2026-08-30T21:56:34.447894+00:00",
+  "last_refreshed_at": "2026-08-30T23:05:27.509693+00:00",
   "refreshed_site_count": 0,
   "sites": [
     {
@@ -2477,7 +2477,7 @@
     {
       "id": "portal:INVEN_CALENDAR:163",
       "game_name": "그레이브 시즌",
-      "site_name": "Dazed Games",
+      "site_name": "GRAVE SEASONS — Perfect Garbage",
       "site_type": "OFFICIAL",
       "url": "https://www.perfectgarbage.com/grave-seasons",
       "thumbnail_url": "data/thumbnails/game_sites/7174285f9923a579a019aa52.png",
