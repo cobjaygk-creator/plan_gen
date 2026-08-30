@@ -2818,7 +2818,7 @@
   {
     "id": "portal:NETMARBLE:177",
     "game_name": "ma9",
-    "site_name": "�ݸ��� ��������",
+    "site_name": "넷마블 마구마구",
     "site_type": "OFFICIAL",
     "url": "https://ma9.netmarble.net/main.asp",
     "thumbnail_url": "//c3.img.netmarble.kr/web/cp2/ma9/v2/img/common/190904_open.jpg",
@@ -2834,7 +2834,7 @@
   {
     "id": "portal:NETMARBLE:178",
     "game_name": "baduk",
-    "site_name": "�ݸ��� | �ݸ��� �ٵ�",
+    "site_name": "넷마블 | 넷마블 바둑",
     "site_type": "OFFICIAL",
     "url": "https://baduk.netmarble.net/",
     "thumbnail_url": null,
@@ -2850,7 +2850,7 @@
   {
     "id": "portal:NETMARBLE:179",
     "game_name": "modoo",
-    "site_name": "�ݸ��� - �����赵�ø� �����϶�! ����Ǹ���",
+    "site_name": "넷마블 - 전세계도시를 소유하라! 모두의마블",
     "site_type": "OFFICIAL",
     "url": "https://modoo.netmarble.net/",
     "thumbnail_url": null,
@@ -2866,7 +2866,7 @@
   {
     "id": "portal:NETMARBLE:180",
     "game_name": "game2",
-    "site_name": "�ݸ��� - ���� �γ� �ܷ� ����. ������",
+    "site_name": "넷마블 - 무한 두뇌 단련 게임. 상하이",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/shanghai",
     "thumbnail_url": null,
@@ -2882,7 +2882,7 @@
   {
     "id": "portal:NETMARBLE:181",
     "game_name": "game2",
-    "site_name": "�ݸ��� ��õ��",
+    "site_name": "넷마블 사천성",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/Sachunsung",
     "thumbnail_url": null,
@@ -2898,7 +2898,7 @@
   {
     "id": "portal:NETMARBLE:182",
     "game_name": "chat",
-    "site_name": "�ݸ��� - ���� ���� �ο� ĳ��ê",
+    "site_name": "넷마블 - 마법 같은 인연 캐릭챗",
     "site_type": "OFFICIAL",
     "url": "https://chat.netmarble.net/famchat",
     "thumbnail_url": null,
@@ -2914,7 +2914,7 @@
   {
     "id": "portal:NETMARBLE:183",
     "game_name": "dho",
-    "site_name": "�ݸ��� - ���ο� �ô��� �׷ΰ� ������. �����ؽô� �¶��� Gran Atlas",
+    "site_name": "넷마블 - 새로운 시대의 항로가 열린다. 대항해시대 온라인 Gran Atlas",
     "site_type": "OFFICIAL",
     "url": "https://dho.netmarble.net/main.asp",
     "thumbnail_url": null,
@@ -2930,7 +2930,7 @@
   {
     "id": "portal:NETMARBLE:184",
     "game_name": "cmind",
-    "site_name": "�ݸ��� - ĳġ���ε�",
+    "site_name": "넷마블 - 캐치마인드",
     "site_type": "OFFICIAL",
     "url": "https://cmind.netmarble.net/main.asp",
     "thumbnail_url": null,
@@ -2946,7 +2946,7 @@
   {
     "id": "portal:NETMARBLE:185",
     "game_name": "game2",
-    "site_name": "�ݸ��� - ���������� ����, ��Ʋ���μ���+",
+    "site_name": "넷마블 - 낱말퀴즈의 진수, 배틀가로세로+",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/igame/bcrossplus",
     "thumbnail_url": null,
@@ -2962,7 +2962,7 @@
   {
     "id": "portal:NETMARBLE:186",
     "game_name": "avatar",
-    "site_name": "�ݸ��� - ���� ������ ��ſ�, �ݸ��� �ƹ�Ÿ!",
+    "site_name": "넷마블 - 무한 변신의 즐거움, 넷마블 아바타!",
     "site_type": "OFFICIAL",
     "url": "https://avatar.netmarble.net/",
     "thumbnail_url": null,
@@ -2978,7 +2978,7 @@
   {
     "id": "portal:NETMARBLE:187",
     "game_name": "game2",
-    "site_name": "�ݸ��� - ��Ÿ�̵��� �º�. �Ŀ��˱��",
+    "site_name": "넷마블 - 일타이득의 승부. 파워알까기",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/poweral",
     "thumbnail_url": null,
@@ -2994,7 +2994,7 @@
   {
     "id": "portal:NETMARBLE:188",
     "game_name": "game2",
-    "site_name": "�ݸ��� ������",
+    "site_name": "넷마블 윷놀이",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/yutgame",
     "thumbnail_url": null,
@@ -3010,7 +3010,7 @@
   {
     "id": "portal:NETMARBLE:189",
     "game_name": "game2",
-    "site_name": "�ݸ��� - 10�� ����� �ֻ����������. ��ġ����",
+    "site_name": "넷마블 - 10억 만들기 주사위보드게임. 리치마블",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/igame/richmarble",
     "thumbnail_url": null,
@@ -3026,7 +3026,7 @@
   {
     "id": "portal:NETMARBLE:190",
     "game_name": "yaburi",
-    "site_name": "�ݸ��� - ����߶� ���߿� �Բ��ϴ� ����쵹 ����� , ��ä�ζ���",
+    "site_name": "넷마블 - 엽기발랄 쿵야와 함께하는 좌충우돌 모험기 , 야채부락리",
     "site_type": "OFFICIAL",
     "url": "https://yaburi.netmarble.net/",
     "thumbnail_url": null,
@@ -3042,7 +3042,7 @@
   {
     "id": "portal:NETMARBLE:191",
     "game_name": "game2",
-    "site_name": "�ݸ��� - ����� �����ձ�. �Ŀ�������",
+    "site_name": "넷마블 - 사랑의 끝말잇기. 파워쿵쿵따",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/kkoongda",
     "thumbnail_url": null,
@@ -3058,7 +3058,7 @@
   {
     "id": "portal:NETMARBLE:192",
     "game_name": "game2",
-    "site_name": "�ݸ��� - ���ѹα� ǥ������ ä��, �ݸ������",
+    "site_name": "넷마블 - 대한민국 표준장기룰 채택, 넷마블장기",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/igame/janggi",
     "thumbnail_url": null,
@@ -3074,7 +3074,7 @@
   {
     "id": "portal:NETMARBLE:193",
     "game_name": "game2",
-    "site_name": "�ݸ��� - ����� �Բ��ϴ� Ʋ���׸�ã��",
+    "site_name": "넷마블 - 꼼즈와 함께하는 틀린그림찾기",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/igame/picture",
     "thumbnail_url": null,
@@ -3090,7 +3090,7 @@
   {
     "id": "portal:NETMARBLE:194",
     "game_name": "game2",
-    "site_name": "�ݸ��� - �κ����� �Ŀ� ����. ���Ʈ���",
+    "site_name": "넷마블 - 로봇들의 파워 전투. 어썰트기어",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/assult",
     "thumbnail_url": null,
@@ -3106,7 +3106,7 @@
   {
     "id": "portal:NETMARBLE:195",
     "game_name": "game2",
-    "site_name": "�ݸ��� - 5���� ���� ������ ����, �ݸ�������",
+    "site_name": "넷마블 - 5줄을 향한 무한한 도전, 넷마블오목",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/omok",
     "thumbnail_url": null,
@@ -3122,7 +3122,7 @@
   {
     "id": "portal:NETMARBLE:196",
     "game_name": "game2",
-    "site_name": "�ݸ��� - �ְ��� �㽽������ �𿴴�. �ݸ��� �籸",
+    "site_name": "넷마블 - 최고의 허슬러들이 모였다. 넷마블 당구",
     "site_type": "OFFICIAL",
     "url": "https://game2.netmarble.net/igame/bill4",
     "thumbnail_url": null,
