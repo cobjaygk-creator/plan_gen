@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T14:49:05.832756+00:00",
+  "generated_at": "2026-08-31T20:41:43.349300+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-31",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 289,
+        "collected": 13,
         "analyzed": 0,
-        "pending": 289,
+        "pending": 13,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,14 +20,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.23",
             "08.24",
             "08.25",
             "08.26",
             "08.27",
             "08.28",
             "08.29",
-            "08.30"
+            "08.30",
+            "08.31"
           ],
           "series": [],
           "bucket": "일간"
@@ -112,14 +112,14 @@
         },
         {
           "category": "GAME",
-          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
-          "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1",
-          "publishedDate": "2026.08.24"
+          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "publishedDate": "2026.08.25"
         },
         {
           "category": "GAME",
-          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319882",
           "publishedDate": "2026.08.25"
         },
         {
@@ -176,136 +176,7 @@
           }
         ]
       },
-      "techRadar": [
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 16,
-          "articles": [
-            {
-              "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
-              "url": "https://www.etnews.com/20260831000301",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "엘리스그룹, IPO 자금 활용 '모듈 데이터센터' 전국 확대한다",
-              "url": "https://www.etnews.com/20260831000262",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
-              "source": "AI타임스"
-            },
-            {
-              "title": "솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214654",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 11,
-          "articles": [
-            {
-              "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728331",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951273",
-              "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "AI 독립이냐 협력이냐…K-NPU '딜레마'",
-              "url": "https://n.news.naver.com/mnews/article/015/0005326892",
-              "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "[기고] AI 시대의 데이터 주권, 국내 데이터 플랫폼 경쟁력에 달렸다",
-              "url": "https://www.etnews.com/20260831000133",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "메타, AI 전용 통신 규격 ‘메타RoCE’ 공개…수십만 GPU 네트워크 병목 잡는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214618",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 9,
-          "articles": [
-            {
-              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
-              "source": "AI타임스"
-            },
-            {
-              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
-              "source": "AI타임스"
-            },
-            {
-              "title": "숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214661",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 7,
-          "articles": [
-            {
-              "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
-              "source": "AI타임스"
-            },
-            {
-              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
-              "url": "https://n.news.naver.com/mnews/article/003/0014158428",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "\"AI가 문제 너무 잘 풀어\"…넥슨, 10년 코딩대회 룰 갈아엎었다",
-              "url": "https://n.news.naver.com/mnews/article/003/0014157770",
-              "source": "NAVER · 뉴시스"
-            }
-          ]
-        }
-      ],
+      "techRadar": [],
       "marketComparison": [
         {
           "category": "GAME",
@@ -335,9 +206,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 639,
+        "collected": 598,
         "analyzed": 0,
-        "pending": 639,
+        "pending": 598,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -348,14 +219,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.23",
             "08.24",
             "08.25",
             "08.26",
             "08.27",
             "08.28",
             "08.29",
-            "08.30"
+            "08.30",
+            "08.31"
           ],
           "series": [],
           "bucket": "일간"
@@ -663,9 +534,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 289,
+        "collected": 305,
         "analyzed": 0,
-        "pending": 289,
+        "pending": 305,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -676,14 +547,14 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.23",
             "08.24",
             "08.25",
             "08.26",
             "08.27",
             "08.28",
             "08.29",
-            "08.30"
+            "08.30",
+            "08.31"
           ],
           "series": [],
           "bucket": "일간"
