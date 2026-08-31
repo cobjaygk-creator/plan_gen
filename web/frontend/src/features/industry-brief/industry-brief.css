@@ -875,12 +875,22 @@
   -webkit-line-clamp: 2;
 }
 /* clean product-console reference style */
+.ib-page-bg {
+  /* .content (AppShell.css) is flex:1 with overflow:auto, so it's usually
+     much wider than the 1200px content column below — without this, that
+     leaves plain white margins on both sides on any wide viewport instead
+     of the warm tone reaching edge to edge. overflow:auto also rules out
+     the box-shadow-spread full-bleed trick, so this wraps .ib-stack in an
+     actual 100%-width element instead. */
+  width: 100%;
+  min-height: 100%;
+  background: var(--ib-paper);
+}
 .ib-stack {
   max-width: 1200px;
   margin: 0 auto;
   padding: 28px 22px 44px;
   gap: 14px;
-  background: var(--ib-paper);
   color: var(--ib-ink);
 }
 .ib-stack .card {

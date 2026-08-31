@@ -113,6 +113,7 @@ export function IndustryBriefView() {
   const aiTopIssue = highlights?.ai.coreIssues[0];
 
   return (
+    <div className="ib-page-bg">
     <div className="ib-stack">
       <IndustrySubmenu active={activeScreen} onChange={setActiveScreen} />
       <header className="ib-page-header">
@@ -179,6 +180,7 @@ export function IndustryBriefView() {
       {activeScreen === "tech" && <TechRadarPanel items={brief.techRadar ?? []} />}
 
       {activeScreen === "trend" && <SignalsPanel signals={brief.signals} limit={30} />}
+    </div>
     </div>
   );
 }
