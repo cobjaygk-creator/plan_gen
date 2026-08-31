@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-31T06:34:45.544291+00:00",
+  "generated_at": "2026-08-31T14:12:42.735966+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-31T05:51:04.841545+00:00",
+      "generatedAt": "2026-08-31T14:08:04.247947+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 179,
+        "collected": 287,
         "analyzed": 0,
-        "pending": 179,
+        "pending": 287,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -180,72 +180,119 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 7,
+          "articleCount": 16,
           "articles": [
             {
-              "title": "[알림] AI 네이티브 시대 기업 혁신 전략 모색…'CAIO 서밋 2026' 개최",
-              "url": "https://www.etnews.com/20260831000228",
+              "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
+              "url": "https://www.etnews.com/20260831000301",
               "source": "전자신문 AI"
             },
             {
-              "title": "이스트소프트, 대국민 AI '알비서' 하반기 선보인다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214638",
-              "source": "AI타임스"
-            },
-            {
-              "title": "KT, 우리은행 ‘AI 챗봇·상담봇’ 구축...\"에이전트로 막힘 없는 금융 상담\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214634",
-              "source": "AI타임스"
-            },
-            {
-              "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775912&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "[중소기업 AI 상담 전환, 온피아④·끝]콜센터 AI도 구독형 시대…좌석당 월 10만원대",
-              "url": "https://www.etnews.com/20260828000062",
+              "title": "엘리스그룹, IPO 자금 활용 '모듈 데이터센터' 전국 확대한다",
+              "url": "https://www.etnews.com/20260831000262",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
+              "source": "AI타임스"
+            },
+            {
+              "title": "솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214654",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 5,
+          "articleCount": 11,
           "articles": [
             {
-              "title": "젠슨 황 \"AI가 美 제조업 되살린다…다음 산업혁명 이끌 기회\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053787",
-              "source": "NAVER · 아이뉴스24"
+              "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728331",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "퀄컴, 산업용 AI·로봇 공략 확대…삼성·현대차 등 500명 집결",
-              "url": "https://n.news.naver.com/mnews/article/008/0005407121",
-              "source": "NAVER · 머니투데이"
+              "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
+              "url": "https://n.news.naver.com/mnews/article/469/0000951273",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "빅테크, 스타트업 지분 평가이익으로 220조 횡재…월가 \"착시 현상\" 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214646",
+              "title": "AI 독립이냐 협력이냐…K-NPU '딜레마'",
+              "url": "https://n.news.naver.com/mnews/article/015/0005326892",
+              "source": "NAVER · 한국경제"
+            },
+            {
+              "title": "[기고] AI 시대의 데이터 주권, 국내 데이터 플랫폼 경쟁력에 달렸다",
+              "url": "https://www.etnews.com/20260831000133",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "메타, AI 전용 통신 규격 ‘메타RoCE’ 공개…수십만 GPU 네트워크 병목 잡는다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214618",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 9,
+          "articles": [
+            {
+              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
               "source": "AI타임스"
             },
             {
-              "title": "“말하지 않아도 알아요”… 카톡 속 ‘5000만 AI 비서’ 어떻게 만들까 [핫 IT(잇)슈]",
-              "url": "https://n.news.naver.com/mnews/article/022/0004154966",
-              "source": "NAVER · 세계일보"
+              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "source": "AI타임스"
             },
             {
-              "title": "SKT·카카오·KT, '모두의 AI' 개발 시동…1000만 MAU 목표",
-              "url": "https://www.etnews.com/20260828000220",
-              "source": "전자신문 AI"
+              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
+              "source": "AI타임스"
+            },
+            {
+              "title": "숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214661",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 4,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
+              "source": "AI타임스"
+            },
+            {
+              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
               "url": "https://n.news.naver.com/mnews/article/003/0014158428",
@@ -255,43 +302,6 @@
               "title": "\"AI가 문제 너무 잘 풀어\"…넥슨, 10년 코딩대회 룰 갈아엎었다",
               "url": "https://n.news.naver.com/mnews/article/003/0014157770",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "AI는 연구의 속도와 방법 바꾸는 핵심 도구...AI 연구혁신 세미나 개최 - 생성형 AI·바이브 코딩 등 연구현장 실제 적용 사례 및 활용 방안 공유",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776084&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
-              "url": "https://www.etnews.com/20260830000059",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "\"인공지능(AI)는 일자리 파괴자 아닌 직무 재구성의 파트너… '인간 중심 인공지능(AI) 발전전략' 세워야\" (한국고용정보원, 『고용이슈』 여름호 발간)",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776079&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "앤트로픽, 과학자용 '클로드 팀 플랜' 출시...1만명에 무료 제공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214650",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[모두의AI ㊤] SKT·KT·카카오 3곳 낙점… 업계 “국민 선택받는 품질 관건”",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239505",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003547748",
-              "source": "NAVER · 중앙일보"
             }
           ]
         }
@@ -321,13 +331,13 @@
     },
     "3d": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-31T05:51:04.841545+00:00",
+      "generatedAt": "2026-08-31T14:08:04.247947+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 629,
+        "collected": 644,
         "analyzed": 0,
-        "pending": 629,
+        "pending": 644,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -370,23 +380,7 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "'식스타 게이트: 스타트레일', 베리 멜로디(Berry Melody) 콜라보레이션 팩 발매",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "2026 LCK, 플레이오프행 두 자리 주인공 가린다",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -411,23 +405,7 @@
         ],
         "observations": [],
         "promotions": [],
-        "closedObservations": [
-          {
-            "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "이파피루스, 'AI정부 혁신 콘퍼런스'서 공공 맞춤형 문서 AI 솔루션 공개",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          },
-          {
-            "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
-            "closedAt": "2026-08-28T07:02:14.814460+00:00",
-            "reason": "72시간 동안 추가 근거나 교차 보도가 확인되지 않아 관찰을 종료했습니다."
-          }
-        ],
+        "closedObservations": [],
         "briefing": [
           "교차 확인된 핵심 이슈가 아직 없습니다."
         ],
@@ -530,95 +508,95 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 29,
+          "articleCount": 30,
           "articles": [
             {
-              "title": "젠슨 황 \"AI가 美 제조업 되살린다…다음 산업혁명 이끌 기회\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053787",
-              "source": "NAVER · 아이뉴스24"
+              "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728331",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "퀄컴, 산업용 AI·로봇 공략 확대…삼성·현대차 등 500명 집결",
-              "url": "https://n.news.naver.com/mnews/article/008/0005407121",
-              "source": "NAVER · 머니투데이"
+              "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
+              "url": "https://n.news.naver.com/mnews/article/469/0000951273",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "빅테크, 스타트업 지분 평가이익으로 220조 횡재…월가 \"착시 현상\" 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214646",
-              "source": "AI타임스"
+              "title": "AI 독립이냐 협력이냐…K-NPU '딜레마'",
+              "url": "https://n.news.naver.com/mnews/article/015/0005326892",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "“말하지 않아도 알아요”… 카톡 속 ‘5000만 AI 비서’ 어떻게 만들까 [핫 IT(잇)슈]",
-              "url": "https://n.news.naver.com/mnews/article/022/0004154966",
-              "source": "NAVER · 세계일보"
-            },
-            {
-              "title": "SKT·카카오·KT, '모두의 AI' 개발 시동…1000만 MAU 목표",
-              "url": "https://www.etnews.com/20260828000220",
+              "title": "[기고] AI 시대의 데이터 주권, 국내 데이터 플랫폼 경쟁력에 달렸다",
+              "url": "https://www.etnews.com/20260831000133",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "메타, AI 전용 통신 규격 ‘메타RoCE’ 공개…수십만 GPU 네트워크 병목 잡는다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214618",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 23,
+          "articleCount": 28,
           "articles": [
             {
-              "title": "[알림] AI 네이티브 시대 기업 혁신 전략 모색…'CAIO 서밋 2026' 개최",
-              "url": "https://www.etnews.com/20260831000228",
+              "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
+              "url": "https://www.etnews.com/20260831000301",
               "source": "전자신문 AI"
             },
             {
-              "title": "이스트소프트, 대국민 AI '알비서' 하반기 선보인다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214638",
-              "source": "AI타임스"
-            },
-            {
-              "title": "KT, 우리은행 ‘AI 챗봇·상담봇’ 구축...\"에이전트로 막힘 없는 금융 상담\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214634",
-              "source": "AI타임스"
-            },
-            {
-              "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775912&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "[중소기업 AI 상담 전환, 온피아④·끝]콜센터 AI도 구독형 시대…좌석당 월 10만원대",
-              "url": "https://www.etnews.com/20260828000062",
+              "title": "엘리스그룹, IPO 자금 활용 '모듈 데이터센터' 전국 확대한다",
+              "url": "https://www.etnews.com/20260831000262",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
+              "source": "AI타임스"
+            },
+            {
+              "title": "솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214654",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 20,
+          "articleCount": 21,
           "articles": [
             {
-              "title": "\"인공지능(AI)는 일자리 파괴자 아닌 직무 재구성의 파트너… '인간 중심 인공지능(AI) 발전전략' 세워야\" (한국고용정보원, 『고용이슈』 여름호 발간)",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776079&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "앤트로픽, 과학자용 '클로드 팀 플랜' 출시...1만명에 무료 제공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214650",
+              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
               "source": "AI타임스"
             },
             {
-              "title": "[모두의AI ㊤] SKT·KT·카카오 3곳 낙점… 업계 “국민 선택받는 품질 관건”",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239505",
-              "source": "NAVER · 디지털데일리"
+              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "source": "AI타임스"
             },
             {
-              "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003547748",
-              "source": "NAVER · 중앙일보"
+              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
+              "source": "AI타임스"
             },
             {
-              "title": "오픈AI, '코덱스' 용량 한계 보완 조치 단행…\"사용 효율 최대 50% 개선\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214613",
+              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
+              "source": "AI타임스"
+            },
+            {
+              "title": "숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214661",
               "source": "AI타임스"
             }
           ]
@@ -629,6 +607,21 @@
           "articleCount": 12,
           "articles": [
             {
+              "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
+              "source": "AI타임스"
+            },
+            {
+              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
+              "source": "AI타임스"
+            },
+            {
               "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
               "url": "https://n.news.naver.com/mnews/article/003/0014158428",
               "source": "NAVER · 뉴시스"
@@ -637,33 +630,6 @@
               "title": "\"AI가 문제 너무 잘 풀어\"…넥슨, 10년 코딩대회 룰 갈아엎었다",
               "url": "https://n.news.naver.com/mnews/article/003/0014157770",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "AI는 연구의 속도와 방법 바꾸는 핵심 도구...AI 연구혁신 세미나 개최 - 생성형 AI·바이브 코딩 등 연구현장 실제 적용 사례 및 활용 방안 공유",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776084&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
-              "url": "https://www.etnews.com/20260830000059",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "샘 올트먼, ‘앙숙’ 머스크가 인수한 코딩 도구 ‘커서’와 결별 선언",
-              "url": "https://n.news.naver.com/mnews/article/023/0003995671",
-              "source": "NAVER · 조선일보"
-            }
-          ]
-        },
-        {
-          "key": "media_gen",
-          "label": "이미지 · 영상 생성",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "구글, ‘제미나이 옴니 1.1 플래시’ 공개…영상 생성·편집 제어 기능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214576",
-              "source": "AI타임스"
             }
           ]
         }
@@ -693,13 +659,13 @@
     },
     "week": {
       "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-31T05:51:04.841545+00:00",
+      "generatedAt": "2026-08-31T14:08:04.247947+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 179,
+        "collected": 287,
         "analyzed": 0,
-        "pending": 179,
+        "pending": 287,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -870,72 +836,119 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 7,
+          "articleCount": 16,
           "articles": [
             {
-              "title": "[알림] AI 네이티브 시대 기업 혁신 전략 모색…'CAIO 서밋 2026' 개최",
-              "url": "https://www.etnews.com/20260831000228",
+              "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
+              "url": "https://www.etnews.com/20260831000301",
               "source": "전자신문 AI"
             },
             {
-              "title": "이스트소프트, 대국민 AI '알비서' 하반기 선보인다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214638",
-              "source": "AI타임스"
-            },
-            {
-              "title": "KT, 우리은행 ‘AI 챗봇·상담봇’ 구축...\"에이전트로 막힘 없는 금융 상담\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214634",
-              "source": "AI타임스"
-            },
-            {
-              "title": "법제처, 미래 신기술과 인공지능(AI) 활용 관련  토론의 장 열어",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775912&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "[중소기업 AI 상담 전환, 온피아④·끝]콜센터 AI도 구독형 시대…좌석당 월 10만원대",
-              "url": "https://www.etnews.com/20260828000062",
+              "title": "엘리스그룹, IPO 자금 활용 '모듈 데이터센터' 전국 확대한다",
+              "url": "https://www.etnews.com/20260831000262",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
+              "source": "AI타임스"
+            },
+            {
+              "title": "솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214654",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 5,
+          "articleCount": 11,
           "articles": [
             {
-              "title": "젠슨 황 \"AI가 美 제조업 되살린다…다음 산업혁명 이끌 기회\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001053787",
-              "source": "NAVER · 아이뉴스24"
+              "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728331",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "퀄컴, 산업용 AI·로봇 공략 확대…삼성·현대차 등 500명 집결",
-              "url": "https://n.news.naver.com/mnews/article/008/0005407121",
-              "source": "NAVER · 머니투데이"
+              "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
+              "url": "https://n.news.naver.com/mnews/article/469/0000951273",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "빅테크, 스타트업 지분 평가이익으로 220조 횡재…월가 \"착시 현상\" 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214646",
+              "title": "AI 독립이냐 협력이냐…K-NPU '딜레마'",
+              "url": "https://n.news.naver.com/mnews/article/015/0005326892",
+              "source": "NAVER · 한국경제"
+            },
+            {
+              "title": "[기고] AI 시대의 데이터 주권, 국내 데이터 플랫폼 경쟁력에 달렸다",
+              "url": "https://www.etnews.com/20260831000133",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "메타, AI 전용 통신 규격 ‘메타RoCE’ 공개…수십만 GPU 네트워크 병목 잡는다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214618",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 9,
+          "articles": [
+            {
+              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
               "source": "AI타임스"
             },
             {
-              "title": "“말하지 않아도 알아요”… 카톡 속 ‘5000만 AI 비서’ 어떻게 만들까 [핫 IT(잇)슈]",
-              "url": "https://n.news.naver.com/mnews/article/022/0004154966",
-              "source": "NAVER · 세계일보"
+              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "source": "AI타임스"
             },
             {
-              "title": "SKT·카카오·KT, '모두의 AI' 개발 시동…1000만 MAU 목표",
-              "url": "https://www.etnews.com/20260828000220",
-              "source": "전자신문 AI"
+              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
+              "source": "AI타임스"
+            },
+            {
+              "title": "숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214661",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 4,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
+              "source": "AI타임스"
+            },
+            {
+              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
+              "source": "AI타임스"
+            },
+            {
+              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
               "url": "https://n.news.naver.com/mnews/article/003/0014158428",
@@ -945,43 +958,6 @@
               "title": "\"AI가 문제 너무 잘 풀어\"…넥슨, 10년 코딩대회 룰 갈아엎었다",
               "url": "https://n.news.naver.com/mnews/article/003/0014157770",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "AI는 연구의 속도와 방법 바꾸는 핵심 도구...AI 연구혁신 세미나 개최 - 생성형 AI·바이브 코딩 등 연구현장 실제 적용 사례 및 활용 방안 공유",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776084&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "오픈AI, 스페이스X 인수된 '커서' 계약해지…올트먼·머스크 또 신경전",
-              "url": "https://www.etnews.com/20260830000059",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "\"인공지능(AI)는 일자리 파괴자 아닌 직무 재구성의 파트너… '인간 중심 인공지능(AI) 발전전략' 세워야\" (한국고용정보원, 『고용이슈』 여름호 발간)",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776079&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "앤트로픽, 과학자용 '클로드 팀 플랜' 출시...1만명에 무료 제공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214650",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[모두의AI ㊤] SKT·KT·카카오 3곳 낙점… 업계 “국민 선택받는 품질 관건”",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239505",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "“클로드가 테일러 스위프트 곡으로 AI 학습”…음반사들, 저작권 소송 [팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003547748",
-              "source": "NAVER · 중앙일보"
             }
           ]
         }
