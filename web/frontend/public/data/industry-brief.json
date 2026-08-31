@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-31T20:41:43.349300+00:00",
+  "generated_at": "2026-08-31T23:05:26.379996+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-31T14:08:04.247947+00:00",
+      "briefDate": "2026-09-01",
+      "generatedAt": "2026-08-31T23:01:08.376036+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 13,
+        "collected": 78,
         "analyzed": 0,
-        "pending": 13,
+        "pending": 78,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -176,7 +176,42 @@
           }
         ]
       },
-      "techRadar": [],
+      "techRadar": [
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239657",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "[8월31일] 엔비디아 피지컬 AI, ‘미래 전략’에서 사업으로…중국이 핵심 시장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214642",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
+              "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
+              "source": "TechCrunch"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
+              "url": "https://n.news.naver.com/mnews/article/029/0003045369",
+              "source": "NAVER · 디지털타임스"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -201,14 +236,14 @@
       "policyTimeline": []
     },
     "3d": {
-      "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-31T14:08:04.247947+00:00",
+      "briefDate": "2026-09-01",
+      "generatedAt": "2026-08-31T23:01:08.376036+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 598,
+        "collected": 662,
         "analyzed": 0,
-        "pending": 598,
+        "pending": 662,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -379,8 +414,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 30,
+          "articleCount": 27,
           "articles": [
+            {
+              "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239657",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "[8월31일] 엔비디아 피지컬 AI, ‘미래 전략’에서 사업으로…중국이 핵심 시장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214642",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
+              "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
+              "source": "TechCrunch"
+            },
             {
               "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
               "url": "https://n.news.naver.com/mnews/article/009/0005728331",
@@ -390,28 +440,13 @@
               "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
               "url": "https://n.news.naver.com/mnews/article/469/0000951273",
               "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "AI 독립이냐 협력이냐…K-NPU '딜레마'",
-              "url": "https://n.news.naver.com/mnews/article/015/0005326892",
-              "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "[기고] AI 시대의 데이터 주권, 국내 데이터 플랫폼 경쟁력에 달렸다",
-              "url": "https://www.etnews.com/20260831000133",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "메타, AI 전용 통신 규격 ‘메타RoCE’ 공개…수십만 GPU 네트워크 병목 잡는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214618",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 28,
+          "articleCount": 26,
           "articles": [
             {
               "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
@@ -443,8 +478,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 21,
+          "articleCount": 20,
           "articles": [
+            {
+              "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
+              "url": "https://n.news.naver.com/mnews/article/029/0003045369",
+              "source": "NAVER · 디지털타임스"
+            },
             {
               "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
@@ -463,11 +503,6 @@
             {
               "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
-              "source": "AI타임스"
-            },
-            {
-              "title": "숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214661",
               "source": "AI타임스"
             }
           ]
@@ -529,14 +564,14 @@
       "policyTimeline": []
     },
     "week": {
-      "briefDate": "2026-08-31",
-      "generatedAt": "2026-08-31T14:08:04.247947+00:00",
+      "briefDate": "2026-09-01",
+      "generatedAt": "2026-08-31T23:01:08.376036+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 305,
+        "collected": 391,
         "analyzed": 0,
-        "pending": 305,
+        "pending": 391,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -739,8 +774,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 11,
+          "articleCount": 14,
           "articles": [
+            {
+              "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239657",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "[8월31일] 엔비디아 피지컬 AI, ‘미래 전략’에서 사업으로…중국이 핵심 시장",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214642",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
+              "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
+              "source": "TechCrunch"
+            },
             {
               "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
               "url": "https://n.news.naver.com/mnews/article/009/0005728331",
@@ -750,29 +800,19 @@
               "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
               "url": "https://n.news.naver.com/mnews/article/469/0000951273",
               "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "AI 독립이냐 협력이냐…K-NPU '딜레마'",
-              "url": "https://n.news.naver.com/mnews/article/015/0005326892",
-              "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "[기고] AI 시대의 데이터 주권, 국내 데이터 플랫폼 경쟁력에 달렸다",
-              "url": "https://www.etnews.com/20260831000133",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "메타, AI 전용 통신 규격 ‘메타RoCE’ 공개…수십만 GPU 네트워크 병목 잡는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214618",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 9,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
+              "url": "https://n.news.naver.com/mnews/article/029/0003045369",
+              "source": "NAVER · 디지털타임스"
+            },
             {
               "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
@@ -791,11 +831,6 @@
             {
               "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
-              "source": "AI타임스"
-            },
-            {
-              "title": "숭실대, 클로드 기반 보안 AI '무네메' 개발…글로벌 벤치마크 91% 달성",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214661",
               "source": "AI타임스"
             }
           ]
