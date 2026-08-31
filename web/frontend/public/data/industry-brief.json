@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T14:12:42.735966+00:00",
+  "generated_at": "2026-08-31T14:49:05.832756+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-08-31",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 287,
+        "collected": 289,
         "analyzed": 0,
-        "pending": 287,
+        "pending": 289,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -335,9 +335,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 644,
+        "collected": 639,
         "analyzed": 0,
-        "pending": 644,
+        "pending": 639,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -663,9 +663,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 287,
+        "collected": 289,
         "analyzed": 0,
-        "pending": 287,
+        "pending": 289,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
