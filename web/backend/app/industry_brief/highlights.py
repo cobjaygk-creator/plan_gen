@@ -38,7 +38,7 @@ NO_DATA_TEXT = "지난 24시간 동안 분석할 만큼 충분한 기사가 수�
 
 _ARTICLE_WINDOW_HOURS = 24
 _MAX_ARTICLES_TO_MODEL = 120
-_MAX_RECOMMENDED = 8
+_MAX_RECOMMENDED = 6
 _MAX_CORE_ISSUES = 5
 
 SYSTEM_PROMPT = """\
@@ -52,10 +52,11 @@ SYSTEM_PROMPT = """\
    각 이슈마다 title(제목), summary(1~2문장 요약, 왜 중요한지 포함),
    article_indices(근거가 된 기사의 index 목록, 1개 이상)를 작성해라.
 
-2. recommended (추천 기사, 최대 8개): 핵심 이슈로 묶이진 않지만 오늘 업계
-   동향을 파악하는 데 도움이 되는 개별 기사. 예: 산업 실적/통계 기사, 업계
-   전망·칼럼, 행사 프리뷰, 트렌드 분석 기사. 각각 index, one_line_reason
-   (왜 추천하는지 한 줄)을 작성해라.
+2. recommended (추천 기사, 정확히 6개 — 후보가 부족한 경우가 아니면 6개를
+   채워라): 핵심 이슈로 묶이진 않지만 오늘 업계 동향을 파악하는 데 도움이
+   되는 개별 기사. 예: 산업 실적/통계 기사, 업계 전망·칼럼, 행사 프리뷰,
+   트렌드 분석 기사. 각각 index, one_line_reason(왜 추천하는지 한 줄)을
+   작성해라.
 
 선정 기준:
 - 제외: 광고성 기사, 단순 상품/아이템 소개, 이벤트 홍보 목적의 보도자료성 기사
