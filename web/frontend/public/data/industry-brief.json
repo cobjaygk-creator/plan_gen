@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-01T00:24:56.737657+00:00",
+  "generated_at": "2026-09-01T05:30:00.748588+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T00:21:28.218234+00:00",
+      "generatedAt": "2026-09-01T05:25:47.731016+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 97,
+        "collected": 218,
         "analyzed": 0,
-        "pending": 97,
+        "pending": 218,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -180,49 +180,96 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 4,
+          "articleCount": 13,
           "articles": [
             {
-              "title": "AI수석서 전략위로 돌아온 하정우…“이제 전략보다 성과”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728412",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239657",
+              "title": "[일문일답] \"GPU 1만장 3.85조 반영…모두의 AI 예산 충분\"",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239750",
               "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "[8월31일] 엔비디아 피지컬 AI, ‘미래 전략’에서 사업으로…중국이 핵심 시장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214642",
-              "source": "AI타임스"
+              "title": "정부, 독자 AI에 5조6천억원 쏟는다…GPU 1만장 확충해 '프론티어' 도전",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435777",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
-              "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
-              "source": "TechCrunch"
+              "title": "정부, 5년간 R&D에 200조 투입…AI 3강·반도체 자립화율 50% 목표",
+              "url": "https://n.news.naver.com/mnews/article/056/0012248567",
+              "source": "NAVER · KBS"
+            },
+            {
+              "title": "메모리값 급등하는데… ‘GTA 6’ 용량 250GB 전망에 게이머들 ‘울상’",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996061",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "연구개발에 5년간 200兆 투자…'추격형 성장' 꼬리표 뗀다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003462285",
+              "source": "NAVER · 전자신문"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 9,
+          "articles": [
+            {
+              "title": "정부, '모두의 AI'에 2500억원 투입…\"주민등록·KTX 예약도 AI로\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435776",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "LG유플러스, 어라이즈 AI와 손잡고 ‘신뢰할 수 있는 AI 에이전트’ 구축",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189540",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "전북과학대 앵커(RISE)사업단, '교직원 AI 에이전트 설계사 자격 과정' 운영",
+              "url": "https://www.etnews.com/20260901000155",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "KISA, 하반기 사이버 모의훈련 참가 기업 모집…AI 시범 도입",
+              "url": "https://www.etnews.com/20260901000046",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 3,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996060",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "미국 국방부, 군용 챗GPT·그록 도입…민감 데이터 보호 나선다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435800",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
+              "source": "AI타임스"
+            },
             {
               "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
               "url": "https://www.etnews.com/20260901000010",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "EU, 오픈AI '챗GPT' 디지털서비스법 초대형 규제 적용",
-              "url": "https://www.etnews.com/20260901000014",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
-              "url": "https://n.news.naver.com/mnews/article/029/0003045369",
-              "source": "NAVER · 디지털타임스"
             }
           ]
         }
@@ -252,13 +299,13 @@
     },
     "3d": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T00:21:28.218234+00:00",
+      "generatedAt": "2026-09-01T05:25:47.731016+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 672,
+        "collected": 761,
         "analyzed": 0,
-        "pending": 672,
+        "pending": 761,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -429,63 +476,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 28,
+          "articleCount": 37,
           "articles": [
             {
-              "title": "AI수석서 전략위로 돌아온 하정우…“이제 전략보다 성과”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728412",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239657",
+              "title": "[일문일답] \"GPU 1만장 3.85조 반영…모두의 AI 예산 충분\"",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239750",
               "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "[8월31일] 엔비디아 피지컬 AI, ‘미래 전략’에서 사업으로…중국이 핵심 시장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214642",
-              "source": "AI타임스"
+              "title": "정부, 독자 AI에 5조6천억원 쏟는다…GPU 1만장 확충해 '프론티어' 도전",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435777",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
-              "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
-              "source": "TechCrunch"
+              "title": "정부, 5년간 R&D에 200조 투입…AI 3강·반도체 자립화율 50% 목표",
+              "url": "https://n.news.naver.com/mnews/article/056/0012248567",
+              "source": "NAVER · KBS"
             },
             {
-              "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728331",
-              "source": "NAVER · 매일경제"
+              "title": "메모리값 급등하는데… ‘GTA 6’ 용량 250GB 전망에 게이머들 ‘울상’",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996061",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "연구개발에 5년간 200兆 투자…'추격형 성장' 꼬리표 뗀다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003462285",
+              "source": "NAVER · 전자신문"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 26,
+          "articleCount": 35,
           "articles": [
             {
-              "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
-              "url": "https://www.etnews.com/20260831000301",
+              "title": "정부, '모두의 AI'에 2500억원 투입…\"주민등록·KTX 예약도 AI로\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435776",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "LG유플러스, 어라이즈 AI와 손잡고 ‘신뢰할 수 있는 AI 에이전트’ 구축",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189540",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "전북과학대 앵커(RISE)사업단, '교직원 AI 에이전트 설계사 자격 과정' 운영",
+              "url": "https://www.etnews.com/20260901000155",
               "source": "전자신문 AI"
             },
             {
-              "title": "엘리스그룹, IPO 자금 활용 '모듈 데이터센터' 전국 확대한다",
-              "url": "https://www.etnews.com/20260831000262",
+              "title": "KISA, 하반기 사이버 모의훈련 참가 기업 모집…AI 시범 도입",
+              "url": "https://www.etnews.com/20260901000046",
               "source": "전자신문 AI"
             },
             {
-              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
-              "source": "AI타임스"
-            },
-            {
-              "title": "솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214654",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
               "source": "AI타임스"
             }
           ]
@@ -493,32 +540,32 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 22,
+          "articleCount": 26,
           "articles": [
+            {
+              "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996060",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "미국 국방부, 군용 챗GPT·그록 도입…민감 데이터 보호 나선다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435800",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
+              "source": "AI타임스"
+            },
             {
               "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
               "url": "https://www.etnews.com/20260901000010",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "EU, 오픈AI '챗GPT' 디지털서비스법 초대형 규제 적용",
-              "url": "https://www.etnews.com/20260901000014",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
-              "url": "https://n.news.naver.com/mnews/article/029/0003045369",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
-              "source": "AI타임스"
             }
           ]
         },
@@ -580,13 +627,13 @@
     },
     "week": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T00:21:28.218234+00:00",
+      "generatedAt": "2026-09-01T05:25:47.731016+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 411,
+        "collected": 533,
         "analyzed": 0,
-        "pending": 411,
+        "pending": 533,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -757,31 +804,31 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 16,
+          "articleCount": 25,
           "articles": [
             {
-              "title": "코난테크놀로지, 영풍전자와 제조·방산 온톨로지 기반 AI 에이전트 개발",
-              "url": "https://www.etnews.com/20260831000301",
+              "title": "정부, '모두의 AI'에 2500억원 투입…\"주민등록·KTX 예약도 AI로\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435776",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "LG유플러스, 어라이즈 AI와 손잡고 ‘신뢰할 수 있는 AI 에이전트’ 구축",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189540",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "전북과학대 앵커(RISE)사업단, '교직원 AI 에이전트 설계사 자격 과정' 운영",
+              "url": "https://www.etnews.com/20260901000155",
               "source": "전자신문 AI"
             },
             {
-              "title": "엘리스그룹, IPO 자금 활용 '모듈 데이터센터' 전국 확대한다",
-              "url": "https://www.etnews.com/20260831000262",
+              "title": "KISA, 하반기 사이버 모의훈련 참가 기업 모집…AI 시범 도입",
+              "url": "https://www.etnews.com/20260901000046",
               "source": "전자신문 AI"
             },
             {
-              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
-              "source": "AI타임스"
-            },
-            {
-              "title": "솔트룩스, ‘모두의 AI’ KT 컨소시엄 참여…공공 에이전트 구축 담당",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214654",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
+              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
               "source": "AI타임스"
             }
           ]
@@ -789,64 +836,64 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 15,
+          "articleCount": 24,
           "articles": [
             {
-              "title": "AI수석서 전략위로 돌아온 하정우…“이제 전략보다 성과”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728412",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239657",
+              "title": "[일문일답] \"GPU 1만장 3.85조 반영…모두의 AI 예산 충분\"",
+              "url": "https://n.news.naver.com/mnews/article/138/0002239750",
               "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "[8월31일] 엔비디아 피지컬 AI, ‘미래 전략’에서 사업으로…중국이 핵심 시장",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214642",
-              "source": "AI타임스"
+              "title": "정부, 독자 AI에 5조6천억원 쏟는다…GPU 1만장 확충해 '프론티어' 도전",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435777",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
-              "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
-              "source": "TechCrunch"
+              "title": "정부, 5년간 R&D에 200조 투입…AI 3강·반도체 자립화율 50% 목표",
+              "url": "https://n.news.naver.com/mnews/article/056/0012248567",
+              "source": "NAVER · KBS"
             },
             {
-              "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728331",
-              "source": "NAVER · 매일경제"
+              "title": "메모리값 급등하는데… ‘GTA 6’ 용량 250GB 전망에 게이머들 ‘울상’",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996061",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "연구개발에 5년간 200兆 투자…'추격형 성장' 꼬리표 뗀다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003462285",
+              "source": "NAVER · 전자신문"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 12,
+          "articleCount": 16,
           "articles": [
+            {
+              "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996060",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "미국 국방부, 군용 챗GPT·그록 도입…민감 데이터 보호 나선다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435800",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
+              "source": "AI타임스"
+            },
             {
               "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
               "url": "https://www.etnews.com/20260901000010",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "EU, 오픈AI '챗GPT' 디지털서비스법 초대형 규제 적용",
-              "url": "https://www.etnews.com/20260901000014",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
-              "url": "https://n.news.naver.com/mnews/article/029/0003045369",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "\"이론 넘어 실전\"…구글 딥마인드 '코사이언티스트', 실제 연구 성과 냈다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214655",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
-              "source": "AI타임스"
             }
           ]
         },
