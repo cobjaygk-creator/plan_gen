@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-01T19:11:40.198585+00:00",
+  "generated_at": "2026-09-01T21:17:11.744001+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-01T16:50:45.389117+00:00",
+      "generatedAt": "2026-09-01T21:12:39.106571+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 57,
+        "collected": 98,
         "analyzed": 0,
-        "pending": 57,
+        "pending": 98,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -139,10 +139,42 @@
       },
       "techRadar": [
         {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 4,
+          "articles": [
+            {
+              "title": "IBM \"AI 에이전트 시대, 핵심은 신뢰성과 운영 체계'\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214723",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
+            {
+              "title": "How AI-native companies turn workflows into operating capability",
+              "url": "https://openai.com/index/ai-native-company-workflows",
+              "source": "OpenAI"
+            },
+            {
+              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
+              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
+              "source": "TechCrunch"
+            }
+          ]
+        },
+        {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "엔비디아, 대만 반도체 설계업체에 4.8조원 투자",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996141",
+              "source": "NAVER · 조선일보"
+            },
             {
               "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
               "url": "https://n.news.naver.com/mnews/article/023/0003996139",
@@ -156,26 +188,31 @@
           ]
         },
         {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 1,
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 2,
           "articles": [
             {
-              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
-              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
+              "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
               "source": "TechCrunch"
             }
           ]
         },
         {
-          "key": "coding",
-          "label": "코딩 AI",
+          "key": "model",
+          "label": "신규 모델",
           "articleCount": 1,
           "articles": [
             {
-              "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
-              "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
-              "source": "TechCrunch"
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
             }
           ]
         }
@@ -1059,13 +1096,13 @@
     },
     "3d": {
       "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-01T16:50:45.389117+00:00",
+      "generatedAt": "2026-09-01T21:12:39.106571+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 957,
+        "collected": 993,
         "analyzed": 0,
-        "pending": 957,
+        "pending": 993,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1258,8 +1295,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 45,
+          "articleCount": 46,
           "articles": [
+            {
+              "title": "엔비디아, 대만 반도체 설계업체에 4.8조원 투자",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996141",
+              "source": "NAVER · 조선일보"
+            },
             {
               "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
               "url": "https://n.news.naver.com/mnews/article/023/0003996139",
@@ -1279,19 +1321,29 @@
               "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
               "url": "https://n.news.naver.com/mnews/article/469/0000951494",
               "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 38,
+          "articleCount": 41,
           "articles": [
+            {
+              "title": "IBM \"AI 에이전트 시대, 핵심은 신뢰성과 운영 체계'\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214723",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
+            {
+              "title": "How AI-native companies turn workflows into operating capability",
+              "url": "https://openai.com/index/ai-native-company-workflows",
+              "source": "OpenAI"
+            },
             {
               "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
               "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
@@ -1301,29 +1353,19 @@
               "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
               "url": "https://n.news.naver.com/mnews/article/366/0001189669",
               "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "몽고DB, 'AI 데이터 플랫폼'으로 확장…“데이터 레이어가 AI 성패 좌우”",
-              "url": "https://www.etnews.com/20260901000377",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "“공공·행정 AI 활용, 설명성 갖추고 이의제기 가능해야”",
-              "url": "https://www.etnews.com/20260901000421",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "튜링, 70억원 규모 시리즈B 투자 유치",
-              "url": "https://www.etnews.com/20260901000440",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 26,
+          "articleCount": 27,
           "articles": [
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
             {
               "title": "“AI와 사랑에 빠졌어요”…14살 중학생의 고백 [AI과몰입]①",
               "url": "https://n.news.naver.com/mnews/article/056/0012248730",
@@ -1343,19 +1385,19 @@
               "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
               "source": "AI타임스"
-            },
-            {
-              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 12,
+          "articleCount": 13,
           "articles": [
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
             {
               "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
               "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
@@ -1374,11 +1416,6 @@
             {
               "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
               "source": "AI타임스"
             }
           ]
@@ -2263,13 +2300,13 @@
     },
     "week": {
       "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-01T16:50:45.389117+00:00",
+      "generatedAt": "2026-09-01T21:12:39.106571+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 802,
+        "collected": 846,
         "analyzed": 0,
-        "pending": 802,
+        "pending": 846,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2462,8 +2499,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 40,
+          "articleCount": 41,
           "articles": [
+            {
+              "title": "엔비디아, 대만 반도체 설계업체에 4.8조원 투자",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996141",
+              "source": "NAVER · 조선일보"
+            },
             {
               "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
               "url": "https://n.news.naver.com/mnews/article/023/0003996139",
@@ -2483,19 +2525,29 @@
               "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
               "url": "https://n.news.naver.com/mnews/article/469/0000951494",
               "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 36,
+          "articleCount": 39,
           "articles": [
+            {
+              "title": "IBM \"AI 에이전트 시대, 핵심은 신뢰성과 운영 체계'\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214723",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
+            {
+              "title": "How AI-native companies turn workflows into operating capability",
+              "url": "https://openai.com/index/ai-native-company-workflows",
+              "source": "OpenAI"
+            },
             {
               "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
               "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
@@ -2505,29 +2557,19 @@
               "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
               "url": "https://n.news.naver.com/mnews/article/366/0001189669",
               "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "몽고DB, 'AI 데이터 플랫폼'으로 확장…“데이터 레이어가 AI 성패 좌우”",
-              "url": "https://www.etnews.com/20260901000377",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "“공공·행정 AI 활용, 설명성 갖추고 이의제기 가능해야”",
-              "url": "https://www.etnews.com/20260901000421",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "튜링, 70억원 규모 시리즈B 투자 유치",
-              "url": "https://www.etnews.com/20260901000440",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 23,
+          "articleCount": 24,
           "articles": [
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
             {
               "title": "“AI와 사랑에 빠졌어요”…14살 중학생의 고백 [AI과몰입]①",
               "url": "https://n.news.naver.com/mnews/article/056/0012248730",
@@ -2547,19 +2589,19 @@
               "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
               "source": "AI타임스"
-            },
-            {
-              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
+              "source": "AI타임스"
+            },
             {
               "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
               "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
@@ -2578,11 +2620,6 @@
             {
               "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
               "source": "AI타임스"
             }
           ]
