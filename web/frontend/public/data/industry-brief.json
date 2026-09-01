@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-01T15:27:54.100232+00:00",
+  "generated_at": "2026-09-01T16:55:00.871661+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T11:50:47.073664+00:00",
+      "briefDate": "2026-09-02",
+      "generatedAt": "2026-09-01T16:50:45.389117+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 7,
+        "collected": 50,
         "analyzed": 0,
-        "pending": 7,
+        "pending": 50,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -137,7 +137,49 @@
           }
         ]
       },
-      "techRadar": [],
+      "techRadar": [
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996139",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "마이크론 대만 노조 '파업' 움직임…성과급 개편 요구",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054480",
+              "source": "NAVER · 아이뉴스24"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
+              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
+              "source": "TechCrunch"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
+              "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
+              "source": "TechCrunch"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -1016,14 +1058,14 @@
       ]
     },
     "3d": {
-      "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T11:50:47.073664+00:00",
+      "briefDate": "2026-09-02",
+      "generatedAt": "2026-09-01T16:50:45.389117+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 904,
+        "collected": 963,
         "analyzed": 0,
-        "pending": 904,
+        "pending": 963,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1216,8 +1258,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 47,
+          "articleCount": 45,
           "articles": [
+            {
+              "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996139",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "마이크론 대만 노조 '파업' 움직임…성과급 개편 요구",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054480",
+              "source": "NAVER · 아이뉴스24"
+            },
             {
               "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
               "url": "https://n.news.naver.com/mnews/article/008/0005407946",
@@ -1232,24 +1284,19 @@
               "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
               "url": "https://n.news.naver.com/mnews/article/009/0005728832",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "뜨거워진 GPU, 물로 식힌다… LG CNS·네이버도 뛰어든 데이터센터 액체 냉각",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189751",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "\"통합은 했는데\"…전남광주 반도체·AI·SOC 정부예산 미반영",
-              "url": "https://n.news.naver.com/mnews/article/001/0016283794",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 40,
+          "articleCount": 38,
           "articles": [
+            {
+              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
+              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
+              "source": "TechCrunch"
+            },
             {
               "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
               "url": "https://n.news.naver.com/mnews/article/366/0001189669",
@@ -1269,18 +1316,13 @@
               "title": "튜링, 70억원 규모 시리즈B 투자 유치",
               "url": "https://www.etnews.com/20260901000440",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "'오픈클로 2.0' 공개...아키텍처 개편으로 보안·성능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214685",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 31,
+          "articleCount": 26,
           "articles": [
             {
               "title": "“AI와 사랑에 빠졌어요”…14살 중학생의 고백 [AI과몰입]①",
@@ -1312,8 +1354,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 11,
+          "articleCount": 12,
           "articles": [
+            {
+              "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
+              "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
+              "source": "TechCrunch"
+            },
             {
               "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
@@ -1333,11 +1380,6 @@
               "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
-              "url": "https://n.news.naver.com/mnews/article/003/0014158428",
-              "source": "NAVER · 뉴시스"
             }
           ]
         }
@@ -2220,14 +2262,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T11:50:47.073664+00:00",
+      "briefDate": "2026-09-02",
+      "generatedAt": "2026-09-01T16:50:45.389117+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 729,
+        "collected": 795,
         "analyzed": 0,
-        "pending": 729,
+        "pending": 795,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2420,8 +2462,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 38,
+          "articleCount": 40,
           "articles": [
+            {
+              "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996139",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "마이크론 대만 노조 '파업' 움직임…성과급 개편 요구",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054480",
+              "source": "NAVER · 아이뉴스24"
+            },
             {
               "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
               "url": "https://n.news.naver.com/mnews/article/008/0005407946",
@@ -2436,24 +2488,19 @@
               "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
               "url": "https://n.news.naver.com/mnews/article/009/0005728832",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "뜨거워진 GPU, 물로 식힌다… LG CNS·네이버도 뛰어든 데이터센터 액체 냉각",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189751",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "\"통합은 했는데\"…전남광주 반도체·AI·SOC 정부예산 미반영",
-              "url": "https://n.news.naver.com/mnews/article/001/0016283794",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 35,
+          "articleCount": 36,
           "articles": [
+            {
+              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
+              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
+              "source": "TechCrunch"
+            },
             {
               "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
               "url": "https://n.news.naver.com/mnews/article/366/0001189669",
@@ -2473,11 +2520,6 @@
               "title": "튜링, 70억원 규모 시리즈B 투자 유치",
               "url": "https://www.etnews.com/20260901000440",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "'오픈클로 2.0' 공개...아키텍처 개편으로 보안·성능 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214685",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2516,8 +2558,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
+              "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
+              "source": "TechCrunch"
+            },
             {
               "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
@@ -2537,11 +2584,6 @@
               "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
-              "url": "https://n.news.naver.com/mnews/article/003/0014158428",
-              "source": "NAVER · 뉴시스"
             }
           ]
         }
