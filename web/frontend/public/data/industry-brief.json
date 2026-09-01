@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-01T06:02:36.597378+00:00",
+  "generated_at": "2026-09-01T07:02:27.257290+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T05:25:47.731016+00:00",
+      "generatedAt": "2026-09-01T06:58:54.035048+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 218,
+        "collected": 284,
         "analyzed": 0,
-        "pending": 218,
+        "pending": 284,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,6 +20,29 @@
       "analytics": {
         "interest": {
           "labels": [
+            "08.01",
+            "08.02",
+            "08.03",
+            "08.04",
+            "08.05",
+            "08.06",
+            "08.07",
+            "08.08",
+            "08.09",
+            "08.10",
+            "08.11",
+            "08.12",
+            "08.13",
+            "08.14",
+            "08.15",
+            "08.16",
+            "08.17",
+            "08.18",
+            "08.19",
+            "08.20",
+            "08.21",
+            "08.22",
+            "08.23",
             "08.24",
             "08.25",
             "08.26",
@@ -31,8 +54,7 @@
           ],
           "series": [],
           "bucket": "일간"
-        },
-        "topicShare": []
+        }
       },
       "game": {
         "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
@@ -180,63 +202,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 13,
+          "articleCount": 18,
           "articles": [
             {
-              "title": "[일문일답] \"GPU 1만장 3.85조 반영…모두의 AI 예산 충분\"",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239750",
-              "source": "NAVER · 디지털데일리"
+              "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
+              "url": "https://n.news.naver.com/mnews/article/003/0014161531",
+              "source": "NAVER · 뉴시스"
             },
             {
-              "title": "정부, 독자 AI에 5조6천억원 쏟는다…GPU 1만장 확충해 '프론티어' 도전",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435777",
-              "source": "NAVER · 지디넷코리아"
+              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영",
+              "url": "https://n.news.naver.com/mnews/article/001/0016282862",
+              "source": "NAVER · 연합뉴스"
             },
             {
-              "title": "정부, 5년간 R&D에 200조 투입…AI 3강·반도체 자립화율 50% 목표",
-              "url": "https://n.news.naver.com/mnews/article/056/0012248567",
-              "source": "NAVER · KBS"
+              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영(종합)",
+              "url": "https://n.news.naver.com/mnews/article/001/0016283076",
+              "source": "NAVER · 연합뉴스"
             },
             {
-              "title": "메모리값 급등하는데… ‘GTA 6’ 용량 250GB 전망에 게이머들 ‘울상’",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996061",
-              "source": "NAVER · 조선일보"
+              "title": "[9.1.화.석간] 내가 참여한 건강조사 데이터, 인공지능 기반 맞춤 건강리포트로 돌려 드립니다!",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776284&pageIndex=6&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
             },
             {
-              "title": "연구개발에 5년간 200兆 투자…'추격형 성장' 꼬리표 뗀다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003462285",
-              "source": "NAVER · 전자신문"
+              "title": "지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214708",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 9,
+          "articleCount": 14,
           "articles": [
             {
-              "title": "정부, '모두의 AI'에 2500억원 투입…\"주민등록·KTX 예약도 AI로\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435776",
+              "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996069",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "LG유플러스, 어라이즈 AI와 손잡고 ‘신뢰할 수 있는 AI 에이전트’ 구축",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189540",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "전북과학대 앵커(RISE)사업단, '교직원 AI 에이전트 설계사 자격 과정' 운영",
-              "url": "https://www.etnews.com/20260901000155",
+              "title": "IBM, '에이전틱 엔터프라이즈' 전략 강화…“AI 도입보다 운영이 경쟁력”",
+              "url": "https://www.etnews.com/20260901000279",
               "source": "전자신문 AI"
             },
             {
-              "title": "KISA, 하반기 사이버 모의훈련 참가 기업 모집…AI 시범 도입",
-              "url": "https://www.etnews.com/20260901000046",
+              "title": "일레븐랩스, 매트릭스클라우드와 손잡고 AI 콘택트센터 새로운 장 연다",
+              "url": "https://www.etnews.com/20260901000358",
               "source": "전자신문 AI"
             },
             {
-              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "title": "일레븐랩스, 매트릭스클라우드에 ‘초저지연’ 음성솔루션 도입…AICC 운영 문제 해결",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214694",
               "source": "AI타임스"
             }
           ]
@@ -244,8 +266,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
+              "source": "NAVER · 지디넷코리아"
+            },
             {
               "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
               "url": "https://n.news.naver.com/mnews/article/023/0003996060",
@@ -265,11 +292,6 @@
               "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
               "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
-              "url": "https://www.etnews.com/20260901000010",
-              "source": "전자신문 AI"
             }
           ]
         }
@@ -294,18 +316,872 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "4082",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "8월 31일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 70,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
+        },
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        },
+        {
+          "id": "2883",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+          "publishedDate": "2026.08.27",
+          "effectiveDate": null,
+          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "인공지능서비스불법유해정보대응해야",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
+        },
+        {
+          "id": "4085",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "「2026 데이터+AI 혁신 챌린지」 9월 1일 통합공고··· 데이터·AI 혁신 아이디어 모집",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776407&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": null,
+          "target": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "action": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "2026데이터ai혁신챌린지9월1일통합공고데이터ai혁신아이디어",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전"
+        },
+        {
+          "id": "4084",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "오는 12월",
+          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
+          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다."
+        },
+        {
+          "id": "2444",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775599&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-27&endDate=2026-08-27&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "자세한 내용은 첨부파일을 참고하시기 바랍니다.※ 대용량 첨부파일은 바로보기가 지원되지 않으니, 첨부파일명을 클릭하여 확인하시기 바랍니다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과 관련 보도자료 내용입니다."
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "4082",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "8월 31일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 70,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
+        },
+        {
+          "id": "4085",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "「2026 데이터+AI 혁신 챌린지」 9월 1일 통합공고··· 데이터·AI 혁신 아이디어 모집",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776407&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": null,
+          "target": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "action": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "2026데이터ai혁신챌린지9월1일통합공고데이터ai혁신아이디어",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전"
+        },
+        {
+          "id": "4084",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "오는 12월",
+          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
+          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다."
+        },
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        },
+        {
+          "id": "2883",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+          "publishedDate": "2026.08.27",
+          "effectiveDate": null,
+          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "인공지능서비스불법유해정보대응해야",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
+        },
+        {
+          "id": "2444",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775599&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-27&endDate=2026-08-27&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "자세한 내용은 첨부파일을 참고하시기 바랍니다.※ 대용량 첨부파일은 바로보기가 지원되지 않으니, 첨부파일명을 클릭하여 확인하시기 바랍니다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과 관련 보도자료 내용입니다."
+        },
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
+        },
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        },
+        {
+          "id": "1567",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 불법 사설서버 근절 총력 대응",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=580&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.08.03",
+          "effectiveDate": "2026년 8월",
+          "target": "주요 과제로 ▲ 불법 사이트 신속 차단 절차 도입 ▲ 처벌 강화 등 법률 개정 연구 ▲ 수사 의뢰 확대 ▲ CDN 사업자 협력을 통한 차단망 강화 등 다각적인 대응을 추진하며 불법 사설서버 대응의 실효성을 높이고 있다",
+          "action": "\" 게임위 , 불법 사설서버 근절 총력 대응 - 상반기만 1,450 건 차단 , 2 일 이내로 차단 기간 단축 - 게임물관리위원회 ( 위원장 서태건 , 이하 게임위 ) 가 건강하고 공정한 게임 문화 조성을 위해 전방위적 대응 체계를 추진해 온 가운데 , 지난달 28 일 경찰 공조를 중심으로 한 불법게임물 현장 대응 성과를 발표한 데 이어 이번에는 온라인상 불법 사설서버와 불법 프로그램 근절을",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "불법 게임물",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 4,
+          "history": [
+            {
+              "title": "게임위, 경찰 공조 강화로 불법게임물 대응체계 고도화",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=579&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.07.28",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.04.15",
+              "stageLabel": "단속·집행"
+            },
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 4건과 연결",
+          "evidenceSentence": "\" 게임위 , 불법 사설서버 근절 총력 대응 - 상반기만 1,450 건 차단 , 2 일 이내로 차단 기간 단축 - 게임물관리위원회 ( 위원장 서태건 , 이하 게임위 ) 가 건강하고 공정한 게임 문화 조성을 위해 전방위적 대응 체계를 추진해 온 가운데 , 지난달 28 일 경찰 공조를 중심으로 한 불법게임물 현장 대응 성과를 발표한 데 이어 이번에는 온라인상 불법 사설서버와 불법 프로그램 근절을 위한 대응 현황과 성과를 공개했다"
+        },
+        {
+          "id": "1568",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 경찰 공조 강화로 불법게임물 대응체계 고도화",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=579&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.07.28",
+          "effectiveDate": "2026년 7월",
+          "target": "전년 대비 129% 확대 , 불법 사행성 PC 방 109 개소 행정조치 의뢰 - 제도 개선과 관계기관 협력 , 안내 · 계도 및 홍보 강화로 건전 게임문화 조성 기반 확대 게임물관리위원회 ( 위원장 서태건 , 이하 ‘ 위원회 ’) 는 지난 2 월 1 일 이용자 보호와 게임물 사후관리 기능 강화를 위해 사후관리 조직을 확대 · 개편한 이후 , 경찰 과의 공조를 바탕으로 불법 게임물 대응체계를 ",
+          "action": "보도자료 2026년 7월 28(화) 도표/사진 포함 총 3페이지 게임물관리위원회 2026-15 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 경찰 공조 강화로 불법게임물 대응체계 고도화 - 상반기 현장 단속지원 248 건 · 감정 단속지원 1,220 건 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "불법 게임물",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 3,
+          "history": [
+            {
+              "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.04.15",
+              "stageLabel": "단속·집행"
+            },
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 후속 발표 · 이전 발표 3건과 연결",
+          "evidenceSentence": "보도자료 2026년 7월 28(화) 도표/사진 포함 총 3페이지 게임물관리위원회 2026-15 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 경찰 공조 강화로 불법게임물 대응체계 고도화 - 상반기 현장 단속지원 248 건 · 감정 단속지원 1,220 건 , 전년 대비 각각 24.0%, 18.9% 증가 - 경찰 단속기법 교육 1,049 명 ..."
+        },
+        {
+          "id": "1569",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 확률형 아이템 표시의무  위반한 해외게임물 관련 이용 주의 당부",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=576&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.07.06",
+          "effectiveDate": "2026년 7월",
+          "target": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 ·",
+          "action": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 ·",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 4,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제 체계’ 본격 가동",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=574&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.05.13",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 4건과 연결",
+          "evidenceSentence": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 · 결제 시 각별한 주의 필요 - - 저작권 권리자와의 사실확인 및 앱마켓 안내 등 이용자 피해 예방 노력 병"
+        },
+        {
+          "id": "1570",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "문체부·게임위, 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=575&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.06.29",
+          "effectiveDate": "2026년 6월",
+          "target": "이에 문체부는 전국 광역 지방자치단체에 협조 요청 공문을 발송하고 , 관할 숙박업소를 대상으로 관련 법령 및 준수사항에 대한 안내와 계도 활동 강화를 요청하였다",
+          "action": "​ 보도자료 2026년 6월 29(월) 사진 있음 총 2페이지 게임물관리위원회 2026-11 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 문체부 · 게임위 , 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진 - 문체부 , 지자체에 숙박업소 내 무등",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "숙박업소내무등록게임영업근절을안내및행정지도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "​ 보도자료 2026년 6월 29(월) 사진 있음 총 2페이지 게임물관리위원회 2026-11 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 문체부 · 게임위 , 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진 - 문체부 , 지자체에 숙박업소 내 무등록 게임영업 관련 안내 · 계도 강화 요청 - - 게임위 , PC 방 단체 및 숙박 예약플랫폼과 간담회 개최"
+        },
+        {
+          "id": "1558",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "K-게임 제작환경 인공지능 전환 본격화 콘진원, 게임 제작환경 인공지능 전환(AX) 지원사업 공모",
+          "source": "한국콘텐츠진흥원",
+          "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1137&menuNo=204767",
+          "publishedDate": "2026.05.18",
+          "effectiveDate": "5월 6일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 지난 5월 6일, 한국모바일게임협회(이하 모바일협회), 한국게임개발자협회(이하 개발자협회), 한국인공지능게임협회(이하 인공지능협회), 한국게임산업협회(이하 게임협회)와 업무협약을 체결하고 ‘게임 제작환경 인공지능 전환(A...",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 40,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "시행됨",
+          "policyKey": "게임 지원사업",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "K-콘텐츠 AI 창작 역량 강화 콘진원,‘AI 특화 콘텐츠 창작자 양성 지원사업’교육생 모집",
+              "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1135&menuNo=204767",
+              "publishedDate": "2026.05.14",
+              "stageLabel": "모집·공모"
+            }
+          ],
+          "selectionReason": "지원사업 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 지난 5월 6일, 한국모바일게임협회(이하 모바일협회), 한국게임개발자협회(이하 개발자협회), 한국인공지능게임협회(이하 인공지능협회), 한국게임산업협회(이하 게임협회)와 업무협약을 체결하고 ‘게임 제작환경 인공지능 전환(A..."
+        },
+        {
+          "id": "1559",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "K-콘텐츠 AI 창작 역량 강화 콘진원,‘AI 특화 콘텐츠 창작자 양성 지원사업’교육생 모집",
+          "source": "한국콘텐츠진흥원",
+          "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1135&menuNo=204767",
+          "publishedDate": "2026.05.14",
+          "effectiveDate": null,
+          "target": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다.",
+          "action": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 25,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 지원사업",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다."
+        },
+        {
+          "id": "1571",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘확률형 아이템 피해구제 체계’ 본격 가동",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=574&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.05.13",
+          "effectiveDate": "2026년 4월",
+          "target": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 ",
+          "action": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 3,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 3건과 연결",
+          "evidenceSentence": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 월 28 일 ( 화 ) 위촉장 수여 - 제 1 차 피해구제분과위원회 회의 개최 및 접수 안건 3 건 보고 ·"
+        },
+        {
+          "id": "1572",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.04.15",
+          "effectiveDate": "2026년 4월 15일",
+          "target": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동",
+          "action": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "불법 게임물",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 2,
+          "history": [
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 시행 단계 변화 · 이전 발표 2건과 연결",
+          "evidenceSentence": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동단속 · 이용자 보호 · 대국민 인식 제고 등 공동 대응 추진 - 게임물관리위원회 ( 위원장 서태건 , 이하"
+        },
+        {
+          "id": "1575",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.03.24",
+          "effectiveDate": "2026년 3월 16일",
+          "target": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 ",
+          "action": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "불법 게임물",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 지급 - 게임물관리위원회 ( 이하 ' 게임위 ') 는 불법게임물로 인한 이용자 피해를 예방하고 유통 및 불법"
+        },
+        {
+          "id": "1574",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.03.24",
+          "effectiveDate": "2026년 2월 27일",
+          "target": "보도자료 2026년 2월 27일(금) 사진 있음 총 3페이지 게임물관리위원회 2026-4 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제센터 ’ 개소 - 확률형아이템 관련 피해구제 전문센터로 이용자 권익보호 기대 - 확률형아이템 ",
+          "action": "보도자료 2026년 2월 27일(금) 사진 있음 총 3페이지 게임물관리위원회 2026-4 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제센터 ’ 개소 - 확률형아이템 관련 피해구제 전문센터로 이용자 권익보호 기대 - 확률형아이템 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "확률형 아이템",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 2,
+          "history": [
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 2건과 연결",
+          "evidenceSentence": "<‘ 확률형 아이템 피해구제센터 ’ 설립경과 > 년월 세부내용 비고 ‘24 년 3 월 ㅇ 확률형 아이템 표시의무 제도 시행 ㅇ 게임산업법 제 33 조 ② 항 ‘24 년 12 월 ㅇ 피해구제센터 설치 관련 법령개정안 국회 통과 ㅇ 게임산업법 제 33 조의 2 ⑤ 항 ‘25 년 1 월 ㅇ 피해구제센터 설치 개정법률 국무회의 의결 〃 ‘25 년 7 월 ㅇ 피해구제센터 업무 명시 시행령 공포 ㅇ 게임산업법 시행령 제 19 조의 3 ‘25 년 8 월 ㅇ 피해구제센터 설치 법률 시행 ‘25 년 8 월 ㅇ 피"
+        },
+        {
+          "id": "1576",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심  조직개편",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=566&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.02.03",
+          "effectiveDate": "2026년 2월 2일",
+          "target": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 ",
+          "action": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "이용자보호및사후관리중심조직개편",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 - 불법사설서버·불법사행성PC방 등 대응 위한 사후관리 조직 강화 게임물관리위원회(위원장 서태건, 이하 위원"
+        },
+        {
+          "id": "1577",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.01.30",
+          "effectiveDate": null,
+          "target": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐",
+          "action": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐츠분쟁조정위원회 연계를 통한 게임이용자 권익보호 체계 구축 - 게임물관리위원회 ( 위원장 서태건 , 이하 ‘"
+        }
+      ]
     },
     "3d": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T05:25:47.731016+00:00",
+      "generatedAt": "2026-09-01T06:58:54.035048+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 760,
+        "collected": 822,
         "analyzed": 0,
-        "pending": 760,
+        "pending": 822,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -316,6 +1192,29 @@
       "analytics": {
         "interest": {
           "labels": [
+            "08.01",
+            "08.02",
+            "08.03",
+            "08.04",
+            "08.05",
+            "08.06",
+            "08.07",
+            "08.08",
+            "08.09",
+            "08.10",
+            "08.11",
+            "08.12",
+            "08.13",
+            "08.14",
+            "08.15",
+            "08.16",
+            "08.17",
+            "08.18",
+            "08.19",
+            "08.20",
+            "08.21",
+            "08.22",
+            "08.23",
             "08.24",
             "08.25",
             "08.26",
@@ -327,8 +1226,7 @@
           ],
           "series": [],
           "bucket": "일간"
-        },
-        "topicShare": []
+        }
       },
       "game": {
         "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
@@ -476,63 +1374,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 37,
+          "articleCount": 42,
           "articles": [
             {
-              "title": "[일문일답] \"GPU 1만장 3.85조 반영…모두의 AI 예산 충분\"",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239750",
-              "source": "NAVER · 디지털데일리"
+              "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
+              "url": "https://n.news.naver.com/mnews/article/003/0014161531",
+              "source": "NAVER · 뉴시스"
             },
             {
-              "title": "정부, 독자 AI에 5조6천억원 쏟는다…GPU 1만장 확충해 '프론티어' 도전",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435777",
-              "source": "NAVER · 지디넷코리아"
+              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영",
+              "url": "https://n.news.naver.com/mnews/article/001/0016282862",
+              "source": "NAVER · 연합뉴스"
             },
             {
-              "title": "정부, 5년간 R&D에 200조 투입…AI 3강·반도체 자립화율 50% 목표",
-              "url": "https://n.news.naver.com/mnews/article/056/0012248567",
-              "source": "NAVER · KBS"
+              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영(종합)",
+              "url": "https://n.news.naver.com/mnews/article/001/0016283076",
+              "source": "NAVER · 연합뉴스"
             },
             {
-              "title": "메모리값 급등하는데… ‘GTA 6’ 용량 250GB 전망에 게이머들 ‘울상’",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996061",
-              "source": "NAVER · 조선일보"
+              "title": "[9.1.화.석간] 내가 참여한 건강조사 데이터, 인공지능 기반 맞춤 건강리포트로 돌려 드립니다!",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776284&pageIndex=6&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
             },
             {
-              "title": "연구개발에 5년간 200兆 투자…'추격형 성장' 꼬리표 뗀다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003462285",
-              "source": "NAVER · 전자신문"
+              "title": "지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214708",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 35,
+          "articleCount": 40,
           "articles": [
             {
-              "title": "정부, '모두의 AI'에 2500억원 투입…\"주민등록·KTX 예약도 AI로\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435776",
+              "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996069",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "LG유플러스, 어라이즈 AI와 손잡고 ‘신뢰할 수 있는 AI 에이전트’ 구축",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189540",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "전북과학대 앵커(RISE)사업단, '교직원 AI 에이전트 설계사 자격 과정' 운영",
-              "url": "https://www.etnews.com/20260901000155",
+              "title": "IBM, '에이전틱 엔터프라이즈' 전략 강화…“AI 도입보다 운영이 경쟁력”",
+              "url": "https://www.etnews.com/20260901000279",
               "source": "전자신문 AI"
             },
             {
-              "title": "KISA, 하반기 사이버 모의훈련 참가 기업 모집…AI 시범 도입",
-              "url": "https://www.etnews.com/20260901000046",
+              "title": "일레븐랩스, 매트릭스클라우드와 손잡고 AI 콘택트센터 새로운 장 연다",
+              "url": "https://www.etnews.com/20260901000358",
               "source": "전자신문 AI"
             },
             {
-              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "title": "일레븐랩스, 매트릭스클라우드에 ‘초저지연’ 음성솔루션 도입…AICC 운영 문제 해결",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214694",
               "source": "AI타임스"
             }
           ]
@@ -540,8 +1438,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 26,
+          "articleCount": 27,
           "articles": [
+            {
+              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
+              "source": "NAVER · 지디넷코리아"
+            },
             {
               "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
               "url": "https://n.news.naver.com/mnews/article/023/0003996060",
@@ -561,11 +1464,6 @@
               "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
               "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
-              "url": "https://www.etnews.com/20260901000010",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -622,18 +1520,872 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "4082",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "8월 31일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 70,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
+        },
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        },
+        {
+          "id": "2883",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+          "publishedDate": "2026.08.27",
+          "effectiveDate": null,
+          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "인공지능서비스불법유해정보대응해야",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
+        },
+        {
+          "id": "4085",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "「2026 데이터+AI 혁신 챌린지」 9월 1일 통합공고··· 데이터·AI 혁신 아이디어 모집",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776407&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": null,
+          "target": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "action": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "2026데이터ai혁신챌린지9월1일통합공고데이터ai혁신아이디어",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전"
+        },
+        {
+          "id": "4084",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "오는 12월",
+          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
+          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다."
+        },
+        {
+          "id": "2444",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775599&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-27&endDate=2026-08-27&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "자세한 내용은 첨부파일을 참고하시기 바랍니다.※ 대용량 첨부파일은 바로보기가 지원되지 않으니, 첨부파일명을 클릭하여 확인하시기 바랍니다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과 관련 보도자료 내용입니다."
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "4082",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "8월 31일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 70,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
+        },
+        {
+          "id": "4085",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "「2026 데이터+AI 혁신 챌린지」 9월 1일 통합공고··· 데이터·AI 혁신 아이디어 모집",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776407&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": null,
+          "target": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "action": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "2026데이터ai혁신챌린지9월1일통합공고데이터ai혁신아이디어",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전"
+        },
+        {
+          "id": "4084",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "오는 12월",
+          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
+          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다."
+        },
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        },
+        {
+          "id": "2883",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+          "publishedDate": "2026.08.27",
+          "effectiveDate": null,
+          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "인공지능서비스불법유해정보대응해야",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
+        },
+        {
+          "id": "2444",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775599&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-27&endDate=2026-08-27&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "자세한 내용은 첨부파일을 참고하시기 바랍니다.※ 대용량 첨부파일은 바로보기가 지원되지 않으니, 첨부파일명을 클릭하여 확인하시기 바랍니다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과 관련 보도자료 내용입니다."
+        },
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
+        },
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        },
+        {
+          "id": "1567",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 불법 사설서버 근절 총력 대응",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=580&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.08.03",
+          "effectiveDate": "2026년 8월",
+          "target": "주요 과제로 ▲ 불법 사이트 신속 차단 절차 도입 ▲ 처벌 강화 등 법률 개정 연구 ▲ 수사 의뢰 확대 ▲ CDN 사업자 협력을 통한 차단망 강화 등 다각적인 대응을 추진하며 불법 사설서버 대응의 실효성을 높이고 있다",
+          "action": "\" 게임위 , 불법 사설서버 근절 총력 대응 - 상반기만 1,450 건 차단 , 2 일 이내로 차단 기간 단축 - 게임물관리위원회 ( 위원장 서태건 , 이하 게임위 ) 가 건강하고 공정한 게임 문화 조성을 위해 전방위적 대응 체계를 추진해 온 가운데 , 지난달 28 일 경찰 공조를 중심으로 한 불법게임물 현장 대응 성과를 발표한 데 이어 이번에는 온라인상 불법 사설서버와 불법 프로그램 근절을",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "불법 게임물",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 4,
+          "history": [
+            {
+              "title": "게임위, 경찰 공조 강화로 불법게임물 대응체계 고도화",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=579&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.07.28",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.04.15",
+              "stageLabel": "단속·집행"
+            },
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 4건과 연결",
+          "evidenceSentence": "\" 게임위 , 불법 사설서버 근절 총력 대응 - 상반기만 1,450 건 차단 , 2 일 이내로 차단 기간 단축 - 게임물관리위원회 ( 위원장 서태건 , 이하 게임위 ) 가 건강하고 공정한 게임 문화 조성을 위해 전방위적 대응 체계를 추진해 온 가운데 , 지난달 28 일 경찰 공조를 중심으로 한 불법게임물 현장 대응 성과를 발표한 데 이어 이번에는 온라인상 불법 사설서버와 불법 프로그램 근절을 위한 대응 현황과 성과를 공개했다"
+        },
+        {
+          "id": "1568",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 경찰 공조 강화로 불법게임물 대응체계 고도화",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=579&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.07.28",
+          "effectiveDate": "2026년 7월",
+          "target": "전년 대비 129% 확대 , 불법 사행성 PC 방 109 개소 행정조치 의뢰 - 제도 개선과 관계기관 협력 , 안내 · 계도 및 홍보 강화로 건전 게임문화 조성 기반 확대 게임물관리위원회 ( 위원장 서태건 , 이하 ‘ 위원회 ’) 는 지난 2 월 1 일 이용자 보호와 게임물 사후관리 기능 강화를 위해 사후관리 조직을 확대 · 개편한 이후 , 경찰 과의 공조를 바탕으로 불법 게임물 대응체계를 ",
+          "action": "보도자료 2026년 7월 28(화) 도표/사진 포함 총 3페이지 게임물관리위원회 2026-15 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 경찰 공조 강화로 불법게임물 대응체계 고도화 - 상반기 현장 단속지원 248 건 · 감정 단속지원 1,220 건 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "불법 게임물",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 3,
+          "history": [
+            {
+              "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.04.15",
+              "stageLabel": "단속·집행"
+            },
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 후속 발표 · 이전 발표 3건과 연결",
+          "evidenceSentence": "보도자료 2026년 7월 28(화) 도표/사진 포함 총 3페이지 게임물관리위원회 2026-15 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 경찰 공조 강화로 불법게임물 대응체계 고도화 - 상반기 현장 단속지원 248 건 · 감정 단속지원 1,220 건 , 전년 대비 각각 24.0%, 18.9% 증가 - 경찰 단속기법 교육 1,049 명 ..."
+        },
+        {
+          "id": "1569",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 확률형 아이템 표시의무  위반한 해외게임물 관련 이용 주의 당부",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=576&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.07.06",
+          "effectiveDate": "2026년 7월",
+          "target": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 ·",
+          "action": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 ·",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 4,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제 체계’ 본격 가동",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=574&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.05.13",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 4건과 연결",
+          "evidenceSentence": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 · 결제 시 각별한 주의 필요 - - 저작권 권리자와의 사실확인 및 앱마켓 안내 등 이용자 피해 예방 노력 병"
+        },
+        {
+          "id": "1570",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "문체부·게임위, 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=575&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.06.29",
+          "effectiveDate": "2026년 6월",
+          "target": "이에 문체부는 전국 광역 지방자치단체에 협조 요청 공문을 발송하고 , 관할 숙박업소를 대상으로 관련 법령 및 준수사항에 대한 안내와 계도 활동 강화를 요청하였다",
+          "action": "​ 보도자료 2026년 6월 29(월) 사진 있음 총 2페이지 게임물관리위원회 2026-11 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 문체부 · 게임위 , 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진 - 문체부 , 지자체에 숙박업소 내 무등",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "숙박업소내무등록게임영업근절을안내및행정지도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "​ 보도자료 2026년 6월 29(월) 사진 있음 총 2페이지 게임물관리위원회 2026-11 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 문체부 · 게임위 , 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진 - 문체부 , 지자체에 숙박업소 내 무등록 게임영업 관련 안내 · 계도 강화 요청 - - 게임위 , PC 방 단체 및 숙박 예약플랫폼과 간담회 개최"
+        },
+        {
+          "id": "1558",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "K-게임 제작환경 인공지능 전환 본격화 콘진원, 게임 제작환경 인공지능 전환(AX) 지원사업 공모",
+          "source": "한국콘텐츠진흥원",
+          "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1137&menuNo=204767",
+          "publishedDate": "2026.05.18",
+          "effectiveDate": "5월 6일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 지난 5월 6일, 한국모바일게임협회(이하 모바일협회), 한국게임개발자협회(이하 개발자협회), 한국인공지능게임협회(이하 인공지능협회), 한국게임산업협회(이하 게임협회)와 업무협약을 체결하고 ‘게임 제작환경 인공지능 전환(A...",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 40,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "시행됨",
+          "policyKey": "게임 지원사업",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "K-콘텐츠 AI 창작 역량 강화 콘진원,‘AI 특화 콘텐츠 창작자 양성 지원사업’교육생 모집",
+              "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1135&menuNo=204767",
+              "publishedDate": "2026.05.14",
+              "stageLabel": "모집·공모"
+            }
+          ],
+          "selectionReason": "지원사업 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 지난 5월 6일, 한국모바일게임협회(이하 모바일협회), 한국게임개발자협회(이하 개발자협회), 한국인공지능게임협회(이하 인공지능협회), 한국게임산업협회(이하 게임협회)와 업무협약을 체결하고 ‘게임 제작환경 인공지능 전환(A..."
+        },
+        {
+          "id": "1559",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "K-콘텐츠 AI 창작 역량 강화 콘진원,‘AI 특화 콘텐츠 창작자 양성 지원사업’교육생 모집",
+          "source": "한국콘텐츠진흥원",
+          "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1135&menuNo=204767",
+          "publishedDate": "2026.05.14",
+          "effectiveDate": null,
+          "target": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다.",
+          "action": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 25,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 지원사업",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다."
+        },
+        {
+          "id": "1571",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘확률형 아이템 피해구제 체계’ 본격 가동",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=574&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.05.13",
+          "effectiveDate": "2026년 4월",
+          "target": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 ",
+          "action": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 3,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 3건과 연결",
+          "evidenceSentence": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 월 28 일 ( 화 ) 위촉장 수여 - 제 1 차 피해구제분과위원회 회의 개최 및 접수 안건 3 건 보고 ·"
+        },
+        {
+          "id": "1572",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.04.15",
+          "effectiveDate": "2026년 4월 15일",
+          "target": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동",
+          "action": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "불법 게임물",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 2,
+          "history": [
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 시행 단계 변화 · 이전 발표 2건과 연결",
+          "evidenceSentence": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동단속 · 이용자 보호 · 대국민 인식 제고 등 공동 대응 추진 - 게임물관리위원회 ( 위원장 서태건 , 이하"
+        },
+        {
+          "id": "1575",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.03.24",
+          "effectiveDate": "2026년 3월 16일",
+          "target": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 ",
+          "action": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "불법 게임물",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 지급 - 게임물관리위원회 ( 이하 ' 게임위 ') 는 불법게임물로 인한 이용자 피해를 예방하고 유통 및 불법"
+        },
+        {
+          "id": "1574",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.03.24",
+          "effectiveDate": "2026년 2월 27일",
+          "target": "보도자료 2026년 2월 27일(금) 사진 있음 총 3페이지 게임물관리위원회 2026-4 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제센터 ’ 개소 - 확률형아이템 관련 피해구제 전문센터로 이용자 권익보호 기대 - 확률형아이템 ",
+          "action": "보도자료 2026년 2월 27일(금) 사진 있음 총 3페이지 게임물관리위원회 2026-4 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제센터 ’ 개소 - 확률형아이템 관련 피해구제 전문센터로 이용자 권익보호 기대 - 확률형아이템 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "확률형 아이템",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 2,
+          "history": [
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 2건과 연결",
+          "evidenceSentence": "<‘ 확률형 아이템 피해구제센터 ’ 설립경과 > 년월 세부내용 비고 ‘24 년 3 월 ㅇ 확률형 아이템 표시의무 제도 시행 ㅇ 게임산업법 제 33 조 ② 항 ‘24 년 12 월 ㅇ 피해구제센터 설치 관련 법령개정안 국회 통과 ㅇ 게임산업법 제 33 조의 2 ⑤ 항 ‘25 년 1 월 ㅇ 피해구제센터 설치 개정법률 국무회의 의결 〃 ‘25 년 7 월 ㅇ 피해구제센터 업무 명시 시행령 공포 ㅇ 게임산업법 시행령 제 19 조의 3 ‘25 년 8 월 ㅇ 피해구제센터 설치 법률 시행 ‘25 년 8 월 ㅇ 피"
+        },
+        {
+          "id": "1576",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심  조직개편",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=566&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.02.03",
+          "effectiveDate": "2026년 2월 2일",
+          "target": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 ",
+          "action": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "이용자보호및사후관리중심조직개편",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 - 불법사설서버·불법사행성PC방 등 대응 위한 사후관리 조직 강화 게임물관리위원회(위원장 서태건, 이하 위원"
+        },
+        {
+          "id": "1577",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.01.30",
+          "effectiveDate": null,
+          "target": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐",
+          "action": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐츠분쟁조정위원회 연계를 통한 게임이용자 권익보호 체계 구축 - 게임물관리위원회 ( 위원장 서태건 , 이하 ‘"
+        }
+      ]
     },
     "week": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T05:25:47.731016+00:00",
+      "generatedAt": "2026-09-01T06:58:54.035048+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 533,
+        "collected": 599,
         "analyzed": 0,
-        "pending": 533,
+        "pending": 599,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -644,6 +2396,29 @@
       "analytics": {
         "interest": {
           "labels": [
+            "08.01",
+            "08.02",
+            "08.03",
+            "08.04",
+            "08.05",
+            "08.06",
+            "08.07",
+            "08.08",
+            "08.09",
+            "08.10",
+            "08.11",
+            "08.12",
+            "08.13",
+            "08.14",
+            "08.15",
+            "08.16",
+            "08.17",
+            "08.18",
+            "08.19",
+            "08.20",
+            "08.21",
+            "08.22",
+            "08.23",
             "08.24",
             "08.25",
             "08.26",
@@ -655,8 +2430,7 @@
           ],
           "series": [],
           "bucket": "일간"
-        },
-        "topicShare": []
+        }
       },
       "game": {
         "headline": "교차 확인된 핵심 이슈가 아직 없습니다.",
@@ -804,31 +2578,31 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 25,
+          "articleCount": 30,
           "articles": [
             {
-              "title": "정부, '모두의 AI'에 2500억원 투입…\"주민등록·KTX 예약도 AI로\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435776",
+              "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996069",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "LG유플러스, 어라이즈 AI와 손잡고 ‘신뢰할 수 있는 AI 에이전트’ 구축",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189540",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "전북과학대 앵커(RISE)사업단, '교직원 AI 에이전트 설계사 자격 과정' 운영",
-              "url": "https://www.etnews.com/20260901000155",
+              "title": "IBM, '에이전틱 엔터프라이즈' 전략 강화…“AI 도입보다 운영이 경쟁력”",
+              "url": "https://www.etnews.com/20260901000279",
               "source": "전자신문 AI"
             },
             {
-              "title": "KISA, 하반기 사이버 모의훈련 참가 기업 모집…AI 시범 도입",
-              "url": "https://www.etnews.com/20260901000046",
+              "title": "일레븐랩스, 매트릭스클라우드와 손잡고 AI 콘택트센터 새로운 장 연다",
+              "url": "https://www.etnews.com/20260901000358",
               "source": "전자신문 AI"
             },
             {
-              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "title": "일레븐랩스, 매트릭스클라우드에 ‘초저지연’ 음성솔루션 도입…AICC 운영 문제 해결",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214694",
               "source": "AI타임스"
             }
           ]
@@ -836,40 +2610,45 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 24,
+          "articleCount": 29,
           "articles": [
             {
-              "title": "[일문일답] \"GPU 1만장 3.85조 반영…모두의 AI 예산 충분\"",
-              "url": "https://n.news.naver.com/mnews/article/138/0002239750",
-              "source": "NAVER · 디지털데일리"
+              "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
+              "url": "https://n.news.naver.com/mnews/article/003/0014161531",
+              "source": "NAVER · 뉴시스"
             },
             {
-              "title": "정부, 독자 AI에 5조6천억원 쏟는다…GPU 1만장 확충해 '프론티어' 도전",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435777",
-              "source": "NAVER · 지디넷코리아"
+              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영",
+              "url": "https://n.news.naver.com/mnews/article/001/0016282862",
+              "source": "NAVER · 연합뉴스"
             },
             {
-              "title": "정부, 5년간 R&D에 200조 투입…AI 3강·반도체 자립화율 50% 목표",
-              "url": "https://n.news.naver.com/mnews/article/056/0012248567",
-              "source": "NAVER · KBS"
+              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영(종합)",
+              "url": "https://n.news.naver.com/mnews/article/001/0016283076",
+              "source": "NAVER · 연합뉴스"
             },
             {
-              "title": "메모리값 급등하는데… ‘GTA 6’ 용량 250GB 전망에 게이머들 ‘울상’",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996061",
-              "source": "NAVER · 조선일보"
+              "title": "[9.1.화.석간] 내가 참여한 건강조사 데이터, 인공지능 기반 맞춤 건강리포트로 돌려 드립니다!",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776284&pageIndex=6&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
             },
             {
-              "title": "연구개발에 5년간 200兆 투자…'추격형 성장' 꼬리표 뗀다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003462285",
-              "source": "NAVER · 전자신문"
+              "title": "지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214708",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 16,
+          "articleCount": 17,
           "articles": [
+            {
+              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
+              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
+              "source": "NAVER · 지디넷코리아"
+            },
             {
               "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
               "url": "https://n.news.naver.com/mnews/article/023/0003996060",
@@ -889,11 +2668,6 @@
               "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
               "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
-              "url": "https://www.etnews.com/20260901000010",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -950,8 +2724,862 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [],
-      "policyTimeline": []
+      "policyUpdates": [
+        {
+          "id": "4082",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "8월 31일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 70,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
+        },
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        },
+        {
+          "id": "2883",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+          "publishedDate": "2026.08.27",
+          "effectiveDate": null,
+          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "인공지능서비스불법유해정보대응해야",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
+        },
+        {
+          "id": "4085",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "「2026 데이터+AI 혁신 챌린지」 9월 1일 통합공고··· 데이터·AI 혁신 아이디어 모집",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776407&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": null,
+          "target": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "action": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "2026데이터ai혁신챌린지9월1일통합공고데이터ai혁신아이디어",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전"
+        },
+        {
+          "id": "4084",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "오는 12월",
+          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
+          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다."
+        },
+        {
+          "id": "2444",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775599&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-27&endDate=2026-08-27&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "자세한 내용은 첨부파일을 참고하시기 바랍니다.※ 대용량 첨부파일은 바로보기가 지원되지 않으니, 첨부파일명을 클릭하여 확인하시기 바랍니다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과 관련 보도자료 내용입니다."
+        }
+      ],
+      "policyTimeline": [
+        {
+          "id": "4082",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "8월 31일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 70,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
+        },
+        {
+          "id": "4085",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "「2026 데이터+AI 혁신 챌린지」 9월 1일 통합공고··· 데이터·AI 혁신 아이디어 모집",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776407&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": null,
+          "target": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "action": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "2026데이터ai혁신챌린지9월1일통합공고데이터ai혁신아이디어",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "개별 데이터 경진대회를 올해부터 하나의 국민 참여형 통합 브랜드로 추진 - △데이터안심구역, △데이터 문제해결, △빅콘테스트 3개 부문 참가자 모집, 국민 누구나 데이터·AI로 사회·산업 문제 해결에 도전"
+        },
+        {
+          "id": "4084",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
+          "publishedDate": "2026.09.01",
+          "effectiveDate": "오는 12월",
+          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
+          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다."
+        },
+        {
+          "id": "3522",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
+          "publishedDate": "2026.08.28",
+          "effectiveDate": "8월 27일",
+          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 65,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
+        },
+        {
+          "id": "2883",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
+          "publishedDate": "2026.08.27",
+          "effectiveDate": null,
+          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "인공지능서비스불법유해정보대응해야",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
+        },
+        {
+          "id": "2444",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775599&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-27&endDate=2026-08-27&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "자세한 내용은 첨부파일을 참고하시기 바랍니다.※ 대용량 첨부파일은 바로보기가 지원되지 않으니, 첨부파일명을 클릭하여 확인하시기 바랍니다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 35,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "｢사이버 보안 특화 AI 파운데이션 모델 개발｣ 사업 공모 결과 관련 보도자료 내용입니다."
+        },
+        {
+          "id": "2020",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775546&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.26",
+          "effectiveDate": null,
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "문해와 인공지능(AI)으로 연결하는 새로운 세상, '대한민국 문해교육 정책전시회' 개최"
+        },
+        {
+          "id": "2023",
+          "type": "TALENT",
+          "typeLabel": "인재",
+          "title": "과기정통부, 인천지역 AI·SW인재양성 거점, 「ICT콤플렉스」 개소",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775439&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-26&endDate=2026-08-26&srchWord=&period=",
+          "publishedDate": "2026.08.25",
+          "effectiveDate": null,
+          "target": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "action": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영",
+          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
+          "responseChecklist": [
+            "참여 대상과 교육 일정 확인",
+            "채용·재교육 계획 연계 가능성 검토"
+          ],
+          "priorityScore": 28,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 인재양성",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "인재 공식 발표",
+          "evidenceSentence": "과기정통부, 실무형 AI·SW인재양성 거점이 될「인천 ICT콤플렉스」개소식 개최(8.25.)- 재직자, 구직자, 대학생 등을 대상으로 AI·SW개발·테스트 장비·인프라 지원, 디지털 신기술 교육 및 지역 특화 교육프로그램 운영"
+        },
+        {
+          "id": "1562",
+          "type": "REGULATION",
+          "typeLabel": "규제 시행",
+          "title": "신산업 규제, 생성형 인공지능으로 빠르고 간편하게 확인한다",
+          "source": "대한민국 정책브리핑",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775262&pageIndex=2&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "publishedDate": "2026.08.24",
+          "effectiveDate": "8월 25일부터",
+          "target": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "action": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공",
+          "implication": "게임사와 플랫폼은 적용 대상과 시행 시점을 확인하고 운영·표시·보호 절차의 변경 여부를 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "적용 대상과 시행일 원문 확인",
+            "표시·운영·보호 절차 변경 필요 여부 점검"
+          ],
+          "priorityScore": 55,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "신산업규제생성형인공지능으로빠르고간편하게확인한다",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "규제 시행 공식 발표 · 시행됨",
+          "evidenceSentence": "과기정통부, 인공지능을 활용한「정보통신기술 규제 유예제도 (ICT 규제샌드박스) 규제 신속 확인 서비스」개시 - 30개 기업 대상 시범 운영을 거쳐 8월 25일부터 희망 기업에 이용권 제공"
+        },
+        {
+          "id": "1567",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 불법 사설서버 근절 총력 대응",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=580&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.08.03",
+          "effectiveDate": "2026년 8월",
+          "target": "주요 과제로 ▲ 불법 사이트 신속 차단 절차 도입 ▲ 처벌 강화 등 법률 개정 연구 ▲ 수사 의뢰 확대 ▲ CDN 사업자 협력을 통한 차단망 강화 등 다각적인 대응을 추진하며 불법 사설서버 대응의 실효성을 높이고 있다",
+          "action": "\" 게임위 , 불법 사설서버 근절 총력 대응 - 상반기만 1,450 건 차단 , 2 일 이내로 차단 기간 단축 - 게임물관리위원회 ( 위원장 서태건 , 이하 게임위 ) 가 건강하고 공정한 게임 문화 조성을 위해 전방위적 대응 체계를 추진해 온 가운데 , 지난달 28 일 경찰 공조를 중심으로 한 불법게임물 현장 대응 성과를 발표한 데 이어 이번에는 온라인상 불법 사설서버와 불법 프로그램 근절을",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "불법 게임물",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 4,
+          "history": [
+            {
+              "title": "게임위, 경찰 공조 강화로 불법게임물 대응체계 고도화",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=579&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.07.28",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.04.15",
+              "stageLabel": "단속·집행"
+            },
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 4건과 연결",
+          "evidenceSentence": "\" 게임위 , 불법 사설서버 근절 총력 대응 - 상반기만 1,450 건 차단 , 2 일 이내로 차단 기간 단축 - 게임물관리위원회 ( 위원장 서태건 , 이하 게임위 ) 가 건강하고 공정한 게임 문화 조성을 위해 전방위적 대응 체계를 추진해 온 가운데 , 지난달 28 일 경찰 공조를 중심으로 한 불법게임물 현장 대응 성과를 발표한 데 이어 이번에는 온라인상 불법 사설서버와 불법 프로그램 근절을 위한 대응 현황과 성과를 공개했다"
+        },
+        {
+          "id": "1568",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 경찰 공조 강화로 불법게임물 대응체계 고도화",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=579&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.07.28",
+          "effectiveDate": "2026년 7월",
+          "target": "전년 대비 129% 확대 , 불법 사행성 PC 방 109 개소 행정조치 의뢰 - 제도 개선과 관계기관 협력 , 안내 · 계도 및 홍보 강화로 건전 게임문화 조성 기반 확대 게임물관리위원회 ( 위원장 서태건 , 이하 ‘ 위원회 ’) 는 지난 2 월 1 일 이용자 보호와 게임물 사후관리 기능 강화를 위해 사후관리 조직을 확대 · 개편한 이후 , 경찰 과의 공조를 바탕으로 불법 게임물 대응체계를 ",
+          "action": "보도자료 2026년 7월 28(화) 도표/사진 포함 총 3페이지 게임물관리위원회 2026-15 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 경찰 공조 강화로 불법게임물 대응체계 고도화 - 상반기 현장 단속지원 248 건 · 감정 단속지원 1,220 건 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "불법 게임물",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 3,
+          "history": [
+            {
+              "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.04.15",
+              "stageLabel": "단속·집행"
+            },
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 후속 발표 · 이전 발표 3건과 연결",
+          "evidenceSentence": "보도자료 2026년 7월 28(화) 도표/사진 포함 총 3페이지 게임물관리위원회 2026-15 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 경찰 공조 강화로 불법게임물 대응체계 고도화 - 상반기 현장 단속지원 248 건 · 감정 단속지원 1,220 건 , 전년 대비 각각 24.0%, 18.9% 증가 - 경찰 단속기법 교육 1,049 명 ..."
+        },
+        {
+          "id": "1569",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, 확률형 아이템 표시의무  위반한 해외게임물 관련 이용 주의 당부",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=576&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.07.06",
+          "effectiveDate": "2026년 7월",
+          "target": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 ·",
+          "action": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 ·",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 4,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제 체계’ 본격 가동",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=574&searchtext=&searchtype=001&type=view&pageindex=0",
+              "publishedDate": "2026.05.13",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 4건과 연결",
+          "evidenceSentence": "보도자료 2026년 7월 1(수) 사진 있음 총 2페이지 게임물관리위원회 2026-12 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , 확률형 아이템 표시의무 위반한 해외게임물 관련 이용 주의 당부 - 공시송달 대상 게임물 , 유통제한 가능성 있어 이용 · 결제 시 각별한 주의 필요 - - 저작권 권리자와의 사실확인 및 앱마켓 안내 등 이용자 피해 예방 노력 병"
+        },
+        {
+          "id": "1570",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "문체부·게임위, 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=575&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.06.29",
+          "effectiveDate": "2026년 6월",
+          "target": "이에 문체부는 전국 광역 지방자치단체에 협조 요청 공문을 발송하고 , 관할 숙박업소를 대상으로 관련 법령 및 준수사항에 대한 안내와 계도 활동 강화를 요청하였다",
+          "action": "​ 보도자료 2026년 6월 29(월) 사진 있음 총 2페이지 게임물관리위원회 2026-11 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 문체부 · 게임위 , 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진 - 문체부 , 지자체에 숙박업소 내 무등",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "숙박업소내무등록게임영업근절을안내및행정지도",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표",
+          "evidenceSentence": "​ 보도자료 2026년 6월 29(월) 사진 있음 총 2페이지 게임물관리위원회 2026-11 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 문체부 · 게임위 , 숙박업소 내 무등록 게임영업 근절을 위한 안내 및 행정지도 추진 - 문체부 , 지자체에 숙박업소 내 무등록 게임영업 관련 안내 · 계도 강화 요청 - - 게임위 , PC 방 단체 및 숙박 예약플랫폼과 간담회 개최"
+        },
+        {
+          "id": "1558",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "K-게임 제작환경 인공지능 전환 본격화 콘진원, 게임 제작환경 인공지능 전환(AX) 지원사업 공모",
+          "source": "한국콘텐츠진흥원",
+          "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1137&menuNo=204767",
+          "publishedDate": "2026.05.18",
+          "effectiveDate": "5월 6일",
+          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
+          "action": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 지난 5월 6일, 한국모바일게임협회(이하 모바일협회), 한국게임개발자협회(이하 개발자협회), 한국인공지능게임협회(이하 인공지능협회), 한국게임산업협회(이하 게임협회)와 업무협약을 체결하고 ‘게임 제작환경 인공지능 전환(A...",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 40,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "시행됨",
+          "policyKey": "게임 지원사업",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "K-콘텐츠 AI 창작 역량 강화 콘진원,‘AI 특화 콘텐츠 창작자 양성 지원사업’교육생 모집",
+              "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1135&menuNo=204767",
+              "publishedDate": "2026.05.14",
+              "stageLabel": "모집·공모"
+            }
+          ],
+          "selectionReason": "지원사업 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 지난 5월 6일, 한국모바일게임협회(이하 모바일협회), 한국게임개발자협회(이하 개발자협회), 한국인공지능게임협회(이하 인공지능협회), 한국게임산업협회(이하 게임협회)와 업무협약을 체결하고 ‘게임 제작환경 인공지능 전환(A..."
+        },
+        {
+          "id": "1559",
+          "type": "FUNDING",
+          "typeLabel": "지원사업",
+          "title": "K-콘텐츠 AI 창작 역량 강화 콘진원,‘AI 특화 콘텐츠 창작자 양성 지원사업’교육생 모집",
+          "source": "한국콘텐츠진흥원",
+          "url": "https://www.kocca.kr/kocca/koccanews/reportview.do?nttNo=1135&menuNo=204767",
+          "publishedDate": "2026.05.14",
+          "effectiveDate": null,
+          "target": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다.",
+          "action": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다.",
+          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
+          "responseChecklist": [
+            "신청 자격·마감·제출 조건 확인",
+            "개발·유통·해외 진출 활용 가능성 검토"
+          ],
+          "priorityScore": 25,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "게임 지원사업",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "지원사업 공식 발표",
+          "evidenceSentence": "문화체육관광부(장관 최휘영)와 한국콘텐츠진흥원(원장직무대행 유현석, 이하 콘진원)은 ‘2026년 AI 특화 콘텐츠 창작자 양성 지원 사업'의 교육 수행기관으로 총 9개 컨소시엄을 최종 선정하고, 본격적인 교육생 모집에 나선다고 밝혔다."
+        },
+        {
+          "id": "1571",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘확률형 아이템 피해구제 체계’ 본격 가동",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=574&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.05.13",
+          "effectiveDate": "2026년 4월",
+          "target": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 ",
+          "action": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 3,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행 단계 변화 · 이전 발표 3건과 연결",
+          "evidenceSentence": "​ 보도자료 2026년 4월 28(화) 사진 있음 총 2페이지 게임물관리위원회 2026-10 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제 체계 ’ 본격 가동 - 이용자단체 ․ 사업자단체 및 법률전문가 등 중심 10 명 , 4 월 28 일 ( 화 ) 위촉장 수여 - 제 1 차 피해구제분과위원회 회의 개최 및 접수 안건 3 건 보고 ·"
+        },
+        {
+          "id": "1572",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임물관리위원회, 강원경찰청·강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=572&searchtext=&searchtype=001&type=view&pageindex=0",
+          "publishedDate": "2026.04.15",
+          "effectiveDate": "2026년 4월 15일",
+          "target": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동",
+          "action": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "불법 게임물",
+          "changeType": "STAGE_CHANGE",
+          "changeLabel": "시행 단계 변화",
+          "historyCount": 2,
+          "history": [
+            {
+              "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.03.24",
+              "stageLabel": "시행"
+            },
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 시행 단계 변화 · 이전 발표 2건과 연결",
+          "evidenceSentence": "보도자료 2026년 4월 15일(수) 사진 있음 총 1페이지 게임물관리위원회 2026-8 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 강원경찰청 · 강원랜드와 불법 사행성 게임물 등 근절 및 이용자보호 협력체계 구축 - 불법 사행성 게임물 합동단속 · 이용자 보호 · 대국민 인식 제고 등 공동 대응 추진 - 게임물관리위원회 ( 위원장 서태건 , 이하"
+        },
+        {
+          "id": "1575",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임물관리위원회, 2026년 불법게임물 신고포상제도 시행",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=569&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.03.24",
+          "effectiveDate": "2026년 3월 16일",
+          "target": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 ",
+          "action": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "불법 게임물",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "게임위, 2025년 불법게임물 신고포상금제도 시행",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=536&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.03.26",
+              "stageLabel": "시행"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "보도자료 2026년 3월 16일(월) 사진 있음 총 1페이지 게임물관리위원회 2026-5 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임물관리위원회 , 2026 년 불법게임물 신고포상제도 시행 - 불법게임물 근절에 국민 참여 독려 , 포상금 월 최대 60 만원 지급 - 게임물관리위원회 ( 이하 ' 게임위 ') 는 불법게임물로 인한 이용자 피해를 예방하고 유통 및 불법"
+        },
+        {
+          "id": "1574",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘확률형 아이템 피해구제센터’ 개소",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=570&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.03.24",
+          "effectiveDate": "2026년 2월 27일",
+          "target": "보도자료 2026년 2월 27일(금) 사진 있음 총 3페이지 게임물관리위원회 2026-4 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제센터 ’ 개소 - 확률형아이템 관련 피해구제 전문센터로 이용자 권익보호 기대 - 확률형아이템 ",
+          "action": "보도자료 2026년 2월 27일(금) 사진 있음 총 3페이지 게임물관리위원회 2026-4 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 : 홍지영 선임 전화: 051-720-6823 FAX: 051-720-6885 게임위 , ‘ 확률형 아이템 피해구제센터 ’ 개소 - 확률형아이템 관련 피해구제 전문센터로 이용자 권익보호 기대 - 확률형아이템 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "확률형 아이템",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 2,
+          "history": [
+            {
+              "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+              "publishedDate": "2026.01.30",
+              "stageLabel": "후속 발표"
+            },
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨 · 후속 발표 · 이전 발표 2건과 연결",
+          "evidenceSentence": "<‘ 확률형 아이템 피해구제센터 ’ 설립경과 > 년월 세부내용 비고 ‘24 년 3 월 ㅇ 확률형 아이템 표시의무 제도 시행 ㅇ 게임산업법 제 33 조 ② 항 ‘24 년 12 월 ㅇ 피해구제센터 설치 관련 법령개정안 국회 통과 ㅇ 게임산업법 제 33 조의 2 ⑤ 항 ‘25 년 1 월 ㅇ 피해구제센터 설치 개정법률 국무회의 의결 〃 ‘25 년 7 월 ㅇ 피해구제센터 업무 명시 시행령 공포 ㅇ 게임산업법 시행령 제 19 조의 3 ‘25 년 8 월 ㅇ 피해구제센터 설치 법률 시행 ‘25 년 8 월 ㅇ 피"
+        },
+        {
+          "id": "1576",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심  조직개편",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=566&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.02.03",
+          "effectiveDate": "2026년 2월 2일",
+          "target": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 ",
+          "action": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 ",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 60,
+          "priorityLabel": "우선 확인",
+          "urgencyLabel": "시행됨",
+          "policyKey": "이용자보호및사후관리중심조직개편",
+          "changeType": "NEW",
+          "changeLabel": "신규 정책",
+          "historyCount": 0,
+          "history": [],
+          "selectionReason": "단속·집행 공식 발표 · 시행됨",
+          "evidenceSentence": "보도자료 2026년 2월 2일(월) 참고자료 없음 총 3페이지 게임물관리위원회 2026-2 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6823 FAX: 051-720-6885 게임위, ‘이용자 보호’ 및 ‘사후관리 강화’ 중심 조직개편 - 확률형아이템 이용자 피해보호 전담조직 신설 및 민간등급이양 확대 - 불법사설서버·불법사행성PC방 등 대응 위한 사후관리 조직 강화 게임물관리위원회(위원장 서태건, 이하 위원"
+        },
+        {
+          "id": "1577",
+          "type": "ENFORCEMENT",
+          "typeLabel": "단속·집행",
+          "title": "게임위-콘진원, 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결",
+          "source": "게임물관리위원회",
+          "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=565&searchtext=&searchtype=001&type=view&pageindex=1",
+          "publishedDate": "2026.01.30",
+          "effectiveDate": null,
+          "target": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐",
+          "action": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐",
+          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
+          "responseChecklist": [
+            "단속·조사 대상과 위반 유형 확인",
+            "운영 기록과 신고·이용자 대응 절차 점검"
+          ],
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
+          "urgencyLabel": "일정 확인",
+          "policyKey": "확률형 아이템",
+          "changeType": "FOLLOW_UP",
+          "changeLabel": "후속 발표",
+          "historyCount": 1,
+          "history": [
+            {
+              "title": "게임위, ‘확률형 아이템 확률정보 공개’제도 안정화 지속노력",
+              "url": "https://www.grac.or.kr/Board/NewsData.aspx?bno=533&searchtext=&searchtype=001&type=view&pageindex=4",
+              "publishedDate": "2025.02.13",
+              "stageLabel": "후속 발표"
+            }
+          ],
+          "selectionReason": "단속·집행 공식 발표 · 후속 발표 · 이전 발표 1건과 연결",
+          "evidenceSentence": "보도자료 2026년1`월30일(금) 참고자료 없음 총 1페이지 게임물관리위원회 2026-1 [48058] 부산광역시 해운대구 센텀서로 39 영상산업센터 1층, 2층 게임물관리위원회 담당자 :오준택 차장 전화: 051-720-6817 FAX: 051-720-6885 게임물관리위원회-한국콘텐츠진흥원, 확률형아이템 피해구제를 통한 게임이용자 권익보호 업무협약 체결 - 확률형아이템 피해구제센터-콘텐츠분쟁조정위원회 연계를 통한 게임이용자 권익보호 체계 구축 - 게임물관리위원회 ( 위원장 서태건 , 이하 ‘"
+        }
+      ]
     }
   }
 }
