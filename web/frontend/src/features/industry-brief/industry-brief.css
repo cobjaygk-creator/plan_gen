@@ -1515,18 +1515,6 @@
   border-top: 1px solid var(--border);
 }
 .ib-highlight-issue:first-child { border-top: 0; }
-.ib-highlight-issue .headline {
-  display: -webkit-box;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  min-height: 0;
-  max-height: 1.2em;
-  font-size: clamp(17.5px, 1.56vw, 20px);
-  line-height: 1.2;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
 .ib-highlight-summary {
   display: -webkit-box;
   overflow: hidden;
@@ -1538,6 +1526,18 @@
   line-height: 1.45;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+/* 핵심이슈는 제목+요약을 나눈 카드가 아니라, 브리핑 캐스터처럼 2~3문장을
+   하나의 문단으로 읽는 형태 — 그래서 이 문단 자체가 카드의 유일한
+   텍스트이며(별도 굵은 제목 없음), 톤도 부제목이 아니라 본문이어야 한다. */
+.ib-highlight-briefing {
+  margin: 0;
+  max-height: calc(1.5em * 3);
+  color: var(--ink);
+  font-size: 15.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  -webkit-line-clamp: 3;
 }
 .ib-highlight-issue-foot { display: flex; flex: none; align-items: center; gap: 6px; margin-top: 6px; }
 .ib-highlight-issue-foot-label { color: var(--ink-faint); font-size: 13px; font-weight: 650; }

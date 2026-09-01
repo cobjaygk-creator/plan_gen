@@ -57,8 +57,7 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
         <div className="ib-highlight-issue-list">
           {visibleIssues.map((issue, index) => (
             <div className="ib-highlight-issue ib-change-flap" key={issue.title} style={{ animationDelay: `${(index * 0.11).toFixed(2)}s` }}>
-              <p className="headline">{issue.title}</p>
-              <p className="ib-highlight-summary">{issue.summary}</p>
+              <p className="ib-highlight-summary ib-highlight-briefing">{issue.summary}</p>
               <div className="ib-highlight-issue-foot">
                 <span className="ib-highlight-issue-foot-label">관련 기사</span>
                 <EvidenceSources sources={issue.articles.map(articleToSource)} />
