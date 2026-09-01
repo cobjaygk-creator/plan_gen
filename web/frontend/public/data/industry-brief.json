@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T07:02:27.257290+00:00",
+  "generated_at": "2026-09-01T10:58:03.068283+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-01",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 284,
+        "collected": 291,
         "analyzed": 0,
-        "pending": 284,
+        "pending": 291,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1179,9 +1179,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 822,
+        "collected": 810,
         "analyzed": 0,
-        "pending": 822,
+        "pending": 810,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1374,7 +1374,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 42,
+          "articleCount": 38,
           "articles": [
             {
               "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
@@ -1406,7 +1406,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 40,
+          "articleCount": 35,
           "articles": [
             {
               "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
@@ -1438,7 +1438,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 27,
+          "articleCount": 25,
           "articles": [
             {
               "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
@@ -1470,7 +1470,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 12,
+          "articleCount": 10,
           "articles": [
             {
               "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
@@ -2383,9 +2383,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 599,
+        "collected": 606,
         "analyzed": 0,
-        "pending": 599,
+        "pending": 606,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
