@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-01T10:58:03.068283+00:00",
+  "generated_at": "2026-09-01T11:54:18.134884+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T06:58:54.035048+00:00",
+      "generatedAt": "2026-09-01T11:50:47.073664+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 291,
+        "collected": 394,
         "analyzed": 0,
-        "pending": 291,
+        "pending": 394,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -202,63 +202,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 18,
+          "articleCount": 27,
           "articles": [
             {
-              "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
-              "url": "https://n.news.naver.com/mnews/article/003/0014161531",
-              "source": "NAVER · 뉴시스"
+              "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
+              "url": "https://n.news.naver.com/mnews/article/008/0005407946",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영",
-              "url": "https://n.news.naver.com/mnews/article/001/0016282862",
+              "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
+              "url": "https://n.news.naver.com/mnews/article/469/0000951494",
+              "source": "NAVER · 한국일보"
+            },
+            {
+              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "뜨거워진 GPU, 물로 식힌다… LG CNS·네이버도 뛰어든 데이터센터 액체 냉각",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189751",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "\"통합은 했는데\"…전남광주 반도체·AI·SOC 정부예산 미반영",
+              "url": "https://n.news.naver.com/mnews/article/001/0016283794",
               "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영(종합)",
-              "url": "https://n.news.naver.com/mnews/article/001/0016283076",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "[9.1.화.석간] 내가 참여한 건강조사 데이터, 인공지능 기반 맞춤 건강리포트로 돌려 드립니다!",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776284&pageIndex=6&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214708",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 14,
+          "articleCount": 19,
           "articles": [
             {
-              "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996069",
-              "source": "NAVER · 조선일보"
+              "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189669",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "IBM, '에이전틱 엔터프라이즈' 전략 강화…“AI 도입보다 운영이 경쟁력”",
-              "url": "https://www.etnews.com/20260901000279",
+              "title": "몽고DB, 'AI 데이터 플랫폼'으로 확장…“데이터 레이어가 AI 성패 좌우”",
+              "url": "https://www.etnews.com/20260901000377",
               "source": "전자신문 AI"
             },
             {
-              "title": "일레븐랩스, 매트릭스클라우드와 손잡고 AI 콘택트센터 새로운 장 연다",
-              "url": "https://www.etnews.com/20260901000358",
+              "title": "“공공·행정 AI 활용, 설명성 갖추고 이의제기 가능해야”",
+              "url": "https://www.etnews.com/20260901000421",
               "source": "전자신문 AI"
             },
             {
-              "title": "일레븐랩스, 매트릭스클라우드에 ‘초저지연’ 음성솔루션 도입…AICC 운영 문제 해결",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214694",
+              "title": "튜링, 70억원 규모 시리즈B 투자 유치",
+              "url": "https://www.etnews.com/20260901000440",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "'오픈클로 2.0' 공개...아키텍처 개편으로 보안·성능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214685",
               "source": "AI타임스"
             }
           ]
@@ -266,31 +266,43 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 8,
+          "articleCount": 14,
           "articles": [
             {
-              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
-              "source": "NAVER · 지디넷코리아"
+              "title": "“AI와 사랑에 빠졌어요”…14살 중학생의 고백 [AI과몰입]①",
+              "url": "https://n.news.naver.com/mnews/article/056/0012248730",
+              "source": "NAVER · KBS"
             },
             {
-              "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996060",
-              "source": "NAVER · 조선일보"
+              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "미국 국방부, 군용 챗GPT·그록 도입…민감 데이터 보호 나선다",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435800",
-              "source": "NAVER · 지디넷코리아"
+              "title": "딥시크·키미만이 아니다…개인 PC서 돌아가는 中 ‘작고 강한 AI’ [고든 정의 TECH+]",
+              "url": "https://n.news.naver.com/mnews/article/081/0003675652",
+              "source": "NAVER · 서울신문"
             },
             {
-              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
               "source": "AI타임스"
             },
             {
-              "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
+              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
               "source": "AI타임스"
             }
           ]
@@ -1175,13 +1187,13 @@
     },
     "3d": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T06:58:54.035048+00:00",
+      "generatedAt": "2026-09-01T11:50:47.073664+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 810,
+        "collected": 907,
         "analyzed": 0,
-        "pending": 810,
+        "pending": 907,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1374,63 +1386,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 38,
+          "articleCount": 47,
           "articles": [
             {
-              "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
-              "url": "https://n.news.naver.com/mnews/article/003/0014161531",
-              "source": "NAVER · 뉴시스"
+              "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
+              "url": "https://n.news.naver.com/mnews/article/008/0005407946",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영",
-              "url": "https://n.news.naver.com/mnews/article/001/0016282862",
+              "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
+              "url": "https://n.news.naver.com/mnews/article/469/0000951494",
+              "source": "NAVER · 한국일보"
+            },
+            {
+              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "뜨거워진 GPU, 물로 식힌다… LG CNS·네이버도 뛰어든 데이터센터 액체 냉각",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189751",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "\"통합은 했는데\"…전남광주 반도체·AI·SOC 정부예산 미반영",
+              "url": "https://n.news.naver.com/mnews/article/001/0016283794",
               "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영(종합)",
-              "url": "https://n.news.naver.com/mnews/article/001/0016283076",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "[9.1.화.석간] 내가 참여한 건강조사 데이터, 인공지능 기반 맞춤 건강리포트로 돌려 드립니다!",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776284&pageIndex=6&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214708",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 35,
+          "articleCount": 40,
           "articles": [
             {
-              "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996069",
-              "source": "NAVER · 조선일보"
+              "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189669",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "IBM, '에이전틱 엔터프라이즈' 전략 강화…“AI 도입보다 운영이 경쟁력”",
-              "url": "https://www.etnews.com/20260901000279",
+              "title": "몽고DB, 'AI 데이터 플랫폼'으로 확장…“데이터 레이어가 AI 성패 좌우”",
+              "url": "https://www.etnews.com/20260901000377",
               "source": "전자신문 AI"
             },
             {
-              "title": "일레븐랩스, 매트릭스클라우드와 손잡고 AI 콘택트센터 새로운 장 연다",
-              "url": "https://www.etnews.com/20260901000358",
+              "title": "“공공·행정 AI 활용, 설명성 갖추고 이의제기 가능해야”",
+              "url": "https://www.etnews.com/20260901000421",
               "source": "전자신문 AI"
             },
             {
-              "title": "일레븐랩스, 매트릭스클라우드에 ‘초저지연’ 음성솔루션 도입…AICC 운영 문제 해결",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214694",
+              "title": "튜링, 70억원 규모 시리즈B 투자 유치",
+              "url": "https://www.etnews.com/20260901000440",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "'오픈클로 2.0' 공개...아키텍처 개편으로 보안·성능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214685",
               "source": "AI타임스"
             }
           ]
@@ -1438,31 +1450,31 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 25,
+          "articleCount": 31,
           "articles": [
             {
-              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
-              "source": "NAVER · 지디넷코리아"
+              "title": "“AI와 사랑에 빠졌어요”…14살 중학생의 고백 [AI과몰입]①",
+              "url": "https://n.news.naver.com/mnews/article/056/0012248730",
+              "source": "NAVER · KBS"
             },
             {
-              "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996060",
-              "source": "NAVER · 조선일보"
+              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "미국 국방부, 군용 챗GPT·그록 도입…민감 데이터 보호 나선다",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435800",
-              "source": "NAVER · 지디넷코리아"
+              "title": "딥시크·키미만이 아니다…개인 PC서 돌아가는 中 ‘작고 강한 AI’ [고든 정의 TECH+]",
+              "url": "https://n.news.naver.com/mnews/article/081/0003675652",
+              "source": "NAVER · 서울신문"
             },
             {
-              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
               "source": "AI타임스"
             },
             {
-              "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
+              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
               "source": "AI타임스"
             }
           ]
@@ -1470,8 +1482,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 10,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
@@ -1490,11 +1507,6 @@
             {
               "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
               "url": "https://n.news.naver.com/mnews/article/003/0014158428",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "\"AI가 문제 너무 잘 풀어\"…넥슨, 10년 코딩대회 룰 갈아엎었다",
-              "url": "https://n.news.naver.com/mnews/article/003/0014157770",
               "source": "NAVER · 뉴시스"
             }
           ]
@@ -2379,13 +2391,13 @@
     },
     "week": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-09-01T06:58:54.035048+00:00",
+      "generatedAt": "2026-09-01T11:50:47.073664+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 606,
+        "collected": 709,
         "analyzed": 0,
-        "pending": 606,
+        "pending": 709,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2576,65 +2588,65 @@
       },
       "techRadar": [
         {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 30,
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 38,
           "articles": [
             {
-              "title": "“나도 의식 있을까?” 과학자에게 이메일 보낸 AI",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996069",
-              "source": "NAVER · 조선일보"
+              "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
+              "url": "https://n.news.naver.com/mnews/article/008/0005407946",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
-              "source": "NAVER · 지디넷코리아"
+              "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
+              "url": "https://n.news.naver.com/mnews/article/469/0000951494",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "IBM, '에이전틱 엔터프라이즈' 전략 강화…“AI 도입보다 운영이 경쟁력”",
-              "url": "https://www.etnews.com/20260901000279",
-              "source": "전자신문 AI"
+              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "일레븐랩스, 매트릭스클라우드와 손잡고 AI 콘택트센터 새로운 장 연다",
-              "url": "https://www.etnews.com/20260901000358",
-              "source": "전자신문 AI"
+              "title": "뜨거워진 GPU, 물로 식힌다… LG CNS·네이버도 뛰어든 데이터센터 액체 냉각",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189751",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "일레븐랩스, 매트릭스클라우드에 ‘초저지연’ 음성솔루션 도입…AICC 운영 문제 해결",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214694",
-              "source": "AI타임스"
+              "title": "\"통합은 했는데\"…전남광주 반도체·AI·SOC 정부예산 미반영",
+              "url": "https://n.news.naver.com/mnews/article/001/0016283794",
+              "source": "NAVER · 연합뉴스"
             }
           ]
         },
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 29,
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 35,
           "articles": [
             {
-              "title": "\"AI 다음은 양자컴퓨팅\"…IBM \"韓 배터리·반도체 도약 새 기회\"",
-              "url": "https://n.news.naver.com/mnews/article/003/0014161531",
-              "source": "NAVER · 뉴시스"
+              "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189669",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영",
-              "url": "https://n.news.naver.com/mnews/article/001/0016282862",
-              "source": "NAVER · 연합뉴스"
+              "title": "몽고DB, 'AI 데이터 플랫폼'으로 확장…“데이터 레이어가 AI 성패 좌우”",
+              "url": "https://www.etnews.com/20260901000377",
+              "source": "전자신문 AI"
             },
             {
-              "title": "전남광주시, 2027년 정부예산안에 국비 13조9천9억 반영(종합)",
-              "url": "https://n.news.naver.com/mnews/article/001/0016283076",
-              "source": "NAVER · 연합뉴스"
+              "title": "“공공·행정 AI 활용, 설명성 갖추고 이의제기 가능해야”",
+              "url": "https://www.etnews.com/20260901000421",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[9.1.화.석간] 내가 참여한 건강조사 데이터, 인공지능 기반 맞춤 건강리포트로 돌려 드립니다!",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776284&pageIndex=6&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "튜링, 70억원 규모 시리즈B 투자 유치",
+              "url": "https://www.etnews.com/20260901000440",
+              "source": "전자신문 AI"
             },
             {
-              "title": "지푸, 상반기 매출 5배 상승에도 '어닝 쇼크'…격화되는 가격 전쟁에 발목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214708",
+              "title": "'오픈클로 2.0' 공개...아키텍처 개편으로 보안·성능 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214685",
               "source": "AI타임스"
             }
           ]
@@ -2642,31 +2654,31 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 17,
+          "articleCount": 23,
           "articles": [
             {
-              "title": "[AI는 지금] 中 Z.ai, GLM 타고 폭풍 성장…상반기 매출 400% 급증",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435816",
-              "source": "NAVER · 지디넷코리아"
+              "title": "“AI와 사랑에 빠졌어요”…14살 중학생의 고백 [AI과몰입]①",
+              "url": "https://n.news.naver.com/mnews/article/056/0012248730",
+              "source": "NAVER · KBS"
             },
             {
-              "title": "챗GPT  광고, 연환산 매출 1조3700억원 달성",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996060",
-              "source": "NAVER · 조선일보"
+              "title": "\"삼성 반도체 설계도 클로드로 자동화 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728832",
+              "source": "NAVER · 매일경제"
             },
             {
-              "title": "미국 국방부, 군용 챗GPT·그록 도입…민감 데이터 보호 나선다",
-              "url": "https://n.news.naver.com/mnews/article/092/0002435800",
-              "source": "NAVER · 지디넷코리아"
+              "title": "딥시크·키미만이 아니다…개인 PC서 돌아가는 中 ‘작고 강한 AI’ [고든 정의 TECH+]",
+              "url": "https://n.news.naver.com/mnews/article/081/0003675652",
+              "source": "NAVER · 서울신문"
             },
             {
-              "title": "MS·오픈AI 동시 장애 발생...클라우드 인프라 연관성에 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214676",
+              "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
               "source": "AI타임스"
             },
             {
-              "title": "오픈AI, '챗GPT' 광고 200일 만에 연 매출 1.4조 돌파",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214677",
+              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
               "source": "AI타임스"
             }
           ]
@@ -2674,8 +2686,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
@@ -2694,11 +2711,6 @@
             {
               "title": "\"코딩은 AI에게, 전략은 내가\"…10년 만에 확 바뀐 넥슨 코딩대회",
               "url": "https://n.news.naver.com/mnews/article/003/0014158428",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "\"AI가 문제 너무 잘 풀어\"…넥슨, 10년 코딩대회 룰 갈아엎었다",
-              "url": "https://n.news.naver.com/mnews/article/003/0014157770",
               "source": "NAVER · 뉴시스"
             }
           ]
