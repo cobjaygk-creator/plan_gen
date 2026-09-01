@@ -265,7 +265,6 @@ export interface IndustryBrief {
   analysisStats?: AnalysisStats;
   analytics?: {
     interest: { labels: string[]; series: Array<{ name: string; originalTitle: string; category: "GAME" | "AI"; values: number[] }>; bucket: string };
-    topicShare: Array<{ topic: string; game: number; ai: number }>;
   };
   game: IndustryPanel;
   ai: IndustryPanel;

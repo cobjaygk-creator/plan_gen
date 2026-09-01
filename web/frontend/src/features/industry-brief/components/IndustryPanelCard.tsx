@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { IndustryPanel, SourceItem } from "../types";
-import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason } from "../api/client";
+import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason, type HighlightIssue } from "../api/client";
 
 interface Props {
 
@@ -14,16 +14,13 @@ interface Props {
 }
 
 const MAX_CORE_ISSUES = 5;
-const VISIBLE_CORE_ISSUES = 3;
+const VISIBLE_CORE_ISSUES = 2;
 const RECOMMENDED_PAGE_SIZE = 6;
-
-function articleToSource(article: { title: string; url: string; source: string }): SourceItem {
-  return { outlet: article.source.replace(/^NAVER · /, ""), title: article.title, url: article.url, publishedAgo: "" };
-}
 
 function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHighlights; category: "game" | "ai" }) {
   const [issuePage, setIssuePage] = useState(0);
   const [recommendedPage, setRecommendedPage] = useState(0);
+  const [openIssue, setOpenIssue] = useState<HighlightIssue | null>(null);
   const recommendedPageCount = Math.max(1, Math.ceil(highlights.recommended.length / RECOMMENDED_PAGE_SIZE));
   const visibleRecommended = highlights.recommended.slice(
     recommendedPage * RECOMMENDED_PAGE_SIZE, recommendedPage * RECOMMENDED_PAGE_SIZE + RECOMMENDED_PAGE_SIZE,
@@ -52,20 +49,31 @@ function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHi
   );
   return (
     <div className="ib-daily-highlights">
-      <div className="ib-highlight-section">
+      <div className="ib-highlight-section ib-highlight-core">
         <div className="eyebrow">핵심이슈</div>
         <div className="ib-highlight-issue-list">
           {visibleIssues.map((issue, index) => (
-            <div className="ib-highlight-issue ib-change-flap" key={issue.title} style={{ animationDelay: `${(index * 0.11).toFixed(2)}s` }}>
+            <button
+              type="button"
+              className="ib-highlight-issue ib-change-flap"
+              key={issue.title}
+              // GAME/AI 두 칼럼이 각자 index 0부터 시작하다 보니, GAME 1번째와
+              // AI 1번째가 항상 같은 타이밍에 뒤집혀서 "2개씩 짝지어" 움직이는
+              // 것처럼 보였다 — 카테고리별로 절반 박자만큼 어긋나게 시작해
+              // 네 장이 각각 다른 타이밍에 넘어가도록 한다.
+              style={{ animationDelay: `${(index * 0.45 + (category === "ai" ? 0.225 : 0)).toFixed(3)}s` }}
+              onClick={() => setOpenIssue(issue)}
+            >
               <p className="ib-highlight-summary ib-highlight-briefing">{issue.summary}</p>
               <div className="ib-highlight-issue-foot">
-                <span className="ib-highlight-issue-foot-label">관련 기사</span>
-                <EvidenceSources sources={issue.articles.map(articleToSource)} />
+                <span className="ib-highlight-issue-foot-label">관련 기사 {issue.articles.length}건</span>
+                <span className="ib-highlight-issue-foot-more">자세히 보기 →</span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
+      {openIssue && <HighlightIssueModal issue={openIssue} onClose={() => setOpenIssue(null)} />}
 
       {highlights.recommended.length > 0 && (
         <div className="ib-highlight-section">
@@ -117,6 +125,33 @@ function EvidenceSources({ sources }: { sources: SourceItem[] }) {
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+function HighlightIssueModal({ issue, onClose }: { issue: HighlightIssue; onClose: () => void }) {
+  return (
+    <div className="ib-highlight-modal-backdrop" role="presentation" onClick={onClose}>
+      <section
+        className="ib-highlight-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="핵심이슈 상세"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button type="button" className="ib-highlight-modal-close" onClick={onClose} aria-label="닫기">×</button>
+        <p className="ib-highlight-modal-eyebrow">핵심이슈</p>
+        <p className="ib-highlight-modal-body">{issue.summary}</p>
+        <div className="ib-highlight-modal-articles">
+          <div className="ib-source-pop-title">관련 기사 {issue.articles.length}건</div>
+          {issue.articles.map((article) => (
+            <a key={article.url} className="ib-item-source" href={article.url} target="_blank" rel="noreferrer">
+              <span className="outlet">{article.source.replace(/^NAVER · /, "")}</span>
+              <span className="title">{article.title}</span>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

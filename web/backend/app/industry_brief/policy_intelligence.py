@@ -230,13 +230,18 @@ def build_policy_updates(db: Session, period_start: datetime, period_end: dateti
     for historical in history_articles:
         if any(term in historical.title for term in POLICY_TITLE_TERMS):
             history_by_key.setdefault(_policy_key(historical.title), []).append(historical)
+    # 후보군을 recency 30건으로 먼저 잘라낸 뒤 POLICY_TITLE_TERMS로 걸러내고
+    # 있었다 — 고빈도로 올라오는 "대한민국 정책브리핑" 글이 최근 30건을
+    # 채워버리면, period_start를 아무리 넓혀도(예: 올해 기준) 그보다 오래된
+    # 게임위 발표는 매칭 검사를 받기도 전에 후보군에서 잘려나갔다. 실제
+    # 전체 데이터량(수십~백여 건 수준)에 맞춰 넉넉하게 올린다.
     articles = db.execute(
         select(Article).where(
             Article.source.in_(POLICY_SOURCES),
             Article.is_relevant.is_not(False),
             article_time >= period_start,
             article_time < period_end,
-        ).order_by(article_time.desc(), Article.id.desc()).limit(30)
+        ).order_by(article_time.desc(), Article.id.desc()).limit(300)
     ).scalars().all()
     cards = []
     for article in articles:

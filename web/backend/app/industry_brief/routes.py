@@ -498,7 +498,7 @@ def _brief_analytics(
     period_end = _as_aware_utc(period_end)
     assert period_start is not None and period_end is not None
 
-    chart_start = min(period_start, period_end - timedelta(days=7))
+    chart_start = min(period_start, period_end - timedelta(days=30))
     span_days = max(1, (period_end - chart_start).days + 1)
     weekly = span_days > 45
     bucket_days = 7 if weekly else 1
@@ -536,30 +536,8 @@ def _brief_analytics(
         if len(interest_series) == 3:
             break
 
-    article_time = func.coalesce(Article.published_at, Article.collected_at)
-    articles = list(db.execute(
-        select(Article).where(
-            Article.is_relevant.is_(True),
-            Article.category.in_(("GAME", "AI")),
-            article_time >= period_start,
-            article_time < period_end,
-        )
-    ).scalars().all())
-    topic_counts = {category: {topic: 0 for topic, _ in _TOPIC_RULES} | {"기타": 0} for category in ("GAME", "AI")}
-    for article in articles:
-        topic_counts[article.category][_topic_name(article)] += 1
-
-    topics = []
-    for topic, _ in (*_TOPIC_RULES, ("기타", ())):
-        game_count = topic_counts["GAME"][topic]
-        ai_count = topic_counts["AI"][topic]
-        if game_count or ai_count:
-            topics.append({"topic": topic, "game": game_count, "ai": ai_count})
-    topics.sort(key=lambda item: item["game"] + item["ai"], reverse=True)
-
     return {
         "interest": {"labels": labels, "series": interest_series, "bucket": "주간" if weekly else "일간"},
-        "topicShare": topics,
     }
 
 def _evidence_sources(db: Session, issue_ids: list[int], now: datetime) -> list[dict]:
@@ -746,7 +724,16 @@ def _serialize_brief(
         _recommended_articles(db, "GAME", stats_period_start, stats_period_end)
         + _recommended_articles(db, "AI", stats_period_start, stats_period_end)
     )
-    policy_timeline = build_policy_updates(db, stats_period_start, stats_period_end, limit=30)
+    # "주요 정책"과 "변화 타임라인"은 서로 다른 기준 기간을 쓴다 — 주요
+    # 정책은 최근 1주일, 타임라인은 올해(1/1~) 전체 흐름을 보여줘야 해서
+    # stats_period_start/end 하나로 공유하지 않고 각자의 기간으로 따로
+    # 조회한다.
+    policy_week_start = stats_period_end - timedelta(days=7)
+    policy_priority = build_policy_updates(db, policy_week_start, stats_period_end, limit=30)
+    policy_year_start = stats_period_end.astimezone(KST).replace(
+        month=1, day=1, hour=0, minute=0, second=0, microsecond=0,
+    ).astimezone(timezone.utc)
+    policy_timeline = build_policy_updates(db, policy_year_start, stats_period_end, limit=30)
 
     return {
         "briefDate": brief.brief_date,
@@ -788,7 +775,7 @@ def _serialize_brief(
         "landscape": build_landscape(db),
         "techRadar": build_tech_radar(db, stats_period_start, stats_period_end),
         "marketComparison": build_market_comparison(db, stats_period_start, stats_period_end),
-        "policyUpdates": policy_timeline[:6],
+        "policyUpdates": policy_priority[:6],
         "policyTimeline": sorted(
             policy_timeline, key=lambda item: item["publishedDate"], reverse=True
         ),

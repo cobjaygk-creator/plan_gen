@@ -1,3 +1,12 @@
+/* ONE 모바일 고딕 제목체 — ㈜원스토어 제공, 상업적 사용 무료
+   (https://noonnu.cc/font_page/678) */
+@font-face {
+  font-family: 'OneStoreMobileGothicTitleFont';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
 .ib-stack {
   display: flex;
   flex-direction: column;
@@ -394,7 +403,7 @@
 .ib-tech-radar-label { font-size: 13.2px; font-weight: 700; color: #111; }
 .ib-tech-radar-count { font-size: 12px; color: #666; }
 .ib-tech-radar-articles { display: flex; flex-direction: column; gap: 6px; }
-.ib-tech-radar-articles a { display: block; font-size: 12px; color: #333; text-decoration: none; line-height: 1.4; }
+.ib-tech-radar-articles a { display: block; font-size: 15.5px; color: #333; text-decoration: none; line-height: 1.4; }
 .ib-tech-radar-articles a:hover { color: #285f9e; text-decoration: underline; }
 .ib-tech-radar-articles .outlet { margin-right: 5px; color: #888; font-weight: 700; font-size: 10.5px; }
 .ib-issues h2 {
@@ -884,39 +893,40 @@
   box-shadow: none;
 }
 /* Top-level 업계동향 IA — scoped to this feature; the app's own left rail
-   (other systems' top menus) is untouched. Only "오늘" is wired in Phase 1. */
+   (other systems' top menus) is untouched. 이벤트벤치(event-bench.css의
+   .event-bench-tabs) 필터 칩 디자인을 그대로 가져왔다 — 밑줄 탭 대신
+   테두리 있는 알약형 버튼 + 선택 시 검정 채움. */
 .ib-submenu {
   display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid #e2e2e2;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 18px;
 }
 .ib-submenu-item {
-  padding: 9px 14px;
-  border-bottom: 2px solid transparent;
-  font-size: 13px;
-  font-weight: 600;
-  color: #999;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: #fff;
+  color: #555;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ib-submenu-item:hover {
+  border-color: #aaa;
+  color: #111;
 }
 .ib-submenu-item.is-active {
-  color: #111;
-  border-bottom-color: #111;
+  border-color: #111;
+  background: #111;
+  color: #fff;
 }
 .ib-submenu-item.is-disabled {
   color: #c4c4c4;
   cursor: not-allowed;
 }
-.ib-today-change { padding: 16px 20px; }
-.ib-today-change p { display: flex; align-items: baseline; gap: 8px; font-size: 14px; line-height: 1.55; margin: 0; }
-.ib-today-change p + p { margin-top: 8px; }
-.ib-axis { display: inline-flex; align-items: center; gap: 5px; flex: none; font-size: 10.5px; font-weight: 700; padding: 2px 8px 2px 6px; border-radius: 999px; }
-.ib-axis::before { content: ""; width: 5px; height: 5px; border-radius: 50%; }
-.ib-axis.game { background: #f3e1d6; color: #7a3115; }
-.ib-axis.game::before { background: #b14f2c; }
-.ib-axis.tech { background: #dceae5; color: #12463e; }
-.ib-axis.tech::before { background: #1d6e62; }
-
 .ib-page-header {
   display: flex;
   justify-content: space-between;
@@ -1218,10 +1228,10 @@
 .ib-landscape-issue:last-child { border-bottom: 0; }
 .ib-landscape-issue:hover { background: transparent; }
 .ib-landscape-issue:hover strong { text-decoration: underline; text-underline-offset: 3px; }
-.ib-landscape-issue strong { color: #1f1f1f; font-size: 14px; font-weight: 680; line-height: 1.38; }
+.ib-landscape-issue strong { color: #1f1f1f; font-size: 15.5px; font-weight: 680; line-height: 1.38; }
 .ib-landscape-meta { margin-top: 6px; gap: 6px; color: #777; font-size: 11px; }
 .ib-landscape-meta span + span { padding-left: 6px; }
-.ib-landscape-issue .ib-landscape-priority { display: inline-block; margin: 8px 0 0; border-radius: 4px; background: #f0f1f2; padding: 4px 6px; color: #555; font-size: 10px; font-weight: 600; line-height: 1.25; }
+.ib-landscape-issue .ib-landscape-priority { display: inline-block; margin: 8px 0 0; border-radius: 4px; background: #f0f1f2; padding: 4px 6px; color: #555; font-size: 13.5px; font-weight: 600; line-height: 1.25; }
 .ib-landscape-issue em { margin-top: 8px; color: #666; font-size: 11px; font-weight: 550; }
 @media (max-width: 960px) { .ib-landscape-grid { grid-template-columns: 1fr; } }
 /* Signals own the expandable "new today" detail, avoiding duplicate panels. */
@@ -1260,7 +1270,7 @@
 .ib-signal-detail p { margin: 6px 0 11px; color: #555; font-size: 13px; line-height: 1.55; }
 .ib-signal-detail-stats { display: flex; flex-wrap: wrap; gap: 8px 16px; color: #777; font-size: 11px; }
 .ib-signal-detail-stats b { color: #333; font-size: 12px; }
-@media (max-width: 760px) { .ib-signal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ib-signal-tile.is-keyword .topic { font-size: 17px; } }
+@media (max-width: 760px) { .ib-signal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ib-signal-tile.is-keyword .topic { font-size: 15.5px; } }
 /* Evidence modal: read articles in a natural title → outlet → date order. */
 .ib-landscape-modal { width: min(1080px, calc(100vw - 48px)); max-height: min(780px, calc(100vh - 48px)); padding: 28px 30px; }
 .ib-landscape-evidence-list li { display: block; padding: 12px 0; }
@@ -1275,7 +1285,7 @@
 @media (max-width: 640px) { .ib-landscape-modal { width: calc(100vw - 24px); padding: 22px 18px; } }
 /* Signal cards open details in a popup; the card itself is the only affordance. */
 .ib-signal-tile.is-keyword { grid-template-columns: minmax(0, 1fr) auto; align-items: center; min-height: 82px; }
-.ib-signal-tile.is-keyword .topic { font-size: 20px; }
+.ib-signal-tile.is-keyword .topic { font-size: 15.5px; }
 .ib-signal-metric { display: inline-flex; align-items: center; gap: 8px; color: #222; }
 .ib-signal-metric b { font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
 .ib-signal-tile.is-keyword .dir { font-size: 16px; }
@@ -1403,7 +1413,7 @@
   padding: 4px 6px;
 }
 .ib-signal-tile.is-keyword .topic { min-height: 0; }
-.ib-signal-priority { margin-top: 6px; color: #777; font-size: 10.5px; line-height: 1.3; }
+.ib-signal-priority { margin-top: 6px; color: #777; font-size: 13.5px; line-height: 1.3; }
 .ib-signal-priority-detail { color: #666; font-size: 12px; font-weight: 600; }
 .ib-signal-filters { display:flex; gap:5px; margin:-4px 0 12px; }
 .ib-signal-filters button { border:1px solid #dedede; border-radius:999px; background:#fff; color:#777; cursor:pointer; font-size:11px; font-weight:600; padding:5px 10px; }
@@ -1414,7 +1424,11 @@
 .ib-item-source .ago:empty { display:none; }
 
 .ib-change-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.ib-change-flap { animation: ib-change-flap .48s cubic-bezier(.2,.8,.2,1); transform-origin: center top; }
+/* fill-mode: backwards — 딜레이가 길어진 만큼(각 카드 0.45s차), 딜레이
+   구간 동안 0% 키프레임 상태(투명)를 유지해야 한다. 없으면 딜레이 동안
+   멀쩡히 보이다가 애니메이션 시작 순간 갑자기 사라졌다 나타나는 것처럼
+   깜빡여 보인다. */
+.ib-change-flap { animation: ib-change-flap .48s cubic-bezier(.2,.8,.2,1) backwards; transform-origin: center top; }
 @keyframes ib-change-flap { 0% { opacity: 0; transform: perspective(500px) rotateX(-72deg); } 100% { opacity: 1; transform: perspective(500px) rotateX(0); } }
 @media (prefers-reduced-motion: reduce) { .ib-change-flap { animation: none; } }
 /* Keep the headline's two-line reserved rhythm, but prefer a single readable line. */
@@ -1496,25 +1510,31 @@
 .ib-feedback-reasons button { padding: 4px 7px; border: 1px solid #ddd; border-radius: 999px; background: #fff; color: #666; font-size: 9.5px; cursor: pointer; }
 .ib-feedback-reasons button:hover { border-color: #b1493f; color: #b1493f; }
 
-.ib-highlight-section { margin: 0 0 16px; padding: 12px 14px; border: 1px solid #e3ebf4; border-radius: 10px; background: #f9fbfe; }
+.ib-highlight-section { margin: 0 0 16px; padding: 12px 14px; border: 0px solid #e3ebf4; border-radius: 16px; background: #f9fbfe; }
 .ib-highlight-section:last-child { margin-bottom: 0; }
 .ib-highlight-section > .eyebrow,
 .ib-highlight-section > .section-label { margin-top: 0; }
-/* Fixed to 3 row-tracks regardless of how many issues actually render, so
+/* Fixed to 2 row-tracks regardless of how many issues actually render, so
    a category with fewer issues still reserves the same total box height
-   as one showing the full 3 — the GAME/AI columns line up either way, with
-   unused tracks left blank rather than stretching real rows. Beyond 3
+   as one showing the full 2 — the GAME/AI columns line up either way, with
+   unused tracks left blank rather than stretching real rows. Beyond 2
    issues, DailyHighlightsBlock rotates the visible window every 6.5s
    instead of growing the grid. */
-.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(3, 156px); gap: 0; margin: 0; }
+.ib-highlight-issue-list { display: grid; grid-template-rows: repeat(2, 148px); gap: 0; margin: 0; }
 .ib-highlight-issue {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   padding: 13px 2px;
+  border: 0;
   border-top: 1px solid var(--border);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
 }
 .ib-highlight-issue:first-child { border-top: 0; }
+.ib-highlight-issue:hover .ib-highlight-issue-foot-more { color: #285f9e; text-decoration: underline; }
 .ib-highlight-summary {
   display: -webkit-box;
   overflow: hidden;
@@ -1531,16 +1551,46 @@
    하나의 문단으로 읽는 형태 — 그래서 이 문단 자체가 카드의 유일한
    텍스트이며(별도 굵은 제목 없음), 톤도 부제목이 아니라 본문이어야 한다. */
 .ib-highlight-briefing {
+  display: -webkit-box;
+  overflow: hidden;
   margin: 0;
-  max-height: calc(1.5em * 3);
+  max-height: calc(1.5em * 2);
   color: var(--ink);
-  font-size: 15.5px;
+  font-family: 'OneStoreMobileGothicTitleFont', var(--font);
+  font-size: 17px;
   font-weight: 500;
   line-height: 1.5;
-  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
-.ib-highlight-issue-foot { display: flex; flex: none; align-items: center; gap: 6px; margin-top: 6px; }
+.ib-highlight-issue-foot { display: flex; flex: none; align-items: center; justify-content: space-between; gap: 6px; margin-top: 8px; }
 .ib-highlight-issue-foot-label { color: var(--ink-faint); font-size: 13px; font-weight: 650; }
+.ib-highlight-issue-foot-more { color: var(--ink-faint); font-size: 12.5px; font-weight: 650; }
+
+/* 핵심이슈 카드만 다크 테마 배색 — 추천기사 등 나머지 섹션은 기존 배색 유지.
+   글자가 20px로 커진 뒤에도 기존의 좁은 148px 고정 행 높이·2px 좌우
+   여백을 그대로 썼더니 텍스트가 카드 가장자리에 붙어 답답해 보였다 —
+   다크 테마로 바뀌면서 카드 하나로 도드라져 보이는 만큼, 여백도 그에 맞게
+   넉넉하게 키운다. */
+.ib-highlight-core { padding: 16px 18px; background: #141a2b; border-color: #232b42; }
+.ib-highlight-core > .eyebrow { color: #7c8db8; }
+.ib-highlight-core .ib-highlight-issue-list { grid-template-rows: repeat(2, 150px); margin-top: 6px; }
+/* 고정 168px 행 안에서 justify-content:center를 그대로 쓰면, 실제 카드
+   폭에서 텍스트가 두 줄을 다 채우지 못하고 짧게 줄바꿈될 때 남는 여백이
+   위아래로 크게 벌어져 보인다 — 상하 여백을 항상 16px로 고정하려면
+   가운데 정렬 대신 위쪽 정렬로 바꿔야 한다. */
+.ib-highlight-core .ib-highlight-issue { justify-content: flex-start; /*padding: 16px 6px;*/ border-top-color: rgba(255, 255, 255, 0.08); }
+.ib-highlight-core .ib-highlight-briefing { color: #eef1fa; }
+.ib-highlight-core .ib-highlight-issue-foot-label,
+.ib-highlight-core .ib-highlight-issue-foot-more { color: #8892ab; }
+.ib-highlight-core .ib-highlight-issue:hover .ib-highlight-issue-foot-more { color: #6fa8ff; }
+
+.ib-highlight-modal-backdrop { position: fixed; z-index: 55; inset: 0; display: grid; place-items: center; padding: 20px; background: rgb(0 0 0 / 28%); }
+.ib-highlight-modal { position: relative; width: min(560px, calc(100vw - 40px)); max-height: min(680px, calc(100vh - 40px)); overflow: auto; border: 1px solid #ddd; border-radius: 12px; background: #fff; padding: 26px; box-shadow: 0 16px 42px rgb(0 0 0 / 18%); }
+.ib-highlight-modal-close { position: absolute; top: 12px; right: 14px; border: 0; background: transparent; color: #555; font-size: 25px; line-height: 1; cursor: pointer; }
+.ib-highlight-modal-eyebrow { margin: 0 0 8px; color: #777; font-size: 11px; font-weight: 650; }
+.ib-highlight-modal-body { margin: 0 0 20px; color: #222; font-family: 'OneStoreMobileGothicTitleFont', var(--font); font-size: 13.5px; font-weight: 500; line-height: 1.6; }
+.ib-highlight-modal-articles .ib-source-pop-title { margin: 0 0 8px; color: #777; font-size: 11px; font-weight: 650; }
 .ib-recommended-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .ib-recommended-head .section-label { margin: 0; }
 .ib-recommended-next { padding: 4px 13px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--ink-muted); font-size: 13.5px; font-weight: 700; cursor: pointer; }
@@ -1574,8 +1624,9 @@
   -webkit-line-clamp: 1;
 }
 /* 오늘 탭 핵심이슈/추천기사만 전반적으로 글씨 130% 확대 */
-.ib-daily-highlights .eyebrow,
 .ib-daily-highlights .section-label { font-size: 15px; }
+/* "핵심이슈" 섹션 타이틀만 20% 축소 (130% 확대분 기준) + 전용 웹폰트(여기어때 잘난체) */
+.ib-daily-highlights .eyebrow { font-size: 12px; }
 .ib-daily-highlights .ib-evidence-count {
   min-width: 0; height: auto; padding: 0; border: 0; border-radius: 0;
   background: transparent; font-size: 13px; font-weight: 600; line-height: 1;
@@ -1646,30 +1697,19 @@
 .ib-analytics-head span { color:#888; font-size:10px; font-weight:750; letter-spacing:.1em; }
 .ib-analytics-head h2 { margin:4px 0 0; font-size:18px; letter-spacing:-.035em; }
 .ib-analytics-head p { margin:0; color:#888; font-size:11px; }
-.ib-analytics-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:28px; }
-.ib-analytics-grid > article + article { border-left:1px solid #e6e6e6; padding-left:28px; }
+/* GAME·AI 주요 주제 비중(TopicBars)을 없애면서 이슈 관심도 변화 그래프
+   하나만 남았다 — 예전엔 두 칼럼 그리드였지만 이제 단일 칼럼으로 충분. */
+.ib-analytics-grid { display:grid; grid-template-columns:1fr; gap:28px; }
 .ib-chart-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; }
 .ib-chart-title h3 { margin:0; font-size:13px; }
 .ib-chart-title span { color:#999; font-size:10px; }
-.ib-chart-legend, .ib-topic-legend { display:flex; flex-wrap:wrap; gap:8px 14px; min-height:22px; color:#666; font-size:10px; }
-.ib-chart-legend span, .ib-topic-legend span { display:flex; align-items:center; gap:5px; min-width:0; }
-.ib-chart-legend span { max-width:31%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:700; }
-.ib-chart-legend i, .ib-topic-legend i { width:7px; height:7px; border-radius:50%; flex:0 0 auto; }
-.ib-line-chart { display:block; width:100%; height:190px; overflow:visible; }
+.ib-chart-legend { display:flex; flex-wrap:wrap; gap:8px 14px; min-height:22px; color:#666; font-size:10px; }
+.ib-chart-legend span { display:flex; align-items:center; gap:5px; min-width:0; max-width:31%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:700; }
+.ib-chart-legend i { width:7px; height:7px; border-radius:50%; flex:0 0 auto; }
+.ib-line-chart { display:block; width:100%; height:260px; overflow:visible; }
 .ib-line-chart text { fill:#999; font-size:10px; }
 .ib-chart-grid { stroke:#ececec; stroke-width:1; }
-.ib-topic-legend { justify-content:flex-end; }
-.ib-topic-legend i.game, .ib-topic-pair span.game { background:#111; }
-.ib-topic-legend i.ai, .ib-topic-pair span.ai { background:#0d9d9a; }
-.ib-topic-bars { min-height:212px; }
-.ib-topic-row { display:grid; grid-template-columns:64px 1fr; align-items:center; gap:10px; margin:9px 0; }
-.ib-topic-row strong { color:#555; font-size:11px; }
-.ib-topic-pair { display:grid; gap:3px; }
-.ib-topic-pair > div { position:relative; height:8px; border-radius:2px; background:#f1f1f1; }
-.ib-topic-pair span { display:block; min-width:0; height:100%; border-radius:2px; }
-.ib-topic-pair em { position:absolute; top:-3px; right:4px; color:#777; font-size:9px; font-style:normal; line-height:1; }
 .ib-chart-empty { display:grid; min-height:180px; place-items:center; margin:0; color:#999; font-size:12px; text-align:center; }
-@media (max-width:900px) { .ib-analytics-grid { grid-template-columns:1fr; } .ib-analytics-grid > article + article { border-left:0; border-top:1px solid #e6e6e6; padding:22px 0 0; } }
 .ib-refresh-progress-backdrop { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; background: rgb(0 0 0 / 24%); }
 .ib-refresh-progress { width: min(400px, calc(100vw - 40px)); border: 1px solid #ddd; border-radius: 14px; background: #fff; box-shadow: 0 18px 50px rgb(0 0 0 / 20%); padding: 28px; }
 .ib-refresh-progress-label { color: #777; font-size: 10px; font-weight: 750; letter-spacing: .08em; }
@@ -1739,13 +1779,13 @@
 .ib-policy-card header .priority-high { background: #fff0cc; color: #7a5200; }
 .ib-policy-card header .priority-watch { background: #f0f0f0; color: #777; }
 .ib-policy-card header time { color: #999; font-size: 10px; }
-.ib-policy-card > a { display: block; color: #111; font-size: 16px; font-weight: 750; line-height: 1.4; text-decoration: none; }
+.ib-policy-card > a { display: block; color: #111; font-size: 15.5px; font-weight: 750; line-height: 1.4; text-decoration: none; }
 .ib-policy-card > a:hover { text-decoration: underline; }
 .ib-policy-change { display: flex; align-items: center; gap: 7px; margin-top: 8px; color: #555; font-size: 10px; font-weight: 750; }
 .ib-policy-change > span { color: #999; font-weight: 500; }
 .ib-policy-change.change-new { color: #327149; }
 .ib-policy-change.change-revision, .ib-policy-change.change-stage_change { color: #9c3329; }
-.ib-policy-reason { margin-top: 9px; border-top: 1px solid #eee; padding-top: 9px; color: #555; font-size: 11px; line-height: 1.45; }
+.ib-policy-reason { margin-top: 9px; border-top: 1px solid #eee; padding-top: 9px; color: #555; font-size: 13.5px; line-height: 1.45; }
 .ib-policy-reason strong { margin-right: 7px; color: #888; font-size: 10px; }
 .ib-policy-detail { margin-top: 10px; animation: ib-policy-detail-in 160ms ease-out; }
 @keyframes ib-policy-detail-in { from { opacity: 0; transform: translateY(-3px); } to { opacity: 1; transform: translateY(0); } }
@@ -1795,8 +1835,8 @@
 .ib-policy-timeline li > div > div { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
 .ib-policy-timeline li strong { color: #222; font-size: 11px; }
 .ib-policy-timeline li div span, .ib-policy-timeline li div em { border-radius: 999px; background: #f1f1f1; padding: 2px 6px; color: #777; font-size: 9px; font-style: normal; }
-.ib-policy-timeline li a { display: block; overflow: hidden; color: #111; font-size: 13px; font-weight: 700; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
-.ib-policy-timeline li p { margin: 4px 0 0; color: #888; font-size: 10px; }
+.ib-policy-timeline li a { display: block; overflow: hidden; color: #111; font-size: 15.5px; font-weight: 700; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.ib-policy-timeline li p { margin: 4px 0 0; color: #888; font-size: 13.5px; }
 @media (max-width: 760px) { .ib-policy-grid { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .ib-policy-summary { grid-template-columns: repeat(2, 1fr); } .ib-policy-summary > div { border-bottom: 1px solid #e8e8e8; } }
 /* GitHub Pages is a read-only benchmark snapshot. */

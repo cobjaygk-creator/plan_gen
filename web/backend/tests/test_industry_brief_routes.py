@@ -106,8 +106,8 @@ def test_latest_returns_serialized_brief_matching_frontend_shape(client, make_us
     assert body["policyTimeline"] == []
     assert body["analytics"]["interest"]["series"][0]["name"] == "테스트 이슈"
     assert body["analytics"]["interest"]["series"][0]["originalTitle"] == "테스트 이슈"
-    assert len(body["analytics"]["interest"]["labels"]) == 8
-    assert body["analytics"]["topicShare"]
+    assert len(body["analytics"]["interest"]["labels"]) == 31
+    assert "topicShare" not in body["analytics"]
 
     assert len(body["issues"]) == 1
     issue_payload = body["issues"][0]

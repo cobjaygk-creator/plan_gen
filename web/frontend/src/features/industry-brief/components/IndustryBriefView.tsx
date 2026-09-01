@@ -1,20 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
 import type { IndustryBrief } from "../types";
 import {
-  fetchBriefForDate, fetchHighlightsForDate, fetchPeriodBrief,
+  fetchBriefForDate, fetchHighlightsForDate,
   refreshDailyHighlights, refreshIndustryBrief, type DailyHighlightsResponse,
 } from "../api/client";
 import { formatDateLabel, formatKoreanDateTime, todayKstDateString } from "../utils/format";
-import { BriefHeader } from "./BriefHeader";
 import { DateNavigator } from "./DateNavigator";
 import { IndustrySubmenu, type IndustryScreen } from "./IndustrySubmenu";
 import { IndustryPanelCard } from "./IndustryPanelCard";
-import { CrossInsightPanel } from "./CrossInsightPanel";
 import { SignalsPanel } from "./SignalsPanel";
-import { ImportantIssuesPanel } from "./ImportantIssuesPanel";
 import { IndustryLandscapePanel } from "./IndustryLandscapePanel";
 import { TechRadarPanel } from "./TechRadarPanel";
-import { MarketComparisonPanel } from "./MarketComparisonPanel";
 import { PolicyUpdatesPanel } from "./PolicyUpdatesPanel";
 import { BriefAnalyticsPanel } from "./BriefAnalyticsPanel";
 import { EditorialFeedbackManager } from "./EditorialFeedbackManager";
@@ -42,9 +38,6 @@ export function IndustryBriefView() {
   const [loading, setLoading] = useState(true);
   const [dateLoading, setDateLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [showWeekTrend, setShowWeekTrend] = useState(false);
-  const [weekBrief, setWeekBrief] = useState<IndustryBrief | null>(null);
-  const [weekLoading, setWeekLoading] = useState(false);
 
   const isToday = selectedDate === todayKstDateString();
 
@@ -94,28 +87,13 @@ export function IndustryBriefView() {
     try { setBrief(await fetchBriefForDate(selectedDate)); } catch { setError(true); }
   }, [selectedDate]);
 
-  const toggleWeekTrend = useCallback(() => {
-    setShowWeekTrend((open) => {
-      const next = !open;
-      if (next && !weekBrief) {
-        setWeekLoading(true);
-        void fetchPeriodBrief("week").then(setWeekBrief).catch(() => setError(true)).finally(() => setWeekLoading(false));
-      }
-      return next;
-    });
-  }, [weekBrief]);
-
   if (loading) return <div className="ib-page-status">Industry Brief를 불러오는 중입니다.</div>;
   if (error && !brief) return <div className="ib-page-status">아직 생성된 Industry Brief가 없습니다.<br />첫 분석이 완료되면 표시됩니다.</div>;
   if (!brief) return null;
 
-  const gameTopIssue = highlights?.game.coreIssues[0];
-  const aiTopIssue = highlights?.ai.coreIssues[0];
-
   return (
     <div className="ib-page-bg">
     <div className="ib-stack">
-      <IndustrySubmenu active={activeScreen} onChange={setActiveScreen} />
       <header className="ib-page-header">
         <h1>게임 · AI 업계 동향</h1>
         <div className="ib-header-actions">
@@ -125,61 +103,33 @@ export function IndustryBriefView() {
           )}
         </div>
       </header>
+      <IndustrySubmenu active={activeScreen} onChange={setActiveScreen} />
       {error && <div className="card ib-notice">최신 결과를 불러오지 못해 이전 분석을 표시합니다.</div>}<RefreshProgress open={refreshing} />
       <div className="ib-period-row">
         <DateNavigator date={selectedDate} loading={dateLoading || refreshing} onChange={changeDate} />
-        {activeScreen === "today" && (
-          <button type="button" className={`ib-week-toggle${showWeekTrend ? " is-active" : ""}`} onClick={toggleWeekTrend}>
-            이번주 추세 {showWeekTrend ? "숨기기" : "보기"}
-          </button>
-        )}
         <EditorialFeedbackManager onRestore={() => void reloadSelectedDate()} />
       </div>
 
       {activeScreen === "today" && (
-        <>
-          {(gameTopIssue || aiTopIssue) && (
-            <div className="card ib-today-change">
-              {gameTopIssue && <p><span className="ib-axis game">GAME</span>{gameTopIssue.title} — {gameTopIssue.summary}</p>}
-              {aiTopIssue && <p><span className="ib-axis tech">AI</span>{aiTopIssue.title} — {aiTopIssue.summary}</p>}
-            </div>
-          )}
-          <div className="ib-two-col">
-            <IndustryPanelCard title="GAME" panel={brief.game} category="game" periodLabel={formatDateLabel(selectedDate)} highlights={highlights?.game} />
-            <IndustryPanelCard title="AI" panel={brief.ai} category="ai" periodLabel={formatDateLabel(selectedDate)} highlights={highlights?.ai} />
-          </div>
-          {brief.techRadar && brief.techRadar.length > 0 && <TechRadarPanel items={brief.techRadar} limit={2} />}
-          {showWeekTrend && (
-            weekLoading || !weekBrief ? (
-              <div className="card ib-notice">이번주 추세를 불러오는 중입니다.</div>
-            ) : (
-              <div className="ib-two-col ib-week-trend">
-                <IndustryPanelCard title="GAME · 이번주 추세" panel={weekBrief.game} category="game" periodLabel="이번 주" />
-                <IndustryPanelCard title="AI · 이번주 추세" panel={weekBrief.ai} category="ai" periodLabel="이번 주" />
-              </div>
-            )
-          )}
-          {brief.analytics && <BriefAnalyticsPanel analytics={brief.analytics} periodLabel={formatDateLabel(selectedDate)} />}
-          {brief.policyUpdates && <PolicyUpdatesPanel updates={brief.policyUpdates} timeline={brief.policyTimeline ?? brief.policyUpdates} />}
-          <CrossInsightPanel insight={brief.crossInsight} game={brief.game} ai={brief.ai} recommendations={brief.recommendedArticles} />
-          {brief.landscape && <IndustryLandscapePanel landscape={brief.landscape} limit={3} />}
-          <SignalsPanel signals={brief.signals} limit={8} />
-          {brief.marketComparison && <MarketComparisonPanel panels={brief.marketComparison} />}
-          <ImportantIssuesPanel issues={brief.issues} limit={3} onViewAll={() => setActiveScreen("issue")} />
-          <BriefHeader brief={brief} />
-        </>
+        <div className="ib-two-col">
+          <IndustryPanelCard title="GAME" panel={brief.game} category="game" periodLabel={formatDateLabel(selectedDate)} highlights={highlights?.game} />
+          <IndustryPanelCard title="AI" panel={brief.ai} category="ai" periodLabel={formatDateLabel(selectedDate)} highlights={highlights?.ai} />
+        </div>
       )}
 
-      {activeScreen === "issue" && (
-        <>
-          <ImportantIssuesPanel issues={brief.issues} />
-          {brief.landscape && <IndustryLandscapePanel landscape={brief.landscape} limit={8} />}
-        </>
+      {activeScreen === "policy" && brief.policyUpdates && (
+        <PolicyUpdatesPanel updates={brief.policyUpdates} timeline={brief.policyTimeline ?? brief.policyUpdates} />
       )}
 
       {activeScreen === "tech" && <TechRadarPanel items={brief.techRadar ?? []} />}
 
-      {activeScreen === "trend" && <SignalsPanel signals={brief.signals} limit={30} />}
+      {activeScreen === "trend" && (
+        <>
+          {brief.landscape && <IndustryLandscapePanel landscape={brief.landscape} limit={8} />}
+          {brief.analytics && <BriefAnalyticsPanel analytics={brief.analytics} periodLabel={formatDateLabel(selectedDate)} />}
+          <SignalsPanel signals={brief.signals} limit={30} />
+        </>
+      )}
     </div>
     </div>
   );
