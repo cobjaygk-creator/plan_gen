@@ -1256,102 +1256,6 @@
     "portal": "WEMADE"
   },
   {
-    "url": "https://newslg-kr.biligames.com/",
-    "game_name": "삼국지: 천하결전",
-    "publisher": null,
-    "published_on": "2026-07-02",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1757372390.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.nintendo.com/jp/switch/bflta/index.html",
-    "game_name": "리듬 천국 미라클 스타즈",
-    "publisher": null,
-    "published_on": "2026-07-02",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1812481386.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://lastfurry.website.allstarcluster.com/",
-    "game_name": "라스트 퍼리: 서바이벌",
-    "publisher": null,
-    "published_on": "2026-07-03",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1251906267.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.moonlightpeaks.com/",
-    "game_name": "문라이트 피크스",
-    "publisher": null,
-    "published_on": "2026-07-07",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1163681218.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.bandainamcoent.asia/ko-kr/games/echoes-of-aincrad",
-    "game_name": "에코스 오브 아인크라드",
-    "publisher": null,
-    "published_on": "2026-07-09",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1477495861.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://relink-ragnarok.granbluefantasy.com/ko",
-    "game_name": "그랑블루 판타지 리링크 - 엔드리스 라그나로크",
-    "publisher": null,
-    "published_on": "2026-07-09",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1767003592.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.pocketpair.jp/en/games-en/palworld-en",
-    "game_name": "팰월드",
-    "publisher": null,
-    "published_on": "2026-07-10",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1129072487.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://flywaygames.com/en/game/ascend-to-zero",
-    "game_name": "어센드 투 제로",
-    "publisher": null,
-    "published_on": "2026-07-13",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1223140976.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://game.neoscorp.jp/culdcept_begins/index_en.html",
-    "game_name": "컬드셉트 비긴즈",
-    "publisher": null,
-    "published_on": "2026-07-16",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1204467352.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.cloudedleopardent.com/game/kyoxana/kr",
-    "game_name": "교토 재너두 - 앵화환무-",
-    "publisher": null,
-    "published_on": "2026-07-16",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1249172735.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://romc.gnjoy.com/",
-    "game_name": "라그나로크M: Classic",
-    "publisher": null,
-    "published_on": "2026-07-16",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1821821783.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.konami.com/games/prospi/2026/asia/ko",
-    "game_name": "프로야구스피리츠2026",
-    "publisher": null,
-    "published_on": "2026-07-16",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1376044869.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://www.kingdom2-fow.com/",
     "game_name": "킹덤2: 타오르는 전장",
     "publisher": null,
@@ -1360,115 +1264,11 @@
     "portal": "INVEN_CALENDAR"
   },
   {
-    "url": "https://www.newtales.com/games/fading-echo/en-us",
-    "game_name": "페이딩 에코",
-    "publisher": null,
-    "published_on": "2026-07-22",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1214245644.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.cupdoggames.com/en",
-    "game_name": "루비나이트",
-    "publisher": null,
-    "published_on": "2026-07-23",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1100581949.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://hound13.com/ko",
-    "game_name": "드래곤소드 : 어웨이크닝",
-    "publisher": null,
-    "published_on": "2026-07-23",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1362856797.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.nintendo.com/jp/games/switch2/aadla/index.html",
-    "game_name": "스플래툰 레이더스",
-    "publisher": null,
-    "published_on": "2026-07-23",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1719387273.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.ohnoo.com/",
-    "game_name": "토르멘툼2",
-    "publisher": null,
-    "published_on": "2026-07-24",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1847395995.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.youtube.com/@jeananimate",
-    "game_name": "다이노블레이드",
-    "publisher": null,
-    "published_on": "2026-07-24",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1736924271.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://game.naver.com/lounge/yulgang_next/home",
-    "game_name": "열혈강호: 넥스트",
-    "publisher": null,
-    "published_on": "2026-07-29",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1805202130.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
     "url": "https://bearbrickheroes.onuniverse.io/PreReservation_GrandOpen",
     "game_name": "베어브릭 히어로즈",
     "publisher": null,
     "published_on": "2026-07-29",
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1496163422.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.midnightmoments.io/",
-    "game_name": "미드나잇 모먼트",
-    "publisher": null,
-    "published_on": "2026-07-30",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1502537423.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://luminesremastered.com/",
-    "game_name": "루미네스 리마스터",
-    "publisher": null,
-    "published_on": "2026-07-30",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1383956750.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://mistfallhunter.com/",
-    "game_name": "미스트폴 헌터",
-    "publisher": null,
-    "published_on": "2026-07-30",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1224876351.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://circlefromdot.imweb.me/",
-    "game_name": "쿠산: 늑대의 도시",
-    "publisher": null,
-    "published_on": "2026-07-30",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1134373627.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://www.cloudedleopardent.com/game/honogurashi/kr/enter.html",
-    "game_name": "고요한 시골 정원 이야기",
-    "publisher": null,
-    "published_on": "2026-07-30",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1712243259.jpg",
-    "portal": "INVEN_CALENDAR"
-  },
-  {
-    "url": "https://pre.cookieruncrumble.com/ko",
-    "game_name": "쿠키런 키우기 - 쿠키런: 크럼블",
-    "publisher": null,
-    "published_on": "2026-07-30",
-    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1109538951.jpg",
     "portal": "INVEN_CALENDAR"
   },
   {
@@ -2373,6 +2173,30 @@
     "publisher": null,
     "published_on": null,
     "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1671117329.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.cloudedleopardent.com/game/prinnyparty_goingoverboard/kr",
+    "game_name": "다 함께 즐기자! 프리니 보드 배틀",
+    "publisher": null,
+    "published_on": "2026-11-12",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1630780289.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.rockstargames.com/kr/VI",
+    "game_name": "GTA6",
+    "publisher": null,
+    "published_on": "2026-11-19",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1603303563.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.footballmanager.com/",
+    "game_name": "풋볼 매니저 27",
+    "publisher": null,
+    "published_on": "2026-11-28",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1735939686.jpg",
     "portal": "INVEN_CALENDAR"
   }
 ]

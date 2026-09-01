@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-31T23:05:26.379996+00:00",
+  "generated_at": "2026-09-01T00:24:56.737657+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-08-31T23:01:08.376036+00:00",
+      "generatedAt": "2026-09-01T00:21:28.218234+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 78,
+        "collected": 97,
         "analyzed": 0,
-        "pending": 78,
+        "pending": 97,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -180,8 +180,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "AI수석서 전략위로 돌아온 하정우…“이제 전략보다 성과”",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728412",
+              "source": "NAVER · 매일경제"
+            },
             {
               "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
               "url": "https://n.news.naver.com/mnews/article/138/0002239657",
@@ -202,8 +207,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 1,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
+              "url": "https://www.etnews.com/20260901000010",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "EU, 오픈AI '챗GPT' 디지털서비스법 초대형 규제 적용",
+              "url": "https://www.etnews.com/20260901000014",
+              "source": "전자신문 AI"
+            },
             {
               "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
               "url": "https://n.news.naver.com/mnews/article/029/0003045369",
@@ -237,13 +252,13 @@
     },
     "3d": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-08-31T23:01:08.376036+00:00",
+      "generatedAt": "2026-09-01T00:21:28.218234+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 662,
+        "collected": 672,
         "analyzed": 0,
-        "pending": 662,
+        "pending": 672,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -414,8 +429,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 27,
+          "articleCount": 28,
           "articles": [
+            {
+              "title": "AI수석서 전략위로 돌아온 하정우…“이제 전략보다 성과”",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728412",
+              "source": "NAVER · 매일경제"
+            },
             {
               "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
               "url": "https://n.news.naver.com/mnews/article/138/0002239657",
@@ -435,11 +455,6 @@
               "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
               "url": "https://n.news.naver.com/mnews/article/009/0005728331",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951273",
-              "source": "NAVER · 한국일보"
             }
           ]
         },
@@ -478,8 +493,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 20,
+          "articleCount": 22,
           "articles": [
+            {
+              "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
+              "url": "https://www.etnews.com/20260901000010",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "EU, 오픈AI '챗GPT' 디지털서비스법 초대형 규제 적용",
+              "url": "https://www.etnews.com/20260901000014",
+              "source": "전자신문 AI"
+            },
             {
               "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
               "url": "https://n.news.naver.com/mnews/article/029/0003045369",
@@ -493,16 +518,6 @@
             {
               "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
-              "source": "AI타임스"
-            },
-            {
-              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
               "source": "AI타임스"
             }
           ]
@@ -565,13 +580,13 @@
     },
     "week": {
       "briefDate": "2026-09-01",
-      "generatedAt": "2026-08-31T23:01:08.376036+00:00",
+      "generatedAt": "2026-09-01T00:21:28.218234+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 391,
+        "collected": 411,
         "analyzed": 0,
-        "pending": 391,
+        "pending": 411,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -774,8 +789,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 14,
+          "articleCount": 15,
           "articles": [
+            {
+              "title": "AI수석서 전략위로 돌아온 하정우…“이제 전략보다 성과”",
+              "url": "https://n.news.naver.com/mnews/article/009/0005728412",
+              "source": "NAVER · 매일경제"
+            },
             {
               "title": "[CPU 대란 주의보 ①] \"GPU 1개당 CPU 1개\"…빅테크 수장 사이로 터져나온 '경고'",
               "url": "https://n.news.naver.com/mnews/article/138/0002239657",
@@ -795,19 +815,24 @@
               "title": "GPU 수십만 장 확보해도 … 제대로 못 돌리면 AI 성능 '반쪽'",
               "url": "https://n.news.naver.com/mnews/article/009/0005728331",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "SK하이닉스, 일본에 반도체 공장 짓나... 최태원 \"검토 끝나면 밝히겠다\"",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951273",
-              "source": "NAVER · 한국일보"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 10,
+          "articleCount": 12,
           "articles": [
+            {
+              "title": "오픈AI, '챗GPT' 광고 연간 환산 매출 10억달러 돌파",
+              "url": "https://www.etnews.com/20260901000010",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "EU, 오픈AI '챗GPT' 디지털서비스법 초대형 규제 적용",
+              "url": "https://www.etnews.com/20260901000014",
+              "source": "전자신문 AI"
+            },
             {
               "title": "오픈AI “챗GPT 광고 연환산 매출 10억달러”",
               "url": "https://n.news.naver.com/mnews/article/029/0003045369",
@@ -821,16 +846,6 @@
             {
               "title": "오픈AI, 챗GPT 워크·코덱스에 ‘관리자 플러그인’ 도입...대화로 워크스페이스 관리",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214617",
-              "source": "AI타임스"
-            },
-            {
-              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 멀티 에이전트 '팀워크' 공개…\"플래시 모델로 난제 해결\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214663",
               "source": "AI타임스"
             }
           ]
