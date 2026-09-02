@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T21:18:24.998818+00:00",
+  "generated_at": "2026-09-02T21:35:11.343214+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-03",
@@ -1073,9 +1073,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1200,
+        "collected": 1195,
         "analyzed": 0,
-        "pending": 1200,
+        "pending": 1195,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1300,7 +1300,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 50,
+          "articleCount": 49,
           "articles": [
             {
               "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
@@ -1332,7 +1332,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 29,
+          "articleCount": 28,
           "articles": [
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
