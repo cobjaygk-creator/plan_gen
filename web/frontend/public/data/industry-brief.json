@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-02T00:49:10.971348+00:00",
+  "generated_at": "2026-09-02T04:54:54.463451+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-01T21:12:39.106571+00:00",
+      "generatedAt": "2026-09-02T04:49:55.748223+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 99,
+        "collected": 216,
         "analyzed": 0,
-        "pending": 99,
+        "pending": 216,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,57 +141,77 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 4,
+          "articleCount": 10,
           "articles": [
             {
-              "title": "IBM \"AI 에이전트 시대, 핵심은 신뢰성과 운영 체계'\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214723",
+              "title": "AI로 게임 음악 만든다…NC AI, '바르코 사운드' 출시",
+              "url": "https://n.news.naver.com/mnews/article/014/0005569900",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "오픈AI, 차세대 모델 '아스트라' 곧 출시…사이버 보안 기능 일부 제한 예정",
+              "url": "https://www.etnews.com/20260902000004",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "NC AI, AI 오디오 생성 플랫폼 '바르코 사운드' 정식 출시",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214734",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
-            },
-            {
-              "title": "How AI-native companies turn workflows into operating capability",
-              "url": "https://openai.com/index/ai-native-company-workflows",
-              "source": "OpenAI"
-            },
-            {
-              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
-              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
-              "source": "TechCrunch"
+              "title": "Anthropic launches Claude Fable 5.1 and says it&#8217;s up to 45 percent cheaper for agentic work",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 3,
+          "articleCount": 9,
           "articles": [
             {
-              "title": "엔비디아, 대만 반도체 설계업체에 4.8조원 투자",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996141",
-              "source": "NAVER · 조선일보"
+              "title": "한미반도체, ‘세미콘 타이완’서 AI 반도체용 2.5D 패키징 장비 대거 공개",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189875",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996139",
-              "source": "NAVER · 조선일보"
+              "title": "[오늘의 삼전닉스] 'AI·반도체 결합 특허' 삼성전자 돋보이네",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102514",
+              "source": "NAVER · 이코노미스트"
             },
             {
-              "title": "마이크론 대만 노조 '파업' 움직임…성과급 개편 요구",
-              "url": "https://n.news.naver.com/mnews/article/031/0001054480",
+              "title": "AI 호황에 성과급 눈높이도 '쑥'…메모리 3사 모두 노사갈등",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054653",
               "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "SK하이닉스, '계산하는 HBM' 꺼냈다…AI 추론 성능 최대 5.15배",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054659",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "KOSA, '한국 풀스택 AI 컨소시엄' 아람코 디지털 기술 실증 완료",
+              "url": "https://www.etnews.com/20260902000141",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
             {
               "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
@@ -207,8 +227,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
             {
               "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
@@ -1069,13 +1094,13 @@
     },
     "3d": {
       "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-01T21:12:39.106571+00:00",
+      "generatedAt": "2026-09-02T04:49:55.748223+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 983,
+        "collected": 1055,
         "analyzed": 0,
-        "pending": 983,
+        "pending": 1055,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1268,72 +1293,77 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 46,
+          "articleCount": 52,
           "articles": [
             {
-              "title": "엔비디아, 대만 반도체 설계업체에 4.8조원 투자",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996141",
-              "source": "NAVER · 조선일보"
+              "title": "한미반도체, ‘세미콘 타이완’서 AI 반도체용 2.5D 패키징 장비 대거 공개",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189875",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996139",
-              "source": "NAVER · 조선일보"
+              "title": "[오늘의 삼전닉스] 'AI·반도체 결합 특허' 삼성전자 돋보이네",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102514",
+              "source": "NAVER · 이코노미스트"
             },
             {
-              "title": "마이크론 대만 노조 '파업' 움직임…성과급 개편 요구",
-              "url": "https://n.news.naver.com/mnews/article/031/0001054480",
+              "title": "AI 호황에 성과급 눈높이도 '쑥'…메모리 3사 모두 노사갈등",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054653",
               "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
-              "url": "https://n.news.naver.com/mnews/article/008/0005407946",
-              "source": "NAVER · 머니투데이"
+              "title": "SK하이닉스, '계산하는 HBM' 꺼냈다…AI 추론 성능 최대 5.15배",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054659",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951494",
-              "source": "NAVER · 한국일보"
+              "title": "KOSA, '한국 풀스택 AI 컨소시엄' 아람코 디지털 기술 실증 완료",
+              "url": "https://www.etnews.com/20260902000141",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 41,
+          "articleCount": 47,
           "articles": [
             {
-              "title": "IBM \"AI 에이전트 시대, 핵심은 신뢰성과 운영 체계'\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214723",
+              "title": "AI로 게임 음악 만든다…NC AI, '바르코 사운드' 출시",
+              "url": "https://n.news.naver.com/mnews/article/014/0005569900",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "오픈AI, 차세대 모델 '아스트라' 곧 출시…사이버 보안 기능 일부 제한 예정",
+              "url": "https://www.etnews.com/20260902000004",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "NC AI, AI 오디오 생성 플랫폼 '바르코 사운드' 정식 출시",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214734",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
-            },
-            {
-              "title": "How AI-native companies turn workflows into operating capability",
-              "url": "https://openai.com/index/ai-native-company-workflows",
-              "source": "OpenAI"
-            },
-            {
-              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
-              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
-              "source": "TechCrunch"
-            },
-            {
-              "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189669",
-              "source": "NAVER · 조선비즈"
+              "title": "Anthropic launches Claude Fable 5.1 and says it&#8217;s up to 45 percent cheaper for agentic work",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 27,
+          "articleCount": 28,
           "articles": [
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
             {
               "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
@@ -1353,19 +1383,19 @@
               "title": "딥시크·키미만이 아니다…개인 PC서 돌아가는 中 ‘작고 강한 AI’ [고든 정의 TECH+]",
               "url": "https://n.news.naver.com/mnews/article/081/0003675652",
               "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 13,
+          "articleCount": 14,
           "articles": [
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
             {
               "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
@@ -1384,11 +1414,6 @@
             {
               "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
-              "source": "AI타임스"
-            },
-            {
-              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
               "source": "AI타임스"
             }
           ]
@@ -2246,13 +2271,13 @@
     },
     "week": {
       "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-01T21:12:39.106571+00:00",
+      "generatedAt": "2026-09-02T04:49:55.748223+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 847,
+        "collected": 965,
         "analyzed": 0,
-        "pending": 847,
+        "pending": 965,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2445,72 +2470,77 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 41,
+          "articleCount": 47,
           "articles": [
             {
-              "title": "엔비디아, 대만 반도체 설계업체에 4.8조원 투자",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996141",
-              "source": "NAVER · 조선일보"
+              "title": "한미반도체, ‘세미콘 타이완’서 AI 반도체용 2.5D 패키징 장비 대거 공개",
+              "url": "https://n.news.naver.com/mnews/article/366/0001189875",
+              "source": "NAVER · 조선비즈"
             },
             {
-              "title": "전력망 수요 폭증… K전선, 북미 넘어 유럽 공략",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996139",
-              "source": "NAVER · 조선일보"
+              "title": "[오늘의 삼전닉스] 'AI·반도체 결합 특허' 삼성전자 돋보이네",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102514",
+              "source": "NAVER · 이코노미스트"
             },
             {
-              "title": "마이크론 대만 노조 '파업' 움직임…성과급 개편 요구",
-              "url": "https://n.news.naver.com/mnews/article/031/0001054480",
+              "title": "AI 호황에 성과급 눈높이도 '쑥'…메모리 3사 모두 노사갈등",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054653",
               "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "엔비디아, 미디어텍에 4.8조원 투자…AI 인프라 동맹 확대",
-              "url": "https://n.news.naver.com/mnews/article/008/0005407946",
-              "source": "NAVER · 머니투데이"
+              "title": "SK하이닉스, '계산하는 HBM' 꺼냈다…AI 추론 성능 최대 5.15배",
+              "url": "https://n.news.naver.com/mnews/article/031/0001054659",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "앤트로픽, 람다와 48조 계약…AI 기업들, 이번엔 '연산자원 확보' 전쟁",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951494",
-              "source": "NAVER · 한국일보"
+              "title": "KOSA, '한국 풀스택 AI 컨소시엄' 아람코 디지털 기술 실증 완료",
+              "url": "https://www.etnews.com/20260902000141",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 39,
+          "articleCount": 45,
           "articles": [
             {
-              "title": "IBM \"AI 에이전트 시대, 핵심은 신뢰성과 운영 체계'\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214723",
+              "title": "AI로 게임 음악 만든다…NC AI, '바르코 사운드' 출시",
+              "url": "https://n.news.naver.com/mnews/article/014/0005569900",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "오픈AI, 차세대 모델 '아스트라' 곧 출시…사이버 보안 기능 일부 제한 예정",
+              "url": "https://www.etnews.com/20260902000004",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "NC AI, AI 오디오 생성 플랫폼 '바르코 사운드' 정식 출시",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214734",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
-            },
-            {
-              "title": "How AI-native companies turn workflows into operating capability",
-              "url": "https://openai.com/index/ai-native-company-workflows",
-              "source": "OpenAI"
-            },
-            {
-              "title": "AIR raises $50M to help companies vet the skills and add-ons AI agents use",
-              "url": "https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/",
-              "source": "TechCrunch"
-            },
-            {
-              "title": "이수정 한국IBM 사장 “AI 진정한 가치는 시스템 재설계… 도구 넘어 운영 체계로\"",
-              "url": "https://n.news.naver.com/mnews/article/366/0001189669",
-              "source": "NAVER · 조선비즈"
+              "title": "Anthropic launches Claude Fable 5.1 and says it&#8217;s up to 45 percent cheaper for agentic work",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 24,
+          "articleCount": 25,
           "articles": [
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
             {
               "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
@@ -2530,19 +2560,19 @@
               "title": "딥시크·키미만이 아니다…개인 PC서 돌아가는 中 ‘작고 강한 AI’ [고든 정의 TECH+]",
               "url": "https://n.news.naver.com/mnews/article/081/0003675652",
               "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "EU, 챗GPT '초대형 검색엔진' 지정…규제 수위 대폭 강화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214705",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 10,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
+              "url": "https://www.etnews.com/20260902000038",
+              "source": "전자신문 AI"
+            },
             {
               "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
@@ -2561,11 +2591,6 @@
             {
               "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
-              "source": "AI타임스"
-            },
-            {
-              "title": "GPT-5.6 솔, 코딩 넘어 가상 CPU 설계까지…게임 ‘둠’ 구동 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214615",
               "source": "AI타임스"
             }
           ]

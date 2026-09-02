@@ -3998,5 +3998,21 @@
     "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
     "status": "ACTIVE",
     "verified_at": "2026-09-01T00:24:50.133153+00:00"
+  },
+  {
+    "id": "portal:NEXON:251",
+    "game_name": "히간: 이루실",
+    "site_name": "히간: 이루실",
+    "site_type": "OFFICIAL",
+    "url": "https://higaneruthyll.nexon.com/brand/kr/ko-kr",
+    "thumbnail_url": "data/thumbnails/game_sites/0fdf00ce52f229368fac40ec.png",
+    "publisher": "NEXON",
+    "platform": [],
+    "discovered_at": "2026-09-02T04:54:51.694103+00:00",
+    "published_on": "",
+    "source": "OFFICIAL_PORTAL:NEXON",
+    "evidence_url": "https://oasisapi.nexon.com/game/mainlist",
+    "status": "ACTIVE",
+    "verified_at": "2026-09-02T04:54:51.694103+00:00"
   }
 ]

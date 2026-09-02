@@ -296,7 +296,7 @@
     "portal": "NEXON"
   },
   {
-    "url": "https://higaneruthyll.nexon.com/brand",
+    "url": "https://higaneruthyll.nexon.com/brand/kr/ko-kr",
     "game_name": "히간: 이루실",
     "publisher": "NEXON",
     "published_on": "",
@@ -881,7 +881,7 @@
   },
   {
     "url": "https://lostark.game.onstove.com/Main",
-    "game_name": "로스트아크 - 서비스 점검",
+    "game_name": "로스트아크",
     "publisher": "SMILEGATE",
     "published_on": null,
     "thumbnail_url": null,
@@ -897,7 +897,7 @@
   },
   {
     "url": "https://l9.onstove.com/",
-    "game_name": "LORDNINE - 스마일게이트",
+    "game_name": "로드나인 : 신규 & 복귀 로드 스페셜 이벤트 : LORDNINE - 스마일게이트",
     "publisher": "SMILEGATE",
     "published_on": null,
     "thumbnail_url": null,
