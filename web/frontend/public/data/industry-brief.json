@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-02T18:25:47.336021+00:00",
+  "generated_at": "2026-09-02T21:18:24.998818+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-02T16:46:55.777350+00:00",
+      "generatedAt": "2026-09-02T21:14:11.037265+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 44,
+        "collected": 85,
         "analyzed": 0,
-        "pending": 44,
+        "pending": 85,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,8 +141,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 4,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
               "url": "https://n.news.naver.com/mnews/article/029/0003045891",
@@ -157,11 +167,6 @@
               "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
               "url": "https://www.etnews.com/20260902000426",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "NYC bans AI use for students until they reach high school",
-              "url": "https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban",
-              "source": "The Verge"
             }
           ]
         },
@@ -1064,13 +1069,13 @@
     },
     "3d": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-02T16:46:55.777350+00:00",
+      "generatedAt": "2026-09-02T21:14:11.037265+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1161,
+        "collected": 1200,
         "analyzed": 0,
-        "pending": 1161,
+        "pending": 1200,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1263,8 +1268,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 57,
+          "articleCount": 59,
           "articles": [
+            {
+              "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
               "url": "https://n.news.naver.com/mnews/article/029/0003045891",
@@ -1279,16 +1294,6 @@
               "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
               "url": "https://www.etnews.com/20260902000426",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "NYC bans AI use for students until they reach high school",
-              "url": "https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban",
-              "source": "The Verge"
-            },
-            {
-              "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362568",
-              "source": "NAVER · 이데일리"
             }
           ]
         },
@@ -2263,13 +2268,13 @@
     },
     "week": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-02T16:46:55.777350+00:00",
+      "generatedAt": "2026-09-02T21:14:11.037265+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1184,
+        "collected": 1232,
         "analyzed": 0,
-        "pending": 1184,
+        "pending": 1232,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2462,8 +2467,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 58,
+          "articleCount": 60,
           "articles": [
+            {
+              "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
               "url": "https://n.news.naver.com/mnews/article/029/0003045891",
@@ -2478,16 +2493,6 @@
               "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
               "url": "https://www.etnews.com/20260902000426",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "NYC bans AI use for students until they reach high school",
-              "url": "https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban",
-              "source": "The Verge"
-            },
-            {
-              "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362568",
-              "source": "NAVER · 이데일리"
             }
           ]
         },
