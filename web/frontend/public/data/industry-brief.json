@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-02T14:57:49.177038+00:00",
+  "generated_at": "2026-09-02T16:51:08.331700+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-02T11:35:51.585154+00:00",
+      "briefDate": "2026-09-03",
+      "generatedAt": "2026-09-02T16:46:55.777350+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 342,
+        "collected": 34,
         "analyzed": 0,
-        "pending": 342,
+        "pending": 34,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,7 +20,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.02",
             "08.03",
             "08.04",
             "08.05",
@@ -50,7 +49,8 @@
             "08.29",
             "08.30",
             "08.31",
-            "09.01"
+            "09.01",
+            "09.02"
           ],
           "series": [],
           "bucket": "일간"
@@ -141,135 +141,73 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 16,
+          "articleCount": 4,
           "articles": [
             {
-              "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362568",
-              "source": "NAVER · 이데일리"
+              "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
+              "url": "https://n.news.naver.com/mnews/article/029/0003045891",
+              "source": "NAVER · 디지털타임스"
             },
             {
-              "title": "한미반도체, 대만 파운드리 기업에 패키징 장비 대량 공급…양산 라인 확보",
-              "url": "https://n.news.naver.com/mnews/article/030/0003462989",
-              "source": "NAVER · 전자신문"
+              "title": "NHN클라우드, '전남광주미래산업박람회' 참가…AI 인프라 기술력 강조",
+              "url": "https://www.etnews.com/20260902000300",
+              "source": "전자신문 AI"
             },
             {
-              "title": "반도체 업계 휩쓴 성과급 이슈... TSMC, 마이크론까지 들썩",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951759",
-              "source": "NAVER · 한국일보"
+              "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
+              "url": "https://www.etnews.com/20260902000426",
+              "source": "전자신문 AI"
             },
             {
-              "title": "오진욱 리벨리온 공동창업자 “젠슨 황 만나 ‘엔비디아에 반란’…황도 공감”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005729586",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "[현장] 하정우, \"AI 데이터센터는 토큰 공장\"⋯소버린 AI '전력'까지 넓혔다",
-              "url": "https://n.news.naver.com/mnews/article/031/0001054871",
-              "source": "NAVER · 아이뉴스24"
+              "title": "NYC bans AI use for students until they reach high school",
+              "url": "https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 15,
+          "articleCount": 3,
           "articles": [
             {
-              "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362568",
-              "source": "NAVER · 이데일리"
+              "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
+              "url": "https://www.etnews.com/20260902000364",
+              "source": "전자신문 AI"
             },
             {
-              "title": "손정의가 본 2040년 …\"AI 잘 쓰는 기업이 서투른 기업 몰아낼 것\"",
-              "url": "https://n.news.naver.com/mnews/article/009/0005729564",
-              "source": "NAVER · 매일경제"
+              "title": "Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
+              "source": "The Verge"
             },
             {
-              "title": "카카오 멤버십 준비…AI 에이전트 생태계 확대 포석",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362501",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "한국딥러닝, 문서 운영 '딥옵스' 출시…“업무 변화 맞춰 AI 직접 수정”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214751",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"필요한 장면 스스로 탐색\"...구글, 제미나이 '에이전트 비디오 분석' 도입",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214749",
-              "source": "AI타임스"
+              "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
+              "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+              "source": "TechCrunch"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 5,
+          "articleCount": 1,
           "articles": [
             {
-              "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
-              "url": "https://n.news.naver.com/mnews/article/056/0012249593",
-              "source": "NAVER · KBS"
-            },
-            {
-              "title": "“여권 어디 뒀지?” 제미나이에 물어보세요…안드로이드 새 기능 5가지",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362603",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "\"필요한 장면 스스로 탐색\"...구글, 제미나이 '에이전트 비디오 분석' 도입",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214749",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
-              "url": "https://www.etnews.com/20260902000038",
+              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
+              "url": "https://www.etnews.com/20260902000454",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 3,
-          "articles": [
-            {
-              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
-              "url": "https://www.etnews.com/20260902000038",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
-            },
-            {
-              "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
-              "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
-              "source": "TechCrunch"
             }
           ]
         },
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 2,
+          "articleCount": 1,
           "articles": [
             {
-              "title": "런웨이, 실시간 인터페이스 생성 ‘솔라리스’ 공개...\"SW 패러다임 전환\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214753",
-              "source": "AI타임스"
-            },
-            {
-              "title": "월드랩스, 옴니 월드모델 ‘아틀라스’ 공개...사진 한 장으로 3D 공간 추론",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214750",
-              "source": "AI타임스"
+              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
+              "url": "https://www.etnews.com/20260902000454",
+              "source": "전자신문 AI"
             }
           ]
         }
@@ -1125,14 +1063,14 @@
       ]
     },
     "3d": {
-      "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-02T11:35:51.585154+00:00",
+      "briefDate": "2026-09-03",
+      "generatedAt": "2026-09-02T16:46:55.777350+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1091,
+        "collected": 1160,
         "analyzed": 0,
-        "pending": 1091,
+        "pending": 1160,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1143,7 +1081,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.02",
             "08.03",
             "08.04",
             "08.05",
@@ -1173,7 +1110,8 @@
             "08.29",
             "08.30",
             "08.31",
-            "09.01"
+            "09.01",
+            "09.02"
           ],
           "series": [],
           "bucket": "일간"
@@ -1325,32 +1263,32 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 54,
+          "articleCount": 57,
           "articles": [
+            {
+              "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
+              "url": "https://n.news.naver.com/mnews/article/029/0003045891",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "NHN클라우드, '전남광주미래산업박람회' 참가…AI 인프라 기술력 강조",
+              "url": "https://www.etnews.com/20260902000300",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
+              "url": "https://www.etnews.com/20260902000426",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "NYC bans AI use for students until they reach high school",
+              "url": "https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban",
+              "source": "The Verge"
+            },
             {
               "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
               "url": "https://n.news.naver.com/mnews/article/018/0006362568",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "한미반도체, 대만 파운드리 기업에 패키징 장비 대량 공급…양산 라인 확보",
-              "url": "https://n.news.naver.com/mnews/article/030/0003462989",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "반도체 업계 휩쓴 성과급 이슈... TSMC, 마이크론까지 들썩",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951759",
-              "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "오진욱 리벨리온 공동창업자 “젠슨 황 만나 ‘엔비디아에 반란’…황도 공감”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005729586",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "[현장] 하정우, \"AI 데이터센터는 토큰 공장\"⋯소버린 AI '전력'까지 넓혔다",
-              "url": "https://n.news.naver.com/mnews/article/031/0001054871",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
@@ -1360,6 +1298,21 @@
           "articleCount": 50,
           "articles": [
             {
+              "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
+              "url": "https://www.etnews.com/20260902000364",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
+              "source": "The Verge"
+            },
+            {
+              "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
+              "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+              "source": "TechCrunch"
+            },
+            {
               "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
               "url": "https://n.news.naver.com/mnews/article/018/0006362568",
               "source": "NAVER · 이데일리"
@@ -1368,29 +1321,19 @@
               "title": "손정의가 본 2040년 …\"AI 잘 쓰는 기업이 서투른 기업 몰아낼 것\"",
               "url": "https://n.news.naver.com/mnews/article/009/0005729564",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "카카오 멤버십 준비…AI 에이전트 생태계 확대 포석",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362501",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "한국딥러닝, 문서 운영 '딥옵스' 출시…“업무 변화 맞춰 AI 직접 수정”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214751",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"필요한 장면 스스로 탐색\"...구글, 제미나이 '에이전트 비디오 분석' 도입",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214749",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 28,
+          "articleCount": 29,
           "articles": [
+            {
+              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
+              "url": "https://www.etnews.com/20260902000454",
+              "source": "전자신문 AI"
+            },
             {
               "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
               "url": "https://n.news.naver.com/mnews/article/056/0012249593",
@@ -1410,18 +1353,13 @@
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
               "url": "https://www.etnews.com/20260902000038",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 11,
+          "articleCount": 10,
           "articles": [
             {
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
@@ -1453,8 +1391,13 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
+              "url": "https://www.etnews.com/20260902000454",
+              "source": "전자신문 AI"
+            },
             {
               "title": "런웨이, 실시간 인터페이스 생성 ‘솔라리스’ 공개...\"SW 패러다임 전환\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214753",
@@ -2319,14 +2262,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-09-02",
-      "generatedAt": "2026-09-02T11:35:51.585154+00:00",
+      "briefDate": "2026-09-03",
+      "generatedAt": "2026-09-02T16:46:55.777350+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1091,
+        "collected": 1174,
         "analyzed": 0,
-        "pending": 1091,
+        "pending": 1174,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2337,7 +2280,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.02",
             "08.03",
             "08.04",
             "08.05",
@@ -2367,7 +2309,8 @@
             "08.29",
             "08.30",
             "08.31",
-            "09.01"
+            "09.01",
+            "09.02"
           ],
           "series": [],
           "bucket": "일간"
@@ -2519,40 +2462,55 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 54,
+          "articleCount": 58,
           "articles": [
+            {
+              "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
+              "url": "https://n.news.naver.com/mnews/article/029/0003045891",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "NHN클라우드, '전남광주미래산업박람회' 참가…AI 인프라 기술력 강조",
+              "url": "https://www.etnews.com/20260902000300",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
+              "url": "https://www.etnews.com/20260902000426",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "NYC bans AI use for students until they reach high school",
+              "url": "https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban",
+              "source": "The Verge"
+            },
             {
               "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
               "url": "https://n.news.naver.com/mnews/article/018/0006362568",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "한미반도체, 대만 파운드리 기업에 패키징 장비 대량 공급…양산 라인 확보",
-              "url": "https://n.news.naver.com/mnews/article/030/0003462989",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "반도체 업계 휩쓴 성과급 이슈... TSMC, 마이크론까지 들썩",
-              "url": "https://n.news.naver.com/mnews/article/469/0000951759",
-              "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "오진욱 리벨리온 공동창업자 “젠슨 황 만나 ‘엔비디아에 반란’…황도 공감”",
-              "url": "https://n.news.naver.com/mnews/article/009/0005729586",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "[현장] 하정우, \"AI 데이터센터는 토큰 공장\"⋯소버린 AI '전력'까지 넓혔다",
-              "url": "https://n.news.naver.com/mnews/article/031/0001054871",
-              "source": "NAVER · 아이뉴스24"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 50,
+          "articleCount": 53,
           "articles": [
+            {
+              "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
+              "url": "https://www.etnews.com/20260902000364",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
+              "source": "The Verge"
+            },
+            {
+              "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
+              "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+              "source": "TechCrunch"
+            },
             {
               "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
               "url": "https://n.news.naver.com/mnews/article/018/0006362568",
@@ -2562,29 +2520,19 @@
               "title": "손정의가 본 2040년 …\"AI 잘 쓰는 기업이 서투른 기업 몰아낼 것\"",
               "url": "https://n.news.naver.com/mnews/article/009/0005729564",
               "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "카카오 멤버십 준비…AI 에이전트 생태계 확대 포석",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362501",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "한국딥러닝, 문서 운영 '딥옵스' 출시…“업무 변화 맞춰 AI 직접 수정”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214751",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"필요한 장면 스스로 탐색\"...구글, 제미나이 '에이전트 비디오 분석' 도입",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214749",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 28,
+          "articleCount": 29,
           "articles": [
+            {
+              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
+              "url": "https://www.etnews.com/20260902000454",
+              "source": "전자신문 AI"
+            },
             {
               "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
               "url": "https://n.news.naver.com/mnews/article/056/0012249593",
@@ -2604,11 +2552,6 @@
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
               "url": "https://www.etnews.com/20260902000038",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2647,8 +2590,13 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
+              "url": "https://www.etnews.com/20260902000454",
+              "source": "전자신문 AI"
+            },
             {
               "title": "런웨이, 실시간 인터페이스 생성 ‘솔라리스’ 공개...\"SW 패러다임 전환\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214753",
