@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T05:24:54.628915+00:00",
+  "generated_at": "2026-09-02T10:24:43.979159+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-02",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 216,
+        "collected": 218,
         "analyzed": 0,
-        "pending": 216,
+        "pending": 218,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1098,9 +1098,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1052,
+        "collected": 1000,
         "analyzed": 0,
-        "pending": 1052,
+        "pending": 1000,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1325,7 +1325,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 47,
+          "articleCount": 45,
           "articles": [
             {
               "title": "AI로 게임 음악 만든다…NC AI, '바르코 사운드' 출시",
@@ -1357,7 +1357,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 28,
+          "articleCount": 25,
           "articles": [
             {
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
@@ -1389,7 +1389,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 14,
+          "articleCount": 13,
           "articles": [
             {
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
@@ -2275,9 +2275,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 965,
+        "collected": 967,
         "analyzed": 0,
-        "pending": 965,
+        "pending": 967,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
