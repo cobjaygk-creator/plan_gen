@@ -1,7 +1,9 @@
 {
   "portals": 10,
-  "discovered": 275,
+  "discovered": 266,
   "new_sites": 0,
-  "errors": {},
-  "refreshed_at": "2026-09-02T21:35:09.899499+00:00"
+  "errors": {
+    "WEBZEN": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "refreshed_at": "2026-09-02T23:51:43.294493+00:00"
 }

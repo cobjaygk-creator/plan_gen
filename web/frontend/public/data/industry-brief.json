@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T21:35:11.343214+00:00",
+  "generated_at": "2026-09-02T23:51:44.429861+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-03",
@@ -1073,9 +1073,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1195,
+        "collected": 1174,
         "analyzed": 0,
-        "pending": 1195,
+        "pending": 1174,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1268,7 +1268,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 59,
+          "articleCount": 58,
           "articles": [
             {
               "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
@@ -1332,7 +1332,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 28,
+          "articleCount": 27,
           "articles": [
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
