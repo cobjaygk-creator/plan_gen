@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T11:40:01.334196+00:00",
+  "generated_at": "2026-09-02T14:57:49.177038+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-02",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 335,
+        "collected": 342,
         "analyzed": 0,
-        "pending": 335,
+        "pending": 342,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1130,9 +1130,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1101,
+        "collected": 1091,
         "analyzed": 0,
-        "pending": 1101,
+        "pending": 1091,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1325,7 +1325,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 59,
+          "articleCount": 54,
           "articles": [
             {
               "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
@@ -1421,7 +1421,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 13,
+          "articleCount": 11,
           "articles": [
             {
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
@@ -2324,9 +2324,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1084,
+        "collected": 1091,
         "analyzed": 0,
-        "pending": 1084,
+        "pending": 1091,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
