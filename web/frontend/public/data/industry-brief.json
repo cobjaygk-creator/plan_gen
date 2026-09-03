@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T21:19:50.793520+00:00",
+  "generated_at": "2026-09-03T22:11:33.332109+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
@@ -1061,9 +1061,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1268,
+        "collected": 1258,
         "analyzed": 0,
-        "pending": 1268,
+        "pending": 1258,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1212,12 +1212,6 @@
         },
         {
           "category": "AI",
-          "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
-          "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
           "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
           "url": "https://www.etnews.com/20260825000050",
           "publishedDate": "2026.08.25"
@@ -1226,6 +1220,12 @@
           "category": "AI",
           "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
           "url": "https://www.aitimes.com/news/articleView.html?idxno=214278",
+          "publishedDate": "2026.08.25"
+        },
+        {
+          "category": "AI",
+          "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
           "publishedDate": "2026.08.25"
         }
       ],

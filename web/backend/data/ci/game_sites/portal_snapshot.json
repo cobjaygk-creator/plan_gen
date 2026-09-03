@@ -312,6 +312,190 @@
     "portal": "NEXON"
   },
   {
+    "url": "https://skidle.netmarble.com/",
+    "game_name": "세븐나이츠 키우기",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2023/09/041056/AOS_CI_120.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://towerofgod.netmarble.com/ko",
+    "game_name": "신의 탑: 새로운 세계",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/02/290951/tog_icon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://mergekuyaisland.netmarble.com/ko",
+    "game_name": "머지 쿵야 아일랜드",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2023/02/031744/AOS_512x512.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://2worlds.netmarble.com/",
+    "game_name": "제2의 나라: Cross Worlds",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2022/08/121540/Android_Market_512.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://magumagu.netmarble.com/",
+    "game_name": "마구마구 2026",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/07/091024/260709_magumagu2026_6th.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://7ds.netmarble.com/",
+    "game_name": "일곱 개의 대죄",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2021/07/011222/7_Android_Market_app.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://bns.netmarble.com/",
+    "game_name": "블레이드&소울 레볼루션",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2021/09/011433/bns_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://fgo.netmarble.com/",
+    "game_name": "페이트/그랜드오더",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://c3.img.netmarble.kr/web/6N/2017/11/201000/1_appicon_AOS_512.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://l2.netmarble.net/",
+    "game_name": "리니지2 레볼루션",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2023/03/271152/Android_Market_512.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://www.marvelfuturefight.com/",
+    "game_name": "마블 퓨처파이트",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://c3.img.netmarble.kr/web/6N/2015/12/161925/mherosgb_mobile.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://kofafk.netmarble.com/ko",
+    "game_name": "KOF AFK",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/09/041024/kofafk_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://vampir.netmarble.com/",
+    "game_name": "뱀피르",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/08/251149/vampir_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://sena.netmarble.com/ko",
+    "game_name": "세븐나이츠 리버스",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/05/131104/tskgb_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://rfonlinenext.netmarble.com/",
+    "game_name": "RF 온라인 넥스트",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/03/111928/rf_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://7dsi.netmarble.com/ko",
+    "game_name": "일곱 개의 대죄 키우기",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/08/131046/appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://raven2.netmarble.com/",
+    "game_name": "레이븐2",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/05/241029/raven2_appicon.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://sololeveling.netmarble.com/",
+    "game_name": "나 혼자만 레벨업:어라이즈",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/05/091026/solov_appicon.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://arthdal.netmarble.com/",
+    "game_name": "아스달 연대기: 세 개의 세력",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/04/171627/arthdal_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://stoneage.netmarble.com/",
+    "game_name": "스톤에이지 키우기",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/03/051007/260303_120.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://7origin.netmarble.com/ko",
+    "game_name": "일곱 개의 대죄: Origin",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/03/170942/7dso_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://stardive.netmarble.com/ko",
+    "game_name": "몬길: STAR DIVE",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/04/141948/mg_thumbnail.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://sol.netmarble.com/",
+    "game_name": "SOL:enchant",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/06/181012/sol_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
+    "url": "https://gotkingsroad.netmarble.com/ko",
+    "game_name": "왕좌의 게임: 킹스로드",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/05/132135/gotasia_appicon.jpg",
+    "portal": "NETMARBLE"
+  },
+  {
     "url": "https://dokkaebi.kakaogames.com/preregister",
     "game_name": "도깨비의세계",
     "publisher": "KAKAO GAMES",
