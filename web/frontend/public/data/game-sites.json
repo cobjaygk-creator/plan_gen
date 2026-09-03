@@ -6,10 +6,26 @@
     "MICROSITE",
     "PROMOTION"
   ],
-  "total": 256,
-  "last_refreshed_at": "2026-09-03T16:55:10.372386+00:00",
-  "refreshed_site_count": 0,
+  "total": 257,
+  "last_refreshed_at": "2026-09-03T20:15:43.945721+00:00",
+  "refreshed_site_count": 1,
   "sites": [
+    {
+      "id": "portal:INVEN_CALENDAR:257",
+      "game_name": "웨어 더 시즈 폴",
+      "site_name": "404 | CygamesEdge | Cygames",
+      "site_type": "OFFICIAL",
+      "url": "https://cygames-edge.com/en/where_the_seeds_fall",
+      "thumbnail_url": "data/thumbnails/game_sites/48ccbd8917d057332a571285.png",
+      "publisher": null,
+      "platform": [],
+      "discovered_at": "2026-09-03T20:15:43.945721+00:00",
+      "published_on": "2026-11-05",
+      "source": "OFFICIAL_PORTAL:INVEN_CALENDAR",
+      "evidence_url": "https://www.inven.co.kr/webzine/calendar/",
+      "status": "ACTIVE",
+      "verified_at": "2026-09-03T20:15:43.945721+00:00"
+    },
     {
       "id": "portal:WEBZEN:252",
       "game_name": "뮤 모나크",

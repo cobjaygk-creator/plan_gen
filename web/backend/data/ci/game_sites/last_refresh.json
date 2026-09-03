@@ -1,7 +1,9 @@
 {
   "portals": 10,
-  "discovered": 275,
-  "new_sites": 0,
-  "errors": {},
-  "refreshed_at": "2026-09-03T16:55:10.372386+00:00"
+  "discovered": 236,
+  "new_sites": 1,
+  "errors": {
+    "NEXON": "URLError: <urlopen error timed out>"
+  },
+  "refreshed_at": "2026-09-03T20:15:43.945721+00:00"
 }
