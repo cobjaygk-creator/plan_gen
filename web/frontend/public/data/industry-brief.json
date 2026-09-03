@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-03T07:42:50.715258+00:00",
+  "generated_at": "2026-09-03T11:31:59.552719+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-03T04:50:12.169849+00:00",
+      "generatedAt": "2026-09-03T11:28:24.911692+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 220,
+        "collected": 357,
         "analyzed": 0,
-        "pending": 220,
+        "pending": 357,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,40 +141,55 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 9,
+          "articleCount": 18,
           "articles": [
             {
-              "title": "네이버클라우드, LG와 보안 AI 만든다…GPU 4000장 선제 투입",
-              "url": "https://n.news.naver.com/mnews/article/003/0014166623",
-              "source": "NAVER · 뉴시스"
+              "title": "[인터뷰] 이규복 큐알티 대표 “AI·HBM·자동차·우주까지… 반도체 신뢰성, 우리가 책임진다”",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463392",
+              "source": "NAVER · 전자신문"
             },
             {
-              "title": "베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214786",
-              "source": "AI타임스"
+              "title": "삼성전자, 2Q HBM 점유율 21%→33% '껑충'",
+              "url": "https://n.news.naver.com/mnews/article/031/0001055295",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
-              "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
-              "source": "TechCrunch"
+              "title": "샤오미, 첫 IFA서 신형 폴더블폰 공개…전기차 유럽 진출도 시동",
+              "url": "https://n.news.naver.com/mnews/article/008/0005409237",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "경기연구원, 용인 반도체 전력 수요 대응 '경기도 에너지 고속도로' 제안",
+              "url": "https://www.etnews.com/20260903000109",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "글로벌 VC 창업자, 韓 정부 AI 투자 호평…“삼성·SK 반도체와 도약”",
+              "url": "https://www.etnews.com/20260903000266",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 8,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "크라우드웍스, 정부 'AI 에이전트 안전·신뢰 검증' 데이터셋 구축",
+              "url": "https://www.etnews.com/20260903000276",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
+              "source": "AI타임스"
+            },
+            {
+              "title": "크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214808",
+              "source": "AI타임스"
+            },
             {
               "title": "[현장] SK텔레콤 \"차기 독파모 핵심은 '에이전트', 실행력 높인다\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436087",
@@ -184,48 +199,38 @@
               "title": "\"AI도 채용해서 조직도에 넣는다\"…송호철 크루온AI 대표의 승부수",
               "url": "https://n.news.naver.com/mnews/article/138/0002240068",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "기승전 '구글과 애플'… AI 에이전트가 앱 대체하는 순간 [IT+]",
-              "url": "https://n.news.naver.com/mnews/article/665/0000008083",
-              "source": "NAVER · 더스쿠프"
-            },
-            {
-              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
-              "source": "AI타임스"
-            },
-            {
-              "title": "네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214787",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 4,
+          "articleCount": 9,
           "articles": [
             {
-              "title": "[9월2일] 캐시 가격 75% 내렸는데 비용은 20% 올랐다…페이블 5.1의 ‘토큰 역설’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214733",
-              "source": "AI타임스"
+              "title": "“제미나이가 누구?”...신규 모델 내놔도 경쟁력 물음표 떼지못한 구글 [팩플]",
+              "url": "https://n.news.naver.com/mnews/article/025/0003548976",
+              "source": "NAVER · 중앙일보"
             },
             {
-              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214790",
-              "source": "AI타임스"
-            },
-            {
-              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
-              "url": "https://www.etnews.com/20260902000454",
+              "title": "오픈AI, 캐나다 학교 총기난사 관련 추가 피소",
+              "url": "https://www.etnews.com/20260903000011",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "WSJ \"구글, '제미나이 3.5 프로' 폐기...차세대 모델 집중\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214803",
+              "source": "AI타임스"
+            },
+            {
+              "title": "“제미나이로 일상을 편리하게”...안드로이드 5가지 기능 업데이트",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214816",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[게시판] 마인드로직, 고교생 대상 챗GPT·제미나이 무상 제공 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214805",
+              "source": "AI타임스"
             }
           ]
         },
@@ -249,8 +254,13 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "\"WASD 누르면 AI가 영상 생성\"... 텐센트, 인터랙티브 월드 모델 'H3-월드' 발표",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214800",
+              "source": "AI타임스"
+            },
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
               "url": "https://www.etnews.com/20260902000454",
@@ -1084,13 +1094,13 @@
     },
     "3d": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-03T04:50:12.169849+00:00",
+      "generatedAt": "2026-09-03T11:28:24.911692+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1152,
+        "collected": 1230,
         "analyzed": 0,
-        "pending": 1152,
+        "pending": 1230,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1283,40 +1293,55 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 58,
+          "articleCount": 67,
           "articles": [
             {
-              "title": "네이버클라우드, LG와 보안 AI 만든다…GPU 4000장 선제 투입",
-              "url": "https://n.news.naver.com/mnews/article/003/0014166623",
-              "source": "NAVER · 뉴시스"
+              "title": "[인터뷰] 이규복 큐알티 대표 “AI·HBM·자동차·우주까지… 반도체 신뢰성, 우리가 책임진다”",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463392",
+              "source": "NAVER · 전자신문"
             },
             {
-              "title": "베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214786",
-              "source": "AI타임스"
+              "title": "삼성전자, 2Q HBM 점유율 21%→33% '껑충'",
+              "url": "https://n.news.naver.com/mnews/article/031/0001055295",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
-              "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
-              "source": "TechCrunch"
+              "title": "샤오미, 첫 IFA서 신형 폴더블폰 공개…전기차 유럽 진출도 시동",
+              "url": "https://n.news.naver.com/mnews/article/008/0005409237",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "경기연구원, 용인 반도체 전력 수요 대응 '경기도 에너지 고속도로' 제안",
+              "url": "https://www.etnews.com/20260903000109",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "글로벌 VC 창업자, 韓 정부 AI 투자 호평…“삼성·SK 반도체와 도약”",
+              "url": "https://www.etnews.com/20260903000266",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 51,
+          "articleCount": 54,
           "articles": [
+            {
+              "title": "크라우드웍스, 정부 'AI 에이전트 안전·신뢰 검증' 데이터셋 구축",
+              "url": "https://www.etnews.com/20260903000276",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
+              "source": "AI타임스"
+            },
+            {
+              "title": "크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214808",
+              "source": "AI타임스"
+            },
             {
               "title": "[현장] SK텔레콤 \"차기 독파모 핵심은 '에이전트', 실행력 높인다\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436087",
@@ -1326,53 +1351,38 @@
               "title": "\"AI도 채용해서 조직도에 넣는다\"…송호철 크루온AI 대표의 승부수",
               "url": "https://n.news.naver.com/mnews/article/138/0002240068",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "기승전 '구글과 애플'… AI 에이전트가 앱 대체하는 순간 [IT+]",
-              "url": "https://n.news.naver.com/mnews/article/665/0000008083",
-              "source": "NAVER · 더스쿠프"
-            },
-            {
-              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
-              "source": "AI타임스"
-            },
-            {
-              "title": "네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214787",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 28,
+          "articleCount": 33,
           "articles": [
             {
-              "title": "[9월2일] 캐시 가격 75% 내렸는데 비용은 20% 올랐다…페이블 5.1의 ‘토큰 역설’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214733",
-              "source": "AI타임스"
+              "title": "“제미나이가 누구?”...신규 모델 내놔도 경쟁력 물음표 떼지못한 구글 [팩플]",
+              "url": "https://n.news.naver.com/mnews/article/025/0003548976",
+              "source": "NAVER · 중앙일보"
             },
             {
-              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214790",
-              "source": "AI타임스"
-            },
-            {
-              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
-              "url": "https://www.etnews.com/20260902000454",
+              "title": "오픈AI, 캐나다 학교 총기난사 관련 추가 피소",
+              "url": "https://www.etnews.com/20260903000011",
               "source": "전자신문 AI"
             },
             {
-              "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
-              "url": "https://n.news.naver.com/mnews/article/056/0012249593",
-              "source": "NAVER · KBS"
+              "title": "WSJ \"구글, '제미나이 3.5 프로' 폐기...차세대 모델 집중\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214803",
+              "source": "AI타임스"
+            },
+            {
+              "title": "“제미나이로 일상을 편리하게”...안드로이드 5가지 기능 업데이트",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214816",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[게시판] 마인드로직, 고교생 대상 챗GPT·제미나이 무상 제공 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214805",
+              "source": "AI타임스"
             }
           ]
         },
@@ -1411,8 +1421,13 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "\"WASD 누르면 AI가 영상 생성\"... 텐센트, 인터랙티브 월드 모델 'H3-월드' 발표",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214800",
+              "source": "AI타임스"
+            },
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
               "url": "https://www.etnews.com/20260902000454",
@@ -2256,13 +2271,13 @@
     },
     "week": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-03T04:50:12.169849+00:00",
+      "generatedAt": "2026-09-03T11:28:24.911692+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1368,
+        "collected": 1505,
         "analyzed": 0,
-        "pending": 1368,
+        "pending": 1505,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2455,40 +2470,55 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 63,
+          "articleCount": 72,
           "articles": [
             {
-              "title": "네이버클라우드, LG와 보안 AI 만든다…GPU 4000장 선제 투입",
-              "url": "https://n.news.naver.com/mnews/article/003/0014166623",
-              "source": "NAVER · 뉴시스"
+              "title": "[인터뷰] 이규복 큐알티 대표 “AI·HBM·자동차·우주까지… 반도체 신뢰성, 우리가 책임진다”",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463392",
+              "source": "NAVER · 전자신문"
             },
             {
-              "title": "베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214786",
-              "source": "AI타임스"
+              "title": "삼성전자, 2Q HBM 점유율 21%→33% '껑충'",
+              "url": "https://n.news.naver.com/mnews/article/031/0001055295",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
-              "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
-              "source": "TechCrunch"
+              "title": "샤오미, 첫 IFA서 신형 폴더블폰 공개…전기차 유럽 진출도 시동",
+              "url": "https://n.news.naver.com/mnews/article/008/0005409237",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "경기연구원, 용인 반도체 전력 수요 대응 '경기도 에너지 고속도로' 제안",
+              "url": "https://www.etnews.com/20260903000109",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "글로벌 VC 창업자, 韓 정부 AI 투자 호평…“삼성·SK 반도체와 도약”",
+              "url": "https://www.etnews.com/20260903000266",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 58,
+          "articleCount": 61,
           "articles": [
+            {
+              "title": "크라우드웍스, 정부 'AI 에이전트 안전·신뢰 검증' 데이터셋 구축",
+              "url": "https://www.etnews.com/20260903000276",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
+              "source": "AI타임스"
+            },
+            {
+              "title": "크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214808",
+              "source": "AI타임스"
+            },
             {
               "title": "[현장] SK텔레콤 \"차기 독파모 핵심은 '에이전트', 실행력 높인다\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436087",
@@ -2498,53 +2528,38 @@
               "title": "\"AI도 채용해서 조직도에 넣는다\"…송호철 크루온AI 대표의 승부수",
               "url": "https://n.news.naver.com/mnews/article/138/0002240068",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "기승전 '구글과 애플'… AI 에이전트가 앱 대체하는 순간 [IT+]",
-              "url": "https://n.news.naver.com/mnews/article/665/0000008083",
-              "source": "NAVER · 더스쿠프"
-            },
-            {
-              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
-              "source": "AI타임스"
-            },
-            {
-              "title": "네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214787",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 32,
+          "articleCount": 37,
           "articles": [
             {
-              "title": "[9월2일] 캐시 가격 75% 내렸는데 비용은 20% 올랐다…페이블 5.1의 ‘토큰 역설’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214733",
-              "source": "AI타임스"
+              "title": "“제미나이가 누구?”...신규 모델 내놔도 경쟁력 물음표 떼지못한 구글 [팩플]",
+              "url": "https://n.news.naver.com/mnews/article/025/0003548976",
+              "source": "NAVER · 중앙일보"
             },
             {
-              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214790",
-              "source": "AI타임스"
-            },
-            {
-              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
-              "url": "https://www.etnews.com/20260902000454",
+              "title": "오픈AI, 캐나다 학교 총기난사 관련 추가 피소",
+              "url": "https://www.etnews.com/20260903000011",
               "source": "전자신문 AI"
             },
             {
-              "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
-              "url": "https://n.news.naver.com/mnews/article/056/0012249593",
-              "source": "NAVER · KBS"
+              "title": "WSJ \"구글, '제미나이 3.5 프로' 폐기...차세대 모델 집중\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214803",
+              "source": "AI타임스"
+            },
+            {
+              "title": "“제미나이로 일상을 편리하게”...안드로이드 5가지 기능 업데이트",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214816",
+              "source": "AI타임스"
+            },
+            {
+              "title": "[게시판] 마인드로직, 고교생 대상 챗GPT·제미나이 무상 제공 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214805",
+              "source": "AI타임스"
             }
           ]
         },
@@ -2583,8 +2598,13 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "\"WASD 누르면 AI가 영상 생성\"... 텐센트, 인터랙티브 월드 모델 'H3-월드' 발표",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214800",
+              "source": "AI타임스"
+            },
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
               "url": "https://www.etnews.com/20260902000454",
