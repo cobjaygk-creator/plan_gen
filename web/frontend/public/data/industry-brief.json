@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T23:51:44.429861+00:00",
+  "generated_at": "2026-09-03T02:21:37.298843+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-03",
@@ -293,33 +293,6 @@
           "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
         },
         {
-          "id": "2883",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-          "publishedDate": "2026.08.27",
-          "effectiveDate": null,
-          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "인공지능서비스불법유해정보대응해야",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표",
-          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
-        },
-        {
           "id": "4085",
           "type": "FUNDING",
           "typeLabel": "지원사업",
@@ -526,7 +499,7 @@
             "신청 자격·마감·제출 조건 확인",
             "개발·유통·해외 진출 활용 가능성 검토"
           ],
-          "priorityScore": 35,
+          "priorityScore": 25,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
@@ -553,7 +526,7 @@
             "참여 대상과 교육 일정 확인",
             "채용·재교육 계획 연계 가능성 검토"
           ],
-          "priorityScore": 28,
+          "priorityScore": 18,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
@@ -1073,9 +1046,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1174,
+        "collected": 1141,
         "analyzed": 0,
-        "pending": 1174,
+        "pending": 1141,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1200,14 +1173,14 @@
         },
         {
           "category": "GAME",
-          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
-          "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1",
-          "publishedDate": "2026.08.24"
+          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "publishedDate": "2026.08.25"
         },
         {
           "category": "GAME",
-          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319882",
           "publishedDate": "2026.08.25"
         },
         {
@@ -1492,33 +1465,6 @@
           "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
         },
         {
-          "id": "2883",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-          "publishedDate": "2026.08.27",
-          "effectiveDate": null,
-          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "인공지능서비스불법유해정보대응해야",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표",
-          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
-        },
-        {
           "id": "4085",
           "type": "FUNDING",
           "typeLabel": "지원사업",
@@ -1725,7 +1671,7 @@
             "신청 자격·마감·제출 조건 확인",
             "개발·유통·해외 진출 활용 가능성 검토"
           ],
-          "priorityScore": 35,
+          "priorityScore": 25,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
@@ -1752,7 +1698,7 @@
             "참여 대상과 교육 일정 확인",
             "채용·재교육 계획 연계 가능성 검토"
           ],
-          "priorityScore": 28,
+          "priorityScore": 18,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
@@ -2691,33 +2637,6 @@
           "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
         },
         {
-          "id": "2883",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "title": "\"인공지능서비스, 불법·유해정보 대응해야\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775732&pageIndex=4&repCodeType=&repCode=&startDate=2025-08-28&endDate=2026-08-28&srchWord=&period=",
-          "publishedDate": "2026.08.27",
-          "effectiveDate": null,
-          "target": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "action": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다.",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "인공지능서비스불법유해정보대응해야",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표",
-          "evidenceSentence": "\"인공지능서비스, 불법·유해정보 대응해야\"- 이용자보호 위한 민관협의회 2차 회의 개최…\"사업자 자율조치 방안 필요\" - 인공지능서비스 과정에서 불법·유해정보 노출 위험이 커지는 가운데 이용자 보호를 위한 사업자의 자율적 안전조치 방안 등이 논의됐다."
-        },
-        {
           "id": "4085",
           "type": "FUNDING",
           "typeLabel": "지원사업",
@@ -2924,7 +2843,7 @@
             "신청 자격·마감·제출 조건 확인",
             "개발·유통·해외 진출 활용 가능성 검토"
           ],
-          "priorityScore": 35,
+          "priorityScore": 25,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "사이버보안특화ai파운데이션모델개발사업결과",
@@ -2951,7 +2870,7 @@
             "참여 대상과 교육 일정 확인",
             "채용·재교육 계획 연계 가능성 검토"
           ],
-          "priorityScore": 28,
+          "priorityScore": 18,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "문해와인공지능ai으로연결하는새로운세상대한민국문해교육정책전시회",
