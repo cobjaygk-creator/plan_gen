@@ -1,187 +1,315 @@
 [
   {
-    "url": "https://skidle.netmarble.com/",
-    "game_name": "세븐나이츠 키우기",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2023/09/041056/AOS_CI_120.jpg",
-    "portal": "NETMARBLE"
+    "url": "https://df.nexon.com/",
+    "game_name": "던전앤파이터",
+    "publisher": "NEXON",
+    "published_on": "2005-08-10",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/8/OHH213093324920.jpg",
+    "portal": "NEXON"
   },
   {
-    "url": "https://towerofgod.netmarble.com/ko",
-    "game_name": "신의 탑: 새로운 세계",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/02/290951/tog_icon.png",
-    "portal": "NETMARBLE"
+    "url": "https://maplestory.nexon.com/",
+    "game_name": "메이플스토리",
+    "publisher": "NEXON",
+    "published_on": "2003-10-29",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/8/AtgX20101522622.jpg",
+    "portal": "NEXON"
   },
   {
-    "url": "https://mergekuyaisland.netmarble.com/ko",
-    "game_name": "머지 쿵야 아일랜드",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2023/02/031744/AOS_512x512.png",
-    "portal": "NETMARBLE"
+    "url": "https://fconline.nexon.com/",
+    "game_name": "FC 온라인",
+    "publisher": "NEXON",
+    "published_on": "2018-05-17",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/10/5YEC30102118626.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://2worlds.netmarble.com/",
-    "game_name": "제2의 나라: Cross Worlds",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2022/08/121540/Android_Market_512.png",
-    "portal": "NETMARBLE"
+    "url": "https://maplestoryidle.nexon.com/ko",
+    "game_name": "메이플 키우기",
+    "publisher": "NEXON",
+    "published_on": "2025-11-06",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/9/lVd115091804991.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://magumagu.netmarble.com/",
-    "game_name": "마구마구 2026",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/07/091024/260709_magumagu2026_6th.png",
-    "portal": "NETMARBLE"
+    "url": "https://abr.ge/0ezb4b",
+    "game_name": "메이플스토리 월드",
+    "publisher": "NEXON",
+    "published_on": "2022-12-01",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/23/11/Hadi09095353605.jpg",
+    "portal": "NEXON"
   },
   {
-    "url": "https://7ds.netmarble.com/",
-    "game_name": "일곱 개의 대죄",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2021/07/011222/7_Android_Market_app.png",
-    "portal": "NETMARBLE"
+    "url": "https://mabinogimobile.nexon.com/",
+    "game_name": "마비노기 모바일",
+    "publisher": "NEXON",
+    "published_on": "2025-02-27",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/7/Jrtw16132849468.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://bns.netmarble.com/",
-    "game_name": "블레이드&소울 레볼루션",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2021/09/011433/bns_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://maplestorym.nexon.com/",
+    "game_name": "메이플스토리M",
+    "publisher": "NEXON",
+    "published_on": "2016-10-13",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/8/tPfn27084303758.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://fgo.netmarble.com/",
-    "game_name": "페이트/그랜드오더",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://c3.img.netmarble.kr/web/6N/2017/11/201000/1_appicon_AOS_512.png",
-    "portal": "NETMARBLE"
+    "url": "https://sa.nexon.com/",
+    "game_name": "서든어택",
+    "publisher": "NEXON",
+    "published_on": "2005-08-23",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/19/7/u72I29180233486.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://l2.netmarble.net/",
-    "game_name": "리니지2 레볼루션",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2023/03/271152/Android_Market_512.png",
-    "portal": "NETMARBLE"
+    "url": "https://bluearchive.nexon.com/",
+    "game_name": "블루 아카이브",
+    "publisher": "NEXON",
+    "published_on": "2021-11-09",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/22/10/oxgT20055317898.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://www.marvelfuturefight.com/",
-    "game_name": "마블 퓨처파이트",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://c3.img.netmarble.kr/web/6N/2015/12/161925/mherosgb_mobile.jpg",
-    "portal": "NETMARBLE"
+    "url": "https://www.mintrock.et/ko/game/game.php",
+    "game_name": "데이브 더 다이버",
+    "publisher": "NEXON",
+    "published_on": "2023-06-28",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/22/9/eRtY06122150922.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://kofafk.netmarble.com/ko",
-    "game_name": "KOF AFK",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/09/041024/kofafk_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://tfd.nexon.com/ko",
+    "game_name": "퍼스트 디센던트",
+    "publisher": "NEXON",
+    "published_on": "2024-07-02",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/8/z8uC20163848072.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://vampir.netmarble.com/",
-    "game_name": "뱀피르",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/08/251149/vampir_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://fcmobile.nexon.com/",
+    "game_name": "FC 모바일",
+    "publisher": "NEXON",
+    "published_on": "2020-06-10",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/23/9/Q1xB22105001958.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://sena.netmarble.com/ko",
-    "game_name": "세븐나이츠 리버스",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/05/131104/tskgb_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://hit2.nexon.com/",
+    "game_name": "히트2",
+    "publisher": "NEXON",
+    "published_on": "2022-08-25",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/12/OsbM03120645333.jpg",
+    "portal": "NEXON"
   },
   {
-    "url": "https://rfonlinenext.netmarble.com/",
-    "game_name": "RF 온라인 넥스트",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2025/03/111928/rf_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://kartrush.nexon.com/",
+    "game_name": "카트라이더 러쉬플러스",
+    "publisher": "NEXON",
+    "published_on": "2020-05-12",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/22/10/FwoV20055414911.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://7dsi.netmarble.com/ko",
-    "game_name": "일곱 개의 대죄 키우기",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/08/131046/appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://mabinogi.nexon.com/",
+    "game_name": "마비노기",
+    "publisher": "NEXON",
+    "published_on": "2004-06-22",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/19/7/mdO929175930313.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://raven2.netmarble.com/",
-    "game_name": "레이븐2",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/05/241029/raven2_appicon.jpg",
-    "portal": "NETMARBLE"
+    "url": "https://dnfm.nexon.com/",
+    "game_name": "던전앤파이터 모바일",
+    "publisher": "NEXON",
+    "published_on": "2022-03-24",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/8/Cvaj13105150387.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://sololeveling.netmarble.com/",
-    "game_name": "나 혼자만 레벨업:어라이즈",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/05/091026/solov_appicon.jpg",
-    "portal": "NETMARBLE"
+    "url": "https://csonline.nexon.com/",
+    "game_name": "카운터-스트라이크 온라인",
+    "publisher": "NEXON",
+    "published_on": "2008-01-31",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/19/7/74eo29212117394.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://arthdal.netmarble.com/",
-    "game_name": "아스달 연대기: 세 개의 세력",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2024/04/171627/arthdal_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://baram.nexon.com/",
+    "game_name": "바람의나라",
+    "publisher": "NEXON",
+    "published_on": "1996-04-05",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/24/11/dXGz18105155347.jpg",
+    "portal": "NEXON"
   },
   {
-    "url": "https://stoneage.netmarble.com/",
-    "game_name": "스톤에이지 키우기",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/03/051007/260303_120.png",
-    "portal": "NETMARBLE"
+    "url": "https://heroes.nexon.com/",
+    "game_name": "마비노기 영웅전",
+    "publisher": "NEXON",
+    "published_on": "2010-01-21",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/7/P7Pm16092009629.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://7origin.netmarble.com/ko",
-    "game_name": "일곱 개의 대죄: Origin",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/03/170942/7dso_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://tales.nexon.com/",
+    "game_name": "테일즈위버",
+    "publisher": "NEXON",
+    "published_on": "2003-06-04",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/19/7/5rAF30101730353.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://stardive.netmarble.com/ko",
-    "game_name": "몬길: STAR DIVE",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/04/141948/mg_thumbnail.jpg",
-    "portal": "NETMARBLE"
+    "url": "https://wp.nexon.com/",
+    "game_name": "프라시아 전기",
+    "publisher": "NEXON",
+    "published_on": "2023-03-30",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/23/4/ThHK11164401569.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://sol.netmarble.com/",
-    "game_name": "SOL:enchant",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/06/181012/sol_appicon.png",
-    "portal": "NETMARBLE"
+    "url": "https://khazan.nexon.com/",
+    "game_name": "퍼스트 버서커: 카잔",
+    "publisher": "NEXON",
+    "published_on": "2025-03-28",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/24/10/qn8O17104218269.png",
+    "portal": "NEXON"
   },
   {
-    "url": "https://gotkingsroad.netmarble.com/ko",
-    "game_name": "왕좌의 게임: 킹스로드",
-    "publisher": "NETMARBLE",
-    "published_on": null,
-    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/05/132135/gotasia_appicon.jpg",
-    "portal": "NETMARBLE"
+    "url": "https://elsword.nexon.com/",
+    "game_name": "엘소드",
+    "publisher": "NEXON",
+    "published_on": "2007-12-27",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/20/2/goz027121535699.jpg",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://asgard.nexon.com/",
+    "game_name": "아스가르드",
+    "publisher": "NEXON",
+    "published_on": "2003-02-04",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/19/7/HFDl29180300841.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://lod.nexon.com/",
+    "game_name": "어둠의전설",
+    "publisher": "NEXON",
+    "published_on": "1998-01-03",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/23/1/x8FG17134628402.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://v4.nexon.com/",
+    "game_name": "V4",
+    "publisher": "NEXON",
+    "published_on": "2019-11-07",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/23/8/8wv507191224107.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://baramy.nexon.com/",
+    "game_name": "바람의나라: 연",
+    "publisher": "NEXON",
+    "published_on": "2020-07-15",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/24/12/xjtZ05110253380.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://cyphers.nexon.com/",
+    "game_name": "사이퍼즈",
+    "publisher": "NEXON",
+    "published_on": "2011-06-30",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/7/PWDE16085638023.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://dd.nexon.com/ko/main",
+    "game_name": "던전앤파이터 듀얼",
+    "publisher": "NEXON",
+    "published_on": "2022-06-28",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/22/11/msmB21145238284.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://arcraiders.nexon.com/",
+    "game_name": "아크 레이더스",
+    "publisher": "NEXON",
+    "published_on": "2025-04-30",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/4/W2f815174059549.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://elancia.nexon.com/",
+    "game_name": "일랜시아",
+    "publisher": "NEXON",
+    "published_on": "1999-07-01",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/19/7/05Sj29180520304.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://maplepuzzle.nexon.com/start",
+    "game_name": "메이플 퍼즐 : 블록 매치",
+    "publisher": "NEXON",
+    "published_on": "",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/6/1ifh10111639153.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://thefinals.nexon.com/",
+    "game_name": "더 파이널스",
+    "publisher": "NEXON",
+    "published_on": "2023-12-08",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/7/Krmh10111856136.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://azurpromilia.nexon.com/",
+    "game_name": "아주르 프로밀리아",
+    "publisher": "NEXON",
+    "published_on": "",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/25/12/btEw08145531965.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://nakwon.nexon.com/",
+    "game_name": "낙원: LAST PARADISE",
+    "publisher": "NEXON",
+    "published_on": "",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/3/FD0W03205540855.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://overwatch.nexon.com/main",
+    "game_name": "오버워치",
+    "publisher": "NEXON",
+    "published_on": "2026-08-12",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/6/0Zys01093713829.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://kart.nexon.com/",
+    "game_name": "크레이지레이싱 카트라이더",
+    "publisher": "NEXON",
+    "published_on": "",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/6/wSlC17155425665.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://higaneruthyll.nexon.com/brand/kr/ko-kr",
+    "game_name": "히간: 이루실",
+    "publisher": "NEXON",
+    "published_on": "",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/6/mFdp16150142694.png",
+    "portal": "NEXON"
+  },
+  {
+    "url": "https://temppal.nexon.com/",
+    "game_name": "템빨: 오버기어드",
+    "publisher": "NEXON",
+    "published_on": "",
+    "thumbnail_url": "https://rs.nxfs.nexon.com/gameusr/26/7/LFI931141642057.png",
+    "portal": "NEXON"
   },
   {
     "url": "https://dokkaebi.kakaogames.com/preregister",
@@ -586,6 +714,14 @@
   {
     "url": "https://l9.onstove.com/",
     "game_name": "로드나인 : 신규 & 복귀 로드 스페셜 이벤트 : LORDNINE - 스마일게이트",
+    "publisher": "SMILEGATE",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "SMILEGATE"
+  },
+  {
+    "url": "https://chaoszeronightmare.onstove.com/",
+    "game_name": "카오스 제로 나이트메어: 위험한 팜므파탈 아라벨라",
     "publisher": "SMILEGATE",
     "published_on": null,
     "thumbnail_url": null,

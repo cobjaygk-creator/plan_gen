@@ -10,9 +10,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-09-01T10:50:17.379665+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -20,15 +20,15 @@
     "game": "엘소드",
     "title": "아바타 리오더샵 OPEN",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4ArticleSN=3602",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4908963695943485945",
+    "hero_image_url": "data/thumbnails/event_bench/6ea5b20823b4027c3cd1954e.jpg",
     "starts_on": "2026-09-03",
     "ends_on": "2026-09-17",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-09-03T02:13:05.466098+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -36,15 +36,15 @@
     "game": "엘소드",
     "title": "엘 하우스 DIY 리오더샵",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4ArticleSN=3601",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413366922928457805",
+    "hero_image_url": "data/thumbnails/event_bench/0f7b8d583a2ddec866d9d483.jpg",
     "starts_on": "2026-09-03",
     "ends_on": "2026-10-01",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-09-03T02:13:05.466098+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -52,15 +52,15 @@
     "game": "카운터스트라이크 온라인",
     "title": "한가위 전야제 트레이닝 캠프",
     "event_url": "https://csonline.nexon.com/News/Event/View/946?cp=1",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053131755066753461",
+    "hero_image_url": "data/thumbnails/event_bench/a3c4d7f4c249d891afb3aacf.png",
     "starts_on": "2026-09-03",
     "ends_on": "2026-10-29",
     "published_on": "2026-09-03",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:10:13.989118+00:00",
+    "collected_at": "2026-09-03T21:12:10.886178+00:00",
     "first_collected_at": "2026-09-03T02:13:05.466098+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -74,9 +74,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -90,9 +90,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-09-02T00:41:58.735345+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -106,9 +106,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-09-02T00:41:58.735345+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -122,9 +122,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-09-02T00:41:58.735345+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -138,9 +138,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-09-02T00:41:58.735345+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -154,9 +154,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -170,9 +170,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -186,9 +186,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -202,9 +202,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -218,9 +218,9 @@
     "published_on": "2026-09-02",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T10:15:08.882136+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -228,15 +228,15 @@
     "game": "FC ONLINE",
     "title": "추석 특별 혜택 받고 또 받고  진행",
     "event_url": "https://shop.fconline.nexon.com/Events/260901/GetAndGetAgain?utm_source=pc&utm_medium=main&utm_campaign=260901_getandget",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4620785873011606289",
+    "hero_image_url": "data/thumbnails/event_bench/ed5b18a2ff83de589349c870.png",
     "starts_on": "2026-09-01",
     "ends_on": "2026-10-30",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-31T20:31:09.647643+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -250,9 +250,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -260,15 +260,15 @@
     "game": "FC ONLINE",
     "title": "접속하고 보상 획득! 주말엔 플레이로 보상 업그레이드!  진행",
     "event_url": "https://events.fconline.nexon.com/260827/Attend?utm_source=pc&utm_medium=list&utm_campaign=260827_Attend",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125189563853046259",
+    "hero_image_url": "data/thumbnails/event_bench/af6504bc9523bbda5741abc3.png",
     "starts_on": "2026-08-27",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -276,15 +276,15 @@
     "game": "FC ONLINE",
     "title": "지금 바로 승리 예측! 매치데이 쇼다운!  진행",
     "event_url": "https://events.fconline.nexon.com/260827/ShowDown?utm_source=pc&utm_medium=list&utm_campaign=260827_showdown",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413419570637570642",
+    "hero_image_url": "data/thumbnails/event_bench/37d2a77e7a92c5ee7b819223.png",
     "starts_on": "2026-08-27",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -292,15 +292,15 @@
     "game": "엘소드",
     "title": "네블론 레이드 오퍼레이션 언더토",
     "event_url": "https://elsword.nexon.com/Events2026/0827/Update",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5629539769466750990",
+    "hero_image_url": "data/thumbnails/event_bench/255701d599a2d2eb93fd4b7f.jpg",
     "starts_on": "2026-08-27",
     "ends_on": "2026-10-22",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -308,15 +308,15 @@
     "game": "엘소드",
     "title": "나만의 엘 하우스 리모델링",
     "event_url": "https://elsword.nexon.com/Events2026/0827/Event",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413367008827803762",
+    "hero_image_url": "data/thumbnails/event_bench/7299f6368980c3f1bdc02caa.jpg",
     "starts_on": "2026-08-27",
     "ends_on": "2026-10-08",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -324,15 +324,15 @@
     "game": "엘소드",
     "title": "신규/복귀 모험가 넥슨캐시 이벤트",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4ArticleSN=3596",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5269251691902929292",
+    "hero_image_url": "data/thumbnails/event_bench/4c9c489e6a3c8a2bf8d16204.jpg",
     "starts_on": "2026-08-27",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -340,15 +340,15 @@
     "game": "엘소드",
     "title": "엘 하우스 DIY : 트로피컬 썸머비치",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4ArticleSN=3595",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4620733504475367427",
+    "hero_image_url": "data/thumbnails/event_bench/e3465d4e1bf82c8d17ec0e80.jpg",
     "starts_on": "2026-08-27",
     "ends_on": "2026-12-17",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -356,15 +356,15 @@
     "game": "엘소드",
     "title": "아바타 : 에어리 파크",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4ArticleSN=3594",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4981021311456250236",
+    "hero_image_url": "data/thumbnails/event_bench/656fe90e67c1c07522bb9d82.jpg",
     "starts_on": "2026-08-27",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -378,9 +378,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -394,9 +394,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -410,9 +410,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -426,9 +426,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -442,9 +442,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -458,9 +458,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -474,9 +474,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-27T02:26:46.114261+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -484,15 +484,15 @@
     "game": "FC ONLINE",
     "title": "[스페셜 웹 상점] 단풍 속 SSS  진행",
     "event_url": "https://shop.fconline.nexon.com/Events/260827/TheOnlySSS?utm_source=pc&utm_medium=main&utm_campaign=260827_theonlysss",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413419604997308895",
+    "hero_image_url": "data/thumbnails/event_bench/31ea74938aaa740ccc495d4e.png",
     "starts_on": "2026-08-27",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-27T09:56:25.505806+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -506,9 +506,9 @@
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-27T22:19:21.025384+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -522,9 +522,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-28T11:29:46.948675+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -538,9 +538,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-28T11:29:46.948675+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -548,15 +548,15 @@
     "game": "FC ONLINE",
     "title": "넥슨캐시 5천원 바로 지급!  진행",
     "event_url": "https://playgeto.com/getopoint/promotion/getoevent_2608.html?utm_source=pc&utm_medium=main&utm_campaign=260827_getoevent",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5485477001466741540",
+    "hero_image_url": "data/thumbnails/event_bench/d261479c88e027e38d50fecf.png",
     "starts_on": "2026-08-27",
     "ends_on": "2026-09-30",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -564,15 +564,15 @@
     "game": "FC ONLINE",
     "title": "2026 FCL 기념 접속 이벤트! 새 글  준비 중",
     "event_url": "https://fconline.nexon.com/news/notice/view?n4ArticleSN=6235",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053131591857996233",
+    "hero_image_url": "data/thumbnails/event_bench/b29ee8cd9166ae31a3643dac.png",
     "starts_on": "2026-09-07",
     "ends_on": "2026-09-18",
     "published_on": "2026-08-27",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-09-03T07:32:30.284454+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -586,9 +586,9 @@
     "published_on": "2026-08-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-26T01:28:12.705358+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -602,9 +602,9 @@
     "published_on": "2026-08-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-26T01:28:12.705358+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -618,9 +618,9 @@
     "published_on": "2026-08-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-26T01:28:12.705358+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -634,9 +634,9 @@
     "published_on": "2026-08-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-26T01:28:12.705358+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -650,9 +650,9 @@
     "published_on": "2026-08-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-26T01:28:12.705358+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -660,15 +660,15 @@
     "game": "FC ONLINE",
     "title": "강화 지원 올인원 이벤트! 새 글  준비 중",
     "event_url": "https://fconline.nexon.com/news/notice/view?n4ArticleSN=6221",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764901267245892266",
+    "hero_image_url": "data/thumbnails/event_bench/6bb573d83d60634bd6fbd79c.png",
     "starts_on": "2026-09-03",
     "ends_on": "2026-09-16",
     "published_on": "2026-08-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-26T10:26:05.912991+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -676,15 +676,15 @@
     "game": "FC ONLINE",
     "title": "가을 맞이 3일 접속 이벤트 [2차] 새 글  준비 중",
     "event_url": "https://fconline.nexon.com/news/notice/view?n4ArticleSN=6215",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5197246676854637060",
+    "hero_image_url": "data/thumbnails/event_bench/7643d114ec7842b2c2cd439a.png",
     "starts_on": "2026-09-06",
     "ends_on": "2026-09-09",
     "published_on": "2026-08-25",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-26T06:18:11.944489+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -714,9 +714,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -730,9 +730,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -746,9 +746,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -762,9 +762,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -778,9 +778,9 @@
     "published_on": "2026-08-23",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -794,9 +794,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -804,15 +804,15 @@
     "game": "FC ONLINE",
     "title": "26FSL PASS part2. 챔피언 패스  진행",
     "event_url": "https://shop.fconline.nexon.com/Events/260820/FSLPass?utm_source=pc&utm_medium=list&utm_campaign=260820_FSLPass",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5629592494485275080",
+    "hero_image_url": "data/thumbnails/event_bench/f564622fda7a48bbea6ccf7a.png",
     "starts_on": "2026-08-20",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -820,15 +820,15 @@
     "game": "FC ONLINE",
     "title": "한여름 빙수 만들기  진행",
     "event_url": "https://events.fconline.nexon.com/260820/s/agent?utm_source=pc&utm_medium=list&utm_campaign=260820_agent",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4836958844103950834",
+    "hero_image_url": "data/thumbnails/event_bench/d6aa5295bdd336dd2d184527.png",
     "starts_on": "2026-08-20",
     "ends_on": "2026-09-10",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -836,15 +836,15 @@
     "game": "FC ONLINE",
     "title": "팀컬러 연합 레이스 2  진행",
     "event_url": "https://events.fconline.nexon.com/260820/union?utm_source=pc&utm_medium=main&utm_campaign=260820_teamcolorunion2",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125189091406643732",
+    "hero_image_url": "data/thumbnails/event_bench/ef5ce1d992b60f4db6c098b3.png",
     "starts_on": "2026-08-20",
     "ends_on": "2026-09-30",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -852,15 +852,15 @@
     "game": "FC ONLINE",
     "title": "PLAY LEGACY : SPARTAN  진행",
     "event_url": "https://events.fconline.nexon.com/260820/PlayLegacy?utm_source=pc&utm_medium=main&utm_campaign=260820_playlegacy",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5485477220510073279",
+    "hero_image_url": "data/thumbnails/event_bench/5e4cbbf31ba8a2c1c9edd5cd.png",
     "starts_on": "2026-08-20",
     "ends_on": "2026-11-11",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -868,15 +868,15 @@
     "game": "FC ONLINE",
     "title": "함께하면 보상이 더 커집니다!  진행",
     "event_url": "https://events.fconline.nexon.com/collabo260820/collabo?utm_source=pc&utm_medium=list&utm_campaign=260820_collabo",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4620785894486442601",
+    "hero_image_url": "data/thumbnails/event_bench/5bf23837ba4a46fb1cc53943.png",
     "starts_on": "2026-08-20",
     "ends_on": "2026-09-30",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -890,9 +890,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -906,9 +906,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -922,9 +922,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -938,9 +938,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -948,15 +948,15 @@
     "game": "엘소드",
     "title": "커스텀 모션 : 스냅 데코링",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4ArticleSN=3593",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5629539726517077970",
+    "hero_image_url": "data/thumbnails/event_bench/1317053313a8b1d4d7a4ddd0.jpg",
     "starts_on": "2026-08-20",
     "ends_on": "2026-09-17",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -970,9 +970,9 @@
     "published_on": "2026-08-20",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -986,9 +986,9 @@
     "published_on": "2026-08-19",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1002,9 +1002,9 @@
     "published_on": "2026-08-19",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1018,9 +1018,9 @@
     "published_on": "2026-08-19",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1034,9 +1034,9 @@
     "published_on": "2026-08-19",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1098,9 +1098,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1114,9 +1114,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1130,9 +1130,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1140,15 +1140,15 @@
     "game": "엘소드",
     "title": "네블론 레이드",
     "event_url": "https://elsword.nexon.com/Events2026/0813/Update",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053079017163327485",
+    "hero_image_url": "data/thumbnails/event_bench/d7b48420fa61e333e1988794.jpg",
     "starts_on": "2026-08-13",
     "ends_on": "2026-09-10",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1162,9 +1162,9 @@
     "published_on": "2026-08-13",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1178,9 +1178,9 @@
     "published_on": "2026-08-13",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1194,9 +1194,9 @@
     "published_on": "2026-08-13",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1210,9 +1210,9 @@
     "published_on": "2026-08-13",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1226,9 +1226,9 @@
     "published_on": "2026-08-13",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1242,9 +1242,9 @@
     "published_on": "2026-08-13",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1258,9 +1258,9 @@
     "published_on": "2026-08-12",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1268,15 +1268,15 @@
     "game": "바람의나라",
     "title": "2026년 8월 바람모험 이벤트",
     "event_url": "https://baram.nexon.com/Event/List#view=2562",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4692843308135744655",
+    "hero_image_url": "data/thumbnails/event_bench/670f8f3535e5678d4d5cdcc3.png",
     "starts_on": "2026-08-06",
     "ends_on": "2026-09-02",
     "published_on": null,
     "status": "종료",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:06:15.240784+00:00",
+    "collected_at": "2026-09-03T21:10:25.046690+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1290,9 +1290,9 @@
     "published_on": "2026-08-06",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1306,9 +1306,9 @@
     "published_on": "2026-08-06",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1322,9 +1322,9 @@
     "published_on": "2026-08-06",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1338,9 +1338,9 @@
     "published_on": null,
     "status": "종료",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1386,9 +1386,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1396,15 +1396,15 @@
     "game": "FC ONLINE",
     "title": "썸머 풀 문 페스타  진행",
     "event_url": "https://shop.fconline.nexon.com/Events/260730/SummerFullMoon?utm_source=pc&utm_medium=main&utm_campaign=260730_summerfullmoon",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5629592546024882660",
+    "hero_image_url": "data/thumbnails/event_bench/311a0449eef8aeb223605e80.png",
     "starts_on": "2026-07-30",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1412,15 +1412,15 @@
     "game": "FC ONLINE",
     "title": "신규 복귀 구단주님 전용! FC BOOST  진행",
     "event_url": "https://events.fconline.nexon.com/260730/NewAndReturn?utm_source=pc&utm_medium=list&utm_campaign=260730_nru",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4909016240573383487",
+    "hero_image_url": "data/thumbnails/event_bench/434c5e5a81dbf84a82438009.png",
     "starts_on": "2026-07-30",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1428,15 +1428,15 @@
     "game": "FC ONLINE",
     "title": "플레이하고 원하는 선수 11강을 획득하세요!  진행",
     "event_url": "https://events.fconline.nexon.com/260730/NewEraOfStars?utm_source=pc&utm_medium=list&utm_campaign=260730_NewEraOfStars",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4981073933395558906",
+    "hero_image_url": "data/thumbnails/event_bench/7e3db45dfd163fd270612a43.png",
     "starts_on": "2026-07-30",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1444,15 +1444,15 @@
     "game": "FC ONLINE",
     "title": "백금 키퍼 확정 획득! 30일의 백금빛 썸머!  진행",
     "event_url": "https://events.fconline.nexon.com/260730/Join?utm_source=pc&utm_medium=list&utm_campaign=260730_join",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5485477486798045563",
+    "hero_image_url": "data/thumbnails/event_bench/9d1ae1c8db8389ed39503ee5.png",
     "starts_on": "2026-07-30",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1460,15 +1460,15 @@
     "game": "FC ONLINE",
     "title": "썸머 스페셜 챌린지! 매주 보상 챌린지!  진행",
     "event_url": "https://events.fconline.nexon.com/260730/Special?utm_source=pc&utm_medium=list&utm_campaign=260730_special",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125189181600956838",
+    "hero_image_url": "data/thumbnails/event_bench/858e8ded09aa10c6fc900a9f.png",
     "starts_on": "2026-07-30",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1476,15 +1476,15 @@
     "game": "엘소드",
     "title": "하이반의 엑사스케일 패스",
     "event_url": "https://elsword.nexon.com/Events2026/0730/Pass",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5197194072095197621",
+    "hero_image_url": "data/thumbnails/event_bench/e3587f8a11c6f077c247bfb2.jpg",
     "starts_on": "2026-07-30",
     "ends_on": "2026-11-19",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1492,15 +1492,15 @@
     "game": "엘소드",
     "title": "엑사스케일 증폭 회로 보급 터미널 이벤트",
     "event_url": "https://elsword.nexon.com/Events2026/0730/Event",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053078974213654540",
+    "hero_image_url": "data/thumbnails/event_bench/a5fb2da9741ca9a936fb4be2.jpg",
     "starts_on": "2026-07-30",
     "ends_on": "2026-11-19",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1508,15 +1508,15 @@
     "game": "엘소드",
     "title": "아바타 & 헤어 컬러 팔레트",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4PageNo=2&n4ArticleSN=3576",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5269251666133125733",
+    "hero_image_url": "data/thumbnails/event_bench/db24fd06343644c930f3313a.jpg",
     "starts_on": "2026-07-30",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1530,9 +1530,9 @@
     "published_on": "2026-07-30",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1546,9 +1546,9 @@
     "published_on": "2026-07-30",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1562,9 +1562,9 @@
     "published_on": "2026-07-30",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1578,9 +1578,9 @@
     "published_on": "2026-07-29",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1594,9 +1594,9 @@
     "published_on": "2026-07-27",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1610,9 +1610,9 @@
     "published_on": "2026-07-26",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1626,9 +1626,9 @@
     "published_on": "2026-07-25",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:09:58.468643+00:00",
+    "collected_at": "2026-09-03T21:11:48.730752+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1636,15 +1636,15 @@
     "game": "FC ONLINE",
     "title": "PC방 접속으로 코인을 획득하고 다양한 보상과 넥슨캐시 행운까지!  진행",
     "event_url": "https://events.fconline.nexon.com/260723/pcbang?utm_source=pc&utm_medium=list&utm_campaign=260723_pccafe",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4620785804292129806",
+    "hero_image_url": "data/thumbnails/event_bench/f2bfcf454e321816754eac09.png",
     "starts_on": "2026-07-23",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1658,9 +1658,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1674,9 +1674,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1684,15 +1684,15 @@
     "game": "바람의나라",
     "title": "온누리 고속성장 이벤트",
     "event_url": "https://baram.nexon.com/Event/List#view=2561",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5557534526785193130",
+    "hero_image_url": "data/thumbnails/event_bench/e2bcf493f7f6a5e85c26353c.png",
     "starts_on": "2026-07-23",
     "ends_on": "2026-09-02",
     "published_on": null,
     "status": "종료",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:06:15.240784+00:00",
+    "collected_at": "2026-09-03T21:10:25.046690+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1802,9 +1802,9 @@
     "published_on": "2026-07-22",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1812,15 +1812,15 @@
     "game": "엘소드",
     "title": "NEW 아바타 컬러 팔레트",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4PageNo=2&n4ArticleSN=3573",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5269251756327438567",
+    "hero_image_url": "data/thumbnails/event_bench/f882816eaba51c18ac77f7e4.jpg",
     "starts_on": "2026-07-16",
     "ends_on": "2026-09-10",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1828,15 +1828,15 @@
     "game": "엘소드",
     "title": "아바타 & 헤어 컬러 팔레트 리오더샵",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4PageNo=2&n4ArticleSN=3565",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5557482046579804704",
+    "hero_image_url": "data/thumbnails/event_bench/a4ef91c948ee8fabebf20c87.jpg",
     "starts_on": "2026-07-16",
     "ends_on": "2026-09-10",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1850,9 +1850,9 @@
     "published_on": "2026-07-16",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1866,9 +1866,9 @@
     "published_on": "2026-07-16",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1882,9 +1882,9 @@
     "published_on": "2026-07-16",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1898,9 +1898,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1914,9 +1914,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1930,9 +1930,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1946,9 +1946,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -1994,9 +1994,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2004,15 +2004,15 @@
     "game": "엘소드",
     "title": "주말에는 엘소드",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4PageNo=3&n4ArticleSN=3557",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5629539825301325968",
+    "hero_image_url": "data/thumbnails/event_bench/f26b02395a0e2dc45fa350b2.jpg",
     "starts_on": "2026-07-04",
     "ends_on": "2026-09-20",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2020,15 +2020,15 @@
     "game": "FC ONLINE",
     "title": "2026 FSL도 즐기고 주간 미션하고 보상받으세요!  진행",
     "event_url": "https://events.fconline.nexon.com/260702/FSL?utm_source=pc&utm_medium=list&utm_campaign=260702_FSL",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764900876403869425",
+    "hero_image_url": "data/thumbnails/event_bench/8a0528bdff90eae891ae10cf.png",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-09",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2042,9 +2042,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2052,15 +2052,15 @@
     "game": "엘소드",
     "title": "2026 엘리오스 여름 바캉스",
     "event_url": "https://elsword.nexon.com/Events2026/0702/Update",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5341309444854646855",
+    "hero_image_url": "data/thumbnails/event_bench/5c70815bf3530a0f05f5356c.jpg",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2068,15 +2068,15 @@
     "game": "엘소드",
     "title": "퀵 스타트 이벤트",
     "event_url": "https://elsword.nexon.com/Events2026/0702/QuickStart",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5701597187411020339",
+    "hero_image_url": "data/thumbnails/event_bench/6924dac48689a6491b955bc4.jpg",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2084,15 +2084,15 @@
     "game": "엘소드",
     "title": "11강 심연무 지급",
     "event_url": "https://elsword.nexon.com/Events2026/0702/Event",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5197246994682216838",
+    "hero_image_url": "data/thumbnails/event_bench/935829bd639eb4e237563102.png",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2100,15 +2100,15 @@
     "game": "엘소드",
     "title": "전투력 부스팅",
     "event_url": "https://elsword.nexon.com/Events2026/0702/Boosting",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4836958938593231386",
+    "hero_image_url": "data/thumbnails/event_bench/8e460217482659161f3df404.png",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2116,15 +2116,15 @@
     "game": "엘소드",
     "title": "수색대원 집합!! 레이드 출격!",
     "event_url": "https://elsword.nexon.com/Events2026/0702/Raid",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053078845364636192",
+    "hero_image_url": "data/thumbnails/event_bench/f92fb161c24ac88a2447ccfd.jpg",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2132,15 +2132,15 @@
     "game": "엘소드",
     "title": "엘소드 크리에이터 콘테스트",
     "event_url": "https://elsword.nexon.com/Events2026/0702/Creators",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5413367137676821939",
+    "hero_image_url": "data/thumbnails/event_bench/168572bfa52f7ed3898bcfc1.jpg",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-30",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2148,15 +2148,15 @@
     "game": "엘소드",
     "title": "마그멜리아 익스프레스",
     "event_url": "https://elsword.nexon.com/Events2026/0702/pass",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5557534853202706893",
+    "hero_image_url": "data/thumbnails/event_bench/642df6639e97d60bb5ee8c88.png",
     "starts_on": "2026-07-02",
     "ends_on": "2026-10-22",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2164,15 +2164,15 @@
     "game": "엘소드",
     "title": "2026 여름 성장 지원 패키지",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4PageNo=3&n4ArticleSN=3552",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4836906140560263301",
+    "hero_image_url": "data/thumbnails/event_bench/583d3f8e98b609d900febfdb.jpg",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2180,15 +2180,15 @@
     "game": "엘소드",
     "title": "커스텀 초상화",
     "event_url": "http://elsword.nexon.com/News/Events/View?n4PageNo=3&n4ArticleSN=3550",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5053079042933131206",
+    "hero_image_url": "data/thumbnails/event_bench/91b6d81bfbf9faa23c150ab5.jpg",
     "starts_on": "2026-07-02",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2196,15 +2196,15 @@
     "game": "카운터스트라이크 온라인",
     "title": "시즌26 서유기",
     "event_url": "https://csonline.nexon.com/Eventfull/E260625/Event",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4692843810646917517",
+    "hero_image_url": "data/thumbnails/event_bench/f68772ce626e869f7373fc26.png",
     "starts_on": "2026-06-25",
     "ends_on": "2026-10-15",
     "published_on": "2026-06-25",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:10:13.989118+00:00",
+    "collected_at": "2026-09-03T21:12:10.886178+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2234,9 +2234,9 @@
     "published_on": null,
     "status": "종료",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2250,9 +2250,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2266,9 +2266,9 @@
     "published_on": null,
     "status": "종료",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2282,9 +2282,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:08:56.317034+00:00",
+    "collected_at": "2026-09-03T21:10:31.985721+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2308,15 +2308,15 @@
     "game": "엘소드",
     "title": "2026 엘소드 여름 업데이트",
     "event_url": "https://elsword.nexon.com/Events2026/0620/Update",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4908963889217013750",
+    "hero_image_url": "data/thumbnails/event_bench/e7db8a6fb7af4c8a813a215f.jpg",
     "starts_on": "2026-06-20",
     "ends_on": "2026-09-23",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2330,9 +2330,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2346,9 +2346,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2362,9 +2362,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2378,9 +2378,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2394,9 +2394,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2410,9 +2410,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2426,9 +2426,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2442,9 +2442,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2458,9 +2458,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2474,9 +2474,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2490,9 +2490,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2506,9 +2506,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2522,9 +2522,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T16:48:31.168829+00:00",
+    "collected_at": "2026-09-03T21:08:36.695054+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T16:46:50.191495+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2532,15 +2532,15 @@
     "game": "엘소드",
     "title": "봉인된 유물 가열기 : 베리타스 페르소나",
     "event_url": "https://elsword.nexon.com/Events2026/0618/New",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5485477692956475722",
+    "hero_image_url": "data/thumbnails/event_bench/9ad1e223d1d04690ab42f378.png",
     "starts_on": "2026-06-18",
     "ends_on": "2026-10-08",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:48:45.378778+00:00",
+    "collected_at": "2026-09-03T21:09:29.160177+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2554,9 +2554,9 @@
     "published_on": "2026-06-18",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2570,9 +2570,9 @@
     "published_on": "2026-06-18",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2586,9 +2586,9 @@
     "published_on": "2026-06-18",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2602,9 +2602,9 @@
     "published_on": "2026-06-18",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2618,9 +2618,9 @@
     "published_on": null,
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T19:48:31.203553+00:00",
+    "collected_at": "2026-09-03T21:09:13.021157+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2634,9 +2634,9 @@
     "published_on": "2026-06-10",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2644,15 +2644,15 @@
     "game": "바람의나라",
     "title": "30주년 특별 굿즈 판매 오픈 기념 이벤트",
     "event_url": "https://baram.essential.nexon.com",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5197193719907882953",
+    "hero_image_url": "data/thumbnails/event_bench/06e45ba43e5e7f25a1964178.jpg",
     "starts_on": "2026-05-14",
     "ends_on": "2026-12-31",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:06:15.240784+00:00",
+    "collected_at": "2026-09-03T21:10:25.046690+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2660,15 +2660,15 @@
     "game": "FC ONLINE",
     "title": "매월 K LEAGUE 최고의 ZD골에 투표하세요.  진행",
     "event_url": "https://events.fconline.nexon.com/260409/KLeagueZD?utm_source=pc&utm_medium=list&utm_campaign=260409_KLeagueZD",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4764901254360990146",
+    "hero_image_url": "data/thumbnails/event_bench/708c8301e1c20d70069337f0.png",
     "starts_on": "2026-04-09",
     "ends_on": "2026-12-31",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2682,9 +2682,9 @@
     "published_on": "2026-02-19",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2698,9 +2698,9 @@
     "published_on": "2026-02-04",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:11:45.542579+00:00",
+    "collected_at": "2026-09-03T21:12:20.878138+00:00",
     "first_collected_at": "2026-09-02T04:42:11.424038+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2708,15 +2708,15 @@
     "game": "FC ONLINE",
     "title": "CLAN 26  진행",
     "event_url": "https://events.fconline.nexon.com/260122/clan26?utm_source=pc&utm_medium=list&utm_campaign=260122_clan26",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=5125189203075793326",
+    "hero_image_url": "data/thumbnails/event_bench/4d634c9b97f6e70abe139a6d.png",
     "starts_on": "2026-01-22",
     "ends_on": "2026-12-31",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T19:31:29.513152+00:00",
+    "collected_at": "2026-09-03T21:06:38.947026+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2730,9 +2730,9 @@
     "published_on": "2026-01-01",
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:11:36.030646+00:00",
+    "collected_at": "2026-09-03T21:12:16.880238+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2746,9 +2746,9 @@
     "published_on": "2025-11-19",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2762,9 +2762,9 @@
     "published_on": "2025-06-25",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2788,15 +2788,15 @@
     "game": "바람의나라",
     "title": "프리미엄PC방 혜택(상시)",
     "event_url": "https://baram.nexon.com/PccafeBenefit",
-    "hero_image_url": "https://file.nexon.com/NxFile/download/FileDownloader.aspx?oidFile=4908963326576301815",
+    "hero_image_url": "data/thumbnails/event_bench/aed0e51c5084d4caf115e475.jpg",
     "starts_on": "2024-04-18",
     "ends_on": "2028-12-31",
     "published_on": null,
     "status": "진행 중",
     "event_format": "full_page",
-    "collected_at": "2026-09-03T20:06:15.240784+00:00",
+    "collected_at": "2026-09-03T21:10:25.046690+00:00",
     "first_collected_at": "2026-08-24T23:03:42.286876+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2810,9 +2810,9 @@
     "published_on": "2024-04-03",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-25T19:01:24.660592+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {
@@ -2826,9 +2826,9 @@
     "published_on": "2020-05-07",
     "status": "진행 중",
     "event_format": "board",
-    "collected_at": "2026-09-03T20:09:10.930162+00:00",
+    "collected_at": "2026-09-03T21:10:52.131553+00:00",
     "first_collected_at": "2026-08-26T01:28:12.705358+00:00",
-    "last_seen_at": "2026-09-03T19:31:29.144412+00:00",
+    "last_seen_at": "2026-09-03T21:06:38.470803+00:00",
     "is_active": true
   },
   {

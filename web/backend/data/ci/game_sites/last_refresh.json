@@ -1,9 +1,9 @@
 {
   "portals": 10,
-  "discovered": 236,
-  "new_sites": 1,
+  "discovered": 253,
+  "new_sites": 34,
   "errors": {
-    "NEXON": "URLError: <urlopen error timed out>"
+    "NETMARBLE": "HTTPError: HTTP Error 403: Forbidden"
   },
-  "refreshed_at": "2026-09-03T20:15:43.945721+00:00"
+  "refreshed_at": "2026-09-03T21:18:36.411787+00:00"
 }
