@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-03T02:21:37.298843+00:00",
+  "generated_at": "2026-09-03T04:55:24.959213+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-02T21:14:11.037265+00:00",
+      "generatedAt": "2026-09-03T04:50:12.169849+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 85,
+        "collected": 218,
         "analyzed": 0,
-        "pending": 85,
+        "pending": 218,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,8 +141,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 6,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "네이버클라우드, LG와 보안 AI 만든다…GPU 4000장 선제 투입",
+              "url": "https://n.news.naver.com/mnews/article/003/0014166623",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214786",
+              "source": "AI타임스"
+            },
+            {
+              "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
+              "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
+              "source": "TechCrunch"
+            },
             {
               "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
@@ -152,55 +167,82 @@
               "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
               "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
-              "url": "https://n.news.naver.com/mnews/article/029/0003045891",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "NHN클라우드, '전남광주미래산업박람회' 참가…AI 인프라 기술력 강조",
-              "url": "https://www.etnews.com/20260902000300",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
-              "url": "https://www.etnews.com/20260902000426",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 3,
+          "articleCount": 8,
           "articles": [
             {
-              "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
-              "url": "https://www.etnews.com/20260902000364",
-              "source": "전자신문 AI"
+              "title": "[현장] SK텔레콤 \"차기 독파모 핵심은 '에이전트', 실행력 높인다\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436087",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
-              "source": "The Verge"
+              "title": "\"AI도 채용해서 조직도에 넣는다\"…송호철 크루온AI 대표의 승부수",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240068",
+              "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
-              "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
-              "source": "TechCrunch"
+              "title": "기승전 '구글과 애플'… AI 에이전트가 앱 대체하는 순간 [IT+]",
+              "url": "https://n.news.naver.com/mnews/article/665/0000008083",
+              "source": "NAVER · 더스쿠프"
+            },
+            {
+              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
+              "source": "AI타임스"
+            },
+            {
+              "title": "네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214787",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 1,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "[9월2일] 캐시 가격 75% 내렸는데 비용은 20% 올랐다…페이블 5.1의 ‘토큰 역설’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214733",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214790",
+              "source": "AI타임스"
+            },
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
               "url": "https://www.etnews.com/20260902000454",
               "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
+              "source": "AI타임스"
             }
           ]
         },
@@ -1042,13 +1084,13 @@
     },
     "3d": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-02T21:14:11.037265+00:00",
+      "generatedAt": "2026-09-03T04:50:12.169849+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1141,
+        "collected": 1213,
         "analyzed": 0,
-        "pending": 1141,
+        "pending": 1213,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1241,8 +1283,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 58,
+          "articleCount": 61,
           "articles": [
+            {
+              "title": "네이버클라우드, LG와 보안 AI 만든다…GPU 4000장 선제 투입",
+              "url": "https://n.news.naver.com/mnews/article/003/0014166623",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214786",
+              "source": "AI타임스"
+            },
+            {
+              "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
+              "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
+              "source": "TechCrunch"
+            },
             {
               "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
@@ -1252,61 +1309,61 @@
               "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
               "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
-              "url": "https://n.news.naver.com/mnews/article/029/0003045891",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "NHN클라우드, '전남광주미래산업박람회' 참가…AI 인프라 기술력 강조",
-              "url": "https://www.etnews.com/20260902000300",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
-              "url": "https://www.etnews.com/20260902000426",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 49,
+          "articleCount": 54,
           "articles": [
             {
-              "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
-              "url": "https://www.etnews.com/20260902000364",
-              "source": "전자신문 AI"
+              "title": "[현장] SK텔레콤 \"차기 독파모 핵심은 '에이전트', 실행력 높인다\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436087",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
-              "source": "The Verge"
+              "title": "\"AI도 채용해서 조직도에 넣는다\"…송호철 크루온AI 대표의 승부수",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240068",
+              "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
-              "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
-              "source": "TechCrunch"
+              "title": "기승전 '구글과 애플'… AI 에이전트가 앱 대체하는 순간 [IT+]",
+              "url": "https://n.news.naver.com/mnews/article/665/0000008083",
+              "source": "NAVER · 더스쿠프"
             },
             {
-              "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362568",
-              "source": "NAVER · 이데일리"
+              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
+              "source": "AI타임스"
             },
             {
-              "title": "손정의가 본 2040년 …\"AI 잘 쓰는 기업이 서투른 기업 몰아낼 것\"",
-              "url": "https://n.news.naver.com/mnews/article/009/0005729564",
-              "source": "NAVER · 매일경제"
+              "title": "네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214787",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 27,
+          "articleCount": 30,
           "articles": [
+            {
+              "title": "[9월2일] 캐시 가격 75% 내렸는데 비용은 20% 올랐다…페이블 5.1의 ‘토큰 역설’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214733",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214790",
+              "source": "AI타임스"
+            },
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
               "url": "https://www.etnews.com/20260902000454",
@@ -1316,29 +1373,24 @@
               "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
               "url": "https://n.news.naver.com/mnews/article/056/0012249593",
               "source": "NAVER · KBS"
-            },
-            {
-              "title": "“여권 어디 뒀지?” 제미나이에 물어보세요…안드로이드 새 기능 5가지",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362603",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "\"필요한 장면 스스로 탐색\"...구글, 제미나이 '에이전트 비디오 분석' 도입",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214749",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
-              "url": "https://www.etnews.com/20260902000038",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 10,
+          "articleCount": 12,
           "articles": [
+            {
+              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
+              "source": "AI타임스"
+            },
             {
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
               "url": "https://www.etnews.com/20260902000038",
@@ -1353,16 +1405,6 @@
               "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
               "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
               "source": "TechCrunch"
-            },
-            {
-              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2214,13 +2256,13 @@
     },
     "week": {
       "briefDate": "2026-09-03",
-      "generatedAt": "2026-09-02T21:14:11.037265+00:00",
+      "generatedAt": "2026-09-03T04:50:12.169849+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1232,
+        "collected": 1366,
         "analyzed": 0,
-        "pending": 1232,
+        "pending": 1366,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2413,8 +2455,23 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 60,
+          "articleCount": 63,
           "articles": [
+            {
+              "title": "네이버클라우드, LG와 보안 AI 만든다…GPU 4000장 선제 투입",
+              "url": "https://n.news.naver.com/mnews/article/003/0014166623",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "베슬AI, SK바이오팜에 GPU 128장 공급...신약 개발 지원 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214786",
+              "source": "AI타임스"
+            },
+            {
+              "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
+              "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
+              "source": "TechCrunch"
+            },
             {
               "title": "청년의 아이디어, 인공지능(AI)으로  현실이 되다",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156777521&pageIndex=5&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
@@ -2424,61 +2481,61 @@
               "title": "[보도자료] 한성숙 국무총리 주재 AI 행정혁신 우수 공직자 간담회",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156779944&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-03&endDate=2026-09-03&srchWord=&period=",
               "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "브로드컴 오늘 실적 발표… ‘삼전닉스’ 투심 살릴까",
-              "url": "https://n.news.naver.com/mnews/article/029/0003045891",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "NHN클라우드, '전남광주미래산업박람회' 참가…AI 인프라 기술력 강조",
-              "url": "https://www.etnews.com/20260902000300",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "아이에이클라우드, 하이퍼엑셀과 LPU 적용성 검증 협력",
-              "url": "https://www.etnews.com/20260902000426",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 53,
+          "articleCount": 58,
           "articles": [
             {
-              "title": "NC AI, 자연어로 소리 생성하는 AI '바르코 사운드' 출시",
-              "url": "https://www.etnews.com/20260902000364",
-              "source": "전자신문 AI"
+              "title": "[현장] SK텔레콤 \"차기 독파모 핵심은 '에이전트', 실행력 높인다\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436087",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "Researchers fear safety disaster ahead of OpenAI&#8217;s Astra release",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
-              "source": "The Verge"
+              "title": "\"AI도 채용해서 조직도에 넣는다\"…송호철 크루온AI 대표의 승부수",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240068",
+              "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
-              "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
-              "source": "TechCrunch"
+              "title": "기승전 '구글과 애플'… AI 에이전트가 앱 대체하는 순간 [IT+]",
+              "url": "https://n.news.naver.com/mnews/article/665/0000008083",
+              "source": "NAVER · 더스쿠프"
             },
             {
-              "title": "‘보안 AI’ 최종 승부…네이버클라우드 ‘대규모 학습’ vs SKT ‘현장 적용’",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362568",
-              "source": "NAVER · 이데일리"
+              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
+              "source": "AI타임스"
             },
             {
-              "title": "손정의가 본 2040년 …\"AI 잘 쓰는 기업이 서투른 기업 몰아낼 것\"",
-              "url": "https://n.news.naver.com/mnews/article/009/0005729564",
-              "source": "NAVER · 매일경제"
+              "title": "네이버클라우드, 정부 '사이버 보안 AI 모델' 개발 사업자로 최종 발탁",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214787",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 29,
+          "articleCount": 32,
           "articles": [
+            {
+              "title": "[9월2일] 캐시 가격 75% 내렸는데 비용은 20% 올랐다…페이블 5.1의 ‘토큰 역설’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214733",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI ‘아스트라’ 이번 주 출시설…API에 ‘GPT-6’ 흔적 포착",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214790",
+              "source": "AI타임스"
+            },
             {
               "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
               "url": "https://www.etnews.com/20260902000454",
@@ -2488,29 +2545,24 @@
               "title": "AI는 이미 ‘친구’ 됐는데…청소년 보호는 ‘공백’ [AI과몰입]②",
               "url": "https://n.news.naver.com/mnews/article/056/0012249593",
               "source": "NAVER · KBS"
-            },
-            {
-              "title": "“여권 어디 뒀지?” 제미나이에 물어보세요…안드로이드 새 기능 5가지",
-              "url": "https://n.news.naver.com/mnews/article/018/0006362603",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "\"필요한 장면 스스로 탐색\"...구글, 제미나이 '에이전트 비디오 분석' 도입",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214749",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
-              "url": "https://www.etnews.com/20260902000038",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 11,
+          "articleCount": 13,
           "articles": [
+            {
+              "title": "메타, '뮤즈 스파크 1.3' 출시...오픈AI 제치고 세계 3위 성능",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214774",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
+              "source": "AI타임스"
+            },
             {
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
               "url": "https://www.etnews.com/20260902000038",
@@ -2525,16 +2577,6 @@
               "title": "Sequoia-incubated Empirik launches with $21M to predict outages before they happen",
               "url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/",
               "source": "TechCrunch"
-            },
-            {
-              "title": "클로드 맥스 플랜 '5x·20x' 표시 논란... 오픈AI \"코덱스는 진짜 20배\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214707",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"코덱스로 게임 개발 공식 바꾼다\"...오픈AI, '게임 빌더스 서울' 열어",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214658",
-              "source": "AI타임스"
             }
           ]
         },
