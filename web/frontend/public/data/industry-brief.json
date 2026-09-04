@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T11:39:15.713595+00:00",
+  "generated_at": "2026-09-04T14:49:39.488660+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 246,
+        "collected": 258,
         "analyzed": 0,
-        "pending": 246,
+        "pending": 258,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1059,9 +1059,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1097,
+        "collected": 1067,
         "analyzed": 0,
-        "pending": 1097,
+        "pending": 1067,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1193,7 +1193,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 64,
+          "articleCount": 55,
           "articles": [
             {
               "title": "이해진, 브룩필드 회장 만났다…네이버 AI 팩토리 후속 논의",
@@ -1225,7 +1225,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 41,
+          "articleCount": 36,
           "articles": [
             {
               "title": "[현장] '모두의 AI' 연내 출시 속도…3개 컨소시엄 핵심 전략은",
@@ -1257,7 +1257,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 38,
+          "articleCount": 32,
           "articles": [
             {
               "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
@@ -1289,7 +1289,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 8,
           "articles": [
             {
               "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
@@ -2148,9 +2148,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1802,
+        "collected": 1814,
         "analyzed": 0,
-        "pending": 1802,
+        "pending": 1814,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,

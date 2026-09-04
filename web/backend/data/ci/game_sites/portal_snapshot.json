@@ -1254,5 +1254,125 @@
     "published_on": null,
     "thumbnail_url": null,
     "portal": "WEMADE"
+  },
+  {
+    "url": "https://www.section9interactive.com/",
+    "game_name": "엔드 오브 어비스",
+    "publisher": null,
+    "published_on": "2026-10-01",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1497021001.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://acecombat.com/",
+    "game_name": "에이스 컴뱃 8: 시브의 날개",
+    "publisher": null,
+    "published_on": "2026-10-02",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1039257761.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://starwarsgalacticracer.com/",
+    "game_name": "스타워즈: 은하계 레이서",
+    "publisher": null,
+    "published_on": "2026-10-06",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1483934214.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.h2int.com/",
+    "game_name": "땡스, 라이트",
+    "publisher": null,
+    "published_on": "2026-10-15",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1674590278.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://newblood.games/",
+    "game_name": "테네브리스 솜니아",
+    "publisher": null,
+    "published_on": "2026-10-17",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1212152530.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.square-enix.com/finalfantasyresonance/en_US",
+    "game_name": "파이널 판타지 레조넌스",
+    "publisher": null,
+    "published_on": "2026-10-22",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1866032938.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.callofduty.com/blog",
+    "game_name": "콜오브듀티: 모던워페어 사",
+    "publisher": null,
+    "published_on": "2026-10-23",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1922434251.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.bandainamcoent.com/games/one-piece-grand-gourmet",
+    "game_name": "원피스 그랜드 레스토랑",
+    "publisher": null,
+    "published_on": "2026-10-23",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1773947141.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://pbz.s-game.com/",
+    "game_name": "팬텀 블레이드 제로",
+    "publisher": null,
+    "published_on": "2026-10-29",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1670660564.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://dokkaebi.kakaogames.com/",
+    "game_name": "도깨비의세계",
+    "publisher": null,
+    "published_on": "2026-10-31",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1786067635.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.perfectgarbage.com/grave-seasons",
+    "game_name": "그레이브 시즌",
+    "publisher": null,
+    "published_on": null,
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1671117329.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://cygames-edge.com/en/where_the_seeds_fall",
+    "game_name": "웨어 더 시즈 폴",
+    "publisher": null,
+    "published_on": "2026-11-05",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1414023153.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.cloudedleopardent.com/game/prinnyparty_goingoverboard/kr",
+    "game_name": "다 함께 즐기자! 프리니 보드 배틀",
+    "publisher": null,
+    "published_on": "2026-11-12",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1630780289.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.rockstargames.com/kr/VI",
+    "game_name": "GTA6",
+    "publisher": null,
+    "published_on": "2026-11-19",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1603303563.jpg",
+    "portal": "INVEN_CALENDAR"
+  },
+  {
+    "url": "https://www.footballmanager.com/",
+    "game_name": "풋볼 매니저 27",
+    "publisher": null,
+    "published_on": "2026-11-28",
+    "thumbnail_url": "https://static.inven.co.kr/column/webzine3/gamelogo/2026/i1735939686.jpg",
+    "portal": "INVEN_CALENDAR"
   }
 ]
