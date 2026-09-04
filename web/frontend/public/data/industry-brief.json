@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T05:25:24.927025+00:00",
+  "generated_at": "2026-09-04T10:21:30.792028+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 156,
+        "collected": 161,
         "analyzed": 0,
-        "pending": 156,
+        "pending": 161,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1044,9 +1044,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1170,
+        "collected": 1026,
         "analyzed": 0,
-        "pending": 1170,
+        "pending": 1026,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1150,14 +1150,7 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [
-        {
-          "category": "AI",
-          "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=214278",
-          "publishedDate": "2026.08.25"
-        }
-      ],
+      "recommendedArticles": [],
       "signals": [],
       "newToday": [],
       "issues": [],
@@ -1185,7 +1178,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 71,
+          "articleCount": 59,
           "articles": [
             {
               "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
@@ -1217,7 +1210,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 41,
+          "articleCount": 34,
           "articles": [
             {
               "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
@@ -1249,7 +1242,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 36,
+          "articleCount": 33,
           "articles": [
             {
               "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
@@ -2140,9 +2133,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1712,
+        "collected": 1717,
         "analyzed": 0,
-        "pending": 1712,
+        "pending": 1717,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
