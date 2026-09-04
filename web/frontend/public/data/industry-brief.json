@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T16:42:01.004921+00:00",
+  "generated_at": "2026-09-04T18:07:29.633397+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-05",
@@ -987,9 +987,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1093,
+        "collected": 1063,
         "analyzed": 0,
-        "pending": 1093,
+        "pending": 1063,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1121,7 +1121,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 56,
+          "articleCount": 54,
           "articles": [
             {
               "title": "Alienware’s refurbished 16 Aurora is almost $200 off at Woot",
@@ -1153,7 +1153,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 39,
+          "articleCount": 38,
           "articles": [
             {
               "title": "'모두의 AI' 시동 건 카카오…정신아 대표 \"1인 N에이전트 구현\"",
@@ -1217,7 +1217,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 8,
           "articles": [
             {
               "title": "Microsoft says virtually nobody was grabbing NYT articles through its chatbot",
