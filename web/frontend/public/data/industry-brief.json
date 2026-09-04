@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T21:02:00.923138+00:00",
+  "generated_at": "2026-09-04T22:49:42.378426+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-05",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 54,
+        "collected": 55,
         "analyzed": 0,
-        "pending": 54,
+        "pending": 55,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1029,9 +1029,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1073,
+        "collected": 1060,
         "analyzed": 0,
-        "pending": 1073,
+        "pending": 1060,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1163,7 +1163,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 58,
+          "articleCount": 57,
           "articles": [
             {
               "title": "[IFA 2026] “1인당 클라우드 비용만 연 1억5000만원”…AMD, 로컬 AI로 ‘토큰 위기’ 정조준",
@@ -1195,7 +1195,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 39,
+          "articleCount": 36,
           "articles": [
             {
               "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
@@ -1227,7 +1227,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 34,
+          "articleCount": 33,
           "articles": [
             {
               "title": "“AGI 시대에 온 걸 환영”…오픈AI, GPT-6 ‘아스트라’ 출시 [팩플]",
@@ -1259,7 +1259,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 7,
           "articles": [
             {
               "title": "Microsoft says virtually nobody was grabbing NYT articles through its chatbot",
@@ -2118,9 +2118,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1917,
+        "collected": 1918,
         "analyzed": 0,
-        "pending": 1917,
+        "pending": 1918,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
