@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T04:51:32.134397+00:00",
+  "generated_at": "2026-09-04T05:25:24.927025+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
@@ -1044,9 +1044,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1185,
+        "collected": 1170,
         "analyzed": 0,
-        "pending": 1185,
+        "pending": 1170,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1185,7 +1185,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 73,
+          "articleCount": 71,
           "articles": [
             {
               "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
@@ -1217,7 +1217,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 48,
+          "articleCount": 41,
           "articles": [
             {
               "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
@@ -1249,7 +1249,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 38,
+          "articleCount": 36,
           "articles": [
             {
               "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
