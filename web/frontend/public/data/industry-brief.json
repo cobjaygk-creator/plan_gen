@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-04T00:43:45.224432+00:00",
+  "generated_at": "2026-09-04T04:51:32.134397+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
-      "generatedAt": "2026-09-03T21:14:15.803979+00:00",
+      "generatedAt": "2026-09-04T04:47:05.238984+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 91,
+        "collected": 156,
         "analyzed": 0,
-        "pending": 91,
+        "pending": 156,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,72 +141,77 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 12,
+          "articleCount": 16,
           "articles": [
+            {
+              "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
+              "url": "https://www.etnews.com/20260904000167",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214830",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"엔비디아·구글도 온다\"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214835",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
+              "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
+              "source": "The Verge"
+            },
             {
               "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
               "url": "https://n.news.naver.com/mnews/article/008/0005409238",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[IFA 2026]샤오미, 칩·AI·가전·전기차 묶어 유럽 공략…“생태계 통째로 진출”",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463434",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "“이 게임 하려고 전세계 직장인 휴가 준비”…하드웨어 값 꿈틀꿈틀",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549031",
-              "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "네이버 컨소시엄, 정부 '보안 특화 AI' 사업 따냈다",
-              "url": "https://n.news.naver.com/mnews/article/008/0005409291",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[IFA 2026] 남는 PC 연산력 AI에 쓴다… 엔비디아 ‘PAIR’ 첫선",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190289",
-              "source": "NAVER · 조선비즈"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 7,
+          "articleCount": 13,
           "articles": [
             {
-              "title": "요즘 ‘재미 못보는’ 제미나이",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549030",
-              "source": "NAVER · 중앙일보"
+              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
+              "url": "https://www.etnews.com/20260904000007",
+              "source": "전자신문 AI"
             },
             {
-              "title": "구글 '제미나이3.8 플래시' 공개…'프로'는 또 지연",
-              "url": "https://n.news.naver.com/mnews/article/421/0009148821",
-              "source": "NAVER · 뉴스1"
+              "title": "오픈AI, 'GPT-6 아스트라' 출시…“AGI 시대 진입”",
+              "url": "https://www.etnews.com/20260904000011",
+              "source": "전자신문 AI"
             },
             {
-              "title": "오픈AI, 압도적 성능 'GPT-6 아스트라' 공개…\"AGI 시대 진입 환영\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214821",
+              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
               "source": "AI타임스"
             },
             {
-              "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
-              "source": "The Verge"
+              "title": "챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214832",
+              "source": "AI타임스"
             },
             {
-              "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-              "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-              "source": "OpenAI"
+              "title": "앤트로픽 \"중국 AI, 다크웹서 도난 카드로 클로드 무단 증류\" 폭로",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214838",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "source": "AI타임스"
+            },
             {
               "title": "Meta is paying to peek at how you use their latest AI model",
               "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
@@ -222,8 +227,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
+              "url": "https://www.etnews.com/20260904000007",
+              "source": "전자신문 AI"
+            },
             {
               "title": "요즘 ‘재미 못보는’ 제미나이",
               "url": "https://n.news.naver.com/mnews/article/025/0003549030",
@@ -1030,13 +1040,13 @@
     },
     "3d": {
       "briefDate": "2026-09-04",
-      "generatedAt": "2026-09-03T21:14:15.803979+00:00",
+      "generatedAt": "2026-09-04T04:47:05.238984+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1217,
+        "collected": 1185,
         "analyzed": 0,
-        "pending": 1217,
+        "pending": 1185,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1142,45 +1152,9 @@
       },
       "recommendedArticles": [
         {
-          "category": "GAME",
-          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319881",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-          "url": "https://www.gamemeca.com/view.php?gid=1779548",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319882",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "킹넷, '열혈강호: 넥스트', 신규 직업 자객 등 대규모 업데이트 실시",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319883",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "쿠키런: 오븐브레이크, 10주년 기념 IP 통합 대축제 ‘쿠키런 그랜드 페스티벌’ 개최",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319879",
-          "publishedDate": "2026.08.25"
-        },
-        {
           "category": "AI",
           "title": "[8월24일] 중국 로봇, 1년 만에 100m 기록 절반 단축…“두뇌는 'GPT-2' 수준”",
           "url": "https://www.aitimes.com/news/articleView.html?idxno=214278",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
-          "url": "https://www.etnews.com/20260825000113",
           "publishedDate": "2026.08.25"
         }
       ],
@@ -1211,40 +1185,45 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 69,
+          "articleCount": 73,
           "articles": [
+            {
+              "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
+              "url": "https://www.etnews.com/20260904000167",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214830",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"엔비디아·구글도 온다\"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214835",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
+              "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
+              "source": "The Verge"
+            },
             {
               "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
               "url": "https://n.news.naver.com/mnews/article/008/0005409238",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[IFA 2026]샤오미, 칩·AI·가전·전기차 묶어 유럽 공략…“생태계 통째로 진출”",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463434",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "“이 게임 하려고 전세계 직장인 휴가 준비”…하드웨어 값 꿈틀꿈틀",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549031",
-              "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "네이버 컨소시엄, 정부 '보안 특화 AI' 사업 따냈다",
-              "url": "https://n.news.naver.com/mnews/article/008/0005409291",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[IFA 2026] 남는 PC 연산력 AI에 쓴다… 엔비디아 ‘PAIR’ 첫선",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190289",
-              "source": "NAVER · 조선비즈"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 47,
+          "articleCount": 48,
           "articles": [
+            {
+              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "source": "AI타임스"
+            },
             {
               "title": "Meta is paying to peek at how you use their latest AI model",
               "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
@@ -1264,51 +1243,51 @@
               "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
               "source": "AI타임스"
-            },
-            {
-              "title": "크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214808",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 32,
+          "articleCount": 38,
           "articles": [
             {
-              "title": "요즘 ‘재미 못보는’ 제미나이",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549030",
-              "source": "NAVER · 중앙일보"
+              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
+              "url": "https://www.etnews.com/20260904000007",
+              "source": "전자신문 AI"
             },
             {
-              "title": "구글 '제미나이3.8 플래시' 공개…'프로'는 또 지연",
-              "url": "https://n.news.naver.com/mnews/article/421/0009148821",
-              "source": "NAVER · 뉴스1"
+              "title": "오픈AI, 'GPT-6 아스트라' 출시…“AGI 시대 진입”",
+              "url": "https://www.etnews.com/20260904000011",
+              "source": "전자신문 AI"
             },
             {
-              "title": "오픈AI, 압도적 성능 'GPT-6 아스트라' 공개…\"AGI 시대 진입 환영\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214821",
+              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
               "source": "AI타임스"
             },
             {
-              "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
-              "source": "The Verge"
+              "title": "챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214832",
+              "source": "AI타임스"
             },
             {
-              "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-              "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-              "source": "OpenAI"
+              "title": "앤트로픽 \"중국 AI, 다크웹서 도난 카드로 클로드 무단 증류\" 폭로",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214838",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
+              "url": "https://www.etnews.com/20260904000007",
+              "source": "전자신문 AI"
+            },
             {
               "title": "요즘 ‘재미 못보는’ 제미나이",
               "url": "https://n.news.naver.com/mnews/article/025/0003549030",
@@ -1328,11 +1307,6 @@
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
               "url": "https://www.etnews.com/20260902000038",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2162,13 +2136,13 @@
     },
     "week": {
       "briefDate": "2026-09-04",
-      "generatedAt": "2026-09-03T21:14:15.803979+00:00",
+      "generatedAt": "2026-09-04T04:47:05.238984+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1647,
+        "collected": 1712,
         "analyzed": 0,
-        "pending": 1647,
+        "pending": 1712,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2361,40 +2335,45 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 84,
+          "articleCount": 88,
           "articles": [
+            {
+              "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
+              "url": "https://www.etnews.com/20260904000167",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214830",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"엔비디아·구글도 온다\"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214835",
+              "source": "AI타임스"
+            },
+            {
+              "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
+              "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
+              "source": "The Verge"
+            },
             {
               "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
               "url": "https://n.news.naver.com/mnews/article/008/0005409238",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[IFA 2026]샤오미, 칩·AI·가전·전기차 묶어 유럽 공략…“생태계 통째로 진출”",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463434",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "“이 게임 하려고 전세계 직장인 휴가 준비”…하드웨어 값 꿈틀꿈틀",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549031",
-              "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "네이버 컨소시엄, 정부 '보안 특화 AI' 사업 따냈다",
-              "url": "https://n.news.naver.com/mnews/article/008/0005409291",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[IFA 2026] 남는 PC 연산력 AI에 쓴다… 엔비디아 ‘PAIR’ 첫선",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190289",
-              "source": "NAVER · 조선비즈"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 63,
+          "articleCount": 64,
           "articles": [
+            {
+              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "source": "AI타임스"
+            },
             {
               "title": "Meta is paying to peek at how you use their latest AI model",
               "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
@@ -2414,51 +2393,51 @@
               "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
               "source": "AI타임스"
-            },
-            {
-              "title": "크라우드웍스, 데이터 구축 노하우로 'AI 에이전트 안전성' 검증 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214808",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 44,
+          "articleCount": 50,
           "articles": [
             {
-              "title": "요즘 ‘재미 못보는’ 제미나이",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549030",
-              "source": "NAVER · 중앙일보"
+              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
+              "url": "https://www.etnews.com/20260904000007",
+              "source": "전자신문 AI"
             },
             {
-              "title": "구글 '제미나이3.8 플래시' 공개…'프로'는 또 지연",
-              "url": "https://n.news.naver.com/mnews/article/421/0009148821",
-              "source": "NAVER · 뉴스1"
+              "title": "오픈AI, 'GPT-6 아스트라' 출시…“AGI 시대 진입”",
+              "url": "https://www.etnews.com/20260904000011",
+              "source": "전자신문 AI"
             },
             {
-              "title": "오픈AI, 압도적 성능 'GPT-6 아스트라' 공개…\"AGI 시대 진입 환영\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214821",
+              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
               "source": "AI타임스"
             },
             {
-              "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
-              "source": "The Verge"
+              "title": "챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214832",
+              "source": "AI타임스"
             },
             {
-              "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-              "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-              "source": "OpenAI"
+              "title": "앤트로픽 \"중국 AI, 다크웹서 도난 카드로 클로드 무단 증류\" 폭로",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214838",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 14,
+          "articleCount": 15,
           "articles": [
+            {
+              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
+              "url": "https://www.etnews.com/20260904000007",
+              "source": "전자신문 AI"
+            },
             {
               "title": "요즘 ‘재미 못보는’ 제미나이",
               "url": "https://n.news.naver.com/mnews/article/025/0003549030",
@@ -2478,11 +2457,6 @@
               "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
               "url": "https://www.etnews.com/20260902000038",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "앤트로픽, 최고 성능 '페이블 5.1' 출시...캐시 읽기 75% 파격 할인",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214725",
-              "source": "AI타임스"
             }
           ]
         },
