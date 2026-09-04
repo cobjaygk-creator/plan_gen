@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T22:11:33.332109+00:00",
+  "generated_at": "2026-09-04T00:43:45.224432+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
@@ -281,33 +281,6 @@
           "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
         },
         {
-          "id": "3522",
-          "type": "REGULATION",
-          "typeLabel": "규제 시행",
-          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-          "publishedDate": "2026.08.28",
-          "effectiveDate": "8월 27일",
-          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
-          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
-          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
-          "responseChecklist": [
-            "적용 대상과 시행일 원문 확인",
-            "표시·운영·보호 절차 변경 필요 여부 점검"
-          ],
-          "priorityScore": 65,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "시행됨",
-          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 시행됨",
-          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
-        },
-        {
           "id": "4085",
           "type": "FUNDING",
           "typeLabel": "지원사업",
@@ -487,8 +460,8 @@
             "단속·조사 대상과 위반 유형 확인",
             "운영 기록과 신고·이용자 대응 절차 점검"
           ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "인공지능서비스불법유해정보대응해야",
           "changeType": "NEW",
@@ -1061,9 +1034,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1258,
+        "collected": 1217,
         "analyzed": 0,
-        "pending": 1258,
+        "pending": 1217,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1182,12 +1155,6 @@
         },
         {
           "category": "GAME",
-          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
           "title": "'더 블러드 오브 던워커', 콘솔 전 기종 60fps 모드 추가",
           "url": "https://www.inven.co.kr/webzine/news/?news=319882",
           "publishedDate": "2026.08.25"
@@ -1199,21 +1166,9 @@
           "publishedDate": "2026.08.25"
         },
         {
-          "category": "AI",
-          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319875",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-          "url": "https://www.etnews.com/20260825000010",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "코딧, 'ICT 규제샌드박스' AI 확인 서비스 운영사 선정",
-          "url": "https://www.etnews.com/20260825000050",
+          "category": "GAME",
+          "title": "쿠키런: 오븐브레이크, 10주년 기념 IP 통합 대축제 ‘쿠키런 그랜드 페스티벌’ 개최",
+          "url": "https://www.inven.co.kr/webzine/news/?news=319879",
           "publishedDate": "2026.08.25"
         },
         {
@@ -1224,8 +1179,8 @@
         },
         {
           "category": "AI",
-          "title": "국제표준부터 인공지능까지… 한·중 지식재산 정보화 협력 강화",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775377&pageIndex=1&repCodeType=&repCode=&startDate=2025-08-25&endDate=2026-08-25&srchWord=&period=",
+          "title": "라이너, 시리즈C 투자 500억원 확보…글로벌 사용자 1400만명",
+          "url": "https://www.etnews.com/20260825000113",
           "publishedDate": "2026.08.25"
         }
       ],
@@ -1256,7 +1211,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 73,
+          "articleCount": 69,
           "articles": [
             {
               "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
@@ -1320,7 +1275,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 35,
+          "articleCount": 32,
           "articles": [
             {
               "title": "요즘 ‘재미 못보는’ 제미나이",
@@ -1456,33 +1411,6 @@
           "history": [],
           "selectionReason": "단속·집행 공식 발표 · 시행됨",
           "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
-        },
-        {
-          "id": "3522",
-          "type": "REGULATION",
-          "typeLabel": "규제 시행",
-          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-          "publishedDate": "2026.08.28",
-          "effectiveDate": "8월 27일",
-          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
-          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
-          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
-          "responseChecklist": [
-            "적용 대상과 시행일 원문 확인",
-            "표시·운영·보호 절차 변경 필요 여부 점검"
-          ],
-          "priorityScore": 65,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "시행됨",
-          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 시행됨",
-          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
         },
         {
           "id": "4085",
@@ -1664,8 +1592,8 @@
             "단속·조사 대상과 위반 유형 확인",
             "운영 기록과 신고·이용자 대응 절차 점검"
           ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "인공지능서비스불법유해정보대응해야",
           "changeType": "NEW",
@@ -2635,33 +2563,6 @@
           "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다."
         },
         {
-          "id": "3522",
-          "type": "REGULATION",
-          "typeLabel": "규제 시행",
-          "title": "인공지능 시대 개인정보 보호와 활용,  최고의 미래 법률 전문가는?",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775877&pageIndex=5&repCodeType=&repCode=&startDate=2025-08-31&endDate=2026-08-31&srchWord=&period=",
-          "publishedDate": "2026.08.28",
-          "effectiveDate": "8월 27일",
-          "target": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
-          "action": "제4회 개인정보보호 모의재판 경연대회 개최(8.27.), 총 54개 팀 지원, 8개 팀 본선 진출- 법학전문대학원생 부문 '개보박두'팀, 대학(원)생 부문 '정법사'팀 영예의 대상 수상 개인정보보호위원회(위원장 송경희, 이하 '개인정보위')는 지난 8월 27일(목) 서울시립대학교 모의법정에서 '제4회 개인정보보호 모의재판 경연대회'(이하 '경연대회')를 개최했다.",
-          "implication": "관련 인력 확보와 교육 협력 기회가 확대되는지 중장기적으로 살펴볼 필요가 있습니다.",
-          "responseChecklist": [
-            "적용 대상과 시행일 원문 확인",
-            "표시·운영·보호 절차 변경 필요 여부 점검"
-          ],
-          "priorityScore": 65,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "시행됨",
-          "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "규제 시행 공식 발표 · 시행됨",
-          "evidenceSentence": "개인정보위는 이번 경연대회가 참가자들이 최신 기술 환경 속에서 개인정보 보호와 관련된 법률적 통찰력과 역량을 유감없이 발휘하는 장이 되었을 뿐만 아니라, 방청객들에게도 에이전틱 인공지능 등 급변하는 인공지능 시대 개인정보의 안전한 처리와 활용의 중요성을 환기하는 뜻깊은 자리가 된 것으로 평가하고 있다."
-        },
-        {
           "id": "4085",
           "type": "FUNDING",
           "typeLabel": "지원사업",
@@ -2841,8 +2742,8 @@
             "단속·조사 대상과 위반 유형 확인",
             "운영 기록과 신고·이용자 대응 절차 점검"
           ],
-          "priorityScore": 55,
-          "priorityLabel": "우선 확인",
+          "priorityScore": 45,
+          "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "인공지능서비스불법유해정보대응해야",
           "changeType": "NEW",
