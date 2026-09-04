@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-04T10:21:30.792028+00:00",
+  "generated_at": "2026-09-04T11:39:15.713595+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-04",
-      "generatedAt": "2026-09-04T04:47:05.238984+00:00",
+      "generatedAt": "2026-09-04T11:34:55.670484+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 161,
+        "collected": 246,
         "analyzed": 0,
-        "pending": 161,
+        "pending": 246,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,94 +141,109 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 16,
+          "articleCount": 21,
           "articles": [
             {
-              "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
-              "url": "https://www.etnews.com/20260904000167",
-              "source": "전자신문 AI"
+              "title": "이해진, 브룩필드 회장 만났다…네이버 AI 팩토리 후속 논의",
+              "url": "https://n.news.naver.com/mnews/article/018/0006363858",
+              "source": "NAVER · 이데일리"
             },
             {
-              "title": "엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214830",
+              "title": "네이버 1GW AI 팩토리 사업 속도…이해진, 브룩필드 회장과 회동",
+              "url": "https://n.news.naver.com/mnews/article/119/0003129283",
+              "source": "NAVER · 데일리안"
+            },
+            {
+              "title": "엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214850",
               "source": "AI타임스"
             },
             {
-              "title": "\"엔비디아·구글도 온다\"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214835",
+              "title": "아크릴, 국내 의료기관과 ‘AI 암 진단·치료·예후 의료체계’ 구축 나서",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214865",
               "source": "AI타임스"
             },
             {
-              "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
-              "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
-              "source": "The Verge"
-            },
-            {
-              "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
-              "url": "https://n.news.naver.com/mnews/article/008/0005409238",
-              "source": "NAVER · 머니투데이"
+              "title": "이해진 네이버 의장, 브룩필드 회장과 회동… ‘1GW급 AI 팩토리 사업’ 후속 논의",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214871",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 13,
+          "articleCount": 18,
           "articles": [
             {
-              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
-              "url": "https://www.etnews.com/20260904000007",
-              "source": "전자신문 AI"
+              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
+              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
+              "source": "NAVER · 아시아경제"
             },
             {
-              "title": "오픈AI, 'GPT-6 아스트라' 출시…“AGI 시대 진입”",
-              "url": "https://www.etnews.com/20260904000011",
-              "source": "전자신문 AI"
+              "title": "중국 AI 때문에? 오픈AI가 '이용가격' 낮춘 까닭 [경제용어사전: LLM 토큰 지출 지수]",
+              "url": "https://n.news.naver.com/mnews/article/665/0000008092",
+              "source": "NAVER · 더스쿠프"
             },
             {
-              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "title": "구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214866",
               "source": "AI타임스"
             },
             {
-              "title": "챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214832",
+              "title": "앤트로픽, 전자상거래로 확장... 연말 대목 겨냥 '클로드 상거래 에이전트' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214851",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽 \"중국 AI, 다크웹서 도난 카드로 클로드 무단 증류\" 폭로",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214838",
-              "source": "AI타임스"
+              "title": "Sam Altman apologizes for &#8216;messy&#8217; GPT-6 Astra rollout that’s locked out paying users",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 3,
+          "articleCount": 10,
           "articles": [
             {
-              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "title": "[현장] '모두의 AI' 연내 출시 속도…3개 컨소시엄 핵심 전략은",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436303",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "전 국민 무료 ‘모두의 AI’....취준생·소상공인·노령층 겨눈 3사 3색",
+              "url": "https://n.news.naver.com/mnews/article/009/0005730605",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214850",
               "source": "AI타임스"
             },
             {
-              "title": "Meta is paying to peek at how you use their latest AI model",
-              "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
-              "source": "TechCrunch"
+              "title": "오픈AI, AI 에이전트 위협 맞서 ‘디펜스 팩토리’ 공개…보안 전 과정 자동화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214854",
+              "source": "AI타임스"
             },
             {
-              "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
-              "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
-              "source": "NVIDIA"
+              "title": "[게시판] 워크데이, 2분기 AI 신규 연간계약 급증 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214873",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
+              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
+              "source": "NAVER · 아시아경제"
+            },
             {
               "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
               "url": "https://www.etnews.com/20260904000007",
@@ -1040,13 +1055,13 @@
     },
     "3d": {
       "briefDate": "2026-09-04",
-      "generatedAt": "2026-09-04T04:47:05.238984+00:00",
+      "generatedAt": "2026-09-04T11:34:55.670484+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1026,
+        "collected": 1097,
         "analyzed": 0,
-        "pending": 1026,
+        "pending": 1097,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1178,63 +1193,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 59,
+          "articleCount": 64,
           "articles": [
             {
-              "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
-              "url": "https://www.etnews.com/20260904000167",
-              "source": "전자신문 AI"
+              "title": "이해진, 브룩필드 회장 만났다…네이버 AI 팩토리 후속 논의",
+              "url": "https://n.news.naver.com/mnews/article/018/0006363858",
+              "source": "NAVER · 이데일리"
             },
             {
-              "title": "엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214830",
+              "title": "네이버 1GW AI 팩토리 사업 속도…이해진, 브룩필드 회장과 회동",
+              "url": "https://n.news.naver.com/mnews/article/119/0003129283",
+              "source": "NAVER · 데일리안"
+            },
+            {
+              "title": "엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214850",
               "source": "AI타임스"
             },
             {
-              "title": "\"엔비디아·구글도 온다\"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214835",
+              "title": "아크릴, 국내 의료기관과 ‘AI 암 진단·치료·예후 의료체계’ 구축 나서",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214865",
               "source": "AI타임스"
             },
             {
-              "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
-              "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
-              "source": "The Verge"
-            },
-            {
-              "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
-              "url": "https://n.news.naver.com/mnews/article/008/0005409238",
-              "source": "NAVER · 머니투데이"
+              "title": "이해진 네이버 의장, 브룩필드 회장과 회동… ‘1GW급 AI 팩토리 사업’ 후속 논의",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214871",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 34,
+          "articleCount": 41,
           "articles": [
             {
-              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "title": "[현장] '모두의 AI' 연내 출시 속도…3개 컨소시엄 핵심 전략은",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436303",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "전 국민 무료 ‘모두의 AI’....취준생·소상공인·노령층 겨눈 3사 3색",
+              "url": "https://n.news.naver.com/mnews/article/009/0005730605",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214850",
               "source": "AI타임스"
             },
             {
-              "title": "Meta is paying to peek at how you use their latest AI model",
-              "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
-              "source": "TechCrunch"
+              "title": "오픈AI, AI 에이전트 위협 맞서 ‘디펜스 팩토리’ 공개…보안 전 과정 자동화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214854",
+              "source": "AI타임스"
             },
             {
-              "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
-              "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
-              "source": "NVIDIA"
-            },
-            {
-              "title": "크라우드웍스, 정부 'AI 에이전트 안전·신뢰 검증' 데이터셋 구축",
-              "url": "https://www.etnews.com/20260903000276",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
+              "title": "[게시판] 워크데이, 2분기 AI 신규 연간계약 급증 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214873",
               "source": "AI타임스"
             }
           ]
@@ -1242,40 +1257,45 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 33,
+          "articleCount": 38,
           "articles": [
             {
-              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
-              "url": "https://www.etnews.com/20260904000007",
-              "source": "전자신문 AI"
+              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
+              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
+              "source": "NAVER · 아시아경제"
             },
             {
-              "title": "오픈AI, 'GPT-6 아스트라' 출시…“AGI 시대 진입”",
-              "url": "https://www.etnews.com/20260904000011",
-              "source": "전자신문 AI"
+              "title": "중국 AI 때문에? 오픈AI가 '이용가격' 낮춘 까닭 [경제용어사전: LLM 토큰 지출 지수]",
+              "url": "https://n.news.naver.com/mnews/article/665/0000008092",
+              "source": "NAVER · 더스쿠프"
             },
             {
-              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "title": "구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214866",
               "source": "AI타임스"
             },
             {
-              "title": "챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214832",
+              "title": "앤트로픽, 전자상거래로 확장... 연말 대목 겨냥 '클로드 상거래 에이전트' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214851",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽 \"중국 AI, 다크웹서 도난 카드로 클로드 무단 증류\" 폭로",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214838",
-              "source": "AI타임스"
+              "title": "Sam Altman apologizes for &#8216;messy&#8217; GPT-6 Astra rollout that’s locked out paying users",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
+              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
+              "source": "NAVER · 아시아경제"
+            },
             {
               "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
               "url": "https://www.etnews.com/20260904000007",
@@ -1295,11 +1315,6 @@
               "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
               "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
-              "url": "https://www.etnews.com/20260902000038",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -2129,13 +2144,13 @@
     },
     "week": {
       "briefDate": "2026-09-04",
-      "generatedAt": "2026-09-04T04:47:05.238984+00:00",
+      "generatedAt": "2026-09-04T11:34:55.670484+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1717,
+        "collected": 1802,
         "analyzed": 0,
-        "pending": 1717,
+        "pending": 1802,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2328,63 +2343,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 88,
+          "articleCount": 93,
           "articles": [
             {
-              "title": "디딤-네오에이아이클라우드, 포항 AI 데이터센터 사업 협력",
-              "url": "https://www.etnews.com/20260904000167",
-              "source": "전자신문 AI"
+              "title": "이해진, 브룩필드 회장 만났다…네이버 AI 팩토리 후속 논의",
+              "url": "https://n.news.naver.com/mnews/article/018/0006363858",
+              "source": "NAVER · 이데일리"
             },
             {
-              "title": "엔비디아, 허깅페이스 17.5조 인수 발표...오픈소스 생태계 주도권 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214830",
+              "title": "네이버 1GW AI 팩토리 사업 속도…이해진, 브룩필드 회장과 회동",
+              "url": "https://n.news.naver.com/mnews/article/119/0003129283",
+              "source": "NAVER · 데일리안"
+            },
+            {
+              "title": "엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214850",
               "source": "AI타임스"
             },
             {
-              "title": "\"엔비디아·구글도 온다\"...혁신 기술 집결한 'LG 스파크 2026' 7일 개막",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214835",
+              "title": "아크릴, 국내 의료기관과 ‘AI 암 진단·치료·예후 의료체계’ 구축 나서",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214865",
               "source": "AI타임스"
             },
             {
-              "title": "Nvidia will officially bring DLSS 5 to older GPUs — but won’t give gamers full control",
-              "url": "https://www.theverge.com/games/989978/nvidia-dlss-5-rtx-40",
-              "source": "The Verge"
-            },
-            {
-              "title": "GPU만 많으면 끝?…HPE \"AI 인프라, 전력·냉각이 가른다\"",
-              "url": "https://n.news.naver.com/mnews/article/008/0005409238",
-              "source": "NAVER · 머니투데이"
+              "title": "이해진 네이버 의장, 브룩필드 회장과 회동… ‘1GW급 AI 팩토리 사업’ 후속 논의",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214871",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 64,
+          "articleCount": 71,
           "articles": [
             {
-              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "title": "[현장] '모두의 AI' 연내 출시 속도…3개 컨소시엄 핵심 전략은",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436303",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "전 국민 무료 ‘모두의 AI’....취준생·소상공인·노령층 겨눈 3사 3색",
+              "url": "https://n.news.naver.com/mnews/article/009/0005730605",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "엔비디아, 차세대 AI PC 칩 'RTX 스파크' 10월 출시...개인용 AI 라우터 '페어' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214850",
               "source": "AI타임스"
             },
             {
-              "title": "Meta is paying to peek at how you use their latest AI model",
-              "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
-              "source": "TechCrunch"
+              "title": "오픈AI, AI 에이전트 위협 맞서 ‘디펜스 팩토리’ 공개…보안 전 과정 자동화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214854",
+              "source": "AI타임스"
             },
             {
-              "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
-              "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
-              "source": "NVIDIA"
-            },
-            {
-              "title": "크라우드웍스, 정부 'AI 에이전트 안전·신뢰 검증' 데이터셋 구축",
-              "url": "https://www.etnews.com/20260903000276",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "MS, 사업 부문 2개로 재편…‘애저’ 분기 매출 첫 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214795",
+              "title": "[게시판] 워크데이, 2분기 AI 신규 연간계약 급증 등 단신",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214873",
               "source": "AI타임스"
             }
           ]
@@ -2392,40 +2407,45 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 50,
+          "articleCount": 55,
           "articles": [
             {
-              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
-              "url": "https://www.etnews.com/20260904000007",
-              "source": "전자신문 AI"
+              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
+              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
+              "source": "NAVER · 아시아경제"
             },
             {
-              "title": "오픈AI, 'GPT-6 아스트라' 출시…“AGI 시대 진입”",
-              "url": "https://www.etnews.com/20260904000011",
-              "source": "전자신문 AI"
+              "title": "중국 AI 때문에? 오픈AI가 '이용가격' 낮춘 까닭 [경제용어사전: LLM 토큰 지출 지수]",
+              "url": "https://n.news.naver.com/mnews/article/665/0000008092",
+              "source": "NAVER · 더스쿠프"
             },
             {
-              "title": "[9월3일] 앤트로픽 “결과만 평가하면 AI가 통제 우회”…보상 해킹의 위험성 실험",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214783",
+              "title": "구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214866",
               "source": "AI타임스"
             },
             {
-              "title": "챗GPT·클로드·그록 등 동시 장애...클라우드 인프라 연관성 주목",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214832",
+              "title": "앤트로픽, 전자상거래로 확장... 연말 대목 겨냥 '클로드 상거래 에이전트' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214851",
               "source": "AI타임스"
             },
             {
-              "title": "앤트로픽 \"중국 AI, 다크웹서 도난 카드로 클로드 무단 증류\" 폭로",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214838",
-              "source": "AI타임스"
+              "title": "Sam Altman apologizes for &#8216;messy&#8217; GPT-6 Astra rollout that’s locked out paying users",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+              "source": "The Verge"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 15,
+          "articleCount": 16,
           "articles": [
+            {
+              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
+              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
+              "source": "NAVER · 아시아경제"
+            },
             {
               "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
               "url": "https://www.etnews.com/20260904000007",
@@ -2445,11 +2465,6 @@
               "title": "\"3주 만에 반격\"...구글, 코딩 성능 강화한 '제미나이 3.8 플래시' 공개",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214781",
               "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, 새 AI '페이블 5.1' 공개…미토스 접근권은 제한",
-              "url": "https://www.etnews.com/20260902000038",
-              "source": "전자신문 AI"
             }
           ]
         },
