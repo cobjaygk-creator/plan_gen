@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-05T18:48:57.282363+00:00",
+  "generated_at": "2026-09-05T20:37:22.165099+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-05T15:24:07.338425+00:00",
+      "generatedAt": "2026-09-05T20:33:36.248893+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 10,
+        "collected": 27,
         "analyzed": 0,
-        "pending": 10,
+        "pending": 27,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,12 +141,51 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 1,
+          "articleCount": 2,
           "articles": [
+            {
+              "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
+              "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+              "source": "TechCrunch"
+            },
             {
               "title": "OpenAI admits to German wiki ‘incident’",
               "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
               "source": "The Verge"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "카카오·SKT·KT, 전국민 무료 AI 개발 본격 착수…“연내 출시 목표”",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677048",
+              "source": "NAVER · 서울신문"
+            },
+            {
+              "title": "인간 감시도 피한다… 오픈AI, 차세대 AI ‘아스트라’ 공개",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996786",
+              "source": "NAVER · 조선일보"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463802",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "“AGI 시대가 왔다”…인간 수준 AI, 정말 등장했나 [핫 IT(잇)슈]",
+              "url": "https://n.news.naver.com/mnews/article/022/0004156611",
+              "source": "NAVER · 세계일보"
             }
           ]
         }
@@ -949,13 +988,13 @@
     },
     "3d": {
       "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-05T15:24:07.338425+00:00",
+      "generatedAt": "2026-09-05T20:33:36.248893+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 833,
+        "collected": 834,
         "analyzed": 0,
-        "pending": 833,
+        "pending": 834,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1087,8 +1126,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 50,
+          "articleCount": 52,
           "articles": [
+            {
+              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463802",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "“AGI 시대가 왔다”…인간 수준 AI, 정말 등장했나 [핫 IT(잇)슈]",
+              "url": "https://n.news.naver.com/mnews/article/022/0004156611",
+              "source": "NAVER · 세계일보"
+            },
             {
               "title": "[AI는 지금] \"GPU만으론 부족\"…삼성도 'AI 추론 SW' 짐렛랩스에 베팅",
               "url": "https://n.news.naver.com/mnews/article/092/0002436351",
@@ -1103,24 +1152,24 @@
               "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
               "url": "https://www.etnews.com/20260904000245",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214886",
-              "source": "AI타임스"
-            },
-            {
-              "title": "젠슨 황 \"허깅페이스 쟁탈전서 승리하려면 17조 필요했다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214878",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 39,
+          "articleCount": 41,
           "articles": [
+            {
+              "title": "카카오·SKT·KT, 전국민 무료 AI 개발 본격 착수…“연내 출시 목표”",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677048",
+              "source": "NAVER · 서울신문"
+            },
+            {
+              "title": "인간 감시도 피한다… 오픈AI, 차세대 AI ‘아스트라’ 공개",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996786",
+              "source": "NAVER · 조선일보"
+            },
             {
               "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
               "url": "https://n.news.naver.com/mnews/article/092/0002436355",
@@ -1135,24 +1184,19 @@
               "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"생산성 혁명인가, 디스토피아의 시작인가\"…'아스트라' 출시 반응 폭발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214891",
-              "source": "AI타임스"
-            },
-            {
-              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
-              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
-              "source": "NAVER · 한국경제"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 35,
+          "articleCount": 36,
           "articles": [
+            {
+              "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
+              "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+              "source": "TechCrunch"
+            },
             {
               "title": "OpenAI admits to German wiki ‘incident’",
               "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
@@ -1172,11 +1216,6 @@
               "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
               "source": "AI타임스"
-            },
-            {
-              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
-              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
-              "source": "NAVER · 한국경제"
             }
           ]
         },
@@ -2023,13 +2062,13 @@
     },
     "week": {
       "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-05T15:24:07.338425+00:00",
+      "generatedAt": "2026-09-05T20:33:36.248893+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 2040,
+        "collected": 2062,
         "analyzed": 0,
-        "pending": 2040,
+        "pending": 2062,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2222,8 +2261,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 108,
+          "articleCount": 110,
           "articles": [
+            {
+              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463802",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "“AGI 시대가 왔다”…인간 수준 AI, 정말 등장했나 [핫 IT(잇)슈]",
+              "url": "https://n.news.naver.com/mnews/article/022/0004156611",
+              "source": "NAVER · 세계일보"
+            },
             {
               "title": "[AI는 지금] \"GPU만으론 부족\"…삼성도 'AI 추론 SW' 짐렛랩스에 베팅",
               "url": "https://n.news.naver.com/mnews/article/092/0002436351",
@@ -2238,24 +2287,19 @@
               "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
               "url": "https://www.etnews.com/20260904000245",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214886",
-              "source": "AI타임스"
-            },
-            {
-              "title": "젠슨 황 \"허깅페이스 쟁탈전서 승리하려면 17조 필요했다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214878",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 88,
+          "articleCount": 89,
           "articles": [
+            {
+              "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
+              "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+              "source": "TechCrunch"
+            },
             {
               "title": "OpenAI admits to German wiki ‘incident’",
               "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
@@ -2275,19 +2319,24 @@
               "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
               "source": "AI타임스"
-            },
-            {
-              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
-              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
-              "source": "NAVER · 한국경제"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 68,
+          "articleCount": 70,
           "articles": [
+            {
+              "title": "카카오·SKT·KT, 전국민 무료 AI 개발 본격 착수…“연내 출시 목표”",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677048",
+              "source": "NAVER · 서울신문"
+            },
+            {
+              "title": "인간 감시도 피한다… 오픈AI, 차세대 AI ‘아스트라’ 공개",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996786",
+              "source": "NAVER · 조선일보"
+            },
             {
               "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
               "url": "https://n.news.naver.com/mnews/article/092/0002436355",
@@ -2302,16 +2351,6 @@
               "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"생산성 혁명인가, 디스토피아의 시작인가\"…'아스트라' 출시 반응 폭발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214891",
-              "source": "AI타임스"
-            },
-            {
-              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
-              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
-              "source": "NAVER · 한국경제"
             }
           ]
         },
