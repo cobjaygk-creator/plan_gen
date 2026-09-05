@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T22:49:42.378426+00:00",
+  "generated_at": "2026-09-05T00:40:56.055811+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-05",
@@ -428,7 +428,7 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 65,
+          "priorityScore": 55,
           "priorityLabel": "우선 확인",
           "urgencyLabel": "시행됨",
           "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
@@ -1029,9 +1029,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1060,
+        "collected": 1036,
         "analyzed": 0,
-        "pending": 1060,
+        "pending": 1036,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1517,7 +1517,7 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 65,
+          "priorityScore": 55,
           "priorityLabel": "우선 확인",
           "urgencyLabel": "시행됨",
           "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
@@ -2667,7 +2667,7 @@
             "적용 대상과 시행일 원문 확인",
             "표시·운영·보호 절차 변경 필요 여부 점검"
           ],
-          "priorityScore": 65,
+          "priorityScore": 55,
           "priorityLabel": "우선 확인",
           "urgencyLabel": "시행됨",
           "policyKey": "인공지능시대개인정보보호와활용최고의미래법률전문가는",
