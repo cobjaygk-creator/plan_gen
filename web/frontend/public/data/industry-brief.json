@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T04:47:53.621457+00:00",
+  "generated_at": "2026-09-05T05:13:37.925045+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-05",
@@ -1049,9 +1049,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1001,
+        "collected": 995,
         "analyzed": 0,
-        "pending": 1001,
+        "pending": 995,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1183,7 +1183,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 62,
+          "articleCount": 56,
           "articles": [
             {
               "title": "[CPU 대란 주의보 ⑤] \"돈 싸 들고 가도 빈손\"…구형칩 부활 부른 조달전쟁",
@@ -1215,7 +1215,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 45,
+          "articleCount": 39,
           "articles": [
             {
               "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
@@ -1247,7 +1247,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 40,
+          "articleCount": 39,
           "articles": [
             {
               "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
@@ -1279,7 +1279,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 7,
+          "articleCount": 6,
           "articles": [
             {
               "title": "Microsoft says virtually nobody was grabbing NYT articles through its chatbot",
