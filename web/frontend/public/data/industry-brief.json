@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-05T00:40:56.055811+00:00",
+  "generated_at": "2026-09-05T04:47:53.621457+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-05",
-      "generatedAt": "2026-09-04T20:58:57.376061+00:00",
+      "generatedAt": "2026-09-05T04:43:31.510801+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 55,
+        "collected": 102,
         "analyzed": 0,
-        "pending": 55,
+        "pending": 102,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -139,78 +139,98 @@
       },
       "techRadar": [
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 5,
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 13,
           "articles": [
             {
-              "title": "[IFA 2026] “1인당 클라우드 비용만 연 1억5000만원”…AMD, 로컬 AI로 ‘토큰 위기’ 정조준",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240307",
-              "source": "NAVER · 디지털데일리"
+              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
+              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190499",
-              "source": "NAVER · 조선비즈"
+              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
+              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "[IFA 2026] AMD, 1조 파라미터 품는 ‘스레드리퍼 헤일로’·192GB ‘고르곤 헤일로’ 전격 공개",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240308",
-              "source": "NAVER · 디지털데일리"
+              "title": "AI 비서는 무료인데…이통 3사는 어디서 돈 버나",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102660",
+              "source": "NAVER · 이코노미스트"
             },
             {
-              "title": "AGI is whatever you want it to be",
-              "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
-              "source": "The Verge"
+              "title": "모두의 AI 성공방정식 '외산과 차별화'…SKT·KT·카카오 출격",
+              "url": "https://www.etnews.com/20260904000334",
+              "source": "전자신문 AI"
             },
             {
-              "title": "Alienware’s refurbished 16 Aurora is almost $200 off at Woot",
-              "url": "https://www.theverge.com/gadgets/989407/alienware-gaming-laptop-capsule-dishwasher-samsung-oled-deal-sale",
-              "source": "The Verge"
+              "title": "SKT '수요'·KT '이음'·카카오 '편리'…모두의 AI 개발 시동",
+              "url": "https://www.etnews.com/20260904000276",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 4,
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 10,
           "articles": [
             {
-              "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190499",
-              "source": "NAVER · 조선비즈"
+              "title": "[CPU 대란 주의보 ⑤] \"돈 싸 들고 가도 빈손\"…구형칩 부활 부른 조달전쟁",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240322",
+              "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "'모두의 AI' 시동 건 카카오…정신아 대표 \"1인 N에이전트 구현\"",
-              "url": "https://n.news.naver.com/mnews/article/293/0000090051",
-              "source": "NAVER · 블로터"
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억에 공급",
+              "url": "https://n.news.naver.com/mnews/article/008/0005409761",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
-              "source": "The Verge"
+              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
+              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge",
-              "url": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/",
-              "source": "TechCrunch"
+              "title": "KOSA, 사우디 'LEAP 2026' 참가…'한국 풀스택 AI 공동관' 운영",
+              "url": "https://www.etnews.com/20260904000208",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아, 무라티의 TML에 3.3조 투자 논의…\"오픈소스 생태계 결속\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214883",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 2,
+          "articleCount": 9,
           "articles": [
             {
-              "title": "“AGI 시대에 온 걸 환영”…오픈AI, GPT-6 ‘아스트라’ 출시 [팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549180",
-              "source": "NAVER · 중앙일보"
+              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
+              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "AGI is whatever you want it to be",
-              "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
-              "source": "The Verge"
+              "title": "AI·OTT 구독료도 '통신비'일까",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436344",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "오픈AI, 'AGI 시대' 선언⋯'GPT-6 아스트라' 공개",
+              "url": "https://n.news.naver.com/mnews/article/031/0001055361",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "[9월4일] 오픈AI가 '아스트라' 성능보다 안전 설명에 집중한 이유",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214841",
+              "source": "AI타임스"
+            },
+            {
+              "title": "유료 회원 불만에 알트먼 사과…'GPT-6 아스트라' 배포 최종 완료",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214887",
+              "source": "AI타임스"
             }
           ]
         },
@@ -1025,13 +1045,13 @@
     },
     "3d": {
       "briefDate": "2026-09-05",
-      "generatedAt": "2026-09-04T20:58:57.376061+00:00",
+      "generatedAt": "2026-09-05T04:43:31.510801+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1036,
+        "collected": 1001,
         "analyzed": 0,
-        "pending": 1036,
+        "pending": 1001,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1163,95 +1183,95 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 57,
+          "articleCount": 62,
           "articles": [
             {
-              "title": "[IFA 2026] “1인당 클라우드 비용만 연 1억5000만원”…AMD, 로컬 AI로 ‘토큰 위기’ 정조준",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240307",
+              "title": "[CPU 대란 주의보 ⑤] \"돈 싸 들고 가도 빈손\"…구형칩 부활 부른 조달전쟁",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240322",
               "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190499",
-              "source": "NAVER · 조선비즈"
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억에 공급",
+              "url": "https://n.news.naver.com/mnews/article/008/0005409761",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "[IFA 2026] AMD, 1조 파라미터 품는 ‘스레드리퍼 헤일로’·192GB ‘고르곤 헤일로’ 전격 공개",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240308",
-              "source": "NAVER · 디지털데일리"
+              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
+              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "AGI is whatever you want it to be",
-              "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
-              "source": "The Verge"
+              "title": "KOSA, 사우디 'LEAP 2026' 참가…'한국 풀스택 AI 공동관' 운영",
+              "url": "https://www.etnews.com/20260904000208",
+              "source": "전자신문 AI"
             },
             {
-              "title": "Alienware’s refurbished 16 Aurora is almost $200 off at Woot",
-              "url": "https://www.theverge.com/gadgets/989407/alienware-gaming-laptop-capsule-dishwasher-samsung-oled-deal-sale",
-              "source": "The Verge"
+              "title": "엔비디아, 무라티의 TML에 3.3조 투자 논의…\"오픈소스 생태계 결속\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214883",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 36,
+          "articleCount": 45,
           "articles": [
             {
-              "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190499",
-              "source": "NAVER · 조선비즈"
+              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
+              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "'모두의 AI' 시동 건 카카오…정신아 대표 \"1인 N에이전트 구현\"",
-              "url": "https://n.news.naver.com/mnews/article/293/0000090051",
-              "source": "NAVER · 블로터"
+              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
+              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
-              "source": "The Verge"
+              "title": "AI 비서는 무료인데…이통 3사는 어디서 돈 버나",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102660",
+              "source": "NAVER · 이코노미스트"
             },
             {
-              "title": "Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge",
-              "url": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/",
-              "source": "TechCrunch"
+              "title": "모두의 AI 성공방정식 '외산과 차별화'…SKT·KT·카카오 출격",
+              "url": "https://www.etnews.com/20260904000334",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[현장] '모두의 AI' 연내 출시 속도…3개 컨소시엄 핵심 전략은",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436303",
-              "source": "NAVER · 지디넷코리아"
+              "title": "SKT '수요'·KT '이음'·카카오 '편리'…모두의 AI 개발 시동",
+              "url": "https://www.etnews.com/20260904000276",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 33,
+          "articleCount": 40,
           "articles": [
             {
-              "title": "“AGI 시대에 온 걸 환영”…오픈AI, GPT-6 ‘아스트라’ 출시 [팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549180",
-              "source": "NAVER · 중앙일보"
+              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
+              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "AGI is whatever you want it to be",
-              "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
-              "source": "The Verge"
+              "title": "AI·OTT 구독료도 '통신비'일까",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436344",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
-              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
-              "source": "NAVER · 아시아경제"
+              "title": "오픈AI, 'AGI 시대' 선언⋯'GPT-6 아스트라' 공개",
+              "url": "https://n.news.naver.com/mnews/article/031/0001055361",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "중국 AI 때문에? 오픈AI가 '이용가격' 낮춘 까닭 [경제용어사전: LLM 토큰 지출 지수]",
-              "url": "https://n.news.naver.com/mnews/article/665/0000008092",
-              "source": "NAVER · 더스쿠프"
+              "title": "[9월4일] 오픈AI가 '아스트라' 성능보다 안전 설명에 집중한 이유",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214841",
+              "source": "AI타임스"
             },
             {
-              "title": "구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214866",
+              "title": "유료 회원 불만에 알트먼 사과…'GPT-6 아스트라' 배포 최종 완료",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214887",
               "source": "AI타임스"
             }
           ]
@@ -2114,13 +2134,13 @@
     },
     "week": {
       "briefDate": "2026-09-05",
-      "generatedAt": "2026-09-04T20:58:57.376061+00:00",
+      "generatedAt": "2026-09-05T04:43:31.510801+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 1918,
+        "collected": 1976,
         "analyzed": 0,
-        "pending": 1918,
+        "pending": 1976,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2313,95 +2333,95 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 98,
+          "articleCount": 103,
           "articles": [
             {
-              "title": "[IFA 2026] “1인당 클라우드 비용만 연 1억5000만원”…AMD, 로컬 AI로 ‘토큰 위기’ 정조준",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240307",
+              "title": "[CPU 대란 주의보 ⑤] \"돈 싸 들고 가도 빈손\"…구형칩 부활 부른 조달전쟁",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240322",
               "source": "NAVER · 디지털데일리"
             },
             {
-              "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190499",
-              "source": "NAVER · 조선비즈"
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억에 공급",
+              "url": "https://n.news.naver.com/mnews/article/008/0005409761",
+              "source": "NAVER · 머니투데이"
             },
             {
-              "title": "[IFA 2026] AMD, 1조 파라미터 품는 ‘스레드리퍼 헤일로’·192GB ‘고르곤 헤일로’ 전격 공개",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240308",
-              "source": "NAVER · 디지털데일리"
+              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
+              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "AGI is whatever you want it to be",
-              "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
-              "source": "The Verge"
+              "title": "KOSA, 사우디 'LEAP 2026' 참가…'한국 풀스택 AI 공동관' 운영",
+              "url": "https://www.etnews.com/20260904000208",
+              "source": "전자신문 AI"
             },
             {
-              "title": "Alienware’s refurbished 16 Aurora is almost $200 off at Woot",
-              "url": "https://www.theverge.com/gadgets/989407/alienware-gaming-laptop-capsule-dishwasher-samsung-oled-deal-sale",
-              "source": "The Verge"
+              "title": "엔비디아, 무라티의 TML에 3.3조 투자 논의…\"오픈소스 생태계 결속\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214883",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 75,
+          "articleCount": 84,
           "articles": [
             {
-              "title": "[IFA 2026] 가전쇼 개막 무대 오른 AMD… 잭 후인 수석부사장 “PC가 사람 이해하는 시대”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190499",
-              "source": "NAVER · 조선비즈"
+              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
+              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "'모두의 AI' 시동 건 카카오…정신아 대표 \"1인 N에이전트 구현\"",
-              "url": "https://n.news.naver.com/mnews/article/293/0000090051",
-              "source": "NAVER · 블로터"
+              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
+              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
+              "source": "NAVER · 한국일보"
             },
             {
-              "title": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
-              "source": "The Verge"
+              "title": "AI 비서는 무료인데…이통 3사는 어디서 돈 버나",
+              "url": "https://n.news.naver.com/mnews/article/243/0000102660",
+              "source": "NAVER · 이코노미스트"
             },
             {
-              "title": "Another swarm of OpenAI agents reached the open internet without the frontier lab’s knowledge",
-              "url": "https://techcrunch.com/2026/09/04/another-swarm-of-openai-agents-reached-the-open-internet-without-the-frontier-labs-knowledge/",
-              "source": "TechCrunch"
+              "title": "모두의 AI 성공방정식 '외산과 차별화'…SKT·KT·카카오 출격",
+              "url": "https://www.etnews.com/20260904000334",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[현장] '모두의 AI' 연내 출시 속도…3개 컨소시엄 핵심 전략은",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436303",
-              "source": "NAVER · 지디넷코리아"
+              "title": "SKT '수요'·KT '이음'·카카오 '편리'…모두의 AI 개발 시동",
+              "url": "https://www.etnews.com/20260904000276",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 57,
+          "articleCount": 64,
           "articles": [
             {
-              "title": "“AGI 시대에 온 걸 환영”…오픈AI, GPT-6 ‘아스트라’ 출시 [팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549180",
-              "source": "NAVER · 중앙일보"
+              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
+              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
+              "source": "NAVER · 한국경제"
             },
             {
-              "title": "AGI is whatever you want it to be",
-              "url": "https://www.theverge.com/podcast/990323/agi-is-whatever-you-want-it-to-be",
-              "source": "The Verge"
+              "title": "AI·OTT 구독료도 '통신비'일까",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436344",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
-              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
-              "source": "NAVER · 아시아경제"
+              "title": "오픈AI, 'AGI 시대' 선언⋯'GPT-6 아스트라' 공개",
+              "url": "https://n.news.naver.com/mnews/article/031/0001055361",
+              "source": "NAVER · 아이뉴스24"
             },
             {
-              "title": "중국 AI 때문에? 오픈AI가 '이용가격' 낮춘 까닭 [경제용어사전: LLM 토큰 지출 지수]",
-              "url": "https://n.news.naver.com/mnews/article/665/0000008092",
-              "source": "NAVER · 더스쿠프"
+              "title": "[9월4일] 오픈AI가 '아스트라' 성능보다 안전 설명에 집중한 이유",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214841",
+              "source": "AI타임스"
             },
             {
-              "title": "구글, 워크스페이스에 ‘제미나이 오디오’ 탑재...음성으로 문서·메일·메모 처리",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214866",
+              "title": "유료 회원 불만에 알트먼 사과…'GPT-6 아스트라' 배포 최종 완료",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214887",
               "source": "AI타임스"
             }
           ]
