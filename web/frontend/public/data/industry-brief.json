@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T20:59:49.354192+00:00",
+  "generated_at": "2026-09-05T22:40:56.596507+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-06",
@@ -992,9 +992,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 833,
+        "collected": 795,
         "analyzed": 0,
-        "pending": 833,
+        "pending": 795,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1126,7 +1126,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 52,
+          "articleCount": 50,
           "articles": [
             {
               "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
