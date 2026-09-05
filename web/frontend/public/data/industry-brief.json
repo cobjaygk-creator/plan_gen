@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-05T13:17:28.128529+00:00",
+  "generated_at": "2026-09-05T15:27:40.931529+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-09-05",
-      "generatedAt": "2026-09-05T10:48:08.341469+00:00",
+      "briefDate": "2026-09-06",
+      "generatedAt": "2026-09-05T15:24:07.338425+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 141,
+        "collected": 5,
         "analyzed": 0,
-        "pending": 141,
+        "pending": 5,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,7 +20,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.05",
             "08.06",
             "08.07",
             "08.08",
@@ -50,7 +49,8 @@
             "09.01",
             "09.02",
             "09.03",
-            "09.04"
+            "09.04",
+            "09.05"
           ],
           "series": [],
           "bucket": "일간"
@@ -141,112 +141,11 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 16,
+          "articleCount": 1,
           "articles": [
             {
-              "title": "[IFA 2026] LG전자, AI홈 ‘컨트롤타워’ 고도화… “카카오톡으로 집·가전과 대화”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190542",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "AI에 두려움 심었더니 달라진 답…AI엔 ‘의식’이 있을까",
-              "url": "https://n.news.naver.com/mnews/article/011/0004658863",
-              "source": "NAVER · 서울경제"
-            },
-            {
-              "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
-              "source": "AI타임스"
-            },
-            {
-              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
-              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
-              "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
-              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
-              "source": "NAVER · 한국일보"
-            }
-          ]
-        },
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 15,
-          "articles": [
-            {
-              "title": "[AI는 지금] \"GPU만으론 부족\"…삼성도 'AI 추론 SW' 짐렛랩스에 베팅",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436351",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436355",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
-              "url": "https://www.etnews.com/20260904000245",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214886",
-              "source": "AI타임스"
-            },
-            {
-              "title": "젠슨 황 \"허깅페이스 쟁탈전서 승리하려면 17조 필요했다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214878",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 13,
-          "articles": [
-            {
-              "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436355",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214886",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"생산성 혁명인가, 디스토피아의 시작인가\"…'아스트라' 출시 반응 폭발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214891",
-              "source": "AI타임스"
-            },
-            {
-              "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
-              "url": "https://n.news.naver.com/mnews/article/015/0005328967",
-              "source": "NAVER · 한국경제"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 2,
-          "articles": [
-            {
-              "title": "“이 논문, 누가 썼습니까”…AI가 흔든 연구윤리의 경계",
-              "url": "https://n.news.naver.com/mnews/article/018/0006364112",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "Microsoft says virtually nobody was grabbing NYT articles through its chatbot",
-              "url": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
+              "title": "OpenAI admits to German wiki ‘incident’",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
               "source": "The Verge"
             }
           ]
@@ -1049,14 +948,14 @@
       ]
     },
     "3d": {
-      "briefDate": "2026-09-05",
-      "generatedAt": "2026-09-05T10:48:08.341469+00:00",
+      "briefDate": "2026-09-06",
+      "generatedAt": "2026-09-05T15:24:07.338425+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 883,
+        "collected": 878,
         "analyzed": 0,
-        "pending": 883,
+        "pending": 878,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1067,7 +966,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.05",
             "08.06",
             "08.07",
             "08.08",
@@ -1097,7 +995,8 @@
             "09.01",
             "09.02",
             "09.03",
-            "09.04"
+            "09.04",
+            "09.05"
           ],
           "series": [],
           "bucket": "일간"
@@ -1252,8 +1151,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 37,
+          "articleCount": 38,
           "articles": [
+            {
+              "title": "OpenAI admits to German wiki ‘incident’",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
+              "source": "The Verge"
+            },
             {
               "title": "[IFA 2026] LG전자, AI홈 ‘컨트롤타워’ 고도화… “카카오톡으로 집·가전과 대화”",
               "url": "https://n.news.naver.com/mnews/article/366/0001190542",
@@ -1273,11 +1177,6 @@
               "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
               "url": "https://n.news.naver.com/mnews/article/015/0005328967",
               "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
-              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
-              "source": "NAVER · 한국일보"
             }
           ]
         },
@@ -2128,14 +2027,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-09-05",
-      "generatedAt": "2026-09-05T10:48:08.341469+00:00",
+      "briefDate": "2026-09-06",
+      "generatedAt": "2026-09-05T15:24:07.338425+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 2015,
+        "collected": 2035,
         "analyzed": 0,
-        "pending": 2015,
+        "pending": 2035,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2146,7 +2045,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.05",
             "08.06",
             "08.07",
             "08.08",
@@ -2176,7 +2074,8 @@
             "09.01",
             "09.02",
             "09.03",
-            "09.04"
+            "09.04",
+            "09.05"
           ],
           "series": [],
           "bucket": "일간"
@@ -2360,8 +2259,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 87,
+          "articleCount": 88,
           "articles": [
+            {
+              "title": "OpenAI admits to German wiki ‘incident’",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
+              "source": "The Verge"
+            },
             {
               "title": "[IFA 2026] LG전자, AI홈 ‘컨트롤타워’ 고도화… “카카오톡으로 집·가전과 대화”",
               "url": "https://n.news.naver.com/mnews/article/366/0001190542",
@@ -2381,11 +2285,6 @@
               "title": "챗GPT 2300만명 쓰는데…'국가대표 AI' 아직 경쟁 중 [홍민성의 테토남]",
               "url": "https://n.news.naver.com/mnews/article/015/0005328967",
               "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "노트북에서 90GB 3차원 도시 구현... '로컬 AI' 괴물 칩셋 선보인 엔비디아",
-              "url": "https://n.news.naver.com/mnews/article/469/0000952249",
-              "source": "NAVER · 한국일보"
             }
           ]
         },
