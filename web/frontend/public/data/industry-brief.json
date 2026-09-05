@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T16:34:29.394137+00:00",
+  "generated_at": "2026-09-05T18:48:57.282363+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-06",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 8,
+        "collected": 10,
         "analyzed": 0,
-        "pending": 8,
+        "pending": 10,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -953,9 +953,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 859,
+        "collected": 833,
         "analyzed": 0,
-        "pending": 859,
+        "pending": 833,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1087,7 +1087,7 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 54,
+          "articleCount": 50,
           "articles": [
             {
               "title": "[AI는 지금] \"GPU만으론 부족\"…삼성도 'AI 추론 SW' 짐렛랩스에 베팅",
@@ -1119,7 +1119,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 40,
+          "articleCount": 39,
           "articles": [
             {
               "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
@@ -1151,7 +1151,7 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 38,
+          "articleCount": 35,
           "articles": [
             {
               "title": "OpenAI admits to German wiki ‘incident’",
@@ -1215,17 +1215,12 @@
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 2,
+          "articleCount": 1,
           "articles": [
             {
               "title": "\"WASD 누르면 AI가 영상 생성\"... 텐센트, 인터랙티브 월드 모델 'H3-월드' 발표",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214800",
               "source": "AI타임스"
-            },
-            {
-              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
-              "url": "https://www.etnews.com/20260902000454",
-              "source": "전자신문 AI"
             }
           ]
         }
@@ -2032,9 +2027,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 2038,
+        "collected": 2040,
         "analyzed": 0,
-        "pending": 2038,
+        "pending": 2040,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
