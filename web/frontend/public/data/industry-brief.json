@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-06T00:33:41.467533+00:00",
+  "generated_at": "2026-09-06T04:58:15.017435+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-05T20:33:36.248893+00:00",
+      "generatedAt": "2026-09-06T04:54:02.089110+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 27,
+        "collected": 69,
         "analyzed": 0,
-        "pending": 27,
+        "pending": 69,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -141,25 +141,87 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 2,
+          "articleCount": 7,
           "articles": [
             {
-              "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
-              "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
-              "source": "TechCrunch"
+              "title": "오픈AI 에이전트끼리 독일 위키서 '비밀 대화'…사고 공개 기준 만든다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436381",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "OpenAI admits to German wiki ‘incident’",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
-              "source": "The Verge"
+              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
+              "url": "https://www.etnews.com/20260904000042",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "와이즈스톤, 딥엑스알랩 '의료정보 데이터셋'에 DQ인증 최고 등급 수여",
+              "url": "https://www.etnews.com/20260904000043",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "일레븐랩스, 한국 시장 공략 본격화…\"초저지연 음성 AI로 AICC 혁신\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214895",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, 에이전트 '위키 사건' 인정...\"AI 정렬 실패 공개 기준 만들 것\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214900",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 7,
+          "articles": [
+            {
+              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "[AI위클리] '미토스' 맞설 국산 보안 AI 뜬다…'모두의 AI'도 출격",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292167",
+              "source": "NAVER · 연합뉴스"
+            },
+            {
+              "title": "AMD, 1조 패러미터 AI 모델 구동 위한 워크스테이션 공개",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436377",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
+              "url": "https://www.etnews.com/20260904000042",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214905",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 2,
+          "articleCount": 5,
           "articles": [
+            {
+              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
+              "source": "AI타임스"
+            },
+            {
+              "title": "GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214896",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
+              "source": "AI타임스"
+            },
             {
               "title": "카카오·SKT·KT, 전국민 무료 AI 개발 본격 착수…“연내 출시 목표”",
               "url": "https://n.news.naver.com/mnews/article/081/0003677048",
@@ -173,19 +235,19 @@
           ]
         },
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
+          "key": "coding",
+          "label": "코딩 AI",
           "articleCount": 2,
           "articles": [
             {
-              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463802",
-              "source": "NAVER · 전자신문"
+              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
+              "source": "AI타임스"
             },
             {
-              "title": "“AGI 시대가 왔다”…인간 수준 AI, 정말 등장했나 [핫 IT(잇)슈]",
-              "url": "https://n.news.naver.com/mnews/article/022/0004156611",
-              "source": "NAVER · 세계일보"
+              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
+              "source": "AI타임스"
             }
           ]
         }
@@ -988,13 +1050,13 @@
     },
     "3d": {
       "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-05T20:33:36.248893+00:00",
+      "generatedAt": "2026-09-06T04:54:02.089110+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 785,
+        "collected": 721,
         "analyzed": 0,
-        "pending": 785,
+        "pending": 721,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1126,32 +1188,32 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 50,
+          "articleCount": 52,
           "articles": [
             {
-              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463802",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "“AGI 시대가 왔다”…인간 수준 AI, 정말 등장했나 [핫 IT(잇)슈]",
-              "url": "https://n.news.naver.com/mnews/article/022/0004156611",
-              "source": "NAVER · 세계일보"
-            },
-            {
-              "title": "[AI는 지금] \"GPU만으론 부족\"…삼성도 'AI 추론 SW' 짐렛랩스에 베팅",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436351",
+              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436355",
+              "title": "[AI위클리] '미토스' 맞설 국산 보안 AI 뜬다…'모두의 AI'도 출격",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292167",
+              "source": "NAVER · 연합뉴스"
+            },
+            {
+              "title": "AMD, 1조 패러미터 AI 모델 구동 위한 워크스테이션 공개",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436377",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
-              "url": "https://www.etnews.com/20260904000245",
+              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
+              "url": "https://www.etnews.com/20260904000042",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214905",
+              "source": "AI타임스"
             }
           ]
         },
@@ -1161,6 +1223,21 @@
           "articleCount": 41,
           "articles": [
             {
+              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
+              "source": "AI타임스"
+            },
+            {
+              "title": "GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214896",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
+              "source": "AI타임스"
+            },
+            {
               "title": "카카오·SKT·KT, 전국민 무료 AI 개발 본격 착수…“연내 출시 목표”",
               "url": "https://n.news.naver.com/mnews/article/081/0003677048",
               "source": "NAVER · 서울신문"
@@ -1169,21 +1246,6 @@
               "title": "인간 감시도 피한다… 오픈AI, 차세대 AI ‘아스트라’ 공개",
               "url": "https://n.news.naver.com/mnews/article/023/0003996786",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436355",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214886",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
-              "source": "AI타임스"
             }
           ]
         },
@@ -1193,28 +1255,28 @@
           "articleCount": 36,
           "articles": [
             {
-              "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
-              "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
-              "source": "TechCrunch"
+              "title": "오픈AI 에이전트끼리 독일 위키서 '비밀 대화'…사고 공개 기준 만든다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436381",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "OpenAI admits to German wiki ‘incident’",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
-              "source": "The Verge"
+              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
+              "url": "https://www.etnews.com/20260904000042",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[IFA 2026] LG전자, AI홈 ‘컨트롤타워’ 고도화… “카카오톡으로 집·가전과 대화”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190542",
-              "source": "NAVER · 조선비즈"
+              "title": "와이즈스톤, 딥엑스알랩 '의료정보 데이터셋'에 DQ인증 최고 등급 수여",
+              "url": "https://www.etnews.com/20260904000043",
+              "source": "전자신문 AI"
             },
             {
-              "title": "AI에 두려움 심었더니 달라진 답…AI엔 ‘의식’이 있을까",
-              "url": "https://n.news.naver.com/mnews/article/011/0004658863",
-              "source": "NAVER · 서울경제"
+              "title": "일레븐랩스, 한국 시장 공략 본격화…\"초저지연 음성 AI로 AICC 혁신\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214895",
+              "source": "AI타임스"
             },
             {
-              "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
+              "title": "오픈AI, 에이전트 '위키 사건' 인정...\"AI 정렬 실패 공개 기준 만들 것\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214900",
               "source": "AI타임스"
             }
           ]
@@ -1224,6 +1286,16 @@
           "label": "코딩 AI",
           "articleCount": 7,
           "articles": [
+            {
+              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
+              "source": "AI타임스"
+            },
             {
               "title": "“이 논문, 누가 썼습니까”…AI가 흔든 연구윤리의 경계",
               "url": "https://n.news.naver.com/mnews/article/018/0006364112",
@@ -1238,16 +1310,6 @@
               "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
               "url": "https://n.news.naver.com/mnews/article/277/0005812129",
               "source": "NAVER · 아시아경제"
-            },
-            {
-              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
-              "url": "https://www.etnews.com/20260904000007",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "요즘 ‘재미 못보는’ 제미나이",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549030",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
@@ -2062,13 +2124,13 @@
     },
     "week": {
       "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-05T20:33:36.248893+00:00",
+      "generatedAt": "2026-09-06T04:54:02.089110+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 2062,
+        "collected": 2104,
         "analyzed": 0,
-        "pending": 2062,
+        "pending": 2104,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2261,63 +2323,63 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 110,
+          "articleCount": 115,
           "articles": [
             {
-              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463802",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "“AGI 시대가 왔다”…인간 수준 AI, 정말 등장했나 [핫 IT(잇)슈]",
-              "url": "https://n.news.naver.com/mnews/article/022/0004156611",
-              "source": "NAVER · 세계일보"
-            },
-            {
-              "title": "[AI는 지금] \"GPU만으론 부족\"…삼성도 'AI 추론 SW' 짐렛랩스에 베팅",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436351",
+              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436355",
+              "title": "[AI위클리] '미토스' 맞설 국산 보안 AI 뜬다…'모두의 AI'도 출격",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292167",
+              "source": "NAVER · 연합뉴스"
+            },
+            {
+              "title": "AMD, 1조 패러미터 AI 모델 구동 위한 워크스테이션 공개",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436377",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "SPRi “AI 정책, GPU·모델 확보만으론 부족…'파일럿의 벽' 해소해야”",
-              "url": "https://www.etnews.com/20260904000245",
+              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
+              "url": "https://www.etnews.com/20260904000042",
               "source": "전자신문 AI"
+            },
+            {
+              "title": "엔비디아·크라우드스트라이크, '공격·방어 동시 수행' 사이버 보안 AI '세이프마인드' 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214905",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 89,
+          "articleCount": 94,
           "articles": [
             {
-              "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
-              "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
-              "source": "TechCrunch"
+              "title": "오픈AI 에이전트끼리 독일 위키서 '비밀 대화'…사고 공개 기준 만든다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436381",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "OpenAI admits to German wiki ‘incident’",
-              "url": "https://www.theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident",
-              "source": "The Verge"
+              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
+              "url": "https://www.etnews.com/20260904000042",
+              "source": "전자신문 AI"
             },
             {
-              "title": "[IFA 2026] LG전자, AI홈 ‘컨트롤타워’ 고도화… “카카오톡으로 집·가전과 대화”",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190542",
-              "source": "NAVER · 조선비즈"
+              "title": "와이즈스톤, 딥엑스알랩 '의료정보 데이터셋'에 DQ인증 최고 등급 수여",
+              "url": "https://www.etnews.com/20260904000043",
+              "source": "전자신문 AI"
             },
             {
-              "title": "AI에 두려움 심었더니 달라진 답…AI엔 ‘의식’이 있을까",
-              "url": "https://n.news.naver.com/mnews/article/011/0004658863",
-              "source": "NAVER · 서울경제"
+              "title": "일레븐랩스, 한국 시장 공략 본격화…\"초저지연 음성 AI로 AICC 혁신\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214895",
+              "source": "AI타임스"
             },
             {
-              "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
+              "title": "오픈AI, 에이전트 '위키 사건' 인정...\"AI 정렬 실패 공개 기준 만들 것\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214900",
               "source": "AI타임스"
             }
           ]
@@ -2325,8 +2387,23 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 70,
+          "articleCount": 73,
           "articles": [
+            {
+              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
+              "source": "AI타임스"
+            },
+            {
+              "title": "GPT-6 아스트라, AI 최초 수능 '완전 만점'...탐구 4과목까지 석권",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214896",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
+              "source": "AI타임스"
+            },
             {
               "title": "카카오·SKT·KT, 전국민 무료 AI 개발 본격 착수…“연내 출시 목표”",
               "url": "https://n.news.naver.com/mnews/article/081/0003677048",
@@ -2336,29 +2413,24 @@
               "title": "인간 감시도 피한다… 오픈AI, 차세대 AI ‘아스트라’ 공개",
               "url": "https://n.news.naver.com/mnews/article/023/0003996786",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "딥시크, 화웨이 AI칩으로 中 최대 데이터센터 구축",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436355",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "딥시크, 새로운 데이터센터 구축을 위해 화웨이 AI 칩 대량 주문 계획",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214886",
-              "source": "AI타임스"
-            },
-            {
-              "title": "구글, 제미나이 스파크에 '포토' 연동...사진 검색·편집·일정 등록까지 자동화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214881",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 18,
+          "articleCount": 20,
           "articles": [
+            {
+              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
+              "source": "AI타임스"
+            },
+            {
+              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
+              "source": "AI타임스"
+            },
             {
               "title": "“이 논문, 누가 썼습니까”…AI가 흔든 연구윤리의 경계",
               "url": "https://n.news.naver.com/mnews/article/018/0006364112",
@@ -2373,16 +2445,6 @@
               "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
               "url": "https://n.news.naver.com/mnews/article/277/0005812129",
               "source": "NAVER · 아시아경제"
-            },
-            {
-              "title": "챗GPT·클로드·그록 등 주요 AI 서비스, 한때 일제히 '먹통'",
-              "url": "https://www.etnews.com/20260904000007",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "요즘 ‘재미 못보는’ 제미나이",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549030",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
