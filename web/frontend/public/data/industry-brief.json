@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T20:38:16.120820+00:00",
+  "generated_at": "2026-09-06T21:04:10.381716+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
@@ -982,9 +982,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 572,
+        "collected": 567,
         "analyzed": 0,
-        "pending": 572,
+        "pending": 567,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
