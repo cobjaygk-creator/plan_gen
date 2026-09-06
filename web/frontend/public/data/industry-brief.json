@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-06T18:54:40.524354+00:00",
+  "generated_at": "2026-09-06T20:38:16.120820+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-06T15:39:25.068419+00:00",
+      "generatedAt": "2026-09-06T20:34:32.295572+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 7,
+        "collected": 24,
         "analyzed": 0,
-        "pending": 7,
+        "pending": 24,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -139,6 +139,23 @@
       },
       "techRadar": [
         {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997002",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "Research acceleration: The view inside OpenAI",
+              "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+              "source": "OpenAI"
+            }
+          ]
+        },
+        {
           "key": "model",
           "label": "신규 모델",
           "articleCount": 1,
@@ -147,6 +164,18 @@
               "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
               "url": "https://n.news.naver.com/mnews/article/092/0002436390",
               "source": "NAVER · 지디넷코리아"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억 예산 책정",
+              "url": "https://n.news.naver.com/mnews/article/008/0005410076",
+              "source": "NAVER · 머니투데이"
             }
           ]
         }
@@ -949,13 +978,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-06T15:39:25.068419+00:00",
+      "generatedAt": "2026-09-06T20:34:32.295572+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 566,
+        "collected": 572,
         "analyzed": 0,
-        "pending": 566,
+        "pending": 572,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1119,8 +1148,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 41,
+          "articleCount": 42,
           "articles": [
+            {
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억 예산 책정",
+              "url": "https://n.news.naver.com/mnews/article/008/0005410076",
+              "source": "NAVER · 머니투데이"
+            },
             {
               "title": "제재 수단에서 협상 카드로… 외교 무기된 GPU",
               "url": "https://n.news.naver.com/mnews/article/023/0003996913",
@@ -1140,19 +1174,24 @@
               "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
               "url": "https://n.news.naver.com/mnews/article/092/0002436373",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "[AI위클리] '미토스' 맞설 국산 보안 AI 뜬다…'모두의 AI'도 출격",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292167",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 34,
+          "articleCount": 36,
           "articles": [
+            {
+              "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997002",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "Research acceleration: The view inside OpenAI",
+              "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+              "source": "OpenAI"
+            },
             {
               "title": "전화·검색·카톡 파고드는 ‘모두의 AI’… 생활 속 실행력 승부수",
               "url": "https://n.news.naver.com/mnews/article/029/0003046422",
@@ -1167,16 +1206,6 @@
               "title": "오픈AI 에이전트끼리 독일 위키서 '비밀 대화'…사고 공개 기준 만든다",
               "url": "https://n.news.naver.com/mnews/article/092/0002436381",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
-              "url": "https://www.etnews.com/20260904000042",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "와이즈스톤, 딥엑스알랩 '의료정보 데이터셋'에 DQ인증 최고 등급 수여",
-              "url": "https://www.etnews.com/20260904000043",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -2011,13 +2040,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-06T15:39:25.068419+00:00",
+      "generatedAt": "2026-09-06T20:34:32.295572+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 7,
+        "collected": 24,
         "analyzed": 0,
-        "pending": 7,
+        "pending": 24,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2147,6 +2176,23 @@
       },
       "techRadar": [
         {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997002",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "Research acceleration: The view inside OpenAI",
+              "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+              "source": "OpenAI"
+            }
+          ]
+        },
+        {
           "key": "model",
           "label": "신규 모델",
           "articleCount": 1,
@@ -2155,6 +2201,18 @@
               "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
               "url": "https://n.news.naver.com/mnews/article/092/0002436390",
               "source": "NAVER · 지디넷코리아"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억 예산 책정",
+              "url": "https://n.news.naver.com/mnews/article/008/0005410076",
+              "source": "NAVER · 머니투데이"
             }
           ]
         }
