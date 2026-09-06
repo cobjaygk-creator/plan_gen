@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-06T13:32:11.361559+00:00",
+  "generated_at": "2026-09-06T15:44:00.061564+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-06T11:11:07.373761+00:00",
+      "briefDate": "2026-09-07",
+      "generatedAt": "2026-09-06T15:39:25.068419+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 137,
+        "collected": 6,
         "analyzed": 0,
-        "pending": 137,
+        "pending": 6,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,7 +20,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.06",
             "08.07",
             "08.08",
             "08.09",
@@ -50,7 +49,8 @@
             "09.02",
             "09.03",
             "09.04",
-            "09.05"
+            "09.05",
+            "09.06"
           ],
           "series": [],
           "bucket": "일간"
@@ -141,113 +141,12 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 11,
+          "articleCount": 1,
           "articles": [
             {
-              "title": "수능 다 맞힌 챗GPT 신모델, 수능 만점자 사고 구조 구현했다",
-              "url": "https://n.news.naver.com/mnews/article/469/0000952394",
-              "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "자비스냐 잡리스냐…오픈AI ‘아스트라’가 불러온 AGI논쟁[팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549393",
-              "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "\"성능 좋고 저렴하다\"…글로벌 빅테크, 中 AI 잇달아 도입",
-              "url": "https://n.news.naver.com/mnews/article/015/0005329242",
-              "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "스스로 진화하는 AI 나오나…GPT-6 아스트라에 ‘통제불능’ 경고",
-              "url": "https://n.news.naver.com/mnews/article/018/0006364561",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "올트먼, ‘아스트라’ 접근 못한 사용자에 보상 약속… 브록먼은 “사실상 AGI” [이규화의 글로벌AI]",
-              "url": "https://n.news.naver.com/mnews/article/029/0003046358",
-              "source": "NAVER · 디지털타임스"
-            }
-          ]
-        },
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 10,
-          "articles": [
-            {
-              "title": "제재 수단에서 협상 카드로… 외교 무기된 GPU",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996913",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "LG화학, AI 패키징용 DAF 로드맵 '일반형·고탄성·고열전도' 세 갈래로",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463970",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "[국방 AX 컨퍼런스] “국방 AI, GPU 확보만으로 안 돼···'미션 중심 운영체계' 구축해야”",
-              "url": "https://www.etnews.com/20260904000281",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
+              "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436390",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "[AI위클리] '미토스' 맞설 국산 보안 AI 뜬다…'모두의 AI'도 출격",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292167",
-              "source": "NAVER · 연합뉴스"
-            }
-          ]
-        },
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 9,
-          "articles": [
-            {
-              "title": "전화·검색·카톡 파고드는 ‘모두의 AI’… 생활 속 실행력 승부수",
-              "url": "https://n.news.naver.com/mnews/article/029/0003046422",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "[국방 AX 컨퍼런스] “AI 에이전트가 판단하고 로봇이 행동···국방 AX, 물리세계로 확장”",
-              "url": "https://www.etnews.com/20260904000289",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI 에이전트끼리 독일 위키서 '비밀 대화'…사고 공개 기준 만든다",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436381",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
-              "url": "https://www.etnews.com/20260904000042",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "와이즈스톤, 딥엑스알랩 '의료정보 데이터셋'에 DQ인증 최고 등급 수여",
-              "url": "https://www.etnews.com/20260904000043",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 2,
-          "articles": [
-            {
-              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
-              "source": "AI타임스"
             }
           ]
         }
@@ -1049,14 +948,14 @@
       ]
     },
     "3d": {
-      "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-06T11:11:07.373761+00:00",
+      "briefDate": "2026-09-07",
+      "generatedAt": "2026-09-06T15:39:25.068419+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 635,
+        "collected": 615,
         "analyzed": 0,
-        "pending": 635,
+        "pending": 615,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1067,7 +966,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.06",
             "08.07",
             "08.08",
             "08.09",
@@ -1097,7 +995,8 @@
             "09.02",
             "09.03",
             "09.04",
-            "09.05"
+            "09.05",
+            "09.06"
           ],
           "series": [],
           "bucket": "일간"
@@ -1220,8 +1119,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 42,
+          "articleCount": 43,
           "articles": [
+            {
+              "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436390",
+              "source": "NAVER · 지디넷코리아"
+            },
             {
               "title": "수능 다 맞힌 챗GPT 신모델, 수능 만점자 사고 구조 구현했다",
               "url": "https://n.news.naver.com/mnews/article/469/0000952394",
@@ -1241,11 +1145,6 @@
               "title": "스스로 진화하는 AI 나오나…GPT-6 아스트라에 ‘통제불능’ 경고",
               "url": "https://n.news.naver.com/mnews/article/018/0006364561",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "올트먼, ‘아스트라’ 접근 못한 사용자에 보상 약속… 브록먼은 “사실상 AGI” [이규화의 글로벌AI]",
-              "url": "https://n.news.naver.com/mnews/article/029/0003046358",
-              "source": "NAVER · 디지털타임스"
             }
           ]
         },
@@ -2111,14 +2010,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-09-06",
-      "generatedAt": "2026-09-06T11:11:07.373761+00:00",
+      "briefDate": "2026-09-07",
+      "generatedAt": "2026-09-06T15:39:25.068419+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 2172,
+        "collected": 6,
         "analyzed": 0,
-        "pending": 2172,
+        "pending": 6,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2129,7 +2028,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.06",
             "08.07",
             "08.08",
             "08.09",
@@ -2159,7 +2057,8 @@
             "09.02",
             "09.03",
             "09.04",
-            "09.05"
+            "09.05",
+            "09.06"
           ],
           "series": [],
           "bucket": "일간"
@@ -2222,68 +2121,7 @@
         ],
         "opinion": "현재는 두 산업을 직접 연결할 만큼 충분한 근거가 없습니다. 각 산업의 개별 변화가 누적되는지 계속 관찰합니다."
       },
-      "recommendedArticles": [
-        {
-          "category": "GAME",
-          "title": "플레이위드코리아, ‘씰M2’ 대표 이미지 추가 공개... ‘낯선 익숙함’ 새로운 세계관 예고",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319881",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "GTA 6 유출자, 락스타 측 법적 대응 무시하고 영상 추가 유포",
-          "url": "https://www.gamemeca.com/view.php?gid=1779548",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "위쳐4 목표는 '2028년 출시' 첫 발표",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319871",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "GAME",
-          "title": "넥슨, ‘서든어택’ 21주년 쇼케이스에서 시즌4 ‘문라이즈’ 계획 공개",
-          "url": "https://www.nexongames.co.kr/bbs/board.php?bo_table=media_event&wr_id=512&page=1",
-          "publishedDate": "2026.08.24"
-        },
-        {
-          "category": "GAME",
-          "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
-          "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
-          "url": "https://www.aitimes.com/news/articleView.html?idxno=214261",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-          "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
-          "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "텐센트, 플레이어 지시도 거부하는 슈팅 AI 에이전트 공개",
-          "url": "https://www.inven.co.kr/webzine/news/?news=319875",
-          "publishedDate": "2026.08.25"
-        },
-        {
-          "category": "AI",
-          "title": "컴트루테크놀로지 '스핑크스 AI', 이미지 기밀정보까지 잡아낸다",
-          "url": "https://www.etnews.com/20260825000010",
-          "publishedDate": "2026.08.25"
-        }
-      ],
+      "recommendedArticles": [],
       "signals": [],
       "newToday": [],
       "issues": [],
@@ -2309,157 +2147,14 @@
       },
       "techRadar": [
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 118,
-          "articles": [
-            {
-              "title": "제재 수단에서 협상 카드로… 외교 무기된 GPU",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996913",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "LG화학, AI 패키징용 DAF 로드맵 '일반형·고탄성·고열전도' 세 갈래로",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463970",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "[국방 AX 컨퍼런스] “국방 AI, GPU 확보만으로 안 돼···'미션 중심 운영체계' 구축해야”",
-              "url": "https://www.etnews.com/20260904000281",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "[AI위클리] '미토스' 맞설 국산 보안 AI 뜬다…'모두의 AI'도 출격",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292167",
-              "source": "NAVER · 연합뉴스"
-            }
-          ]
-        },
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 96,
-          "articles": [
-            {
-              "title": "전화·검색·카톡 파고드는 ‘모두의 AI’… 생활 속 실행력 승부수",
-              "url": "https://n.news.naver.com/mnews/article/029/0003046422",
-              "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "[국방 AX 컨퍼런스] “AI 에이전트가 판단하고 로봇이 행동···국방 AX, 물리세계로 확장”",
-              "url": "https://www.etnews.com/20260904000289",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI 에이전트끼리 독일 위키서 '비밀 대화'…사고 공개 기준 만든다",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436381",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "명인이노, AI 슈퍼컴퓨터 'MSI 엑스퍼트스테이션' 독점 공급",
-              "url": "https://www.etnews.com/20260904000042",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "와이즈스톤, 딥엑스알랩 '의료정보 데이터셋'에 DQ인증 최고 등급 수여",
-              "url": "https://www.etnews.com/20260904000043",
-              "source": "전자신문 AI"
-            }
-          ]
-        },
-        {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 79,
+          "articleCount": 1,
           "articles": [
             {
-              "title": "수능 다 맞힌 챗GPT 신모델, 수능 만점자 사고 구조 구현했다",
-              "url": "https://n.news.naver.com/mnews/article/469/0000952394",
-              "source": "NAVER · 한국일보"
-            },
-            {
-              "title": "자비스냐 잡리스냐…오픈AI ‘아스트라’가 불러온 AGI논쟁[팩플]",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549393",
-              "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "\"성능 좋고 저렴하다\"…글로벌 빅테크, 中 AI 잇달아 도입",
-              "url": "https://n.news.naver.com/mnews/article/015/0005329242",
-              "source": "NAVER · 한국경제"
-            },
-            {
-              "title": "스스로 진화하는 AI 나오나…GPT-6 아스트라에 ‘통제불능’ 경고",
-              "url": "https://n.news.naver.com/mnews/article/018/0006364561",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "올트먼, ‘아스트라’ 접근 못한 사용자에 보상 약속… 브록먼은 “사실상 AGI” [이규화의 글로벌AI]",
-              "url": "https://n.news.naver.com/mnews/article/029/0003046358",
-              "source": "NAVER · 디지털타임스"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 20,
-          "articles": [
-            {
-              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“이 논문, 누가 썼습니까”…AI가 흔든 연구윤리의 경계",
-              "url": "https://n.news.naver.com/mnews/article/018/0006364112",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "Microsoft says virtually nobody was grabbing NYT articles through its chatbot",
-              "url": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
-              "source": "The Verge"
-            },
-            {
-              "title": "\"고난도 추론·수학에 강점\" GPT-6 아스트라 성능 따져보니…가격도 2.5배↑",
-              "url": "https://n.news.naver.com/mnews/article/277/0005812129",
-              "source": "NAVER · 아시아경제"
-            }
-          ]
-        },
-        {
-          "key": "media_gen",
-          "label": "이미지 · 영상 생성",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "\"WASD 누르면 AI가 영상 생성\"... 텐센트, 인터랙티브 월드 모델 'H3-월드' 발표",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214800",
-              "source": "AI타임스"
-            },
-            {
-              "title": "MonoGPT, 기관용 AI 영상 제작 기능 출시... 시댄스2.5·클링 비디오3.0 옴니 지원",
-              "url": "https://www.etnews.com/20260902000454",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "런웨이, 실시간 인터페이스 생성 ‘솔라리스’ 공개...\"SW 패러다임 전환\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214753",
-              "source": "AI타임스"
-            },
-            {
-              "title": "월드랩스, 옴니 월드모델 ‘아틀라스’ 공개...사진 한 장으로 3D 공간 추론",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214750",
-              "source": "AI타임스"
+              "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436390",
+              "source": "NAVER · 지디넷코리아"
             }
           ]
         }
