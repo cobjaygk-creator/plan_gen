@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T21:04:10.381716+00:00",
+  "generated_at": "2026-09-06T22:50:54.349480+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
@@ -982,9 +982,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 567,
+        "collected": 555,
         "analyzed": 0,
-        "pending": 567,
+        "pending": 555,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1116,7 +1116,7 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 43,
+          "articleCount": 36,
           "articles": [
             {
               "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
@@ -1146,41 +1146,9 @@
           ]
         },
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 42,
-          "articles": [
-            {
-              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억 예산 책정",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410076",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "제재 수단에서 협상 카드로… 외교 무기된 GPU",
-              "url": "https://n.news.naver.com/mnews/article/023/0003996913",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "LG화학, AI 패키징용 DAF 로드맵 '일반형·고탄성·고열전도' 세 갈래로",
-              "url": "https://n.news.naver.com/mnews/article/030/0003463970",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "[국방 AX 컨퍼런스] “국방 AI, GPU 확보만으로 안 돼···'미션 중심 운영체계' 구축해야”",
-              "url": "https://www.etnews.com/20260904000281",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
-              "source": "NAVER · 지디넷코리아"
-            }
-          ]
-        },
-        {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 36,
+          "articleCount": 35,
           "articles": [
             {
               "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
@@ -1210,9 +1178,41 @@
           ]
         },
         {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 35,
+          "articles": [
+            {
+              "title": "[단독]갈수록 비싸지는 차세대 칩 '베라루빈'…정부, 대당 275억 예산 책정",
+              "url": "https://n.news.naver.com/mnews/article/008/0005410076",
+              "source": "NAVER · 머니투데이"
+            },
+            {
+              "title": "제재 수단에서 협상 카드로… 외교 무기된 GPU",
+              "url": "https://n.news.naver.com/mnews/article/023/0003996913",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "LG화학, AI 패키징용 DAF 로드맵 '일반형·고탄성·고열전도' 세 갈래로",
+              "url": "https://n.news.naver.com/mnews/article/030/0003463970",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "[국방 AX 컨퍼런스] “국방 AI, GPU 확보만으로 안 돼···'미션 중심 운영체계' 구축해야”",
+              "url": "https://www.etnews.com/20260904000281",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "AI 클라우드 엔스케일, IPO 앞두고 35억 달러 조달 추진…엔비디아도 논의",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436373",
+              "source": "NAVER · 지디넷코리아"
+            }
+          ]
+        },
+        {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 7,
+          "articleCount": 6,
           "articles": [
             {
               "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",

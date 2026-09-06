@@ -969,7 +969,7 @@
   },
   {
     "url": "https://smashlegends.com/",
-    "game_name": "SMASH LEGENDS | ‘Library World is a world where all stories gather.’",
+    "game_name": "SMASH LEGENDS",
     "publisher": "KRAFTON",
     "published_on": null,
     "thumbnail_url": null,
@@ -1074,6 +1074,14 @@
   {
     "url": "https://moonbreaker.com/en",
     "game_name": "Home | Moonbreaker",
+    "publisher": "KRAFTON",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "KRAFTON"
+  },
+  {
+    "url": "https://5minlab.com/ko/undusted_en",
+    "game_name": "Undusted: Letters from the Past Simulation PC Console More 5minlab",
     "publisher": "KRAFTON",
     "published_on": null,
     "thumbnail_url": null,
