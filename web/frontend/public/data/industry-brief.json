@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T23:00:41.340098+00:00",
+  "generated_at": "2026-09-07T23:13:22.318750+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T22:57:04.075414+00:00",
+      "generatedAt": "2026-09-07T23:09:43.179956+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 77,
+        "collected": 80,
         "analyzed": 0,
-        "pending": 77,
+        "pending": 80,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -291,7 +291,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
@@ -591,14 +591,14 @@
               ]
             },
             {
-              "name": "Hugging Face",
-              "category": "AI",
+              "name": "Wardogs",
+              "category": "GAME",
               "articleCount": 1,
               "articles": [
                 {
-                  "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
-                  "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
-                  "source": "TechCrunch"
+                  "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
+                  "url": "https://www.pcgamer.com/games/fps/nearly-500k-players-showed-up-for-the-wardogs-beta-the-reaction-from-the-fps-community-has-been-insane/",
+                  "source": "PC Gamer"
                 }
               ]
             }
@@ -694,8 +694,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 5,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "한국형 AI 휴머노이드 첫선 \"탈춤 추고 체조까지...짧지만 정확한 동작 구현\"",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572157",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "카이로스 V0.7 공개…기계연 “개발비 30억 더 필요”",
               "url": "https://n.news.naver.com/mnews/article/018/0006365138",
@@ -715,11 +720,6 @@
               "title": "100% AI로 만든 90분 SF영화…제작비 10억, 6개월 만에 완성",
               "url": "https://n.news.naver.com/mnews/article/028/0002822033",
               "source": "NAVER · 한겨레"
-            },
-            {
-              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
-              "source": "AI타임스"
             }
           ]
         },
@@ -1438,13 +1438,13 @@
     },
     "3d": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T22:57:04.075414+00:00",
+      "generatedAt": "2026-09-07T23:09:43.179956+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 704,
+        "collected": 706,
         "analyzed": 0,
-        "pending": 704,
+        "pending": 706,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1726,7 +1726,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
@@ -2026,14 +2026,14 @@
               ]
             },
             {
-              "name": "Hugging Face",
-              "category": "AI",
+              "name": "Wardogs",
+              "category": "GAME",
               "articleCount": 1,
               "articles": [
                 {
-                  "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
-                  "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
-                  "source": "TechCrunch"
+                  "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
+                  "url": "https://www.pcgamer.com/games/fps/nearly-500k-players-showed-up-for-the-wardogs-beta-the-reaction-from-the-fps-community-has-been-insane/",
+                  "source": "PC Gamer"
                 }
               ]
             }
@@ -2225,8 +2225,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 27,
+          "articleCount": 28,
           "articles": [
+            {
+              "title": "한국형 AI 휴머노이드 첫선 \"탈춤 추고 체조까지...짧지만 정확한 동작 구현\"",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572157",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "카이로스 V0.7 공개…기계연 “개발비 30억 더 필요”",
               "url": "https://n.news.naver.com/mnews/article/018/0006365138",
@@ -2246,11 +2251,6 @@
               "title": "100% AI로 만든 90분 SF영화…제작비 10억, 6개월 만에 완성",
               "url": "https://n.news.naver.com/mnews/article/028/0002822033",
               "source": "NAVER · 한겨레"
-            },
-            {
-              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2965,13 +2965,13 @@
     },
     "week": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T22:57:04.075414+00:00",
+      "generatedAt": "2026-09-07T23:09:43.179956+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 462,
+        "collected": 465,
         "analyzed": 0,
-        "pending": 462,
+        "pending": 465,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3253,7 +3253,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
@@ -3553,14 +3553,14 @@
               ]
             },
             {
-              "name": "Hugging Face",
-              "category": "AI",
+              "name": "Wardogs",
+              "category": "GAME",
               "articleCount": 1,
               "articles": [
                 {
-                  "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
-                  "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
-                  "source": "TechCrunch"
+                  "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
+                  "url": "https://www.pcgamer.com/games/fps/nearly-500k-players-showed-up-for-the-wardogs-beta-the-reaction-from-the-fps-community-has-been-insane/",
+                  "source": "PC Gamer"
                 }
               ]
             }
@@ -3720,8 +3720,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 20,
+          "articleCount": 21,
           "articles": [
+            {
+              "title": "한국형 AI 휴머노이드 첫선 \"탈춤 추고 체조까지...짧지만 정확한 동작 구현\"",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572157",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "카이로스 V0.7 공개…기계연 “개발비 30억 더 필요”",
               "url": "https://n.news.naver.com/mnews/article/018/0006365138",
@@ -3741,11 +3746,6 @@
               "title": "100% AI로 만든 90분 SF영화…제작비 10억, 6개월 만에 완성",
               "url": "https://n.news.naver.com/mnews/article/028/0002822033",
               "source": "NAVER · 한겨레"
-            },
-            {
-              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
-              "source": "AI타임스"
             }
           ]
         },
