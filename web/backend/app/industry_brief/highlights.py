@@ -38,7 +38,7 @@ NO_DATA_TEXT = "지난 24시간 동안 분석할 만큼 충분한 기사가 수�
 
 _ARTICLE_WINDOW_HOURS = 24
 _MAX_ARTICLES_TO_MODEL = 120
-_MAX_RECOMMENDED = 20
+_MAX_RECOMMENDED = 9
 _MAX_CORE_ISSUES = 5
 
 SYSTEM_PROMPT = """\
@@ -78,8 +78,8 @@ SYSTEM_PROMPT = """\
      마찬가지로 반드시 한국어로만 작성한다.
    - article_indices: 근거가 된 기사의 index 목록, 1개 이상
 
-2. recommended (추천 기사, 최대 20개 — 화면에 10개씩 2페이지로 나눠 보여
-   주므로 후보가 부족한 경우가 아니면 20개를 채워라): 핵심 이슈로 묶이진
+2. recommended (추천 기사, 정확히 9개 — 후보가 부족한 경우가 아니면 9개를
+   채워라): 핵심 이슈로 묶이진
    않지만 오늘 업계 동향을 파악하는 데 도움이 되는 개별 기사. 예: 산업
    실적/통계 기사, 업계 전망·칼럼, 행사 프리뷰, 트렌드 분석 기사. 각각
    index, one_line_reason(왜 추천하는지 한 줄)을 작성해라.
@@ -108,13 +108,18 @@ _CATEGORY_PRIORITY = {
         "기사). 반복 축: 글로벌·중국 시장 진출, 정책/규제 변화, 게임사 실적."
     ),
     "AI": (
-        "AI 카테고리 추가 기준: 국내 정치·정책·인사 소식(정부 위원회 인선, "
-        "규제 발언 등)보다 AI 모델 출시·경쟁 구도, 신기술 발표, GPU/인프라 "
-        "같은 세계적인 AI 업계 이슈를 우선한다. 게임과 무관한 순수 LLM/AI "
-        "뉴스도 게임 산업과의 접점이 없다는 이유만으로 배제하지 마라. 해외 "
-        "모델/기업 소식이 많은 카테고리이므로 summary는 절대 영어 문장으로 "
-        "쓰지 말고 처음부터 끝까지 한국어로 서술해라 (모델명·회사명 등 "
-        "고유명사만 원어 표기 허용)."
+        "AI 카테고리 추가 기준: 오늘의 판단은 기술 위주로 잡는다 — 최우선 "
+        "순위는 AI 모델·연구 성과 출시, 성능/벤치마크, 신기술·아키텍처 발표, "
+        "GPU/데이터센터/인프라 같은 세계적인 AI 기술 이슈다. 국내 정치·정책·"
+        "인사 소식(정부 위원회 인선, 규제 발언, 노동·일자리 정책, 예산·사업 "
+        "공모, 컨소시엄 선정 등)은 그 자체로 기술적 진전을 다루지 않는 한 "
+        "핵심이슈 후순위로 두고, 정말 다른 기술 이슈가 부족할 때만 채택해라 "
+        "— 예를 들어 '정부가 AI 일자리 지표를 만든다'류 소식보다 '오픈AI가 "
+        "새 추론 모델을 공개했다'류 소식을 우선한다. 게임과 무관한 순수 "
+        "LLM/AI 뉴스도 게임 산업과의 접점이 없다는 이유만으로 배제하지 마라. "
+        "해외 모델/기업 소식이 많은 카테고리이므로 summary는 절대 영어 "
+        "문장으로 쓰지 말고 처음부터 끝까지 한국어로 서술해라 (모델명·회사명 "
+        "등 고유명사만 원어 표기 허용)."
     ),
 }
 
@@ -155,6 +160,23 @@ def _fetch_window_articles(db: Session, category: str, now: datetime) -> list[Ar
         )
         .order_by(Article.collected_at.desc())
         .limit(_MAX_ARTICLES_TO_MODEL)
+    ))
+
+
+def list_all_window_articles(db: Session, category: str, now: datetime) -> list[Article]:
+    """Same window/filter as _fetch_window_articles, but uncapped — for the
+    "더보기" panel that shows every article this category's judgment was
+    actually drawn from (not just the ones that made core_issues/recommended)."""
+    start = now - timedelta(hours=_ARTICLE_WINDOW_HOURS)
+    return list(db.scalars(
+        select(Article)
+        .where(
+            Article.category == category,
+            Article.source.like("NAVER · %"),
+            Article.collected_at >= start,
+            Article.collected_at <= now,
+        )
+        .order_by(Article.collected_at.desc())
     ))
 
 

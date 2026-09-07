@@ -193,6 +193,37 @@ def test_day_highlights_rejects_malformed_date(client, make_user, db_factory):
     assert res.status_code == 422
 
 
+def test_highlights_collected_lists_recent_naver_articles(client, make_user, db_factory):
+    _login(client, make_user)
+    db = db_factory()
+    now = datetime.now(timezone.utc)
+    db.add(Article(
+        source="NAVER · 조선일보", source_type="media", category="GAME",
+        title="최근 수집 기사", url="https://example.com/collected-1",
+        collected_at=now,
+    ))
+    # 24시간 창 밖(오래된) 기사는 목록에 안 나와야 한다.
+    db.add(Article(
+        source="NAVER · 조선일보", source_type="media", category="GAME",
+        title="오래된 기사", url="https://example.com/collected-old",
+        collected_at=now - timedelta(hours=48),
+    ))
+    db.commit()
+    res = client.get("/industry-brief/highlights/collected?category=GAME")
+    assert res.status_code == 200
+    body = res.json()
+    assert body["category"] == "GAME"
+    assert body["articleCount"] == 1
+    assert body["articles"][0]["title"] == "최근 수집 기사"
+
+
+def test_highlights_collected_rejects_bad_category(client, make_user, db_factory):
+    _login(client, make_user)
+    db_factory()
+    res = client.get("/industry-brief/highlights/collected?category=BAD")
+    assert res.status_code == 400
+
+
 def test_period_ranking_attaches_matching_first_party_announcement(db_factory):
     db = db_factory()
     now = datetime.now(timezone.utc)

@@ -147,25 +147,21 @@
   border-bottom: 1px solid var(--border);
 }
 .ib-reading-list-column-head h3 { flex: 1; min-width: 0; margin: 0; color: var(--ink); font-size: 15px; font-weight: 700; }
-/* 예전엔 이 자리에 "기사 N건" 텍스트가 있었다 — 추천 후보가 20건까지
-   늘면서, 그 자리를 다음 10건을 불러오는 새로고침 버튼으로 바꿨다. */
-.ib-reading-list-refresh {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 26px;
-  height: 26px;
+/* 추천 9건은 고정이고, 그 이상(오늘 수집된 전체)은 더보기 팝업에서 본다
+   — 페이지 전환용 새로고침 아이콘은 9개 고정으로 되돌리며 제거했다. */
+.ib-reading-list-more {
+  width: 100%;
+  margin-top: 12px;
   border: 1px solid var(--border);
-  border-radius: 50%;
+  border-radius: 8px;
   background: var(--surface);
+  padding: 9px;
   color: var(--ink-muted);
-  font-size: 14px;
-  line-height: 1;
+  font-size: 13px;
+  font-weight: 600;
   cursor: pointer;
-  transition: transform .2s ease, color .15s ease, border-color .15s ease;
 }
-.ib-reading-list-refresh:hover { color: var(--accent); border-color: var(--accent); }
-.ib-reading-list-refresh:active { transform: rotate(180deg); }
+.ib-reading-list-more:hover { border-color: var(--accent); color: var(--accent); }
 @media (max-width: 720px) {
   .ib-reading-list-grid { grid-template-columns: 1fr; gap: 24px; }
   .ib-reading-list-column { padding: 0; }

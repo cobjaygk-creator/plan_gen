@@ -19,7 +19,7 @@ from ..deps import get_current_user
 from ..models import User
 from .collector import collect_all
 from .models import Article, DailyBrief, EditorialRule, EditorialRuleAudit, Issue, IssueArticle, IssueFeedback
-from .highlights import load_highlights_for_date, load_latest_highlights, refresh_and_save_highlights, to_api_dict
+from .highlights import list_all_window_articles, load_highlights_for_date, load_latest_highlights, refresh_and_save_highlights, to_api_dict
 from .synthesis import NO_CROSS_OPINION_TEXT, NO_CROSS_SIGNAL_TEXT, TOP_ISSUES_PER_CATEGORY
 from .landscape import build_issue_detail, build_landscape
 from .comparison import build_market_comparison
@@ -1155,6 +1155,23 @@ def get_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get
     return {
         "game": to_api_dict(load_latest_highlights(db, "GAME"), "GAME", now),
         "ai": to_api_dict(load_latest_highlights(db, "AI"), "AI", now),
+    }
+
+
+@router.get("/highlights/collected")
+def list_collected_articles(
+    category: str, db: Session = Depends(get_db), user: User = Depends(get_current_user),
+):
+    """추천 기사 "더보기" 팝업 — 핵심이슈/추천 9건으로 추려지기 전, AI 판단이
+    실제로 훑어본 최근 24시간 수집분 전체를 그대로 보여준다."""
+    if category not in ("GAME", "AI"):
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "category는 GAME 또는 AI여야 합니다.")
+    now = datetime.now(timezone.utc)
+    articles = list_all_window_articles(db, category, now)
+    return {
+        "category": category,
+        "articleCount": len(articles),
+        "articles": [{"title": a.title, "url": a.url, "source": a.source} for a in articles],
     }
 
 

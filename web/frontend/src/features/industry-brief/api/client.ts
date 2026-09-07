@@ -84,6 +84,20 @@ export async function fetchDailyHighlights(): Promise<DailyHighlightsResponse> {
   return res.json() as Promise<DailyHighlightsResponse>;
 }
 
+export interface CollectedArticlesResponse {
+  category: "GAME" | "AI";
+  articleCount: number;
+  articles: HighlightArticle[];
+}
+
+/** "더보기" 팝업 — 추천 9건으로 추려지기 전, AI 판단이 실제로 훑어본
+ * 최근 24시간 수집분 전체. */
+export async function fetchCollectedArticles(category: "GAME" | "AI"): Promise<CollectedArticlesResponse> {
+  const res = await fetch(`/industry-brief/highlights/collected?category=${category}`, { credentials: "include" });
+  if (!res.ok) throw new Error("수집된 기사 목록을 불러오지 못했습니다.");
+  return res.json() as Promise<CollectedArticlesResponse>;
+}
+
 export async function refreshDailyHighlights(): Promise<DailyHighlightsResponse> {
   const res = await fetch("/industry-brief/highlights/refresh", { method: "POST", credentials: "include" });
   if (!res.ok) {
