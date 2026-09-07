@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T21:44:50.609024+00:00",
+  "generated_at": "2026-09-07T23:00:41.340098+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T21:41:09.829642+00:00",
+      "generatedAt": "2026-09-07T22:57:04.075414+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 67,
+        "collected": 77,
         "analyzed": 0,
-        "pending": 67,
+        "pending": 77,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -240,7 +240,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
@@ -257,7 +257,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "My FOMO over The Duskbloods not coming to PC evaporated once I actually played it",
@@ -274,7 +274,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
@@ -495,7 +495,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "[8월 25일 간추린 뉴스] 다가오는 에일리언을 소탕하라! '에일리언: 파이어팀 엘리트2'",
@@ -512,7 +512,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "융기원, 경기 AI기업 12곳 해외 공동연구 지원",
@@ -555,6 +555,42 @@
               ]
             },
             {
+              "name": "Stanford University",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
+                  "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+                  "source": "Ars Technica"
+                }
+              ]
+            },
+            {
+              "name": "The Duskbloods",
+              "category": "GAME",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "My FOMO over The Duskbloods not coming to PC evaporated once I actually played it",
+                  "url": "https://www.pcgamer.com/games/action/my-fomo-over-the-duskbloods-not-coming-to-pc-evaporated-once-i-actually-played-it/",
+                  "source": "PC Gamer"
+                }
+              ]
+            },
+            {
+              "name": "Steam",
+              "category": "GAME",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
+                  "url": "https://www.pcgamer.com/games/survival-crafting/a-game-dev-spent-40-days-in-the-wilderness-to-make-this-new-steam-survival-game/",
+                  "source": "PC Gamer"
+                }
+              ]
+            },
+            {
               "name": "Hugging Face",
               "category": "AI",
               "articleCount": 1,
@@ -563,42 +599,6 @@
                   "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
                   "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
                   "source": "TechCrunch"
-                }
-              ]
-            },
-            {
-              "name": "OpenAI is building…",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "OpenAI is building AI agents for everything. Will everyone use them?",
-                  "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
-                  "source": "TechCrunch"
-                }
-              ]
-            },
-            {
-              "name": "Kiro",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                  "url": "https://openai.com/index/gpt-5-6-in-kiro",
-                  "source": "OpenAI"
-                }
-              ]
-            },
-            {
-              "name": "AI Factory",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "How XPUs Meet a World-Class AI Factory",
-                  "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-                  "source": "NVIDIA"
                 }
               ]
             }
@@ -692,32 +692,20 @@
       },
       "techRadar": [
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 3,
-          "articles": [
-            {
-              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
-              "source": "NAVER · 전자신문"
-            }
-          ]
-        },
-        {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 3,
+          "articleCount": 5,
           "articles": [
+            {
+              "title": "카이로스 V0.7 공개…기계연 “개발비 30억 더 필요”",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365138",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "모든 장면을 생성형 AI로…90분 장편 SF ‘스틸레이’ 내달 개봉",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549669",
+              "source": "NAVER · 중앙일보"
+            },
             {
               "title": "\"조마조마한 모습 끝낸다\"…기계연 휴머노이드 '카이로스' 내년 V1 완성",
               "url": "https://n.news.naver.com/mnews/article/584/0000039236",
@@ -736,6 +724,60 @@
           ]
         },
         {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 4,
+          "articles": [
+            {
+              "title": "오픈AI 최고과학자 “AI 이해·통제 어려워져…개발 속도 늦춰야”",
+              "url": "https://www.etnews.com/20260908000001",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
+              "source": "AI타임스"
+            },
+            {
+              "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997194",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 4,
+          "articles": [
+            {
+              "title": "지능 생산하는 AIDC, 세법에선 임대업",
+              "url": "https://n.news.naver.com/mnews/article/417/0001157627",
+              "source": "NAVER · 동행미디어 시대"
+            },
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            }
+          ]
+        },
+        {
           "key": "agent",
           "label": "AI 에이전트",
           "articleCount": 2,
@@ -749,23 +791,6 @@
               "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
               "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 2,
-          "articles": [
-            {
-              "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997194",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
-              "source": "NAVER · 전자신문"
             }
           ]
         },
@@ -1413,13 +1438,13 @@
     },
     "3d": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T21:41:09.829642+00:00",
+      "generatedAt": "2026-09-07T22:57:04.075414+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 700,
+        "collected": 704,
         "analyzed": 0,
-        "pending": 700,
+        "pending": 704,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1650,7 +1675,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
@@ -1667,7 +1692,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "My FOMO over The Duskbloods not coming to PC evaporated once I actually played it",
@@ -1684,7 +1709,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
@@ -1905,7 +1930,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "[8월 25일 간추린 뉴스] 다가오는 에일리언을 소탕하라! '에일리언: 파이어팀 엘리트2'",
@@ -1922,7 +1947,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "융기원, 경기 AI기업 12곳 해외 공동연구 지원",
@@ -1965,6 +1990,42 @@
               ]
             },
             {
+              "name": "Stanford University",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
+                  "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+                  "source": "Ars Technica"
+                }
+              ]
+            },
+            {
+              "name": "The Duskbloods",
+              "category": "GAME",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "My FOMO over The Duskbloods not coming to PC evaporated once I actually played it",
+                  "url": "https://www.pcgamer.com/games/action/my-fomo-over-the-duskbloods-not-coming-to-pc-evaporated-once-i-actually-played-it/",
+                  "source": "PC Gamer"
+                }
+              ]
+            },
+            {
+              "name": "Steam",
+              "category": "GAME",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
+                  "url": "https://www.pcgamer.com/games/survival-crafting/a-game-dev-spent-40-days-in-the-wilderness-to-make-this-new-steam-survival-game/",
+                  "source": "PC Gamer"
+                }
+              ]
+            },
+            {
               "name": "Hugging Face",
               "category": "AI",
               "articleCount": 1,
@@ -1973,42 +2034,6 @@
                   "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
                   "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
                   "source": "TechCrunch"
-                }
-              ]
-            },
-            {
-              "name": "OpenAI is building…",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "OpenAI is building AI agents for everything. Will everyone use them?",
-                  "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
-                  "source": "TechCrunch"
-                }
-              ]
-            },
-            {
-              "name": "Kiro",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                  "url": "https://openai.com/index/gpt-5-6-in-kiro",
-                  "source": "OpenAI"
-                }
-              ]
-            },
-            {
-              "name": "AI Factory",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "How XPUs Meet a World-Class AI Factory",
-                  "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-                  "source": "NVIDIA"
                 }
               ]
             }
@@ -2136,8 +2161,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 42,
+          "articleCount": 43,
           "articles": [
+            {
+              "title": "지능 생산하는 AIDC, 세법에선 임대업",
+              "url": "https://n.news.naver.com/mnews/article/417/0001157627",
+              "source": "NAVER · 동행미디어 시대"
+            },
             {
               "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
               "url": "https://n.news.naver.com/mnews/article/014/0005572297",
@@ -2157,19 +2187,24 @@
               "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 39,
+          "articleCount": 41,
           "articles": [
+            {
+              "title": "오픈AI 최고과학자 “AI 이해·통제 어려워져…개발 속도 늦춰야”",
+              "url": "https://www.etnews.com/20260908000001",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
+              "source": "AI타임스"
+            },
             {
               "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
               "url": "https://n.news.naver.com/mnews/article/023/0003997194",
@@ -2184,24 +2219,24 @@
               "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
               "url": "https://www.etnews.com/20260907000453",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "챗GPT,'개인 문체' 학습 기능 테스트...\"AI가 쓴 티 벗어난다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214961",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 25,
+          "articleCount": 27,
           "articles": [
+            {
+              "title": "카이로스 V0.7 공개…기계연 “개발비 30억 더 필요”",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365138",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "모든 장면을 생성형 AI로…90분 장편 SF ‘스틸레이’ 내달 개봉",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549669",
+              "source": "NAVER · 중앙일보"
+            },
             {
               "title": "\"조마조마한 모습 끝낸다\"…기계연 휴머노이드 '카이로스' 내년 V1 완성",
               "url": "https://n.news.naver.com/mnews/article/584/0000039236",
@@ -2216,16 +2251,6 @@
               "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
               "source": "AI타임스"
-            },
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
-              "url": "https://www.etnews.com/20260907000412",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
-              "url": "https://www.etnews.com/20260907000410",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -2940,13 +2965,13 @@
     },
     "week": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T21:41:09.829642+00:00",
+      "generatedAt": "2026-09-07T22:57:04.075414+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 452,
+        "collected": 462,
         "analyzed": 0,
-        "pending": 452,
+        "pending": 462,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3177,7 +3202,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
@@ -3194,7 +3219,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "My FOMO over The Duskbloods not coming to PC evaporated once I actually played it",
@@ -3211,7 +3236,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
@@ -3432,7 +3457,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "[8월 25일 간추린 뉴스] 다가오는 에일리언을 소탕하라! '에일리언: 파이어팀 엘리트2'",
@@ -3449,7 +3474,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "융기원, 경기 AI기업 12곳 해외 공동연구 지원",
@@ -3492,6 +3517,42 @@
               ]
             },
             {
+              "name": "Stanford University",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
+                  "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+                  "source": "Ars Technica"
+                }
+              ]
+            },
+            {
+              "name": "The Duskbloods",
+              "category": "GAME",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "My FOMO over The Duskbloods not coming to PC evaporated once I actually played it",
+                  "url": "https://www.pcgamer.com/games/action/my-fomo-over-the-duskbloods-not-coming-to-pc-evaporated-once-i-actually-played-it/",
+                  "source": "PC Gamer"
+                }
+              ]
+            },
+            {
+              "name": "Steam",
+              "category": "GAME",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
+                  "url": "https://www.pcgamer.com/games/survival-crafting/a-game-dev-spent-40-days-in-the-wilderness-to-make-this-new-steam-survival-game/",
+                  "source": "PC Gamer"
+                }
+              ]
+            },
+            {
               "name": "Hugging Face",
               "category": "AI",
               "articleCount": 1,
@@ -3500,42 +3561,6 @@
                   "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
                   "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
                   "source": "TechCrunch"
-                }
-              ]
-            },
-            {
-              "name": "OpenAI is building…",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "OpenAI is building AI agents for everything. Will everyone use them?",
-                  "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
-                  "source": "TechCrunch"
-                }
-              ]
-            },
-            {
-              "name": "Kiro",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
-                  "url": "https://openai.com/index/gpt-5-6-in-kiro",
-                  "source": "OpenAI"
-                }
-              ]
-            },
-            {
-              "name": "AI Factory",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "How XPUs Meet a World-Class AI Factory",
-                  "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-                  "source": "NVIDIA"
                 }
               ]
             }
@@ -3629,6 +3654,38 @@
       },
       "techRadar": [
         {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 23,
+          "articles": [
+            {
+              "title": "지능 생산하는 AIDC, 세법에선 임대업",
+              "url": "https://n.news.naver.com/mnews/article/417/0001157627",
+              "source": "NAVER · 동행미디어 시대"
+            },
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
           "key": "agent",
           "label": "AI 에이전트",
           "articleCount": 22,
@@ -3661,42 +3718,20 @@
           ]
         },
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 22,
-          "articles": [
-            {
-              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
-              "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 18,
+          "articleCount": 20,
           "articles": [
+            {
+              "title": "카이로스 V0.7 공개…기계연 “개발비 30억 더 필요”",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365138",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "모든 장면을 생성형 AI로…90분 장편 SF ‘스틸레이’ 내달 개봉",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549669",
+              "source": "NAVER · 중앙일보"
+            },
             {
               "title": "\"조마조마한 모습 끝낸다\"…기계연 휴머노이드 '카이로스' 내년 V1 완성",
               "url": "https://n.news.naver.com/mnews/article/584/0000039236",
@@ -3711,24 +3746,24 @@
               "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
               "source": "AI타임스"
-            },
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
-              "url": "https://www.etnews.com/20260907000412",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
-              "url": "https://www.etnews.com/20260907000410",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 17,
+          "articleCount": 19,
           "articles": [
+            {
+              "title": "오픈AI 최고과학자 “AI 이해·통제 어려워져…개발 속도 늦춰야”",
+              "url": "https://www.etnews.com/20260908000001",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
+              "source": "AI타임스"
+            },
             {
               "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
               "url": "https://n.news.naver.com/mnews/article/023/0003997194",
@@ -3743,16 +3778,6 @@
               "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
               "url": "https://www.etnews.com/20260907000453",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "챗GPT,'개인 문체' 학습 기능 테스트...\"AI가 쓴 티 벗어난다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214961",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
-              "source": "AI타임스"
             }
           ]
         },
