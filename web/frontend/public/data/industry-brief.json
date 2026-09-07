@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T20:27:26.494402+00:00",
+  "generated_at": "2026-09-07T21:44:50.609024+00:00",
   "periods": {
     "today": {
-      "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T12:49:16.399781+00:00",
+      "briefDate": "2026-09-08",
+      "generatedAt": "2026-09-07T21:41:09.829642+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 29,
+        "collected": 67,
         "analyzed": 0,
-        "pending": 29,
+        "pending": 67,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -461,7 +461,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "30년 경력 베테랑이 말하는 게임 내러티브 디자인의 원칙",
@@ -690,7 +690,110 @@
           }
         ]
       },
-      "techRadar": [],
+      "techRadar": [
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            }
+          ]
+        },
+        {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "\"조마조마한 모습 끝낸다\"…기계연 휴머노이드 '카이로스' 내년 V1 완성",
+              "url": "https://n.news.naver.com/mnews/article/584/0000039236",
+              "source": "NAVER · 동아사이언스"
+            },
+            {
+              "title": "100% AI로 만든 90분 SF영화…제작비 10억, 6개월 만에 완성",
+              "url": "https://n.news.naver.com/mnews/article/028/0002822033",
+              "source": "NAVER · 한겨레"
+            },
+            {
+              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "'AI직원' 시대 … 똘똘한 AI 100% 활용할 숙련된 관리자 앉혀야",
+              "url": "https://n.news.naver.com/mnews/article/009/0005731677",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 2,
+          "articles": [
+            {
+              "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997194",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "“신입 뽑을 이유 없다” 59세 리니지 아버지가 AI로 만든 신작",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549782",
+              "source": "NAVER · 중앙일보"
+            }
+          ]
+        },
+        {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            }
+          ]
+        }
+      ],
       "marketComparison": [
         {
           "category": "GAME",
@@ -1309,14 +1412,14 @@
       ]
     },
     "3d": {
-      "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T12:49:16.399781+00:00",
+      "briefDate": "2026-09-08",
+      "generatedAt": "2026-09-07T21:41:09.829642+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 635,
+        "collected": 700,
         "analyzed": 0,
-        "pending": 635,
+        "pending": 700,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1768,7 +1871,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "30년 경력 베테랑이 말하는 게임 내러티브 디자인의 원칙",
@@ -1999,42 +2102,20 @@
       },
       "techRadar": [
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
+          "key": "agent",
+          "label": "AI 에이전트",
           "articleCount": 43,
           "articles": [
             {
-              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "title": "'AI직원' 시대 … 똘똘한 AI 100% 활용할 숙련된 관리자 앉혀야",
+              "url": "https://n.news.naver.com/mnews/article/009/0005731677",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
               "source": "AI타임스"
             },
-            {
-              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
-              "source": "AI타임스"
-            },
-            {
-              "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190795",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "중기부, 제32차 APEC 중소기업 장관회의에서 ｢K-중소·스타트업 AI 혁신 전략｣ 로드맵 제시",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780512&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
-              "url": "https://n.news.naver.com/mnews/article/016/0002693752",
-              "source": "NAVER · 헤럴드경제"
-            }
-          ]
-        },
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 42,
-          "articles": [
             {
               "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
@@ -2049,15 +2130,37 @@
               "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
               "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 42,
+          "articles": [
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
             },
             {
-              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
+              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
               "source": "AI타임스"
             },
             {
-              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
               "source": "AI타임스"
             }
           ]
@@ -2067,6 +2170,16 @@
           "label": "신규 모델",
           "articleCount": 39,
           "articles": [
+            {
+              "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997194",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            },
             {
               "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
               "url": "https://www.etnews.com/20260907000453",
@@ -2081,24 +2194,29 @@
               "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
               "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240461",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 23,
+          "articleCount": 25,
           "articles": [
+            {
+              "title": "\"조마조마한 모습 끝낸다\"…기계연 휴머노이드 '카이로스' 내년 V1 완성",
+              "url": "https://n.news.naver.com/mnews/article/584/0000039236",
+              "source": "NAVER · 동아사이언스"
+            },
+            {
+              "title": "100% AI로 만든 90분 SF영화…제작비 10억, 6개월 만에 완성",
+              "url": "https://n.news.naver.com/mnews/article/028/0002822033",
+              "source": "NAVER · 한겨레"
+            },
+            {
+              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
+              "source": "AI타임스"
+            },
             {
               "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
               "url": "https://www.etnews.com/20260907000412",
@@ -2108,29 +2226,19 @@
               "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
               "url": "https://www.etnews.com/20260907000410",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 시사회 참석한 하정우 국가인공지능전략위원회 부위원장",
-              "url": "https://www.etnews.com/20260907000413",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
-              "url": "https://www.etnews.com/20260907000460",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214955",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 15,
+          "articleCount": 16,
           "articles": [
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
               "url": "https://n.news.naver.com/mnews/article/014/0005572082",
@@ -2150,19 +2258,19 @@
               "title": "전화·검색·카톡 파고드는 ‘모두의 AI’… 생활 속 실행력 승부수",
               "url": "https://n.news.naver.com/mnews/article/029/0003046422",
               "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "‘모두의 AI’ 시동…정부 “경쟁보다 협업”, 업계 “공공 마중물 필요”",
-              "url": "https://n.news.naver.com/mnews/article/029/0003046282",
-              "source": "NAVER · 디지털타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "“신입 뽑을 이유 없다” 59세 리니지 아버지가 AI로 만든 신작",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549782",
+              "source": "NAVER · 중앙일보"
+            },
             {
               "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
@@ -2182,11 +2290,6 @@
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
               "source": "AI타임스"
-            },
-            {
-              "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
-              "url": "https://n.news.naver.com/mnews/article/001/0016293283",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
@@ -2836,14 +2939,14 @@
       ]
     },
     "week": {
-      "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T12:49:16.399781+00:00",
+      "briefDate": "2026-09-08",
+      "generatedAt": "2026-09-07T21:41:09.829642+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 376,
+        "collected": 452,
         "analyzed": 0,
-        "pending": 376,
+        "pending": 452,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3295,7 +3398,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "30년 경력 베테랑이 말하는 게임 내러티브 디자인의 원칙",
@@ -3528,8 +3631,18 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 20,
+          "articleCount": 22,
           "articles": [
+            {
+              "title": "'AI직원' 시대 … 똘똘한 AI 100% 활용할 숙련된 관리자 앉혀야",
+              "url": "https://n.news.naver.com/mnews/article/009/0005731677",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
+              "source": "AI타임스"
+            },
             {
               "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
@@ -3544,24 +3657,29 @@
               "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
-              "source": "AI타임스"
-            },
-            {
-              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 19,
+          "articleCount": 22,
           "articles": [
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[CPU 대란 주의보 ⑧·完] 시스템 병목 뚫어라… K-반도체, 메모리 넘어 ‘풀스택 설계자’로",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240515",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            },
             {
               "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
@@ -3571,29 +3689,56 @@
               "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
               "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 18,
+          "articles": [
+            {
+              "title": "\"조마조마한 모습 끝낸다\"…기계연 휴머노이드 '카이로스' 내년 V1 완성",
+              "url": "https://n.news.naver.com/mnews/article/584/0000039236",
+              "source": "NAVER · 동아사이언스"
             },
             {
-              "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190795",
-              "source": "NAVER · 조선비즈"
+              "title": "100% AI로 만든 90분 SF영화…제작비 10억, 6개월 만에 완성",
+              "url": "https://n.news.naver.com/mnews/article/028/0002822033",
+              "source": "NAVER · 한겨레"
             },
             {
-              "title": "중기부, 제32차 APEC 중소기업 장관회의에서 ｢K-중소·스타트업 AI 혁신 전략｣ 로드맵 제시",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780512&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "에임인텔리전스 \"AGI급 '아스트라'도 보안 공백 여전...다음은 로봇·자율주행\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214964",
+              "source": "AI타임스"
             },
             {
-              "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
-              "url": "https://n.news.naver.com/mnews/article/016/0002693752",
-              "source": "NAVER · 헤럴드경제"
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
+              "url": "https://www.etnews.com/20260907000412",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
+              "url": "https://www.etnews.com/20260907000410",
+              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 15,
+          "articleCount": 17,
           "articles": [
+            {
+              "title": "인간 앞서는 ‘특이점’ 왔나… 오픈AI도 젠슨 황도 “AGI 시대 열렸다”",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997194",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "젠슨 황, 아스트라 지목 “AGI 시대 왔다”… AI주 랠리 다시 시작하나",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464498",
+              "source": "NAVER · 전자신문"
+            },
             {
               "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
               "url": "https://www.etnews.com/20260907000453",
@@ -3608,56 +3753,19 @@
               "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
               "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240461",
-              "source": "NAVER · 디지털데일리"
-            }
-          ]
-        },
-        {
-          "key": "robotics",
-          "label": "로보틱스",
-          "articleCount": 15,
-          "articles": [
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
-              "url": "https://www.etnews.com/20260907000412",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
-              "url": "https://www.etnews.com/20260907000410",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 시사회 참석한 하정우 국가인공지능전략위원회 부위원장",
-              "url": "https://www.etnews.com/20260907000413",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
-              "url": "https://www.etnews.com/20260907000460",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214955",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 6,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "“신입 뽑을 이유 없다” 59세 리니지 아버지가 AI로 만든 신작",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549782",
+              "source": "NAVER · 중앙일보"
+            },
             {
               "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
@@ -3677,11 +3785,6 @@
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
               "source": "AI타임스"
-            },
-            {
-              "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
-              "url": "https://n.news.naver.com/mnews/article/001/0016293283",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
@@ -3715,8 +3818,13 @@
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
               "url": "https://n.news.naver.com/mnews/article/014/0005572082",
