@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T17:03:08.707544+00:00",
+  "generated_at": "2026-09-07T20:27:26.494402+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 19,
+        "collected": 29,
         "analyzed": 0,
-        "pending": 19,
+        "pending": 29,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -359,7 +359,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
@@ -555,6 +555,18 @@
               ]
             },
             {
+              "name": "Hugging Face",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+                  "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+                  "source": "TechCrunch"
+                }
+              ]
+            },
+            {
               "name": "OpenAI is building…",
               "category": "AI",
               "articleCount": 1,
@@ -586,18 +598,6 @@
                 {
                   "title": "How XPUs Meet a World-Class AI Factory",
                   "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-                  "source": "NVIDIA"
-                }
-              ]
-            },
-            {
-              "name": "Vera Rubin",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                  "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
                   "source": "NVIDIA"
                 }
               ]
@@ -1314,9 +1314,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 643,
+        "collected": 635,
         "analyzed": 0,
-        "pending": 643,
+        "pending": 635,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1666,7 +1666,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
@@ -1862,6 +1862,18 @@
               ]
             },
             {
+              "name": "Hugging Face",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+                  "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+                  "source": "TechCrunch"
+                }
+              ]
+            },
+            {
               "name": "OpenAI is building…",
               "category": "AI",
               "articleCount": 1,
@@ -1893,18 +1905,6 @@
                 {
                   "title": "How XPUs Meet a World-Class AI Factory",
                   "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-                  "source": "NVIDIA"
-                }
-              ]
-            },
-            {
-              "name": "Vera Rubin",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                  "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
                   "source": "NVIDIA"
                 }
               ]
@@ -2841,9 +2841,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 366,
+        "collected": 376,
         "analyzed": 0,
-        "pending": 366,
+        "pending": 376,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3193,7 +3193,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
@@ -3389,6 +3389,18 @@
               ]
             },
             {
+              "name": "Hugging Face",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Alabama launches investigation into OpenAI’s hack of Hugging Face",
+                  "url": "https://techcrunch.com/2026/08/24/alabama-launches-investigation-into-openais-hack-of-hugging-face/",
+                  "source": "TechCrunch"
+                }
+              ]
+            },
+            {
               "name": "OpenAI is building…",
               "category": "AI",
               "articleCount": 1,
@@ -3420,18 +3432,6 @@
                 {
                   "title": "How XPUs Meet a World-Class AI Factory",
                   "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-                  "source": "NVIDIA"
-                }
-              ]
-            },
-            {
-              "name": "Vera Rubin",
-              "category": "AI",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-                  "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
                   "source": "NVIDIA"
                 }
               ]
