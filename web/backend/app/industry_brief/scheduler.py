@@ -9,11 +9,14 @@ collector.py의 오래된 코멘트가 "no scheduler (Phase 7)"라고 적어둔 
 충분하다 — 단일 인스턴스로 로컬에 떠 있는 배포 형태에 맞춘 선택이다.
 """
 import logging
+import subprocess
 import sys
 import threading
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 from ..database import SessionLocal
+from ..game_sites.portal_collector import refresh_portal_sites
 from .highlights import refresh_and_save_highlights
 from .periods import KST
 from .refresh import refresh_industry_brief
@@ -22,6 +25,17 @@ from .routes import _brief_cache
 logger = logging.getLogger(__name__)
 
 DAILY_REFRESH_HOUR_KST = 7
+
+# 타사 이벤트/타사 사이트 — LLM 호출이 없는 순수 스크레이핑이라 비용
+# 걱정 없이 시간마다 돌린다(GitHub Pages 쪽 CI가 uxtler-pages.yml에서
+# 쓰는 것과 같은 주기). 이 CI는 매번 "[skip ci]" 커밋만 남기는데, 그
+# 접두어가 붙은 push는 GitHub가 다른 워크플로(deploy-oci.yml 포함)까지
+# 통째로 건너뛰게 만든다 — 그래서 이 서버에 새 코드를 배포하는 커밋이
+# 없으면 타사 이벤트/사이트 데이터가 영영 안 바뀌었다. 서버 스스로
+# 갱신하게 해서 그 배포 타이밍 의존성을 없앤다.
+BENCH_REFRESH_INTERVAL_SECONDS = 60 * 60
+_BACKEND_DIR = Path(__file__).resolve().parents[2]
+_EVENT_BENCH_REFRESH_SCRIPT = _BACKEND_DIR / "event_bench_refresh.py"
 
 
 def _seconds_until_next_run(now_kst: datetime) -> float:
@@ -60,6 +74,35 @@ def _loop() -> None:
         _run_once()
 
 
+def _run_bench_refresh_once() -> None:
+    """수동 "수집"/"지금 수집" 버튼과 완전히 같은 경로를 그대로 재사용한다
+    (event_bench는 별도 프로세스 스크립트, game_sites는 함수 호출) —
+    자동/수동이 다른 결과를 내지 않게."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(_EVENT_BENCH_REFRESH_SCRIPT)],
+            cwd=_BACKEND_DIR, capture_output=True, text=True, timeout=600,
+        )
+        if result.returncode != 0:
+            logger.error("event_bench 자동 갱신 실패(exit %d): %s", result.returncode, result.stderr[-2000:])
+        else:
+            logger.info("event_bench 자동 갱신 완료")
+    except Exception:
+        logger.exception("event_bench 자동 갱신 중 예외")
+
+    try:
+        refresh_portal_sites()
+        logger.info("game_sites 자동 갱신 완료")
+    except Exception:
+        logger.exception("game_sites 자동 갱신 중 예외")
+
+
+def _bench_loop() -> None:
+    while True:
+        threading.Event().wait(BENCH_REFRESH_INTERVAL_SECONDS)
+        _run_bench_refresh_once()
+
+
 def start_daily_refresh_scheduler() -> None:
     """앱 시작 시 한 번 호출. 데몬 스레드라 프로세스 종료를 막지 않는다.
 
@@ -71,6 +114,7 @@ def start_daily_refresh_scheduler() -> None:
     """
     if "pytest" in sys.modules:
         return
-    thread = threading.Thread(target=_loop, name="industry-brief-daily-refresh", daemon=True)
-    thread.start()
+    threading.Thread(target=_loop, name="industry-brief-daily-refresh", daemon=True).start()
     logger.info("industry_brief: daily 07:00 KST auto-refresh scheduler started")
+    threading.Thread(target=_bench_loop, name="event-bench-game-sites-hourly-refresh", daemon=True).start()
+    logger.info("event_bench/game_sites: hourly auto-refresh scheduler started")
