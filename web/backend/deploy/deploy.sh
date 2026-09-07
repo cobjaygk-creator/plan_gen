@@ -15,7 +15,10 @@ if [ ! -d .venv ]; then
 fi
 
 echo "==> backend deps"
-.venv/bin/pip install -q -r web/backend/requirements.txt
+# app/main.py -> routers/generations.py -> pipeline_runner.py -> tools/* 가
+# 저장소 루트 requirements.txt(openpyxl 등 PPT 파이프라인 의존성)를 필요로
+# 한다 — web/backend/requirements.txt만 설치하면 임포트 단계에서 죽는다.
+.venv/bin/pip install -q -r requirements.txt -r web/backend/requirements.txt
 
 echo "==> restart service"
 sudo systemctl restart uxui-backend
