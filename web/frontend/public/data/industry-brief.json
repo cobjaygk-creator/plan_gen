@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T01:15:10.466218+00:00",
+  "generated_at": "2026-09-07T01:31:33.735969+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T01:12:26.382919+00:00",
+      "generatedAt": "2026-09-07T01:28:03.088520+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 93,
+        "collected": 108,
         "analyzed": 0,
-        "pending": 93,
+        "pending": 108,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -661,8 +661,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 5,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
+              "url": "https://n.news.naver.com/mnews/article/003/0014172774",
+              "source": "NAVER · 뉴시스"
+            },
             {
               "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
               "url": "https://n.news.naver.com/mnews/article/001/0016293283",
@@ -682,11 +687,6 @@
               "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
               "url": "https://n.news.naver.com/mnews/article/023/0003997002",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "Research acceleration: The view inside OpenAI",
-              "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-              "source": "OpenAI"
             }
           ]
         },
@@ -1361,13 +1361,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T01:12:26.382919+00:00",
+      "generatedAt": "2026-09-07T01:28:03.088520+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 612,
+        "collected": 624,
         "analyzed": 0,
-        "pending": 612,
+        "pending": 624,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2019,8 +2019,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 38,
+          "articleCount": 39,
           "articles": [
+            {
+              "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
+              "url": "https://n.news.naver.com/mnews/article/003/0014172774",
+              "source": "NAVER · 뉴시스"
+            },
             {
               "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
               "url": "https://n.news.naver.com/mnews/article/001/0016293283",
@@ -2040,11 +2045,6 @@
               "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
               "url": "https://n.news.naver.com/mnews/article/023/0003997002",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "Research acceleration: The view inside OpenAI",
-              "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-              "source": "OpenAI"
             }
           ]
         },
@@ -2744,13 +2744,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T01:12:26.382919+00:00",
+      "generatedAt": "2026-09-07T01:28:03.088520+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 93,
+        "collected": 108,
         "analyzed": 0,
-        "pending": 93,
+        "pending": 108,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3402,8 +3402,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 5,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
+              "url": "https://n.news.naver.com/mnews/article/003/0014172774",
+              "source": "NAVER · 뉴시스"
+            },
             {
               "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
               "url": "https://n.news.naver.com/mnews/article/001/0016293283",
@@ -3423,11 +3428,6 @@
               "title": "AI들이 팀처럼 움직였다… 사이트 해킹하고 정보도 공유",
               "url": "https://n.news.naver.com/mnews/article/023/0003997002",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "Research acceleration: The view inside OpenAI",
-              "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-              "source": "OpenAI"
             }
           ]
         },
