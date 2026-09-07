@@ -89,6 +89,12 @@
   color: var(--ink-muted);
   font-size: var(--fs-body);
   line-height: 1.65;
+  /* 근거 문단 길이가 칸마다 들쭉날쭉해서 줄 수가 다르면 레이아웃이
+     덜그럭거려 보였다 — 최대 3줄로 통일. */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .ib-lead-grounds p strong { color: var(--ink); font-weight: 600; }
 .ib-lead-prose {
