@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 
 from ..config import BENCHMARK_DATA_DIR
 from ..database import get_db
-from ..deps import get_current_user
+from ..deps import get_current_user, get_current_user_optional
 from ..media_cache import as_absolute_path
 from ..models import User
 from ..preregistration.models import GamePreRegistration
@@ -89,7 +89,7 @@ def refresh_game_sites(user: User = Depends(get_current_user)):
 def list_game_sites(
     site_type: str | None = None,
     db: Session = Depends(get_db),
-    user: User = Depends(get_current_user),
+    user: User | None = Depends(get_current_user_optional),
 ):
     preregistrations = db.scalars(
         select(GamePreRegistration)

@@ -8,7 +8,7 @@ from threading import Lock
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from ..config import BENCHMARK_DATA_DIR
-from ..deps import get_current_user
+from ..deps import get_current_user, get_current_user_optional
 from ..media_cache import as_absolute_path
 from ..models import User
 
@@ -21,7 +21,7 @@ _REFRESH_LOCK = Lock()
 
 
 @router.get("/candidates")
-def list_candidates(user: User = Depends(get_current_user)):
+def list_candidates(user: User | None = Depends(get_current_user_optional)):
     """Return the locally collected, verified FC ONLINE event candidates."""
     if not _SAMPLE_PATH.is_file():
         raise HTTPException(status.HTTP_404_NOT_FOUND, "아직 수집된 이벤트 벤치마크 샘플이 없습니다.")

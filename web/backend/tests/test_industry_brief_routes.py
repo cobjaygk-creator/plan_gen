@@ -60,9 +60,12 @@ def _seed_brief(db):
     return brief, issue
 
 
-def test_latest_requires_login(client):
+def test_latest_is_public_without_login(client, db_factory):
+    # 업계동향은 로그인 없이도 볼 수 있어야 한다 — 브리핑이 아직 없으니
+    # 401(로그인 필요)이 아니라 404(데이터 없음)로 응답한다.
+    db_factory()
     res = client.get("/industry-brief/latest")
-    assert res.status_code == 401
+    assert res.status_code == 404
 
 
 def test_latest_returns_404_when_no_brief_exists(client, make_user, db_factory):
@@ -173,6 +176,12 @@ def test_day_endpoint_404s_when_no_brief_exists(client, make_user, db_factory):
     db_factory()
     res = client.post("/industry-brief/day/2026-08-10")
     assert res.status_code == 404
+
+
+def test_highlights_are_public_without_login(client, db_factory):
+    db_factory()
+    res = client.get("/industry-brief/highlights")
+    assert res.status_code == 200
 
 
 def test_day_highlights_placeholder_when_nothing_generated_that_day(client, make_user, db_factory):

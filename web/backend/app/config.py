@@ -33,3 +33,12 @@ BENCHMARK_DATA_DIR.mkdir(parents=True, exist_ok=True)
 SESSION_SECRET_KEY = os.environ.get("SESSION_SECRET_KEY", "dev-only-insecure-secret-change-me")
 SESSION_COOKIE_NAME = "plan_gen_session"
 SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 7  # 7 days
+
+# 업계동향/타사 이벤트/타사 사이트는 로그인 없이 공개 열람할 수 있게 열었다
+# (get_current_user_optional 참고). 새로고침 등 실제 비용(LLM 호출)이 드는
+# 작업은 여전히 로그인을 요구하지만 이 계정으로 제한하지는 않는다 — 팀
+# 계정 전체가 함께 쓰는 기존 방식 그대로다. 이 값은 프런트엔드가 "기획서
+# 생성/생성 이력/민심 체크기 메뉴를 보여줄지"를 판단하는 데만 쓰인다
+# (web/frontend/src/auth/adminEmail.ts에 같은 값을 따로 둔다 — 백엔드
+# 설정을 프런트가 직접 import할 수 없어서 부득이하게 두 곳에 둔다).
+ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "stkim@actoz.com")

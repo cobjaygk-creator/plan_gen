@@ -15,7 +15,7 @@ from sqlalchemy import delete, func, select
 from sqlalchemy.orm import Session
 
 from ..database import get_db
-from ..deps import get_current_user
+from ..deps import get_current_user, get_current_user_optional
 from ..models import User
 from .collector import collect_all
 from .models import Article, DailyBrief, EditorialRule, EditorialRuleAudit, Issue, IssueArticle, IssueFeedback
@@ -1052,20 +1052,20 @@ def _serialize_brief(
 
 
 @router.get("/landscape")
-def get_industry_landscape(user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+def get_industry_landscape(user: User | None = Depends(get_current_user_optional), db: Session = Depends(get_db)):
     """Historical map based on the planning team’s curated scrape baseline."""
     return build_landscape(db)
 
 @router.get("/landscape/{issue_key}/articles")
 def get_landscape_issue_articles(
     issue_key: str,
-    user: User = Depends(get_current_user),
+    user: User | None = Depends(get_current_user_optional),
     db: Session = Depends(get_db),
 ):
     return build_issue_detail(db, issue_key)
 
 @router.post("/period/{period}")
-def get_period_brief(period: str, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+def get_period_brief(period: str, user: User | None = Depends(get_current_user_optional), db: Session = Depends(get_db)):
     """Read stored articles immediately; period-tab clicks never collect or call AI."""
     if period not in PERIOD_LABELS:
         raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, "지원하지 않는 기간입니다.")
@@ -1082,7 +1082,7 @@ def get_period_brief(period: str, user: User = Depends(get_current_user), db: Se
 
 
 @router.post("/day/{date}")
-def get_day_brief(date: str, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+def get_day_brief(date: str, user: User | None = Depends(get_current_user_optional), db: Session = Depends(get_db)):
     """The single-date browser that replaced the 오늘/3일/이번주 tabs —
     same computation as /period/{period}, just windowed to one KST calendar
     day instead of a rolling period. `date` is "YYYY-MM-DD"."""
@@ -1102,7 +1102,7 @@ def get_day_brief(date: str, user: User = Depends(get_current_user), db: Session
 
 
 @router.get("/highlights/day/{date}")
-def get_day_highlights(date: str, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def get_day_highlights(date: str, db: Session = Depends(get_db), user: User | None = Depends(get_current_user_optional)):
     """핵심 이슈/추천 기사 for one specific calendar date, from whichever
     snapshot(s) were generated that day — see DailyHighlightSnapshot's
     "kept as history, not overwritten" note. Placeholder (hasSignal=false,
@@ -1146,7 +1146,7 @@ def refresh_latest_brief(user: User = Depends(get_current_user), db: Session = D
 
 
 @router.get("/highlights")
-def get_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def get_daily_highlights(db: Session = Depends(get_db), user: User | None = Depends(get_current_user_optional)):
     """AI-judged 핵심 이슈(3~5) + 추천 기사 for the last 24h, per category — see
     highlights.py. Serves the latest saved snapshot; use the refresh endpoint
     to recompute. Returns has_signal=false placeholders for a category with
@@ -1160,7 +1160,7 @@ def get_daily_highlights(db: Session = Depends(get_db), user: User = Depends(get
 
 @router.get("/highlights/collected")
 def list_collected_articles(
-    category: str, db: Session = Depends(get_db), user: User = Depends(get_current_user),
+    category: str, db: Session = Depends(get_db), user: User | None = Depends(get_current_user_optional),
 ):
     """추천 기사 "더보기" 팝업 — 핵심이슈/추천 9건으로 추려지기 전, AI 판단이
     실제로 훑어본 최근 24시간 수집분 전체를 그대로 보여준다."""
@@ -1414,7 +1414,7 @@ def clear_issue_feedback(
     return {"issueId": issue_id, "restored": bool(deleted)}
 
 @router.get("/latest")
-def get_latest_brief(user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+def get_latest_brief(user: User | None = Depends(get_current_user_optional), db: Session = Depends(get_db)):
     # Range-tab snapshots use keys such as "2026-08-12:3d".  The latest
     # endpoint must never return one of them for the default daily board.
     brief = db.execute(

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
+import { ADMIN_EMAIL } from "../auth/adminEmail";
 import "./AppShell.css";
 
 function PlusIcon() {
@@ -64,6 +65,7 @@ function navClass({ isActive }: { isActive: boolean }) {
 export function AppShell() {
   const { user, logout } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+  const isAdmin = user?.email === ADMIN_EMAIL;
 
   return (
     <div className="app-shell">
@@ -74,25 +76,29 @@ export function AppShell() {
           </div>
         </div>
         <div className="gnb-right">
-          <div className="user-menu">
-            <button
-              type="button"
-              className="user-chip"
-              onClick={() => setMenuOpen((v) => !v)}
-              aria-expanded={menuOpen}
-            >
-              <span className="avatar">{user?.name?.[0] ?? "?"}</span>
-              <span className="name">{user?.name}</span>
-              <ChevronDown />
-            </button>
-            {menuOpen && (
-              <div className="user-menu-popover">
-                <button type="button" onClick={() => logout()}>
-                  로그아웃
-                </button>
-              </div>
-            )}
-          </div>
+          {/* 로그인 없이 보는 게 기본 화면이라, 로그인 버튼/사용자 표시
+              자체를 관리자로 실제 로그인했을 때만 보여준다. */}
+          {isAdmin && (
+            <div className="user-menu">
+              <button
+                type="button"
+                className="user-chip"
+                onClick={() => setMenuOpen((v) => !v)}
+                aria-expanded={menuOpen}
+              >
+                <span className="avatar">{user?.name?.[0] ?? "?"}</span>
+                <span className="name">{user?.name}</span>
+                <ChevronDown />
+              </button>
+              {menuOpen && (
+                <div className="user-menu-popover">
+                  <button type="button" onClick={() => logout()}>
+                    로그아웃
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
       <div className="app-body">
@@ -116,22 +122,26 @@ export function AppShell() {
             </span>
             {"타사 사이트"}
           </NavLink>
-          <NavLink to="/generate" className={navClass}>
-            <span className="ic">
-              <PlusIcon />
-            </span>
-            기획서 생성
-          </NavLink>
-          <NavLink to="/history" className={navClass}>
-            <span className="ic">
-              <HistoryIcon />
-            </span>
-            생성 이력
-          </NavLink>
-          <NavLink to="/sentiment-checker" className={({ isActive }) => navClass({ isActive }) + " lnb-bottom-item"}>
-            <span className="ic"><PulseIcon /></span>
-            {"민심 체크기"}
-          </NavLink>
+          {isAdmin && (
+            <>
+              <NavLink to="/generate" className={navClass}>
+                <span className="ic">
+                  <PlusIcon />
+                </span>
+                기획서 생성
+              </NavLink>
+              <NavLink to="/history" className={navClass}>
+                <span className="ic">
+                  <HistoryIcon />
+                </span>
+                생성 이력
+              </NavLink>
+              <NavLink to="/sentiment-checker" className={({ isActive }) => navClass({ isActive }) + " lnb-bottom-item"}>
+                <span className="ic"><PulseIcon /></span>
+                {"민심 체크기"}
+              </NavLink>
+            </>
+          )}
         </div>
         <div className="content">
           <Outlet />

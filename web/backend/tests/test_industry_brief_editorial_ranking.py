@@ -54,6 +54,19 @@ def test_single_company_ai_adoption_is_not_core_summary_candidate():
     assert editorial_score(issue, members) == 20.0
 
 
+def test_single_venue_ai_adoption_with_formal_ending_is_filtered():
+    # "하였다→했다" 축약형이 "습니다" 존칭형과 결합하면 "도입하"라는
+    # 어간 자체가 문자열에 안 남는다 — "도입했습니다"에서도 걸려야 한다.
+    issue = _issue(
+        "KT위즈파크 AI 안면인식 입장",
+        "수원 KT위즈파크가 AI 기술을 활용하여 안면인식 입장과 맞춤 응원 서비스를 도입했습니다.",
+        category="AI",
+    )
+    members = [_article("KT위즈파크, AI 안면인식 입장 서비스 도입")]
+
+    assert is_core_summary_candidate(issue, members) is False
+
+
 def test_ai_model_launch_remains_core_even_if_a_company_adopts_something():
     issue = _issue(
         "오픈AI GPT-6 아스트라 공개",
