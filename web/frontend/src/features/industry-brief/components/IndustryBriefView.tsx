@@ -214,6 +214,7 @@ export function IndustryBriefView() {
           <LeadCard
             dotColor="var(--warning)"
             eyebrow="업데이트"
+            compact
             headline={
               // updateHeadline은 백엔드가 "최근 OOO에서 ~ 관련 ~가
               // 있었습니다" 형태로 이미 짧게 완결해서 내려준다 — 화면에서
