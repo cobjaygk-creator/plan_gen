@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T02:12:53.939042+00:00",
+  "generated_at": "2026-09-07T03:05:59.774869+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T02:08:27.579356+00:00",
+      "generatedAt": "2026-09-07T03:02:55.324924+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 138,
+        "collected": 186,
         "analyzed": 0,
-        "pending": 138,
+        "pending": 186,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -661,8 +661,18 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 8,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "AI 에이전트 시대, '데이터 의미'가 경쟁력…'AI Ready Data 2026' 성료",
+              "url": "https://www.etnews.com/20260907000198",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
             {
               "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
               "url": "https://n.news.naver.com/mnews/article/366/0001190727",
@@ -677,24 +687,24 @@
               "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
               "url": "https://n.news.naver.com/mnews/article/003/0014172774",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
-              "url": "https://n.news.naver.com/mnews/article/001/0016293283",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://www.etnews.com/20260907000103",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 5,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
+              "source": "NAVER · 중앙일보"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
             {
               "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
               "url": "https://n.news.naver.com/mnews/article/008/0005410226",
@@ -709,16 +719,6 @@
               "title": "오픈AI ‘아스트라’가 드러낸 AI 기술 승부처는... 바로 기억",
               "url": "https://n.news.naver.com/mnews/article/023/0003997031",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "젠슨 황 \"GPU 40만개 추가 가동\"…AI 인프라 더 커진다",
-              "url": "https://n.news.naver.com/mnews/article/031/0001055834",
-              "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436390",
-              "source": "NAVER · 지디넷코리아"
             }
           ]
         },
@@ -1376,13 +1376,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T02:08:27.579356+00:00",
+      "generatedAt": "2026-09-07T03:02:55.324924+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 639,
+        "collected": 674,
         "analyzed": 0,
-        "pending": 639,
+        "pending": 674,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2034,8 +2034,18 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 41,
+          "articleCount": 43,
           "articles": [
+            {
+              "title": "AI 에이전트 시대, '데이터 의미'가 경쟁력…'AI Ready Data 2026' 성료",
+              "url": "https://www.etnews.com/20260907000198",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
             {
               "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
               "url": "https://n.news.naver.com/mnews/article/366/0001190727",
@@ -2050,24 +2060,24 @@
               "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
               "url": "https://n.news.naver.com/mnews/article/003/0014172774",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
-              "url": "https://n.news.naver.com/mnews/article/001/0016293283",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://www.etnews.com/20260907000103",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 40,
+          "articleCount": 42,
           "articles": [
+            {
+              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
+              "source": "NAVER · 중앙일보"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
             {
               "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
               "url": "https://n.news.naver.com/mnews/article/008/0005410226",
@@ -2082,16 +2092,6 @@
               "title": "오픈AI ‘아스트라’가 드러낸 AI 기술 승부처는... 바로 기억",
               "url": "https://n.news.naver.com/mnews/article/023/0003997031",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "젠슨 황 \"GPU 40만개 추가 가동\"…AI 인프라 더 커진다",
-              "url": "https://n.news.naver.com/mnews/article/031/0001055834",
-              "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436390",
-              "source": "NAVER · 지디넷코리아"
             }
           ]
         },
@@ -2759,13 +2759,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T02:08:27.579356+00:00",
+      "generatedAt": "2026-09-07T03:02:55.324924+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 138,
+        "collected": 186,
         "analyzed": 0,
-        "pending": 138,
+        "pending": 186,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3417,8 +3417,18 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 8,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "AI 에이전트 시대, '데이터 의미'가 경쟁력…'AI Ready Data 2026' 성료",
+              "url": "https://www.etnews.com/20260907000198",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
             {
               "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
               "url": "https://n.news.naver.com/mnews/article/366/0001190727",
@@ -3433,24 +3443,24 @@
               "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
               "url": "https://n.news.naver.com/mnews/article/003/0014172774",
               "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
-              "url": "https://n.news.naver.com/mnews/article/001/0016293283",
-              "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://www.etnews.com/20260907000103",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 5,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
+              "source": "NAVER · 중앙일보"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
             {
               "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
               "url": "https://n.news.naver.com/mnews/article/008/0005410226",
@@ -3465,16 +3475,6 @@
               "title": "오픈AI ‘아스트라’가 드러낸 AI 기술 승부처는... 바로 기억",
               "url": "https://n.news.naver.com/mnews/article/023/0003997031",
               "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "젠슨 황 \"GPU 40만개 추가 가동\"…AI 인프라 더 커진다",
-              "url": "https://n.news.naver.com/mnews/article/031/0001055834",
-              "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "오픈AI '아스트라', 보안·안전 기능도 막강...7대 기능 살펴보니",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436390",
-              "source": "NAVER · 지디넷코리아"
             }
           ]
         },
