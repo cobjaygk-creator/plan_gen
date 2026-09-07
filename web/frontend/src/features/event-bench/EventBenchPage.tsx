@@ -1,5 +1,5 @@
 ﻿import { useEffect, useMemo, useState } from "react";
-import { useAuth } from "../../auth/AuthContext";
+import { useOptionalAuth } from "../../auth/AuthContext";
 import { ADMIN_EMAIL } from "../../auth/adminEmail";
 import "./event-bench.css";
 
@@ -69,8 +69,7 @@ export function EventBenchPage() {
   const [latestRefreshOnly, setLatestRefreshOnly] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [refreshFailed, setRefreshFailed] = useState(false);
-  const { user } = useAuth();
-  const isAdmin = user?.email === ADMIN_EMAIL;
+  const isAdmin = useOptionalAuth()?.user?.email === ADMIN_EMAIL;
 
   useEffect(() => {
     fetch("/event-bench/candidates", { credentials: "include" })

@@ -1,5 +1,5 @@
 ﻿import { useEffect, useMemo, useState } from "react";
-import { useAuth } from "../../auth/AuthContext";
+import { useOptionalAuth } from "../../auth/AuthContext";
 import { ADMIN_EMAIL } from "../../auth/adminEmail";
 import "./game-sites.css";
 
@@ -66,8 +66,7 @@ export function GameSitesPage() {
   const [refreshing, setRefreshing] = useState(false);
   const [refreshResult, setRefreshResult] = useState<RefreshResult | null>(null);
   const [refreshError, setRefreshError] = useState<string | null>(null);
-  const { user } = useAuth();
-  const isAdmin = user?.email === ADMIN_EMAIL;
+  const isAdmin = useOptionalAuth()?.user?.email === ADMIN_EMAIL;
 
   function loadSites() {
     return fetch("/game-sites/data", { credentials: "include" })
