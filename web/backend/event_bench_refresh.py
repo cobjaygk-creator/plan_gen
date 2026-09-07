@@ -23,6 +23,8 @@ from app.event_bench.nexon_sample import (
     collect_baram_events,
     collect_lostark_events,
     collect_lineage_events,
+    collect_lineagem_events,
+    collect_blade_and_soul_events,
     collect_black_desert_events,
     collect_gersang_events,
     collect_dnf_events,
@@ -30,6 +32,7 @@ from app.event_bench.nexon_sample import (
     collect_cso_events,
     collect_heroes_events,
     collect_ragnarok_events,
+    collect_audition_events,
 )
 
 OUTPUT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
@@ -44,6 +47,8 @@ COLLECTORS = {
     "\ubc14\ub78c\uc758\ub098\ub77c": collect_baram_events,
     "\ub85c\uc2a4\ud2b8\uc544\ud06c": collect_lostark_events,
     "\ub9ac\ub2c8\uc9c0": collect_lineage_events,
+    "\ub9ac\ub2c8\uc9c0M": collect_lineagem_events,
+    "\ube14\ub808\uc774\ub4dc\uc564\uc18c\uc6b8": collect_blade_and_soul_events,
     "\uac80\uc740\uc0ac\ub9c9": collect_black_desert_events,
     "\uac70\uc0c1": collect_gersang_events,
     "\ub358\uc804\uc564\ud30c\uc774\ud130": collect_dnf_events,
@@ -51,6 +56,7 @@ COLLECTORS = {
     "\uce74\uc6b4\ud130\uc2a4\ud2b8\ub77c\uc774\ud06c \uc628\ub77c\uc778": collect_cso_events,
     "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804": collect_heroes_events,
     "\ub77c\uadf8\ub098\ub85c\ud06c": collect_ragnarok_events,
+    "\uc624\ub514\uc158": collect_audition_events,
 }
 
 
@@ -90,6 +96,10 @@ def canonical_game_for_url(event_url: str | None, current_game: str | None) -> s
         return "\ubc14\ub78c\uc758\ub098\ub77c"
     if "lostark.game.onstove.com" in host:
         return "\ub85c\uc2a4\ud2b8\uc544\ud06c"
+    if "lineagem.plaync.com" in host:
+        return "\ub9ac\ub2c8\uc9c0M"
+    if "bns.plaync.com" in host:
+        return "\ube14\ub808\uc774\ub4dc\uc564\uc18c\uc6b8"
     if "lineage.plaync.com" in host:
         return "\ub9ac\ub2c8\uc9c0"
     if "df.nexon.com" in host:
@@ -102,6 +112,8 @@ def canonical_game_for_url(event_url: str | None, current_game: str | None) -> s
         return "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804"
     if "ro.gnjoy.com" in host:
         return "\ub77c\uadf8\ub098\ub85c\ud06c"
+    if "audition.hangame.com" in host:
+        return "\uc624\ub514\uc158"
     return current_game
 
 

@@ -14,7 +14,7 @@ import subprocess
 from dataclasses import asdict, dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
@@ -27,7 +27,7 @@ TALESWEAVER_EVENTS_URL = "https://tales.nexon.com/News/Event"
 ELSWORD_EVENTS_URL = "https://elsword.nexon.com/News/Events/List"
 BARAM_EVENTS_URL = "https://baram.nexon.com/Event/List"
 LOSTARK_EVENTS_URL = "https://lostark.game.onstove.com/News/Event/Now"
-LINEAGE_EVENTON_API_URL = "https://promotion.plaync.com/eventon/on"
+NC_EVENTON_API_URL = "https://promotion.plaync.com/eventon/item"
 BLACK_DESERT_EVENTS_URL = "https://www.kr.playblackdesert.com/ko-KR/News/Notice?boardType=3&progressType=1"
 GERSANG_EVENTS_URL = "https://www.gersang.co.kr/news/event.gs"
 DNF_EVENTS_URL = "https://df.nexon.com/community/news/event/list"
@@ -35,6 +35,7 @@ TALESRUNNER_EVENT_API_URL = "https://tr.rhaon.co.kr/eventb/event/SNB"
 CSO_EVENTS_URL = "https://csonline.nexon.com/News/Event/List"
 HEROES_EVENTS_URL = "https://heroes.nexon.com/news/event/ing"
 RAGNAROK_EVENTS_URL = "https://ro.gnjoy.com/news/event/list.asp"
+AUDITION_EVENTS_URL = "https://audition.hangame.com/Desk/EventList"
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
 
 
@@ -528,6 +529,39 @@ def collect_ragnarok_events() -> list[EventCandidate]:
     return candidates
 
 
+def collect_audition_events() -> list[EventCandidate]:
+    """Collect Audition(오디션)'s official event cards.
+
+    The "진행중인 이벤트"(id="progress") list actually keeps stale entries
+    around past their listed end date (confirmed live: an event that ended
+    2025-07-31 was still showing today) — like the other sources here, trust
+    each card's own printed date range rather than which tab it sits under."""
+    soup = BeautifulSoup(_fetch_html(AUDITION_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for item in soup.select("ul#progress > li"):
+        title_link = item.select_one("dt.title a[href]")
+        if title_link is None:
+            continue
+        title = title_link.get_text(" ", strip=True)
+        event_url = urljoin(AUDITION_EVENTS_URL, title_link.get("href", "").strip())
+        if not title or not event_url or event_url in seen:
+            continue
+        starts_on, ends_on = _date_parts(" ".join(item.stripped_strings))
+        if not _is_current_or_scheduled(starts_on, ends_on):
+            continue
+        seen.add(event_url)
+        image = item.select_one(".thumb img")
+        candidates.append(EventCandidate(
+            publisher="한빛소프트", game="오디션", title=title, event_url=event_url,
+            hero_image_url=urljoin(AUDITION_EVENTS_URL, image.get("src", "").strip()) if image and image.get("src") else None,
+            starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format=_event_format(event_url), collected_at=collected_at,
+        ))
+    return candidates
+
+
 def collect_talesrunner_events() -> list[EventCandidate]:
     """Collect dated, active campaigns from TalesRunner's official event API."""
     payload = json.loads(_fetch_html(TALESRUNNER_EVENT_API_URL))
@@ -588,32 +622,82 @@ def collect_dnf_events() -> list[EventCandidate]:
     return candidates
 
 
-def collect_lineage_events() -> list[EventCandidate]:
-    """Collect official Lineage EventON cards when the public feed has entries."""
-    payload = json.loads(_fetch_html(LINEAGE_EVENTON_API_URL))
+def _eventon_full_page_entry(item: dict) -> dict | None:
+    """NC\uc758 \uacf5\uc6a9 '\uc774\ubca4\ud2b8ON' \ud50c\ub7ab\ud3fc\uc740 \ub85c\uc2a4\ud2b8\uc544\ud06c\uc640 \ub2ec\ub9ac \uac01 \ud56d\ubaa9\uc774 \uc2e4\uc81c\ub85c
+    \uc5b4\ub514\ub85c \uc5f0\uacb0\ub418\ub294\uc9c0\ub97c URL \ud328\ud134 \ucd94\uce21 \uc5c6\uc774 marketingEntrySet[].entryType\ub85c
+    \uc9c1\uc811 \uc54c\ub824\uc900\ub2e4 \u2014 "promo"\ub294 \uc804\uc6a9 \ub79c\ub529 \ud398\uc774\uc9c0(\ud480\ud398\uc774\uc9c0), "link_board"\ub294
+    \uac8c\uc2dc\ud310 \uae00, "link"\ub294 \uc678\ubd80 \ub9c1\ud06c. \uac8c\uc2dc\ud310/\uc678\ubd80 \ub9c1\ud06c\ub9cc \uc788\ub294 \ud56d\ubaa9\uc740 \uc81c\uc678\ud558\uace0,
+    \ud480\ud398\uc774\uc9c0 entry\uac00 \uc788\uc73c\uba74(\ubcf4\ud1b5 \uae30\uae30\ubcc4\ub85c \uc911\ubcf5) PC(NORMAL)\uc6a9\uc744 \uc6b0\uc120
+    \ub3cc\ub824\uc900\ub2e4 \u2014 \uc2e4\uce21 \ud655\uc778: lineagem.plaync.com/eventon 13\uac74 \uc911 2\uac74\ub9cc promo,
+    \ub098\uba38\uc9c0 11\uac74\uc740 board \uae00\uc774\uc5c8\ub2e4."""
+    entries = [e for e in (item.get("marketingEntrySet") or []) if e.get("entryType") == "promo" and e.get("entryUrl")]
+    if not entries:
+        return None
+    return next((e for e in entries if e.get("entryDevice") == "NORMAL"), entries[0])
+
+
+def _eventon_hero_image(item: dict) -> str | None:
+    additions = {a.get("additionType"): a.get("additionData") for a in (item.get("marketingItemAdditionSet") or [])}
+    return additions.get("eventListImgUrl") or additions.get("eventListSmallImgUrl") or additions.get("snsImgUrl")
+
+
+def _collect_nc_eventon_game(game: str, domain_tag: str) -> list[EventCandidate]:
+    """NC \ud55c \uac8c\uc784\uc758 \uc9c4\ud589 \uc911 \uc774\ubca4\ud2b8 \uc911, \uac8c\uc2dc\ud310 \uae00\uc774 \uc544\ub2c8\ub77c \uc804\uc6a9 \ud480\ud398\uc774\uc9c0\ub85c
+    \uc5f0\uacb0\ub418\ub294 \uac83\ub9cc \ubaa8\uc740\ub2e4. \uc774\uc804\uc5d0\ub294 LINEAGE_EVENTON_API_URL(promotion.plaync.
+    com/eventon/on)\uc744 \ud638\ucd9c\ud588\ub294\ub370, \uc774 \uc5d4\ub4dc\ud3ec\uc778\ud2b8\ub294 \uad00\ub9ac\uc790\uc6a9 \ube48 \uc54c\ub9bc
+    \ubc84\ud0b7({"ON_ISSUE":[],...})\ub9cc \ub3cc\ub824\uc918\uc11c \uc2e4\uc81c\ub85c\ub294 \ud56d\uc0c1 0\uac74\uc774\uc5c8\ub2e4(\uc9c1\uc811
+    \uc2e4\ud589\ud574\uc11c \ud655\uc778) \u2014 \ud654\uba74\uc774 \uc2e4\uc81c\ub85c \ud638\ucd9c\ud558\ub294 \ubaa9\ub85d API(/eventon/item)\ub85c
+    \ubc14\uafe8\ub2e4."""
     collected_at = datetime.now(timezone.utc).isoformat()
     candidates: list[EventCandidate] = []
     seen: set[str] = set()
-    for group in payload.values() if isinstance(payload, dict) else []:
-        for raw_item in group if isinstance(group, list) else []:
-            item = json.loads(raw_item) if isinstance(raw_item, str) else raw_item
-            if not isinstance(item, dict):
+    page = 1
+    while True:
+        tag = quote(f"MKT_PROMOTION,{domain_tag},,", safe="")
+        list_url = f"{NC_EVENTON_API_URL}?tag={tag}&status=RUNNING&pageSize=50&page={page}"
+        payload = json.loads(_fetch_html(list_url))
+        for item in payload.get("content", []):
+            entry = _eventon_full_page_entry(item)
+            if entry is None:
                 continue
-            event_url = (item.get("link") or item.get("url") or "").strip()
-            title = re.sub(r"<[^>]+>", "", str(item.get("title") or "")).strip()
+            event_url = (entry.get("entryUrl") or "").strip()
+            title = (item.get("itemTitle") or "").strip()
             if not event_url or not title or event_url in seen:
                 continue
             seen.add(event_url)
-            date_text = " ".join(str(item.get(key) or "") for key in ("period", "startDate", "endDate"))
-            starts_on, ends_on = _date_parts(date_text)
-            if not _is_current_or_scheduled(starts_on, ends_on, str(item.get("status") or "??")):
-                continue
             candidates.append(EventCandidate(
-                publisher="NCSOFT", game="\ub9ac\ub2c8\uc9c0", title=title, event_url=event_url,
-                hero_image_url=item.get("img") or item.get("image"), starts_on=starts_on, ends_on=ends_on,
-                published_on=None, status="??", event_format="full_page", collected_at=collected_at,
+                publisher="NCSOFT", game=game, title=title, event_url=event_url,
+                hero_image_url=_eventon_hero_image(item),
+                starts_on=(item.get("itemStart") or "")[:10] or None,
+                ends_on=(item.get("itemEnd") or "")[:10] or None,
+                published_on=None, status="ongoing", event_format="full_page", collected_at=collected_at,
             ))
+        if payload.get("last", True):
+            break
+        page += 1
     return candidates
+
+
+def collect_lineage_events() -> list[EventCandidate]:
+    """Collect official Lineage(1) EventON full-page cards (board posts excluded)."""
+    return _collect_nc_eventon_game("\ub9ac\ub2c8\uc9c0", "DOMAIN_LINEAGE")
+
+
+def collect_lineagem_events() -> list[EventCandidate]:
+    """Collect official Lineage M EventON full-page cards (board posts excluded)."""
+    return _collect_nc_eventon_game("\ub9ac\ub2c8\uc9c0M", "DOMAIN_LINEAGEM")
+
+
+def collect_blade_and_soul_events() -> list[EventCandidate]:
+    """Collect official Blade & Soul EventON full-page cards (board posts excluded)."""
+    return _collect_nc_eventon_game("\ube14\ub808\uc774\ub4dc\uc564\uc18c\uc6b8", "DOMAIN_BNS")
+
+# \ub9ac\ub2c8\uc9c02/\ub9ac\ub2c8\uc9c02M/\uc544\uc774\uc628/\uc544\uc774\uc6282\ub3c4 \uac19\uc740 \ud50c\ub7ab\ud3fc(EventON)\uc744 \uc4f0\uc9c0\ub9cc,
+# \uc9c1\uc811 \uc870\ud68c\ud574 \ud655\uc778\ud574\ubcf4\ub2c8 \ud604\uc7ac \uc9c4\ud589 \uc911\uc778 \uc774\ubca4\ud2b8\uac00 \ubaa8\ub450 "promo"(\ud480\ud398\uc774\uc9c0)\uac00
+# \uc544\ub2cc "link_board"(\uac8c\uc2dc\ud310) \ud0c0\uc785\uc774\uc5b4\uc11c, \ud480\ud398\uc774\uc9c0\ub9cc \uac70\ub974\ub294 \uc218\uc9d1\uae30\ub97c \ub192\uc774\uba74
+# \ud56d\uc0c1 0\uac74\uc774\ub2e4 \u2014 event_bench_refresh.py\uac00 \ube48 \uacb0\uacfc\ub97c "\uc218\uc9d1 \uc2e4\ud328"\ub85c \ucde8\uae09\ud574 \ub9e4\ubc88
+# \ub85c\uadf8\uc5d0 \uc624\ub958\ub85c \ucc0d\ud790 \uac83\uc774\ub77c, \ud574\ub2f9 \uac8c\uc784\ub4e4\uc774 \uc2e4\uc81c\ub85c \ud480\ud398\uc774\uc9c0 \uc774\ubca4\ud2b8\ub97c \uc4f0\uae30
+# \uc2dc\uc791\ud558\uba74 \uadf8\ub54c \ucd94\uac00\ud55c\ub2e4.
 
 
 def collect_nexon_events() -> list[EventCandidate]:
@@ -626,16 +710,19 @@ def collect_nexon_events() -> list[EventCandidate]:
         *collect_baram_events(),
         *collect_lostark_events(),
         *collect_lineage_events(),
+        *collect_lineagem_events(),
+        *collect_blade_and_soul_events(),
         *collect_black_desert_events(),
         *collect_gersang_events(),
         *collect_cso_events(),
         *collect_heroes_events(),
         *collect_talesrunner_events(),
         *collect_dnf_events(),
+        *collect_audition_events(),
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -654,6 +741,10 @@ def main() -> None:
         candidates = collect_lostark_events()
     elif args.source == "lineage":
         candidates = collect_lineage_events()
+    elif args.source == "lineagem":
+        candidates = collect_lineagem_events()
+    elif args.source == "blade-and-soul":
+        candidates = collect_blade_and_soul_events()
     elif args.source == "black-desert":
         candidates = collect_black_desert_events()
     elif args.source == "gersang":
@@ -668,6 +759,8 @@ def main() -> None:
         candidates = collect_dnf_events()
     elif args.source == "ragnarok":
         candidates = collect_ragnarok_events()
+    elif args.source == "audition":
+        candidates = collect_audition_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)
