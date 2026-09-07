@@ -1965,15 +1965,17 @@
 /* 글씨 30% 확대 요청 — 버블 팝업 기본값(제목 13px 등) 대비 전부 ×1.3. */
 .ib-topic-freshness-popover .ib-bubble-popover-head strong { font-size: 16.25px; }
 .ib-topic-freshness-popover .ib-bubble-popover-head button { font-size: 21px; }
-.ib-topic-freshness-popover .outlet { display: block; margin-bottom: 2px; color: var(--accent); font-size: 15px; font-weight: 600; }
+/* 기사 텍스트 15% 축소(매체명 15→12.75px, 제목 17→14.5px), 제목은 여러
+   줄로 늘어지지 않게 1줄 말줄임으로 바꾼다. */
+.ib-topic-freshness-popover .outlet { display: block; margin-bottom: 2px; color: var(--accent); font-size: 12.75px; font-weight: 600; }
 .ib-topic-freshness-popover .title {
-  display: -webkit-box;
+  display: block;
   overflow: hidden;
   color: var(--ink-muted);
-  font-size: 17px;
+  font-size: 14.5px;
   line-height: 1.5;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media (max-width: 720px) {
   .ib-topic-freshness-grid { grid-template-columns: 1fr; gap: 20px; }
