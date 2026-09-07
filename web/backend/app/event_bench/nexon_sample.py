@@ -36,7 +36,11 @@ CSO_EVENTS_URL = "https://csonline.nexon.com/News/Event/List"
 HEROES_EVENTS_URL = "https://heroes.nexon.com/news/event/ing"
 RAGNAROK_EVENTS_URL = "https://ro.gnjoy.com/news/event/list.asp"
 AUDITION_EVENTS_URL = "https://audition.hangame.com/Desk/EventList"
+CYPHERS_EVENTS_URL = "https://cyphers.nexon.com/article/event/running"
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
+# Cyphers prints dates without a year ("9/3 점검 후 ~ 9/22 점검 전") — _DATE_RANGE
+# expects a 4-digit year and never matches this format.
+_MD_RANGE = re.compile(r"(\d{1,2})/(\d{1,2}).*?~.*?(\d{1,2})/(\d{1,2})")
 
 
 @dataclass(frozen=True)
@@ -122,6 +126,8 @@ def _event_format(event_url: str) -> str:
         return "full_page"
     if host == "tales.nexon.com" and re.match(r"/\d{6}/", path):
         return "full_page"
+    if host == "cyphers.nexon.com" and path.startswith("/pages/events/"):
+        return "full_page"
     return "board"
 
 
@@ -154,6 +160,30 @@ def _date_parts(value: str) -> tuple[str | None, str | None]:
         return None, None
     normalize = lambda value: re.sub(r"\s*[.-]\s*", "-", value)
     return normalize(match.group(1)), normalize(match.group(2))
+
+
+def _date_parts_md(value: str, reference: date | None = None) -> tuple[str | None, str | None]:
+    """Cyphers' event list only ever shows month/day ("9/3 점검 후 ~ 9/22
+    점검 전"), never a year. The list is always ongoing/upcoming campaigns
+    only, so if a parsed date lands more than ~2 months in the past relative
+    to today it must actually be next year's (the range wrapped past
+    new year's)."""
+    match = _MD_RANGE.search(value)
+    if not match:
+        return None, None
+    reference = reference or date.today()
+
+    def to_iso(month: str, day: str) -> str | None:
+        try:
+            candidate = date(reference.year, int(month), int(day))
+        except ValueError:
+            return None
+        if (reference - candidate).days > 60:
+            candidate = candidate.replace(year=candidate.year + 1)
+        return candidate.isoformat()
+
+    return to_iso(match.group(1), match.group(2)), to_iso(match.group(3), match.group(4))
+
 
 def _is_current_or_scheduled(starts_on: str | None, ends_on: str | None, status_text: str = "") -> bool:
     """Keep only official entries that are ongoing or announced for the future."""
@@ -622,6 +652,36 @@ def collect_dnf_events() -> list[EventCandidate]:
     return candidates
 
 
+def collect_cyphers_events() -> list[EventCandidate]:
+    """Collect Cyphers(사이퍼즈) events — 풀페이지(dedicated "/pages/events/..."
+    landing pages)만 수집한다. 게시판형("/article/event/topic/...") 공지는
+    명시적 요청에 따라 제외한다."""
+    soup = BeautifulSoup(_fetch_html(CYPHERS_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for card in soup.select("div.event_list > ul"):
+        title_link = card.select_one("li.tbox p a[href]")
+        if title_link is None:
+            continue
+        event_url = urljoin(CYPHERS_EVENTS_URL, title_link.get("href", "").strip())
+        if _event_format(event_url) != "full_page":
+            continue
+        title = title_link.get_text(" ", strip=True)
+        if not title or event_url in seen:
+            continue
+        seen.add(event_url)
+        date_node = card.select_one("li.tbox p.date")
+        starts_on, ends_on = _date_parts_md(date_node.get_text(" ", strip=True) if date_node else "")
+        image = card.select_one("li.thum img")
+        candidates.append(EventCandidate(
+            publisher="NEXON Korea", game="사이퍼즈", title=title, event_url=event_url,
+            hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="full_page", collected_at=collected_at,
+        ))
+    return candidates
+
+
 def _eventon_full_page_entry(item: dict) -> dict | None:
     """NC\uc758 \uacf5\uc6a9 '\uc774\ubca4\ud2b8ON' \ud50c\ub7ab\ud3fc\uc740 \ub85c\uc2a4\ud2b8\uc544\ud06c\uc640 \ub2ec\ub9ac \uac01 \ud56d\ubaa9\uc774 \uc2e4\uc81c\ub85c
     \uc5b4\ub514\ub85c \uc5f0\uacb0\ub418\ub294\uc9c0\ub97c URL \ud328\ud134 \ucd94\uce21 \uc5c6\uc774 marketingEntrySet[].entryType\ub85c
@@ -719,10 +779,11 @@ def collect_nexon_events() -> list[EventCandidate]:
         *collect_talesrunner_events(),
         *collect_dnf_events(),
         *collect_audition_events(),
+        *collect_cyphers_events(),
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -761,6 +822,8 @@ def main() -> None:
         candidates = collect_ragnarok_events()
     elif args.source == "audition":
         candidates = collect_audition_events()
+    elif args.source == "cyphers":
+        candidates = collect_cyphers_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)

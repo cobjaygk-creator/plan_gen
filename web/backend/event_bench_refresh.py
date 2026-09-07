@@ -33,6 +33,7 @@ from app.event_bench.nexon_sample import (
     collect_heroes_events,
     collect_ragnarok_events,
     collect_audition_events,
+    collect_cyphers_events,
 )
 
 OUTPUT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
@@ -57,6 +58,7 @@ COLLECTORS = {
     "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804": collect_heroes_events,
     "\ub77c\uadf8\ub098\ub85c\ud06c": collect_ragnarok_events,
     "\uc624\ub514\uc158": collect_audition_events,
+    "\uc0ac\uc774\ud37c\uc988": collect_cyphers_events,
 }
 
 
@@ -114,6 +116,8 @@ def canonical_game_for_url(event_url: str | None, current_game: str | None) -> s
         return "\ub77c\uadf8\ub098\ub85c\ud06c"
     if "audition.hangame.com" in host:
         return "\uc624\ub514\uc158"
+    if "cyphers.nexon.com" in host:
+        return "\uc0ac\uc774\ud37c\uc988"
     return current_game
 
 
