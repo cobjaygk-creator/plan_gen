@@ -140,7 +140,21 @@ export function IndustryBriefView() {
   }, []);
 
   if (loading) return <BriefSkeleton />;
-  if (error && !brief) return <div className="ib-page-status">아직 생성된 Industry Brief가 없습니다.<br />첫 분석이 완료되면 표시됩니다.</div>;
+  if (error && !brief) return (
+    <div className="ib-page-status">
+      아직 생성된 Industry Brief가 없습니다.<br />
+      {/* 새로 배포한 서버처럼 DB가 완전히 비어있을 때, 여기서 막다른 길이었다 —
+          평소 새로고침 버튼은 브리핑이 이미 있어야 나오는 헤더 안에만 있어서,
+          최초 수집을 시작할 방법 자체가 화면에 없었다. */}
+      첫 수집을 시작해주세요.
+      <div className="ib-page-status-action">
+        <button type="button" className={`ib-refresh${refreshing ? " is-refreshing" : ""}`} onClick={() => void refreshToday()} disabled={refreshing}>
+          <span aria-hidden="true">↻</span> {refreshing ? "수집 중" : "첫 수집 시작"}
+        </button>
+      </div>
+      <RefreshProgress open={refreshing} />
+    </div>
+  );
   if (!brief) return null;
 
   const trendFreshCount = brief.analytics?.topicFreshness.fresh.length ?? 0;

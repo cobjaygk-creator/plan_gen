@@ -746,6 +746,7 @@
   color: var(--ink-faint);
   font-size: 13px;
 }
+.ib-page-status-action { margin-top: 16px; }
 
 /* ---- live board redesign ---- */
 .ib-notice {
