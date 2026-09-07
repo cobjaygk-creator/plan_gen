@@ -19,18 +19,19 @@ from .portal_collector import LAST_REFRESH_PATH, OFFICIAL_PATH, refresh_portal_s
 router = APIRouter(prefix="/game-sites", tags=["game-sites"])
 _EVENT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
 _OFFICIAL_PATH = OFFICIAL_PATH
-SITE_TYPES = ("OFFICIAL", "PREREGISTRATION", "TEASER", "MICROSITE", "PROMOTION")
+SITE_TYPES = ("OFFICIAL", "PREREGISTRATION", "TEASER", "MICROSITE")
 
 
 def _event_site_type(url: str, title: str) -> str:
-    parsed = urlparse(url)
-    path = parsed.path.lower()
-    value = f"{title} {path}".lower()
-    if any(token in value for token in ("teaser", "티저", "countdown")):
+    """MICROSITE/PROMOTION 2분류는 URL 경로 키워드만으로 실제 신뢰도 있게
+    구분되지 않았다 — 똑같은 성격(아이템 팩 이벤트)의 페이지가 URL 형태
+    차이만으로 다르게 분류되는 게 실데이터로 확인됐다. 티저(제목·URL에
+    명시적으로 드러나 신뢰도가 높은 신호)만 따로 두고, 나머지는 전부
+    마이크로사이트로 통칭한다."""
+    value = f"{title} {urlparse(url).path}".lower()
+    if any(token in value for token in ("teaser", "티저", "countdown", "카운트다운")):
         return "TEASER"
-    if any(token in path for token in ("/promotion/", "/eventfull/", "/pg/", "/event/", "/page/event/")):
-        return "MICROSITE"
-    return "PROMOTION"
+    return "MICROSITE"
 
 
 def _load_event_sites() -> list[dict]:

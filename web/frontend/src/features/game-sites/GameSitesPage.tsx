@@ -1,7 +1,7 @@
 ﻿import { useEffect, useMemo, useState } from "react";
 import "./game-sites.css";
 
-type SiteType = "OFFICIAL" | "PREREGISTRATION" | "TEASER" | "MICROSITE" | "PROMOTION";
+type SiteType = "OFFICIAL" | "PREREGISTRATION" | "TEASER" | "MICROSITE";
 type GameSite = {
   id: string;
   game_name: string;
@@ -24,7 +24,6 @@ const TYPE_LABEL: Record<SiteType | typeof ALL, string> = {
   PREREGISTRATION: "\uc0ac\uc804\uc608\uc57d",
   TEASER: "\ud2f0\uc800",
   MICROSITE: "\ub9c8\uc774\ud06c\ub85c\uc0ac\uc774\ud2b8",
-  PROMOTION: "\ud504\ub85c\ubaa8\uc158",
 };
 
 function hostFor(url: string) {
