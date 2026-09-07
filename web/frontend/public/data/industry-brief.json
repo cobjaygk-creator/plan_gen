@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T03:34:53.620994+00:00",
+  "generated_at": "2026-09-07T03:53:17.956542+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T03:30:37.382624+00:00",
+      "generatedAt": "2026-09-07T03:50:23.475129+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 201,
+        "collected": 204,
         "analyzed": 0,
-        "pending": 201,
+        "pending": 204,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -629,8 +629,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 13,
+          "articleCount": 14,
           "articles": [
+            {
+              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
+              "source": "NAVER · 서울신문"
+            },
             {
               "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
               "url": "https://n.news.naver.com/mnews/article/138/0002240413",
@@ -650,11 +655,6 @@
               "title": "[CPU 대란 주의보 ⑦] 맥북 에어 200달러 뛰었다… 데이터센터 독식에 PC 가격인상 '압박'",
               "url": "https://n.news.naver.com/mnews/article/138/0002240379",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "실리콘밸리는 지금 공사 중…‘AI 제국’ 짓는 빅테크",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997026",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
@@ -723,6 +723,38 @@
           ]
         },
         {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 6,
+          "articles": [
+            {
+              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
+              "source": "NAVER · 서울신문"
+            },
+            {
+              "title": "中 로봇에 AI 최적화하니 옷 접는 시간 25초 줄었다",
+              "url": "https://n.news.naver.com/mnews/article/014/0005571801",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214923",
+              "source": "AI타임스"
+            },
+            {
+              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "이츠인, 기업부설연구소 가산디지털단지 확대 이전… 다크팩토리 R&D 본격화",
+              "url": "https://www.etnews.com/20260907000066",
+              "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
           "key": "coding",
           "label": "코딩 AI",
           "articleCount": 3,
@@ -753,6 +785,18 @@
               "title": "An Amazon cargo plane crashed at Miami International Airport",
               "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
               "source": "The Verge"
+            }
+          ]
+        },
+        {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
+              "source": "NAVER · 연합뉴스"
             }
           ]
         }
@@ -1376,13 +1420,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T03:30:37.382624+00:00",
+      "generatedAt": "2026-09-07T03:50:23.475129+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 685,
+        "collected": 683,
         "analyzed": 0,
-        "pending": 685,
+        "pending": 683,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2002,8 +2046,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 47,
+          "articleCount": 48,
           "articles": [
+            {
+              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
+              "source": "NAVER · 서울신문"
+            },
             {
               "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
               "url": "https://n.news.naver.com/mnews/article/138/0002240413",
@@ -2023,11 +2072,6 @@
               "title": "[CPU 대란 주의보 ⑦] 맥북 에어 200달러 뛰었다… 데이터센터 독식에 PC 가격인상 '압박'",
               "url": "https://n.news.naver.com/mnews/article/138/0002240379",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "실리콘밸리는 지금 공사 중…‘AI 제국’ 짓는 빅테크",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997026",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
@@ -2092,6 +2136,70 @@
               "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
               "url": "https://n.news.naver.com/mnews/article/003/0014172774",
               "source": "NAVER · 뉴시스"
+            }
+          ]
+        },
+        {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 21,
+          "articles": [
+            {
+              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
+              "source": "NAVER · 연합뉴스"
+            },
+            {
+              "title": "전화·검색·카톡 파고드는 ‘모두의 AI’… 생활 속 실행력 승부수",
+              "url": "https://n.news.naver.com/mnews/article/029/0003046422",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "‘모두의 AI’ 시동…정부 “경쟁보다 협업”, 업계 “공공 마중물 필요”",
+              "url": "https://n.news.naver.com/mnews/article/029/0003046282",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "[국방 AX 컨퍼런스] “국방 AI, GPU 확보만으로 안 돼···'미션 중심 운영체계' 구축해야”",
+              "url": "https://www.etnews.com/20260904000281",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "에이수스 “풀 스펙트럼 전략으로 ‘소버린 AI’ 시장 공략”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214897",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 20,
+          "articles": [
+            {
+              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
+              "source": "NAVER · 서울신문"
+            },
+            {
+              "title": "中 로봇에 AI 최적화하니 옷 접는 시간 25초 줄었다",
+              "url": "https://n.news.naver.com/mnews/article/014/0005571801",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214923",
+              "source": "AI타임스"
+            },
+            {
+              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "이츠인, 기업부설연구소 가산디지털단지 확대 이전… 다크팩토리 R&D 본격화",
+              "url": "https://www.etnews.com/20260907000066",
+              "source": "전자신문 AI"
             }
           ]
         },
@@ -2759,13 +2867,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T03:30:37.382624+00:00",
+      "generatedAt": "2026-09-07T03:50:23.475129+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 201,
+        "collected": 204,
         "analyzed": 0,
-        "pending": 201,
+        "pending": 204,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3385,8 +3493,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 13,
+          "articleCount": 14,
           "articles": [
+            {
+              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
+              "source": "NAVER · 서울신문"
+            },
             {
               "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
               "url": "https://n.news.naver.com/mnews/article/138/0002240413",
@@ -3406,11 +3519,6 @@
               "title": "[CPU 대란 주의보 ⑦] 맥북 에어 200달러 뛰었다… 데이터센터 독식에 PC 가격인상 '압박'",
               "url": "https://n.news.naver.com/mnews/article/138/0002240379",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "실리콘밸리는 지금 공사 중…‘AI 제국’ 짓는 빅테크",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997026",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
@@ -3479,6 +3587,38 @@
           ]
         },
         {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 6,
+          "articles": [
+            {
+              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
+              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
+              "source": "NAVER · 서울신문"
+            },
+            {
+              "title": "中 로봇에 AI 최적화하니 옷 접는 시간 25초 줄었다",
+              "url": "https://n.news.naver.com/mnews/article/014/0005571801",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214923",
+              "source": "AI타임스"
+            },
+            {
+              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
+            {
+              "title": "이츠인, 기업부설연구소 가산디지털단지 확대 이전… 다크팩토리 R&D 본격화",
+              "url": "https://www.etnews.com/20260907000066",
+              "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
           "key": "coding",
           "label": "코딩 AI",
           "articleCount": 3,
@@ -3509,6 +3649,18 @@
               "title": "An Amazon cargo plane crashed at Miami International Airport",
               "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
               "source": "The Verge"
+            }
+          ]
+        },
+        {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
+              "source": "NAVER · 연합뉴스"
             }
           ]
         }
