@@ -216,6 +216,75 @@ def _evidence_sentence(title: str, summary: str) -> str:
     return max(sentences, key=score)[:280]
 
 
+# "업데이트" 리드 카드 헤드라인 전용 — POLICY_TOPICS(위)는 게임위 카드
+# 분류용이라 "마약", "인공지능"처럼 게임 도메인 밖의 주제는 못 잡는다.
+# 여기는 화면에 "최근 OOO에서 ~ 관련 ~가 있었습니다" 한 문장을 만들 때
+# 본문에서 눈에 띄는 핵심 명사를 뽑는 용도라 범위를 넓게 잡는다.
+_HEADLINE_TOPIC_TERMS = (
+    "마약", "인공지능", "AI", "청소년", "저작권", "개인정보", "사이버보안", "사이버",
+    "확률형", "등급분류", "표시의무", "탄소중립", "일자리", "수출", "밀수", "세관",
+    "인재양성", "안전", "소비자보호", "불법", "사행성",
+)
+_HEADLINE_AGENCY_SUFFIXES = (
+    "청", "부", "처", "원", "위원회", "공단", "공사", "진흥원", "재단", "센터", "본부", "협회",
+)
+
+
+def _headline_agency(title: str, source: str) -> str:
+    """"대한민국 정책브리핑"처럼 source가 실제 발표 기관이 아니라 정부
+    포털·집계 매체인 경우가 많다 — 그대로 쓰면 "정책브리핑이 예산안을
+    발표했다"는 어색한 문장이 된다. 기사 제목 맨 앞의 실제 발표 주체
+    (관세청, 문화체육관광부 등)를 뽑아 대신 쓴다."""
+    lead = re.split(r"[,·\s]", title.strip(), maxsplit=1)[0]
+    if any(lead.endswith(suffix) for suffix in _HEADLINE_AGENCY_SUFFIXES):
+        return lead
+    return source
+
+
+def _headline_topics(text: str, limit: int = 2) -> list[str]:
+    seen: list[str] = []
+    upper_text = text.upper()
+    for term in _HEADLINE_TOPIC_TERMS:
+        haystack = upper_text if term.isupper() else text
+        needle = term.upper() if term.isupper() else term
+        if needle in haystack and term not in seen:
+            seen.append(term)
+        if len(seen) == limit:
+            break
+    return seen
+
+
+def _has_batchim(syllable: str) -> bool:
+    if not syllable or not ("가" <= syllable <= "힣"):
+        return False
+    return (ord(syllable) - ord("가")) % 28 != 0
+
+
+def _headline_action(title: str, agency: str) -> str:
+    """제목에서 발표 주체를 뗀 나머지 중, 부가 설명(말줄임표·대시 뒤)을
+    잘라내고 핵심 발표 내용만 남긴다 — "관세청, 2027년도 예산안 발표…
+    마약 차단·AI 활용 확대"에서 "2027년도 예산안 발표"만 남기는 식."""
+    remainder = title
+    if agency and remainder.startswith(agency):
+        remainder = remainder[len(agency):].lstrip(" ,·")
+    main = re.split(r"…|\.\.\.|\s-\s", remainder, maxsplit=1)[0].strip(" .")
+    return main or title
+
+
+def build_update_headline(title: str, source: str, evidence_sentence: str) -> str:
+    """정책·제도 탭 "업데이트" 리드 카드 헤드라인. 원문 제목/요약을 그대로
+    인용하면 헤드라인 특유의 겹따옴표·말줄임표가 섞여 지저분하고, 화면에서
+    2줄로 잘라내면(-webkit-line-clamp) 문장이 중간에 끊긴다 — 대신 "최근
+    OOO에서 ~ 관련 ~가 있었습니다" 형태의, 그 자체로 짧고 완결된 문장을
+    새로 만들어 잘라낼 필요가 없게 한다."""
+    agency = _headline_agency(title, source)
+    topics = _headline_topics(f"{title} {evidence_sentence}")
+    action = _headline_action(title, agency)
+    topic_phrase = f"{', '.join(topics)} 관련 " if topics else ""
+    josa = "이" if _has_batchim(action[-1:]) else "가"
+    return f"최근 {agency}에서 {topic_phrase}{action}{josa} 있었습니다."
+
+
 def _selection_reason(kind_label: str, change_label: str, urgency_label: str, history_count: int) -> str:
     parts = [f"{kind_label} 공식 발표"]
     if urgency_label != "일정 확인":
@@ -276,6 +345,7 @@ def build_policy_updates(db: Session, period_start: datetime, period_end: dateti
             if item.id != article.id and _naive(item.published_at or item.collected_at) < _naive(published)
         ]
         change_type, change_label = _history_change(_policy_stage(article.title), prior)
+        evidence_sentence = _evidence_sentence(article.title, article.summary or "")
         cards.append({
             "id": str(article.id), "type": kind, "typeLabel": kind_label,
             "category": article.category,
@@ -302,7 +372,8 @@ def build_policy_updates(db: Session, period_start: datetime, period_end: dateti
             "selectionReason": _selection_reason(
                 kind_label, change_label, urgency_label, len(prior)
             ),
-            "evidenceSentence": _evidence_sentence(article.title, article.summary or ""),
+            "evidenceSentence": evidence_sentence,
+            "updateHeadline": build_update_headline(article.title, article.source, evidence_sentence),
         })
     cards.sort(key=lambda card: (card["priorityScore"], card["publishedDate"]), reverse=True)
     return cards[:limit]

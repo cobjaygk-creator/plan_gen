@@ -248,6 +248,7 @@ export interface PolicyUpdate {
   history: Array<{ title: string; url: string; publishedDate: string; stageLabel: string }>;
   selectionReason: string;
   evidenceSentence: string;
+  updateHeadline: string;
 }
 export interface TechRadarArticle {
   title: string;

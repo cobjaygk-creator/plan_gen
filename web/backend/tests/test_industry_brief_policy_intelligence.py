@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 
 from app.industry_brief.models import Article
-from app.industry_brief.policy_intelligence import build_policy_updates
+from app.industry_brief.policy_intelligence import build_policy_updates, build_update_headline
 
 
 def test_policy_cards_use_only_relevant_official_articles(db_factory):
@@ -163,3 +163,42 @@ def test_policy_card_does_not_treat_event_body_mention_as_policy(db_factory):
     assert build_policy_updates(
         db, datetime(2026, 8, 17), datetime(2026, 8, 19),
     ) == []
+
+
+def test_update_headline_pulls_real_agency_out_of_aggregator_source():
+    # "대한민국 정책브리핑"은 실제 발표 기관이 아니라 정부 포털이다 — 그대로
+    # source를 쓰면 "정책브리핑에서 ~가 있었습니다"처럼 어색해진다.
+    headline = build_update_headline(
+        title="관세청, 2027년도 예산안 발표…마약 차단·인공지능 활용 확대",
+        source="대한민국 정책브리핑",
+        evidence_sentence="관세청은 2027년도 예산안을 발표하며 마약 차단과 인공지능 활용에 예산을 집중한다고 밝혔다.",
+    )
+    assert headline.startswith("최근 관세청에서 ")
+    assert "마약" in headline
+    assert "인공지능" in headline
+    assert headline.endswith("있었습니다.")
+    assert "정책브리핑" not in headline
+    assert "…" not in headline
+
+
+def test_update_headline_falls_back_to_source_without_agency_suffix():
+    headline = build_update_headline(
+        title="게임 이용자 보호 방안 발표",
+        source="문화체육관광부",
+        evidence_sentence="이용자 보호를 위한 신고 절차를 마련한다.",
+    )
+    assert headline.startswith("최근 문화체육관광부에서 ")
+
+
+def test_update_headline_is_attached_to_policy_cards(db_factory):
+    db = db_factory()
+    db.add(Article(
+        source="대한민국 정책브리핑", source_type="official", category="AI",
+        title="관세청, 2027년도 예산안 발표…마약 차단·인공지능 활용 확대",
+        url="https://official.example/customs-budget",
+        published_at=datetime(2026, 8, 18), is_relevant=True,
+        summary="관세청은 2027년도 예산안을 발표하며 마약 차단과 인공지능 활용에 예산을 집중한다고 밝혔다.",
+    ))
+    db.commit()
+    card = build_policy_updates(db, datetime(2026, 8, 17), datetime(2026, 8, 19))[0]
+    assert card["updateHeadline"].startswith("최근 관세청에서 ")

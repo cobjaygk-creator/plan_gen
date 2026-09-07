@@ -167,8 +167,6 @@ export function IndustryBriefView() {
 
   const trendFreshCount = brief.analytics?.topicFreshness.fresh.length ?? 0;
   const trendOngoingCount = (brief.analytics?.topicLandscape ?? []).filter((topic) => topic.days >= 2).length;
-  const currentMonthPrefix = `${selectedDate.slice(0, 7).replace("-", ".")}.`;
-  const policyThisMonthCount = (brief.policyTimeline ?? []).filter((item) => item.publishedDate.startsWith(currentMonthPrefix)).length;
   const topPolicy = brief.policyUpdates?.[0];
 
   return (
@@ -215,17 +213,13 @@ export function IndustryBriefView() {
         <>
           <LeadCard
             dotColor="var(--warning)"
-            eyebrow="이번 달 판단"
-            clamped
+            eyebrow="업데이트"
             headline={
-              // 원문 제목을 그대로 인용하면 기사 헤드라인 특유의 겹따옴표·
-              // 말줄임표가 뒤섞여 문장이 지저분해진다("관세청 "내년
-              // 예산안...");  evidenceSentence(본문에서 뽑은 완결된 한 문장)를
-              // 대신 써서 "OOO에서 ~했습니다" 식의 짧고 자연스러운 문장으로
-              // 보여준다.
-              topPolicy
-                ? `이번 달 정책·제도 발표 ${policyThisMonthCount}건 중 가장 주목할 것은 ${topPolicy.source}의 발표입니다 — ${topPolicy.evidenceSentence}`
-                : "이번 달은 특별히 주목할 정책·제도 발표가 없습니다."
+              // updateHeadline은 백엔드가 "최근 OOO에서 ~ 관련 ~가
+              // 있었습니다" 형태로 이미 짧게 완결해서 내려준다 — 화면에서
+              // -webkit-line-clamp로 2줄 넘는 부분을 잘라내면(clamped)
+              // 문장이 중간에 끊기므로, 여기서는 자르지 않고 그대로 보여준다.
+              topPolicy?.updateHeadline ?? "이번 달은 특별히 주목할 정책·제도 발표가 없습니다."
             }
           />
           <PolicyUpdatesPanel timeline={brief.policyTimeline} />
