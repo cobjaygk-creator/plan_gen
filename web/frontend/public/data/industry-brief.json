@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T01:59:07.455613+00:00",
+  "generated_at": "2026-09-07T02:12:53.939042+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T01:55:41.096857+00:00",
+      "generatedAt": "2026-09-07T02:08:27.579356+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 124,
+        "collected": 138,
         "analyzed": 0,
-        "pending": 124,
+        "pending": 138,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -661,8 +661,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190727",
+              "source": "NAVER · 조선비즈"
+            },
             {
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
@@ -682,11 +687,6 @@
               "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
               "url": "https://www.etnews.com/20260907000103",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
-              "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
-              "source": "TechCrunch"
             }
           ]
         },
@@ -1376,13 +1376,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T01:55:41.096857+00:00",
+      "generatedAt": "2026-09-07T02:08:27.579356+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 631,
+        "collected": 639,
         "analyzed": 0,
-        "pending": 631,
+        "pending": 639,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2034,8 +2034,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 40,
+          "articleCount": 41,
           "articles": [
+            {
+              "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190727",
+              "source": "NAVER · 조선비즈"
+            },
             {
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
@@ -2055,11 +2060,6 @@
               "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
               "url": "https://www.etnews.com/20260907000103",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
-              "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
-              "source": "TechCrunch"
             }
           ]
         },
@@ -2759,13 +2759,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T01:55:41.096857+00:00",
+      "generatedAt": "2026-09-07T02:08:27.579356+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 124,
+        "collected": 138,
         "analyzed": 0,
-        "pending": 124,
+        "pending": 138,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3417,8 +3417,13 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190727",
+              "source": "NAVER · 조선비즈"
+            },
             {
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
@@ -3438,11 +3443,6 @@
               "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
               "url": "https://www.etnews.com/20260907000103",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
-              "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
-              "source": "TechCrunch"
             }
           ]
         },
