@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T11:16:33.535669+00:00",
+  "generated_at": "2026-09-07T12:53:32.738704+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T06:39:30.003077+00:00",
+      "generatedAt": "2026-09-07T12:49:16.399781+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 300,
+        "collected": 344,
         "analyzed": 0,
-        "pending": 300,
+        "pending": 344,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -393,7 +393,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
@@ -526,6 +526,18 @@
           "fresh": [],
           "ongoing": [
             {
+              "name": "Kiro",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+                  "url": "https://openai.com/index/gpt-5-6-in-kiro",
+                  "source": "OpenAI"
+                }
+              ]
+            },
+            {
               "name": "일곱 개의 대죄: Origin",
               "category": "GAME",
               "articleCount": 1,
@@ -627,10 +639,52 @@
       },
       "techRadar": [
         {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 20,
+          "articles": [
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            },
+            {
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
+              "source": "AI타임스"
+            },
+            {
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 17,
+          "articleCount": 19,
           "articles": [
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
             {
               "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
               "url": "https://n.news.naver.com/mnews/article/366/0001190795",
@@ -645,120 +699,88 @@
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
               "source": "NAVER · 헤럴드경제"
-            },
-            {
-              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
-              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
-              "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240413",
-              "source": "NAVER · 디지털데일리"
-            }
-          ]
-        },
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 15,
-          "articles": [
-            {
-              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
-              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축 착수",
-              "url": "https://n.news.naver.com/mnews/article/215/0001265097",
-              "source": "NAVER · 한국경제TV"
-            },
-            {
-              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
-              "source": "AI타임스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464146",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 11,
+          "articleCount": 15,
           "articles": [
+            {
+              "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
+              "url": "https://www.etnews.com/20260907000453",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "챗GPT,'개인 문체' 학습 기능 테스트...\"AI가 쓴 티 벗어난다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214961",
+              "source": "AI타임스"
+            },
+            {
+              "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
+              "source": "AI타임스"
+            },
             {
               "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
               "url": "https://n.news.naver.com/mnews/article/138/0002240461",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997061",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "오픈AI 최고과학자 “AI 개발 속도 늦춰야” 경고",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190771",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 10,
+          "articleCount": 15,
           "articles": [
             {
-              "title": "[포토] 100% AI 제작 영화 '스틸레이' 시사회",
-              "url": "https://www.etnews.com/20260907000336",
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
+              "url": "https://www.etnews.com/20260907000412",
               "source": "전자신문 AI"
             },
             {
-              "title": "[포토] AI 100% 제작 영화 '스틸레이' 시사회",
-              "url": "https://www.etnews.com/20260907000341",
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
+              "url": "https://www.etnews.com/20260907000410",
               "source": "전자신문 AI"
             },
             {
-              "title": "[포토] AI 100% 제작 영화 '스틸레이'",
-              "url": "https://www.etnews.com/20260907000338",
+              "title": "[포토] AI 제작 영화 시사회 참석한 하정우 국가인공지능전략위원회 부위원장",
+              "url": "https://www.etnews.com/20260907000413",
               "source": "전자신문 AI"
             },
             {
-              "title": "메디인테크, 국제 학술대회서 'AI 로봇 내시경' 선보여",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214940",
+              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
+              "url": "https://www.etnews.com/20260907000460",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214955",
               "source": "AI타임스"
-            },
-            {
-              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
-              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
-              "source": "NAVER · 서울신문"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 4,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
               "url": "https://n.news.naver.com/mnews/article/003/0014174066",
@@ -773,11 +795,33 @@
               "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
               "url": "https://n.news.naver.com/mnews/article/001/0016293283",
               "source": "NAVER · 연합뉴스"
+            }
+          ]
+        },
+        {
+          "key": "media_gen",
+          "label": "이미지 · 영상 생성",
+          "articleCount": 4,
+          "articles": [
+            {
+              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
+              "url": "https://www.etnews.com/20260907000460",
+              "source": "전자신문 AI"
             },
             {
-              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"끝없이 펼쳐지는 가상세계\"...런웨이, 실시간 조작 가능한 'GWM 월드 2' 선보여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214952",
+              "source": "AI타임스"
+            },
+            {
+              "title": "An Amazon cargo plane crashed at Miami International Airport",
+              "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
+              "source": "The Verge"
             }
           ]
         },
@@ -800,18 +844,6 @@
               "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
               "url": "https://n.news.naver.com/mnews/article/001/0016292128",
               "source": "NAVER · 연합뉴스"
-            }
-          ]
-        },
-        {
-          "key": "media_gen",
-          "label": "이미지 · 영상 생성",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "An Amazon cargo plane crashed at Miami International Airport",
-              "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
-              "source": "The Verge"
             }
           ]
         }
@@ -1435,13 +1467,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T06:39:30.003077+00:00",
+      "generatedAt": "2026-09-07T12:49:16.399781+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 669,
+        "collected": 693,
         "analyzed": 0,
-        "pending": 669,
+        "pending": 693,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1825,7 +1857,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
@@ -1958,6 +1990,18 @@
           "fresh": [],
           "ongoing": [
             {
+              "name": "Kiro",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+                  "url": "https://openai.com/index/gpt-5-6-in-kiro",
+                  "source": "OpenAI"
+                }
+              ]
+            },
+            {
               "name": "일곱 개의 대죄: Origin",
               "category": "GAME",
               "articleCount": 1,
@@ -2061,31 +2105,31 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 47,
+          "articleCount": 45,
           "articles": [
             {
-              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
-              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축 착수",
-              "url": "https://n.news.naver.com/mnews/article/215/0001265097",
-              "source": "NAVER · 한국경제TV"
-            },
-            {
-              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
               "source": "AI타임스"
             },
             {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464146",
-              "source": "NAVER · 전자신문"
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
             },
             {
-              "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
+              "source": "AI타임스"
+            },
+            {
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
               "source": "AI타임스"
             }
           ]
@@ -2093,8 +2137,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 47,
+          "articleCount": 44,
           "articles": [
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
             {
               "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
               "url": "https://n.news.naver.com/mnews/article/366/0001190795",
@@ -2109,55 +2163,77 @@
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
               "source": "NAVER · 헤럴드경제"
-            },
-            {
-              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
-              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
-              "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240413",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 40,
+          "articleCount": 39,
           "articles": [
+            {
+              "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
+              "url": "https://www.etnews.com/20260907000453",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "챗GPT,'개인 문체' 학습 기능 테스트...\"AI가 쓴 티 벗어난다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214961",
+              "source": "AI타임스"
+            },
+            {
+              "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
+              "source": "AI타임스"
+            },
             {
               "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
               "url": "https://n.news.naver.com/mnews/article/138/0002240461",
               "source": "NAVER · 디지털데일리"
+            }
+          ]
+        },
+        {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 26,
+          "articles": [
+            {
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
+              "url": "https://www.etnews.com/20260907000412",
+              "source": "전자신문 AI"
             },
             {
-              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
+              "url": "https://www.etnews.com/20260907000410",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 제작 영화 시사회 참석한 하정우 국가인공지능전략위원회 부위원장",
+              "url": "https://www.etnews.com/20260907000413",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
+              "url": "https://www.etnews.com/20260907000460",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214955",
               "source": "AI타임스"
-            },
-            {
-              "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997061",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "오픈AI 최고과학자 “AI 개발 속도 늦춰야” 경고",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190771",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 23,
+          "articleCount": 17,
           "articles": [
             {
               "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
@@ -2187,42 +2263,20 @@
           ]
         },
         {
-          "key": "robotics",
-          "label": "로보틱스",
-          "articleCount": 22,
+          "key": "coding",
+          "label": "코딩 AI",
+          "articleCount": 10,
           "articles": [
             {
-              "title": "[포토] 100% AI 제작 영화 '스틸레이' 시사회",
-              "url": "https://www.etnews.com/20260907000336",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 100% 제작 영화 '스틸레이' 시사회",
-              "url": "https://www.etnews.com/20260907000341",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 100% 제작 영화 '스틸레이'",
-              "url": "https://www.etnews.com/20260907000338",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "메디인테크, 국제 학술대회서 'AI 로봇 내시경' 선보여",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214940",
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
               "source": "AI타임스"
             },
             {
-              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
-              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
-              "source": "NAVER · 서울신문"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 9,
-          "articles": [
+              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
               "url": "https://n.news.naver.com/mnews/article/003/0014174066",
@@ -2237,24 +2291,29 @@
               "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
               "url": "https://n.news.naver.com/mnews/article/001/0016293283",
               "source": "NAVER · 연합뉴스"
-            },
-            {
-              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 1,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
+              "url": "https://www.etnews.com/20260907000460",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"끝없이 펼쳐지는 가상세계\"...런웨이, 실시간 조작 가능한 'GWM 월드 2' 선보여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214952",
+              "source": "AI타임스"
+            },
             {
               "title": "An Amazon cargo plane crashed at Miami International Airport",
               "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
@@ -2882,13 +2941,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T06:39:30.003077+00:00",
+      "generatedAt": "2026-09-07T12:49:16.399781+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 300,
+        "collected": 344,
         "analyzed": 0,
-        "pending": 300,
+        "pending": 344,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3272,7 +3331,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
@@ -3405,6 +3464,18 @@
           "fresh": [],
           "ongoing": [
             {
+              "name": "Kiro",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+                  "url": "https://openai.com/index/gpt-5-6-in-kiro",
+                  "source": "OpenAI"
+                }
+              ]
+            },
+            {
               "name": "일곱 개의 대죄: Origin",
               "category": "GAME",
               "articleCount": 1,
@@ -3506,10 +3577,52 @@
       },
       "techRadar": [
         {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 20,
+          "articles": [
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            },
+            {
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
+              "source": "AI타임스"
+            },
+            {
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 17,
+          "articleCount": 19,
           "articles": [
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
             {
               "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
               "url": "https://n.news.naver.com/mnews/article/366/0001190795",
@@ -3524,120 +3637,88 @@
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
               "source": "NAVER · 헤럴드경제"
-            },
-            {
-              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
-              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
-              "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240413",
-              "source": "NAVER · 디지털데일리"
-            }
-          ]
-        },
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 15,
-          "articles": [
-            {
-              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
-              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축 착수",
-              "url": "https://n.news.naver.com/mnews/article/215/0001265097",
-              "source": "NAVER · 한국경제TV"
-            },
-            {
-              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
-              "source": "AI타임스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464146",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 11,
+          "articleCount": 15,
           "articles": [
+            {
+              "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
+              "url": "https://www.etnews.com/20260907000453",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "챗GPT,'개인 문체' 학습 기능 테스트...\"AI가 쓴 티 벗어난다\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214961",
+              "source": "AI타임스"
+            },
+            {
+              "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
+              "source": "AI타임스"
+            },
             {
               "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
               "url": "https://n.news.naver.com/mnews/article/138/0002240461",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997061",
-              "source": "NAVER · 조선일보"
-            },
-            {
-              "title": "오픈AI 최고과학자 “AI 개발 속도 늦춰야” 경고",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190771",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 10,
+          "articleCount": 15,
           "articles": [
             {
-              "title": "[포토] 100% AI 제작 영화 '스틸레이' 시사회",
-              "url": "https://www.etnews.com/20260907000336",
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
+              "url": "https://www.etnews.com/20260907000412",
               "source": "전자신문 AI"
             },
             {
-              "title": "[포토] AI 100% 제작 영화 '스틸레이' 시사회",
-              "url": "https://www.etnews.com/20260907000341",
+              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
+              "url": "https://www.etnews.com/20260907000410",
               "source": "전자신문 AI"
             },
             {
-              "title": "[포토] AI 100% 제작 영화 '스틸레이'",
-              "url": "https://www.etnews.com/20260907000338",
+              "title": "[포토] AI 제작 영화 시사회 참석한 하정우 국가인공지능전략위원회 부위원장",
+              "url": "https://www.etnews.com/20260907000413",
               "source": "전자신문 AI"
             },
             {
-              "title": "메디인테크, 국제 학술대회서 'AI 로봇 내시경' 선보여",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214940",
+              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
+              "url": "https://www.etnews.com/20260907000460",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214955",
               "source": "AI타임스"
-            },
-            {
-              "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
-              "url": "https://n.news.naver.com/mnews/article/081/0003677446",
-              "source": "NAVER · 서울신문"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 4,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
+              "source": "AI타임스"
+            },
+            {
+              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
+              "source": "AI타임스"
+            },
             {
               "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
               "url": "https://n.news.naver.com/mnews/article/003/0014174066",
@@ -3652,11 +3733,33 @@
               "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
               "url": "https://n.news.naver.com/mnews/article/001/0016293283",
               "source": "NAVER · 연합뉴스"
+            }
+          ]
+        },
+        {
+          "key": "media_gen",
+          "label": "이미지 · 영상 생성",
+          "articleCount": 4,
+          "articles": [
+            {
+              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
+              "url": "https://www.etnews.com/20260907000460",
+              "source": "전자신문 AI"
             },
             {
-              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"끝없이 펼쳐지는 가상세계\"...런웨이, 실시간 조작 가능한 'GWM 월드 2' 선보여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214952",
+              "source": "AI타임스"
+            },
+            {
+              "title": "An Amazon cargo plane crashed at Miami International Airport",
+              "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
+              "source": "The Verge"
             }
           ]
         },
@@ -3679,18 +3782,6 @@
               "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
               "url": "https://n.news.naver.com/mnews/article/001/0016292128",
               "source": "NAVER · 연합뉴스"
-            }
-          ]
-        },
-        {
-          "key": "media_gen",
-          "label": "이미지 · 영상 생성",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "An Amazon cargo plane crashed at Miami International Airport",
-              "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
-              "source": "The Verge"
             }
           ]
         }
