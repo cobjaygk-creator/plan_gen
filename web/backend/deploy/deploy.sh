@@ -20,6 +20,15 @@ echo "==> backend deps"
 # 한다 — web/backend/requirements.txt만 설치하면 임포트 단계에서 죽는다.
 .venv/bin/pip install -q -r requirements.txt -r web/backend/requirements.txt
 
+echo "==> 타사 사이트(game_sites) official_sites.json 갱신"
+# game_sites/portal_collector.py의 OFFICIAL_PATH는 BENCHMARK_DATA_DIR로
+# 옮길 수 없는 고정 경로(DATA_DIR/official_sites.json)라, CI가 커밋해둔
+# 최신본을 매 배포마다 그 자리로 복사해준다 — .env의 BENCHMARK_DATA_DIR
+# 설정만으로는 이 파일까지 못 옮긴다.
+if [ -f web/backend/data/ci/game_sites/official_sites.json ]; then
+  cp web/backend/data/ci/game_sites/official_sites.json web/backend/data/official_sites.json
+fi
+
 echo "==> restart service"
 sudo systemctl restart uxui-backend
 
