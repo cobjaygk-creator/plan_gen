@@ -6,6 +6,8 @@ import {
   refreshDailyHighlights, refreshIndustryBrief, type DailyHighlightsResponse,
 } from "../api/client";
 import { formatDateLabel, formatKoreanDateTime, todayKstDateString } from "../utils/format";
+import { useAuth } from "../../../auth/AuthContext";
+import { ADMIN_EMAIL } from "../../../auth/adminEmail";
 import { DateNavigator } from "./DateNavigator";
 import { IndustrySubmenu, type IndustryScreen } from "./IndustrySubmenu";
 import { IndustryPanelCard } from "./IndustryPanelCard";
@@ -94,6 +96,8 @@ export function IndustryBriefView() {
   const [loading, setLoading] = useState(true);
   const [dateLoading, setDateLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
+  const { user } = useAuth();
+  const isAdmin = user?.email === ADMIN_EMAIL;
 
   const isToday = selectedDate === todayKstDateString();
 
@@ -147,12 +151,16 @@ export function IndustryBriefView() {
           평소 새로고침 버튼은 브리핑이 이미 있어야 나오는 헤더 안에만 있어서,
           최초 수집을 시작할 방법 자체가 화면에 없었다. */}
       첫 수집을 시작해주세요.
-      <div className="ib-page-status-action">
-        <button type="button" className={`ib-refresh${refreshing ? " is-refreshing" : ""}`} onClick={() => void refreshToday()} disabled={refreshing}>
-          <span aria-hidden="true">↻</span> {refreshing ? "수집 중" : "첫 수집 시작"}
-        </button>
-      </div>
-      <RefreshProgress open={refreshing} />
+      {isAdmin && (
+        <>
+          <div className="ib-page-status-action">
+            <button type="button" className={`ib-refresh${refreshing ? " is-refreshing" : ""}`} onClick={() => void refreshToday()} disabled={refreshing}>
+              <span aria-hidden="true">↻</span> {refreshing ? "수집 중" : "첫 수집 시작"}
+            </button>
+          </div>
+          <RefreshProgress open={refreshing} />
+        </>
+      )}
     </div>
   );
   if (!brief) return null;
@@ -170,7 +178,7 @@ export function IndustryBriefView() {
         <h1>게임 · AI 업계 동향</h1>
         <div className="ib-header-actions">
           <div className="ib-header-period"><span>{isToday ? "오늘" : formatDateLabel(selectedDate)}</span><strong className="tabular">{formatKoreanDateTime(brief.generatedAt)}</strong></div>
-          {isToday && (
+          {isToday && isAdmin && (
             <button type="button" className={`ib-refresh${refreshing ? " is-refreshing" : ""}`} onClick={() => void refreshToday()} disabled={refreshing}><span aria-hidden="true">↻</span> {refreshing ? "업데이트 중" : "새로고침"}</button>
           )}
         </div>

@@ -1,4 +1,6 @@
 ﻿import { useEffect, useMemo, useState } from "react";
+import { useAuth } from "../../auth/AuthContext";
+import { ADMIN_EMAIL } from "../../auth/adminEmail";
 import "./game-sites.css";
 
 type SiteType = "OFFICIAL" | "PREREGISTRATION" | "TEASER" | "MICROSITE";
@@ -64,6 +66,8 @@ export function GameSitesPage() {
   const [refreshing, setRefreshing] = useState(false);
   const [refreshResult, setRefreshResult] = useState<RefreshResult | null>(null);
   const [refreshError, setRefreshError] = useState<string | null>(null);
+  const { user } = useAuth();
+  const isAdmin = user?.email === ADMIN_EMAIL;
 
   function loadSites() {
     return fetch("/game-sites/data", { credentials: "include" })
@@ -102,7 +106,7 @@ export function GameSitesPage() {
           <span>{"마지막 갱신 "}{formatRefreshedAt(data.last_refreshed_at)}</span>
           <strong>{data.refreshed_site_count}{"건 추가"}</strong>
         </span>
-        {!IS_STATIC_SITE && (
+        {!IS_STATIC_SITE && isAdmin && (
           <button type="button" className="game-sites-refresh-btn" onClick={handleRefresh} disabled={refreshing}>
             {refreshing ? "수집 중..." : "지금 수집"}
           </button>

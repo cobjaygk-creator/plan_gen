@@ -1,4 +1,6 @@
 ﻿import { useEffect, useMemo, useState } from "react";
+import { useAuth } from "../../auth/AuthContext";
+import { ADMIN_EMAIL } from "../../auth/adminEmail";
 import "./event-bench.css";
 
 type Candidate = {
@@ -67,6 +69,8 @@ export function EventBenchPage() {
   const [latestRefreshOnly, setLatestRefreshOnly] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [refreshFailed, setRefreshFailed] = useState(false);
+  const { user } = useAuth();
+  const isAdmin = user?.email === ADMIN_EMAIL;
 
   useEffect(() => {
     fetch("/event-bench/candidates", { credentials: "include" })
@@ -140,14 +144,16 @@ export function EventBenchPage() {
         <span>{"\ub9c8\uc9c0\ub9c9 \uac31\uc2e0"} {formatRefreshedAt(data.last_refreshed_at)}</span>
         <strong>{data.refreshed_event_count}{"\uac74 \ucd94\uac00"}</strong>
       </button>
-      <button
-        type="button"
-        className="event-bench-manual-refresh"
-        disabled={refreshing}
-        onClick={handleManualRefresh}
-      >
-        {refreshing ? "\uc218\uc9d1 \uc911..." : "\uc218\ub3d9 \uc218\uc9d1"}
-      </button>
+      {isAdmin && (
+        <button
+          type="button"
+          className="event-bench-manual-refresh"
+          disabled={refreshing}
+          onClick={handleManualRefresh}
+        >
+          {refreshing ? "\uc218\uc9d1 \uc911..." : "\uc218\ub3d9 \uc218\uc9d1"}
+        </button>
+      )}
       {refreshFailed && <span className="event-bench-refresh-error">{"\uc218\uc9d1 \uc2e4\ud328"}</span>}
     </div>
     </header>
