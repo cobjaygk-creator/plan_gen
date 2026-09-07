@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T05:31:11.405150+00:00",
+  "generated_at": "2026-09-07T06:43:26.211533+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T05:26:42.125043+00:00",
+      "generatedAt": "2026-09-07T06:39:30.003077+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 243,
+        "collected": 291,
         "analyzed": 0,
-        "pending": 243,
+        "pending": 291,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -661,8 +661,23 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 12,
+          "articleCount": 15,
           "articles": [
+            {
+              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
+              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축 착수",
+              "url": "https://n.news.naver.com/mnews/article/215/0001265097",
+              "source": "NAVER · 한국경제TV"
+            },
+            {
+              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "source": "AI타임스"
+            },
             {
               "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
               "url": "https://n.news.naver.com/mnews/article/030/0003464146",
@@ -672,29 +687,24 @@
               "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
               "source": "AI타임스"
-            },
-            {
-              "title": "AI 에이전트 시대, '데이터 의미'가 경쟁력…'AI Ready Data 2026' 성료",
-              "url": "https://www.etnews.com/20260907000198",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190727",
-              "source": "NAVER · 조선비즈"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 9,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240461",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "source": "AI타임스"
+            },
             {
               "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
               "url": "https://n.news.naver.com/mnews/article/023/0003997061",
@@ -709,56 +719,51 @@
               "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
               "url": "https://n.news.naver.com/mnews/article/025/0003549446",
               "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 6,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "[포토] 100% AI 제작 영화 '스틸레이' 시사회",
+              "url": "https://www.etnews.com/20260907000336",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 100% 제작 영화 '스틸레이' 시사회",
+              "url": "https://www.etnews.com/20260907000341",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 100% 제작 영화 '스틸레이'",
+              "url": "https://www.etnews.com/20260907000338",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "메디인테크, 국제 학술대회서 'AI 로봇 내시경' 선보여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214940",
+              "source": "AI타임스"
+            },
             {
               "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
               "url": "https://n.news.naver.com/mnews/article/081/0003677446",
               "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "中 로봇에 AI 최적화하니 옷 접는 시간 25초 줄었다",
-              "url": "https://n.news.naver.com/mnews/article/014/0005571801",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214923",
-              "source": "AI타임스"
-            },
-            {
-              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "이츠인, 기업부설연구소 가산디지털단지 확대 이전… 다크팩토리 R&D 본격화",
-              "url": "https://www.etnews.com/20260907000066",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
+              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
+              "source": "NAVER · 뉴시스"
+            },
             {
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
@@ -777,6 +782,28 @@
           ]
         },
         {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572082",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[비욘드IT] 독파모 그 후…네이버·NC AI·모티프, 각자의 길에서 도약한다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436483",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
+              "source": "NAVER · 연합뉴스"
+            }
+          ]
+        },
+        {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
           "articleCount": 1,
@@ -785,18 +812,6 @@
               "title": "An Amazon cargo plane crashed at Miami International Airport",
               "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
               "source": "The Verge"
-            }
-          ]
-        },
-        {
-          "key": "sovereign",
-          "label": "소버린 AI · 국내 서비스",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         }
@@ -1420,13 +1435,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T05:26:42.125043+00:00",
+      "generatedAt": "2026-09-07T06:39:30.003077+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 707,
+        "collected": 747,
         "analyzed": 0,
-        "pending": 707,
+        "pending": 747,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2044,6 +2059,38 @@
       },
       "techRadar": [
         {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 47,
+          "articles": [
+            {
+              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
+              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축 착수",
+              "url": "https://n.news.naver.com/mnews/article/215/0001265097",
+              "source": "NAVER · 한국경제TV"
+            },
+            {
+              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "source": "AI타임스"
+            },
+            {
+              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464146",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
           "key": "gpu",
           "label": "GPU · 반도체",
           "articleCount": 47,
@@ -2076,42 +2123,20 @@
           ]
         },
         {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 44,
-          "articles": [
-            {
-              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464146",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
-              "source": "AI타임스"
-            },
-            {
-              "title": "AI 에이전트 시대, '데이터 의미'가 경쟁력…'AI Ready Data 2026' 성료",
-              "url": "https://www.etnews.com/20260907000198",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190727",
-              "source": "NAVER · 조선비즈"
-            }
-          ]
-        },
-        {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 38,
+          "articleCount": 40,
           "articles": [
+            {
+              "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240461",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "source": "AI타임스"
+            },
             {
               "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
               "url": "https://n.news.naver.com/mnews/article/023/0003997061",
@@ -2126,24 +2151,24 @@
               "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
               "url": "https://n.news.naver.com/mnews/article/025/0003549446",
               "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
             }
           ]
         },
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 21,
+          "articleCount": 23,
           "articles": [
+            {
+              "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572082",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[비욘드IT] 독파모 그 후…네이버·NC AI·모티프, 각자의 길에서 도약한다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436483",
+              "source": "NAVER · 지디넷코리아"
+            },
             {
               "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
               "url": "https://n.news.naver.com/mnews/article/001/0016292128",
@@ -2158,56 +2183,51 @@
               "title": "‘모두의 AI’ 시동…정부 “경쟁보다 협업”, 업계 “공공 마중물 필요”",
               "url": "https://n.news.naver.com/mnews/article/029/0003046282",
               "source": "NAVER · 디지털타임스"
-            },
-            {
-              "title": "[국방 AX 컨퍼런스] “국방 AI, GPU 확보만으로 안 돼···'미션 중심 운영체계' 구축해야”",
-              "url": "https://www.etnews.com/20260904000281",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "에이수스 “풀 스펙트럼 전략으로 ‘소버린 AI’ 시장 공략”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214897",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 18,
+          "articleCount": 22,
           "articles": [
+            {
+              "title": "[포토] 100% AI 제작 영화 '스틸레이' 시사회",
+              "url": "https://www.etnews.com/20260907000336",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 100% 제작 영화 '스틸레이' 시사회",
+              "url": "https://www.etnews.com/20260907000341",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 100% 제작 영화 '스틸레이'",
+              "url": "https://www.etnews.com/20260907000338",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "메디인테크, 국제 학술대회서 'AI 로봇 내시경' 선보여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214940",
+              "source": "AI타임스"
+            },
             {
               "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
               "url": "https://n.news.naver.com/mnews/article/081/0003677446",
               "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "中 로봇에 AI 최적화하니 옷 접는 시간 25초 줄었다",
-              "url": "https://n.news.naver.com/mnews/article/014/0005571801",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214923",
-              "source": "AI타임스"
-            },
-            {
-              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "이츠인, 기업부설연구소 가산디지털단지 확대 이전… 다크팩토리 R&D 본격화",
-              "url": "https://www.etnews.com/20260907000066",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
+              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
+              "source": "NAVER · 뉴시스"
+            },
             {
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
@@ -2226,11 +2246,6 @@
             {
               "title": "앤트로픽, '클로드 맥스' 주간 사용량 초기화…'아스트라' 돌풍에 맞불",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214898",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI, '코드 아레나'서 앤트로픽 처음 제쳐…'아스트라' 웹개발 1위 기염",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214899",
               "source": "AI타임스"
             }
           ]
@@ -2867,13 +2882,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T05:26:42.125043+00:00",
+      "generatedAt": "2026-09-07T06:39:30.003077+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 243,
+        "collected": 291,
         "analyzed": 0,
-        "pending": 243,
+        "pending": 291,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3525,8 +3540,23 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 12,
+          "articleCount": 15,
           "articles": [
+            {
+              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
+              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
+              "source": "NAVER · 뉴시스"
+            },
+            {
+              "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축 착수",
+              "url": "https://n.news.naver.com/mnews/article/215/0001265097",
+              "source": "NAVER · 한국경제TV"
+            },
+            {
+              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "source": "AI타임스"
+            },
             {
               "title": "메가존클라우드, 한미약품 품질보증 AI 에이전트 구축…'AIR Studio' 활용",
               "url": "https://n.news.naver.com/mnews/article/030/0003464146",
@@ -3536,29 +3566,24 @@
               "title": "메가존클라우드, 업스테이지 '솔라'로 한미약품 품질관리 AI 에이전트 구축",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214930",
               "source": "AI타임스"
-            },
-            {
-              "title": "AI 에이전트 시대, '데이터 의미'가 경쟁력…'AI Ready Data 2026' 성료",
-              "url": "https://www.etnews.com/20260907000198",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "메가존클라우드, 한미약품 품질문서 검토 AI 에이전트 구축",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190727",
-              "source": "NAVER · 조선비즈"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 9,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240461",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "앤트로픽 '클로드', 수학계 난제 '페르마의 마지막 정리' 11일 만에 코드화",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214924",
+              "source": "AI타임스"
+            },
             {
               "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
               "url": "https://n.news.naver.com/mnews/article/023/0003997061",
@@ -3573,56 +3598,51 @@
               "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
               "url": "https://n.news.naver.com/mnews/article/025/0003549446",
               "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 6,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "[포토] 100% AI 제작 영화 '스틸레이' 시사회",
+              "url": "https://www.etnews.com/20260907000336",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 100% 제작 영화 '스틸레이' 시사회",
+              "url": "https://www.etnews.com/20260907000341",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "[포토] AI 100% 제작 영화 '스틸레이'",
+              "url": "https://www.etnews.com/20260907000338",
+              "source": "전자신문 AI"
+            },
+            {
+              "title": "메디인테크, 국제 학술대회서 'AI 로봇 내시경' 선보여",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214940",
+              "source": "AI타임스"
+            },
             {
               "title": "원자 3개 두께 반도체에 방탄 필터 씌웠더니 전류 260배 뛰었다",
               "url": "https://n.news.naver.com/mnews/article/081/0003677446",
               "source": "NAVER · 서울신문"
-            },
-            {
-              "title": "中 로봇에 AI 최적화하니 옷 접는 시간 25초 줄었다",
-              "url": "https://n.news.naver.com/mnews/article/014/0005571801",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "엑스와이지, 로봇 '빨래 개기' 속도 2배 빨라졌다...성공률 96% 달성",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214923",
-              "source": "AI타임스"
-            },
-            {
-              "title": "인공지능(AI) 시대, '영 블루칼라'가 뜬다… 폴리텍대학, 2027학년도 신입생 모집",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780411&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "이츠인, 기업부설연구소 가산디지털단지 확대 이전… 다크팩토리 R&D 본격화",
-              "url": "https://www.etnews.com/20260907000066",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
+              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
+              "source": "NAVER · 뉴시스"
+            },
             {
               "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
@@ -3641,6 +3661,28 @@
           ]
         },
         {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572082",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
+            {
+              "title": "[비욘드IT] 독파모 그 후…네이버·NC AI·모티프, 각자의 길에서 도약한다",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436483",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
+              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
+              "source": "NAVER · 연합뉴스"
+            }
+          ]
+        },
+        {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
           "articleCount": 1,
@@ -3649,18 +3691,6 @@
               "title": "An Amazon cargo plane crashed at Miami International Airport",
               "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
               "source": "The Verge"
-            }
-          ]
-        },
-        {
-          "key": "sovereign",
-          "label": "소버린 AI · 국내 서비스",
-          "articleCount": 1,
-          "articles": [
-            {
-              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         }
