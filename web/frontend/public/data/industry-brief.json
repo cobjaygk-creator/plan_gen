@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T12:53:32.738704+00:00",
+  "generated_at": "2026-09-07T17:03:08.707544+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
@@ -7,9 +7,9 @@
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 344,
+        "collected": 19,
         "analyzed": 0,
-        "pending": 344,
+        "pending": 19,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -20,7 +20,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.07",
             "08.08",
             "08.09",
             "08.10",
@@ -50,7 +49,8 @@
             "09.03",
             "09.04",
             "09.05",
-            "09.06"
+            "09.06",
+            "09.07"
           ],
           "series": [
             {
@@ -74,8 +74,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -150,8 +150,8 @@
                 0,
                 0,
                 0,
-                0,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -179,7 +179,7 @@
             "articleCount": 2,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
@@ -223,7 +223,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
@@ -376,7 +376,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "OpenAI is building AI agents for everything. Will everyone use them?",
@@ -410,7 +410,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "How XPUs Meet a World-Class AI Factory",
@@ -427,7 +427,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
@@ -444,7 +444,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "플러스제로, AI GEO 솔루션 '보이스 인텔리전스' 공개",
@@ -478,7 +478,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
@@ -526,6 +526,47 @@
           "fresh": [],
           "ongoing": [
             {
+              "name": "알리바바",
+              "category": "AI",
+              "articleCount": 2,
+              "articles": [
+                {
+                  "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+                  "url": "https://www.aitimes.com/news/articleView.html?idxno=214284",
+                  "source": "AI타임스"
+                },
+                {
+                  "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+                  "url": "https://www.etnews.com/20260825000014",
+                  "source": "전자신문 AI"
+                }
+              ]
+            },
+            {
+              "name": "Supermicro",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
+                  "url": "https://arstechnica.com/tech-policy/2026/08/nvidia-senior-manager-linked-to-supermicro-scheme-smuggling-ai-servers-to-china/",
+                  "source": "Ars Technica"
+                }
+              ]
+            },
+            {
+              "name": "OpenAI is building…",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+                  "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
+                  "source": "TechCrunch"
+                }
+              ]
+            },
+            {
               "name": "Kiro",
               "category": "AI",
               "articleCount": 1,
@@ -538,14 +579,26 @@
               ]
             },
             {
-              "name": "일곱 개의 대죄: Origin",
-              "category": "GAME",
+              "name": "AI Factory",
+              "category": "AI",
               "articleCount": 1,
               "articles": [
                 {
-                  "title": "넷마블 <일곱 개의 대죄: Origin>, ‘0.5주년 페스티벌’ 앞서 ‘반’ 프로모션 영상 공개",
-                  "url": "https://ch.netmarble.com/Newsroom/PressRelease/Detail?bbs_code=1014&post_seq=6962",
-                  "source": "넷마블"
+                  "title": "How XPUs Meet a World-Class AI Factory",
+                  "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
+                  "source": "NVIDIA"
+                }
+              ]
+            },
+            {
+              "name": "Vera Rubin",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                  "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+                  "source": "NVIDIA"
                 }
               ]
             }
@@ -637,217 +690,7 @@
           }
         ]
       },
-      "techRadar": [
-        {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 20,
-          "articles": [
-            {
-              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
-              "source": "AI타임스"
-            },
-            {
-              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
-              "source": "AI타임스"
-            },
-            {
-              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 19,
-          "articles": [
-            {
-              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
-              "source": "AI타임스"
-            },
-            {
-              "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
-              "url": "https://n.news.naver.com/mnews/article/366/0001190795",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "중기부, 제32차 APEC 중소기업 장관회의에서 ｢K-중소·스타트업 AI 혁신 전략｣ 로드맵 제시",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780512&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
-              "url": "https://n.news.naver.com/mnews/article/016/0002693752",
-              "source": "NAVER · 헤럴드경제"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 15,
-          "articles": [
-            {
-              "title": "“AI 모델보다 관리자 페이지가 더 위험”…인터넷에 노출된 AI 서버",
-              "url": "https://www.etnews.com/20260907000453",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "챗GPT,'개인 문체' 학습 기능 테스트...\"AI가 쓴 티 벗어난다\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214961",
-              "source": "AI타임스"
-            },
-            {
-              "title": "'제미나이' 말 믿고 산에 올랐다가 고립...등산객 일행, 다음날 구조",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214962",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"모델 성능은 대동소이\"…오픈소스 AI 경쟁력 가르는 열쇠로 떠오른 '운영' 역량",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240461",
-              "source": "NAVER · 디지털데일리"
-            }
-          ]
-        },
-        {
-          "key": "robotics",
-          "label": "로보틱스",
-          "articleCount": 15,
-          "articles": [
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
-              "url": "https://www.etnews.com/20260907000412",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회",
-              "url": "https://www.etnews.com/20260907000410",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] AI 제작 영화 시사회 참석한 하정우 국가인공지능전략위원회 부위원장",
-              "url": "https://www.etnews.com/20260907000413",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
-              "url": "https://www.etnews.com/20260907000460",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "로봇·EV 산업 '성지'로 떠오른 중국...서방 전문가·투자자 기술 견학 성황",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214955",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "coding",
-          "label": "코딩 AI",
-          "articleCount": 6,
-          "articles": [
-            {
-              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
-              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "[AI리더의 서가] 현장에서 픽하는 AI 서비스 기획을 위한 필수 지식",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214849",
-              "source": "AI타임스"
-            },
-            {
-              "title": "[AI프리즘] 북한 김수키, AI 코딩 에이전트까지 썼다…해킹 자동화",
-              "url": "https://n.news.naver.com/mnews/article/001/0016293283",
-              "source": "NAVER · 연합뉴스"
-            }
-          ]
-        },
-        {
-          "key": "media_gen",
-          "label": "이미지 · 영상 생성",
-          "articleCount": 4,
-          "articles": [
-            {
-              "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
-              "url": "https://www.etnews.com/20260907000460",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"끝없이 펼쳐지는 가상세계\"...런웨이, 실시간 조작 가능한 'GWM 월드 2' 선보여",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214952",
-              "source": "AI타임스"
-            },
-            {
-              "title": "An Amazon cargo plane crashed at Miami International Airport",
-              "url": "https://www.theverge.com/tech/990918/amazon-cargo-plane-crashed-miami",
-              "source": "The Verge"
-            }
-          ]
-        },
-        {
-          "key": "sovereign",
-          "label": "소버린 AI · 국내 서비스",
-          "articleCount": 3,
-          "articles": [
-            {
-              "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572082",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "[비욘드IT] 독파모 그 후…네이버·NC AI·모티프, 각자의 길에서 도약한다",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436483",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
-              "source": "NAVER · 연합뉴스"
-            }
-          ]
-        }
-      ],
+      "techRadar": [],
       "marketComparison": [
         {
           "category": "GAME",
@@ -1471,9 +1314,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 693,
+        "collected": 643,
         "analyzed": 0,
-        "pending": 693,
+        "pending": 643,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1484,7 +1327,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.07",
             "08.08",
             "08.09",
             "08.10",
@@ -1514,7 +1356,8 @@
             "09.03",
             "09.04",
             "09.05",
-            "09.06"
+            "09.06",
+            "09.07"
           ],
           "series": [
             {
@@ -1538,8 +1381,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -1614,8 +1457,8 @@
                 0,
                 0,
                 0,
-                0,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -1643,7 +1486,7 @@
             "articleCount": 2,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
@@ -1687,7 +1530,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
@@ -1840,7 +1683,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "OpenAI is building AI agents for everything. Will everyone use them?",
@@ -1874,7 +1717,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "How XPUs Meet a World-Class AI Factory",
@@ -1891,7 +1734,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
@@ -1908,7 +1751,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "플러스제로, AI GEO 솔루션 '보이스 인텔리전스' 공개",
@@ -1942,7 +1785,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
@@ -1990,6 +1833,47 @@
           "fresh": [],
           "ongoing": [
             {
+              "name": "알리바바",
+              "category": "AI",
+              "articleCount": 2,
+              "articles": [
+                {
+                  "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+                  "url": "https://www.aitimes.com/news/articleView.html?idxno=214284",
+                  "source": "AI타임스"
+                },
+                {
+                  "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+                  "url": "https://www.etnews.com/20260825000014",
+                  "source": "전자신문 AI"
+                }
+              ]
+            },
+            {
+              "name": "Supermicro",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
+                  "url": "https://arstechnica.com/tech-policy/2026/08/nvidia-senior-manager-linked-to-supermicro-scheme-smuggling-ai-servers-to-china/",
+                  "source": "Ars Technica"
+                }
+              ]
+            },
+            {
+              "name": "OpenAI is building…",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+                  "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
+                  "source": "TechCrunch"
+                }
+              ]
+            },
+            {
               "name": "Kiro",
               "category": "AI",
               "articleCount": 1,
@@ -2002,14 +1886,26 @@
               ]
             },
             {
-              "name": "일곱 개의 대죄: Origin",
-              "category": "GAME",
+              "name": "AI Factory",
+              "category": "AI",
               "articleCount": 1,
               "articles": [
                 {
-                  "title": "넷마블 <일곱 개의 대죄: Origin>, ‘0.5주년 페스티벌’ 앞서 ‘반’ 프로모션 영상 공개",
-                  "url": "https://ch.netmarble.com/Newsroom/PressRelease/Detail?bbs_code=1014&post_seq=6962",
-                  "source": "넷마블"
+                  "title": "How XPUs Meet a World-Class AI Factory",
+                  "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
+                  "source": "NVIDIA"
+                }
+              ]
+            },
+            {
+              "name": "Vera Rubin",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                  "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+                  "source": "NVIDIA"
                 }
               ]
             }
@@ -2103,41 +1999,9 @@
       },
       "techRadar": [
         {
-          "key": "agent",
-          "label": "AI 에이전트",
-          "articleCount": 45,
-          "articles": [
-            {
-              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
-              "source": "AI타임스"
-            },
-            {
-              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
-              "source": "AI타임스"
-            },
-            {
-              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
-              "source": "AI타임스"
-            }
-          ]
-        },
-        {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 44,
+          "articleCount": 43,
           "articles": [
             {
               "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
@@ -2163,6 +2027,38 @@
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
               "source": "NAVER · 헤럴드경제"
+            }
+          ]
+        },
+        {
+          "key": "agent",
+          "label": "AI 에이전트",
+          "articleCount": 42,
+          "articles": [
+            {
+              "title": "메타 'AIRA₃', 중앙 통제 없이 여러 에이전트 협업으로 '캐글' 금메달",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214936",
+              "source": "AI타임스"
+            },
+            {
+              "title": "스페이스XAI, 영상 연속성·품질 높인 ‘그록 이매진 비디오 1.5’ 공개",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214947",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"무엇을 실행할지 AI가 판단\"...메타, AI 연구 속도 1.6배 끌어올린 'RPM' 개발",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214939",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"인간처럼 기만하고 공모\"...통제 벗어난 'AI 스웜'의 경고",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214938",
+              "source": "AI타임스"
+            },
+            {
+              "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
+              "source": "AI타임스"
             }
           ]
         },
@@ -2201,7 +2097,7 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 26,
+          "articleCount": 23,
           "articles": [
             {
               "title": "[포토] AI 제작 영화 '스틸레이' 기자간담회 참석한 하정우 부위원장",
@@ -2233,7 +2129,7 @@
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 17,
+          "articleCount": 15,
           "articles": [
             {
               "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
@@ -2265,7 +2161,7 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 10,
+          "articleCount": 9,
           "articles": [
             {
               "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
@@ -2945,9 +2841,9 @@
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 344,
+        "collected": 366,
         "analyzed": 0,
-        "pending": 344,
+        "pending": 366,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2958,7 +2854,6 @@
       "analytics": {
         "interest": {
           "labels": [
-            "08.07",
             "08.08",
             "08.09",
             "08.10",
@@ -2988,7 +2883,8 @@
             "09.03",
             "09.04",
             "09.05",
-            "09.06"
+            "09.06",
+            "09.07"
           ],
           "series": [
             {
@@ -3012,8 +2908,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -3088,8 +2984,8 @@
                 0,
                 0,
                 0,
-                0,
                 1,
+                0,
                 0,
                 0,
                 0,
@@ -3117,7 +3013,7 @@
             "articleCount": 2,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
@@ -3161,7 +3057,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
@@ -3314,7 +3210,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "OpenAI is building AI agents for everything. Will everyone use them?",
@@ -3348,7 +3244,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "How XPUs Meet a World-Class AI Factory",
@@ -3365,7 +3261,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
@@ -3382,7 +3278,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "플러스제로, AI GEO 솔루션 '보이스 인텔리전스' 공개",
@@ -3416,7 +3312,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "스스로 문제 만들고 해결 전략까지 구축....오픈소스 '오르니스-1.5' 출시",
@@ -3464,6 +3360,47 @@
           "fresh": [],
           "ongoing": [
             {
+              "name": "알리바바",
+              "category": "AI",
+              "articleCount": 2,
+              "articles": [
+                {
+                  "title": "AI에 올인한 알리바바, 투자 위해 14조 대규모 증자 단행",
+                  "url": "https://www.aitimes.com/news/articleView.html?idxno=214284",
+                  "source": "AI타임스"
+                },
+                {
+                  "title": "알리바바, AI 경쟁·투자 확대 위해 14조원 유상증자 단행",
+                  "url": "https://www.etnews.com/20260825000014",
+                  "source": "전자신문 AI"
+                }
+              ]
+            },
+            {
+              "name": "Supermicro",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "Nvidia senior manager linked to Supermicro scheme smuggling AI servers to China",
+                  "url": "https://arstechnica.com/tech-policy/2026/08/nvidia-senior-manager-linked-to-supermicro-scheme-smuggling-ai-servers-to-china/",
+                  "source": "Ars Technica"
+                }
+              ]
+            },
+            {
+              "name": "OpenAI is building…",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "OpenAI is building AI agents for everything. Will everyone use them?",
+                  "url": "https://techcrunch.com/2026/08/24/openai-is-building-an-ai-agent-for-everything-will-everyone-use-them/",
+                  "source": "TechCrunch"
+                }
+              ]
+            },
+            {
               "name": "Kiro",
               "category": "AI",
               "articleCount": 1,
@@ -3476,14 +3413,26 @@
               ]
             },
             {
-              "name": "일곱 개의 대죄: Origin",
-              "category": "GAME",
+              "name": "AI Factory",
+              "category": "AI",
               "articleCount": 1,
               "articles": [
                 {
-                  "title": "넷마블 <일곱 개의 대죄: Origin>, ‘0.5주년 페스티벌’ 앞서 ‘반’ 프로모션 영상 공개",
-                  "url": "https://ch.netmarble.com/Newsroom/PressRelease/Detail?bbs_code=1014&post_seq=6962",
-                  "source": "넷마블"
+                  "title": "How XPUs Meet a World-Class AI Factory",
+                  "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
+                  "source": "NVIDIA"
+                }
+              ]
+            },
+            {
+              "name": "Vera Rubin",
+              "category": "AI",
+              "articleCount": 1,
+              "articles": [
+                {
+                  "title": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+                  "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+                  "source": "NVIDIA"
                 }
               ]
             }
