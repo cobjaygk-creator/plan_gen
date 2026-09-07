@@ -464,6 +464,14 @@
     "portal": "NETMARBLE"
   },
   {
+    "url": "https://7origin.netmarble.com/ko",
+    "game_name": "일곱 개의 대죄: Origin",
+    "publisher": "NETMARBLE",
+    "published_on": null,
+    "thumbnail_url": "https://sgimage.netmarble.com/web/6N/2026/03/170942/7dso_appicon.png",
+    "portal": "NETMARBLE"
+  },
+  {
     "url": "https://stardive.netmarble.com/ko",
     "game_name": "몬길: STAR DIVE",
     "publisher": "NETMARBLE",

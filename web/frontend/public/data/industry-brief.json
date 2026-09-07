@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T05:01:29.936791+00:00",
+  "generated_at": "2026-09-07T05:31:11.405150+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T04:57:18.661433+00:00",
+      "generatedAt": "2026-09-07T05:26:42.125043+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 221,
+        "collected": 243,
         "analyzed": 0,
-        "pending": 221,
+        "pending": 243,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -629,8 +629,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 15,
+          "articleCount": 17,
           "articles": [
+            {
+              "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190795",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "중기부, 제32차 APEC 중소기업 장관회의에서 ｢K-중소·스타트업 AI 혁신 전략｣ 로드맵 제시",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780512&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
@@ -645,16 +655,6 @@
               "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
               "url": "https://n.news.naver.com/mnews/article/138/0002240413",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
@@ -1420,13 +1420,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T04:57:18.661433+00:00",
+      "generatedAt": "2026-09-07T05:26:42.125043+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 689,
+        "collected": 707,
         "analyzed": 0,
-        "pending": 689,
+        "pending": 707,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2046,8 +2046,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 45,
+          "articleCount": 47,
           "articles": [
+            {
+              "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190795",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "중기부, 제32차 APEC 중소기업 장관회의에서 ｢K-중소·스타트업 AI 혁신 전략｣ 로드맵 제시",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780512&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
@@ -2062,16 +2072,6 @@
               "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
               "url": "https://n.news.naver.com/mnews/article/138/0002240413",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
@@ -2867,13 +2867,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T04:57:18.661433+00:00",
+      "generatedAt": "2026-09-07T05:26:42.125043+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 221,
+        "collected": 243,
         "analyzed": 0,
-        "pending": 221,
+        "pending": 243,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3493,8 +3493,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 15,
+          "articleCount": 17,
           "articles": [
+            {
+              "title": "‘AI 인프라 선행지표’ 폭스콘, 8월 매출 52% 급증…역대 2위",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190795",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "중기부, 제32차 APEC 중소기업 장관회의에서 ｢K-중소·스타트업 AI 혁신 전략｣ 로드맵 제시",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780512&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-07&endDate=2026-09-07&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "[IT과학칼럼] 로보트 태권브이를 움직이는 힘은 무엇인가",
               "url": "https://n.news.naver.com/mnews/article/016/0002693752",
@@ -3509,16 +3519,6 @@
               "title": "[주간 클라우드 동향/9월①] GPU 공급 넘어 국가 보안까지…클라우드 경쟁, 특화 AI로 확장",
               "url": "https://n.news.naver.com/mnews/article/138/0002240413",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "9.4조 AI 승부수…'모델→보안→서비스' 잇는다[AI프리즘]",
-              "url": "https://n.news.naver.com/mnews/article/001/0016292128",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
