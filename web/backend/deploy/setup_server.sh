@@ -44,6 +44,16 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable uxui-backend
 
+echo "==> 방화벽(iptables)에 8000번 포트 허용 — Oracle 기본 Ubuntu 이미지는
+    22번 외 모든 인바운드를 REJECT하는 규칙이 마지막에 걸려 있어서, VCN
+    Security List에서 8000번을 열어도 인스턴스 자체 방화벽에서 막힌다."
+if ! sudo iptables -C INPUT -p tcp --dport 8000 -m state --state NEW -j ACCEPT 2>/dev/null; then
+  sudo iptables -I INPUT 5 -p tcp --dport 8000 -m state --state NEW -j ACCEPT
+fi
+if command -v netfilter-persistent >/dev/null; then
+  sudo netfilter-persistent save
+fi
+
 echo "==> 완료. 다음 순서로 진행:"
 echo "    1) GitHub Actions에서 이 저장소를 처음 배포(master에 push, 또는"
 echo "       workflow_dispatch 수동 실행)해서 $REPO_DIR 에 코드를 채운다."
