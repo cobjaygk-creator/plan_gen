@@ -17,14 +17,19 @@ from sqlalchemy.orm import Session
 from .models import Article
 from .sources import GAME_COMPANY_NAMES
 
-# "시범 분류" 5개만 — 8개월 공유 이력·이번 세션에서 실제로 반복 등장한 유형만
+# "시범 분류" — 8개월 공유 이력·이번 세션에서 실제로 반복 등장한 유형만
 # 골랐다. 활동이 없으면 화면에서 그냥 빠지므로, 굳이 12개를 채워둘 이유가 없다.
+# 4개만 뜨는 날이 많다는 피드백으로 소버린 AI·로보틱스 두 개를 추가했다 —
+# "모두의 AI"류 국내 컨소시엄 소식과 로봇/휴머노이드 소식이 실제로 자주
+# 나오는데 기존 5개 태그 어디에도 안 걸렸다.
 TECH_TAGS: list[dict] = [
     {"key": "agent", "label": "AI 에이전트", "keywords": ["에이전트", "agent"]},
     {"key": "coding", "label": "코딩 AI", "keywords": ["코딩", "바이브 코딩", "코파일럿", "copilot", "cursor"]},
     {"key": "model", "label": "신규 모델", "keywords": ["클로드", "제미나이", "챗gpt", "gpt-", "glm", "라마", "딥시크", "오픈소스 모델"]},
     {"key": "gpu", "label": "GPU · 반도체", "keywords": ["gpu", "반도체", "엔비디아", "nvidia", "amd", "칩플레이션"]},
     {"key": "media_gen", "label": "이미지 · 영상 생성", "keywords": ["이미지 생성", "영상 생성", "미드저니", "런웨이", "runway", "sora"]},
+    {"key": "sovereign", "label": "소버린 AI · 국내 서비스", "keywords": ["소버린 ai", "모두의 ai", "국산 ai", "토종 ai", "독파모"]},
+    {"key": "robotics", "label": "로보틱스", "keywords": ["로봇", "휴머노이드", "robot", "robotics"]},
 ]
 
 
