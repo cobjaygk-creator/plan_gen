@@ -945,7 +945,36 @@ def _recommended_articles(db: Session, category: str, period_start: datetime, pe
             break
     return recommended
 
+# Always Free 인스턴스(1/8 OCPU)에서 이 함수 하나가 4~6초씩 걸리는 게
+# 확인됐다 — 클러스터링 비교(SequenceMatcher) 비용은 이미 한 요청 안에서는
+# similarity_cache로 아끼고 있지만, "오늘" 창은 페이지를 열 때마다(탭 전환,
+# 날짜 재선택 등) 매번 처음부터 다시 계산되고 있었다. 이 창의 입력(Article/
+# Issue 테이블)은 /refresh, /highlights/refresh가 collect_all()로 새 기사를
+# 넣을 때만 바뀌므로, 그 두 곳에서만 캐시를 비우면 나머지 요청은 안전하게
+# 재사용할 수 있다.
+_brief_cache: dict[tuple, dict] = {}
+_BRIEF_CACHE_MAX_ENTRIES = 32  # 날짜 이동으로 키가 계속 늘어나지 않도록 상한
+
+
 def _serialize_brief(
+    db: Session, brief: DailyBrief, stats_period_start: datetime | None = None, stats_period_end: datetime | None = None,
+) -> dict:
+    cache_key = (
+        brief.id,
+        _as_aware_utc(stats_period_start) or _as_aware_utc(brief.period_start),
+        _as_aware_utc(stats_period_end) or _as_aware_utc(brief.period_end),
+    )
+    cached = _brief_cache.get(cache_key)
+    if cached is not None:
+        return dict(cached)  # 얕은 복사 — 호출부가 반환값에 키를 덧붙여도(예: periodLabel) 캐시 원본은 안 건드린다
+    payload = _serialize_brief_uncached(db, brief, stats_period_start, stats_period_end)
+    if len(_brief_cache) >= _BRIEF_CACHE_MAX_ENTRIES:
+        _brief_cache.clear()
+    _brief_cache[cache_key] = payload
+    return dict(payload)
+
+
+def _serialize_brief_uncached(
     db: Session, brief: DailyBrief, stats_period_start: datetime | None = None, stats_period_end: datetime | None = None,
 ) -> dict:
     now = datetime.now(timezone.utc)
@@ -1131,6 +1160,7 @@ def refresh_latest_brief(user: User = Depends(get_current_user), db: Session = D
         raise HTTPException(status.HTTP_409_CONFLICT, "이미 업계 동향을 업데이트하고 있습니다.")
     try:
         result = refresh_industry_brief(db)
+        _brief_cache.clear()  # collect_all()이 새 기사를 넣었으니 캐시된 오늘 창은 더 이상 유효하지 않다
         brief = db.execute(select(DailyBrief).where(DailyBrief.id == result.brief_id)).scalars().one()
         return {
             "brief": _serialize_brief(db, brief),
@@ -1192,6 +1222,7 @@ def refresh_daily_highlights(db: Session = Depends(get_db), user: User = Depends
         raise HTTPException(status.HTTP_409_CONFLICT, "이미 업계 동향을 업데이트하고 있습니다.")
     try:
         collect_all(db)
+        _brief_cache.clear()  # collect_all()이 새 기사를 넣었으니 캐시된 오늘 창은 더 이상 유효하지 않다
         now = datetime.now(timezone.utc)
         game = refresh_and_save_highlights(db, "GAME", now)
         ai = refresh_and_save_highlights(db, "AI", now)

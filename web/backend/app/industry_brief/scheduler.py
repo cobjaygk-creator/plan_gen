@@ -17,6 +17,7 @@ from ..database import SessionLocal
 from .highlights import refresh_and_save_highlights
 from .periods import KST
 from .refresh import refresh_industry_brief
+from .routes import _brief_cache
 
 logger = logging.getLogger(__name__)
 
@@ -36,6 +37,7 @@ def _run_once() -> None:
     db = SessionLocal()
     try:
         result = refresh_industry_brief(db)
+        _brief_cache.clear()  # routes._serialize_brief의 "오늘" 캐시도 같이 비운다
         now = datetime.now(timezone.utc)
         refresh_and_save_highlights(db, "GAME", now)
         refresh_and_save_highlights(db, "AI", now)
