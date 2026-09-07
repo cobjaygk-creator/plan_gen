@@ -82,6 +82,18 @@ function PolicyImpactChart({ impact }: { impact: PolicyImpact }) {
   );
 }
 
+/** "시사점"(정책 유형별 고정 체크리스트 문구, 실제 반응 데이터와 무관)을
+ * 없애고, 이미 차트로 보여주고 있는 발표 전후 기사량 자체를 문장으로
+ * 풀어 "업계 반응"으로 대신 보여준다. */
+function buildReactionSentence(impact: PolicyImpact): string {
+  if (impact.beforeAvg <= 0) {
+    return `발표 후 3일간 관련 기사가 평균 ${impact.afterAvg}건 나왔습니다 — 발표 전 비교 기준이 없어 신규 이슈로 보입니다.`;
+  }
+  const ratio = impact.afterAvg / impact.beforeAvg;
+  const trend = ratio >= 1.5 ? "업계 반응이 뚜렷하게 늘었습니다." : ratio <= 0.7 ? "오히려 관심이 줄었습니다." : "반응 변화는 크지 않습니다.";
+  return `발표 전 3일 평균 ${impact.beforeAvg}건이던 관련 기사가 발표 후 3일 평균 ${impact.afterAvg}건으로 ×${ratio.toFixed(1)} — ${trend}`;
+}
+
 export function PolicyImpactPanel({ impacts }: { impacts?: IndustryBrief["policyImpact"] }) {
   if (!impacts || impacts.length === 0) return null;
   return (
@@ -99,7 +111,7 @@ export function PolicyImpactPanel({ impacts }: { impacts?: IndustryBrief["policy
           </div>
           <PolicyImpactChart impact={impact} />
           <p className="ib-policy-impact-stat">발표 전 3일 평균 <b>{impact.beforeAvg}건</b> → 발표 후 3일 평균 <b>{impact.afterAvg}건</b></p>
-          {impact.implication && <p className="ib-policy-impact-implication">{impact.implication}</p>}
+          <p className="ib-policy-impact-reaction">{buildReactionSentence(impact)}</p>
         </div>
       ))}
     </section>
