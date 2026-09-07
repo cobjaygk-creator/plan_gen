@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T03:05:59.774869+00:00",
+  "generated_at": "2026-09-07T03:34:53.620994+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T03:02:55.324924+00:00",
+      "generatedAt": "2026-09-07T03:30:37.382624+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 186,
+        "collected": 201,
         "analyzed": 0,
-        "pending": 186,
+        "pending": 201,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -693,8 +693,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 7,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997061",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "오픈AI 최고과학자 “AI 개발 속도 늦춰야” 경고",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190771",
+              "source": "NAVER · 조선비즈"
+            },
             {
               "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
               "url": "https://n.news.naver.com/mnews/article/025/0003549446",
@@ -709,16 +719,6 @@
               "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
               "url": "https://n.news.naver.com/mnews/article/008/0005410226",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[AI리더의 서가] AI와 일하는 기술",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214845",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI ‘아스트라’가 드러낸 AI 기술 승부처는... 바로 기억",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997031",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
@@ -1376,13 +1376,13 @@
     },
     "3d": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T03:02:55.324924+00:00",
+      "generatedAt": "2026-09-07T03:30:37.382624+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 674,
+        "collected": 685,
         "analyzed": 0,
-        "pending": 674,
+        "pending": 685,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2032,6 +2032,38 @@
           ]
         },
         {
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 44,
+          "articles": [
+            {
+              "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997061",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "오픈AI 최고과학자 “AI 개발 속도 늦춰야” 경고",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190771",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
+              "source": "NAVER · 중앙일보"
+            },
+            {
+              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
+              "source": "AI타임스"
+            },
+            {
+              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
+              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
+              "source": "NAVER · 머니투데이"
+            }
+          ]
+        },
+        {
           "key": "agent",
           "label": "AI 에이전트",
           "articleCount": 43,
@@ -2060,38 +2092,6 @@
               "title": "NIA, '국가 AI 대전환' 조직개편 단행…AI 에이전트·피지컬 AI 전담팀",
               "url": "https://n.news.naver.com/mnews/article/003/0014172774",
               "source": "NAVER · 뉴시스"
-            }
-          ]
-        },
-        {
-          "key": "model",
-          "label": "신규 모델",
-          "articleCount": 42,
-          "articles": [
-            {
-              "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549446",
-              "source": "NAVER · 중앙일보"
-            },
-            {
-              "title": "오픈AI 'GPT-6 아스트라', 사람 개입 없이 3D 게임 '포털' 공략 성공",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214922",
-              "source": "AI타임스"
-            },
-            {
-              "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
-              "url": "https://n.news.naver.com/mnews/article/008/0005410226",
-              "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[AI리더의 서가] AI와 일하는 기술",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214845",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI ‘아스트라’가 드러낸 AI 기술 승부처는... 바로 기억",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997031",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
@@ -2759,13 +2759,13 @@
     },
     "week": {
       "briefDate": "2026-09-07",
-      "generatedAt": "2026-09-07T03:02:55.324924+00:00",
+      "generatedAt": "2026-09-07T03:30:37.382624+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 186,
+        "collected": 201,
         "analyzed": 0,
-        "pending": 186,
+        "pending": 201,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3449,8 +3449,18 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 7,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "“과제 대필 맡기던 학생들이 이제 AI 이용”...챗GPT 등장 이후 아웃소싱 일자리 잠식",
+              "url": "https://n.news.naver.com/mnews/article/023/0003997061",
+              "source": "NAVER · 조선일보"
+            },
+            {
+              "title": "오픈AI 최고과학자 “AI 개발 속도 늦춰야” 경고",
+              "url": "https://n.news.naver.com/mnews/article/366/0001190771",
+              "source": "NAVER · 조선비즈"
+            },
             {
               "title": "“AGI 시대 열었다”는 오픈AI…“범용 아닌 마케팅용” 반론",
               "url": "https://n.news.naver.com/mnews/article/025/0003549446",
@@ -3465,16 +3475,6 @@
               "title": "\"AGI가 왔다\" 젠슨 황도 선언…수능 만점 받은 GPT-6 아스트라",
               "url": "https://n.news.naver.com/mnews/article/008/0005410226",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "[AI리더의 서가] AI와 일하는 기술",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214845",
-              "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI ‘아스트라’가 드러낸 AI 기술 승부처는... 바로 기억",
-              "url": "https://n.news.naver.com/mnews/article/023/0003997031",
-              "source": "NAVER · 조선일보"
             }
           ]
         },
