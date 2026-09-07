@@ -181,6 +181,20 @@ def test_update_headline_pulls_real_agency_out_of_aggregator_source():
     assert "…" not in headline
 
 
+def test_update_headline_strips_quoted_title_and_trailing_elaboration():
+    # 실서비스 사례: 제목이 통째로 인용구라("관세청, "내년 예산안, 마약차단
+    # ·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도"") 그대로
+    # 이어붙이면 "...관련 "내년 예산안, 마약차단·인공지능(AI) 혁신에
+    # 집중···현장맞춤형 연구개발(R&D)도"가 있었습니다"처럼 큰따옴표·
+    # 가운뎃점 나열이 뒤섞여 어색해진다.
+    headline = build_update_headline(
+        title='관세청, "내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도"',
+        source="대한민국 정책브리핑",
+        evidence_sentence="관세청은 내년 예산안에서 마약 차단과 인공지능 혁신에 집중 투자하기로 했다.",
+    )
+    assert headline == "최근 관세청에서 마약, 인공지능 관련 내년 예산안 발표가 있었습니다."
+
+
 def test_update_headline_falls_back_to_source_without_agency_suffix():
     headline = build_update_headline(
         title="게임 이용자 보호 방안 발표",

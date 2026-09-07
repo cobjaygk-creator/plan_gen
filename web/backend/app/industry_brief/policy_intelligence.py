@@ -260,15 +260,32 @@ def _has_batchim(syllable: str) -> bool:
     return (ord(syllable) - ord("가")) % 28 != 0
 
 
+_HEADLINE_QUOTE_CHARS = " \"'“”‘’"
+# "예산안 발표"처럼 이미 명사+동작으로 끝나면 " 발표"를 또 붙이지 않는다.
+_HEADLINE_ANNOUNCEMENT_ENDINGS = (
+    "발표", "계획", "시행", "개정", "도입", "공개", "체결", "개최", "확대", "지원", "발간", "공표",
+)
+
+
 def _headline_action(title: str, agency: str) -> str:
-    """제목에서 발표 주체를 뗀 나머지 중, 부가 설명(말줄임표·대시 뒤)을
-    잘라내고 핵심 발표 내용만 남긴다 — "관세청, 2027년도 예산안 발표…
-    마약 차단·AI 활용 확대"에서 "2027년도 예산안 발표"만 남기는 식."""
+    """제목에서 발표 주체를 뗀 나머지 중, 부가 설명(말줄임표·가운뎃점
+    나열·쉼표 뒤)을 잘라내고 핵심 발표 내용만 남긴다 — '관세청, "내년
+    예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발도"'
+    처럼 기사 제목이 통째로 인용구인 경우에도 큰따옴표·가운뎃점 나열이
+    그대로 문장에 섞여 들어가지 않도록, 첫 쉼표/말줄임 앞까지만 쓴다."""
     remainder = title
     if agency and remainder.startswith(agency):
-        remainder = remainder[len(agency):].lstrip(" ,·")
-    main = re.split(r"…|\.\.\.|\s-\s", remainder, maxsplit=1)[0].strip(" .")
-    return main or title
+        remainder = remainder[len(agency):].lstrip(f" ,·{_HEADLINE_QUOTE_CHARS}")
+    remainder = remainder.strip(_HEADLINE_QUOTE_CHARS)
+    # "···"(가운뎃점 나열형 말줄임)와 "…"를 모두 말줄임으로 취급하고,
+    # 그 뒤에 이어지는 쉼표 구분 나열(부가 설명)도 함께 잘라낸다.
+    main = re.split(r"···+|…|\.{2,}|,|\s-\s", remainder, maxsplit=1)[0]
+    main = main.strip(f"{_HEADLINE_QUOTE_CHARS}.")
+    if not main:
+        main = title
+    if not any(main.endswith(term) for term in _HEADLINE_ANNOUNCEMENT_ENDINGS):
+        main = f"{main} 발표"
+    return main
 
 
 def build_update_headline(title: str, source: str, evidence_sentence: str) -> str:
