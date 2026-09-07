@@ -32,6 +32,24 @@ _MATERIAL_CHANGE_TERMS = (
 )
 _GENERIC_ENTITIES = {"게임", "ai", "대한민국", "한국", "분기", "실적"}
 
+# 한 회사가 자사 내부 업무에 AI를 도입·적용한 사례("OO제약이 AI로 품질관리
+# 시스템을 구축") — 그 자체로는 업계 전체를 흔드는 사건이 아니라 개별
+# 활용 사례일 뿐이라, GAME의 프로모션 필터와 같은 방식으로 핵심 요약
+# 자리에서 뺀다. 모델 출시·인프라·정책처럼 진짜 기술/산업 변화를 다루면
+# (구조적 용어가 같이 있으면) 그대로 둔다.
+_AI_ADOPTION_TERMS = (
+    "도입하여", "도입해", "도입했다", "도입한다", "도입을",
+    "적용하기로", "적용했다", "적용해",
+    "구축하고 있다", "구축했다", "구축한다",
+    "자동화하기 위해", "자동으로 생성하는", "업무에 적용", "업무에 도입",
+)
+_AI_STRUCTURAL_TERMS = (
+    "모델", "gpu", "인프라", "데이터센터", "반도체", "오픈소스", "벤치마크",
+    "성능", "아키텍처", "추론", "투자", "인수", "합병", "지분", "정책", "규제",
+    "법안", "유출", "보안", "취약점", "출시", "공개", "연구", "논문", "협약",
+    "동맹", "파트너십",
+)
+
 
 def _entities(members: list[Article]) -> list[str]:
     values: list[str] = []
@@ -64,33 +82,40 @@ def issue_event_key(issue: Issue, members: list[Article]) -> str | None:
 
 
 def is_core_summary_candidate(issue: Issue, members: list[Article]) -> bool:
-    """Keep marketing amplification out of the executive-level summary.
+    """Keep marketing amplification (GAME) / single-company internal AI
+    adoption (AI) out of the executive-level summary.
 
-    Promotional coverage remains searchable and may appear as a signal or
+    That coverage remains searchable and may appear as a signal or
     recommended article. It only loses the two scarce core-summary slots when
     it contains no material launch, business, policy, security, or product
     change.
     """
-    if issue.category != "GAME":
+    if issue.category not in ("GAME", "AI"):
         return True
     text = " ".join([
         issue.title,
         issue.summary or "",
         *(article.title for article in members),
     ]).casefold()
-    is_promotion = any(term in text for term in _PROMOTIONAL_GAME_TERMS)
-    has_material_change = any(term in text for term in _MATERIAL_CHANGE_TERMS)
-    return not (is_promotion and not has_material_change)
+    if issue.category == "GAME":
+        is_promotion = any(term in text for term in _PROMOTIONAL_GAME_TERMS)
+        has_material_change = any(term in text for term in _MATERIAL_CHANGE_TERMS)
+        return not (is_promotion and not has_material_change)
+    is_adoption = any(term in text for term in _AI_ADOPTION_TERMS)
+    has_structural_change = any(term in text for term in _AI_STRUCTURAL_TERMS)
+    return not (is_adoption and not has_structural_change)
 
 
 def editorial_score(issue: Issue, members: list[Article]) -> float:
     """Score distinct events, favouring broad industry effects over one firm's results."""
     score = issue.importance_score or 0.0
     text = f"{issue.title} {issue.summary or ''}".casefold()
-    if issue.category != "GAME":
+    if issue.category not in ("GAME", "AI"):
         return score
     if not is_core_summary_candidate(issue, members):
         return min(score, 20.0)
+    if issue.category == "AI":
+        return score
 
     is_earnings = any(term in text for term in _EARNINGS_TERMS)
     is_structural = any(term in text for term in _STRUCTURAL_GAME_TERMS)

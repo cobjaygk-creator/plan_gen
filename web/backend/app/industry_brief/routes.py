@@ -278,7 +278,7 @@ def _period_ranked_issues(
         momentum_score = max(0.0, min(8.0, 4.0 + momentum * 2.0))
         raw_score = round(min(100.0, evidence_score + volume_score + importance_score + persistence_score + momentum_score), 1)
         score = raw_score
-        if category == "GAME":
+        if category in ("GAME", "AI"):
             score = min(score, editorial_score(issue, members))
         score = round(score, 1)
         editorial_adjustment = round(score - raw_score, 1)
