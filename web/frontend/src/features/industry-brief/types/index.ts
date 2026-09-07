@@ -20,6 +20,9 @@ export interface WatchItem {
 
 export interface IndustryPanel {
   headline: string;
+  /** false면 이 카테고리엔 오늘 교차 확인된 핵심 이슈가 없다는 뜻 — 리드
+   * 카드가 게임/AI/게임×AI를 순환할 때 이 카테고리 슬라이드는 건너뛴다. */
+  hasSignal: boolean;
   keySummaries?: string[];
   keySummaryDetails?: Array<{
     issueId?: number;
@@ -225,6 +228,7 @@ export interface PolicyUpdate {
   id: string;
   type: "REGULATION" | "ENFORCEMENT" | "FUNDING" | "TALENT" | "GLOBAL" | "PARTNERSHIP" | "PROGRAM";
   typeLabel: string;
+  category: "GAME" | "AI";
   title: string;
   source: string;
   url: string;
@@ -265,6 +269,15 @@ export interface IndustryBrief {
   analysisStats?: AnalysisStats;
   analytics?: {
     interest: { labels: string[]; series: Array<{ name: string; originalTitle: string; category: "GAME" | "AI"; values: number[] }>; bucket: string };
+    topicLandscape: Array<{
+      name: string; category: "GAME" | "AI"; sources: number; days: number; articleCount: number;
+      isMarketing: boolean; isFresh: boolean; isOngoing: boolean;
+      articles: Array<{ title: string; url: string; source: string }>;
+    }>;
+    topicFreshness: {
+      fresh: Array<{ name: string; category: "GAME" | "AI"; articleCount: number; articles: Array<{ title: string; url: string; source: string }> }>;
+      ongoing: Array<{ name: string; category: "GAME" | "AI"; articleCount: number; articles: Array<{ title: string; url: string; source: string }> }>;
+    };
   };
   game: IndustryPanel;
   ai: IndustryPanel;
@@ -278,5 +291,10 @@ export interface IndustryBrief {
   marketComparison?: MarketComparisonPanel[];
   policyUpdates?: PolicyUpdate[];
   policyTimeline?: PolicyUpdate[];
+  policyImpact?: Array<{
+    policyTitle: string; policyUrl?: string | null; implication?: string | null;
+    publishedDate: string; category: "GAME" | "AI";
+    labels: string[]; values: number[]; eventIndex: number; beforeAvg: number; afterAvg: number;
+  }>;
 }
 

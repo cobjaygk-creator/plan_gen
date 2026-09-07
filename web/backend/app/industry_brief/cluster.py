@@ -12,6 +12,7 @@ import re
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
+from functools import lru_cache
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -28,6 +29,7 @@ def _utcnow() -> datetime:
     return datetime.now(timezone.utc)
 
 
+@lru_cache(maxsize=8192)
 def _normalize_title(title: str) -> str:
     return re.sub(r"[^\w\s]", "", title.lower()).strip()
 
@@ -53,29 +55,38 @@ _EVENT_TERMS = {
 }
 
 
-def _json_tags(value: str | None) -> set[str]:
+@lru_cache(maxsize=8192)
+def _json_tags(value: str | None) -> frozenset[str]:
     try:
         items=json.loads(value or "[]")
     except (TypeError, ValueError):
         items=[]
-    return {str(item).strip().casefold() for item in items if len(str(item).strip()) > 1}
+    return frozenset(str(item).strip().casefold() for item in items if len(str(item).strip()) > 1)
 
 
-def _keywords(article: Article) -> set[str]:
+def _keywords(article: Article) -> frozenset[str]:
     return _json_tags(article.keywords) - _GENERIC_TAGS
 
 
-def _entities(article: Article) -> set[str]:
+def _entities(article: Article) -> frozenset[str]:
     return _json_tags(article.entities) - _GENERIC_TAGS - _GENERIC_ORGANIZATIONS
 
 
-def _overlap_min(left: set[str], right: set[str]) -> float:
+def _overlap_min(left: frozenset[str], right: frozenset[str]) -> float:
     return len(left & right) / max(1, min(len(left), len(right))) if left and right else 0.0
 
 
-def _event_types(article: Article) -> set[str]:
-    text=f"{article.title} {article.summary or ''}".casefold()
-    return {kind for kind,terms in _EVENT_TERMS.items() if any(term.casefold() in text for term in terms)}
+@lru_cache(maxsize=8192)
+def _event_types_for_text(text: str) -> frozenset[str]:
+    return frozenset(kind for kind, terms in _EVENT_TERMS.items() if any(term.casefold() in text for term in terms))
+
+
+def _event_types(article: Article) -> frozenset[str]:
+    # (title, summary) 조합이 그대로 캐시 키가 되도록 별도 함수로 뺐다 —
+    # 같은 기사가 여러 이슈와 비교될 때(그리고 이번 요청 안에서 게임/AI ·
+    # 오늘/최근 1주 창으로 4번 반복 호출될 때) 매번 다시 계산하지 않는다.
+    text = f"{article.title} {article.summary or ''}".casefold()
+    return _event_types_for_text(text)
 
 
 def _near_in_time(a: Article,b: Article,days: int=7) -> bool:
@@ -86,7 +97,24 @@ def _near_in_time(a: Article,b: Article,days: int=7) -> bool:
     return abs((left-right).total_seconds()) <= days*86400
 
 
-def _similarity(a: Article, b: Article) -> float:
+def _similarity(a: Article, b: Article, cache: dict[tuple[int, int], float] | None = None) -> float:
+    # 프로파일링 결과 이 함수(특히 SequenceMatcher.ratio)가 브리핑 조회의
+    # 압도적인 병목이었다 — 같은 (a, b) 쌍이 한 요청 안에서 여러 번(트렌드
+    # 탭용 "최근 1주" 창과 오늘 창이 겹쳐서, 게임/AI 두 카테고리 각각)
+    # 반복 비교된다. 호출자가 dict를 넘겨주면 그 안에서만 캐시한다 — 실제
+    # 계산은 손대지 않고 그대로 감싸기만 해서, 캐시 없이 부르는 기존
+    # 호출부(cluster.py 내부 클러스터링 등)는 예전과 완전히 똑같이
+    # 동작한다.
+    key = (a.id, b.id)
+    if cache is not None and key in cache:
+        return cache[key]
+    score = _similarity_uncached(a, b)
+    if cache is not None:
+        cache[key] = score
+    return score
+
+
+def _similarity_uncached(a: Article, b: Article) -> float:
     normalized_a = _normalize_title(a.title)
     normalized_b = _normalize_title(b.title)
     title_sim=SequenceMatcher(None,normalized_a,normalized_b).ratio()
@@ -119,7 +147,9 @@ def _similarity(a: Article, b: Article) -> float:
     return score
 
 
-def _matches_issue(article: Article, members: list[Article]) -> bool:
+def _matches_issue(
+    article: Article, members: list[Article], similarity_cache: dict[tuple[int, int], float] | None = None,
+) -> bool:
     """Prevent single-link chains from merging several different events."""
     if not members:
         return False
@@ -135,7 +165,7 @@ def _matches_issue(article: Article, members: list[Article]) -> bool:
         ]
         if max(same_source_title_scores) < .95:
             return False
-    scores = [_similarity(article, member) for member in members]
+    scores = [_similarity(article, member, similarity_cache) for member in members]
     if max(scores) < SIMILARITY_THRESHOLD:
         return False
     anchor_matches = scores[0] >= SIMILARITY_THRESHOLD

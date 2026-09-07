@@ -1,0 +1,64 @@
+name: Deploy to OCI
+
+# master에 push되면:
+#   1) 이 러너에서 프런트엔드를 빌드하고(서버가 RAM 1GB짜리 Always Free
+#      x86 인스턴스라 서버에서 직접 빌드하지 않는다)
+#   2) 백엔드 소스 + 빌드된 dist/를 rsync로 서버에 통째로 올린 뒤
+#   3) SSH로 deploy.sh(venv/의존성 갱신 + systemd 재시작)만 원격 실행한다
+#
+# 서버 최초 세팅(web/backend/deploy/setup_server.sh)은 이 워크플로 범위
+# 밖 — 한 번은 수동으로 거쳐야 한다.
+#
+# 필요한 리포지토리 시크릿(Settings → Secrets and variables → Actions):
+#   OCI_HOST        인스턴스 공인 IP
+#   OCI_SSH_KEY     배포 전용 SSH 개인키 전체 내용
+#   OCI_USER        SSH 접속 계정 (Ubuntu 이미지는 보통 "ubuntu")
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-oci
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build frontend
+        working-directory: web/frontend
+        run: |
+          npm ci
+          npm run build
+
+      - name: Sync files to server
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: >-
+            -avz --delete
+            --exclude=.git/
+            --exclude=.env
+            --exclude=web/backend/.venv/
+            --exclude=web/backend/data/
+            --exclude=web/frontend/node_modules/
+          path: ./
+          remote_path: /opt/uxui/plan_gen/
+          remote_host: ${{ secrets.OCI_HOST }}
+          remote_user: ${{ secrets.OCI_USER }}
+          remote_key: ${{ secrets.OCI_SSH_KEY }}
+
+      - name: Install deps & restart service
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.OCI_HOST }}
+          username: ${{ secrets.OCI_USER }}
+          key: ${{ secrets.OCI_SSH_KEY }}
+          script: bash /opt/uxui/plan_gen/web/backend/deploy/deploy.sh

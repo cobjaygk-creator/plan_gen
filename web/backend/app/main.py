@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -8,6 +9,7 @@ from starlette.middleware.sessions import SessionMiddleware
 from .config import SESSION_COOKIE_NAME, SESSION_MAX_AGE_SECONDS, SESSION_SECRET_KEY
 from .database import Base, engine
 from .industry_brief.routes import router as industry_brief_router
+from .industry_brief.scheduler import start_daily_refresh_scheduler
 from .event_bench.routes import router as event_bench_router
 from .preregistration.routes import router as preregistration_router
 from .game_sites.routes import router as game_sites_router
@@ -16,7 +18,15 @@ from .routers import auth, generations
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="UX Insight API")
+
+@asynccontextmanager
+async def _lifespan(_: FastAPI):
+    # 업계동향: 매일 오전 7시(KST) 자동 갱신, 그 전까지는 이전 스냅샷 유지.
+    start_daily_refresh_scheduler()
+    yield
+
+
+app = FastAPI(title="UX Insight API", lifespan=_lifespan)
 
 app.add_middleware(
     SessionMiddleware,

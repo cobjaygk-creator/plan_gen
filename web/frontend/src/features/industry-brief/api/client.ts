@@ -51,6 +51,9 @@ export interface HighlightArticle {
 export interface HighlightIssue {
   title: string;
   summary: string;
+  /** 상세 팝업에서만 보이는 3~5문장 설명. 이 필드가 생기기 전에 저장된
+   * 스냅샷은 빈 문자열로 온다 — 렌더링 쪽에서 있을 때만 보여준다. */
+  detail: string;
   articles: HighlightArticle[];
 }
 

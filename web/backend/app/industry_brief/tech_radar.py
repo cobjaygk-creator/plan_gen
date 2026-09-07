@@ -15,6 +15,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from .models import Article
+from .sources import GAME_COMPANY_NAMES
 
 # "시범 분류" 5개만 — 8개월 공유 이력·이번 세션에서 실제로 반복 등장한 유형만
 # 골랐다. 활동이 없으면 화면에서 그냥 빠지므로, 굳이 12개를 채워둘 이유가 없다.
@@ -29,6 +30,15 @@ TECH_TAGS: list[dict] = [
 
 def _matches(text: str, keywords: list[str]) -> bool:
     return any(keyword in text for keyword in keywords)
+
+
+def _is_game_company_story(text: str) -> bool:
+    """AI 카테고리로 분류돼 있어도 "오픈AI-컴투스, AI로 게임 만들기 행사"
+    처럼 게임회사가 주인공인 기사는 AI 업계 소식이라기보다 게임회사의
+    AI 활용 사례에 가깝다 — 기술 레이더(순수 AI 업계 펄스 체크)에서는
+    뺀다. 카카오·네이버·삼성전자처럼 게임 사업부가 있을 뿐인 대기업은
+    GAME_COMPANY_NAMES에 없으므로 걸러지지 않는다."""
+    return any(name.casefold() in text for name in GAME_COMPANY_NAMES)
 
 
 def build_tech_radar(db: Session, start: datetime, end: datetime) -> list[dict]:
@@ -46,6 +56,7 @@ def build_tech_radar(db: Session, start: datetime, end: datetime) -> list[dict]:
         matched = [
             a for a in articles
             if _matches(f"{a.title} {a.summary or ''}".casefold(), tag["keywords"])
+            and not _is_game_company_story(f"{a.title} {a.summary or ''}".casefold())
         ]
         if not matched:
             continue

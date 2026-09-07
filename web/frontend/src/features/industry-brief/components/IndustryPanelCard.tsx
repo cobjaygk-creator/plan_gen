@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { IndustryPanel, SourceItem } from "../types";
 import { clearIssueFeedback, submitIssueFeedback, type CategoryHighlights, type CoreFeedbackReason, type HighlightIssue } from "../api/client";
+import { EmptyState } from "./EmptyState";
 
 interface Props {
 
@@ -11,95 +12,67 @@ interface Props {
   /** When set (오늘 tab only), replaces the old cross-verification-gated
    * key-summary block with the AI-judged 핵심 이슈 + 추천 기사 list. */
   highlights?: CategoryHighlights;
+  /** 빈 상태에서 "가장 최근 브리핑 보기"를 눌렀을 때 오늘 날짜로 이동. */
+  onViewLatest?: () => void;
 }
 
-const MAX_CORE_ISSUES = 5;
-const VISIBLE_CORE_ISSUES = 2;
-const RECOMMENDED_PAGE_SIZE = 6;
+const MAX_CORE_ISSUES = 3;
 
-function DailyHighlightsBlock({ highlights, category }: { highlights: CategoryHighlights; category: "game" | "ai" }) {
-  const [issuePage, setIssuePage] = useState(0);
-  const [recommendedPage, setRecommendedPage] = useState(0);
+function DailyHighlightsBlock({ highlights, periodLabel, onViewLatest }: { highlights: CategoryHighlights; periodLabel: string; onViewLatest?: () => void }) {
   const [openIssue, setOpenIssue] = useState<HighlightIssue | null>(null);
-  const recommendedPageCount = Math.max(1, Math.ceil(highlights.recommended.length / RECOMMENDED_PAGE_SIZE));
-  const visibleRecommended = highlights.recommended.slice(
-    recommendedPage * RECOMMENDED_PAGE_SIZE, recommendedPage * RECOMMENDED_PAGE_SIZE + RECOMMENDED_PAGE_SIZE,
-  );
-  const recommendedLabel = `${category === "game" ? "게임" : "AI"}추천기사`;
+  // 자동 로테이션 제거(디자인 핸드오프 3단계) — 예전엔 5개를 뽑아 2개씩
+  // 6.5초마다 돌려 보여줬는데, 읽는 도중 내용이 바뀌는 문제가 있었다.
+  // 이제 최대 3개를 그냥 다 렌더한다.
   const coreIssues = highlights.coreIssues.slice(0, MAX_CORE_ISSUES);
-  const issuePageCount = Math.max(1, Math.ceil(coreIssues.length / VISIBLE_CORE_ISSUES));
-  useEffect(() => {
-    if (issuePageCount <= 1) return;
-    const timer = window.setInterval(() => setIssuePage((page) => (page + 1) % issuePageCount), 6500);
-    return () => window.clearInterval(timer);
-  }, [issuePageCount]);
 
   if (!highlights.hasSignal) {
     return (
       <div className="ib-daily-highlights ib-highlight-section">
         <div className="eyebrow">핵심이슈</div>
-        <div className="ib-key-summary"><p className="headline">이 날짜엔 핵심 이슈로 뽑을 만큼 기사가 모이지 않았습니다.</p></div>
+        <EmptyState
+          title={`${periodLabel}에는 핵심 이슈로 뽑을 만큼 기사가 모이지 않았습니다`}
+          description={`수집은 ${highlights.articleCount}건 됐지만 교차 확인된 이슈가 없습니다. 주말·공휴일에는 흔한 상태입니다.`}
+          actions={onViewLatest ? [{ label: "가장 최근 브리핑 보기", onClick: onViewLatest, variant: "primary" }] : undefined}
+        />
       </div>
     );
   }
-  const visibleIssueCount = Math.min(VISIBLE_CORE_ISSUES, coreIssues.length);
-  const visibleIssues = Array.from(
-    { length: visibleIssueCount },
-    (_, offset) => coreIssues[(issuePage * VISIBLE_CORE_ISSUES + offset) % coreIssues.length],
-  );
   return (
     <div className="ib-daily-highlights">
       <div className="ib-highlight-section ib-highlight-core">
         <div className="eyebrow">핵심이슈</div>
         <div className="ib-highlight-issue-list">
-          {visibleIssues.map((issue, index) => (
-            <button
-              type="button"
-              className="ib-highlight-issue ib-change-flap"
-              key={issue.title}
-              // GAME/AI 두 칼럼이 각자 index 0부터 시작하다 보니, GAME 1번째와
-              // AI 1번째가 항상 같은 타이밍에 뒤집혀서 "2개씩 짝지어" 움직이는
-              // 것처럼 보였다 — 카테고리별로 절반 박자만큼 어긋나게 시작해
-              // 네 장이 각각 다른 타이밍에 넘어가도록 한다.
-              style={{ animationDelay: `${(index * 0.45 + (category === "ai" ? 0.225 : 0)).toFixed(3)}s` }}
-              onClick={() => setOpenIssue(issue)}
-            >
-              <p className="ib-highlight-summary ib-highlight-briefing">{issue.summary}</p>
-              <div className="ib-highlight-issue-foot">
-                <span className="ib-highlight-issue-foot-label">관련 기사 {issue.articles.length}건</span>
-                <span className="ib-highlight-issue-foot-more">자세히 보기 →</span>
-              </div>
-            </button>
-          ))}
+          {coreIssues.map((issue, index) => {
+            // AI가 판단한 핵심이슈는 별도 신뢰도 점수가 없어서(교차검증
+            // 스코어링을 거치는 옛 keySummaryDetails 경로와 다름), 근거
+            // 기사의 매체 다양성으로 대신 근사한다 — 서로 다른 매체 2곳
+            // 이상이면 "교차 확인", 아니면 "단일 관점".
+            const sourceCount = new Set(issue.articles.map((article) => article.source)).size;
+            const isCorroborated = sourceCount >= 2;
+            return (
+              <button
+                type="button"
+                className="ib-highlight-issue"
+                key={issue.title}
+                onClick={() => setOpenIssue(issue)}
+              >
+                <span className="ib-highlight-issue-rank tabular">{String(index + 1).padStart(2, "0")}</span>
+                <div className="ib-highlight-issue-body">
+                  <p className="ib-highlight-summary ib-highlight-briefing">{issue.summary}</p>
+                  <div className="ib-highlight-issue-foot">
+                    <span className="ib-highlight-issue-foot-label">기사 {issue.articles.length}건 · 독립 매체 {sourceCount}곳</span>
+                    <span className={`ib-confidence-badge ${isCorroborated ? "is-corroborated" : "is-single"}`}>
+                      {isCorroborated ? "교차 확인" : "단일 관점"}
+                    </span>
+                    <span className="ib-highlight-issue-foot-more">근거 기사 →</span>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
       {openIssue && <HighlightIssueModal issue={openIssue} onClose={() => setOpenIssue(null)} />}
-
-      {highlights.recommended.length > 0 && (
-        <div className="ib-highlight-section">
-          <div className="ib-recommended-head">
-            <span className="section-label">{recommendedLabel}</span>
-            {recommendedPageCount > 1 && (
-              <button
-                type="button"
-                className="ib-recommended-next"
-                onClick={() => setRecommendedPage((page) => (page + 1) % recommendedPageCount)}
-              >
-                다음
-              </button>
-            )}
-          </div>
-          <div className="ib-recommended-list">
-            {visibleRecommended.map((article) => (
-              <a key={article.url} href={article.url} target="_blank" rel="noreferrer" className="ib-recommended-item">
-                <div className="ib-recommended-top"><span className="outlet">{article.source.replace(/^NAVER · /, "")}</span></div>
-                <div className="title">{article.title}</div>
-                <div className="reason">{article.reason}</div>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -142,6 +115,7 @@ function HighlightIssueModal({ issue, onClose }: { issue: HighlightIssue; onClos
         <button type="button" className="ib-highlight-modal-close" onClick={onClose} aria-label="닫기">×</button>
         <p className="ib-highlight-modal-eyebrow">핵심이슈</p>
         <p className="ib-highlight-modal-body">{issue.summary}</p>
+        {issue.detail && <p className="ib-highlight-modal-detail">{issue.detail}</p>}
         <div className="ib-highlight-modal-articles">
           <div className="ib-source-pop-title">관련 기사 {issue.articles.length}건</div>
           {issue.articles.map((article) => (
@@ -156,7 +130,7 @@ function HighlightIssueModal({ issue, onClose }: { issue: HighlightIssue; onClos
   );
 }
 
-export function IndustryPanelCard({ title, panel, category, periodLabel, highlights }: Props) {
+export function IndustryPanelCard({ title, panel, category, periodLabel, highlights, onViewLatest }: Props) {
   const keySummaries = panel.keySummaries?.length ? panel.keySummaries.slice(0, 2) : [panel.headline];
   const [dismissedIssues, setDismissedIssues] = useState<Set<number>>(new Set());
   const [feedbackError, setFeedbackError] = useState<number | null>(null);
@@ -184,12 +158,16 @@ export function IndustryPanelCard({ title, panel, category, periodLabel, highlig
     <section className={`card ib-panel ib-panel-${category}`}>
 
       <div className="ib-panel-head">
-        <div className="ib-panel-title"><h2>{title}</h2></div>
+        <div className="ib-panel-title">
+          <span className="ib-panel-color-bar" aria-hidden="true" />
+          <h2>{title}</h2>
+          {highlights && <span className="ib-panel-count">기사 {highlights.articleCount}건</span>}
+        </div>
         <span className="ib-panel-status">{periodLabel}</span>
       </div>
 
       {highlights ? (
-        <DailyHighlightsBlock highlights={highlights} category={category} />
+        <DailyHighlightsBlock highlights={highlights} periodLabel={periodLabel} onViewLatest={onViewLatest} />
       ) : (
         <>
           <div className="ib-highlight-section">

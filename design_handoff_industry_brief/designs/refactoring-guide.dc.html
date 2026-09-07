@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<script src="./doc-page.js"></script>
+<style>
+doc-page:not(:defined){visibility:hidden}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo','Malgun Gothic','Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;word-break:keep-all}
+code{font-family:'SF Mono',ui-monospace,'Cascadia Mono',Menlo,Consolas,monospace}
+</style>
+</helmet>
+
+<doc-page margin="0.8in">
+
+  <div style="margin-bottom:34px;padding-bottom:22px;border-bottom:2px solid #171b23">
+    <div style="font:700 10.5pt/1 Pretendard,sans-serif;letter-spacing:.14em;color:#8891a0;margin-bottom:10px">UX INSIGHT · 업계동향</div>
+    <h1 style="margin:0 0 10px;font:700 26pt/1.22 Pretendard,sans-serif;letter-spacing:-.03em;color:#171b23">CSS 리팩터링 가이드</h1>
+    <p style="margin:0;font:400 11.5pt/1.6 Pretendard,sans-serif;color:#5b6472">industry-brief.css 1,960줄을 토큰 기반으로 정리하기 위한 실행 지시서. 에디토리얼 브리핑 시안(1a·2a·2b·2c) 기준.</p>
+    <div style="margin-top:14px;font:400 10pt/1.6 Pretendard,sans-serif;color:#8891a0">2026.09.04 · 대상 파일 <code style="font-size:9.5pt">src/features/industry-brief/industry-brief.css</code>, <code style="font-size:9.5pt">src/index.css</code></div>
+  </div>
+
+  <h2 style="margin:0 0 12px;font:700 15pt/1.35 Pretendard,sans-serif;letter-spacing:-.02em;color:#171b23">1. 왜 고치는가</h2>
+  <p style="margin:0 0 10px;font:400 11pt/1.75 Pretendard,sans-serif;color:#333a45">개별 컴포넌트는 문제가 없습니다. 문제는 파일이 <strong style="font-weight:600">시간순 패치의 지층</strong>이 되었다는 점입니다. 같은 셀렉터를 아래쪽에서 계속 덮어쓰는 방식으로 쌓여, 지금은 한 값을 바꾸려면 파일 전체를 읽어야 실제 적용 값을 알 수 있습니다.</p>
+  <div style="break-inside:avoid;margin:16px 0 26px;padding:16px 18px;border:1px solid #e2e5ea;border-radius:9px;background:#fafbfc">
+    <div style="font:700 9.5pt/1 Pretendard,sans-serif;letter-spacing:.1em;color:#8891a0;margin-bottom:12px">중복 정의 실측</div>
+    <table style="width:100%;border-collapse:collapse;font:400 10.5pt/1.5 Pretendard,sans-serif">
+      <thead><tr>
+        <th style="text-align:left;padding:0 0 8px;border-bottom:1px solid #e2e5ea;font:600 9.5pt/1 Pretendard,sans-serif;color:#8891a0">셀렉터</th>
+        <th style="text-align:right;padding:0 0 8px;border-bottom:1px solid #e2e5ea;font:600 9.5pt/1 Pretendard,sans-serif;color:#8891a0">정의 횟수</th>
+        <th style="text-align:left;padding:0 0 8px 20px;border-bottom:1px solid #e2e5ea;font:600 9.5pt/1 Pretendard,sans-serif;color:#8891a0">최종 승자</th>
+      </tr></thead>
+      <tbody>
+        <tr><td style="padding:9px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:10pt;color:#333a45">.ib-panel .headline</code></td><td style="text-align:right;padding:9px 0;border-bottom:1px solid #f0f2f5;font-weight:600;color:#c0473f">5</td><td style="padding:9px 0 9px 20px;border-bottom:1px solid #f0f2f5;color:#5b6472">clamp(16,1.5vw,19) · 2줄 clamp</td></tr>
+        <tr><td style="padding:9px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:10pt;color:#333a45">.ib-signal-tile.is-keyword</code></td><td style="text-align:right;padding:9px 0;border-bottom:1px solid #f0f2f5;font-weight:600;color:#c0473f">4</td><td style="padding:9px 0 9px 20px;border-bottom:1px solid #f0f2f5;color:#5b6472">min-height 82 · topic 15.5px</td></tr>
+        <tr><td style="padding:9px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:10pt;color:#333a45">.ib-change-tile</code></td><td style="text-align:right;padding:9px 0;border-bottom:1px solid #f0f2f5;font-weight:600;color:#b27815">3</td><td style="padding:9px 0 9px 20px;border-bottom:1px solid #f0f2f5;color:#5b6472">border-top 1px (컬러 라인 무효화)</td></tr>
+        <tr><td style="padding:9px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:10pt;color:#333a45">.ib-landscape-issue</code></td><td style="text-align:right;padding:9px 0;border-bottom:1px solid #f0f2f5;font-weight:600;color:#b27815">3</td><td style="padding:9px 0 9px 20px;border-bottom:1px solid #f0f2f5;color:#5b6472">border 0 · 편집형 리스트</td></tr>
+        <tr><td style="padding:9px 0"><code style="font-size:10pt;color:#333a45">.ib-stack</code>, <code style="font-size:10pt;color:#333a45">.ib-signal-grid</code>, <code style="font-size:10pt;color:#333a45">.ib-panel</code></td><td style="text-align:right;padding:9px 0;font-weight:600;color:#b27815">각 3</td><td style="padding:9px 0 9px 20px;color:#5b6472">—</td></tr>
+      </tbody>
+    </table>
+    <p style="margin:14px 0 0;font:400 10pt/1.6 Pretendard,sans-serif;color:#8891a0">부수 효과: <code style="font-size:9.5pt">.ib-panel-accent{display:none}</code>, <code style="font-size:9.5pt">.ib-live-dot{display:none}</code>, <code style="font-size:9.5pt">.ib-signal-open{display:none}</code> 등 <strong style="font-weight:600;color:#5b6472">그리다 만 요소가 CSS로만 숨겨져</strong> DOM에 남아 있습니다.</p>
+  </div>
+
+  <h2 style="margin:0 0 12px;font:700 15pt/1.35 Pretendard,sans-serif;letter-spacing:-.02em;color:#171b23">2. 토큰 정의</h2>
+  <p style="margin:0 0 14px;font:400 11pt/1.75 Pretendard,sans-serif;color:#333a45"><code style="font-size:10pt">index.css</code>의 <code style="font-size:10pt">:root</code>에 아래를 추가하고, industry-brief.css의 하드코딩 값을 전부 이 변수로 치환합니다. 다크 토큰이 이미 정의돼 있으므로 이 치환만으로 다크모드가 복구됩니다.</p>
+  <div style="break-inside:avoid;margin-bottom:14px;padding:16px 18px;border-radius:9px;background:#171b23;color:#e5e8ee;font:400 9.5pt/1.75 'SF Mono',ui-monospace,Menlo,monospace"><span style="color:#8891a0">/* 타이포 — 27종 → 6종 */</span><br />--fs-page: 26px;   <span style="color:#8891a0">/* 페이지 제목 */</span><br />--fs-lead: 40px;   <span style="color:#8891a0">/* 리드 헤드라인 */</span><br />--fs-title: 19px;  <span style="color:#8891a0">/* 섹션 제목 */</span><br />--fs-card: 16px;   <span style="color:#8891a0">/* 카드 제목 */</span><br />--fs-body: 14.5px; <span style="color:#8891a0">/* 본문 */</span><br />--fs-meta: 12.5px; <span style="color:#8891a0">/* 메타·라벨 */</span><br /><br /><span style="color:#8891a0">/* 여백 — 4px 그리드 */</span><br />--sp-1: 4px; --sp-2: 8px; --sp-3: 12px;<br />--sp-4: 16px; --sp-5: 24px; --sp-6: 32px;<br />--card-pad: 24px;<br /><br /><span style="color:#8891a0">/* 카테고리 — 차트와 공유 */</span><br />--cat-game: #f2994a;<br />--cat-ai:   #2f6feb;</div>
+  <div style="break-inside:avoid;margin-bottom:26px;padding:14px 18px;border-left:3px solid #c98a1b;border-radius:0 8px 8px 0;background:#fffaf1;font:400 10.5pt/1.7 Pretendard,sans-serif;color:#6b5424"><strong style="font-weight:700;color:#8b6a26">주의 · </strong>파랑 4종(<code style="font-size:9.5pt">#2878e8</code> 서브메뉴, <code style="font-size:9.5pt">#285f9e</code> 링크, <code style="font-size:9.5pt">#2f6feb</code> 차트, <code style="font-size:9.5pt">#0052cc</code> 토큰)은 <code style="font-size:9.5pt">var(--accent)</code> 하나로 통일합니다. 예외는 GAME 주황 / AI 파랑 두 카테고리 색뿐입니다.</div>
+
+  <h2 style="margin:0 0 12px;font:700 15pt/1.35 Pretendard,sans-serif;letter-spacing:-.02em;color:#171b23">3. 삭제 목록</h2>
+  <p style="margin:0 0 14px;font:400 11pt/1.75 Pretendard,sans-serif;color:#333a45">아래는 값을 바꾸는 게 아니라 <strong style="font-weight:600">지우는</strong> 항목입니다. 각 블록의 최종 승자만 남기고 위쪽 정의를 제거하면 파일이 대략 1,200줄대로 줄어듭니다.</p>
+  <div style="break-inside:avoid;margin-bottom:12px;padding:16px 18px;border:1px solid #e2e5ea;border-radius:9px">
+    <div style="font:600 11pt/1.4 Pretendard,sans-serif;color:#171b23;margin-bottom:8px">3.1 중복 정의 블록</div>
+    <p style="margin:0;font:400 10.5pt/1.7 Pretendard,sans-serif;color:#5b6472"><code style="font-size:10pt">.ib-panel .headline</code> 1~4번째, <code style="font-size:10pt">.ib-signal-tile.is-keyword</code> 1~3번째, <code style="font-size:10pt">.ib-change-tile</code> 컬러 border-top 정의(어차피 뒤에서 1px 회색으로 덮임), <code style="font-size:10pt">.ib-landscape-issue</code> 1~2번째, <code style="font-size:10pt">.ib-watch-item .desc</code> nowrap 버전.</p>
+  </div>
+  <div style="break-inside:avoid;margin-bottom:12px;padding:16px 18px;border:1px solid #e2e5ea;border-radius:9px">
+    <div style="font:600 11pt/1.4 Pretendard,sans-serif;color:#171b23;margin-bottom:8px">3.2 죽은 셀렉터 — CSS와 JSX를 함께 제거</div>
+    <p style="margin:0;font:400 10.5pt/1.7 Pretendard,sans-serif;color:#5b6472"><code style="font-size:10pt">.ib-panel-accent</code>, <code style="font-size:10pt">.ib-live-dot</code>, <code style="font-size:10pt">.ib-signal-open</code>, <code style="font-size:10pt">.ib-signal-detail</code>, <code style="font-size:10pt">.ib-flip-in</code>(animation:none으로 무력화됨), <code style="font-size:10pt">.ib-lnb-spacer</code>. 숨기지 말고 마크업에서 지웁니다.</p>
+  </div>
+  <div style="break-inside:avoid;margin-bottom:12px;padding:16px 18px;border:1px solid #f0d4cf;border-radius:9px;background:#fdf8f7">
+    <div style="font:600 11pt/1.4 Pretendard,sans-serif;color:#171b23;margin-bottom:8px">3.3 동작 제거 — 자동 로테이션</div>
+    <p style="margin:0 0 8px;font:400 10.5pt/1.7 Pretendard,sans-serif;color:#5b6472"><code style="font-size:10pt">IndustryPanelCard.tsx</code>의 <code style="font-size:10pt">DailyHighlightsBlock</code>에서 6.5초 <code style="font-size:10pt">setInterval</code>과 <code style="font-size:10pt">issuePage</code> 상태를 삭제하고, <code style="font-size:10pt">coreIssues</code>를 3건까지 전부 렌더합니다.</p>
+    <p style="margin:0;font:400 10.5pt/1.7 Pretendard,sans-serif;color:#5b6472">함께 제거: <code style="font-size:10pt">.ib-change-flap</code> 키프레임과 <code style="font-size:10pt">animationDelay</code> 인라인 계산, <code style="font-size:10pt">grid-template-rows: repeat(2, 150px)</code> 고정 높이.</p>
+  </div>
+  <div style="break-inside:avoid;margin-bottom:26px;padding:16px 18px;border:1px solid #f0d4cf;border-radius:9px;background:#fdf8f7">
+    <div style="font:600 11pt/1.4 Pretendard,sans-serif;color:#171b23;margin-bottom:8px">3.4 다크 블록 · 전용 웹폰트</div>
+    <p style="margin:0;font:400 10.5pt/1.7 Pretendard,sans-serif;color:#5b6472"><code style="font-size:10pt">.ib-highlight-core</code>의 <code style="font-size:10pt">#141a2b</code> 배색과 <code style="font-size:10pt">OneStoreMobileGothicTitleFont</code> <code style="font-size:10pt">@font-face</code>를 모두 제거합니다. 강조는 카드 배경이 아니라 <strong style="font-weight:600">위치(리드 카드 최상단) + 타입 크기</strong>로 만듭니다. 폰트 제거로 외부 CDN 의존도 하나 줄어듭니다.</p>
+  </div>
+
+  <h2 style="margin:0 0 12px;font:700 15pt/1.35 Pretendard,sans-serif;letter-spacing:-.02em;color:#171b23">4. 컴포넌트별 변경 지시</h2>
+  <table style="width:100%;border-collapse:collapse;font:400 10.5pt/1.6 Pretendard,sans-serif;margin-bottom:26px">
+    <thead><tr>
+      <th style="text-align:left;padding:0 12px 9px 0;border-bottom:1.5px solid #171b23;font:600 9.5pt/1.3 Pretendard,sans-serif;color:#171b23;width:31%">파일</th>
+      <th style="text-align:left;padding:0 0 9px;border-bottom:1.5px solid #171b23;font:600 9.5pt/1.3 Pretendard,sans-serif;color:#171b23">변경</th>
+    </tr></thead>
+    <tbody>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">IndustryBriefView.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472">리드 카드(한 줄 판단 + 근거 3칸) 컴포넌트 신설. 탭 UI를 알약 세그먼트 → 밑줄 탭으로 교체. <code style="font-size:9.5pt">DateNavigator</code>를 조건부 렌더에서 <code style="font-size:9.5pt">disabled</code> 처리로 변경(레이아웃 점프 제거).</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">IndustryPanelCard.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472">로테이션 제거(3.3). 이슈를 번호 목록으로 재구성 — 번호 · 제목(줄바꿈 허용) · 요약 · 근거 배지(기사수 / 출처수 / 교차확인·단일관점·신규등장).</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">BriefAnalyticsPanel.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472"><code style="font-size:9.5pt">left</code>를 10 → 40으로 늘리고 y축 눈금선 5개 + 값 라벨 추가. 범례의 <code style="font-size:9.5pt">max-width:31%</code> 제거. 차트 하단에 해석 문장 한 줄 슬롯 추가.</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">TopicLandscapePanel.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472"><strong style="font-weight:600;color:#171b23">버블 차트 → 순위 표로 교체.</strong> 열: 순위 · 토픽 · 기사 · 독립 출처 · 지속일 · 성격 배지. <code style="font-size:9.5pt">fanOffset</code>·클러스터 배지·팝오버 로직 전부 삭제. 마케팅성은 행 <code style="font-size:9.5pt">opacity .5</code>로 표현.</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">PolicyUpdatesPanel.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472">제목 <code style="font-size:9.5pt">nowrap + ellipsis</code> 제거 → 19px 줄바꿈. 시사점을 인용 블록으로 분리. 마감이 있는 항목을 상단 D-day 카드로 승격.</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">SignalsPanel.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472">타일 그리드 → 표. 각 행에 스파크라인 SVG와 증감률(%) 추가. 토픽명 말줄임 해제.</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">TechRadarPanel.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472">2열 → 3열, 카드 패딩 <code style="font-size:9.5pt">var(--card-pad)</code>. 상단에 태그 분포 요약 칩 행 추가.</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0;border-bottom:1px solid #f0f2f5"><code style="font-size:9.5pt;color:#333a45">(신설) BriefSkeleton.tsx</code></td><td style="padding:11px 0;border-bottom:1px solid #f0f2f5;color:#5b6472">최종 레이아웃과 같은 골격의 스켈레톤. <code style="font-size:9.5pt">ib-page-status</code> 텍스트 한 줄을 대체.</td></tr>
+      <tr style="break-inside:avoid"><td style="vertical-align:top;padding:11px 12px 11px 0"><code style="font-size:9.5pt;color:#333a45">RefreshProgress</code></td><td style="padding:11px 0;color:#5b6472">가짜 타이머 진행률 → 4단계 체크리스트 + 실제 분석 건수(<code style="font-size:9.5pt">104 / 218</code>). 백엔드 진행 상황을 폴링할 수 없다면 최소한 단계 라벨과 건수만이라도 실제 값으로.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin:0 0 12px;font:700 15pt/1.35 Pretendard,sans-serif;letter-spacing:-.02em;color:#171b23">5. 적용 순서</h2>
+  <p style="margin:0 0 14px;font:400 11pt/1.75 Pretendard,sans-serif;color:#333a45">한 번에 다 바꾸지 말고 아래 순서로. 각 단계가 독립적으로 배포 가능합니다.</p>
+  <div style="break-inside:avoid;display:grid;gap:10px;margin-bottom:26px">
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:14px;padding:13px 16px;border:1px solid #e2e5ea;border-radius:9px"><span style="font:700 11pt/1.5 Pretendard,sans-serif;color:#8891a0">1</span><div><strong style="display:block;font:600 11pt/1.5 Pretendard,sans-serif;color:#171b23">토큰 추가 + 색상 치환</strong><span style="font:400 10.5pt/1.65 Pretendard,sans-serif;color:#5b6472">화면 변화 거의 없음. 다크모드가 이 단계에서 복구됩니다.</span></div></div>
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:14px;padding:13px 16px;border:1px solid #e2e5ea;border-radius:9px"><span style="font:700 11pt/1.5 Pretendard,sans-serif;color:#8891a0">2</span><div><strong style="display:block;font:600 11pt/1.5 Pretendard,sans-serif;color:#171b23">중복·죽은 셀렉터 삭제 (3.1 · 3.2)</strong><span style="font:400 10.5pt/1.65 Pretendard,sans-serif;color:#5b6472">순수 정리. 최종 승자만 남기므로 렌더 결과는 동일해야 합니다 — 달라지면 삭제가 잘못된 것.</span></div></div>
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:14px;padding:13px 16px;border:1px solid #e2e5ea;border-radius:9px"><span style="font:700 11pt/1.5 Pretendard,sans-serif;color:#8891a0">3</span><div><strong style="display:block;font:600 11pt/1.5 Pretendard,sans-serif;color:#171b23">로테이션·다크블록·전용폰트 제거 (3.3 · 3.4)</strong><span style="font:400 10.5pt/1.65 Pretendard,sans-serif;color:#5b6472">체감 변화가 가장 큰 단계. 여기서 한 번 팀 확인.</span></div></div>
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:14px;padding:13px 16px;border:1px solid #e2e5ea;border-radius:9px"><span style="font:700 11pt/1.5 Pretendard,sans-serif;color:#8891a0">4</span><div><strong style="display:block;font:600 11pt/1.5 Pretendard,sans-serif;color:#171b23">리드 카드 신설 + 이슈 목록 재구성</strong><span style="font:400 10.5pt/1.65 Pretendard,sans-serif;color:#5b6472">시안 1a 기준. 백엔드 변경 없이 기존 필드 재배치로 가능합니다.</span></div></div>
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:14px;padding:13px 16px;border:1px solid #e2e5ea;border-radius:9px"><span style="font:700 11pt/1.5 Pretendard,sans-serif;color:#8891a0">5</span><div><strong style="display:block;font:600 11pt/1.5 Pretendard,sans-serif;color:#171b23">차트 y축 · 버블→표 · 시그널 표</strong><span style="font:400 10.5pt/1.65 Pretendard,sans-serif;color:#5b6472">시안 2a. 데이터 구조는 그대로, 렌더링만 교체.</span></div></div>
+    <div style="display:grid;grid-template-columns:26px 1fr;gap:14px;padding:13px 16px;border:1px solid #e2e5ea;border-radius:9px"><span style="font:700 11pt/1.5 Pretendard,sans-serif;color:#8891a0">6</span><div><strong style="display:block;font:600 11pt/1.5 Pretendard,sans-serif;color:#171b23">스켈레톤 · 빈 상태 · 진행 표시</strong><span style="font:400 10.5pt/1.65 Pretendard,sans-serif;color:#5b6472">시안 1c. 실제 데이터가 비어 있는 날이 많으므로 체감 개선이 큽니다.</span></div></div>
+  </div>
+
+  <h2 style="margin:0 0 12px;font:700 15pt/1.35 Pretendard,sans-serif;letter-spacing:-.02em;color:#171b23">6. 검증 체크리스트</h2>
+  <div style="break-inside:avoid;padding:18px 20px;border:1px solid #e2e5ea;border-radius:9px;background:#fafbfc">
+    <div style="display:grid;gap:9px;font:400 10.5pt/1.6 Pretendard,sans-serif;color:#333a45">
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>industry-brief.css 전체에서 <code style="font-size:9.5pt">#</code>로 시작하는 색상 리터럴이 카테고리 색 2종 외에 남아 있지 않다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>같은 셀렉터가 파일 안에서 2번 이상 등장하지 않는다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span><code style="font-size:9.5pt">font-size</code> 값이 토큰 6종 + 배지용 11px 외에 없다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>모든 카드 <code style="font-size:9.5pt">padding</code>이 <code style="font-size:9.5pt">var(--card-pad)</code>이다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>다크모드에서 흰 배경 카드가 하나도 남지 않는다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>탭을 4개 모두 전환해도 헤더 높이가 변하지 않는다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>60초 동안 화면을 그냥 두었을 때 어떤 텍스트도 자동으로 교체되지 않는다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>데이터가 빈 날짜(예: 주말)로 이동했을 때 각 탭이 전용 빈 상태를 보여준다</span></div>
+      <div style="display:grid;grid-template-columns:18px 1fr;gap:10px"><span style="color:#8891a0">☐</span><span>페이지 전체를 캡처했을 때 호버 없이도 모든 그래프 수치를 읽을 수 있다</span></div>
+    </div>
+  </div>
+
+</doc-page>
+</x-dc>
+</body>
+</html>

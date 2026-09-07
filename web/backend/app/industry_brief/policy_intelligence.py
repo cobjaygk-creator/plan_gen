@@ -9,9 +9,19 @@ from .models import Article
 
 POLICY_TITLE_TERMS = (
     "정책", "규제", "법률", "법안", "시행령", "개정", "의무", "금지",
-    "펀드", "예산", "지원사업", "지원 사업", "공모", "모집",
-    "가이드라인", "제도", "협약", "인재양성", "인재 양성",
+    "펀드", "예산", "지원사업", "지원 사업",
+    "가이드라인", "제도", "협약",
     "단속", "근절", "위반", "피해구제", "불법", "행정지도", "사후관리",
+)
+# "공모/모집/인재양성"은 원래 포함 기준이었는데, 기업 대상 지원사업과
+# 달리 실제로는 챌린지 참가자 모집·인재양성 거점 개소식처럼 규제·제도
+# 변화와 무관한 행정성 공지를 끌어오는 비중이 더 컸다(직접 확인) —
+# 정책·제도 탭에서 뺀다. "포상"류(예: "...예산사업 재설계까지... 직원
+# 27명에게 4차 특별성과 포상")는 POLICY_TITLE_TERMS의 다른 단어("예산")로
+# 우연히 걸려 들어오므로 별도 제외 목록으로 다시 거른다.
+_ADMINISTRATIVE_EXCLUDE_TERMS = (
+    "포상", "특별성과", "우수사례", "시상식", "개소식", "출범식",
+    "공모", "모집", "인재양성", "인재 양성",
 )
 POLICY_SOURCES = (
     "문화체육관광부",
@@ -228,7 +238,9 @@ def build_policy_updates(db: Session, period_start: datetime, period_end: dateti
     ).scalars().all()
     history_by_key: dict[str, list[Article]] = {}
     for historical in history_articles:
-        if any(term in historical.title for term in POLICY_TITLE_TERMS):
+        if any(term in historical.title for term in POLICY_TITLE_TERMS) and not any(
+            term in historical.title for term in _ADMINISTRATIVE_EXCLUDE_TERMS
+        ):
             history_by_key.setdefault(_policy_key(historical.title), []).append(historical)
     # 후보군을 recency 30건으로 먼저 잘라낸 뒤 POLICY_TITLE_TERMS로 걸러내고
     # 있었다 — 고빈도로 올라오는 "대한민국 정책브리핑" 글이 최근 30건을
@@ -248,6 +260,8 @@ def build_policy_updates(db: Session, period_start: datetime, period_end: dateti
         text = f"{article.title}. {article.summary or ''}"
         if not any(term in article.title for term in POLICY_TITLE_TERMS):
             continue
+        if any(term in article.title for term in _ADMINISTRATIVE_EXCLUDE_TERMS):
+            continue
         sentences = _sentences(article.summary or "")
         kind, kind_label = _policy_type(text)
         date_match = DATE_PATTERN.search(article.summary or "")
@@ -264,6 +278,7 @@ def build_policy_updates(db: Session, period_start: datetime, period_end: dateti
         change_type, change_label = _history_change(_policy_stage(article.title), prior)
         cards.append({
             "id": str(article.id), "type": kind, "typeLabel": kind_label,
+            "category": article.category,
             "title": article.title, "source": article.source, "url": article.url,
             "publishedDate": published.strftime("%Y.%m.%d") if published else "날짜 미상",
             "effectiveDate": effective_text,

@@ -59,3 +59,15 @@ NAVER_SOURCE_PREFIX = "NAVER · "
 def is_korean_source(source_name: str) -> bool:
     """NAVER News is a Korean discovery source even though its publisher varies."""
     return source_name in KOREAN_SOURCE_NAMES or source_name.startswith(NAVER_SOURCE_PREFIX)
+
+
+# 게임 전업 퍼블리셔/개발사 — 카카오·네이버·삼성전자처럼 게임 사업부가
+# 있을 뿐인 대기업은 일부러 뺐다(그런 곳의 AI 뉴스까지 걸러내면 과도함).
+# "AI로 게임 만든다" 류 기사처럼, AI 카테고리로 분류돼 있어도 실제로는
+# 게임회사가 주인공인 기사를 판별하는 데 쓴다 — routes.py의 차트 라벨
+# 후보 제외, tech_radar.py의 기술 레이더 노출 제외 두 곳에서 공유한다.
+GAME_COMPANY_NAMES: tuple[str, ...] = (
+    "넥슨", "넷마블", "크래프톤", "엔씨소프트", "엔씨", "카카오게임즈", "위메이드",
+    "펄어비스", "스마일게이트", "컴투스", "데브시스터즈", "시프트업", "그라비티",
+    "네오위즈",
+)

@@ -24,6 +24,7 @@ from .synthesis import NO_CROSS_OPINION_TEXT, NO_CROSS_SIGNAL_TEXT, TOP_ISSUES_P
 from .landscape import build_issue_detail, build_landscape
 from .comparison import build_market_comparison
 from .tech_radar import build_tech_radar
+from .sources import GAME_COMPANY_NAMES
 from .refresh import refresh_industry_brief
 from .periods import KST, PERIOD_LABELS, day_window, period_window
 from .policy_intelligence import build_policy_updates
@@ -59,9 +60,34 @@ _TOPIC_RULES = (
     ("출시", ("출시", "공개", "발표", "신작", "론칭", "launch", "release")),
     ("기술", ("기술", "모델", "api", "오픈웨이트", "오픈소스", "반도체", "agent", "에이전트")),
 )
+_MARKETING_RANK_TERMS = (
+    "앱스토어 인기", "인기 1위", "인기게임 1위", "인기 순위", "다운로드 순위",
+    "사전 다운로드", "예약 다운로드", "매출 순위", "플레이스토어 인기",
+    "구글 플레이 인기", "차트 1위", "흥행 1위", "톱10",
+)
+
+
+def _is_marketing_ranking_story(text: str) -> bool:
+    """독립 출처 수·보도 집중도로는 못 걸러진다 — "제우스: 오만의 신" 도배는
+    18개 서로 다른 도메인이 각자 "사전 다운로드 앱스토어 인기 1위"라는
+    같은 마케팅 지표를 그대로 받아쓴 것이라, 신뢰도 점수로는 게임스컴처럼
+    진짜 여러 매체가 취재한 이슈와 구분이 안 됐다(둘 다 100점). 대신
+    앱스토어 순위·사전 다운로드 같은 마케팅 지표 언어 자체를 감점한다."""
+    return any(term in text for term in _MARKETING_RANK_TERMS)
+
+
 _GENERIC_CHART_KEYWORDS = {
     "ai", "게임", "기술", "산업", "시장", "기업", "서비스", "플랫폼", "투자", "출시",
     "업데이트", "game", "technology", "business", "korean tech",
+    "nhn", "카카오", "네이버", "삼성전자", "삼성", "lg", "sk텔레콤",
+    "openai", "google", "구글", "microsoft", "마이크로소프트", "nvidia", "엔비디아",
+    "meta", "메타", "anthropic", "앤트로픽",
+    # 게임사/AI 기업명 — 그 회사 관련 기사 전반에 두루 등장해서 빈도만
+    # 보면 항상 이기지만, 정작 그 이슈가 "무엇에 대한" 이슈인지는 알려주지
+    # 못한다 (예: "컴투스"보다 "제우스: 오만의 신"이 훨씬 더 구체적이고
+    # 그 이슈를 식별해준다). 회사명은 후보에서 빼서 더 구체적인 제품·
+    # 이벤트명이 뽑히도록 한다. 게임사 명단은 sources.py와 공유.
+    *(name.casefold() for name in GAME_COMPANY_NAMES),
 }
 
 
@@ -173,8 +199,14 @@ def _top_issues(
 
 def _period_ranked_issues(
     db: Session, category: str, period_start: datetime, period_end: datetime, limit: int = 8,
+    similarity_cache: dict[tuple[int, int], float] | None = None,
 ) -> list[dict]:
-    """Rank issues using only evidence published inside the requested window."""
+    """Rank issues using only evidence published inside the requested window.
+
+    similarity_cache: 한 요청 안에서 이 함수가 여러 창(오늘/최근 1주 등)
+    으로 반복 호출될 때 같은 (공식 후보 기사, 이슈 구성원) 쌍을 다시 비교
+    하지 않도록 호출자가 공유 dict를 넘겨줄 수 있다 — _matches_issue의
+    SequenceMatcher 비교가 프로파일링 결과 압도적 병목이었다."""
     start = _as_aware_utc(period_start)
     end = _as_aware_utc(period_end)
     assert start is not None and end is not None
@@ -226,7 +258,7 @@ def _period_ranked_issues(
         for official in official_candidates:
             if official.id in member_ids:
                 continue
-            if _matches_issue(official, members):
+            if _matches_issue(official, members, similarity_cache):
                 members.append(official)
                 member_ids.add(official.id)
         quality = evaluate_evidence(members)
@@ -311,6 +343,10 @@ def _period_key_summary_details(ranked: list[dict], limit: int = 2) -> list[dict
             "activeDays": 0,
             "selectionReason": f"관찰 후보 {candidate_count}건 · 공식·주요 매체 근거 보강 필요",
             "confidence": "WEAK",
+            # 프론트가 "이 카테고리는 오늘 판단 이슈가 없다"를 텍스트 매칭 없이
+            # 판단할 수 있도록 — 리드 카드가 게임/AI/게임×AI를 순환할 때
+            # 이 표식이 있는 카테고리는 슬라이드에서 아예 뺀다.
+            "noSignal": True,
         }]
     pool = eligible
     details = []
@@ -450,16 +486,26 @@ def _topic_name(article: Article) -> str:
 
 
 def _issue_chart_keyword(issue: Issue, members: list[Article], used: set[str]) -> str:
+    # entities("기업/제품/인물 등 핵심 개체명")를 keywords보다 우선한다 —
+    # keywords는 "MMORPG", "사전 다운로드"처럼 그 사건을 설명하는 일반적인
+    # 장르/과정 용어까지 섞여 있어서, 같은 소식을 반복 보도한 기사가 많을
+    # 때 그런 범용 용어가 실제 제품명(예: "제우스: 오만의 신")보다 더 자주
+    # 등장해 버린다. entities는 회사/제품/인물명만 담겨 있어 그 잡음이 없다.
     candidates: dict[str, tuple[int, int]] = {}
     labels: dict[str, str] = {}
     for article in members:
         try:
-            keywords = json.loads(article.keywords or "[]")
+            entities = json.loads(article.entities or "[]")
         except (json.JSONDecodeError, TypeError):
-            keywords = []
-        if not isinstance(keywords, list):
+            entities = []
+        if not isinstance(entities, list) or not entities:
+            try:
+                entities = json.loads(article.keywords or "[]")
+            except (json.JSONDecodeError, TypeError):
+                entities = []
+        if not isinstance(entities, list):
             continue
-        for position, raw in enumerate(keywords[:8]):
+        for position, raw in enumerate(entities[:8]):
             label = " ".join(str(raw).split()).strip(" -·")
             key = label.casefold()
             if not label or len(label) > 24 or key in _GENERIC_CHART_KEYWORDS:
@@ -491,9 +537,16 @@ def _brief_analytics(
     db: Session,
     period_start: datetime,
     period_end: datetime,
-    issues: list[Issue],
 ) -> dict:
-    """Deterministic charts built only from stored, relevant articles."""
+    """Deterministic charts built only from stored, relevant articles.
+
+    core_issues에서 넘어온 이슈 목록을 그대로 쓰지 않는다 — 그 목록은
+    "오늘 처음 기사가 붙은 이슈"만 담고 있어서, 매일 새로 생긴 단발성
+    이슈만 뽑히고 실제 여러 날에 걸쳐 이어지는 이슈는 잡히지 않았다
+    (예: 기사 1건짜리 이슈 3개가 마지막 하루에만 값을 가져 완전히
+    겹쳐 보이던 문제). 대신 차트 자체의 30일 창 안에서 기사가 가장
+    많이 쌓인 이슈를 직접 다시 골라, 실제 여러 날에 걸친 관심도 변화를
+    보여준다."""
     period_start = _as_aware_utc(period_start)
     period_end = _as_aware_utc(period_end)
     assert period_start is not None and period_end is not None
@@ -509,36 +562,244 @@ def _brief_analytics(
         for index in range(bucket_count)
     ]
 
-    interest_series: list[dict] = []
+    article_time = func.coalesce(Article.published_at, Article.collected_at)
+    candidate_ids = [row[0] for row in db.execute(
+        select(IssueArticle.issue_id)
+        .join(Article, Article.id == IssueArticle.article_id)
+        .join(Issue, Issue.id == IssueArticle.issue_id)
+        .where(
+            Issue.category.in_(("GAME", "AI")),
+            Article.is_relevant.is_(True),
+            article_time >= chart_start,
+            article_time < period_end,
+        )
+        .group_by(IssueArticle.issue_id)
+        .order_by(func.count(IssueArticle.article_id).desc())
+        .limit(30)
+    ).all()]
+    issue_by_id = {
+        row.id: row for row in db.execute(
+            select(Issue).where(Issue.id.in_(candidate_ids))
+        ).scalars().all()
+    } if candidate_ids else {}
+
+    # 각 후보 이슈의 멤버 기사를 한 번만 불러와서 순위(마케팅 감점)와
+    # 토픽 지형도(출처 수·지속일수) 양쪽에 재사용한다 — 같은 이슈를 두 번
+    # 조회하지 않는다.
+    candidates: list[dict] = []
     seen_issue_titles: set[str] = set()
-    used_keywords: set[str] = set()
-    for issue in issues:
+    for issue_id in candidate_ids:
+        issue = issue_by_id.get(issue_id)
+        if issue is None:
+            continue
         key = issue.title.strip().casefold()
         if not key or key in seen_issue_titles:
             continue
         seen_issue_titles.add(key)
-        values = [0] * bucket_count
         members = _issue_members(db, issue)
+        window_members = [
+            a for a in members
+            if (pub := _as_aware_utc(a.published_at or a.collected_at)) is not None
+            and chart_start <= pub < period_end
+        ]
+        if not window_members:
+            continue
+        is_marketing = any(
+            _is_marketing_ranking_story(f"{a.title} {a.summary or ''}".casefold())
+            for a in window_members
+        )
+        distinct_days = len({(_as_aware_utc(a.published_at or a.collected_at)).date() for a in window_members})
+        quality = evaluate_evidence(window_members)
+        first_seen = _as_aware_utc(issue.first_seen_at)
+        age_days = (period_end - first_seen).days if first_seen else None
+        candidates.append({
+            "issue": issue, "members": window_members, "is_marketing": is_marketing,
+            "count": len(window_members), "days": distinct_days,
+            "sources": quality.independent_sources,
+            # 신규 진입(이번 주 처음 생긴 이슈) vs 지속(2주 넘게 이어지는
+            # 이슈) 구분 — Issue.first_seen_at은 클러스터링 시점에 한 번만
+            # 찍히고 안 바뀌므로, "이 이슈가 언제 처음 등장했는가"를 그대로
+            # 알려준다.
+            "is_fresh": age_days is not None and age_days < 7,
+            "is_ongoing": age_days is not None and age_days >= 14,
+        })
+
+    ranked_candidates = sorted(candidates, key=lambda item: (item["is_marketing"], -item["count"]))
+
+    interest_series: list[dict] = []
+    used_keywords: set[str] = set()
+    for item in ranked_candidates:
+        issue, members = item["issue"], item["members"]
+        values = [0] * bucket_count
         for article in members:
             published = _as_aware_utc(article.published_at or article.collected_at)
-            if published is None or published < chart_start or published >= period_end:
-                continue
             index = int((published - chart_start).total_seconds() // (bucket_days * 86400))
             if 0 <= index < bucket_count:
                 values[index] += 1
-        if any(values):
-            interest_series.append({
-                "name": _issue_chart_keyword(issue, members, used_keywords),
-                "originalTitle": issue.title,
-                "category": issue.category,
-                "values": values,
-            })
+        interest_series.append({
+            "name": _issue_chart_keyword(issue, members, used_keywords),
+            "originalTitle": issue.title,
+            "category": issue.category,
+            "values": values,
+        })
         if len(interest_series) == 3:
             break
 
+    landscape_keywords: set[str] = set()
+    topic_landscape = [
+        {
+            "name": _issue_chart_keyword(item["issue"], item["members"], landscape_keywords),
+            "category": item["issue"].category,
+            "sources": item["sources"],
+            "days": item["days"],
+            "articleCount": item["count"],
+            "isMarketing": item["is_marketing"],
+            "isFresh": item["is_fresh"],
+            "isOngoing": item["is_ongoing"],
+            # 표의 모든 행을 클릭 가능하게 하려면 근거 기사가 있어야 한다
+            # (예전엔 신규/지속 목록에만 articles가 있어서 "관찰" 행은
+            # 클릭이 안 됐다) — 이미 메모리에 있는 window_members를 그대로
+            # 재사용하니 추가 쿼리 없이 채울 수 있다.
+            "articles": [
+                {"title": a.title, "url": a.url, "source": a.source} for a in item["members"][:5]
+            ],
+        }
+        for item in sorted(candidates, key=lambda item: -item["count"])[:20]
+    ]
+
+    # "신규 진입" 이슈는 갓 생겨서 기사가 몇 건 안 쌓였을 때가 많아, 위
+    # top-20(기사 수 기준)에는 애초에 잘 안 들어온다 — 그래서 first_seen_at
+    # 자체로 별도 조회해야 "이번 주 처음 등장" 목록이 실제로 채워진다.
+    fresh_issue_ids = [row[0] for row in db.execute(
+        select(IssueArticle.issue_id)
+        .join(Article, Article.id == IssueArticle.article_id)
+        .join(Issue, Issue.id == IssueArticle.issue_id)
+        .where(
+            Issue.category.in_(("GAME", "AI")),
+            Issue.first_seen_at >= period_end - timedelta(days=7),
+            Article.is_relevant.is_(True),
+            article_time >= chart_start,
+            article_time < period_end,
+        )
+        .group_by(IssueArticle.issue_id)
+        .order_by(func.count(IssueArticle.article_id).desc())
+        .limit(10)
+    ).all()]
+    fresh_issue_by_id = {
+        row.id: row for row in db.execute(select(Issue).where(Issue.id.in_(fresh_issue_ids))).scalars().all()
+    } if fresh_issue_ids else {}
+    fresh_keywords: set[str] = set()
+    fresh_seen_titles: set[str] = set()
+    fresh_topics = []
+    for issue_id in fresh_issue_ids:
+        issue = fresh_issue_by_id.get(issue_id)
+        if issue is None:
+            continue
+        key = issue.title.strip().casefold()
+        if not key or key in fresh_seen_titles:
+            continue
+        fresh_seen_titles.add(key)
+        members = [
+            a for a in _issue_members(db, issue)
+            if (pub := _as_aware_utc(a.published_at or a.collected_at)) is not None and chart_start <= pub < period_end
+        ]
+        if not members:
+            continue
+        fresh_topics.append({
+            "name": _issue_chart_keyword(issue, members, fresh_keywords),
+            "category": issue.category,
+            "articleCount": len(members),
+            "articles": [{"title": a.title, "url": a.url, "source": a.source} for a in members[:5]],
+        })
+        if len(fresh_topics) == 6:
+            break
+
+    ongoing_keywords: set[str] = set()
+    ongoing_topics = [
+        {
+            "name": _issue_chart_keyword(item["issue"], item["members"], ongoing_keywords),
+            "category": item["issue"].category,
+            "articleCount": item["count"],
+            "articles": [{"title": a.title, "url": a.url, "source": a.source} for a in item["members"][:5]],
+        }
+        for item in sorted(candidates, key=lambda item: -item["count"])
+        if item["is_ongoing"]
+    ][:6]
+
     return {
         "interest": {"labels": labels, "series": interest_series, "bucket": "주간" if weekly else "일간"},
+        "topicLandscape": topic_landscape,
+        "topicFreshness": {"fresh": fresh_topics, "ongoing": ongoing_topics},
     }
+
+
+def _policy_impact(db: Session, policies: list[dict], period_end: datetime, limit: int = 2) -> list[dict]:
+    """정책 발표 전후로 같은 카테고리 기사량이 실제로 바뀌었는지 확인한다.
+    "발표는 했는데 반응은 없었다"와 "발표 직후 보도가 늘었다"를 구분하는
+    게 목적이라, 발표일 기준 앞뒤 3일 평균만 비교하면 충분하다 — 정책·
+    제도 탭의 최근 1주일 목록(policy_priority)에서 최신 것부터 쓴다.
+
+    측정 기준이 "이 정책 자체에 대한 보도량"이 아니라 "같은 카테고리
+    전체 기사량"이라, 같은 날 같은 카테고리에 발표된 정책이 여러 건이면
+    (실제로 2026.09.01 AI 정책이 3건 동시 발표된 사례를 확인) 카드마다
+    수치가 완전히 똑같아진다 — 서로 구분되지 않는 카드를 나란히 보여줘
+    봐야 혼란만 주므로, (카테고리, 발표일)이 겹치는 후보는 건너뛰고 실제로
+    구별되는 정책만 limit개 채운다."""
+    article_time = func.coalesce(Article.published_at, Article.collected_at)
+    impacts = []
+    seen_slots: set[tuple[str, str]] = set()
+    for policy in policies:
+        if len(impacts) >= limit:
+            break
+        slot = (policy.get("category"), policy.get("publishedDate"))
+        if slot in seen_slots:
+            continue
+        seen_slots.add(slot)
+        try:
+            event_date = datetime.strptime(policy["publishedDate"], "%Y.%m.%d").replace(tzinfo=KST).astimezone(timezone.utc)
+        except (KeyError, ValueError):
+            continue
+        window_start = event_date - timedelta(days=5)
+        window_end = min(event_date + timedelta(days=6), period_end)
+        bucket_count = max(1, (window_end - window_start).days)
+        if bucket_count < 2:
+            continue
+        labels = [(window_start + timedelta(days=i)).astimezone(KST).strftime("%m.%d") for i in range(bucket_count)]
+        values = [0] * bucket_count
+        published_dates = db.execute(
+            select(article_time).where(
+                Article.category == policy["category"],
+                Article.is_relevant.is_(True),
+                article_time >= window_start,
+                article_time < window_end,
+            )
+        ).scalars().all()
+        for published in published_dates:
+            published = _as_aware_utc(published)
+            if published is None:
+                continue
+            index = int((published - window_start).total_seconds() // 86400)
+            if 0 <= index < bucket_count:
+                values[index] += 1
+        event_index = min(bucket_count - 1, int((event_date - window_start).total_seconds() // 86400))
+        before = values[max(0, event_index - 3):event_index]
+        after = values[event_index:event_index + 3]
+        before_avg = round(sum(before) / len(before), 1) if before else 0.0
+        after_avg = round(sum(after) / len(after), 1) if after else 0.0
+        impacts.append({
+            "policyTitle": policy["title"],
+            "policyUrl": policy.get("url"),
+            "implication": policy.get("implication"),
+            "publishedDate": policy["publishedDate"],
+            "category": policy["category"],
+            "labels": labels,
+            "values": values,
+            "eventIndex": event_index,
+            "beforeAvg": before_avg,
+            "afterAvg": after_avg,
+        })
+    return impacts
+
 
 def _evidence_sources(db: Session, issue_ids: list[int], now: datetime) -> list[dict]:
     """Resolve only the articles explicitly cited by synthesis issue IDs."""
@@ -703,11 +964,16 @@ def _serialize_brief(
         game_ai_opinion = NO_CROSS_OPINION_TEXT
     has_signal = game_analysis != [NO_CROSS_SIGNAL_TEXT]
 
-    game_ranked = _period_ranked_issues(db, "GAME", stats_period_start, stats_period_end)
-    ai_ranked = _period_ranked_issues(db, "AI", stats_period_start, stats_period_end)
-    game_issues = [item["issue"] for item in game_ranked]
-    ai_issues = [item["issue"] for item in ai_ranked]
-    issues = game_issues + ai_issues
+    # "주요 시그널"을 한때 별도의 최근 1주일 창으로 다시 계산했었는데(모든
+    # 신호가 "기사 1건"으로만 나오는 문제를 고치려고) — 실제로 재보니
+    # 이슈 클러스터링 비교 비용 때문에 페이지 로딩이 0.23초→3.8초로
+    # 크게 느려졌다. 화면이 바로 뜨는 게 더 중요하다는 판단이라, 원래
+    # 방식(오늘 창 재사용)으로 되돌린다 — "기사 1건" 문제를 다시 고치고
+    # 싶으면, 매 페이지 로드마다 라이브로 재계산하는 대신 refresh_industry_brief
+    # 쪽에서 미리 계산해 저장해두는 방식으로 다시 접근해야 한다.
+    similarity_cache: dict[tuple[int, int], float] = {}
+    game_ranked = _period_ranked_issues(db, "GAME", stats_period_start, stats_period_end, similarity_cache=similarity_cache)
+    ai_ranked = _period_ranked_issues(db, "AI", stats_period_start, stats_period_end, similarity_cache=similarity_cache)
     game_details = _period_key_summary_details(game_ranked)
     ai_details = _period_key_summary_details(ai_ranked)
     same_window = (
@@ -741,9 +1007,10 @@ def _serialize_brief(
         "periodLabel": f"지난 {period_hours}시간",
         "articleCount": brief.article_count,
         "analysisStats": _analysis_stats(db, stats_period_start, stats_period_end, game_ranked + ai_ranked),
-        "analytics": _brief_analytics(db, stats_period_start, stats_period_end, issues),
+        "analytics": _brief_analytics(db, stats_period_start, stats_period_end),
         "game": {
             "headline": game_details[0]["text"] if game_details else brief.game_headline,
+            "hasSignal": not (len(game_details) == 1 and game_details[0].get("noSignal")),
             "keySummaries": [item["text"] for item in game_details],
             "keySummaryDetails": game_details,
             "observations": _period_observations(game_ranked, now),
@@ -755,6 +1022,7 @@ def _serialize_brief(
         },
         "ai": {
             "headline": ai_details[0]["text"] if ai_details else brief.ai_headline,
+            "hasSignal": not (len(ai_details) == 1 and ai_details[0].get("noSignal")),
             "keySummaries": [item["text"] for item in ai_details],
             "keySummaryDetails": ai_details,
             "observations": _period_observations(ai_ranked, now),
@@ -779,6 +1047,7 @@ def _serialize_brief(
         "policyTimeline": sorted(
             policy_timeline, key=lambda item: item["publishedDate"], reverse=True
         ),
+        "policyImpact": _policy_impact(db, policy_priority, stats_period_end),
     }
 
 

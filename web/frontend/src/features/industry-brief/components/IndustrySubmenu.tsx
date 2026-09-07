@@ -2,9 +2,9 @@ export type IndustryScreen = "today" | "policy" | "trend" | "tech";
 
 const ITEMS: Array<{ key: IndustryScreen; label: string } | { key: null; label: string }> = [
   { key: "today", label: "업계동향" },
+  { key: "trend", label: "트렌드" },
   { key: "policy", label: "정책/제도" },
   { key: "tech", label: "기술 레이더" },
-  { key: "trend", label: "트렌드" },
 ];
 
 /** Top-level IA for 업계동향, scoped inside this feature's own header — the

@@ -38,7 +38,7 @@ NO_DATA_TEXT = "지난 24시간 동안 분석할 만큼 충분한 기사가 수�
 
 _ARTICLE_WINDOW_HOURS = 24
 _MAX_ARTICLES_TO_MODEL = 120
-_MAX_RECOMMENDED = 6
+_MAX_RECOMMENDED = 20
 _MAX_CORE_ISSUES = 5
 
 SYSTEM_PROMPT = """\
@@ -51,9 +51,15 @@ SYSTEM_PROMPT = """\
 옮기거나 영어 문장으로 요약하지 말고 반드시 한국어로 번역해서 서술하라. 인명·
 회사명·모델명 등 고유명사의 로마자 표기만 예외로 허용한다.
 
-1. core_issues (핵심 이슈, 3~5개): 오늘 업계에서 가장 중요한 사건/발표/흐름.
+1. core_issues (핵심 이슈, 반드시 3~5개 — has_signal이 true라면 예외 없이
+   최소 3개를 채워야 한다. 화면이 3칸 고정 레이아웃이라 2개 이하로 나오면
+   레이아웃이 깨진다): 오늘 업계에서 가장 중요한 사건/발표/흐름.
    여러 기사가 같은 사건을 다뤄도 되고, 단 하나의 기사가 다루는 중요한 발표나
    데이터여도 된다 — 다른 매체가 같은 내용을 보도했는지는 선정 기준이 아니다.
+   "이게 3개짜리 이슈로 부를 만큼 중요한가"보다 "이 기사들 중 오늘 언급할
+   가치가 있는 걸 3개 고른다면 무엇인가"로 접근해라 — 애매하면 후순위
+   후보라도 포함해 3개를 채우고, 정말로 기사 자체가 5건 미만일 때만
+   has_signal을 false로 두거나 3개 미만을 허용해라.
    각 이슈마다:
    - title: 짧은 내부 라벨 한 줄 (화면에는 노출되지 않음 — 근거 정리·식별용)
    - summary: 화면 카드에 최대 2줄까지만 보이므로 반드시 1~2문장, 60자
@@ -64,13 +70,19 @@ SYSTEM_PROMPT = """\
      흥행 시험대에 올랐습니다."). 반드시 한국어로 작성하고, 해외 모델·기업
      이름 등 고유명사를 제외한 모든 서술은 한글로 써라 — 원문이 영어 기사여도
      summary 자체를 영어로 쓰지 마라.
+   - detail: summary를 클릭해서 열어보는 상세 팝업에만 노출되는 긴 설명.
+     3~5문장으로, 배경(왜 이 일이 일어났는지)·핵심 내용(무슨 일이 있었는지
+     구체적으로)·의미(업계에 어떤 영향을 주는지)를 순서대로 풀어 써라.
+     summary를 그대로 늘여쓰지 말고, summary에 없던 구체적 사실(수치, 배경
+     맥락, 다음에 지켜볼 지점 등)을 근거 기사에서 찾아 보태라. summary와
+     마찬가지로 반드시 한국어로만 작성한다.
    - article_indices: 근거가 된 기사의 index 목록, 1개 이상
 
-2. recommended (추천 기사, 정확히 6개 — 후보가 부족한 경우가 아니면 6개를
-   채워라): 핵심 이슈로 묶이진 않지만 오늘 업계 동향을 파악하는 데 도움이
-   되는 개별 기사. 예: 산업 실적/통계 기사, 업계 전망·칼럼, 행사 프리뷰,
-   트렌드 분석 기사. 각각 index, one_line_reason(왜 추천하는지 한 줄)을
-   작성해라.
+2. recommended (추천 기사, 최대 20개 — 화면에 10개씩 2페이지로 나눠 보여
+   주므로 후보가 부족한 경우가 아니면 20개를 채워라): 핵심 이슈로 묶이진
+   않지만 오늘 업계 동향을 파악하는 데 도움이 되는 개별 기사. 예: 산업
+   실적/통계 기사, 업계 전망·칼럼, 행사 프리뷰, 트렌드 분석 기사. 각각
+   index, one_line_reason(왜 추천하는지 한 줄)을 작성해라.
 
 선정 기준:
 - 제외: 광고성 기사, 단순 상품/아이템 소개, 이벤트 홍보 목적의 보도자료성 기사
@@ -114,6 +126,9 @@ def _system_prompt_for(category: str) -> str:
 class _CoreIssue(BaseModel):
     title: str
     summary: str
+    # 기본값 "" — 모델이 혹시 이 필드를 빼먹어도 응답 전체가 검증 실패로
+    # 튕기지 않게 한다. summary는 그대로 쓰고 detail 팝업만 짧게 나온다.
+    detail: str = ""
     article_indices: list[int] = Field(default_factory=list)
 
 
@@ -154,6 +169,10 @@ def _build_user_prompt(articles: list[Article]) -> str:
 class HighlightIssue(BaseModel):
     title: str
     summary: str
+    # 기본값 "" — 이 필드가 생기기 전에 저장된 DailyHighlightSnapshot을
+    # model_validate로 다시 읽을 때도 깨지지 않아야 한다(과거 스냅샷은
+    # 다음 자동/수동 새로고침 전까지 detail 없이 summary만 보인다).
+    detail: str = ""
     articles: list[dict]
 
 
@@ -202,6 +221,7 @@ def generate_daily_highlights(db: Session, category: str, now: datetime | None =
         core_issues.append(HighlightIssue(
             title=issue.title,
             summary=issue.summary,
+            detail=issue.detail,
             articles=[{"title": a.title, "url": a.url, "source": a.source} for a in members],
         ))
 
@@ -279,6 +299,6 @@ def to_api_dict(highlights: DailyHighlights | None, category: str, now: datetime
         "hasSignal": highlights.has_signal,
         "articleCount": highlights.article_count,
         "generatedAt": highlights.generated_at.isoformat(),
-        "coreIssues": [{"title": i.title, "summary": i.summary, "articles": i.articles} for i in highlights.core_issues],
+        "coreIssues": [{"title": i.title, "summary": i.summary, "detail": i.detail, "articles": i.articles} for i in highlights.core_issues],
         "recommended": [{"title": r.title, "url": r.url, "source": r.source, "reason": r.reason} for r in highlights.recommended],
     }

@@ -17,6 +17,25 @@
   --radius: 8px;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
     "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif;
+
+  /* ── 업계동향 재설계 토큰 (design_handoff_industry_brief) ──────── */
+  /* 타이포: 27종 → 6종 */
+  --fs-page:  26px;   /* 페이지 제목 "게임 · AI 업계 동향" */
+  --fs-lead:  40px;   /* 리드 헤드라인 (오늘의 판단) */
+  --fs-title: 19px;   /* 섹션 제목 */
+  --fs-card:  16px;   /* 카드/이슈 제목 (칼럼 안에서는 17px 허용) */
+  --fs-body:  14.5px; /* 본문 */
+  --fs-meta:  12.5px; /* 메타·라벨 */
+  /* 배지 전용 11px 만 예외로 허용 */
+
+  /* 여백: 4px 그리드 */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
+  --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
+  --card-pad: 24px;
+
+  /* 카테고리색 (차트와 공유, 라이트/다크 공통 — 유일한 예외색) */
+  --cat-game: #f2994a;
+  --cat-ai:   #2f6feb;
 }
 
 @media (prefers-color-scheme: dark) {

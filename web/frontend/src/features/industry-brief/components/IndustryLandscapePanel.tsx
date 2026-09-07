@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { fetchLandscapeIssueDetail } from "../api/client";
+import { CategoryTag, SectionBar } from "./CategoryTag";
 import type { IndustryLandscape, LandscapeEvidenceArticle, LandscapeIssueDetail } from "../types";
 
 interface Props { landscape: IndustryLandscape; limit?: number; }
-
-const DOMAIN_TITLES: Record<string, string> = { GAME: "게임 산업", AI: "AI 산업", GAME_AI: "게임 × AI" };
 
 function EvidenceList({ articles, emptyText }: { articles: LandscapeEvidenceArticle[]; emptyText: string }) {
   if (articles.length === 0) return <p className="ib-landscape-empty">{emptyText}</p>;
@@ -27,9 +26,9 @@ export function IndustryLandscapePanel({ landscape, limit = 3 }: Props) {
     try { setDetail(await fetchLandscapeIssueDetail(issueKey)); } catch { setError(true); } finally { setLoadingKey(null); }
   }
   return <section className="ib-landscape" aria-label="연간 업계 이슈 지도">
-    <div className="ib-section-heading ib-landscape-heading"><div><span>업계 이슈 지도</span><small>올해 기획팀이 축적한 {landscape.referenceArticleCount}건의 스크랩을 기준으로, 최근 흐름을 함께 봅니다.</small></div><span>장기 흐름 · 최근 신호</span></div>
+    <div className="ib-section-heading ib-landscape-heading"><div><SectionBar color="var(--success)" />업계 이슈 지도</div></div>
     <div className="ib-landscape-grid">{landscape.domains.map((domain) => <article className="ib-landscape-domain" key={domain.key}>
-      <header><h3>{DOMAIN_TITLES[domain.key] ?? domain.label}</h3><span>TOP {Math.min(limit, domain.issues.length) || domain.issues.length}</span></header>
+      <header><CategoryTag category={domain.key} /><span>TOP {Math.min(limit, domain.issues.length) || domain.issues.length}</span></header>
       <div className="ib-landscape-list">{domain.issues.length === 0 && <p className="ib-landscape-empty">축적된 이슈가 아직 없습니다.</p>}
         {domain.issues.slice(0, limit).map((issue) => <button className="ib-landscape-issue" type="button" key={issue.key} onClick={() => void openDetail(issue.key)}>
           <strong>{issue.title}</strong><div className="ib-landscape-meta"><span>올해 {issue.referenceCount}건</span><span>최근 분석 {issue.recentArticleCount}건</span></div>

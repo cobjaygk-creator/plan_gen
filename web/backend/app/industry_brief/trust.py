@@ -4,6 +4,7 @@ from collections import Counter
 from dataclasses import dataclass
 from urllib.parse import urlparse
 from .models import Article
+from .sources import NAVER_SOURCE_PREFIX
 
 ESTABLISHED_MEDIA = {
     "GamesIndustry.biz", "PC Gamer", "TechCrunch", "The Verge", "Ars Technica",
@@ -24,12 +25,42 @@ ESTABLISHED_DOMAINS = {
     "epnc.co.kr", "datanet.co.kr",
 }
 
+# Same outlets as ESTABLISHED_DOMAINS, by the Korean press label NAVER's own
+# section pages (official_html.collect_naver_section) scrape into `source` —
+# needed because that collector's article URL is always NAVER's own
+# n.news.naver.com/mnews/... link, which never reveals the original
+# publisher's domain, so ESTABLISHED_DOMAINS can never match it by URL alone.
+# No new trust decisions here — just name-equivalents for domains already
+# whitelisted above.
+ESTABLISHED_MEDIA_NAMES = {
+    "연합뉴스", "뉴시스", "전자신문", "지디넷코리아", "동아일보", "조선일보", "조선비즈",
+    "중앙일보", "한겨레", "경향신문", "매일경제", "한국경제", "비즈니스포스트", "블로터",
+    "디지털투데이", "뉴스1", "이데일리", "머니투데이", "아시아경제", "서울경제",
+    "헤럴드경제", "이투데이", "디지털타임스", "뉴스핌", "아주경제", "아이뉴스24",
+    "YTN", "SBS", "한국경제TV", "쿠키뉴스", "더벨", "스포츠조선",
+    "인벤", "게임메카", "디스이즈게임", "AI타임스", "데이터넷",
+}
+
 # First-party corporate newsrooms. Articles discovered through NAVER or another
 # media collector still count as primary evidence when their canonical URL is
 # hosted on one of these verified company domains.
 OFFICIAL_DOMAINS = {
     "openai.com", "nvidia.com", "news.samsung.com", "krafton.com", "nc.com",
 }
+
+# NAVER's own article-listing pages (official_html.collect_naver_section) hand
+# out links on this domain regardless of which outlet actually wrote the
+# story — unlike NAVER-*discovered* items from an RSS feed, whose link still
+# points at the publisher's own site. Treating this domain as "the source"
+# collapsed every outlet covering a story through NAVER's listing into one
+# source: independent-source counts came out far too low, and _matches_issue's
+# same-source anti-chaining rule (in cluster.py) capped their similarity so
+# they could never even cluster into one issue — see the "모두의 AI"/
+# "허깅페이스 인수" case where a dozen different outlets' stories each sat in
+# their own singleton issue and starved the AI category of any cross-verified
+# 핵심 이슈 despite ~80 same-day articles.
+_NAVER_AGGREGATOR_DOMAINS = {"news.naver.com", "n.news.naver.com"}
+
 
 @dataclass(frozen=True)
 class EvidenceQuality:
@@ -43,9 +74,16 @@ class EvidenceQuality:
     reason: str
 
 
+def _naver_outlet_label(article: Article) -> str:
+    return article.source.removeprefix(NAVER_SOURCE_PREFIX).strip()
+
+
 def source_key(article: Article) -> str:
     if article.source.startswith("NAVER "):
         domain=urlparse(article.url).netloc.lower().removeprefix("www.")
+        if domain in _NAVER_AGGREGATOR_DOMAINS:
+            label = _naver_outlet_label(article)
+            return label.casefold() if label else article.source.casefold()
         return domain or article.source.casefold()
     return article.source.strip().casefold()
 
@@ -60,6 +98,8 @@ def source_tier(article: Article) -> str:
         return "ESTABLISHED_MEDIA"
     if article.source.startswith("NAVER "):
         if any(domain == known or domain.endswith("." + known) for known in ESTABLISHED_DOMAINS):
+            return "ESTABLISHED_MEDIA"
+        if domain in _NAVER_AGGREGATOR_DOMAINS and _naver_outlet_label(article) in ESTABLISHED_MEDIA_NAMES:
             return "ESTABLISHED_MEDIA"
         return "DISCOVERY_MEDIA"
     return "OTHER_MEDIA"
