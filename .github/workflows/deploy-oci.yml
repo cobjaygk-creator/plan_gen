@@ -42,12 +42,20 @@ jobs:
       - name: Sync files to server
         uses: burnett01/rsync-deployments@7.0.1
         with:
+          # web/backend/data/ 전체를 빼면 서버 로컬 상태(SQLite DB 등)는
+          #지켜지지만, 그 안에 git으로 커밋해둔 정적 벤치마크 데이터
+          # (data/ci/, data/official_sites.json 등 — event_bench/game_sites
+          # 메뉴가 읽는 데이터)까지 같이 빠져서 두 메뉴가 빈 화면이 됐다.
+          # 서버가 직접 만드는 하위 폴더/파일만 정확히 제외한다.
           switches: >-
             -avz --delete
             --exclude=.git/
             --exclude=.env
             --exclude=web/backend/.venv/
-            --exclude=web/backend/data/
+            --exclude=web/backend/data/*.db
+            --exclude=web/backend/data/uploads/
+            --exclude=web/backend/data/outputs/
+            --exclude=web/backend/data/images/
             --exclude=web/frontend/node_modules/
           path: ./
           remote_path: /opt/uxui/plan_gen/
