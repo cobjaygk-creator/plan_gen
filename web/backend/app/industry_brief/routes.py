@@ -31,7 +31,7 @@ from .policy_intelligence import build_policy_updates
 from .recommendation_policy import event_key, is_promotional, recommendation_score
 from .trust import evaluate_evidence, source_tier, trusted_issue_score
 from .cluster import _matches_issue
-from .editorial_ranking import editorial_score, is_core_summary_candidate
+from .editorial_ranking import editorial_score, has_strong_ai_technical_signal, is_core_summary_candidate
 from .editorial_history import closed_observation_payload, promotion_payload
 from .feedback_rules import active_rule_match, rule_suggestions
 
@@ -328,7 +328,10 @@ def _period_ranked_issues(
 def _period_key_summary_details(ranked: list[dict], limit: int = 2) -> list[dict]:
     eligible = [
         item for item in ranked
-        if item["quality"].synthesis_eligible
+        if (
+            item["quality"].synthesis_eligible
+            or has_strong_ai_technical_signal(item["issue"], item["members"], item["quality"].established_media_count)
+        )
         and is_core_summary_candidate(item["issue"], item["members"])
         and not item["hasNegativeFeedback"]
         and not item["matchedRule"]

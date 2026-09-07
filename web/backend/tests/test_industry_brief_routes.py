@@ -279,6 +279,52 @@ def test_period_ranking_attaches_matching_first_party_announcement(db_factory):
     }
 
 
+def test_ai_headline_prefers_established_media_tech_scoop_over_official_pr(db_factory):
+    # 실서비스에서 관찰된 사례: 삼성전자 뉴스룸의 전시회 홍보 기사가 "공식
+    # 출처"라는 이유만으로 synthesis_eligible을 통과해, 단독 보도라 후보에도
+    # 못 든 진짜 기술 뉴스(젠슨 황 GPU 발언)를 제치고 "오늘의 판단" 헤드라인을
+    # 차지했다. 전시성 PR은 후보에서 빠지고, 신뢰 매체의 단독 기술 보도는
+    # 후보에 들어야 한다.
+    db = db_factory()
+    now = datetime.now(timezone.utc)
+    pr_issue = Issue(
+        category="AI", title="삼성전자, 디자인 마이애미 서울 2026 전시 하이라이트",
+        summary="삼성전자가 디자인 마이애미 서울 2026 전시에서 AI와 예술의 융합을 통해 인간 중심 디자인 비전을 소개했다.",
+        importance_score=60.0, first_seen_at=now, last_seen_at=now,
+    )
+    tech_issue = Issue(
+        category="AI", title="젠슨 황, GPU 10만개로 오픈AI 최신 모델 학습 공개",
+        summary="젠슨 황이 엔비디아 GPU 10만개가 오픈AI의 최신 모델 학습에 쓰였다고 밝혔다.",
+        importance_score=60.0, first_seen_at=now, last_seen_at=now,
+    )
+    db.add_all([pr_issue, tech_issue])
+    db.flush()
+    common = {"category": "AI", "is_relevant": True, "importance_score": 60.0, "keywords": "[]", "entities": "[]", "published_at": now}
+    pr_article = Article(
+        source="삼성전자 뉴스룸", source_type="official",
+        title="삼성전자, 디자인 마이애미 서울 2026 전시 하이라이트",
+        url="https://news.samsung.com/kr/design-miami-2026", **common,
+    )
+    tech_article = Article(
+        source="AI타임스", source_type="media",
+        title="젠슨 황, GPU 10만개로 오픈AI 최신 모델 학습 공개",
+        url="https://www.aitimes.com/news/articleView.html?idxno=1", **common,
+    )
+    db.add_all([pr_article, tech_article])
+    db.flush()
+    db.add_all([
+        IssueArticle(issue_id=pr_issue.id, article_id=pr_article.id),
+        IssueArticle(issue_id=tech_issue.id, article_id=tech_article.id),
+    ])
+    db.commit()
+
+    ranked = _period_ranked_issues(db, "AI", now - timedelta(hours=1), now + timedelta(minutes=1))
+    details = _period_key_summary_details(ranked)
+
+    assert details[0]["issueId"] == tech_issue.id
+    assert not any(item["issueId"] == pr_issue.id for item in details)
+
+
 def test_not_core_feedback_excludes_issue_from_key_summary(client, make_user, db_factory):
     _login(client, make_user)
     db = db_factory()

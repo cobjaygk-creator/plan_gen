@@ -1,6 +1,10 @@
 from types import SimpleNamespace
 
-from app.industry_brief.editorial_ranking import editorial_score, is_core_summary_candidate
+from app.industry_brief.editorial_ranking import (
+    editorial_score,
+    has_strong_ai_technical_signal,
+    is_core_summary_candidate,
+)
 
 
 def _issue(title: str, summary: str, category: str = "GAME"):
@@ -76,3 +80,73 @@ def test_ai_model_launch_remains_core_even_if_a_company_adopts_something():
     members = [_article("오픈AI, GPT-6 아스트라 공개")]
 
     assert is_core_summary_candidate(issue, members) is True
+
+
+def test_company_exhibition_pr_without_structural_signal_is_not_core_candidate():
+    # 실서비스 사례: 삼성전자 뉴스룸(공식 출처)이 낸 전시회 하이라이트 기사가
+    # synthesis_eligible(공식 확인)만으로 진짜 기술 뉴스를 제치고 헤드라인을
+    # 차지했다 — 신제품/신기술 발표 같은 구조적 내용이 없으면 걸러야 한다.
+    issue = _issue(
+        "삼성전자, 디자인 마이애미 서울 2026 전시 하이라이트",
+        "삼성전자가 디자인 마이애미 서울 2026 전시에서 AI와 예술의 융합을 통해 인간 중심 디자인 비전을 소개했다.",
+        category="AI",
+    )
+    members = [_article("삼성전자 제품이 아티스트의 상상력과 만났을 때… 전시 하이라이트")]
+
+    assert is_core_summary_candidate(issue, members) is False
+    assert editorial_score(issue, members) == 20.0
+
+
+def test_exhibition_that_also_unveils_new_tech_remains_core():
+    issue = _issue(
+        "삼성전자, CES 부스에서 신형 온디바이스 AI 모델 공개",
+        "삼성전자가 이번 전시 부스에서 새로운 온디바이스 AI 모델을 공개했다.",
+        category="AI",
+    )
+    members = [_article("삼성전자, CES 전시에서 신형 AI 모델 공개")]
+
+    assert is_core_summary_candidate(issue, members) is True
+
+
+def test_established_media_technical_scoop_has_strong_signal():
+    issue = _issue(
+        "젠슨 황, GPU 10만개로 오픈AI 최신 모델 학습",
+        "젠슨 황이 엔비디아 GPU 10만개가 오픈AI의 최신 모델 학습에 쓰였다고 밝혔다.",
+        category="AI",
+    )
+    members = [_article("Jensen Huang says 100,000 Nvidia GPUs were used to train OpenAI's latest model")]
+
+    assert has_strong_ai_technical_signal(issue, members, established_media_count=1) is True
+
+
+def test_single_source_technical_scoop_without_established_media_has_no_strong_signal():
+    issue = _issue(
+        "젠슨 황, GPU 10만개로 오픈AI 최신 모델 학습",
+        "젠슨 황이 엔비디아 GPU 10만개가 오픈AI의 최신 모델 학습에 쓰였다고 밝혔다.",
+        category="AI",
+    )
+    members = [_article("Jensen Huang says 100,000 Nvidia GPUs were used to train OpenAI's latest model")]
+
+    assert has_strong_ai_technical_signal(issue, members, established_media_count=0) is False
+
+
+def test_established_media_non_technical_story_has_no_strong_signal():
+    issue = _issue(
+        "AI 업계 관계자 인터뷰",
+        "한 AI 스타트업 대표가 회사 문화에 대해 이야기했다.",
+        category="AI",
+    )
+    members = [_article("AI 스타트업 대표 인터뷰")]
+
+    assert has_strong_ai_technical_signal(issue, members, established_media_count=1) is False
+
+
+def test_has_strong_ai_technical_signal_is_game_scoped_to_ai_only():
+    issue = _issue(
+        "신작 MMORPG 8월 26일 정식 출시",
+        "새로운 게임 엔진과 서버 인프라를 공개했다.",
+        category="GAME",
+    )
+    members = [_article("신작 MMORPG 정식 출시")]
+
+    assert has_strong_ai_technical_signal(issue, members, established_media_count=1) is False

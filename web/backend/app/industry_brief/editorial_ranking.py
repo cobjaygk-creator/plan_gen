@@ -55,6 +55,15 @@ _AI_STRUCTURAL_TERMS = (
     "법안", "유출", "보안", "취약점", "출시", "공개", "연구", "논문", "협약",
     "동맹", "파트너십",
 )
+# 회사가 자사 제품/브랜드를 전시회·행사에 내보인 것 자체를 알리는 보도자료
+# ("삼성전자가 OO 전시에서 AI와 예술의 융합을 소개했다") — 공식 출처라서
+# synthesis_eligible은 통과하지만, 실제 기술/산업 변화가 없는 홍보성 소식일
+# 뿐이라 GAME의 프로모션 필터와 같은 방식으로 다룬다. 구조적 용어가 같이
+# 있으면(신제품·신기술을 그 자리에서 "공개"/"출시"했다면) 그대로 둔다.
+_AI_PROMOTIONAL_TERMS = (
+    "전시", "전시회", "박람회", "쇼케이스", "부스", "체험존", "홍보관",
+    "하이라이트", "비전을 소개",
+)
 
 
 def _entities(members: list[Article]) -> list[str]:
@@ -108,8 +117,28 @@ def is_core_summary_candidate(issue: Issue, members: list[Article]) -> bool:
         has_material_change = any(term in text for term in _MATERIAL_CHANGE_TERMS)
         return not (is_promotion and not has_material_change)
     is_adoption = any(term in text for term in _AI_ADOPTION_TERMS)
+    is_promotional = any(term in text for term in _AI_PROMOTIONAL_TERMS)
     has_structural_change = any(term in text for term in _AI_STRUCTURAL_TERMS)
-    return not (is_adoption and not has_structural_change)
+    return not ((is_adoption or is_promotional) and not has_structural_change)
+
+
+def has_strong_ai_technical_signal(issue: Issue, members: list[Article], established_media_count: int) -> bool:
+    """A same-day AI story reported by only one outlet still deserves a shot
+    at "오늘의 판단" when that outlet is a reputable specialist press (AI타임스,
+    연합뉴스 계열 등) and the story is a real model/infra/security event —
+    otherwise `synthesis_eligible`(교차 확인 or 공식 출처) alone lets a same-day
+    company PR/전시회 소식 win the headline slot just because it carries an
+    "공식 출처" tag, while the outlet that actually broke the day's real AI news
+    waits for a second publication to even become a candidate. Requiring
+    established-media coverage (not just any single source) keeps fringe/blog
+    noise from qualifying through this bypass.
+    """
+    if issue.category != "AI" or established_media_count < 1:
+        return False
+    text = " ".join([
+        issue.title, issue.summary or "", *(article.title for article in members),
+    ]).casefold()
+    return any(term in text for term in _AI_STRUCTURAL_TERMS)
 
 
 def editorial_score(issue: Issue, members: list[Article]) -> float:
