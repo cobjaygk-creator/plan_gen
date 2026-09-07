@@ -11,7 +11,7 @@ cd "$REPO_DIR"
 
 echo "==> venv 준비"
 if [ ! -d .venv ]; then
-  python3.12 -m venv .venv
+  python3 -m venv .venv
 fi
 
 echo "==> backend deps"

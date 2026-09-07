@@ -15,7 +15,7 @@ REPO_DIR="/opt/uxui/plan_gen"
 
 echo "==> apt 업데이트 및 기본 패키지 (git/Node 없이 파이썬 + rsync만)"
 sudo apt-get update -y
-sudo apt-get install -y python3.12-venv python3-pip rsync
+sudo apt-get install -y python3-venv python3-pip rsync
 
 echo "==> 배포 대상 디렉터리 준비 (실제 코드는 GitHub Actions가 rsync로 채운다)"
 sudo mkdir -p "$REPO_DIR"
