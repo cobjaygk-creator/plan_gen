@@ -45,6 +45,36 @@ function isNew(item: Candidate): boolean {
   return ageMs >= 0 && ageMs <= NEW_WINDOW_DAYS * 24 * 60 * 60 * 1000;
 }
 
+// 운영 서버가 http(평문)라 navigator.clipboard는 "secure context에서만
+// 동작"이라는 브라우저 규칙 때문에 존재 자체가 undefined다 — 조용히
+// 예외만 던지고 아무 반응이 없어 보이는 원인이었다. 그래서 우선 시도하고,
+// 안 되면 옛날 방식(임시 textarea + execCommand)으로 대체한다.
+async function copyToClipboard(text: string): Promise<boolean> {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // 아래 대체 방식으로 계속 진행
+    }
+  }
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  let ok = false;
+  try {
+    ok = document.execCommand("copy");
+  } catch {
+    ok = false;
+  }
+  document.body.removeChild(textarea);
+  return ok;
+}
+
 function formatRefreshedAt(value: string | null): string {
   if (!value) return "\uac31\uc2e0 \uae30\ub85d \uc5c6\uc74c";
   return new Intl.DateTimeFormat("ko-KR", {
@@ -74,11 +104,9 @@ export function EventBenchPage() {
 
   const handleCopy = async (item: Candidate) => {
     const text = `${item.game}_${item.title}`;
-    try {
-      await navigator.clipboard.writeText(text);
-    } catch {
-      return;
-    }
+    const ok = await copyToClipboard(text);
+    if (!ok) return;
+    window.alert("이벤트명이 복사 되었습니다.");
     setCopiedUrl(item.event_url);
     window.setTimeout(() => setCopiedUrl((current) => (current === item.event_url ? null : current)), 1500);
   };
