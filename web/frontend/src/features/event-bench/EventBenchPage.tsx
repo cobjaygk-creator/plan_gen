@@ -69,7 +69,19 @@ export function EventBenchPage() {
   const [latestRefreshOnly, setLatestRefreshOnly] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [refreshFailed, setRefreshFailed] = useState(false);
+  const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
   const isAdmin = useOptionalAuth()?.user?.email === ADMIN_EMAIL;
+
+  const handleCopy = async (item: Candidate) => {
+    const text = `${item.game}_${item.title}`;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      return;
+    }
+    setCopiedUrl(item.event_url);
+    window.setTimeout(() => setCopiedUrl((current) => (current === item.event_url ? null : current)), 1500);
+  };
 
   useEffect(() => {
     fetch("/event-bench/candidates", { credentials: "include" })
@@ -164,7 +176,7 @@ export function EventBenchPage() {
       </button>
     </div>
     <nav className="event-bench-tabs" aria-label={"\uac8c\uc784\ubcc4 \uc774\ubca4\ud2b8 \ud544\ud130"}>{games.map((game) => <button type="button" key={game} className={activeGame === game ? "is-active" : ""} onClick={() => setActiveGame(game)}>{game}<span>{game === LABEL.all ? candidatesForGameTabs.length : candidatesForGameTabs.filter((item) => item.game === game).length}</span></button>)}</nav>
-    <section className="event-bench-grid" aria-label={"\uc218\uc9d1\ub41c \uc774\ubca4\ud2b8 \ubaa9\ub85d"}>{visibleCandidates.map((item) => <article className="event-bench-card" key={item.event_url}><a className="event-bench-thumbnail-link" href={item.event_url} target="_blank" rel="noreferrer">{item.hero_image_url ? <img src={item.hero_image_url} alt="" /> : <div className="event-bench-image-placeholder" />}{isNew(item) && <b className="event-bench-thumbnail-new">NEW</b>}</a><div className="event-bench-card-body"><div className="event-bench-card-meta"><span>{item.game}</span><div className="event-bench-card-tags"><i className={item.event_format === "full_page" ? "format-full-page" : "format-board"}>{item.event_format === "full_page" ? "\ud480\ud398\uc774\uc9c0" : "\uac8c\uc2dc\ud310\ud615"}</i><b className={statusFor(item) === "ended" ? "status-ended" : ""}>{statusFor(item) === "ended" ? LABEL.ended : LABEL.ongoing}</b></div></div><h2><a href={item.event_url} target="_blank" rel="noreferrer">{item.title}</a></h2><time>{item.starts_on && item.ends_on ? `${item.starts_on} ~ ${item.ends_on}` : "\uae30\uac04 \uc815\ubcf4 \uc5c6\uc74c"}</time><a href={item.event_url} target="_blank" rel="noreferrer">{"\uacf5\uc2dd \uc774\ubca4\ud2b8 \ubcf4\uae30"} <span aria-hidden="true">&gt;</span></a></div></article>)}</section>
+    <section className="event-bench-grid" aria-label={"\uc218\uc9d1\ub41c \uc774\ubca4\ud2b8 \ubaa9\ub85d"}>{visibleCandidates.map((item) => <article className="event-bench-card" key={item.event_url}><a className="event-bench-thumbnail-link" href={item.event_url} target="_blank" rel="noreferrer">{item.hero_image_url ? <img src={item.hero_image_url} alt="" /> : <div className="event-bench-image-placeholder" />}{isNew(item) && <b className="event-bench-thumbnail-new">NEW</b>}</a><div className="event-bench-card-body"><div className="event-bench-card-meta"><span>{item.game}</span><div className="event-bench-card-tags"><i className={item.event_format === "full_page" ? "format-full-page" : "format-board"}>{item.event_format === "full_page" ? "\ud480\ud398\uc774\uc9c0" : "\uac8c\uc2dc\ud310\ud615"}</i><b className={statusFor(item) === "ended" ? "status-ended" : ""}>{statusFor(item) === "ended" ? LABEL.ended : LABEL.ongoing}</b></div></div><h2><a href={item.event_url} target="_blank" rel="noreferrer">{item.title}</a></h2><time>{item.starts_on && item.ends_on ? `${item.starts_on} ~ ${item.ends_on}` : "\uae30\uac04 \uc815\ubcf4 \uc5c6\uc74c"}</time><a href={item.event_url} target="_blank" rel="noreferrer">{"\uacf5\uc2dd \uc774\ubca4\ud2b8 \ubcf4\uae30"} <span aria-hidden="true">&gt;</span></a></div><button type="button" className={`event-bench-copy-btn${copiedUrl === item.event_url ? " is-copied" : ""}`} onClick={() => void handleCopy(item)} title={`${item.game}_${item.title} \ubcf5\uc0ac`} aria-label={"\uac8c\uc784\uba85_\uc774\ubca4\ud2b8\uc81c\ubaa9 \ud615\ud0dc\ub85c \ubcf5\uc0ac"}>{copiedUrl === item.event_url ? <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10.5l4 4 8-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg> : <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="7" width="10" height="10" rx="2" stroke="currentColor" strokeWidth="1.6"/><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" stroke="currentColor" strokeWidth="1.6"/></svg>}</button></article>)}</section>
     {!visibleCandidates.length && <p className="event-bench-empty">{"\uc120\ud0dd\ud55c \uc870\uac74\uc5d0 \ud574\ub2f9\ud558\ub294 \uc774\ubca4\ud2b8\uac00 \uc5c6\uc2b5\ub2c8\ub2e4."}</p>}
     <section className="event-bench-source"><span>{"\uc218\uc9d1 \ucd9c\ucc98"}</span><strong>{data.source}</strong></section>
   </main>;
