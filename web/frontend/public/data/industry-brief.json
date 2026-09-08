@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-07T23:44:07.000168+00:00",
+  "generated_at": "2026-09-08T00:05:42.236603+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T23:41:48.024906+00:00",
+      "generatedAt": "2026-09-08T00:01:22.053807+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 83,
+        "collected": 85,
         "analyzed": 0,
-        "pending": 83,
+        "pending": 85,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -112,8 +112,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -849,66 +849,7 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [
-        {
-          "id": "4082",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "category": "AI",
-          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "publishedDate": "2026.09.01",
-          "effectiveDate": "8월 31일",
-          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
-          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 70,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "시행됨",
-          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표 · 시행됨",
-          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다.",
-          "updateHeadline": "최근 관세청에서 마약, 인공지능 관련 내년 예산안 발표가 있었습니다."
-        },
-        {
-          "id": "4084",
-          "type": "FUNDING",
-          "typeLabel": "지원사업",
-          "category": "AI",
-          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "publishedDate": "2026.09.01",
-          "effectiveDate": "오는 12월",
-          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
-          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
-          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
-          "responseChecklist": [
-            "신청 자격·마감·제출 조건 확인",
-            "개발·유통·해외 진출 활용 가능성 검토"
-          ],
-          "priorityScore": 35,
-          "priorityLabel": "관찰",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "지원사업 공식 발표",
-          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다.",
-          "updateHeadline": "최근 대한민국 정책브리핑에서 AI 관련 혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입 발표가 있었습니다."
-        }
-      ],
+      "policyUpdates": [],
       "policyTimeline": [
         {
           "id": "4082",
@@ -1424,54 +1365,17 @@
           "updateHeadline": "최근 게임위-콘진원에서 확률형 관련 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결이 있었습니다."
         }
       ],
-      "policyImpact": [
-        {
-          "policyTitle": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
-          "policyUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "publishedDate": "2026.09.01",
-          "category": "AI",
-          "labels": [
-            "08.27",
-            "08.28",
-            "08.29",
-            "08.30",
-            "08.31",
-            "09.01",
-            "09.02",
-            "09.03",
-            "09.04",
-            "09.05",
-            "09.06"
-          ],
-          "values": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "eventIndex": 5,
-          "beforeAvg": 0.0,
-          "afterAvg": 0.0
-        }
-      ]
+      "policyImpact": []
     },
     "3d": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T23:41:48.024906+00:00",
+      "generatedAt": "2026-09-08T00:01:22.053807+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 707,
+        "collected": 709,
         "analyzed": 0,
-        "pending": 707,
+        "pending": 709,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1574,8 +1478,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -2393,66 +2297,7 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [
-        {
-          "id": "4082",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "category": "AI",
-          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "publishedDate": "2026.09.01",
-          "effectiveDate": "8월 31일",
-          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
-          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 70,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "시행됨",
-          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표 · 시행됨",
-          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다.",
-          "updateHeadline": "최근 관세청에서 마약, 인공지능 관련 내년 예산안 발표가 있었습니다."
-        },
-        {
-          "id": "4084",
-          "type": "FUNDING",
-          "typeLabel": "지원사업",
-          "category": "AI",
-          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "publishedDate": "2026.09.01",
-          "effectiveDate": "오는 12월",
-          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
-          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
-          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
-          "responseChecklist": [
-            "신청 자격·마감·제출 조건 확인",
-            "개발·유통·해외 진출 활용 가능성 검토"
-          ],
-          "priorityScore": 35,
-          "priorityLabel": "관찰",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "지원사업 공식 발표",
-          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다.",
-          "updateHeadline": "최근 대한민국 정책브리핑에서 AI 관련 혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입 발표가 있었습니다."
-        }
-      ],
+      "policyUpdates": [],
       "policyTimeline": [
         {
           "id": "4082",
@@ -2968,54 +2813,17 @@
           "updateHeadline": "최근 게임위-콘진원에서 확률형 관련 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결이 있었습니다."
         }
       ],
-      "policyImpact": [
-        {
-          "policyTitle": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
-          "policyUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "publishedDate": "2026.09.01",
-          "category": "AI",
-          "labels": [
-            "08.27",
-            "08.28",
-            "08.29",
-            "08.30",
-            "08.31",
-            "09.01",
-            "09.02",
-            "09.03",
-            "09.04",
-            "09.05",
-            "09.06"
-          ],
-          "values": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "eventIndex": 5,
-          "beforeAvg": 0.0,
-          "afterAvg": 0.0
-        }
-      ]
+      "policyImpact": []
     },
     "week": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-07T23:41:48.024906+00:00",
+      "generatedAt": "2026-09-08T00:01:22.053807+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 472,
+        "collected": 474,
         "analyzed": 0,
-        "pending": 472,
+        "pending": 474,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3118,8 +2926,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -3937,66 +3745,7 @@
           "sharedTopics": []
         }
       ],
-      "policyUpdates": [
-        {
-          "id": "4082",
-          "type": "ENFORCEMENT",
-          "typeLabel": "단속·집행",
-          "category": "AI",
-          "title": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "publishedDate": "2026.09.01",
-          "effectiveDate": "8월 31일",
-          "target": "원문에서 구체적인 적용 대상을 추가 확인해야 합니다.",
-          "action": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 ",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "responseChecklist": [
-            "단속·조사 대상과 위반 유형 확인",
-            "운영 기록과 신고·이용자 대응 절차 점검"
-          ],
-          "priorityScore": 70,
-          "priorityLabel": "우선 확인",
-          "urgencyLabel": "시행됨",
-          "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "단속·집행 공식 발표 · 시행됨",
-          "evidenceSentence": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"- 전년 대비 385억원 증액된 7,284억원으로 2027년도 예산안 편성 - 관세청은 이재명 정부 들어 두 번째이자 현 정부가 전 과정을 주관하는 첫 본예산인 2027년도 예산안을 전년 대비 385억 원(5.6%) 증액된 7,284억 원으로 편성하고, 국민 안전을 위한 마약 반입 차단과 관세행정 인공지능 혁신, 현장 맞춤형 연구개발에 집중 투자할 계획이라고 8월 31일(월) 밝혔다.",
-          "updateHeadline": "최근 관세청에서 마약, 인공지능 관련 내년 예산안 발표가 있었습니다."
-        },
-        {
-          "id": "4084",
-          "type": "FUNDING",
-          "typeLabel": "지원사업",
-          "category": "AI",
-          "title": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입",
-          "source": "대한민국 정책브리핑",
-          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776383&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "publishedDate": "2026.09.01",
-          "effectiveDate": "오는 12월",
-          "target": "혁신조달은 정부가 기술혁신성이 뛰어난 제품의 첫 번째 구매자가 되어 기술촉진을 견인하고 기업에 초기판로를 제공하는 사업이다.",
-          "action": "첫째, 혁신조달 강화를 위해 혁신제품 공공구매 예산을 대폭 확대한다.",
-          "implication": "지원 대상과 신청 조건이 자사 사업에 해당하는지 확인하면 개발·유통·해외 진출 자원으로 활용할 수 있습니다.",
-          "responseChecklist": [
-            "신청 자격·마감·제출 조건 확인",
-            "개발·유통·해외 진출 활용 가능성 검토"
-          ],
-          "priorityScore": 35,
-          "priorityLabel": "관찰",
-          "urgencyLabel": "일정 확인",
-          "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
-          "changeType": "NEW",
-          "changeLabel": "신규 정책",
-          "historyCount": 0,
-          "history": [],
-          "selectionReason": "지원사업 공식 발표",
-          "evidenceSentence": "혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입- '27년도 조달청 정부 예산안 3,723억원 편성…올해 대비 750억원 증가 조달청(청장 백승보)은 2027년도 예산안을 올해 대비 750억원 증가한 3,723억원(총지출 기준*)으로 편성하였다고 밝혔다.",
-          "updateHeadline": "최근 대한민국 정책브리핑에서 AI 관련 혁신조달 강화와 공공조달 AI 전환에 '27년 예산 집중 투입 발표가 있었습니다."
-        }
-      ],
+      "policyUpdates": [],
       "policyTimeline": [
         {
           "id": "4082",
@@ -4512,44 +4261,7 @@
           "updateHeadline": "최근 게임위-콘진원에서 확률형 관련 확률형아이템 피해구제 협력 강화를 위한 업무협약 체결이 있었습니다."
         }
       ],
-      "policyImpact": [
-        {
-          "policyTitle": "관세청 \"내년 예산안, 마약차단·인공지능(AI) 혁신에 집중···현장맞춤형 연구개발(R&D)도\"",
-          "policyUrl": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156776415&pageIndex=1&repCodeType=&repCode=&startDate=2025-09-01&endDate=2026-09-01&srchWord=&period=",
-          "implication": "단속 대상과 위반 유형을 확인하고 자사 서비스의 운영·표시·신고 대응 절차에 같은 위험이 없는지 점검할 필요가 있습니다.",
-          "publishedDate": "2026.09.01",
-          "category": "AI",
-          "labels": [
-            "08.27",
-            "08.28",
-            "08.29",
-            "08.30",
-            "08.31",
-            "09.01",
-            "09.02",
-            "09.03",
-            "09.04",
-            "09.05",
-            "09.06"
-          ],
-          "values": [
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0
-          ],
-          "eventIndex": 5,
-          "beforeAvg": 0.0,
-          "afterAvg": 0.0
-        }
-      ]
+      "policyImpact": []
     }
   }
 }
