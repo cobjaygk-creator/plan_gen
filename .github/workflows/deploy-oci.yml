@@ -44,9 +44,16 @@ jobs:
         with:
           # web/backend/data/ 전체를 빼면 서버 로컬 상태(SQLite DB 등)는
           #지켜지지만, 그 안에 git으로 커밋해둔 정적 벤치마크 데이터
-          # (data/ci/, data/official_sites.json 등 — event_bench/game_sites
-          # 메뉴가 읽는 데이터)까지 같이 빠져서 두 메뉴가 빈 화면이 됐다.
-          # 서버가 직접 만드는 하위 폴더/파일만 정확히 제외한다.
+          # (data/ci/ 등 — event_bench/game_sites 메뉴가 예전엔 읽던 데이터)
+          # 까지 같이 빠져서 두 메뉴가 빈 화면이 됐다. 서버가 직접 만드는
+          # 하위 폴더/파일만 정확히 제외한다.
+          #
+          # data/live/는 event_bench/game_sites의 실제 운영 데이터 경로
+          # (BENCHMARK_DATA_DIR)다 — 서버 자체 스케줄러가 매시간 직접
+          # 채워넣는 곳이라, 이걸 빼지 않으면 --delete가 켜진 이 rsync가
+          # 매 배포마다 그 자리를 git의 옛 상태(또는 존재하지 않음)로
+          # 지워버려서 방금 수집한 이벤트가 배포 직후 사라지는 문제가
+          # 실제로 있었다.
           switches: >-
             -avz --delete
             --exclude=.git/
@@ -56,6 +63,7 @@ jobs:
             --exclude=web/backend/data/uploads/
             --exclude=web/backend/data/outputs/
             --exclude=web/backend/data/images/
+            --exclude=web/backend/data/live/
             --exclude=web/frontend/node_modules/
           path: ./
           remote_path: /opt/uxui/plan_gen/

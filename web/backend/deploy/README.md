@@ -91,7 +91,10 @@ ssh -i ~/.ssh/oci_uxui/uxui_deploy ubuntu@<PUBLIC_IP>
 cp /opt/uxui/plan_gen/.env.example /opt/uxui/plan_gen/.env
 nano /opt/uxui/plan_gen/.env   # ANTHROPIC_API_KEY / OPENAI_API_KEY / SESSION_SECRET_KEY 채우기
                                  # BENCHMARK_DATA_DIR 주석도 해제해야 "타사 이벤트/타사 사이트"에
-                                 # 데이터가 뜬다 — .env.example 설명 참고.
+                                 # 데이터가 뜬다 — .env.example 설명 참고. data/ci/가 아니라
+                                 # data/live/ 처럼 git과 무관한 경로를 가리켜야 한다(그래야
+                                 # 매 배포의 rsync --delete가 서버가 직접 수집한 걸 안 지운다).
+mkdir -p /opt/uxui/plan_gen/web/backend/data/live
 sudo systemctl restart uxui-backend
 sudo systemctl status uxui-backend
 curl localhost:8000/health
