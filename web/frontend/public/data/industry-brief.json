@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-08T04:58:17.537941+00:00",
+  "generated_at": "2026-09-08T05:27:49.475902+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-08T04:53:42.038131+00:00",
+      "generatedAt": "2026-09-08T05:23:43.823367+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 174,
+        "collected": 192,
         "analyzed": 0,
-        "pending": 174,
+        "pending": 192,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -699,8 +699,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 16,
+          "articleCount": 17,
           "articles": [
+            {
+              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
               "url": "https://n.news.naver.com/mnews/article/030/0003464629",
@@ -720,19 +725,19 @@
               "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
               "url": "https://n.news.naver.com/mnews/article/018/0006365528",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "이준희 삼성SDS 대표 \"AI·로봇·물류 분야 전략적 투자 검토\"",
-              "url": "https://n.news.naver.com/mnews/article/001/0016296893",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 10,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572566",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
               "url": "https://n.news.naver.com/mnews/article/009/0005731868",
@@ -752,19 +757,19 @@
               "title": "에스투더블유, 자율형 수사 AI 에이전트 ‘DRI’ 출시",
               "url": "https://n.news.naver.com/mnews/article/018/0006365342",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "\"클라우드서 피지컬 AI까지\"…Arm, 128코어 N4 CSS·설계 동맹으로 전방위 공세",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240585",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 10,
+          "articleCount": 11,
           "articles": [
+            {
+              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
               "url": "https://n.news.naver.com/mnews/article/031/0001056312",
@@ -784,11 +789,6 @@
               "title": "[ICT시사용어] 네오클라우드(Neocloud)",
               "url": "https://www.etnews.com/20260908000158",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "노타, LG전자·모빌린트와 K-반도체 탑재한 휴머노이드 최적화 맡는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214972",
-              "source": "AI타임스"
             }
           ]
         },
@@ -1409,13 +1409,13 @@
     },
     "3d": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-08T04:53:42.038131+00:00",
+      "generatedAt": "2026-09-08T05:23:43.823367+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 769,
+        "collected": 787,
         "analyzed": 0,
-        "pending": 769,
+        "pending": 787,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2105,8 +2105,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 44,
+          "articleCount": 45,
           "articles": [
+            {
+              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
               "url": "https://n.news.naver.com/mnews/article/031/0001056312",
@@ -2126,19 +2131,19 @@
               "title": "[ICT시사용어] 네오클라우드(Neocloud)",
               "url": "https://www.etnews.com/20260908000158",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "노타, LG전자·모빌린트와 K-반도체 탑재한 휴머노이드 최적화 맡는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214972",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 42,
+          "articleCount": 43,
           "articles": [
+            {
+              "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572566",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
               "url": "https://n.news.naver.com/mnews/article/009/0005731868",
@@ -2158,11 +2163,38 @@
               "title": "에스투더블유, 자율형 수사 AI 에이전트 ‘DRI’ 출시",
               "url": "https://n.news.naver.com/mnews/article/018/0006365342",
               "source": "NAVER · 이데일리"
+            }
+          ]
+        },
+        {
+          "key": "robotics",
+          "label": "로보틱스",
+          "articleCount": 38,
+          "articles": [
+            {
+              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
             },
             {
-              "title": "\"클라우드서 피지컬 AI까지\"…Arm, 128코어 N4 CSS·설계 동맹으로 전방위 공세",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240585",
-              "source": "NAVER · 디지털데일리"
+              "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
+              "url": "https://n.news.naver.com/mnews/article/030/0003464629",
+              "source": "NAVER · 전자신문"
+            },
+            {
+              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
+              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
+              "source": "NAVER · 아이뉴스24"
+            },
+            {
+              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
+              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
+              "source": "NAVER · 조선비즈"
+            },
+            {
+              "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365528",
+              "source": "NAVER · 이데일리"
             }
           ]
         },
@@ -2195,38 +2227,6 @@
               "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
               "source": "AI타임스"
-            }
-          ]
-        },
-        {
-          "key": "robotics",
-          "label": "로보틱스",
-          "articleCount": 37,
-          "articles": [
-            {
-              "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464629",
-              "source": "NAVER · 전자신문"
-            },
-            {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365528",
-              "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "이준희 삼성SDS 대표 \"AI·로봇·물류 분야 전략적 투자 검토\"",
-              "url": "https://n.news.naver.com/mnews/article/001/0016296893",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
@@ -2862,13 +2862,13 @@
     },
     "week": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-08T04:53:42.038131+00:00",
+      "generatedAt": "2026-09-08T05:23:43.823367+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 563,
+        "collected": 581,
         "analyzed": 0,
-        "pending": 563,
+        "pending": 581,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3558,8 +3558,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 31,
+          "articleCount": 32,
           "articles": [
+            {
+              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
               "url": "https://n.news.naver.com/mnews/article/030/0003464629",
@@ -3579,19 +3584,19 @@
               "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
               "url": "https://n.news.naver.com/mnews/article/018/0006365528",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "이준희 삼성SDS 대표 \"AI·로봇·물류 분야 전략적 투자 검토\"",
-              "url": "https://n.news.naver.com/mnews/article/001/0016296893",
-              "source": "NAVER · 연합뉴스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 30,
+          "articleCount": 31,
           "articles": [
+            {
+              "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
+              "url": "https://n.news.naver.com/mnews/article/014/0005572566",
+              "source": "NAVER · 파이낸셜뉴스"
+            },
             {
               "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
               "url": "https://n.news.naver.com/mnews/article/009/0005731868",
@@ -3611,19 +3616,19 @@
               "title": "에스투더블유, 자율형 수사 AI 에이전트 ‘DRI’ 출시",
               "url": "https://n.news.naver.com/mnews/article/018/0006365342",
               "source": "NAVER · 이데일리"
-            },
-            {
-              "title": "\"클라우드서 피지컬 AI까지\"…Arm, 128코어 N4 CSS·설계 동맹으로 전방위 공세",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240585",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 29,
+          "articleCount": 30,
           "articles": [
+            {
+              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
               "url": "https://n.news.naver.com/mnews/article/031/0001056312",
@@ -3643,11 +3648,6 @@
               "title": "[ICT시사용어] 네오클라우드(Neocloud)",
               "url": "https://www.etnews.com/20260908000158",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "노타, LG전자·모빌린트와 K-반도체 탑재한 휴머노이드 최적화 맡는다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214972",
-              "source": "AI타임스"
             }
           ]
         },
