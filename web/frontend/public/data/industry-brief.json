@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-08T07:43:55.963852+00:00",
+  "generated_at": "2026-09-08T11:40:19.577743+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-08T05:23:43.823367+00:00",
+      "generatedAt": "2026-09-08T11:35:43.337526+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 193,
+        "collected": 283,
         "analyzed": 0,
-        "pending": 193,
+        "pending": 283,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -699,40 +699,82 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 17,
+          "articleCount": 22,
           "articles": [
             {
-              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "title": "삼성SDS, 로봇 사업 뛰어든다…내년 로봇 관제 플랫폼 출시",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549928",
+              "source": "NAVER · 중앙일보"
+            },
+            {
+              "title": "KT, 로봇 데이터 관리 ‘통합 엣지AI 플랫폼’ 구현 나서",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214986",
+              "source": "AI타임스"
+            },
+            {
+              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
+              "source": "AI타임스"
+            },
+            {
+              "title": "삼성SDS, '로봇 오케스트레이션'으로 생산라인 1000곳 RX 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215002",
+              "source": "AI타임스"
+            },
+            {
+              "title": "중국 인민해방군, '휴머노이드 로봇 병사' 실전 투입 속도",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214981",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 16,
+          "articles": [
+            {
+              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
               "source": "대한민국 정책브리핑"
             },
             {
-              "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464629",
-              "source": "NAVER · 전자신문"
+              "title": "유럽 반도체 기밀 중국 유출 파문...벨기에, 이중국적 연구원 체포",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214992",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
+              "title": "삼성전자·ASML, 차세대 반도체 마스크 12인치로 확대…생산성·원가 개선",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215007",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
+              "title": "아이렌 \"AI 컴퓨팅 수요 무한 확장...공급이 수요 못 따라가\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214985",
+              "source": "AI타임스"
             },
             {
-              "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365528",
-              "source": "NAVER · 이데일리"
+              "title": "삼성전자, ASML과 차세대 반도체 제조 협력 확대",
+              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-asml%ea%b3%bc-%ec%b0%a8%ec%84%b8%eb%8c%80-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%a0%9c%ec%a1%b0-%ed%98%91%eb%a0%a5-%ed%99%95%eb%8c%80",
+              "source": "삼성전자 뉴스룸"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 11,
+          "articleCount": 13,
           "articles": [
+            {
+              "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436678",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
+              "source": "AI타임스"
+            },
             {
               "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
               "url": "https://n.news.naver.com/mnews/article/014/0005572566",
@@ -747,56 +789,24 @@
               "title": "북한 해커도 AI로 무장…\"연말 AI 에이전트 공격 가시화\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436609",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "샘 올트먼 \"韓 기업 잠재력 주목\"… 삼성SDS, 오픈AI 동맹으로 'AX 판' 키운다(종합)",
-              "url": "https://n.news.naver.com/mnews/article/003/0014176056",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "에스투더블유, 자율형 수사 AI 에이전트 ‘DRI’ 출시",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365342",
-              "source": "NAVER · 이데일리"
-            }
-          ]
-        },
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 11,
-          "articles": [
-            {
-              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "삼성SDS, 2031년까지 10조 투입…AI·로봇·물류 전방위 미래 동력 확보",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436628",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "[ICT시사용어] 네오클라우드(Neocloud)",
-              "url": "https://www.etnews.com/20260908000158",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 7,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
+              "url": "https://n.news.naver.com/mnews/article/584/0000039251",
+              "source": "NAVER · 동아사이언스"
+            },
+            {
+              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
+              "source": "AI타임스"
+            },
             {
               "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
               "url": "https://n.news.naver.com/mnews/article/009/0005731868",
@@ -811,51 +821,51 @@
               "title": "젠슨 황 \"AGI 시대 도래했다\"...오픈AI '아스트라'에 축하 메시지",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214974",
               "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI 최고과학자 “AI 이해·통제 어려워져…개발 속도 늦춰야”",
-              "url": "https://www.etnews.com/20260908000001",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 4,
+          "articleCount": 9,
           "articles": [
             {
-              "title": "스탠퍼드 AI인덱스 총괄 \"한국, AI 3강 가려면 특화모델 더 내놔야\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436586",
+              "title": "국회 과방위, '모두의 AI 실험실' 오류·포인트 사용 저조 지적",
+              "url": "https://n.news.naver.com/mnews/article/293/0000090186",
+              "source": "NAVER · 블로터"
+            },
+            {
+              "title": "국가AI전략위, 독파모 평가 참여하나…\"과기부와 공식 협의 없어\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436695",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "양반탈 쓰고 덩실덩실…한국형 AI 휴머노이드 ‘카이로스’의 진화",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731483",
-              "source": "NAVER · 매일경제"
+              "title": "“5조 프론티어 AI, 독파모 다음은?”…국가AI전략위 “추진 방식 아직 미정”",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365757",
+              "source": "NAVER · 이데일리"
             },
             {
-              "title": "과기정통부-중기부,  \"물리적 인공지능(피지컬 AI)으로 중소제조 현장의 미래를 연다\"",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780527&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "말레이시아, 미국 경고 무릅쓰고 화웨이 AI 칩 도입 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215006",
+              "source": "AI타임스"
             },
             {
-              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
-              "source": "NAVER · 파이낸셜뉴스"
+              "title": "미스트랄, 삼성 주도로 4.4조 투자 유치…\"소버린 AI 구축 가속\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215009",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 2,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "Eric Wu’s newest company, out of stealth since May, is going after construction’s labor crunch",
               "url": "https://techcrunch.com/2026/09/07/eric-wus-newest-company-out-of-stealth-since-may-is-going-after-constructions-labor-crunch/",
@@ -865,6 +875,18 @@
               "title": "“신입 뽑을 이유 없다” 59세 리니지 아버지가 AI로 만든 신작",
               "url": "https://n.news.naver.com/mnews/article/025/0003549782",
               "source": "NAVER · 중앙일보"
+            }
+          ]
+        },
+        {
+          "key": "media_gen",
+          "label": "이미지 · 영상 생성",
+          "articleCount": 1,
+          "articles": [
+            {
+              "title": "바이트댄스, '월드 모델' 출시 임박...장이밍 창업자 직접 진두지휘",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214982",
+              "source": "AI타임스"
             }
           ]
         }
@@ -1409,13 +1431,13 @@
     },
     "3d": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-08T05:23:43.823367+00:00",
+      "generatedAt": "2026-09-08T11:35:43.337526+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 775,
+        "collected": 842,
         "analyzed": 0,
-        "pending": 775,
+        "pending": 842,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2108,37 +2130,47 @@
           "articleCount": 45,
           "articles": [
             {
-              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
               "source": "대한민국 정책브리핑"
             },
             {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
+              "title": "유럽 반도체 기밀 중국 유출 파문...벨기에, 이중국적 연구원 체포",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214992",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
+              "title": "삼성전자·ASML, 차세대 반도체 마스크 12인치로 확대…생산성·원가 개선",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215007",
+              "source": "AI타임스"
             },
             {
-              "title": "삼성SDS, 2031년까지 10조 투입…AI·로봇·물류 전방위 미래 동력 확보",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436628",
-              "source": "NAVER · 지디넷코리아"
+              "title": "아이렌 \"AI 컴퓨팅 수요 무한 확장...공급이 수요 못 따라가\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214985",
+              "source": "AI타임스"
             },
             {
-              "title": "[ICT시사용어] 네오클라우드(Neocloud)",
-              "url": "https://www.etnews.com/20260908000158",
-              "source": "전자신문 AI"
+              "title": "삼성전자, ASML과 차세대 반도체 제조 협력 확대",
+              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-asml%ea%b3%bc-%ec%b0%a8%ec%84%b8%eb%8c%80-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%a0%9c%ec%a1%b0-%ed%98%91%eb%a0%a5-%ed%99%95%eb%8c%80",
+              "source": "삼성전자 뉴스룸"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 43,
+          "articleCount": 42,
           "articles": [
+            {
+              "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436678",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
+              "source": "AI타임스"
+            },
             {
               "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
               "url": "https://n.news.naver.com/mnews/article/014/0005572566",
@@ -2153,56 +2185,56 @@
               "title": "북한 해커도 AI로 무장…\"연말 AI 에이전트 공격 가시화\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436609",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "샘 올트먼 \"韓 기업 잠재력 주목\"… 삼성SDS, 오픈AI 동맹으로 'AX 판' 키운다(종합)",
-              "url": "https://n.news.naver.com/mnews/article/003/0014176056",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "에스투더블유, 자율형 수사 AI 에이전트 ‘DRI’ 출시",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365342",
-              "source": "NAVER · 이데일리"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 38,
+          "articleCount": 42,
           "articles": [
             {
-              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "삼성SDS, 로봇 사업 뛰어든다…내년 로봇 관제 플랫폼 출시",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549928",
+              "source": "NAVER · 중앙일보"
             },
             {
-              "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464629",
-              "source": "NAVER · 전자신문"
+              "title": "KT, 로봇 데이터 관리 ‘통합 엣지AI 플랫폼’ 구현 나서",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214986",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
+              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
+              "title": "삼성SDS, '로봇 오케스트레이션'으로 생산라인 1000곳 RX 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215002",
+              "source": "AI타임스"
             },
             {
-              "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365528",
-              "source": "NAVER · 이데일리"
+              "title": "중국 인민해방군, '휴머노이드 로봇 병사' 실전 투입 속도",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214981",
+              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 37,
+          "articleCount": 35,
           "articles": [
+            {
+              "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
+              "url": "https://n.news.naver.com/mnews/article/584/0000039251",
+              "source": "NAVER · 동아사이언스"
+            },
+            {
+              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
+              "source": "AI타임스"
+            },
             {
               "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
               "url": "https://n.news.naver.com/mnews/article/009/0005731868",
@@ -2217,48 +2249,38 @@
               "title": "젠슨 황 \"AGI 시대 도래했다\"...오픈AI '아스트라'에 축하 메시지",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214974",
               "source": "AI타임스"
-            },
-            {
-              "title": "오픈AI 최고과학자 “AI 이해·통제 어려워져…개발 속도 늦춰야”",
-              "url": "https://www.etnews.com/20260908000001",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "sovereign",
           "label": "소버린 AI · 국내 서비스",
-          "articleCount": 15,
+          "articleCount": 19,
           "articles": [
             {
-              "title": "스탠퍼드 AI인덱스 총괄 \"한국, AI 3강 가려면 특화모델 더 내놔야\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436586",
+              "title": "국회 과방위, '모두의 AI 실험실' 오류·포인트 사용 저조 지적",
+              "url": "https://n.news.naver.com/mnews/article/293/0000090186",
+              "source": "NAVER · 블로터"
+            },
+            {
+              "title": "국가AI전략위, 독파모 평가 참여하나…\"과기부와 공식 협의 없어\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436695",
               "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "양반탈 쓰고 덩실덩실…한국형 AI 휴머노이드 ‘카이로스’의 진화",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731483",
-              "source": "NAVER · 매일경제"
+              "title": "“5조 프론티어 AI, 독파모 다음은?”…국가AI전략위 “추진 방식 아직 미정”",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365757",
+              "source": "NAVER · 이데일리"
             },
             {
-              "title": "과기정통부-중기부,  \"물리적 인공지능(피지컬 AI)으로 중소제조 현장의 미래를 연다\"",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780527&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
+              "title": "말레이시아, 미국 경고 무릅쓰고 화웨이 AI 칩 도입 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215006",
+              "source": "AI타임스"
             },
             {
-              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572082",
-              "source": "NAVER · 파이낸셜뉴스"
+              "title": "미스트랄, 삼성 주도로 4.4조 투자 유치…\"소버린 AI 구축 가속\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215009",
+              "source": "AI타임스"
             }
           ]
         },
@@ -2267,6 +2289,11 @@
           "label": "코딩 AI",
           "articleCount": 11,
           "articles": [
+            {
+              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "Eric Wu’s newest company, out of stealth since May, is going after construction’s labor crunch",
               "url": "https://techcrunch.com/2026/09/07/eric-wus-newest-company-out-of-stealth-since-may-is-going-after-constructions-labor-crunch/",
@@ -2286,19 +2313,19 @@
               "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
-              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
-              "source": "NAVER · 뉴시스"
             }
           ]
         },
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 4,
+          "articleCount": 5,
           "articles": [
+            {
+              "title": "바이트댄스, '월드 모델' 출시 임박...장이밍 창업자 직접 진두지휘",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214982",
+              "source": "AI타임스"
+            },
             {
               "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
               "url": "https://www.etnews.com/20260907000460",
@@ -2862,13 +2889,13 @@
     },
     "week": {
       "briefDate": "2026-09-08",
-      "generatedAt": "2026-09-08T05:23:43.823367+00:00",
+      "generatedAt": "2026-09-08T11:35:43.337526+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 582,
+        "collected": 672,
         "analyzed": 0,
-        "pending": 582,
+        "pending": 672,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3558,40 +3585,82 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 32,
+          "articleCount": 37,
           "articles": [
             {
-              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "title": "삼성SDS, 로봇 사업 뛰어든다…내년 로봇 관제 플랫폼 출시",
+              "url": "https://n.news.naver.com/mnews/article/025/0003549928",
+              "source": "NAVER · 중앙일보"
+            },
+            {
+              "title": "KT, 로봇 데이터 관리 ‘통합 엣지AI 플랫폼’ 구현 나서",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214986",
+              "source": "AI타임스"
+            },
+            {
+              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
+              "source": "AI타임스"
+            },
+            {
+              "title": "삼성SDS, '로봇 오케스트레이션'으로 생산라인 1000곳 RX 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215002",
+              "source": "AI타임스"
+            },
+            {
+              "title": "중국 인민해방군, '휴머노이드 로봇 병사' 실전 투입 속도",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214981",
+              "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 35,
+          "articles": [
+            {
+              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
               "source": "대한민국 정책브리핑"
             },
             {
-              "title": "삼성SDS, AX·로봇까지…오픈AI·앤트로픽 손잡는다",
-              "url": "https://n.news.naver.com/mnews/article/030/0003464629",
-              "source": "NAVER · 전자신문"
+              "title": "유럽 반도체 기밀 중국 유출 파문...벨기에, 이중국적 연구원 체포",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214992",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
+              "title": "삼성전자·ASML, 차세대 반도체 마스크 12인치로 확대…생산성·원가 개선",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215007",
+              "source": "AI타임스"
             },
             {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
+              "title": "아이렌 \"AI 컴퓨팅 수요 무한 확장...공급이 수요 못 따라가\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214985",
+              "source": "AI타임스"
             },
             {
-              "title": "\"삼성 생산라인 로봇으로 바꾼다\"…삼성SDS, RX사업 총력전",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365528",
-              "source": "NAVER · 이데일리"
+              "title": "삼성전자, ASML과 차세대 반도체 제조 협력 확대",
+              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-asml%ea%b3%bc-%ec%b0%a8%ec%84%b8%eb%8c%80-%eb%b0%98%eb%8f%84%ec%b2%b4-%ec%a0%9c%ec%a1%b0-%ed%98%91%eb%a0%a5-%ed%99%95%eb%8c%80",
+              "source": "삼성전자 뉴스룸"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 31,
+          "articleCount": 33,
           "articles": [
+            {
+              "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436678",
+              "source": "NAVER · 지디넷코리아"
+            },
+            {
+              "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
+              "source": "AI타임스"
+            },
             {
               "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
               "url": "https://n.news.naver.com/mnews/article/014/0005572566",
@@ -3606,56 +3675,24 @@
               "title": "북한 해커도 AI로 무장…\"연말 AI 에이전트 공격 가시화\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436609",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "샘 올트먼 \"韓 기업 잠재력 주목\"… 삼성SDS, 오픈AI 동맹으로 'AX 판' 키운다(종합)",
-              "url": "https://n.news.naver.com/mnews/article/003/0014176056",
-              "source": "NAVER · 뉴시스"
-            },
-            {
-              "title": "에스투더블유, 자율형 수사 AI 에이전트 ‘DRI’ 출시",
-              "url": "https://n.news.naver.com/mnews/article/018/0006365342",
-              "source": "NAVER · 이데일리"
-            }
-          ]
-        },
-        {
-          "key": "gpu",
-          "label": "GPU · 반도체",
-          "articleCount": 30,
-          "articles": [
-            {
-              "title": "물·에너지·인공지능으로 여는 물관리의 미래… 대한민국 국제물주간 2026 개막",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780642&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "Arm, 모바일 CSS 2세대·서버 N4 공개…\"삼성 2나노 지원\"",
-              "url": "https://n.news.naver.com/mnews/article/031/0001056312",
-              "source": "NAVER · 아이뉴스24"
-            },
-            {
-              "title": "Arm, 스마트폰용 ‘AI 네이티브’ 플랫폼 공개… AI 그래픽 성능·효율 최대 4배",
-              "url": "https://n.news.naver.com/mnews/article/366/0001191003",
-              "source": "NAVER · 조선비즈"
-            },
-            {
-              "title": "삼성SDS, 2031년까지 10조 투입…AI·로봇·물류 전방위 미래 동력 확보",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436628",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "[ICT시사용어] 네오클라우드(Neocloud)",
-              "url": "https://www.etnews.com/20260908000158",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 22,
+          "articleCount": 24,
           "articles": [
+            {
+              "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
+              "url": "https://n.news.naver.com/mnews/article/584/0000039251",
+              "source": "NAVER · 동아사이언스"
+            },
+            {
+              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
+              "source": "AI타임스"
+            },
             {
               "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
               "url": "https://n.news.naver.com/mnews/article/009/0005731868",
@@ -3670,15 +3707,37 @@
               "title": "젠슨 황 \"AGI 시대 도래했다\"...오픈AI '아스트라'에 축하 메시지",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214974",
               "source": "AI타임스"
+            }
+          ]
+        },
+        {
+          "key": "sovereign",
+          "label": "소버린 AI · 국내 서비스",
+          "articleCount": 12,
+          "articles": [
+            {
+              "title": "국회 과방위, '모두의 AI 실험실' 오류·포인트 사용 저조 지적",
+              "url": "https://n.news.naver.com/mnews/article/293/0000090186",
+              "source": "NAVER · 블로터"
             },
             {
-              "title": "오픈AI 최고과학자 “AI 이해·통제 어려워져…개발 속도 늦춰야”",
-              "url": "https://www.etnews.com/20260908000001",
-              "source": "전자신문 AI"
+              "title": "국가AI전략위, 독파모 평가 참여하나…\"과기부와 공식 협의 없어\"",
+              "url": "https://n.news.naver.com/mnews/article/092/0002436695",
+              "source": "NAVER · 지디넷코리아"
             },
             {
-              "title": "[9월7일] “일주일에 4개나 출시”...커지는 ‘모델 피로감’",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214925",
+              "title": "“5조 프론티어 AI, 독파모 다음은?”…국가AI전략위 “추진 방식 아직 미정”",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365757",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "말레이시아, 미국 경고 무릅쓰고 화웨이 AI 칩 도입 추진",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215006",
+              "source": "AI타임스"
+            },
+            {
+              "title": "미스트랄, 삼성 주도로 4.4조 투자 유치…\"소버린 AI 구축 가속\"",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215009",
               "source": "AI타임스"
             }
           ]
@@ -3686,8 +3745,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
+              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
+              "source": "대한민국 정책브리핑"
+            },
             {
               "title": "Eric Wu’s newest company, out of stealth since May, is going after construction’s labor crunch",
               "url": "https://techcrunch.com/2026/09/07/eric-wus-newest-company-out-of-stealth-since-may-is-going-after-constructions-labor-crunch/",
@@ -3707,51 +3771,19 @@
               "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
               "source": "AI타임스"
-            },
-            {
-              "title": "\"코드 짜줘\" 했더니 악성파일 뚝딱…北 해커도 AI 코딩 에이전트 악용",
-              "url": "https://n.news.naver.com/mnews/article/003/0014174066",
-              "source": "NAVER · 뉴시스"
-            }
-          ]
-        },
-        {
-          "key": "sovereign",
-          "label": "소버린 AI · 국내 서비스",
-          "articleCount": 7,
-          "articles": [
-            {
-              "title": "스탠퍼드 AI인덱스 총괄 \"한국, AI 3강 가려면 특화모델 더 내놔야\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436586",
-              "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "양반탈 쓰고 덩실덩실…한국형 AI 휴머노이드 ‘카이로스’의 진화",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731483",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "과기정통부-중기부,  \"물리적 인공지능(피지컬 AI)으로 중소제조 현장의 미래를 연다\"",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780527&pageIndex=2&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "'모두의 AI' 1700억 GPU 지원금, 서비스 성과 맞춰 3社에 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572297",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "'모두의 AI' 정부지원금, 서비스 성과 맞춰 3사 차등배분",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572082",
-              "source": "NAVER · 파이낸셜뉴스"
             }
           ]
         },
         {
           "key": "media_gen",
           "label": "이미지 · 영상 생성",
-          "articleCount": 4,
+          "articleCount": 5,
           "articles": [
+            {
+              "title": "바이트댄스, '월드 모델' 출시 임박...장이밍 창업자 직접 진두지휘",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214982",
+              "source": "AI타임스"
+            },
             {
               "title": "15초를 90분으로…100% AI 제작 영화 '스틸레이' 공개",
               "url": "https://www.etnews.com/20260907000460",
