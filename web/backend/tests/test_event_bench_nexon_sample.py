@@ -1,6 +1,8 @@
 from datetime import date
 
-from app.event_bench.nexon_sample import _date_parts_md, _event_format
+from bs4 import BeautifulSoup
+
+from app.event_bench.nexon_sample import _date_parts_md, _event_format, _parse_cashshop_date
 
 
 def test_date_parts_md_parses_month_day_range_within_same_year():
@@ -32,3 +34,21 @@ def test_event_format_marks_cyphers_dedicated_landing_page_as_full_page():
 
 def test_event_format_marks_cyphers_board_post_as_board():
     assert _event_format("https://cyphers.nexon.com/article/event/topic/28611384") == "board"
+
+
+def _cashshop_date_node(html: str):
+    return BeautifulSoup(html, "html.parser").select_one("dd.date p")
+
+
+def test_parse_cashshop_date_combines_year_span_and_month_day_text():
+    node = _cashshop_date_node('<dd class="date"><p><span>2026</span>08-27</p></dd>')
+    assert _parse_cashshop_date(node) == date(2026, 8, 27)
+
+
+def test_parse_cashshop_date_returns_none_for_missing_node():
+    assert _parse_cashshop_date(None) is None
+
+
+def test_parse_cashshop_date_returns_none_when_year_span_missing():
+    node = _cashshop_date_node('<dd class="date"><p>08-27</p></dd>')
+    assert _parse_cashshop_date(node) is None

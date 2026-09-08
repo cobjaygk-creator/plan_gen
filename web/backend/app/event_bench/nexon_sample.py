@@ -26,6 +26,10 @@ MABINOGI_EVENTS_URL = "https://mabinogi.nexon.com/page/news/event_list.asp"
 TALESWEAVER_EVENTS_URL = "https://tales.nexon.com/News/Event"
 ELSWORD_EVENTS_URL = "https://elsword.nexon.com/News/Events/List"
 BARAM_EVENTS_URL = "https://baram.nexon.com/Event/List"
+BARAM_CASHSHOP_URL = "https://baram.nexon.com/CashshopUpdate/List/1"
+# 명시적 요청: 2026-08-27("풍요의보물함 판매")보다 오래된 캐시샵 업데이트
+# 게시물은 소급 수집하지 않는다 — 그 날짜 이후(포함) 올라온 것만.
+_BARAM_CASHSHOP_CUTOFF = date(2026, 8, 27)
 LOSTARK_EVENTS_URL = "https://lostark.game.onstove.com/News/Event/Now"
 NC_EVENTON_API_URL = "https://promotion.plaync.com/eventon/item"
 BLACK_DESERT_EVENTS_URL = "https://www.kr.playblackdesert.com/ko-KR/News/Notice?boardType=3&progressType=1"
@@ -375,6 +379,49 @@ def collect_baram_events() -> list[EventCandidate]:
             publisher="NEXON Korea", game="\ubc14\ub78c\uc758\ub098\ub77c", title=title, event_url=event_url,
             hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
             published_on=None, status="ongoing", event_format=_event_format(event_url), collected_at=collected_at,
+        ))
+    candidates.extend(collect_baram_cashshop_events())
+    return candidates
+
+
+def _parse_cashshop_date(date_node) -> date | None:
+    """dd.date p \uc548\uc758 '<span>2026</span>08-27' \uc870\uac01\uc744 date\ub85c \ud569\uce5c\ub2e4."""
+    if date_node is None:
+        return None
+    year_node = date_node.select_one("span")
+    year_text = year_node.get_text(strip=True) if year_node else ""
+    month_day = date_node.get_text(" ", strip=True).replace(year_text, "", 1).strip()
+    match = re.match(r"(\d{1,2})-(\d{1,2})", month_day)
+    if not year_text or not match:
+        return None
+    try:
+        return date(int(year_text), int(match.group(1)), int(match.group(2)))
+    except ValueError:
+        return None
+
+
+def collect_baram_cashshop_events() -> list[EventCandidate]:
+    """Collect \ubc14\ub78c\uc758\ub098\ub77c's official \uce90\uc2dc\uc0f5 \uc5c5\ub370\uc774\ud2b8 board posts (\ubcc4\ub3c4 \uac8c\uc2dc\ud310,
+    Event/List\uc640\ub294 \ub2e4\ub978 URL) \u2014 2026-08-27("\ud48d\uc694\uc758\ubcf4\ubb3c\ud568 \ud310\ub9e4") \uc774\ud6c4(\ud3ec\ud568)
+    \uc62c\ub77c\uc628 \uac8c\uc2dc\ubb3c\ub9cc \uc218\uc9d1\ud55c\ub2e4(\uba85\uc2dc\uc801 \uc694\uccad)."""
+    soup = BeautifulSoup(_fetch_html(BARAM_CASHSHOP_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for item in soup.select("div.con_aside li"):
+        title_link = item.select_one("dd p a[href]")
+        published = _parse_cashshop_date(item.select_one("dd.date p"))
+        if title_link is None or published is None or published < _BARAM_CASHSHOP_CUTOFF:
+            continue
+        event_url = urljoin(BARAM_CASHSHOP_URL, title_link.get("href", "").strip())
+        title = title_link.get_text(" ", strip=True)
+        if not title or event_url in seen:
+            continue
+        seen.add(event_url)
+        candidates.append(EventCandidate(
+            publisher="NEXON Korea", game="\ubc14\ub78c\uc758\ub098\ub77c", title=title, event_url=event_url,
+            hero_image_url=None, starts_on=published.isoformat(), ends_on=None,
+            published_on=published.isoformat(), status="ongoing", event_format="board", collected_at=collected_at,
         ))
     return candidates
 
