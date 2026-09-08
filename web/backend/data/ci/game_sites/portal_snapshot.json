@@ -496,14 +496,6 @@
     "portal": "NETMARBLE"
   },
   {
-    "url": "https://dokkaebi.kakaogames.com/preregister",
-    "game_name": "도깨비의세계",
-    "publisher": "KAKAO GAMES",
-    "published_on": null,
-    "thumbnail_url": null,
-    "portal": "KAKAO_GAMES"
-  },
-  {
     "url": "https://odin.kakaogames.com/",
     "game_name": "오딘: 발할라 라이징",
     "publisher": "KAKAO GAMES",
@@ -538,6 +530,14 @@
   {
     "url": "https://poe2.kakaogames.com/",
     "game_name": "패스 오브 엑자일 2",
+    "publisher": "KAKAO GAMES",
+    "published_on": null,
+    "thumbnail_url": null,
+    "portal": "KAKAO_GAMES"
+  },
+  {
+    "url": "https://dokkaebi.kakaogames.com/preregister",
+    "game_name": "도깨비의세계",
     "publisher": "KAKAO GAMES",
     "published_on": null,
     "thumbnail_url": null,
