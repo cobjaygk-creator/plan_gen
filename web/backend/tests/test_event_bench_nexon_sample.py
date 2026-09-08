@@ -2,7 +2,14 @@ from datetime import date
 
 from bs4 import BeautifulSoup
 
-from app.event_bench.nexon_sample import _date_parts_md, _event_format, _parse_cashshop_date
+from app.event_bench.nexon_sample import (
+    _date_parts_md,
+    _event_format,
+    _extract_balanced_array,
+    _parse_cashshop_date,
+    _parse_thefinals_threads,
+    _thefinals_slug,
+)
 
 
 def test_date_parts_md_parses_month_day_range_within_same_year():
@@ -52,3 +59,36 @@ def test_parse_cashshop_date_returns_none_for_missing_node():
 def test_parse_cashshop_date_returns_none_when_year_span_missing():
     node = _cashshop_date_node('<dd class="date"><p>08-27</p></dd>')
     assert _parse_cashshop_date(node) is None
+
+
+def test_thefinals_slug_matches_real_site_convention():
+    # 실측: "더 파이널스 2주년 & TFNL 그랜드 파이널 현장 이벤트 안내" ->
+    # "더-파이널스-2주년-tfnl-그랜드-파이널-현장-이벤트-안내" (사이트가 실제
+    # 쓰는 슬러그). "&"는 제거되고 공백은 하이픈으로, 영문은 소문자로.
+    assert _thefinals_slug("더 파이널스 2주년 & TFNL 그랜드 파이널 현장 이벤트 안내") == (
+        "더-파이널스-2주년-tfnl-그랜드-파이널-현장-이벤트-안내"
+    )
+
+
+def test_extract_balanced_array_ignores_brackets_inside_string_values():
+    # summary 값 자체가 "[사전 참가 신청 바로가기]"처럼 대괄호를 포함할 수
+    # 있다 — 순진하게 문자열 안까지 세면 배열이 값 중간에서 잘린다.
+    text = '"threads":[{"summary":"[사전 참가 신청 바로가기]","id":1}],"pagingIndex":1'
+    idx = text.find("[")
+    extracted = _extract_balanced_array(text, idx)
+    assert extracted == '[{"summary":"[사전 참가 신청 바로가기]","id":1}]'
+
+
+def test_parse_thefinals_threads_extracts_thread_list_from_hydration_payload():
+    page_html = (
+        '<script>window.__RQ = window.__RQ || [];'
+        'window.__RQ.push({"queries":[{"state":{"data":{"pages":[{"res":'
+        '{"threads":[{"threadId":"1","title":"A"},{"threadId":"2","title":"B"}]}'
+        '}]}}}]});</script>'
+    )
+    threads = _parse_thefinals_threads(page_html)
+    assert [t["threadId"] for t in threads] == ["1", "2"]
+
+
+def test_parse_thefinals_threads_returns_empty_list_when_marker_missing():
+    assert _parse_thefinals_threads("<html>no data here</html>") == []

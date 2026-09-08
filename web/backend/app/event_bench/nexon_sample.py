@@ -7,6 +7,7 @@ make a subjective design-quality judgment.
 from __future__ import annotations
 
 import argparse
+import html as html_lib
 import json
 import re
 import shutil
@@ -41,6 +42,13 @@ HEROES_EVENTS_URL = "https://heroes.nexon.com/news/event/ing"
 RAGNAROK_EVENTS_URL = "https://ro.gnjoy.com/news/event/list.asp"
 AUDITION_EVENTS_URL = "https://audition.hangame.com/Desk/EventList"
 CYPHERS_EVENTS_URL = "https://cyphers.nexon.com/article/event/running"
+THEFINALS_EVENTS_URL = "https://thefinals.nexon.com/news?headlineId=3069"
+# 요약(summary)에 실질적인 설명 텍스트가 있으면 "텍스트 많이 포함된"
+# 공지성 게시물로 보고 제외한다 — 배너 이미지 한 장(+있어도 캡션 수준의
+# 짧은 문구)뿐인 "통이미지" 게시물만 수집해달라는 명시적 요청. 실측: 통
+# 이미지형은 요약이 0~15자, 텍스트가 많은 공지는 490~500자(서버가 500자
+# 에서 자름)로 뚜렷이 갈린다.
+_THEFINALS_SUMMARY_MAX_LEN = 30
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
 # Cyphers prints dates without a year ("9/3 점검 후 ~ 9/22 점검 전") — _DATE_RANGE
 # expects a 4-digit year and never matches this format.
@@ -729,6 +737,86 @@ def collect_cyphers_events() -> list[EventCandidate]:
     return candidates
 
 
+def _extract_balanced_array(text: str, start: int) -> str | None:
+    """text[start]가 '['라고 가정하고, 문자열 리터럴 안의 대괄호(예:
+    summary 값 "[사전 참가 신청 바로가기]")는 무시하면서 짝이 맞는 ']'
+    까지를 잘라 반환한다."""
+    depth = 0
+    in_string = False
+    escape = False
+    for i in range(start, len(text)):
+        ch = text[i]
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == "\\":
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+        if ch == '"':
+            in_string = True
+        elif ch == "[":
+            depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                return text[start:i + 1]
+    return None
+
+
+def _thefinals_slug(title: str) -> str:
+    """실제 사이트의 URL 슬러그 규칙을 흉내낸다(threadId만 실제로 라우팅에
+    쓰이고 슬러그 값 자체는 검증되지 않는 걸 직접 확인했지만, 그래도 진짜
+    URL과 같은 모양으로 만든다)."""
+    cleaned = re.sub(r"[^\w가-힣\s-]", "", title).strip()
+    return re.sub(r"\s+", "-", cleaned).lower()
+
+
+def _parse_thefinals_threads(page_html: str) -> list[dict]:
+    marker = '"threads":['
+    idx = page_html.find(marker)
+    if idx == -1:
+        return []
+    raw = _extract_balanced_array(page_html, idx + len(marker) - 1)
+    if raw is None:
+        return []
+    try:
+        threads = json.loads(raw)
+    except json.JSONDecodeError:
+        return []
+    return threads if isinstance(threads, list) else []
+
+
+def collect_thefinals_events() -> list[EventCandidate]:
+    """Collect THE FINALS' 이벤트 게시판 중 "통이미지"(설명 텍스트가 거의
+    없는 배너형) 게시물만 — 목록 페이지가 React Query 하이드레이션 데이터를
+    <script> 안에 그대로 심어두므로(threadId/title/summary/thumbnailImageUrl
+    포함), HTML 마크업을 스크레이핑하는 대신 그 JSON을 직접 파싱한다."""
+    page_html = _fetch_html(THEFINALS_EVENTS_URL)
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    for thread in _parse_thefinals_threads(page_html):
+        summary = (thread.get("summary") or "").strip()
+        if len(summary) > _THEFINALS_SUMMARY_MAX_LEN:
+            continue
+        thread_id = thread.get("threadId")
+        title = html_lib.unescape(str(thread.get("title") or "")).strip()
+        if not thread_id or not title:
+            continue
+        published = None
+        create_date = thread.get("createDate")
+        if isinstance(create_date, (int, float)):
+            published = datetime.fromtimestamp(create_date, tz=timezone.utc).date().isoformat()
+        event_url = f"https://thefinals.nexon.com/news/{thread_id}/{_thefinals_slug(title)}"
+        candidates.append(EventCandidate(
+            publisher="NEXON Korea", game="더 파이널스", title=title, event_url=event_url,
+            hero_image_url=thread.get("thumbnailImageUrl"), starts_on=published, ends_on=None,
+            published_on=published, status="ongoing", event_format="board", collected_at=collected_at,
+        ))
+    return candidates
+
+
 def _eventon_full_page_entry(item: dict) -> dict | None:
     """NC\uc758 \uacf5\uc6a9 '\uc774\ubca4\ud2b8ON' \ud50c\ub7ab\ud3fc\uc740 \ub85c\uc2a4\ud2b8\uc544\ud06c\uc640 \ub2ec\ub9ac \uac01 \ud56d\ubaa9\uc774 \uc2e4\uc81c\ub85c
     \uc5b4\ub514\ub85c \uc5f0\uacb0\ub418\ub294\uc9c0\ub97c URL \ud328\ud134 \ucd94\uce21 \uc5c6\uc774 marketingEntrySet[].entryType\ub85c
@@ -827,10 +915,11 @@ def collect_nexon_events() -> list[EventCandidate]:
         *collect_dnf_events(),
         *collect_audition_events(),
         *collect_cyphers_events(),
+        *collect_thefinals_events(),
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -871,6 +960,8 @@ def main() -> None:
         candidates = collect_audition_events()
     elif args.source == "cyphers":
         candidates = collect_cyphers_events()
+    elif args.source == "thefinals":
+        candidates = collect_thefinals_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)
