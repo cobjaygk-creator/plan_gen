@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T00:05:42.236603+00:00",
+  "generated_at": "2026-09-08T02:22:14.043119+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-08",
@@ -112,8 +112,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                2,
+                0,
                 0,
                 0,
                 0,
@@ -201,7 +201,7 @@
             "articleCount": 2,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
@@ -342,7 +342,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC",
@@ -543,6 +543,23 @@
               ]
             },
             {
+              "name": "에이지 트위스터",
+              "category": "GAME",
+              "articleCount": 2,
+              "articles": [
+                {
+                  "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                  "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+                  "source": "크래프톤"
+                },
+                {
+                  "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                  "url": "https://www.inven.co.kr/webzine/news/?news=319877",
+                  "source": "인벤"
+                }
+              ]
+            },
+            {
               "name": "Supermicro",
               "category": "AI",
               "articleCount": 1,
@@ -586,18 +603,6 @@
                 {
                   "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
                   "url": "https://www.pcgamer.com/games/survival-crafting/a-game-dev-spent-40-days-in-the-wilderness-to-make-this-new-steam-survival-game/",
-                  "source": "PC Gamer"
-                }
-              ]
-            },
-            {
-              "name": "Wardogs",
-              "category": "GAME",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
-                  "url": "https://www.pcgamer.com/games/fps/nearly-500k-players-showed-up-for-the-wardogs-beta-the-reaction-from-the-fps-community-has-been-insane/",
                   "source": "PC Gamer"
                 }
               ]
@@ -1373,9 +1378,9 @@
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 709,
+        "collected": 699,
         "analyzed": 0,
-        "pending": 709,
+        "pending": 699,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1478,8 +1483,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                2,
+                0,
                 0,
                 0,
                 0,
@@ -1567,7 +1572,7 @@
             "articleCount": 2,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
@@ -1708,7 +1713,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC",
@@ -1909,6 +1914,23 @@
               ]
             },
             {
+              "name": "에이지 트위스터",
+              "category": "GAME",
+              "articleCount": 2,
+              "articles": [
+                {
+                  "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                  "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+                  "source": "크래프톤"
+                },
+                {
+                  "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                  "url": "https://www.inven.co.kr/webzine/news/?news=319877",
+                  "source": "인벤"
+                }
+              ]
+            },
+            {
               "name": "Supermicro",
               "category": "AI",
               "articleCount": 1,
@@ -1952,18 +1974,6 @@
                 {
                   "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
                   "url": "https://www.pcgamer.com/games/survival-crafting/a-game-dev-spent-40-days-in-the-wilderness-to-make-this-new-steam-survival-game/",
-                  "source": "PC Gamer"
-                }
-              ]
-            },
-            {
-              "name": "Wardogs",
-              "category": "GAME",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
-                  "url": "https://www.pcgamer.com/games/fps/nearly-500k-players-showed-up-for-the-wardogs-beta-the-reaction-from-the-fps-community-has-been-insane/",
                   "source": "PC Gamer"
                 }
               ]
@@ -2926,8 +2936,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                2,
+                0,
                 0,
                 0,
                 0,
@@ -3015,7 +3025,7 @@
             "articleCount": 2,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
@@ -3156,7 +3166,7 @@
             "articleCount": 1,
             "isMarketing": false,
             "isFresh": false,
-            "isOngoing": false,
+            "isOngoing": true,
             "articles": [
               {
                 "title": "Situational Awareness, star AI hedge fund that nearly imploded, now being probed by the SEC",
@@ -3357,6 +3367,23 @@
               ]
             },
             {
+              "name": "에이지 트위스터",
+              "category": "GAME",
+              "articleCount": 2,
+              "articles": [
+                {
+                  "title": "새글 크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                  "url": "https://www.krafton.com/news/press/%ed%81%ac%eb%9e%98%ed%94%84%ed%86%a4-%ec%97%90%ec%9d%b4%ec%a7%80-%ed%8a%b8%ec%9c%84%ec%8a%a4%ed%84%b0-%ea%b2%8c%ec%9e%84%ec%8a%a4%ec%bb%b4-%ec%96%b4%ec%9b%8c%eb%93%9c-2026-%ed%9b%84/",
+                  "source": "크래프톤"
+                },
+                {
+                  "title": "크래프톤 ‘에이지 트위스터’, 게임스컴 어워드 2026 후보 선정",
+                  "url": "https://www.inven.co.kr/webzine/news/?news=319877",
+                  "source": "인벤"
+                }
+              ]
+            },
+            {
               "name": "Supermicro",
               "category": "AI",
               "articleCount": 1,
@@ -3400,18 +3427,6 @@
                 {
                   "title": "A game dev spent 40 days in the wilderness to make this new Steam survival game",
                   "url": "https://www.pcgamer.com/games/survival-crafting/a-game-dev-spent-40-days-in-the-wilderness-to-make-this-new-steam-survival-game/",
-                  "source": "PC Gamer"
-                }
-              ]
-            },
-            {
-              "name": "Wardogs",
-              "category": "GAME",
-              "articleCount": 1,
-              "articles": [
-                {
-                  "title": "Nearly 500k players showed up for the Wardogs beta: 'The reaction from the FPS community has been insane'",
-                  "url": "https://www.pcgamer.com/games/fps/nearly-500k-players-showed-up-for-the-wardogs-beta-the-reaction-from-the-fps-community-has-been-insane/",
                   "source": "PC Gamer"
                 }
               ]
