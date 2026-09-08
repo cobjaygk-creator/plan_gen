@@ -14,6 +14,19 @@ from app.models import User
 from app.security import hash_password
 
 
+@pytest.fixture(autouse=True)
+def _clear_brief_cache():
+    # _brief_cache는 모듈 레벨 dict라 프로세스(=테스트 세션) 전체에 걸쳐
+    # 산다 — db_factory는 테스트마다 새 SQLite 파일을 쓰지만 PK는 매번 1부터
+    # 다시 시작하므로, 캐시를 안 비우면 이전 테스트의 brief.id=1로 채워둔
+    # 캐시 항목을 이번 테스트가 그대로 돌려받는 오염이 생긴다(캐시 키가
+    # 분 단위로 뭉치도록 고친 뒤 실제로 발생 확인).
+    from app.industry_brief.routes import _brief_cache
+    _brief_cache.clear()
+    yield
+    _brief_cache.clear()
+
+
 @pytest.fixture()
 def db_factory(tmp_path):
     # isolated per-test SQLite DB file — no shared state across tests, and

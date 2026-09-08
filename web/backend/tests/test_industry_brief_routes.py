@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from app.industry_brief.models import Article, DailyBrief, EditorialRule, Issue, IssueArticle, IssueFeedback
-from app.industry_brief.routes import _period_key_summary_details, _period_ranked_issues
+from app.industry_brief.routes import _period_key_summary_details, _period_ranked_issues, _serialize_brief
 
 
 def _login(client, make_user, email="user@example.com", password="hunter2"):
@@ -438,3 +438,37 @@ def test_refresh_runs_pipeline_and_returns_new_brief(client, make_user, db_facto
     assert res.json()["refresh"] == {
         "collected": 7, "classified": 4, "newIssues": 2, "appendedToIssues": 1,
     }
+
+
+def test_serialize_brief_cache_hits_within_same_minute(db_factory, monkeypatch):
+    # 실서비스 버그: /latest는 stats_period_end에 매 요청마다 새로 계산한
+    # datetime.now()를 그대로 넘긴다 — 그걸 캐시 키에 그대로 쓰면 마이크로초
+    # 단위로 달라서 완전히 같은 요청도 절대 캐시가 안 맞았다(운영 서버에서
+    # 반복 호출이 캐시 도입 후에도 매번 ~1.5s로 측정됨). 분 단위로 내림해야
+    # 같은 분 안의 요청이 캐시를 재사용한다.
+    db = db_factory()
+    brief, _ = _seed_brief(db)
+
+    calls = {"count": 0}
+    from app.industry_brief import routes as routes_module
+    original = routes_module._serialize_brief_uncached
+
+    def counting_uncached(*args, **kwargs):
+        calls["count"] += 1
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(routes_module, "_serialize_brief_uncached", counting_uncached)
+
+    period_start = datetime(2026, 8, 9, 12, 30, tzinfo=timezone.utc)
+    base = datetime(2026, 8, 10, 12, 30, 10, 123456, tzinfo=timezone.utc)
+    later_same_minute = base.replace(second=45, microsecond=999999)
+    next_minute = base.replace(minute=31, second=1)
+
+    _serialize_brief(db, brief, stats_period_start=period_start, stats_period_end=base)
+    assert calls["count"] == 1
+
+    _serialize_brief(db, brief, stats_period_start=period_start, stats_period_end=later_same_minute)
+    assert calls["count"] == 1, "same-minute request must reuse the cached payload"
+
+    _serialize_brief(db, brief, stats_period_start=period_start, stats_period_end=next_minute)
+    assert calls["count"] == 2, "a request in a new minute must recompute"

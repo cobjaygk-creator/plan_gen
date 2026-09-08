@@ -962,10 +962,19 @@ _BRIEF_CACHE_MAX_ENTRIES = 32  # 날짜 이동으로 키가 계속 늘어나지 
 def _serialize_brief(
     db: Session, brief: DailyBrief, stats_period_start: datetime | None = None, stats_period_end: datetime | None = None,
 ) -> dict:
+    # /latest는 매 요청마다 stats_period_end로 datetime.now()를 그대로 넘긴다
+    # — 마이크로초까지 다르므로 그걸 캐시 키에 그대로 쓰면 완전히 같은 요청도
+    # 절대 캐시가 히트되지 않는다(실측: 반복 호출이 캐시 도입 후에도 매번
+    # ~1.5s). 분 단위로 내림해 같은 분 안의 요청은 캐시를 재사용하게 한다 —
+    # 실제 데이터 변경(새로고침·수집)은 아래에서 명시적으로 _brief_cache를
+    # 비우니, 최대 1분의 지연은 정확성에 영향이 없다.
+    end_for_key = _as_aware_utc(stats_period_end) or _as_aware_utc(brief.period_end)
+    if end_for_key is not None:
+        end_for_key = end_for_key.replace(second=0, microsecond=0)
     cache_key = (
         brief.id,
         _as_aware_utc(stats_period_start) or _as_aware_utc(brief.period_start),
-        _as_aware_utc(stats_period_end) or _as_aware_utc(brief.period_end),
+        end_for_key,
     )
     cached = _brief_cache.get(cache_key)
     if cached is not None:
