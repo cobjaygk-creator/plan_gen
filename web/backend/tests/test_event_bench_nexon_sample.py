@@ -6,6 +6,7 @@ from app.event_bench.nexon_sample import (
     _date_parts_md,
     _event_format,
     _extract_balanced_array,
+    _headers_for,
     _parse_cashshop_date,
     _parse_thefinals_threads,
     _thefinals_slug,
@@ -92,3 +93,24 @@ def test_parse_thefinals_threads_extracts_thread_list_from_hydration_payload():
 
 def test_parse_thefinals_threads_returns_empty_list_when_marker_missing():
     assert _parse_thefinals_threads("<html>no data here</html>") == []
+
+
+def test_headers_for_uses_browser_ua_for_tr_rhaon():
+    # tr.rhaon.co.kr(테일즈런너)이 운영 서버(오라클 클라우드 IP)에서만
+    # 2026-08-24 이후 계속 막히는 게 확인돼서 mabinogi와 같은 처방을
+    # 적용했다 — 범용 UA가 아니라 실브라우저 UA로 요청해야 한다.
+    headers = _headers_for("https://tr.rhaon.co.kr/eventb/event/SNB")
+    assert "Chrome" in headers["User-Agent"]
+    assert headers["Referer"] == "https://tr.rhaon.co.kr/"
+
+
+def test_headers_for_uses_browser_ua_for_mabinogi():
+    headers = _headers_for("https://mabinogi.nexon.com/page/news/event_list.asp")
+    assert "Chrome" in headers["User-Agent"]
+    assert headers["Referer"] == "https://mabinogi.nexon.com/"
+
+
+def test_headers_for_uses_generic_ua_for_other_sources():
+    headers = _headers_for("https://fconline.nexon.com/news/events")
+    assert headers["User-Agent"] == "Mozilla/5.0 (compatible; EventBenchSample/0.1)"
+    assert "Referer" not in headers

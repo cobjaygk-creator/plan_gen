@@ -13,9 +13,12 @@ set -euo pipefail
 
 REPO_DIR="/opt/uxui/plan_gen"
 
-echo "==> apt 업데이트 및 기본 패키지 (git/Node 없이 파이썬 + rsync만)"
+echo "==> apt 업데이트 및 기본 패키지 (git/Node 없이 파이썬 + rsync + curl만)"
+# curl: 테일즈위버 이벤트 수집이 urllib을 막는 사이트라 curl 서브프로세스로
+# 우회한다(nexon_sample.py의 _fetch_talesweaver_html) — 없으면 그 게임만
+# 조용히 계속 실패한다(실제로 발생 확인).
 sudo apt-get update -y
-sudo apt-get install -y python3-venv python3-pip rsync
+sudo apt-get install -y python3-venv python3-pip rsync curl
 
 echo "==> 배포 대상 디렉터리 준비 (실제 코드는 GitHub Actions가 rsync로 채운다)"
 sudo mkdir -p "$REPO_DIR"

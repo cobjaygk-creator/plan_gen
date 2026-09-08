@@ -70,27 +70,29 @@ class EventCandidate:
     collected_at: str
 
 
-def _fetch_html(url: str) -> str:
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; EventBenchSample/0.1)"}
-    if "mabinogi.nexon.com" in url:
-        # mabinogi.nexon.com's WAF has been returning a blanket 403 to every
-        # GitHub Actions run since 2026-08-25 01:47 (confirmed via
-        # data/ci/event_bench/refresh.log — every other Nexon-family source
-        # in the same run succeeds, so this is specific to this one host's
-        # bot check, not an IP-range ban on all of nexon.com). The generic
-        # self-identifying UA above is exactly what a WAF keys on; a real
-        # browser UA + the headers a browser actually sends is the same fix
-        # already used for 삼성전자 뉴스룸 in collector.py.
-        headers = {
+def _headers_for(url: str) -> dict[str, str]:
+    """대부분의 공식 목록은 이 범용 UA로 충분하지만, mabinogi.nexon.com과
+    tr.rhaon.co.kr은 운영 서버(오라클 클라우드 IP)에서만 계속 봇 취급으로
+    막혀서(mabinogi: GitHub Actions 러너에서 2026-08-25 01:47부터 전량
+    403 확인; tr.rhaon.co.kr: 오라클 서버에서 2026-08-24 이후 계속 수집
+    실패, 집·사무실 IP에서는 그대로 성공하는 것 직접 확인) 실브라우저
+    UA+헤더로 우회한다 — 삼성전자 뉴스룸(collector.py)에 쓴 것과 같은
+    처방."""
+    if "mabinogi.nexon.com" in url or "tr.rhaon.co.kr" in url:
+        return {
             "User-Agent": (
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                 "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
             ),
             "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Referer": "https://mabinogi.nexon.com/",
+            "Referer": "https://mabinogi.nexon.com/" if "mabinogi.nexon.com" in url else "https://tr.rhaon.co.kr/",
         }
-    request = Request(url, headers=headers)
+    return {"User-Agent": "Mozilla/5.0 (compatible; EventBenchSample/0.1)"}
+
+
+def _fetch_html(url: str) -> str:
+    request = Request(url, headers=_headers_for(url))
     with urlopen(request, timeout=20) as response:  # noqa: S310 - explicit verified official URLs
         # Mabinogi is EUC-KR; the other verified official lists deliver UTF-8
         # despite inconsistent legacy headers.
