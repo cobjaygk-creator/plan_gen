@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-08T23:44:14.209502+00:00",
+  "generated_at": "2026-09-08T23:55:27.688282+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T23:39:35.388589+00:00",
+      "generatedAt": "2026-09-08T23:52:58.108505+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 94,
+        "collected": 99,
         "analyzed": 0,
-        "pending": 94,
+        "pending": 99,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -699,8 +699,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "파네시아, 메타와 CXL 기반 AI 데이터센터 구조 제안…네이처 리뷰 게재",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240604",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "현장과 동떨어진 규제에 힘 빠지는 AIDC",
               "url": "https://n.news.naver.com/mnews/article/417/0001157731",
@@ -720,19 +725,19 @@
               "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
               "url": "https://n.news.naver.com/mnews/article/138/0002240671",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 7,
+          "articleCount": 8,
           "articles": [
+            {
+              "title": "삼성SDS, 로봇전환 사업 진출한다…27년 로봇 플랫폼 출시",
+              "url": "https://n.news.naver.com/mnews/article/028/0002822118",
+              "source": "NAVER · 한겨레"
+            },
             {
               "title": "삼성SDS, AI보안부터 RX까지 ‘다차원 AI 풀스택’으로 AX사업 확대",
               "url": "https://n.news.naver.com/mnews/article/029/0003046722",
@@ -751,11 +756,6 @@
             {
               "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
               "url": "https://www.etnews.com/20260908000264",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "로봇 개발비 최대 159% 늘어…실증·양산 잇는 지원 필요",
-              "url": "https://www.etnews.com/20260908000092",
               "source": "전자신문 AI"
             }
           ]
@@ -1379,13 +1379,13 @@
     },
     "3d": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T23:39:35.388589+00:00",
+      "generatedAt": "2026-09-08T23:52:58.108505+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 984,
+        "collected": 987,
         "analyzed": 0,
-        "pending": 984,
+        "pending": 987,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2075,8 +2075,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 50,
+          "articleCount": 51,
           "articles": [
+            {
+              "title": "파네시아, 메타와 CXL 기반 AI 데이터센터 구조 제안…네이처 리뷰 게재",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240604",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "현장과 동떨어진 규제에 힘 빠지는 AIDC",
               "url": "https://n.news.naver.com/mnews/article/417/0001157731",
@@ -2096,19 +2101,19 @@
               "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
               "url": "https://n.news.naver.com/mnews/article/138/0002240671",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 48,
+          "articleCount": 49,
           "articles": [
+            {
+              "title": "삼성SDS, 로봇전환 사업 진출한다…27년 로봇 플랫폼 출시",
+              "url": "https://n.news.naver.com/mnews/article/028/0002822118",
+              "source": "NAVER · 한겨레"
+            },
             {
               "title": "삼성SDS, AI보안부터 RX까지 ‘다차원 AI 풀스택’으로 AX사업 확대",
               "url": "https://n.news.naver.com/mnews/article/029/0003046722",
@@ -2127,11 +2132,6 @@
             {
               "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
               "url": "https://www.etnews.com/20260908000264",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "로봇 개발비 최대 159% 늘어…실증·양산 잇는 지원 필요",
-              "url": "https://www.etnews.com/20260908000092",
               "source": "전자신문 AI"
             }
           ]
@@ -2837,13 +2837,13 @@
     },
     "week": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T23:39:35.388589+00:00",
+      "generatedAt": "2026-09-08T23:52:58.108505+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 865,
+        "collected": 870,
         "analyzed": 0,
-        "pending": 865,
+        "pending": 870,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3533,8 +3533,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 44,
+          "articleCount": 45,
           "articles": [
+            {
+              "title": "삼성SDS, 로봇전환 사업 진출한다…27년 로봇 플랫폼 출시",
+              "url": "https://n.news.naver.com/mnews/article/028/0002822118",
+              "source": "NAVER · 한겨레"
+            },
             {
               "title": "삼성SDS, AI보안부터 RX까지 ‘다차원 AI 풀스택’으로 AX사업 확대",
               "url": "https://n.news.naver.com/mnews/article/029/0003046722",
@@ -3554,19 +3559,19 @@
               "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
               "url": "https://www.etnews.com/20260908000264",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "로봇 개발비 최대 159% 늘어…실증·양산 잇는 지원 필요",
-              "url": "https://www.etnews.com/20260908000092",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 42,
+          "articleCount": 43,
           "articles": [
+            {
+              "title": "파네시아, 메타와 CXL 기반 AI 데이터센터 구조 제안…네이처 리뷰 게재",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240604",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "현장과 동떨어진 규제에 힘 빠지는 AIDC",
               "url": "https://n.news.naver.com/mnews/article/417/0001157731",
@@ -3586,11 +3591,6 @@
               "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
               "url": "https://n.news.naver.com/mnews/article/138/0002240671",
               "source": "NAVER · 디지털데일리"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
-              "source": "AI타임스"
             }
           ]
         },
