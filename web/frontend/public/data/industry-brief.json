@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-08T19:53:11.254965+00:00",
+  "generated_at": "2026-09-08T21:27:36.750291+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T16:49:39.986672+00:00",
+      "generatedAt": "2026-09-08T21:21:48.435053+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 40,
+        "collected": 82,
         "analyzed": 0,
-        "pending": 40,
+        "pending": 82,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -697,10 +697,47 @@
       },
       "techRadar": [
         {
+          "key": "gpu",
+          "label": "GPU · 반도체",
+          "articleCount": 5,
+          "articles": [
+            {
+              "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
+              "url": "https://n.news.naver.com/mnews/article/008/0005411112",
+              "source": "NAVER · 머니투데이"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240671",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
+              "source": "AI타임스"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 전략적 파트너십 체결",
+              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%af%b8%ec%8a%a4%ed%8a%b8%eb%9e%84-ai%ec%99%80-%ec%a0%84%eb%9e%b5%ec%a0%81-%ed%8c%8c%ed%8a%b8%eb%84%88%ec%8b%ad-%ec%b2%b4%ea%b2%b0",
+              "source": "삼성전자 뉴스룸"
+            },
+            {
+              "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
+              "url": "https://www.etnews.com/20260908000356",
+              "source": "전자신문 AI"
+            }
+          ]
+        },
+        {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 4,
+          "articleCount": 5,
           "articles": [
+            {
+              "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
+              "url": "https://n.news.naver.com/mnews/article/082/0001397398",
+              "source": "NAVER · 부산일보"
+            },
             {
               "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
               "url": "https://www.etnews.com/20260908000264",
@@ -726,8 +763,18 @@
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 1,
+          "articleCount": 3,
           "articles": [
+            {
+              "title": "Meta bets on AI agent Muse to catch up in AI race",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
+              "source": "The Verge"
+            },
+            {
+              "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
+              "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
+              "source": "TechCrunch"
+            },
             {
               "title": "S2W, 범죄수사 특화 AI 에이전트 출시…자비스에 탑재",
               "url": "https://www.etnews.com/20260908000212",
@@ -736,14 +783,36 @@
           ]
         },
         {
-          "key": "gpu",
-          "label": "GPU · 반도체",
+          "key": "model",
+          "label": "신규 모델",
+          "articleCount": 3,
+          "articles": [
+            {
+              "title": "\"인터넷 쓰지 마\" 명령 어긴 괴물AI…아스트라, 통제 벗어나 공격",
+              "url": "https://n.news.naver.com/mnews/article/421/0009158979",
+              "source": "NAVER · 뉴스1"
+            },
+            {
+              "title": "AI 수능만점 시대, 너무 빨라서 두렵다 [김현아의 IT세상읽기]",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365885",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+              "url": "https://openai.com/index/codex-quantum-computing-experiments",
+              "source": "OpenAI"
+            }
+          ]
+        },
+        {
+          "key": "coding",
+          "label": "코딩 AI",
           "articleCount": 1,
           "articles": [
             {
-              "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
-              "url": "https://www.etnews.com/20260908000356",
-              "source": "전자신문 AI"
+              "title": "Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market",
+              "url": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
+              "source": "TechCrunch"
             }
           ]
         },
@@ -1300,13 +1369,13 @@
     },
     "3d": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T16:49:39.986672+00:00",
+      "generatedAt": "2026-09-08T21:21:48.435053+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 937,
+        "collected": 978,
         "analyzed": 0,
-        "pending": 937,
+        "pending": 978,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1996,40 +2065,45 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 46,
+          "articleCount": 48,
           "articles": [
+            {
+              "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
+              "url": "https://n.news.naver.com/mnews/article/008/0005411112",
+              "source": "NAVER · 머니투데이"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240671",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
+              "source": "AI타임스"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 전략적 파트너십 체결",
+              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%af%b8%ec%8a%a4%ed%8a%b8%eb%9e%84-ai%ec%99%80-%ec%a0%84%eb%9e%b5%ec%a0%81-%ed%8c%8c%ed%8a%b8%eb%84%88%ec%8b%ad-%ec%b2%b4%ea%b2%b0",
+              "source": "삼성전자 뉴스룸"
+            },
             {
               "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
               "url": "https://www.etnews.com/20260908000356",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "유럽 반도체 기밀 중국 유출 파문...벨기에, 이중국적 연구원 체포",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214992",
-              "source": "AI타임스"
-            },
-            {
-              "title": "삼성전자·ASML, 차세대 반도체 마스크 12인치로 확대…생산성·원가 개선",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215007",
-              "source": "AI타임스"
-            },
-            {
-              "title": "아이렌 \"AI 컴퓨팅 수요 무한 확장...공급이 수요 못 따라가\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214985",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 45,
+          "articleCount": 46,
           "articles": [
+            {
+              "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
+              "url": "https://n.news.naver.com/mnews/article/082/0001397398",
+              "source": "NAVER · 부산일보"
+            },
             {
               "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
               "url": "https://www.etnews.com/20260908000264",
@@ -2049,19 +2123,24 @@
               "title": "[포토] 로봇의 시위?",
               "url": "https://www.etnews.com/20260908000322",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "삼성SDS, 로봇 사업 뛰어든다…내년 로봇 관제 플랫폼 출시",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549928",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 42,
+          "articleCount": 43,
           "articles": [
+            {
+              "title": "Meta bets on AI agent Muse to catch up in AI race",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
+              "source": "The Verge"
+            },
+            {
+              "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
+              "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
+              "source": "TechCrunch"
+            },
             {
               "title": "S2W, 범죄수사 특화 AI 에이전트 출시…자비스에 탑재",
               "url": "https://www.etnews.com/20260908000212",
@@ -2076,24 +2155,29 @@
               "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
               "source": "AI타임스"
-            },
-            {
-              "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572566",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731868",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 35,
+          "articleCount": 36,
           "articles": [
+            {
+              "title": "\"인터넷 쓰지 마\" 명령 어긴 괴물AI…아스트라, 통제 벗어나 공격",
+              "url": "https://n.news.naver.com/mnews/article/421/0009158979",
+              "source": "NAVER · 뉴스1"
+            },
+            {
+              "title": "AI 수능만점 시대, 너무 빨라서 두렵다 [김현아의 IT세상읽기]",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365885",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+              "url": "https://openai.com/index/codex-quantum-computing-experiments",
+              "source": "OpenAI"
+            },
             {
               "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
               "url": "https://n.news.naver.com/mnews/article/584/0000039251",
@@ -2102,21 +2186,6 @@
             {
               "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731868",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "아티피셜 애널리시스 평가 체제 개편...'아스트라' 공동 1위로 상승",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214973",
-              "source": "AI타임스"
-            },
-            {
-              "title": "젠슨 황 \"AGI 시대 도래했다\"...오픈AI '아스트라'에 축하 메시지",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214974",
               "source": "AI타임스"
             }
           ]
@@ -2156,8 +2225,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 11,
+          "articleCount": 12,
           "articles": [
+            {
+              "title": "Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market",
+              "url": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
+              "source": "TechCrunch"
+            },
             {
               "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
@@ -2176,11 +2250,6 @@
             {
               "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
               "source": "AI타임스"
             }
           ]
@@ -2758,13 +2827,13 @@
     },
     "week": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T16:49:39.986672+00:00",
+      "generatedAt": "2026-09-08T21:21:48.435053+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 806,
+        "collected": 853,
         "analyzed": 0,
-        "pending": 806,
+        "pending": 853,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -3454,8 +3523,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 41,
+          "articleCount": 42,
           "articles": [
+            {
+              "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
+              "url": "https://n.news.naver.com/mnews/article/082/0001397398",
+              "source": "NAVER · 부산일보"
+            },
             {
               "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
               "url": "https://www.etnews.com/20260908000264",
@@ -3475,51 +3549,56 @@
               "title": "[포토] 로봇의 시위?",
               "url": "https://www.etnews.com/20260908000322",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "삼성SDS, 로봇 사업 뛰어든다…내년 로봇 관제 플랫폼 출시",
-              "url": "https://n.news.naver.com/mnews/article/025/0003549928",
-              "source": "NAVER · 중앙일보"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 36,
+          "articleCount": 40,
           "articles": [
+            {
+              "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
+              "url": "https://n.news.naver.com/mnews/article/008/0005411112",
+              "source": "NAVER · 머니투데이"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240671",
+              "source": "NAVER · 디지털데일리"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
+              "source": "AI타임스"
+            },
+            {
+              "title": "삼성전자, 미스트랄 AI와 전략적 파트너십 체결",
+              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%af%b8%ec%8a%a4%ed%8a%b8%eb%9e%84-ai%ec%99%80-%ec%a0%84%eb%9e%b5%ec%a0%81-%ed%8c%8c%ed%8a%b8%eb%84%88%ec%8b%ad-%ec%b2%b4%ea%b2%b0",
+              "source": "삼성전자 뉴스룸"
+            },
             {
               "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
               "url": "https://www.etnews.com/20260908000356",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
-              "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
-              "source": "대한민국 정책브리핑"
-            },
-            {
-              "title": "유럽 반도체 기밀 중국 유출 파문...벨기에, 이중국적 연구원 체포",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214992",
-              "source": "AI타임스"
-            },
-            {
-              "title": "삼성전자·ASML, 차세대 반도체 마스크 12인치로 확대…생산성·원가 개선",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215007",
-              "source": "AI타임스"
-            },
-            {
-              "title": "아이렌 \"AI 컴퓨팅 수요 무한 확장...공급이 수요 못 따라가\"",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214985",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 34,
+          "articleCount": 36,
           "articles": [
+            {
+              "title": "Meta bets on AI agent Muse to catch up in AI race",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
+              "source": "The Verge"
+            },
+            {
+              "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
+              "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
+              "source": "TechCrunch"
+            },
             {
               "title": "S2W, 범죄수사 특화 AI 에이전트 출시…자비스에 탑재",
               "url": "https://www.etnews.com/20260908000212",
@@ -3534,24 +3613,29 @@
               "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
               "source": "AI타임스"
-            },
-            {
-              "title": "다크웹 범죄 수사, AI가 나선다…S2W, 에이전트 'DRI' 출시",
-              "url": "https://n.news.naver.com/mnews/article/014/0005572566",
-              "source": "NAVER · 파이낸셜뉴스"
-            },
-            {
-              "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731868",
-              "source": "NAVER · 매일경제"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 24,
+          "articleCount": 27,
           "articles": [
+            {
+              "title": "\"인터넷 쓰지 마\" 명령 어긴 괴물AI…아스트라, 통제 벗어나 공격",
+              "url": "https://n.news.naver.com/mnews/article/421/0009158979",
+              "source": "NAVER · 뉴스1"
+            },
+            {
+              "title": "AI 수능만점 시대, 너무 빨라서 두렵다 [김현아의 IT세상읽기]",
+              "url": "https://n.news.naver.com/mnews/article/018/0006365885",
+              "source": "NAVER · 이데일리"
+            },
+            {
+              "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+              "url": "https://openai.com/index/codex-quantum-computing-experiments",
+              "source": "OpenAI"
+            },
             {
               "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
               "url": "https://n.news.naver.com/mnews/article/584/0000039251",
@@ -3560,21 +3644,6 @@
             {
               "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
-              "source": "AI타임스"
-            },
-            {
-              "title": "“상무는 챗GPT, 전무는 클로드 쓰자네요”…AI모델 홍수 속 기업들 결정장애",
-              "url": "https://n.news.naver.com/mnews/article/009/0005731868",
-              "source": "NAVER · 매일경제"
-            },
-            {
-              "title": "아티피셜 애널리시스 평가 체제 개편...'아스트라' 공동 1위로 상승",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214973",
-              "source": "AI타임스"
-            },
-            {
-              "title": "젠슨 황 \"AGI 시대 도래했다\"...오픈AI '아스트라'에 축하 메시지",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214974",
               "source": "AI타임스"
             }
           ]
@@ -3614,8 +3683,13 @@
         {
           "key": "coding",
           "label": "코딩 AI",
-          "articleCount": 9,
+          "articleCount": 10,
           "articles": [
+            {
+              "title": "Cognition hits $48B valuation, signaling investors believe AI coding is far from a winner-take-all market",
+              "url": "https://techcrunch.com/2026/09/08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/",
+              "source": "TechCrunch"
+            },
             {
               "title": "공무원이 만든 AI 서비스, 정부가 키워 범정부 혁신으로",
               "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156780691&pageIndex=3&repCodeType=&repCode=&startDate=2025-09-08&endDate=2026-09-08&srchWord=&period=",
@@ -3634,11 +3708,6 @@
             {
               "title": "깃허브, AI 코딩 라우팅 시스템 ‘하이드라퓨전’ 공개...“비용 줄이고 품질 유지”",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214945",
-              "source": "AI타임스"
-            },
-            {
-              "title": "앤트로픽, '클로드' 수요 폭증에 11개월간 695조 인프라 확보",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214933",
               "source": "AI타임스"
             }
           ]
