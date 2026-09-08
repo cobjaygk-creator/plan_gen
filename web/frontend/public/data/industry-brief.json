@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-08T22:19:59.510418+00:00",
+  "generated_at": "2026-09-08T23:44:14.209502+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T21:21:48.435053+00:00",
+      "generatedAt": "2026-09-08T23:39:35.388589+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 82,
+        "collected": 94,
         "analyzed": 0,
-        "pending": 82,
+        "pending": 94,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -73,8 +73,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                2,
+                0,
                 0,
                 0,
                 0,
@@ -699,8 +699,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 5,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "현장과 동떨어진 규제에 힘 빠지는 AIDC",
+              "url": "https://n.news.naver.com/mnews/article/417/0001157731",
+              "source": "NAVER · 동행미디어 시대"
+            },
+            {
+              "title": "파네시아, 美 메타와 함께 CXL 기반 'AI 데이터센터' 구조 공동 제시",
+              "url": "https://www.etnews.com/20260908000124",
+              "source": "전자신문 AI"
+            },
             {
               "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
               "url": "https://n.news.naver.com/mnews/article/008/0005411112",
@@ -715,24 +725,24 @@
               "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
               "source": "AI타임스"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 전략적 파트너십 체결",
-              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%af%b8%ec%8a%a4%ed%8a%b8%eb%9e%84-ai%ec%99%80-%ec%a0%84%eb%9e%b5%ec%a0%81-%ed%8c%8c%ed%8a%b8%eb%84%88%ec%8b%ad-%ec%b2%b4%ea%b2%b0",
-              "source": "삼성전자 뉴스룸"
-            },
-            {
-              "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
-              "url": "https://www.etnews.com/20260908000356",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 5,
+          "articleCount": 7,
           "articles": [
+            {
+              "title": "삼성SDS, AI보안부터 RX까지 ‘다차원 AI 풀스택’으로 AX사업 확대",
+              "url": "https://n.news.naver.com/mnews/article/029/0003046722",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "오픈AI '아스트라', 48단계 '인간 증명' 테스트 모두 통과",
+              "url": "https://www.etnews.com/20260909000001",
+              "source": "전자신문 AI"
+            },
             {
               "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
               "url": "https://n.news.naver.com/mnews/article/082/0001397398",
@@ -747,24 +757,19 @@
               "title": "로봇 개발비 최대 159% 늘어…실증·양산 잇는 지원 필요",
               "url": "https://www.etnews.com/20260908000092",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] 로봇들의 시위",
-              "url": "https://www.etnews.com/20260908000323",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] 로봇의 시위?",
-              "url": "https://www.etnews.com/20260908000322",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "[9월8일] 오픈AI 내부에서 무슨 일이 벌어지고 있나…현실이 된 ‘AI 연구 인턴’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214978",
+              "source": "AI타임스"
+            },
             {
               "title": "Meta bets on AI agent Muse to catch up in AI race",
               "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
@@ -785,8 +790,13 @@
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 3,
+          "articleCount": 4,
           "articles": [
+            {
+              "title": "오픈AI '아스트라', 48단계 '인간 증명' 테스트 모두 통과",
+              "url": "https://www.etnews.com/20260909000001",
+              "source": "전자신문 AI"
+            },
             {
               "title": "\"인터넷 쓰지 마\" 명령 어긴 괴물AI…아스트라, 통제 벗어나 공격",
               "url": "https://n.news.naver.com/mnews/article/421/0009158979",
@@ -1369,13 +1379,13 @@
     },
     "3d": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T21:21:48.435053+00:00",
+      "generatedAt": "2026-09-08T23:39:35.388589+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 976,
+        "collected": 984,
         "analyzed": 0,
-        "pending": 976,
+        "pending": 984,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1439,8 +1449,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                2,
+                0,
                 0,
                 0,
                 0,
@@ -2065,8 +2075,18 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 48,
+          "articleCount": 50,
           "articles": [
+            {
+              "title": "현장과 동떨어진 규제에 힘 빠지는 AIDC",
+              "url": "https://n.news.naver.com/mnews/article/417/0001157731",
+              "source": "NAVER · 동행미디어 시대"
+            },
+            {
+              "title": "파네시아, 美 메타와 함께 CXL 기반 'AI 데이터센터' 구조 공동 제시",
+              "url": "https://www.etnews.com/20260908000124",
+              "source": "전자신문 AI"
+            },
             {
               "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
               "url": "https://n.news.naver.com/mnews/article/008/0005411112",
@@ -2081,24 +2101,24 @@
               "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
               "source": "AI타임스"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 전략적 파트너십 체결",
-              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%af%b8%ec%8a%a4%ed%8a%b8%eb%9e%84-ai%ec%99%80-%ec%a0%84%eb%9e%b5%ec%a0%81-%ed%8c%8c%ed%8a%b8%eb%84%88%ec%8b%ad-%ec%b2%b4%ea%b2%b0",
-              "source": "삼성전자 뉴스룸"
-            },
-            {
-              "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
-              "url": "https://www.etnews.com/20260908000356",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 46,
+          "articleCount": 48,
           "articles": [
+            {
+              "title": "삼성SDS, AI보안부터 RX까지 ‘다차원 AI 풀스택’으로 AX사업 확대",
+              "url": "https://n.news.naver.com/mnews/article/029/0003046722",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "오픈AI '아스트라', 48단계 '인간 증명' 테스트 모두 통과",
+              "url": "https://www.etnews.com/20260909000001",
+              "source": "전자신문 AI"
+            },
             {
               "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
               "url": "https://n.news.naver.com/mnews/article/082/0001397398",
@@ -2113,24 +2133,19 @@
               "title": "로봇 개발비 최대 159% 늘어…실증·양산 잇는 지원 필요",
               "url": "https://www.etnews.com/20260908000092",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] 로봇들의 시위",
-              "url": "https://www.etnews.com/20260908000323",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] 로봇의 시위?",
-              "url": "https://www.etnews.com/20260908000322",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 43,
+          "articleCount": 44,
           "articles": [
+            {
+              "title": "[9월8일] 오픈AI 내부에서 무슨 일이 벌어지고 있나…현실이 된 ‘AI 연구 인턴’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214978",
+              "source": "AI타임스"
+            },
             {
               "title": "Meta bets on AI agent Muse to catch up in AI race",
               "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
@@ -2150,19 +2165,19 @@
               "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436678",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 36,
+          "articleCount": 37,
           "articles": [
+            {
+              "title": "오픈AI '아스트라', 48단계 '인간 증명' 테스트 모두 통과",
+              "url": "https://www.etnews.com/20260909000001",
+              "source": "전자신문 AI"
+            },
             {
               "title": "\"인터넷 쓰지 마\" 명령 어긴 괴물AI…아스트라, 통제 벗어나 공격",
               "url": "https://n.news.naver.com/mnews/article/421/0009158979",
@@ -2182,11 +2197,6 @@
               "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
               "url": "https://n.news.naver.com/mnews/article/584/0000039251",
               "source": "NAVER · 동아사이언스"
-            },
-            {
-              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
-              "source": "AI타임스"
             }
           ]
         },
@@ -2827,13 +2837,13 @@
     },
     "week": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T21:21:48.435053+00:00",
+      "generatedAt": "2026-09-08T23:39:35.388589+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 853,
+        "collected": 865,
         "analyzed": 0,
-        "pending": 853,
+        "pending": 865,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2897,8 +2907,8 @@
                 0,
                 0,
                 0,
-                1,
-                1,
+                2,
+                0,
                 0,
                 0,
                 0,
@@ -3523,8 +3533,18 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 42,
+          "articleCount": 44,
           "articles": [
+            {
+              "title": "삼성SDS, AI보안부터 RX까지 ‘다차원 AI 풀스택’으로 AX사업 확대",
+              "url": "https://n.news.naver.com/mnews/article/029/0003046722",
+              "source": "NAVER · 디지털타임스"
+            },
+            {
+              "title": "오픈AI '아스트라', 48단계 '인간 증명' 테스트 모두 통과",
+              "url": "https://www.etnews.com/20260909000001",
+              "source": "전자신문 AI"
+            },
             {
               "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
               "url": "https://n.news.naver.com/mnews/article/082/0001397398",
@@ -3539,24 +3559,24 @@
               "title": "로봇 개발비 최대 159% 늘어…실증·양산 잇는 지원 필요",
               "url": "https://www.etnews.com/20260908000092",
               "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] 로봇들의 시위",
-              "url": "https://www.etnews.com/20260908000323",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "[포토] 로봇의 시위?",
-              "url": "https://www.etnews.com/20260908000322",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 40,
+          "articleCount": 42,
           "articles": [
+            {
+              "title": "현장과 동떨어진 규제에 힘 빠지는 AIDC",
+              "url": "https://n.news.naver.com/mnews/article/417/0001157731",
+              "source": "NAVER · 동행미디어 시대"
+            },
+            {
+              "title": "파네시아, 美 메타와 함께 CXL 기반 'AI 데이터센터' 구조 공동 제시",
+              "url": "https://www.etnews.com/20260908000124",
+              "source": "전자신문 AI"
+            },
             {
               "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
               "url": "https://n.news.naver.com/mnews/article/008/0005411112",
@@ -3571,24 +3591,19 @@
               "title": "삼성전자, 미스트랄 AI와 맞손...‘반도체 특화 AI’ 개발 나선다",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=215015",
               "source": "AI타임스"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 전략적 파트너십 체결",
-              "url": "https://news.samsung.com/kr/%ec%82%bc%ec%84%b1%ec%a0%84%ec%9e%90-%eb%af%b8%ec%8a%a4%ed%8a%b8%eb%9e%84-ai%ec%99%80-%ec%a0%84%eb%9e%b5%ec%a0%81-%ed%8c%8c%ed%8a%b8%eb%84%88%ec%8b%ad-%ec%b2%b4%ea%b2%b0",
-              "source": "삼성전자 뉴스룸"
-            },
-            {
-              "title": "[사설] 한전 사장 인선에 AI국가 성패 달렸다",
-              "url": "https://www.etnews.com/20260908000356",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 36,
+          "articleCount": 37,
           "articles": [
+            {
+              "title": "[9월8일] 오픈AI 내부에서 무슨 일이 벌어지고 있나…현실이 된 ‘AI 연구 인턴’",
+              "url": "https://www.aitimes.com/news/articleView.html?idxno=214978",
+              "source": "AI타임스"
+            },
             {
               "title": "Meta bets on AI agent Muse to catch up in AI race",
               "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
@@ -3608,19 +3623,19 @@
               "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
               "url": "https://n.news.naver.com/mnews/article/092/0002436678",
               "source": "NAVER · 지디넷코리아"
-            },
-            {
-              "title": "EU \"형식적 보고는 안 된다\"...오픈AI, '독일 웹사이트 장악' 사고 보고서 제출",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=214999",
-              "source": "AI타임스"
             }
           ]
         },
         {
           "key": "model",
           "label": "신규 모델",
-          "articleCount": 27,
+          "articleCount": 28,
           "articles": [
+            {
+              "title": "오픈AI '아스트라', 48단계 '인간 증명' 테스트 모두 통과",
+              "url": "https://www.etnews.com/20260909000001",
+              "source": "전자신문 AI"
+            },
             {
               "title": "\"인터넷 쓰지 마\" 명령 어긴 괴물AI…아스트라, 통제 벗어나 공격",
               "url": "https://n.news.naver.com/mnews/article/421/0009158979",
@@ -3640,11 +3655,6 @@
               "title": "AI 클로드, 10년 걸릴 '페르마의 마지막 정리' 증명 검증 11일 만에",
               "url": "https://n.news.naver.com/mnews/article/584/0000039251",
               "source": "NAVER · 동아사이언스"
-            },
-            {
-              "title": "48단계 캡차 게임 최초 완파… GPT-6 아스트라, '컴퓨터 유즈' 성능 입증",
-              "url": "https://www.aitimes.com/news/articleView.html?idxno=215003",
-              "source": "AI타임스"
             }
           ]
         },
