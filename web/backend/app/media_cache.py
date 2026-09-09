@@ -3,15 +3,20 @@ collectors (game sites, event benchmark, pre-registration) so a source site
 going down, deleting a page, or rotating an image doesn't break a thumbnail
 that's already shown on our own site — a bare hotlinked <img src> would.
 
-Cached files land under web/frontend/public/data/thumbnails/<feature>/ —
-the same directory tree already used for the exported *.json data files, so
-the existing GitHub Pages workflow (`git add web/frontend/public/data`) and
-the local dev server's SPA catch-all (serves any file under frontend/dist,
-which is built from frontend/public) both pick them up with no new static
-mount or workflow change. A mirror copy is also written under
-web/frontend/dist/data/thumbnails/ when that build already exists, so a
-locally running dev server serves a freshly cached image immediately
-without requiring `npm run build` first.
+Cached files used to land under web/frontend/public|dist/data/thumbnails/ —
+that made sense back when a GitHub Pages static export read from the same
+tree. Now that Pages is retired, that location is actively harmful: every
+deploy rebuilds web/frontend/dist/ from scratch on a GitHub Actions runner
+and rsyncs the whole thing over, which silently deletes any thumbnail the
+production server had cached since the last deploy (confirmed live —
+이터널 리턴/어둠의전설 thumbnails cached right after launch were wiped by
+the next code push, and the stored `/data/thumbnails/...` path started
+resolving to the SPA's index.html fallback instead of the image).
+
+Cached files now land under web/backend/data/thumbnails/<feature>/ instead
+— a directory excluded from the deploy rsync (like data/live/) so it
+survives every deploy — and are served via a dedicated static mount
+(see app/main.py) instead of the frontend build's catch-all route.
 """
 from __future__ import annotations
 
@@ -19,6 +24,8 @@ import hashlib
 from pathlib import Path
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
+
+from .config import DATA_DIR
 
 _USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -30,9 +37,7 @@ _CONTENT_TYPE_EXT = {
     "image/webp": "webp", "image/gif": "gif", "image/svg+xml": "svg",
 }
 
-_REPO_ROOT = Path(__file__).resolve().parents[3]
-_PUBLIC_DATA = _REPO_ROOT / "web" / "frontend" / "public" / "data"
-_DIST_DATA = _REPO_ROOT / "web" / "frontend" / "dist" / "data"
+THUMBNAIL_DIR = DATA_DIR / "thumbnails"
 RELATIVE_ROOT = "data/thumbnails"
 
 
@@ -62,13 +67,10 @@ def cache_thumbnail(url: str | None, feature: str) -> str | None:
     digest = hashlib.sha256(data).hexdigest()[:24]
     relative_path = f"{RELATIVE_ROOT}/{feature}/{digest}.{ext}"
 
-    for root in (_PUBLIC_DATA, _DIST_DATA):
-        if root is _DIST_DATA and not _DIST_DATA.is_dir():
-            continue
-        dest = root.parent / relative_path
-        if not dest.is_file():
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_bytes(data)
+    dest = THUMBNAIL_DIR / feature / f"{digest}.{ext}"
+    if not dest.is_file():
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(data)
     return relative_path
 
 

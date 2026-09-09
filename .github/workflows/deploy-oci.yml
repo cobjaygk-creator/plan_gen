@@ -53,7 +53,13 @@ jobs:
           # 채워넣는 곳이라, 이걸 빼지 않으면 --delete가 켜진 이 rsync가
           # 매 배포마다 그 자리를 git의 옛 상태(또는 존재하지 않음)로
           # 지워버려서 방금 수집한 이벤트가 배포 직후 사라지는 문제가
-          # 실제로 있었다.
+          # 실제로 있었다. data/thumbnails/도 같은 이유로 제외한다 —
+          # 예전엔 캐싱된 썸네일이 web/frontend/dist/data/ 밑에 저장됐는데,
+          # dist/는 이 워크플로가 매번 CI에서 새로 빌드해 통째로 덮어쓰는
+          # 폴더라 서버가 그 사이 캐싱한 썸네일이 배포 때마다 사라지는
+          # 문제가 실제로 있었다(app/media_cache.py 참고) — 이제
+          # web/backend/data/thumbnails/에 캐싱하고 그 경로도 여기서
+          # 제외해 배포와 무관하게 유지되게 한다.
           switches: >-
             -avz --delete
             --exclude=.git/
@@ -64,6 +70,7 @@ jobs:
             --exclude=web/backend/data/outputs/
             --exclude=web/backend/data/images/
             --exclude=web/backend/data/live/
+            --exclude=web/backend/data/thumbnails/
             --exclude=web/frontend/node_modules/
           path: ./
           remote_path: /opt/uxui/plan_gen/
