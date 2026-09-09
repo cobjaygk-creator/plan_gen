@@ -194,9 +194,14 @@ def main() -> None:
                 candidate["is_active"] = True
                 # Cached so the thumbnail survives the event page itself
                 # going down once the event ends (a routine occurrence).
+                # Falls back to the previously cached value, not just this
+                # cycle's raw URL, so a one-off extraction glitch on an
+                # otherwise-successful refresh can't wipe out an image
+                # that was already saved on an earlier run.
                 candidate["hero_image_url"] = (
                     cache_thumbnail(candidate.get("hero_image_url"), "event_bench")
                     or candidate.get("hero_image_url")
+                    or previous.get("hero_image_url")
                 )
                 records_by_url[candidate["event_url"]] = candidate
             refreshed_games.append(game)
