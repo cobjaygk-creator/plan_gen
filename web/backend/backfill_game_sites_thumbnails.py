@@ -29,6 +29,11 @@ def main() -> None:
         return
     rows = json.loads(OFFICIAL_PATH.read_text(encoding="utf-8"))
 
+    # 수백 개 외부 사이트를 순차로 직접 접속하는 작업이라 전체 완주까지
+    # 오래 걸릴 수 있다 — 끝까지 다 돈 뒤에야 저장하면 중간에 SSH 세션이
+    # 끊기거나 타임아웃 났을 때 그동안 고친 것까지 전부 날아간다. 고칠
+    # 때마다 바로 저장해 재실행하면 이미 채운 항목은 건너뛰고 이어서
+    # 진행되게 한다(멱등적).
     fixed = 0
     checked = 0
     for row in rows:
@@ -44,9 +49,9 @@ def main() -> None:
             continue
         row["thumbnail_url"] = cache_thumbnail(image, "game_sites") or image
         fixed += 1
-
-    if fixed:
         OFFICIAL_PATH.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"  [{fixed}] {row['url']}: 복구 완료")
+
     print(f"{checked}건 확인, {fixed}건 썸네일 복구 완료")
 
 
