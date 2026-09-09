@@ -1,4 +1,4 @@
-﻿.event-bench-page { max-width: 1320px; margin: 0 auto; padding: 28px 22px 44px; }
+﻿.event-bench-page { max-width: 1320px; margin: 0; padding: 28px 22px 44px; }
 .event-bench-refresh-summary { display:flex; justify-content:flex-end; align-items:center; gap:7px; margin:0; }
 .event-bench-refresh-summary button { display:flex; align-items:center; gap:10px; padding:8px 11px; border:1px solid #dedede; border-radius:8px; background:#fff; color:#777; font:inherit; font-size:11px; cursor:pointer; transition:border-color .15s, background .15s, color .15s; }
 .event-bench-refresh-summary button strong { padding:3px 7px; border-radius:99px; background:#f1f1f1; color:#222; font-size:11px; }

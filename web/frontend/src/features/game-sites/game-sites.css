@@ -1,4 +1,4 @@
-﻿.game-sites-page { max-width:1320px; margin:0 auto; padding:28px 22px 44px; }
+﻿.game-sites-page { max-width:1320px; margin:0; padding:28px 22px 44px; }
 .game-sites-header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin:0 0 18px; }
 .game-sites-header h1 { margin:0; color:#111; font-size:28px; letter-spacing:-.055em; }
 .game-sites-header-actions { display:flex; align-items:center; gap:10px; }
