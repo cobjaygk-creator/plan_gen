@@ -74,6 +74,20 @@ def cache_thumbnail(url: str | None, feature: str) -> str | None:
     return relative_path
 
 
+def is_cached_thumbnail_missing(value: str | None) -> bool:
+    """True only for a stored relative cache path (e.g. "data/thumbnails/
+    event_bench/<hash>.jpg") whose file no longer exists under THUMBNAIL_DIR
+    — used to clean up records left over from before the cache location
+    moved off web/frontend/dist (see the module docstring): those records'
+    thumbnail_url/hero_image_url still point at a path that's gone forever
+    since the original source URL was already overwritten and can't be
+    re-downloaded. An external http(s) URL or an already-empty value isn't
+    "missing" in this sense — only a broken *local* reference is."""
+    if not value or value.startswith(("http://", "https://")):
+        return False
+    return not (THUMBNAIL_DIR / value.removeprefix(f"{RELATIVE_ROOT}/")).is_file()
+
+
 def as_absolute_path(value: str | None) -> str | None:
     """For live API responses only (the app is always served from the
     origin root locally, unlike the GitHub Pages build which can sit under
