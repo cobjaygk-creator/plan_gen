@@ -32,7 +32,6 @@ from app.event_bench.nexon_sample import (
     collect_heroes_events,
     collect_ragnarok_events,
     collect_audition_events,
-    collect_cyphers_events,
     collect_lod_events,
     collect_eternalreturn_events,
 )
@@ -42,8 +41,8 @@ LAST_GOOD_PATH = OUTPUT_PATH.with_name("nexon_events_last_good.json")
 LOG_PATH = OUTPUT_PATH.with_name("refresh.log")
 
 # tales.nexon.com(\ud14c\uc77c\uc988\uc704\ubc84)/tr.rhaon.co.kr(\ud14c\uc77c\uc988\ub7f0\ub108)/gersang.co.kr(\uac70\uc0c1)/
-# thefinals.nexon.com(\ub354 \ud30c\uc774\ub110\uc2a4)\ub294 \uc624\ub77c\ud074 \ud074\ub77c\uc6b0\ub4dc IP\ub97c \ucc28\ub2e8\ud574\uc11c(403/
-# \ud0c0\uc784\uc544\uc6c3, \uc9c1\uc811 \ud655\uc778) \uc6b4\uc601 \uc11c\ubc84\uac00 \ubabb \ub6ab\ub294\ub2e4. wp.nexon.com(\ud504\ub77c\uc2dc\uc544\uc804\uae30)\uc740
+# thefinals.nexon.com(\ub354 \ud30c\uc774\ub110\uc2a4)/cyphers.nexon.com(\uc0ac\uc774\ud37c\uc988)\ub294 \uc624\ub77c\ud074 \ud074\ub77c\uc6b0\ub4dc IP\ub97c
+# \ucc28\ub2e8\ud574\uc11c(403/\ud0c0\uc784\uc544\uc6c3, \uc9c1\uc811 \ud655\uc778) \uc6b4\uc601 \uc11c\ubc84\uac00 \ubabb \ub6ab\ub294\ub2e4. wp.nexon.com(\ud504\ub77c\uc2dc\uc544\uc804\uae30)\uc740
 # \uac1c\ubc1c \ud658\uacbd \uc815\uc801 \uc694\uccad\uc5d0\uc11c\ub3c4 \uc774\ubbf8 \uc774\ubca4\ud2b8 \ubaa9\ub85d\uc774 \uc548 \uc7a1\ud600\uc11c(\ube0c\ub77c\uc6b0\uc800 \ub80c\ub354\ub9c1
 # \uacb0\uacfc\uc640 \ub2e4\ub984) \uac80\uc99d \uc0bc\uc544 \uac19\uc774 \ud3ec\ud568\ud55c\ub2e4 \u2014 GitHub Actions
 # (fallback-collect.yml)\uac00 \ub300\uc2e0 \uc218\uc9d1\ud574 \ucee4\ubc0b\ud574\ub454
@@ -81,7 +80,7 @@ COLLECTORS = {
     "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804": collect_heroes_events,
     "\ub77c\uadf8\ub098\ub85c\ud06c": collect_ragnarok_events,
     "\uc624\ub514\uc158": collect_audition_events,
-    "\uc0ac\uc774\ud37c\uc988": collect_cyphers_events,
+    "\uc0ac\uc774\ud37c\uc988": lambda: collect_via_github_fallback("\uc0ac\uc774\ud37c\uc988"),
     "\ub354 \ud30c\uc774\ub110\uc2a4": lambda: collect_via_github_fallback("\ub354 \ud30c\uc774\ub110\uc2a4"),
     "\uc5b4\ub460\uc758\uc804\uc124": collect_lod_events,
     "\uc774\ud130\ub110 \ub9ac\ud134": collect_eternalreturn_events,

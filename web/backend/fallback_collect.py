@@ -1,11 +1,12 @@
 """GitHub Actions 전용 — 오라클 클라우드 IP를 차단하는 소스를 대신 수집한다.
 
 tales.nexon.com(테일즈위버)/tr.rhaon.co.kr(테일즈런너)/gersang.co.kr(거상)/
-thefinals.nexon.com(더 파이널스) 넷 다 운영 서버(Oracle Cloud IP)에서
-실행하면 403/타임아웃으로 막히는 게 직접 확인됐다(같은 코드가 GitHub
-Actions·집/사무실 IP에서는 정상 동작). wp.nexon.com(프라시아전기)은
-개발 환경에서도 이미 정적 요청과 브라우저 렌더링 결과가 달라 이벤트
-목록 자체가 안 잡히는 걸 확인해서, 검증 삼아 여기에 같이 포함한다.
+thefinals.nexon.com(더 파이널스)/cyphers.nexon.com(사이퍼즈) 다섯 다 운영
+서버(Oracle Cloud IP)에서 실행하면 403/타임아웃으로 막히는 게 직접
+확인됐다(같은 코드가 GitHub Actions·집/사무실 IP에서는 정상 동작).
+wp.nexon.com(프라시아전기)은 개발 환경에서도 이미 정적 요청과 브라우저
+렌더링 결과가 달라 이벤트 목록 자체가 안 잡히는 걸 확인해서, 검증 삼아
+여기에 같이 포함한다.
 IP 대역 차단이라 코드로 우회할 수 없어서, 이 스크립트가 GitHub Actions의
 망을 빌려 대신 수집해 결과를 커밋해두면, 운영 서버는 이 파일을
 raw.githubusercontent.com에서 매시간 직접 fetch해 병합한다
@@ -20,6 +21,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 from app.event_bench.nexon_sample import (
+    collect_cyphers_events,
     collect_gersang_events,
     collect_talesrunner_events,
     collect_talesweaver_events,
@@ -35,6 +37,7 @@ COLLECTORS = {
     "거상": collect_gersang_events,
     "더 파이널스": collect_thefinals_events,
     "프라시아전기": collect_wp_events,
+    "사이퍼즈": collect_cyphers_events,
 }
 
 

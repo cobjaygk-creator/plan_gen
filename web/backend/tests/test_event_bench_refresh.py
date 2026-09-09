@@ -56,8 +56,8 @@ def test_collect_via_github_fallback_returns_empty_for_unknown_game(monkeypatch)
 
 
 def test_collectors_route_blocked_ip_games_through_fallback():
-    # COLLECTORS 딕셔너리가 이 세 게임만 GitHub fallback을 쓰도록 배선돼
+    # COLLECTORS 딕셔너리가 이 게임들만 GitHub fallback을 쓰도록 배선돼
     # 있는지 확인 — 실수로 원래 collect_* 함수로 되돌리는 회귀를 막는다.
-    for game in ("테일즈위버", "테일즈런너", "거상", "더 파이널스"):
+    for game in ("테일즈위버", "테일즈런너", "거상", "더 파이널스", "프라시아전기", "사이퍼즈"):
         collector = event_bench_refresh.COLLECTORS[game]
         assert collector.__name__ == "<lambda>", f"{game}는 GitHub fallback 람다여야 한다"
