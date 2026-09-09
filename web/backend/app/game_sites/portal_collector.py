@@ -585,6 +585,7 @@ def refresh_portal_sites() -> dict[str, Any]:
     boundary = date.today() - timedelta(days=RECENT_DAYS)
     existing = json.loads(OFFICIAL_PATH.read_text(encoding="utf-8")) if OFFICIAL_PATH.is_file() else []
     official_urls = {item["url"] for item in existing}
+    existing_by_url = {item["url"]: item for item in existing}
     added = 0
     for item in discovered:
         published = item.get("published_on")
@@ -596,7 +597,21 @@ def refresh_portal_sites() -> dict[str, Any]:
                 pass
         is_new = bool(previous_urls) and item["url"] not in previous_urls
         verified_recent = item["url"] in RECENT_VERIFIED_URLS
-        if item["url"] in official_urls or not (recent_dated or verified_recent or is_new):
+        if item["url"] in official_urls:
+            # Known site — never re-added as a new entry, but a thumbnail
+            # that's still missing (never resolved, or nulled out by the
+            # cache-location cleanup) gets a self-heal chance every cycle
+            # using whatever this cycle's own portal collector already
+            # scraped, at no extra request cost. A full _page_metadata()
+            # re-fetch here for every known site with no image would
+            # multiply this refresh's request count by however many are
+            # still missing, every single cycle — too expensive to do
+            # unconditionally, so this only reuses data already in hand.
+            record = existing_by_url.get(item["url"])
+            if record is not None and not record.get("thumbnail_url") and item.get("thumbnail_url"):
+                record["thumbnail_url"] = cache_thumbnail(item["thumbnail_url"], "game_sites") or item["thumbnail_url"]
+            continue
+        if not (recent_dated or verified_recent or is_new):
             continue
         title, image = _page_metadata(item["url"])
         image = image or item.get("thumbnail_url")
