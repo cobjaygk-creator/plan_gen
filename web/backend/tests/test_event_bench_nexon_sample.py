@@ -9,6 +9,8 @@ from app.event_bench.nexon_sample import (
     _headers_for,
     _is_gersang_excluded,
     _parse_cashshop_date,
+    _parse_eternalreturn_dates,
+    _parse_lod_date_range,
     _parse_thefinals_threads,
     _thefinals_slug,
 )
@@ -53,6 +55,31 @@ def test_is_gersang_excluded_filters_winner_shipping_address_notice():
 
 def test_is_gersang_excluded_keeps_normal_event_titles():
     assert _is_gersang_excluded("천하제일 낚시 대회!") is False
+
+
+def test_parse_lod_date_range_with_explicit_end():
+    assert _parse_lod_date_range("2026.08.20. 08:00 ~ 2026.09.17. 08:00") == ("2026-08-20", "2026-09-17")
+
+
+def test_parse_lod_date_range_permanent_event():
+    assert _parse_lod_date_range("2024.05.30. 12:30 ~ 상시") == ("2024-05-30", None)
+
+
+def test_parse_lod_date_range_returns_none_when_unmatched():
+    assert _parse_lod_date_range("날짜 정보 없음") == (None, None)
+
+
+def test_parse_eternalreturn_dates_with_korean_range():
+    text = "2026년 9월 3일(목) 점검 종료 후 ~  2026년 9월 17일(목) 점검 전까지"
+    assert _parse_eternalreturn_dates(text) == ("2026-09-03", "2026-09-17")
+
+
+def test_parse_eternalreturn_dates_with_single_dot_date():
+    assert _parse_eternalreturn_dates("2026.08.06 OPEN") == ("2026-08-06", None)
+
+
+def test_parse_eternalreturn_dates_returns_none_for_non_date_copy():
+    assert _parse_eternalreturn_dates("나만의 캐릭터를 만들어보세요!") == (None, None)
 
 
 def _cashshop_date_node(html: str):

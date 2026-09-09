@@ -33,6 +33,8 @@ from app.event_bench.nexon_sample import (
     collect_ragnarok_events,
     collect_audition_events,
     collect_cyphers_events,
+    collect_lod_events,
+    collect_eternalreturn_events,
 )
 
 OUTPUT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
@@ -79,6 +81,8 @@ COLLECTORS = {
     "\uc624\ub514\uc158": collect_audition_events,
     "\uc0ac\uc774\ud37c\uc988": collect_cyphers_events,
     "\ub354 \ud30c\uc774\ub110\uc2a4": lambda: collect_via_github_fallback("\ub354 \ud30c\uc774\ub110\uc2a4"),
+    "\uc5b4\ub460\uc758\uc804\uc124": collect_lod_events,
+    "\uc774\ud130\ub110 \ub9ac\ud134": collect_eternalreturn_events,
 }
 
 

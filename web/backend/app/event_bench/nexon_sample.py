@@ -49,6 +49,9 @@ THEFINALS_EVENTS_URL = "https://thefinals.nexon.com/news?headlineId=3069"
 # 이미지형은 요약이 0~15자, 텍스트가 많은 공지는 490~500자(서버가 500자
 # 에서 자름)로 뚜렷이 갈린다.
 _THEFINALS_SUMMARY_MAX_LEN = 30
+LOD_EVENTS_URL = "https://lod.nexon.com/news/event"
+# ?hl=ko-KR 없이 요청하면 서버가 영문판을 내려준다(직접 확인).
+ETERNALRETURN_EVENTS_URL = "https://event.playeternalreturn.com/S12_Sailing?hl=ko-KR"
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
 # Cyphers prints dates without a year ("9/3 점검 후 ~ 9/22 점검 전") — _DATE_RANGE
 # expects a 4-digit year and never matches this format.
@@ -142,6 +145,8 @@ def _event_format(event_url: str) -> str:
         return "full_page"
     if host == "cyphers.nexon.com" and path.startswith("/pages/events/"):
         return "full_page"
+    if host == "lod.nexon.com" and path.startswith("/event/"):
+        return "full_page"
     return "board"
 
 
@@ -197,6 +202,44 @@ def _date_parts_md(value: str, reference: date | None = None) -> tuple[str | Non
         return candidate.isoformat()
 
     return to_iso(match.group(1), match.group(2)), to_iso(match.group(3), match.group(4))
+
+
+_LOD_DATE_RANGE = re.compile(
+    r"(\d{4})\.(\d{2})\.(\d{2})\.\s*\d{2}:\d{2}\s*~\s*(?:(\d{4})\.(\d{2})\.(\d{2})\.\s*\d{2}:\d{2}|상시)"
+)
+
+
+def _parse_lod_date_range(text: str) -> tuple[str | None, str | None]:
+    """어둠의전설: "2026.08.20. 08:00 ~ 2026.09.17. 08:00" 또는 종료일 없이
+    "2024.05.30. 12:30 ~ 상시"."""
+    match = _LOD_DATE_RANGE.search(text)
+    if not match:
+        return None, None
+    start = f"{match.group(1)}-{match.group(2)}-{match.group(3)}"
+    end = f"{match.group(4)}-{match.group(5)}-{match.group(6)}" if match.group(4) else None
+    return start, end
+
+
+_ER_KOREAN_DATE = re.compile(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일")
+_ER_DOT_DATE = re.compile(r"(\d{4})\.(\d{2})\.(\d{2})")
+
+
+def _parse_eternalreturn_dates(text: str) -> tuple[str | None, str | None]:
+    """이터널 리턴 좌측 메뉴의 설명 문구는 형식이 제각각이다 — "2026년 9월
+    3일(목) 점검 종료 후 ~ 2026년 9월 17일(목) 점검 전까지"처럼 날짜가
+    있을 수도, "나만의 캐릭터를 만들어보세요!"처럼 아예 없을 수도 있다.
+    날짜가 하나뿐이면(예: "2026.08.06 OPEN") 시작일로만 쓴다."""
+    korean_dates = _ER_KOREAN_DATE.findall(text)
+    if korean_dates:
+        def fmt(parts: tuple[str, str, str]) -> str:
+            return f"{parts[0]}-{int(parts[1]):02d}-{int(parts[2]):02d}"
+        start = fmt(korean_dates[0])
+        end = fmt(korean_dates[1]) if len(korean_dates) > 1 else None
+        return start, end
+    dot_match = _ER_DOT_DATE.search(text)
+    if dot_match:
+        return f"{dot_match.group(1)}-{dot_match.group(2)}-{dot_match.group(3)}", None
+    return None, None
 
 
 def _is_current_or_scheduled(starts_on: str | None, ends_on: str | None, status_text: str = "") -> bool:
@@ -826,6 +869,65 @@ def collect_thefinals_events() -> list[EventCandidate]:
     return candidates
 
 
+def collect_lod_events() -> list[EventCandidate]:
+    """Collect 어둠의전설 풀페이지(dedicated "/event/..." landing pages)만 —
+    게시판형("/News/event/{id}") 공지는 명시적 요청에 따라 제외한다."""
+    soup = BeautifulSoup(_fetch_html(LOD_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for item in soup.select(".media_list.ml_ev li"):
+        title_link = item.select_one("a[href]")
+        if title_link is None:
+            continue
+        event_url = urljoin(LOD_EVENTS_URL, title_link.get("href", "").strip())
+        if _event_format(event_url) != "full_page":
+            continue
+        title_node = title_link.select_one(".tit")
+        title = title_node.get_text(" ", strip=True) if title_node else title_link.get_text(" ", strip=True)
+        if not title or event_url in seen:
+            continue
+        seen.add(event_url)
+        date_node = item.select_one(".info .timeline .date")
+        starts_on, ends_on = _parse_lod_date_range(date_node.get_text(" ", strip=True) if date_node else "")
+        image = title_link.select_one("img")
+        candidates.append(EventCandidate(
+            publisher="NEXON Korea", game="어둠의전설", title=title, event_url=event_url,
+            hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="full_page", collected_at=collected_at,
+        ))
+    return candidates
+
+
+def collect_eternalreturn_events() -> list[EventCandidate]:
+    """Collect 이터널 리턴의 좌측(side) 이벤트 메뉴에 나열된 캠페인들 — 이
+    사이트는 이벤트마다 독립된 랜딩 페이지(event.playeternalreturn.com/...)
+    뿐이라 전부 풀페이지로 취급한다."""
+    soup = BeautifulSoup(_fetch_html(ETERNALRETURN_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for item in soup.select(".mode_side ul li"):
+        title_node = item.select_one(".tit")
+        link = item.select_one("a[href]")
+        if title_node is None or link is None:
+            continue
+        title = title_node.get_text(" ", strip=True)
+        event_url = urljoin(ETERNALRETURN_EVENTS_URL, link.get("href", "").strip())
+        if not title or event_url in seen:
+            continue
+        seen.add(event_url)
+        text_node = item.select_one(".txt")
+        starts_on, ends_on = _parse_eternalreturn_dates(text_node.get_text(" ", strip=True) if text_node else "")
+        image = item.select_one("img")
+        candidates.append(EventCandidate(
+            publisher="Nimble Neuron", game="이터널 리턴", title=title, event_url=event_url,
+            hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="full_page", collected_at=collected_at,
+        ))
+    return candidates
+
+
 def _eventon_full_page_entry(item: dict) -> dict | None:
     """NC\uc758 \uacf5\uc6a9 '\uc774\ubca4\ud2b8ON' \ud50c\ub7ab\ud3fc\uc740 \ub85c\uc2a4\ud2b8\uc544\ud06c\uc640 \ub2ec\ub9ac \uac01 \ud56d\ubaa9\uc774 \uc2e4\uc81c\ub85c
     \uc5b4\ub514\ub85c \uc5f0\uacb0\ub418\ub294\uc9c0\ub97c URL \ud328\ud134 \ucd94\uce21 \uc5c6\uc774 marketingEntrySet[].entryType\ub85c
@@ -925,10 +1027,12 @@ def collect_nexon_events() -> list[EventCandidate]:
         *collect_audition_events(),
         *collect_cyphers_events(),
         *collect_thefinals_events(),
+        *collect_lod_events(),
+        *collect_eternalreturn_events(),
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "lod", "eternalreturn", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -971,6 +1075,10 @@ def main() -> None:
         candidates = collect_cyphers_events()
     elif args.source == "thefinals":
         candidates = collect_thefinals_events()
+    elif args.source == "lod":
+        candidates = collect_lod_events()
+    elif args.source == "eternalreturn":
+        candidates = collect_eternalreturn_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)
