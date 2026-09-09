@@ -12,6 +12,7 @@ from app.event_bench.nexon_sample import (
     _parse_eternalreturn_dates,
     _parse_lod_date_range,
     _parse_thefinals_threads,
+    _parse_wp_date_range,
     _thefinals_slug,
 )
 
@@ -80,6 +81,18 @@ def test_parse_eternalreturn_dates_with_single_dot_date():
 
 def test_parse_eternalreturn_dates_returns_none_for_non_date_copy():
     assert _parse_eternalreturn_dates("나만의 캐릭터를 만들어보세요!") == (None, None)
+
+
+def test_parse_wp_date_range_single_date():
+    assert _parse_wp_date_range("25/01/21(수) UPDATE") == ("2025-01-21", None)
+
+
+def test_parse_wp_date_range_with_range():
+    assert _parse_wp_date_range("24/06/26(수) 점검 후 ~ 별도 안내 시까지") == ("2024-06-26", None)
+
+
+def test_parse_wp_date_range_returns_none_when_unmatched():
+    assert _parse_wp_date_range("공지 내 확인") == (None, None)
 
 
 def _cashshop_date_node(html: str):

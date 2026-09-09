@@ -52,6 +52,7 @@ _THEFINALS_SUMMARY_MAX_LEN = 30
 LOD_EVENTS_URL = "https://lod.nexon.com/news/event"
 # ?hl=ko-KR 없이 요청하면 서버가 영문판을 내려준다(직접 확인).
 ETERNALRETURN_EVENTS_URL = "https://event.playeternalreturn.com/S12_Sailing?hl=ko-KR"
+WP_EVENTS_URL = "https://wp.nexon.com/news/event?headlineId=1242"
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
 # Cyphers prints dates without a year ("9/3 점검 후 ~ 9/22 점검 전") — _DATE_RANGE
 # expects a 4-digit year and never matches this format.
@@ -240,6 +241,24 @@ def _parse_eternalreturn_dates(text: str) -> tuple[str | None, str | None]:
     if dot_match:
         return f"{dot_match.group(1)}-{dot_match.group(2)}-{dot_match.group(3)}", None
     return None, None
+
+
+_WP_DATE = re.compile(r"(\d{2})/(\d{2})/(\d{2})")
+
+
+def _parse_wp_date_range(text: str) -> tuple[str | None, str | None]:
+    """프라시아전기: "25/01/21(수) UPDATE" 또는 "24/06/26(수) 점검 후 ~
+    별도 안내 시까지"처럼 YY/MM/DD가 한 번 또는 두 번 나온다."""
+    dates = _WP_DATE.findall(text)
+    if not dates:
+        return None, None
+
+    def fmt(parts: tuple[str, str, str]) -> str:
+        return f"20{parts[0]}-{parts[1]}-{parts[2]}"
+
+    start = fmt(dates[0])
+    end = fmt(dates[1]) if len(dates) > 1 else None
+    return start, end
 
 
 def _is_current_or_scheduled(starts_on: str | None, ends_on: str | None, status_text: str = "") -> bool:
@@ -928,6 +947,35 @@ def collect_eternalreturn_events() -> list[EventCandidate]:
     return candidates
 
 
+def collect_wp_events() -> list[EventCandidate]:
+    """Collect 프라시아전기 풀페이지만 — 명시적 기준: 목록에서 새 창
+    (target="_blank")으로 열리는 항목만 풀페이지("/events/..." 전용
+    랜딩 페이지)이고, 같은 탭에서 열리는 게시판형("/news/event/{id}")은
+    제외한다."""
+    soup = BeautifulSoup(_fetch_html(WP_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for link in soup.select("ul.board-list.type--event li a[href]"):
+        if link.get("target") != "_blank":
+            continue
+        event_url = urljoin(WP_EVENTS_URL, link.get("href", "").strip())
+        title_node = link.select_one("._title-content")
+        title = title_node.get_text(" ", strip=True) if title_node else link.get_text(" ", strip=True)
+        if not title or event_url in seen:
+            continue
+        seen.add(event_url)
+        date_node = link.select_one("._date")
+        starts_on, ends_on = _parse_wp_date_range(date_node.get_text(" ", strip=True) if date_node else "")
+        image = link.select_one("._visual img")
+        candidates.append(EventCandidate(
+            publisher="NEXON Korea", game="프라시아전기", title=title, event_url=event_url,
+            hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="full_page", collected_at=collected_at,
+        ))
+    return candidates
+
+
 def _eventon_full_page_entry(item: dict) -> dict | None:
     """NC\uc758 \uacf5\uc6a9 '\uc774\ubca4\ud2b8ON' \ud50c\ub7ab\ud3fc\uc740 \ub85c\uc2a4\ud2b8\uc544\ud06c\uc640 \ub2ec\ub9ac \uac01 \ud56d\ubaa9\uc774 \uc2e4\uc81c\ub85c
     \uc5b4\ub514\ub85c \uc5f0\uacb0\ub418\ub294\uc9c0\ub97c URL \ud328\ud134 \ucd94\uce21 \uc5c6\uc774 marketingEntrySet[].entryType\ub85c
@@ -1029,10 +1077,11 @@ def collect_nexon_events() -> list[EventCandidate]:
         *collect_thefinals_events(),
         *collect_lod_events(),
         *collect_eternalreturn_events(),
+        *collect_wp_events(),
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "lod", "eternalreturn", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "lod", "eternalreturn", "wp", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -1079,6 +1128,8 @@ def main() -> None:
         candidates = collect_lod_events()
     elif args.source == "eternalreturn":
         candidates = collect_eternalreturn_events()
+    elif args.source == "wp":
+        candidates = collect_wp_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)
