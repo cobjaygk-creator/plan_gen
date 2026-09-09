@@ -228,5 +228,46 @@
       "collected_at": "2026-09-09T00:59:49.849269+00:00"
     }
   ],
-  "프라시아전기": []
+  "프라시아전기": [],
+  "사이퍼즈": [
+    {
+      "publisher": "NEXON Korea",
+      "game": "사이퍼즈",
+      "title": "2026 리얼 사이퍼즈",
+      "event_url": "https://cyphers.nexon.com/pages/events/contest/2026",
+      "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/09/03/1788390520319.png",
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-10-08",
+      "published_on": "2026-09-03",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-09-09T11:23:56.134039+00:00"
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "사이퍼즈",
+      "title": "신규 능력자를 위한 전용 혜택",
+      "event_url": "https://cyphers.nexon.com/pages/events/welcome",
+      "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/01/07/1767769455419.png",
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-09-30",
+      "published_on": "2026-09-03",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-09-09T11:23:56.134039+00:00"
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "사이퍼즈",
+      "title": "귀환 능력자를 위한 전용 혜택",
+      "event_url": "https://cyphers.nexon.com/pages/events/welcome?comeback",
+      "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/01/07/1767769532113.png",
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-09-30",
+      "published_on": "2026-09-03",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-09-09T11:23:56.134039+00:00"
+    }
+  ]
 }
