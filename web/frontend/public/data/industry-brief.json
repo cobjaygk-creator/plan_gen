@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-08T23:55:27.688282+00:00",
+  "generated_at": "2026-09-09T00:19:25.530541+00:00",
   "periods": {
     "today": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T23:52:58.108505+00:00",
+      "generatedAt": "2026-09-09T00:14:53.119310+00:00",
       "periodLabel": "오늘",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 99,
+        "collected": 109,
         "analyzed": 0,
-        "pending": 99,
+        "pending": 109,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -111,8 +111,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -699,8 +699,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "“부처 조정 역량 있다” 자신한 AI전략위…‘자문기구’ 한계 넘을까[종합]",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240677",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "파네시아, 메타와 CXL 기반 AI 데이터센터 구조 제안…네이처 리뷰 게재",
               "url": "https://n.news.naver.com/mnews/article/138/0002240604",
@@ -720,19 +725,19 @@
               "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
               "url": "https://n.news.naver.com/mnews/article/008/0005411112",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240671",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 8,
+          "articleCount": 9,
           "articles": [
+            {
+              "title": "삼성SDS, 내년 로봇 통합제어 플랫폼 띄운다",
+              "url": "https://n.news.naver.com/mnews/article/015/0005330203",
+              "source": "NAVER · 한국경제"
+            },
             {
               "title": "삼성SDS, 로봇전환 사업 진출한다…27년 로봇 플랫폼 출시",
               "url": "https://n.news.naver.com/mnews/article/028/0002822118",
@@ -752,19 +757,24 @@
               "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
               "url": "https://n.news.naver.com/mnews/article/082/0001397398",
               "source": "NAVER · 부산일보"
-            },
-            {
-              "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
-              "url": "https://www.etnews.com/20260908000264",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 4,
+          "articleCount": 6,
           "articles": [
+            {
+              "title": "오픈AI ‘AI가 수학 난제 풀었다’…26년 만의 해법에 ‘연구 활용’ 논란도",
+              "url": "https://n.news.naver.com/mnews/article/009/0005732401",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "로민, 코리안리 특종보험 요율 산정에 다큐먼트 AI 지원",
+              "url": "https://www.etnews.com/20260909000020",
+              "source": "전자신문 AI"
+            },
             {
               "title": "[9월8일] 오픈AI 내부에서 무슨 일이 벌어지고 있나…현실이 된 ‘AI 연구 인턴’",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214978",
@@ -779,11 +789,6 @@
               "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
               "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
               "source": "TechCrunch"
-            },
-            {
-              "title": "S2W, 범죄수사 특화 AI 에이전트 출시…자비스에 탑재",
-              "url": "https://www.etnews.com/20260908000212",
-              "source": "전자신문 AI"
             }
           ]
         },
@@ -878,7 +883,7 @@
             "단속·조사 대상과 위반 유형 확인",
             "운영 기록과 신고·이용자 대응 절차 점검"
           ],
-          "priorityScore": 70,
+          "priorityScore": 60,
           "priorityLabel": "우선 확인",
           "urgencyLabel": "시행됨",
           "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
@@ -907,7 +912,7 @@
             "신청 자격·마감·제출 조건 확인",
             "개발·유통·해외 진출 활용 가능성 검토"
           ],
-          "priorityScore": 35,
+          "priorityScore": 25,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
@@ -1379,13 +1384,13 @@
     },
     "3d": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T23:52:58.108505+00:00",
+      "generatedAt": "2026-09-09T00:14:53.119310+00:00",
       "periodLabel": "최근 3일",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 987,
+        "collected": 996,
         "analyzed": 0,
-        "pending": 987,
+        "pending": 996,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -1487,8 +1492,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -2075,8 +2080,13 @@
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 51,
+          "articleCount": 52,
           "articles": [
+            {
+              "title": "“부처 조정 역량 있다” 자신한 AI전략위…‘자문기구’ 한계 넘을까[종합]",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240677",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "파네시아, 메타와 CXL 기반 AI 데이터센터 구조 제안…네이처 리뷰 게재",
               "url": "https://n.news.naver.com/mnews/article/138/0002240604",
@@ -2096,19 +2106,19 @@
               "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
               "url": "https://n.news.naver.com/mnews/article/008/0005411112",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240671",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 49,
+          "articleCount": 50,
           "articles": [
+            {
+              "title": "삼성SDS, 내년 로봇 통합제어 플랫폼 띄운다",
+              "url": "https://n.news.naver.com/mnews/article/015/0005330203",
+              "source": "NAVER · 한국경제"
+            },
             {
               "title": "삼성SDS, 로봇전환 사업 진출한다…27년 로봇 플랫폼 출시",
               "url": "https://n.news.naver.com/mnews/article/028/0002822118",
@@ -2128,19 +2138,24 @@
               "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
               "url": "https://n.news.naver.com/mnews/article/082/0001397398",
               "source": "NAVER · 부산일보"
-            },
-            {
-              "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
-              "url": "https://www.etnews.com/20260908000264",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 44,
+          "articleCount": 46,
           "articles": [
+            {
+              "title": "오픈AI ‘AI가 수학 난제 풀었다’…26년 만의 해법에 ‘연구 활용’ 논란도",
+              "url": "https://n.news.naver.com/mnews/article/009/0005732401",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "로민, 코리안리 특종보험 요율 산정에 다큐먼트 AI 지원",
+              "url": "https://www.etnews.com/20260909000020",
+              "source": "전자신문 AI"
+            },
             {
               "title": "[9월8일] 오픈AI 내부에서 무슨 일이 벌어지고 있나…현실이 된 ‘AI 연구 인턴’",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214978",
@@ -2155,16 +2170,6 @@
               "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
               "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
               "source": "TechCrunch"
-            },
-            {
-              "title": "S2W, 범죄수사 특화 AI 에이전트 출시…자비스에 탑재",
-              "url": "https://www.etnews.com/20260908000212",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436678",
-              "source": "NAVER · 지디넷코리아"
             }
           ]
         },
@@ -2336,7 +2341,7 @@
             "단속·조사 대상과 위반 유형 확인",
             "운영 기록과 신고·이용자 대응 절차 점검"
           ],
-          "priorityScore": 70,
+          "priorityScore": 60,
           "priorityLabel": "우선 확인",
           "urgencyLabel": "시행됨",
           "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
@@ -2365,7 +2370,7 @@
             "신청 자격·마감·제출 조건 확인",
             "개발·유통·해외 진출 활용 가능성 검토"
           ],
-          "priorityScore": 35,
+          "priorityScore": 25,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
@@ -2837,13 +2842,13 @@
     },
     "week": {
       "briefDate": "2026-09-09",
-      "generatedAt": "2026-09-08T23:52:58.108505+00:00",
+      "generatedAt": "2026-09-09T00:14:53.119310+00:00",
       "periodLabel": "이번 주",
       "articleCount": 0,
       "analysisStats": {
-        "collected": 870,
+        "collected": 880,
         "analyzed": 0,
-        "pending": 870,
+        "pending": 880,
         "completionRate": 0,
         "analysisStatus": "INSUFFICIENT",
         "relevant": 0,
@@ -2945,8 +2950,8 @@
                 0,
                 0,
                 0,
-                0,
-                2,
+                1,
+                1,
                 0,
                 0,
                 0,
@@ -3533,8 +3538,13 @@
         {
           "key": "robotics",
           "label": "로보틱스",
-          "articleCount": 45,
+          "articleCount": 46,
           "articles": [
+            {
+              "title": "삼성SDS, 내년 로봇 통합제어 플랫폼 띄운다",
+              "url": "https://n.news.naver.com/mnews/article/015/0005330203",
+              "source": "NAVER · 한국경제"
+            },
             {
               "title": "삼성SDS, 로봇전환 사업 진출한다…27년 로봇 플랫폼 출시",
               "url": "https://n.news.naver.com/mnews/article/028/0002822118",
@@ -3554,19 +3564,19 @@
               "title": "삼성SDS, 2031년까지 10조 투자…AI·로봇·물류 전방위 승부수",
               "url": "https://n.news.naver.com/mnews/article/082/0001397398",
               "source": "NAVER · 부산일보"
-            },
-            {
-              "title": "아이엘, 7300평 스마트팩토리 추진…'피지컬AI' 거점으로",
-              "url": "https://www.etnews.com/20260908000264",
-              "source": "전자신문 AI"
             }
           ]
         },
         {
           "key": "gpu",
           "label": "GPU · 반도체",
-          "articleCount": 43,
+          "articleCount": 44,
           "articles": [
+            {
+              "title": "“부처 조정 역량 있다” 자신한 AI전략위…‘자문기구’ 한계 넘을까[종합]",
+              "url": "https://n.news.naver.com/mnews/article/138/0002240677",
+              "source": "NAVER · 디지털데일리"
+            },
             {
               "title": "파네시아, 메타와 CXL 기반 AI 데이터센터 구조 제안…네이처 리뷰 게재",
               "url": "https://n.news.naver.com/mnews/article/138/0002240604",
@@ -3586,19 +3596,24 @@
               "title": "하정우 \"GPU 확보한 것 의미 커…AI 풀스택 수출 국가 도울  것\"[종합]",
               "url": "https://n.news.naver.com/mnews/article/008/0005411112",
               "source": "NAVER · 머니투데이"
-            },
-            {
-              "title": "삼성전자, 미스트랄 AI와 반도체 특화 AI 공동개발…지분 투자도 단행",
-              "url": "https://n.news.naver.com/mnews/article/138/0002240671",
-              "source": "NAVER · 디지털데일리"
             }
           ]
         },
         {
           "key": "agent",
           "label": "AI 에이전트",
-          "articleCount": 37,
+          "articleCount": 39,
           "articles": [
+            {
+              "title": "오픈AI ‘AI가 수학 난제 풀었다’…26년 만의 해법에 ‘연구 활용’ 논란도",
+              "url": "https://n.news.naver.com/mnews/article/009/0005732401",
+              "source": "NAVER · 매일경제"
+            },
+            {
+              "title": "로민, 코리안리 특종보험 요율 산정에 다큐먼트 AI 지원",
+              "url": "https://www.etnews.com/20260909000020",
+              "source": "전자신문 AI"
+            },
             {
               "title": "[9월8일] 오픈AI 내부에서 무슨 일이 벌어지고 있나…현실이 된 ‘AI 연구 인턴’",
               "url": "https://www.aitimes.com/news/articleView.html?idxno=214978",
@@ -3613,16 +3628,6 @@
               "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
               "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
               "source": "TechCrunch"
-            },
-            {
-              "title": "S2W, 범죄수사 특화 AI 에이전트 출시…자비스에 탑재",
-              "url": "https://www.etnews.com/20260908000212",
-              "source": "전자신문 AI"
-            },
-            {
-              "title": "김태진 라온시큐어 CTO \"에이전트 생성 즉시 DID 기반 고유 식별자 발급\"",
-              "url": "https://n.news.naver.com/mnews/article/092/0002436678",
-              "source": "NAVER · 지디넷코리아"
             }
           ]
         },
@@ -3794,7 +3799,7 @@
             "단속·조사 대상과 위반 유형 확인",
             "운영 기록과 신고·이용자 대응 절차 점검"
           ],
-          "priorityScore": 70,
+          "priorityScore": 60,
           "priorityLabel": "우선 확인",
           "urgencyLabel": "시행됨",
           "policyKey": "관세청내년예산안마약차단인공지능ai혁신에집중현장맞춤형연구개발rd도",
@@ -3823,7 +3828,7 @@
             "신청 자격·마감·제출 조건 확인",
             "개발·유통·해외 진출 활용 가능성 검토"
           ],
-          "priorityScore": 35,
+          "priorityScore": 25,
           "priorityLabel": "관찰",
           "urgencyLabel": "일정 확인",
           "policyKey": "혁신조달와공공조달ai전환에27년예산집중투입",
