@@ -9,7 +9,11 @@ ai_results/
 samples/
 out/
 templates/master_template_raw.json
-web/backend/data/
+web/backend/data/*
+# fallback-collect.yml이 커밋하는, 오라클 서버가 raw.githubusercontent.com
+# 에서 직접 읽어가는 파일 — 이것만 git으로 추적한다.
+!web/backend/data/github-collected/
+!web/backend/data/github-collected/**
 web/backend/server.*.log
 web/frontend/node_modules/
 web/frontend/dist/
