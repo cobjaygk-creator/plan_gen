@@ -7,6 +7,7 @@ from app.event_bench.nexon_sample import (
     _event_format,
     _extract_balanced_array,
     _headers_for,
+    _is_gersang_excluded,
     _parse_cashshop_date,
     _parse_thefinals_threads,
     _thefinals_slug,
@@ -42,6 +43,16 @@ def test_event_format_marks_cyphers_dedicated_landing_page_as_full_page():
 
 def test_event_format_marks_cyphers_board_post_as_board():
     assert _event_format("https://cyphers.nexon.com/article/event/topic/28611384") == "board"
+
+
+def test_is_gersang_excluded_filters_winner_shipping_address_notice():
+    # 명시적 요청: "당첨자 배송지" 문구가 들어간 안내글은 이벤트 참여글이
+    # 아니라 이미 끝난 이벤트의 사무 공지라 수집에서 뺀다.
+    assert _is_gersang_excluded("<2026 추석맞이 이벤트> 당첨자 배송지 입력") is True
+
+
+def test_is_gersang_excluded_keeps_normal_event_titles():
+    assert _is_gersang_excluded("천하제일 낚시 대회!") is False
 
 
 def _cashshop_date_node(html: str):

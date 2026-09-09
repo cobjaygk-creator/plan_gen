@@ -468,6 +468,13 @@ def collect_lostark_events() -> list[EventCandidate]:
         if page_candidates == 0:
             break
     return candidates
+def _is_gersang_excluded(title: str) -> bool:
+    """"당첨자 배송지" 안내글은 이벤트 참여글이 아니라 이미 끝난 이벤트의
+    당첨자에게 배송지를 입력해달라는 사무 공지라 수집 대상에서 뺀다
+    (명시적 요청)."""
+    return "당첨자 배송지" in title
+
+
 def collect_gersang_events() -> list[EventCandidate]:
     """Collect every ongoing campaign from the verified official Gersang event board."""
     soup = BeautifulSoup(_fetch_html(GERSANG_EVENTS_URL), "html.parser")
@@ -485,7 +492,7 @@ def collect_gersang_events() -> list[EventCandidate]:
         title = title_link.get_text(" ", strip=True)
         date_node = card.select_one(".date")
         starts_on, ends_on = _date_parts(date_node.get_text(" ", strip=True) if date_node else "")
-        if not title or event_url in seen:
+        if not title or event_url in seen or _is_gersang_excluded(title):
             continue
         seen.add(event_url)
         image = card.select_one(".thumnail img, .thumbnail img")
