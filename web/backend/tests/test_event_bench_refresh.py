@@ -10,7 +10,7 @@ from app.event_bench.nexon_sample import EventCandidate
 
 
 def test_collect_via_github_fallback_reconstructs_event_candidates(monkeypatch):
-    # tales.nexon.com/tr.rhaon.co.kr/gersang.co.kr가 오라클 클라우드 IP를
+    # tales.nexon.com/tr.rhaon.co.kr/gersang.co.kr/thefinals.nexon.com이 오라클 클라우드 IP를
     # 차단해서, 운영 서버는 GitHub Actions가 대신 수집해 커밋해둔 JSON을
     # raw.githubusercontent.com에서 읽어온다 — 그 파싱·재구성 로직을 고정.
     payload = {
@@ -58,6 +58,6 @@ def test_collect_via_github_fallback_returns_empty_for_unknown_game(monkeypatch)
 def test_collectors_route_blocked_ip_games_through_fallback():
     # COLLECTORS 딕셔너리가 이 세 게임만 GitHub fallback을 쓰도록 배선돼
     # 있는지 확인 — 실수로 원래 collect_* 함수로 되돌리는 회귀를 막는다.
-    for game in ("테일즈위버", "테일즈런너", "거상"):
+    for game in ("테일즈위버", "테일즈런너", "거상", "더 파이널스"):
         collector = event_bench_refresh.COLLECTORS[game]
         assert collector.__name__ == "<lambda>", f"{game}는 GitHub fallback 람다여야 한다"

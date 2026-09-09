@@ -1,8 +1,9 @@
 """GitHub Actions 전용 — 오라클 클라우드 IP를 차단하는 소스를 대신 수집한다.
 
-tales.nexon.com(테일즈위버)/tr.rhaon.co.kr(테일즈런너)/gersang.co.kr(거상)
-셋 다 운영 서버(Oracle Cloud IP)에서 실행하면 403/타임아웃으로 막히는 게
-직접 확인됐다(같은 코드가 GitHub Actions·집/사무실 IP에서는 정상 동작).
+tales.nexon.com(테일즈위버)/tr.rhaon.co.kr(테일즈런너)/gersang.co.kr(거상)/
+thefinals.nexon.com(더 파이널스) 넷 다 운영 서버(Oracle Cloud IP)에서
+실행하면 403/타임아웃으로 막히는 게 직접 확인됐다(같은 코드가 GitHub
+Actions·집/사무실 IP에서는 정상 동작).
 IP 대역 차단이라 코드로 우회할 수 없어서, 이 스크립트가 GitHub Actions의
 망을 빌려 대신 수집해 결과를 커밋해두면, 운영 서버는 이 파일을
 raw.githubusercontent.com에서 매시간 직접 fetch해 병합한다
@@ -20,6 +21,7 @@ from app.event_bench.nexon_sample import (
     collect_gersang_events,
     collect_talesrunner_events,
     collect_talesweaver_events,
+    collect_thefinals_events,
 )
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "github-collected" / "fallback_events.json"
@@ -28,6 +30,7 @@ COLLECTORS = {
     "테일즈위버": collect_talesweaver_events,
     "테일즈런너": collect_talesrunner_events,
     "거상": collect_gersang_events,
+    "더 파이널스": collect_thefinals_events,
 }
 
 

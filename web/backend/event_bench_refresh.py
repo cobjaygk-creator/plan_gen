@@ -33,16 +33,16 @@ from app.event_bench.nexon_sample import (
     collect_ragnarok_events,
     collect_audition_events,
     collect_cyphers_events,
-    collect_thefinals_events,
 )
 
 OUTPUT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
 LAST_GOOD_PATH = OUTPUT_PATH.with_name("nexon_events_last_good.json")
 LOG_PATH = OUTPUT_PATH.with_name("refresh.log")
 
-# tales.nexon.com(\ud14c\uc77c\uc988\uc704\ubc84)/tr.rhaon.co.kr(\ud14c\uc77c\uc988\ub7f0\ub108)/gersang.co.kr(\uac70\uc0c1)\ub294
-# \uc624\ub77c\ud074 \ud074\ub77c\uc6b0\ub4dc IP\ub97c \ucc28\ub2e8\ud574\uc11c(403/\ud0c0\uc784\uc544\uc6c3, \uc9c1\uc811 \ud655\uc778) \uc6b4\uc601 \uc11c\ubc84\uac00 \ubabb
-# \ub6ab\ub294\ub2e4 \u2014 GitHub Actions(fallback-collect.yml)\uac00 \ub300\uc2e0 \uc218\uc9d1\ud574 \ucee4\ubc0b\ud574\ub454
+# tales.nexon.com(\ud14c\uc77c\uc988\uc704\ubc84)/tr.rhaon.co.kr(\ud14c\uc77c\uc988\ub7f0\ub108)/gersang.co.kr(\uac70\uc0c1)/
+# thefinals.nexon.com(\ub354 \ud30c\uc774\ub110\uc2a4)\ub294 \uc624\ub77c\ud074 \ud074\ub77c\uc6b0\ub4dc IP\ub97c \ucc28\ub2e8\ud574\uc11c(403/
+# \ud0c0\uc784\uc544\uc6c3, \uc9c1\uc811 \ud655\uc778) \uc6b4\uc601 \uc11c\ubc84\uac00 \ubabb \ub6ab\ub294\ub2e4 \u2014 GitHub Actions
+# (fallback-collect.yml)\uac00 \ub300\uc2e0 \uc218\uc9d1\ud574 \ucee4\ubc0b\ud574\ub454
 # \uacb0\uacfc\ub97c raw.githubusercontent.com\uc5d0\uc11c \uc9c1\uc811 fetch\ud55c\ub2e4. git/rsync\ub97c \uac70\uce58\uc9c0
 # \uc54a\ub294 \uc21c\uc218 HTTP \uc77d\uae30\ub77c, \uc608\uc804\uc5d0 data/ci\ub97c \ubc30\ud3ec\uac00 \ub36e\uc5b4\uc4f0\ub358 \uac83\uacfc \uac19\uc740 \ucda9\ub3cc\uc774
 # \uc0dd\uae30\uc9c0 \uc54a\ub294\ub2e4.
@@ -78,7 +78,7 @@ COLLECTORS = {
     "\ub77c\uadf8\ub098\ub85c\ud06c": collect_ragnarok_events,
     "\uc624\ub514\uc158": collect_audition_events,
     "\uc0ac\uc774\ud37c\uc988": collect_cyphers_events,
-    "\ub354 \ud30c\uc774\ub110\uc2a4": collect_thefinals_events,
+    "\ub354 \ud30c\uc774\ub110\uc2a4": lambda: collect_via_github_fallback("\ub354 \ud30c\uc774\ub110\uc2a4"),
 }
 
 

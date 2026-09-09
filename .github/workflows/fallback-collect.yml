@@ -1,7 +1,8 @@
 name: Fallback event collection (blocked-IP sources)
 
-# tales.nexon.com(테일즈위버)/tr.rhaon.co.kr(테일즈런너)/gersang.co.kr(거상)는
-# 오라클 클라우드 IP를 차단해서 운영 서버가 직접 수집할 수 없다(같은 코드가
+# tales.nexon.com(테일즈위버)/tr.rhaon.co.kr(테일즈런너)/gersang.co.kr(거상)/
+# thefinals.nexon.com(더 파이널스)는 오라클 클라우드 IP를 차단해서 운영
+# 서버가 직접 수집할 수 없다(같은 코드가
 # GitHub Actions·집/사무실 IP에서는 정상 동작하는 것 확인). 이 워크플로가
 # GitHub Actions의 망으로 대신 수집해서 커밋해두면, 운영 서버가 이 파일을
 # raw.githubusercontent.com에서 매시간 직접 읽어간다 — GitHub Pages/정적

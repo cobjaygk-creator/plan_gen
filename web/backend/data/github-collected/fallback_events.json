@@ -11,7 +11,7 @@
       "published_on": null,
       "status": "??",
       "event_format": "board",
-      "collected_at": "2026-09-09T00:33:01.814775+00:00"
+      "collected_at": "2026-09-09T00:54:09.931039+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -24,7 +24,7 @@
       "published_on": null,
       "status": "??",
       "event_format": "board",
-      "collected_at": "2026-09-09T00:33:01.814775+00:00"
+      "collected_at": "2026-09-09T00:54:09.931039+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -37,7 +37,7 @@
       "published_on": null,
       "status": "??",
       "event_format": "board",
-      "collected_at": "2026-09-09T00:33:01.814775+00:00"
+      "collected_at": "2026-09-09T00:54:09.931039+00:00"
     }
   ],
   "테일즈런너": [
@@ -52,7 +52,7 @@
       "published_on": "2026-09-02",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -65,7 +65,7 @@
       "published_on": "2026-09-02",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -78,7 +78,7 @@
       "published_on": "2026-09-02",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -91,7 +91,7 @@
       "published_on": "2026-08-05",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -104,7 +104,7 @@
       "published_on": "2026-08-19",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -117,7 +117,7 @@
       "published_on": "2026-07-08",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -130,7 +130,7 @@
       "published_on": "2026-07-08",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -143,7 +143,7 @@
       "published_on": "2026-06-24",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.028771+00:00"
+      "collected_at": "2026-09-09T00:54:10.115793+00:00"
     }
   ],
   "거상": [
@@ -158,7 +158,7 @@
       "published_on": "2026-09-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.095792+00:00"
+      "collected_at": "2026-09-09T00:54:10.187130+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": "2026-09-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.095792+00:00"
+      "collected_at": "2026-09-09T00:54:10.187130+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,7 @@
       "published_on": "2026-08-19",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.095792+00:00"
+      "collected_at": "2026-09-09T00:54:10.187130+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -197,7 +197,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.095792+00:00"
+      "collected_at": "2026-09-09T00:54:10.187130+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -210,7 +210,48 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:33:02.095792+00:00"
+      "collected_at": "2026-09-09T00:54:10.187130+00:00"
+    }
+  ],
+  "더 파이널스": [
+    {
+      "publisher": "NEXON Korea",
+      "game": "더 파이널스",
+      "title": "더 파이널스 2주년 & TFNL 그랜드 파이널 현장 이벤트 안내",
+      "event_url": "https://thefinals.nexon.com/news/3277954/더-파이널스-2주년-tfnl-그랜드-파이널-현장-이벤트-안내",
+      "hero_image_url": "https://dszw1qtcnsa5e.cloudfront.net/community/20251128/9bf18013-8568-48cd-89b8-d4a9b4c48d7b/02%EA%B3%B5%ED%99%88%EC%8D%B8%EB%84%A4%EC%9D%BC.png",
+      "starts_on": "2025-11-28",
+      "ends_on": null,
+      "published_on": "2025-11-28",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-09-09T00:54:10.650222+00:00"
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "더 파이널스",
+      "title": "TFNL 2025 그랜드 파이널 ON-AIR 이벤트 안내",
+      "event_url": "https://thefinals.nexon.com/news/3225837/tfnl-2025-그랜드-파이널-on-air-이벤트-안내",
+      "hero_image_url": "https://dszw1qtcnsa5e.cloudfront.net/community/20251114/45886114-f97f-4188-bf02-3c9af2c71925/%EA%B3%B5%ED%99%88%EC%8D%B8%EB%84%A4%EC%9D%BC.png",
+      "starts_on": "2025-11-14",
+      "ends_on": null,
+      "published_on": "2025-11-14",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-09-09T00:54:10.650222+00:00"
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "더 파이널스",
+      "title": "TFNL 서킷 3 오프라인 결승 현장 안내",
+      "event_url": "https://thefinals.nexon.com/news/3194074/tfnl-서킷-3-오프라인-결승-현장-안내",
+      "hero_image_url": "https://dszw1qtcnsa5e.cloudfront.net/community/20251024/32e8e11c-6ed7-481b-bb5e-b0180457adef/%EA%B3%B5%EC%8B%9D%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%8D%B8%EB%84%A4%EC%9D%BC.png",
+      "starts_on": "2025-10-24",
+      "ends_on": null,
+      "published_on": "2025-10-24",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-09-09T00:54:10.650222+00:00"
     }
   ]
 }
