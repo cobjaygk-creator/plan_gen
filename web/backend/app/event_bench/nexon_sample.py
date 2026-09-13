@@ -472,11 +472,37 @@ def _parse_cashshop_date(date_node) -> date | None:
         return None
 
 
+_BARAM_BANNER_STYLE_URL = re.compile(r"url\(['\"]?([^'\")]+)")
+
+
+def _baram_banner_images(soup) -> dict[str, str]:
+    """\ubc14\ub78c\uc758\ub098\ub77c \uba54\uc778 \uc0c1\ub2e8 \ud68c\uc804 \ubc30\ub108(<ul class="banner_item_wrap">)\ub294
+    \ud56d\ubaa9\ubcc4 href -> \ubc30\uacbd \uc774\ubbf8\uc9c0 \ub9e4\ud551\uc744 \uc228\uaca8\uc9c4 <li style="background:
+    url(...)"> \ud615\ud0dc\ub85c \uac00\uc9c0\uace0 \uc788\ub2e4(\uc9c1\uc811 \ud655\uc778). \uce90\uc2dc\uc0f5 \uac8c\uc2dc\ud310 \uc790\uccb4\uc5d0\ub294
+    \uc774\ubbf8\uc9c0\uac00 \uc804\ud600 \uc5c6\uace0, "\uc0c1\uc138 \ud398\uc774\uc9c0" URL\ub3c4 \uc2e4\uc81c\ub85c\ub294 \ub3d9\uc77c\ud55c \ubb38\uc11c\ub97c
+    \ud074\ub77c\uc774\uc5b8\ud2b8\uc5d0\uc11c \ub2e4\uc2dc \ub80c\ub354\ub9c1\ud558\ub294 SPA\ub77c \ub530\ub85c \uc811\uadfc\ud574\ub3c4 \uac19\uc740 \uc0c1\ud0dc\ub9cc
+    \ub3cc\ub824\uc90c(\uc9c1\uc811 \ud655\uc778) \u2014 \uc774 \ubc30\ub108 \ub9e4\ud551\uc774 \uc720\uc77c\ud55c \uc774\ubbf8\uc9c0 \ucd9c\ucc98\ub2e4. \uc0c1\ub2e8
+    \ubc30\ub108\ub294 \uce90\uc2dc\uc0f5/\uacf5\uc9c0/\uc774\ubca4\ud2b8\ub97c \ud1b5\ud2b8\uc5d0 \ub2f4\ub294 \uc0ac\uc774\ud2b8 \uc804\uccb4 \uacf5\uc6a9 \uc601\uc5ed\uc774\ub77c,
+    \ud574\ub2f9 \uc2dc\uc810\uc5d0 \ud68c\uc804\uc911\uc778 \uc18c\uc218\uc758 \ucd5c\uc2e0 \uac8c\uc2dc\ubb3c\ub9cc \ucee4\ubc84\ud55c\ub2e4 \u2014 \uadf8 \uc678\uc5d0\ub294
+    \uc6d0\ub798 \uc774\ubbf8\uc9c0\uac00 \uc5c6\ub294 \uac8c \uc815\uc0c1\uc774\ub2e4."""
+    images: dict[str, str] = {}
+    for li in soup.select("ul.banner_item_wrap li[style*=background]"):
+        anchor = li.select_one("a[href]")
+        match = _BARAM_BANNER_STYLE_URL.search(li.get("style", ""))
+        if anchor is None or not match:
+            continue
+        href = anchor.get("href", "").strip()
+        if href:
+            images.setdefault(href, match.group(1).strip())
+    return images
+
+
 def collect_baram_cashshop_events() -> list[EventCandidate]:
     """Collect \ubc14\ub78c\uc758\ub098\ub77c's official \uce90\uc2dc\uc0f5 \uc5c5\ub370\uc774\ud2b8 board posts (\ubcc4\ub3c4 \uac8c\uc2dc\ud310,
     Event/List\uc640\ub294 \ub2e4\ub978 URL) \u2014 2026-08-27("\ud48d\uc694\uc758\ubcf4\ubb3c\ud568 \ud310\ub9e4") \uc774\ud6c4(\ud3ec\ud568)
     \uc62c\ub77c\uc628 \uac8c\uc2dc\ubb3c\ub9cc \uc218\uc9d1\ud55c\ub2e4(\uba85\uc2dc\uc801 \uc694\uccad)."""
     soup = BeautifulSoup(_fetch_html(BARAM_CASHSHOP_URL), "html.parser")
+    banner_images = _baram_banner_images(soup)
     collected_at = datetime.now(timezone.utc).isoformat()
     candidates: list[EventCandidate] = []
     seen: set[str] = set()
@@ -485,14 +511,15 @@ def collect_baram_cashshop_events() -> list[EventCandidate]:
         published = _parse_cashshop_date(item.select_one("dd.date p"))
         if title_link is None or published is None or published < _BARAM_CASHSHOP_CUTOFF:
             continue
-        event_url = urljoin(BARAM_CASHSHOP_URL, title_link.get("href", "").strip())
+        href = title_link.get("href", "").strip()
+        event_url = urljoin(BARAM_CASHSHOP_URL, href)
         title = title_link.get_text(" ", strip=True)
         if not title or event_url in seen:
             continue
         seen.add(event_url)
         candidates.append(EventCandidate(
             publisher="NEXON Korea", game="\ubc14\ub78c\uc758\ub098\ub77c", title=title, event_url=event_url,
-            hero_image_url=None, starts_on=published.isoformat(), ends_on=None,
+            hero_image_url=banner_images.get(href), starts_on=published.isoformat(), ends_on=None,
             published_on=published.isoformat(), status="ongoing", event_format="board", collected_at=collected_at,
         ))
     return candidates

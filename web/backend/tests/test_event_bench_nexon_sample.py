@@ -3,6 +3,7 @@ from datetime import date
 from bs4 import BeautifulSoup
 
 from app.event_bench.nexon_sample import (
+    _baram_banner_images,
     _date_parts_md,
     _event_format,
     _extract_balanced_array,
@@ -111,6 +112,32 @@ def test_parse_cashshop_date_returns_none_for_missing_node():
 def test_parse_cashshop_date_returns_none_when_year_span_missing():
     node = _cashshop_date_node('<dd class="date"><p>08-27</p></dd>')
     assert _parse_cashshop_date(node) is None
+
+
+def test_baram_banner_images_maps_href_to_background_url():
+    # 실측 마크업: 회전 배너는 <li style="background: url('...')"> 안에
+    # 항목 href를 감싼 <a>가 들어있는 형태로, 캐시샵/공지 게시판 자체엔
+    # 이미지가 전혀 없다 — 이 배너 매핑만이 유일한 이미지 출처.
+    soup = BeautifulSoup(
+        """
+        <ul class="banner_item_wrap">
+            <li style="display: none; background: url('https://lwi.nexon.com/baram/banner/260910_a_sub.png') 50% 0% no-repeat;">
+                <a href="/CashshopUpdate/List/1/150117" target="_self"></a>
+            </li>
+            <li style="display: none;">
+                <a href="/CashshopUpdate/List/1/150199" target="_self"></a>
+            </li>
+        </ul>
+        """,
+        "html.parser",
+    )
+    images = _baram_banner_images(soup)
+    assert images == {"/CashshopUpdate/List/1/150117": "https://lwi.nexon.com/baram/banner/260910_a_sub.png"}
+
+
+def test_baram_banner_images_returns_empty_dict_when_no_banner_present():
+    soup = BeautifulSoup("<div>no banner here</div>", "html.parser")
+    assert _baram_banner_images(soup) == {}
 
 
 def test_thefinals_slug_matches_real_site_convention():
