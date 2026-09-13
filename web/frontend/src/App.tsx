@@ -6,6 +6,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { GeneratePage } from "./pages/GeneratePage";
 import { HistoryPage } from "./pages/HistoryPage";
+import { AccessLogPage } from "./pages/AccessLogPage";
 import { EventBenchPage } from "./features/event-bench/EventBenchPage";
 import { PreRegistrationPage } from "./features/preregistration/PreRegistrationPage";
 import { GameSitesPage } from "./features/game-sites/GameSitesPage";
@@ -29,6 +30,7 @@ function App() {
               <Route path="generate" element={<GeneratePage />} />
               <Route path="history" element={<HistoryPage />} />
               <Route path="sentiment-checker" element={<SentimentCheckerPage />} />
+              <Route path="access-logs" element={<AccessLogPage />} />
             </Route>
           </Route>
         </Routes>

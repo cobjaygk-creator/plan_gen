@@ -52,3 +52,31 @@ def test_health_check_does_not_require_login(client):
     res = client.get("/health")
     assert res.status_code == 200
     assert res.json() == {"ok": True}
+
+
+def test_access_logs_require_admin_login(client, make_user):
+    res = client.get("/auth/access-logs")
+    assert res.status_code == 401  # 아예 로그인하지 않은 경우
+
+    make_user(email="kim@team.com", password="correcthorse")
+    client.post("/auth/login", json={"email": "kim@team.com", "password": "correcthorse"})
+    res = client.get("/auth/access-logs")
+    assert res.status_code == 403  # 로그인은 했지만 관리자 계정이 아닌 경우
+
+
+def test_login_records_access_log_visible_only_to_admin(client, make_user, monkeypatch):
+    import app.deps as deps_module
+    monkeypatch.setattr(deps_module, "ADMIN_EMAIL", "admin@team.com")
+
+    make_user(email="admin@team.com", password="correcthorse", name="관리자")
+    make_user(email="kim@team.com", password="correcthorse", name="김기획")
+
+    client.post("/auth/login", json={"email": "kim@team.com", "password": "correcthorse"})
+    client.post("/auth/logout")
+    client.post("/auth/login", json={"email": "admin@team.com", "password": "correcthorse"})
+
+    res = client.get("/auth/access-logs")
+    assert res.status_code == 200
+    emails = [row["email"] for row in res.json()]
+    assert emails == ["admin@team.com", "kim@team.com"]  # 최신순
+    assert all(row["ip_address"] for row in res.json())

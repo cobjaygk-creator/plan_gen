@@ -17,6 +17,15 @@ class UserOut(BaseModel):
     created_at: datetime
 
 
+class AccessLogOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    email: str
+    ip_address: str
+    occurred_at: datetime
+
+
 class GenerationOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 

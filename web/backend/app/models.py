@@ -34,6 +34,21 @@ class User(Base):
     generations: Mapped[list["Generation"]] = relationship(back_populates="user")
 
 
+class AccessLog(Base):
+    """One row per successful login — 관리자 전용 접속 통계 화면이 보여줄
+    전부다(접속 시간·IP). 로그인 시점에만 기록하므로 세션이 살아있는 동안의
+    개별 페이지 이동까지는 잡지 않는다 — "접속 통계"로 요청받은 범위가
+    딱 그 정도였고, 매 요청마다 기록하면 트래픽 대비 테이블만 불필요하게
+    커진다."""
+    __tablename__ = "access_logs"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"))
+    email: Mapped[str] = mapped_column(String(255))  # 탈퇴 계정이어도 기록은 그대로 읽히도록 비정규화
+    ip_address: Mapped[str] = mapped_column(String(64))
+    occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)
+
+
 class Generation(Base):
     __tablename__ = "generations"
 

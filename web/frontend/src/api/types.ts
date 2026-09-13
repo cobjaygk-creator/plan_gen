@@ -23,3 +23,10 @@ export interface ProgressEvent {
   step: number;
   error_message: string | null;
 }
+
+export interface AccessLog {
+  id: number;
+  email: string;
+  ip_address: string;
+  occurred_at: string;
+}

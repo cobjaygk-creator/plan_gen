@@ -1,6 +1,7 @@
 from fastapi import Depends, HTTPException, Request, status
 from sqlalchemy.orm import Session
 
+from .config import ADMIN_EMAIL
 from .database import get_db
 from .models import User
 
@@ -13,6 +14,17 @@ def get_current_user(request: Request, db: Session = Depends(get_db)) -> User:
     if user is None:
         request.session.clear()  # stale session pointing at a deleted account
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "로그인이 필요합니다.")
+    return user
+
+
+def require_admin(user: User = Depends(get_current_user)) -> User:
+    """접속 통계처럼 로그인한 다른 계정에게까지 보여주면 안 되는 화면용 —
+    프런트의 AdminRoute(ADMIN_EMAIL 기준)와 같은 계정 하나만 통과시킨다.
+    기존 관리자 전용 화면(기획서 생성 등)은 로그인만 요구하고 프런트에서만
+    숨겨왔지만, 다른 계정의 접속 IP가 노출되는 이 화면은 서버 쪽에서도
+    실제로 막는다."""
+    if user.email != ADMIN_EMAIL:
+        raise HTTPException(status.HTTP_403_FORBIDDEN, "관리자만 볼 수 있습니다.")
     return user
 
 
