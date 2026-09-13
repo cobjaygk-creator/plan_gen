@@ -326,16 +326,25 @@ def _period_ranked_issues(
 
 
 def _period_key_summary_details(ranked: list[dict], limit: int = 2) -> list[dict]:
-    eligible = [
+    core_candidates = [
         item for item in ranked
-        if (
-            item["quality"].synthesis_eligible
-            or has_strong_ai_technical_signal(item["issue"], item["members"], item["quality"].established_media_count)
-        )
-        and is_core_summary_candidate(item["issue"], item["members"])
+        if is_core_summary_candidate(item["issue"], item["members"])
         and not item["hasNegativeFeedback"]
         and not item["matchedRule"]
     ]
+    eligible = [
+        item for item in core_candidates
+        if item["quality"].synthesis_eligible
+        or has_strong_ai_technical_signal(item["issue"], item["members"], item["quality"].established_media_count)
+    ]
+    if not eligible and core_candidates:
+        # 교차 확인·공식 출처 근거를 갖춘 이슈가 하나도 없는 날에도, GAME/AI
+        # 코너 자체가 며칠씩 통째로 비어있는 게 더 나쁘다 — 홍보성이 아닌
+        # (is_core_summary_candidate를 통과한) 단일 출처 이슈라도 있으면
+        # confidence를 낮춘 채(quality.confidence가 이미 그렇게 표시한다)
+        # 그대로 채운다. ranked는 이미 점수순 정렬이라 core_candidates도
+        # 그 순서를 유지한다.
+        eligible = core_candidates
     if not eligible:
         candidate_count = len(ranked)
         return [{

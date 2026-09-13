@@ -85,14 +85,20 @@ def test_latest_returns_serialized_brief_matching_frontend_shape(client, make_us
 
     assert body["briefDate"] == "2026-08-10"
     assert body["generatedAt"].endswith("+00:00")
-    assert body["game"]["headline"] == "교차 확인된 핵심 이슈가 아직 없습니다."
-    assert body["game"]["keySummaries"] == ["교차 확인된 핵심 이슈가 아직 없습니다."]
+    # 단일 출처지만 홍보성이 아닌(is_core_summary_candidate 통과) 유일한
+    # GAME 이슈라, "교차 확인된 핵심 이슈가 아직 없습니다" 안내문 대신
+    # 그 이슈 자체가 핵심 이슈 자리를 채운다 — GAME/AI 코너가 며칠씩
+    # 통째로 비어있는 것보다 낫다는 판단(신뢰도는 confidence: WEAK로
+    # 계속 낮게 표시된다).
+    assert body["game"]["headline"] == "이슈 요약"
+    assert body["game"]["keySummaries"] == ["이슈 요약"]
     assert body["game"]["keySummaryDetails"][0]["articleCount"] == 1
+    assert body["game"]["keySummaryDetails"][0]["confidence"] == "WEAK"
     assert body["game"]["observations"] == []
     assert body["game"]["promotions"] == []
     assert body["game"]["closedObservations"] == []
-    assert "관찰 후보 1건" in body["game"]["keySummaryDetails"][0]["selectionReason"]
-    assert body["game"]["briefing"] == ["교차 확인된 핵심 이슈가 아직 없습니다."]
+    assert "단일 출처" in body["game"]["keySummaryDetails"][0]["selectionReason"]
+    assert body["game"]["briefing"] == ["이슈 요약"]
     assert body["game"]["watchList"] == []
     assert body["game"]["changes"][0]["sources"][0]["title"] == "관련 기사"
     assert body["ai"]["headline"] == "교차 확인된 핵심 이슈가 아직 없습니다."
@@ -323,6 +329,65 @@ def test_ai_headline_prefers_established_media_tech_scoop_over_official_pr(db_fa
 
     assert details[0]["issueId"] == tech_issue.id
     assert not any(item["issueId"] == pr_issue.id for item in details)
+
+
+def test_key_summary_falls_back_to_single_source_issue_when_none_are_corroborated(db_factory):
+    # 며칠씩 GAME 코너가 "교차 확인된 핵심 이슈가 아직 없습니다"로만 비어
+    # 있던 문제 — 홍보성이 아닌 단일 출처 이슈라도 있으면 그걸로 채운다.
+    db = db_factory()
+    now = datetime.now(timezone.utc)
+    issue = Issue(
+        category="GAME", title="신규 서버 오픈 발표", summary="한 매체가 신규 서버 오픈을 단독 보도했다.",
+        importance_score=55.0, first_seen_at=now, last_seen_at=now,
+    )
+    db.add(issue)
+    db.flush()
+    article = Article(
+        source="단독매체", source_type="media", category="GAME", is_relevant=True,
+        importance_score=55.0, keywords="[]", entities="[]", published_at=now,
+        title="신규 서버 오픈 발표", url="https://example.com/server-launch",
+    )
+    db.add(article)
+    db.flush()
+    db.add(IssueArticle(issue_id=issue.id, article_id=article.id))
+    db.commit()
+
+    ranked = _period_ranked_issues(db, "GAME", now - timedelta(days=1), now + timedelta(minutes=1))
+    assert ranked[0]["quality"].synthesis_eligible is False  # 전제: 교차 확인도 공식 출처도 아니다
+
+    details = _period_key_summary_details(ranked)
+
+    assert details[0]["issueId"] == issue.id
+    assert details[0].get("noSignal") is None
+    assert details[0]["confidence"] == "WEAK"
+
+
+def test_key_summary_still_shows_no_signal_when_only_promotional_issues_exist(db_factory):
+    # 홍보성 콘텐츠만 있는 날엔 여전히 안내 문구를 보여준다 — fallback이
+    # is_core_summary_candidate 필터 자체를 우회하면 안 된다.
+    db = db_factory()
+    now = datetime.now(timezone.utc)
+    issue = Issue(
+        category="GAME", title="배우 기용 홍보 화보 공개", summary="게임사가 유명 배우를 홍보대사로 발탁해 화보를 공개했다.",
+        importance_score=50.0, first_seen_at=now, last_seen_at=now,
+    )
+    db.add(issue)
+    db.flush()
+    article = Article(
+        source="단독매체", source_type="media", category="GAME", is_relevant=True,
+        importance_score=50.0, keywords="[]", entities="[]", published_at=now,
+        title="배우 기용 홍보 화보 공개", url="https://example.com/celeb-promo",
+    )
+    db.add(article)
+    db.flush()
+    db.add(IssueArticle(issue_id=issue.id, article_id=article.id))
+    db.commit()
+
+    ranked = _period_ranked_issues(db, "GAME", now - timedelta(days=1), now + timedelta(minutes=1))
+    details = _period_key_summary_details(ranked)
+
+    assert details[0]["text"] == "교차 확인된 핵심 이슈가 아직 없습니다."
+    assert details[0]["noSignal"] is True
 
 
 def test_not_core_feedback_excludes_issue_from_key_summary(client, make_user, db_factory):
