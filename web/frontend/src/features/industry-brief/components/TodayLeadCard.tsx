@@ -34,18 +34,19 @@ function buildGrounds(category: CategoryBrief): Array<{ label: string; body: str
  * ("...공개했다.와 교차 확인된 핵심 이슈가 아직 없습니다." 같은) 말이
  * 안 되는 조합이 나온다. 대신 게임/AI/게임×AI를 각각 독립된 슬라이드로
  * 두고 돌아가며 보여준다 — 판단할 이슈가 없는 카테고리는 슬라이드
- * 자체를 건너뛴다. */
+ * 자체를 건너뛴다. GAME만은 예외 — 게임 산업 코너가 매번 빠지는 걸
+ * 원치 않는다는 요청에 따라 hasSignal과 무관하게 항상 슬라이드를
+ * 채운다(신호가 약한 날엔 game.headline이 안내 문구로 대체된다). */
 export function TodayLeadCard({ brief }: { brief: IndustryBrief }) {
-  const slides: Slide[] = [];
-  if (brief.game.hasSignal) {
-    slides.push({
+  const slides: Slide[] = [
+    {
       key: "game",
       categoryLabel: "GAME",
       color: "var(--cat-game)",
       headline: brief.game.headline,
       grounds: buildGrounds(brief.game),
-    });
-  }
+    },
+  ];
   if (brief.ai.hasSignal) {
     slides.push({
       key: "ai",
