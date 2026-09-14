@@ -8,7 +8,7 @@ from .analyzer import analyze_pending
 from .collector import collect
 from .service import dashboard,save_snapshot,issue_detail
 from .ai_analyzer import analyze_with_ai
-from .comment_collector import collect_comments
+from .comment_collector import collect_comments,collect_dc_comments
 router=APIRouter(prefix="/sentiment-checker",tags=["sentiment-checker"])
 lock=Lock()
 @router.get("/dashboard")
@@ -24,7 +24,7 @@ def get_issue_detail(key:str,hours:int=168,db:Session=Depends(get_db),user:User=
 def refresh(db:Session=Depends(get_db),user:User=Depends(get_current_user)):
     if not lock.acquire(False): raise HTTPException(409,"Collection already running")
     try:
-        collected=collect(db); comment_result=collect_comments(db,post_limit=30); analyzed=analyze_pending(db); ai=analyze_with_ai(db,limit=25)
+        collected=collect(db); comment_result=collect_comments(db,post_limit=30); dc_comment_result=collect_dc_comments(db,post_limit=40); analyzed=analyze_pending(db); ai=analyze_with_ai(db,limit=60)
         for period in (24,72,168,720): save_snapshot(db,period)
-        return {"collection":collected,"comments":comment_result,"analyzed":analyzed,"ai":ai,"dashboard":dashboard(db,24)}
+        return {"collection":collected,"comments":comment_result,"dc_comments":dc_comment_result,"analyzed":analyzed,"ai":ai,"dashboard":dashboard(db,24)}
     finally: lock.release()

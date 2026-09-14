@@ -83,7 +83,11 @@ def latale_candidates(pages:int=2)->list[Candidate]:
 def _content(item:Candidate)->str:
     try:
         soup=_get(item.url)
-        node=soup.select_one(".writing_view_box" if item.source=="DCINSIDE" else ".board-content")
+        # DCINSIDE_PRIRING(mgallery)도 DCInside 플랫폼 자체라 같은
+        # .writing_view_box 클래스를 쓴다(직접 확인) — DCINSIDE 문자열만
+        # 검사하던 예전 코드는 PRIRING 게시글 본문을 항상 빈 문자열로
+        # 만들고 있었다.
+        node=soup.select_one(".writing_view_box" if item.source.startswith("DCINSIDE") else ".board-content")
         return node.get_text(" ",strip=True)[:10000] if node else ""
     except Exception: return ""
 
@@ -109,16 +113,23 @@ def collect_references(db:Session,pages:int=2)->dict:
         else: row.title=title; row.url=url; row.published_at=published
     db.commit(); return {"found":len(found),"new":new,"errors":errors}
 
-def collect(db:Session,pages:int=3,detail_limit:int=30)->dict:
+def collect(db:Session,pages:int=3,detail_limit:int=90)->dict:
     candidates=[]; errors=[]
     for fn in (dc_candidates,priring_candidates,latale_candidates):
         try: candidates.extend(fn(pages if fn in (dc_candidates,priring_candidates) else min(2,pages)))
         except Exception as exc: errors.append(f"{fn.__name__}: {type(exc).__name__}")
     new=0; updated=0; details=0
+    # 소스마다 예산을 나눠서, 게시글이 제일 많은 DCInside 하나가 전체
+    # detail_limit을 다 써버려 나머지 소스는 본문을 하나도 못 가져오는
+    # 걸 막는다 — 예전엔 LATALE_OFFICIAL만 본문을 가져왔는데, 실제 민심이
+    # 가장 많이 드러나는 DCInside/프리링 게시글은 제목만 수집되고 있었다.
+    per_source_limit=max(1,detail_limit//3); details_by_source:dict[str,int]={}
     for item in candidates:
         post=db.execute(select(SentimentPost).where(SentimentPost.source==item.source,SentimentPost.post_id==item.post_id)).scalar_one_or_none()
         if post is None:
-            if item.source=="LATALE_OFFICIAL" and details<detail_limit: item.content=_content(item); details+=1; time.sleep(.18)
+            used=details_by_source.get(item.source,0)
+            if used<per_source_limit and details<detail_limit:
+                item.content=_content(item); details+=1; details_by_source[item.source]=used+1; time.sleep(.18)
             post=SentimentPost(source=item.source,post_id=item.post_id,title=item.title,content=item.content,author_hash=hashlib.sha256(f"{item.source}:{item.author or ''}".encode()).hexdigest() if item.author else None,url=item.url,created_at=item.created_at,views=item.views,comments=item.comments,upvotes=item.upvotes)
             db.add(post); new+=1
         else:
