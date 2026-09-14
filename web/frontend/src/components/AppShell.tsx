@@ -150,7 +150,7 @@ export function AppShell() {
               </NavLink>
               <NavLink to="/access-logs" className={({ isActive }) => navClass({ isActive }) + " lnb-bottom-item"}>
                 <span className="ic"><LogIcon /></span>
-                접속 통계
+                log
               </NavLink>
             </>
           )}
