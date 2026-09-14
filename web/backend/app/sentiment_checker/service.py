@@ -1,10 +1,10 @@
 from __future__ import annotations
-import math
+import json,math
 from collections import Counter
 from datetime import datetime,timedelta,timezone
 from sqlalchemy import func,select
 from sqlalchemy.orm import Session
-from .models import SentimentPost,SentimentReference,SentimentSnapshot,SentimentAIAnalysis,SentimentComment
+from .models import SentimentPost,SentimentReference,SentimentSnapshot,SentimentAIAnalysis,SentimentComment,SentimentDashboardCache
 from .clustering import cluster_posts,representative_name
 # ALL_STORED 폴백(교차 확인된 이슈가 하나도 없을 때 이력 전체를 다시
 # 클러스터링)이 보관 기간이 길어질수록 O(n^2) 비교 비용을 한도 없이
@@ -82,10 +82,35 @@ def dashboard(db:Session,hours:int=24):
  timeline=[{"observed_at":x.observed_at.isoformat(),"score":x.sentiment_score,"count":x.post_count} for x in reversed(snapshots)]
  ai_ids={x.post_db_id for x in db.execute(select(SentimentAIAnalysis)).scalars().all()}; ai_analyzed=sum(p.id in ai_ids for p in current)
  return {"generated_at":now.isoformat(),"period_hours":hours,"analysis_basis":analysis_basis,"analysis_count":len(analysis_posts),"metrics":{"stored_total":stored_total,"collected":len(current),"eligible":sum(p.score_eligible for p in current),"issue_count":len(issues),"ai_analyzed":ai_analyzed,"ai_pending":max(0,len(current)-ai_analyzed),"analysis_coverage":round(ai_analyzed*100/max(1,len(current))),"score":score,"change":round(score-prev_score,1),"positive":sum(p.sentiment=="POSITIVE" for p in current),"neutral":sum(p.sentiment=="NEUTRAL" for p in current),"negative":sum(p.sentiment=="NEGATIVE" for p in current)},"brief":brief,"comment_metrics":{"count":len(comments),"positive":comment_sentiments["POSITIVE"],"neutral":comment_sentiments["NEUTRAL"],"negative":comment_sentiments["NEGATIVE"],"agree":comment_stances["AGREE"],"disagree":comment_stances["DISAGREE"],"stance_neutral":comment_stances["NEUTRAL"]},"issues":top,"spikes":[i for i in issues if i["growth"]>=2][:5],"sources":source_stats,"categories":[{"name":k,"count":v} for k,v in categories.most_common(8)],"observations":observations,"references":related,"timeline":timeline,"recent":[{"title":p.title,"url":p.url,"source":SOURCE_LABELS.get(p.source,p.source),"created_at":p.created_at.isoformat() if p.created_at else None,"sentiment":p.sentiment,"category":CATEGORY_LABELS.get(p.category,"\uae30\ud0c0")} for p in sorted(current,key=lambda p:_aware(p.created_at) or datetime.min.replace(tzinfo=timezone.utc),reverse=True)[:12]]}
-def save_snapshot(db:Session,hours:int=24):
- data=dashboard(db,hours); m=data["metrics"]
+def save_snapshot(db:Session,hours:int=24,data:dict|None=None):
+ data=data if data is not None else dashboard(db,hours); m=data["metrics"]
  row=SentimentSnapshot(period_hours=hours,post_count=m["collected"],eligible_count=m["eligible"],sentiment_score=m["score"],positive_count=m["positive"],neutral_count=m["neutral"],negative_count=m["negative"])
  db.add(row);db.commit();return row
+
+
+def save_dashboard_cache(db:Session,hours:int=24)->dict:
+ """dashboard() 계산 결과를 기간별로 캐싱한다 — "수동 갱신"이 실제로
+ 새 데이터를 모았을 때만 호출한다. 클러스터링을 포함한 무거운 계산이라,
+ 페이지를 열 때마다 매번 다시 계산하면(load_dashboard_cache가 아니라
+ 이 함수를 직접 쓰면) 수집 소스가 늘어난 뒤로는 20~30초씩 걸린다."""
+ data=dashboard(db,hours)
+ payload=json.dumps(data,ensure_ascii=False)
+ row=db.get(SentimentDashboardCache,hours)
+ if row is None:
+  db.add(SentimentDashboardCache(period_hours=hours,payload=payload))
+ else:
+  row.payload=payload; row.computed_at=datetime.now(timezone.utc)
+ db.commit()
+ return data
+
+
+def load_dashboard_cache(db:Session,hours:int=24)->dict:
+ """캐시가 있으면 그대로 돌려준다(즉시 응답) — 아직 한 번도 갱신된 적
+ 없는 최초 상태일 때만 예외적으로 직접 계산해 채워둔다."""
+ row=db.get(SentimentDashboardCache,hours)
+ if row is not None:
+  return json.loads(row.payload)
+ return save_dashboard_cache(db,hours)
 
 
 def issue_detail(db:Session,key:str,hours:int=168):

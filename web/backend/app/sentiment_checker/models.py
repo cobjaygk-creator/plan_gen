@@ -67,6 +67,19 @@ class SentimentSnapshot(Base):
     negative_count: Mapped[int] = mapped_column(Integer, default=0)
 
 
+class SentimentDashboardCache(Base):
+    """dashboard()의 계산 결과(JSON)를 기간(period_hours)별로 캐싱한다.
+    클러스터링(clustering.py의 O(n^2) 비교)을 포함한 무거운 계산이라,
+    페이지를 열 때마다(또는 새로고침할 때마다) 매번 처음부터 다시 계산하면
+    수집 소스가 늘어난 뒤로는 20~30초씩 걸린다 — "수동 갱신"을 눌러
+    실제로 새 데이터를 모았을 때만 다시 계산하고, 그 사이의 조회는 이
+    캐시를 그대로 돌려준다."""
+    __tablename__ = "sentiment_checker_dashboard_cache"
+    period_hours: Mapped[int] = mapped_column(Integer, primary_key=True)
+    payload: Mapped[str] = mapped_column(Text)
+    computed_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+
 class SentimentComment(Base):
     __tablename__ = "sentiment_checker_comments"
     __table_args__ = (UniqueConstraint("post_db_id", "comment_id", name="uq_sentiment_post_comment"),)

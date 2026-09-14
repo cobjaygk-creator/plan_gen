@@ -45,6 +45,31 @@ def test_dashboard_all_stored_fallback_is_capped(monkeypatch, db_factory):
  assert result["analysis_count"] == 2  # 클러스터링 입력은 상한만큼만
 
 
+def test_dashboard_get_serves_cached_result_until_refresh(client, make_user, db_factory):
+ # "새로고침할 때마다 20~30초씩 걸린다" 피드백 확인 — GET은 캐시를 그대로
+ # 돌려주고, 실제 재계산은 POST /refresh에서만 일어나야 한다.
+ make_user(email="cache@example.com", password="hunter2")
+ client.post("/auth/login", json={"email": "cache@example.com", "password": "hunter2"})
+ db = db_factory()
+ db.add(post("1", "첫 이슈"))
+ db.commit()
+
+ first = client.get("/sentiment-checker/dashboard?hours=24").json()
+ assert first["metrics"]["collected"] == 1
+
+ db.add(post("2", "두번째 이슈"))
+ db.commit()
+ # 새 게시글을 더 넣어도 GET은 캐시를 그대로 돌려준다 — refresh 전까지는
+ # collected가 그대로 1이어야 한다.
+ cached = client.get("/sentiment-checker/dashboard?hours=24").json()
+ assert cached["metrics"]["collected"] == 1
+
+ from app.sentiment_checker.service import save_dashboard_cache
+ save_dashboard_cache(db, 24)
+ refreshed = client.get("/sentiment-checker/dashboard?hours=24").json()
+ assert refreshed["metrics"]["collected"] == 2
+
+
 def test_issue_detail_route_returns_grounded_posts(client,make_user,db_factory):
  make_user(email="detail@example.com",password="hunter2")
  assert client.post("/auth/login",json={"email":"detail@example.com","password":"hunter2"}).status_code==200
