@@ -50,14 +50,6 @@ function PulseIcon() {
     </svg>
   );
 }
-function LogIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="3" y="4" width="18" height="16" rx="2" />
-      <path d="M7 9h10M7 13h10M7 17h6" />
-    </svg>
-  );
-}
 function ChevronDown() {
   return (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -144,13 +136,9 @@ export function AppShell() {
                 </span>
                 생성 이력
               </NavLink>
-              <NavLink to="/sentiment-checker" className={navClass}>
+              <NavLink to="/sentiment-checker" className={({ isActive }) => navClass({ isActive }) + " lnb-bottom-item"}>
                 <span className="ic"><PulseIcon /></span>
                 {"민심 체크기"}
-              </NavLink>
-              <NavLink to="/access-logs" className={({ isActive }) => navClass({ isActive }) + " lnb-bottom-item"}>
-                <span className="ic"><LogIcon /></span>
-                log
               </NavLink>
             </>
           )}
