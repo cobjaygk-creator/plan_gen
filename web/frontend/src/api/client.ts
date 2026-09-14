@@ -1,4 +1,4 @@
-import type { User, Generation, AccessLog } from "./types";
+import type { User, Generation, AccessLog, SiteVisit } from "./types";
 
 export class ApiError extends Error {
   status: number;
@@ -38,6 +38,7 @@ export const api = {
   logout: () => request<{ ok: boolean }>("/auth/logout", { method: "POST" }),
   me: () => request<User>("/auth/me"),
   listAccessLogs: () => request<AccessLog[]>("/auth/access-logs"),
+  listSiteVisits: () => request<SiteVisit[]>("/auth/site-visits"),
 
   listGenerations: () => request<Generation[]>("/generations"),
   getGeneration: (id: number) => request<Generation>(`/generations/${id}`),

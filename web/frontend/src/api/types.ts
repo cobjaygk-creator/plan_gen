@@ -30,3 +30,10 @@ export interface AccessLog {
   ip_address: string;
   occurred_at: string;
 }
+
+export interface SiteVisit {
+  id: number;
+  ip_address: string;
+  path: string;
+  occurred_at: string;
+}

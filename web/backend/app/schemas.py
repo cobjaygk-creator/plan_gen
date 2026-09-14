@@ -26,6 +26,15 @@ class AccessLogOut(BaseModel):
     occurred_at: datetime
 
 
+class SiteVisitOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: int
+    ip_address: str
+    path: str
+    occurred_at: datetime
+
+
 class GenerationOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 

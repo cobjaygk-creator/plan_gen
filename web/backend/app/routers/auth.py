@@ -4,8 +4,8 @@ from sqlalchemy.orm import Session
 
 from ..database import get_db
 from ..deps import get_current_user, require_admin
-from ..models import AccessLog, User
-from ..schemas import AccessLogOut, LoginRequest, UserOut
+from ..models import AccessLog, SiteVisit, User
+from ..schemas import AccessLogOut, LoginRequest, SiteVisitOut, UserOut
 from ..security import verify_password
 
 router = APIRouter(prefix="/auth", tags=["auth"])
@@ -33,6 +33,15 @@ def login(body: LoginRequest, request: Request, db: Session = Depends(get_db)):
 def list_access_logs(user: User = Depends(require_admin), db: Session = Depends(get_db)):
     return db.scalars(
         select(AccessLog).order_by(AccessLog.occurred_at.desc()).limit(_ACCESS_LOG_LIMIT)
+    ).all()
+
+
+@router.get("/site-visits", response_model=list[SiteVisitOut])
+def list_site_visits(user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    """로그인 없이 이용되는 시스템의 실제 접속 통계 — main.py의 SPA
+    캐치올 라우트가 기록해둔 방문(IP·시간·경로)을 최신순으로 보여준다."""
+    return db.scalars(
+        select(SiteVisit).order_by(SiteVisit.occurred_at.desc()).limit(_ACCESS_LOG_LIMIT)
     ).all()
 
 
