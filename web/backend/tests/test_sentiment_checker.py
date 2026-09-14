@@ -157,6 +157,26 @@ def test_collect_dc_comments_persists_and_skips_deleted(monkeypatch, db_factory)
  assert result["found"]==1 and result["new"]==1
 
 
+def test_collect_dc_comments_survives_duplicate_comment_across_pages(monkeypatch, db_factory):
+ # \uc2e4\uc81c \uc6b4\uc601\uc5d0\uc11c \uacaa\uc740 500 \uc5d0\ub7ec\uc758 \uc6d0\uc778 \u2014 \ud398\uc774\uc9c0\ub124\uc774\uc158 \uc911 \uac24\ub7ec\ub9ac\uc5d0 \uc0c8
+ # \ub313\uae00\uc774 \ub2ec\ub824 \ubaa9\ub85d\uc774 \ubc00\ub9ac\uba74 \uac19\uc740 \ub313\uae00\uc774 \ub450 \ud398\uc774\uc9c0\uc5d0 \uac78\uccd0 \uc911\ubcf5
+ # \ubc18\ud658\ub41c\ub2e4. autoflush=False\ub77c \uac19\uc740 \uac8c\uc2dc\uae00 \ucc98\ub9ac \uc911\uc5d4 DB \uc870\ud68c\ub85c \uc911\ubcf5\uc744
+ # \ubabb \uc7a1\uc544 UNIQUE \uc81c\uc57d \uc704\ubc18\uc774 \ub0ac\uace0, \uadf8 \uc608\uc678\uac00 \uc7a1\ud788\uc9c0 \uc54a\uc544 \ub098\uba38\uc9c0
+ # \uac8c\uc2dc\uae00 \ucc98\ub9ac\u00b7\uc804\uccb4 /refresh \uc751\ub2f5\uae4c\uc9c0 \ud1b5\uc9f8\ub85c \uc2e4\ud328\ud588\ub2e4.
+ db=db_factory()
+ post=SentimentPost(source="DCINSIDE",post_id="1",title="t",url="https://x/1",created_at=datetime.now(timezone.utc))
+ db.add(post);db.commit();db.refresh(post)
+
+ duplicate_item={"no":"1","memo":"\uac19\uc740 \ub313\uae00","user_id":"a","reg_date":"09.14 08:53:06","is_delete":"0","del_yn":"N"}
+ monkeypatch.setattr(comment_collector,"_fetch_dc_comments",lambda p:[duplicate_item,dict(duplicate_item)])
+
+ result=comment_collector.collect_dc_comments(db,post_limit=10)
+
+ comments=db.query(SentimentComment).all()
+ assert len(comments)==1  # \ud06c\ub798\uc2dc \uc5c6\uc774 \uc911\ubcf5\uc740 \ud55c \uac74\uc73c\ub85c \uc815\ub9ac\ub428
+ assert result["errors"]==[]
+
+
 def test_naver_cafe_candidates_parses_article_list_and_stops_pagination(monkeypatch):
  # \uac8c\uc2dc\uae00 \ubaa9\ub85d\uc740 \ub85c\uadf8\uc778 \uc5c6\uc774 \uacf5\uac1c API\ub85c \uc870\ud68c\ub418\uc9c0\ub9cc, \ubcf8\ubb38\u00b7\ub313\uae00\uc740
  # \ub85c\uadf8\uc778\ud574\uc57c\ub9cc \ubcf4\uc5ec\uc11c(\uc9c1\uc811 \ud655\uc778) \uc81c\ubaa9\ub9cc \uc218\uc9d1\ud55c\ub2e4.

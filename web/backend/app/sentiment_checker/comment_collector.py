@@ -44,13 +44,16 @@ def collect_comments(db:Session,post_limit:int=30)->dict:
  for post in posts:
   try:pages=_fetch_pages(post)
   except Exception as exc:errors.append(f"{post.post_id}:{type(exc).__name__}");continue
-  count=0
+  count=0;seen_cids:set[str]=set()
   for page in pages:
    for node in page.select("section.comment:not(.write)"):
     content_node=node.select_one(".content-wrap");author_node=node.select_one(".user-nickname");date_node=node.select_one("time")
     if not content_node:continue
     content=content_node.get_text(" ",strip=True);author=author_node.get_text(" ",strip=True) if author_node else "";created=_date(date_node.get_text(strip=True) if date_node else "")
-    cid=hashlib.sha256(f"{post.id}|{author}|{created}|{content}".encode()).hexdigest();sentiment,value,stance=_analyze(content)
+    cid=hashlib.sha256(f"{post.id}|{author}|{created}|{content}".encode()).hexdigest()
+    if cid in seen_cids:continue  # 페이지 경계가 겹칠 때 같은 댓글이 두 번 잡히는 걸 방지
+    # (autoflush=False라 이번 반복에서 이미 add()한 항목은 아래 select로 안 보인다).
+    seen_cids.add(cid);sentiment,value,stance=_analyze(content)
     row=db.execute(select(SentimentComment).where(SentimentComment.post_db_id==post.id,SentimentComment.comment_id==cid)).scalar_one_or_none()
     like_node=node.select_one(".like button");upvotes=int(re.sub(r"\D","",like_node.get_text()) or 0) if like_node else 0
     if row is None:
@@ -58,7 +61,10 @@ def collect_comments(db:Session,post_limit:int=30)->dict:
     else:row.upvotes=upvotes;row.sentiment=sentiment;row.sentiment_value=value;row.stance=stance;updated+=1
     found+=1;count+=1
   post.comments=max(post.comments,count)
-  db.commit();time.sleep(.2)
+  try:db.commit()
+  except Exception as exc:
+   db.rollback();errors.append(f"{post.post_id}:commit:{type(exc).__name__}")
+  time.sleep(.2)
  return {"posts_checked":len(posts),"found":found,"new":new,"updated":updated,"errors":errors}
 
 # DCInside 댓글: 라테일 갤러리(DCINSIDE)/프리링(DCINSIDE_PRIRING)에는 공식
@@ -107,18 +113,29 @@ def collect_dc_comments(db:Session,post_limit:int=40)->dict:
  for post in posts:
   try:items=_fetch_dc_comments(post)
   except Exception as exc:errors.append(f"{post.post_id}:{type(exc).__name__}");continue
-  count=0
+  count=0;seen_cids:set[str]=set()
   for item in items:
    if item.get("is_delete")=="1" or item.get("del_yn")=="Y":continue
    content=BeautifulSoup(item.get("memo") or "","html.parser").get_text(" ",strip=True)
    if not content:continue
    author=item.get("user_id") or item.get("name") or "";created=_dc_comment_date(item.get("reg_date"))
-   cid=hashlib.sha256(f"{post.id}|{item.get('no')}".encode()).hexdigest();sentiment,value,stance=_analyze(content)
+   cid=hashlib.sha256(f"{post.id}|{item.get('no')}".encode()).hexdigest()
+   if cid in seen_cids:continue  # 실제 라이브 운영에서 확인: 페이지네이션 중 갤러리에
+   # 새 댓글이 달려 목록이 밀리면 같은 댓글이 두 페이지에 걸쳐 중복 반환될 수 있다.
+   # autoflush=False라 이번 반복에서 이미 add()한 항목은 아래 select로 안 보이므로,
+   # DB 조회만으로는 이 중복을 못 잡아 UNIQUE 제약 위반으로 commit이 통째로 실패했다.
+   seen_cids.add(cid);sentiment,value,stance=_analyze(content)
    row=db.execute(select(SentimentComment).where(SentimentComment.post_db_id==post.id,SentimentComment.comment_id==cid)).scalar_one_or_none()
    if row is None:
     db.add(SentimentComment(post_db_id=post.id,comment_id=cid,source=post.source,content=content[:5000],author_hash=hashlib.sha256(f"{post.source}:{author}".encode()).hexdigest() if author else None,created_at=created,upvotes=0,sentiment=sentiment,sentiment_value=value,stance=stance));new+=1
    else:row.sentiment=sentiment;row.sentiment_value=value;row.stance=stance;updated+=1
    found+=1;count+=1
   post.comments=max(post.comments,count)
-  db.commit();time.sleep(.2)
+  try:db.commit()
+  except Exception as exc:
+   # 이 게시글 하나 때문에 전체 /refresh가 500으로 죽으면 안 된다(실제로
+   # 겪음: 중복 댓글 하나가 UNIQUE 제약을 위반해서 나머지 소스 수집·AI
+   # 분석까지 전부 응답이 안 나가고 날아갔다) — 이 게시글만 건너뛴다.
+   db.rollback();errors.append(f"{post.post_id}:commit:{type(exc).__name__}")
+  time.sleep(.2)
  return {"posts_checked":len(posts),"found":found,"new":new,"updated":updated,"errors":errors}
