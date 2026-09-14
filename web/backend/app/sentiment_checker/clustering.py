@@ -24,10 +24,14 @@ def _similar(a:SentimentPost,b:SentimentPost)->bool:
     return bool(ag and bg and len(ag&bg)/len(ag|bg)>=.42)
 
 def cluster_posts(posts:list[SentimentPost])->list[list[SentimentPost]]:
-    # Score exclusion and issue discovery are separate concerns. Questions and
-    # short reactions still reveal which topics are active.
-    hard_exclusions={"ADVERTISEMENT","TRADE","OFFTOPIC"}
-    eligible=[p for p in posts if p.issue_key and p.issue_key!="OTHER" and p.exclusion_reason not in hard_exclusions]
+    # score_eligible=False로 걸러진 글은 "주요 이슈" 목록에서도 뺀다.
+    # DCInside 라테일 갤러리는 특정 이용자를 저격하는 은어("사랑짝",
+    # "주딱은" 등) 드립이 많은데, AI 분석이 이런 글을 개인 공격/잡담으로
+    # 정확히 판단해 score_eligible=False로 표시해도, 예전엔 여기서
+    # 광고/거래/타게임만 걸러내서 저격 논쟁이 그대로 "주요 이슈"에
+    # 노출됐다(사용자 확인). 광고/거래/타게임/짧은 반응 전부 score_eligible
+    # =False로 이미 표시되므로 이 판단 하나로 충분하다.
+    eligible=[p for p in posts if p.issue_key and p.issue_key!="OTHER" and p.score_eligible]
     parent=list(range(len(eligible)))
     def find(x):
         while parent[x]!=x: parent[x]=parent[parent[x]]; x=parent[x]

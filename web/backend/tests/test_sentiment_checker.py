@@ -12,6 +12,19 @@ def test_similar_ai_issue_names_cluster():
  b=post("2","\uc811\uc18d \uc11c\ubc84 \uc624\ub958",'["\uc11c\ubc84", "\uc811\uc18d"]')
  assert len(cluster_posts([a,b]))==1
 
+
+def test_score_ineligible_posts_are_excluded_from_issue_discovery():
+ # DCInside \ub77c\ud14c\uc77c \uac24\ub7ec\ub9ac\uc758 \uc800\uaca9 \uc740\uc5b4(\uc608: "\uc0ac\ub791\uc9dd", "\uc8fc\ub531\uc740") \ub4dc\ub9bd\uc744 AI\uac00
+ # \uac1c\uc778 \uacf5\uaca9/\uc7a1\ub2f4\uc73c\ub85c \ud310\ub2e8\ud574 score_eligible=False\ub85c \ud45c\uc2dc\ud574\ub3c4, \uc608\uc804\uc5d4
+ # \uad11\uace0/\uac70\ub798/\ud0c0\uac8c\uc784\ub9cc \uac78\ub7ec\ub0b4\uc11c \uc774\ub7f0 \ub17c\uc7c1\uc774 \uadf8\ub300\ub85c "\uc8fc\uc694 \uc774\uc288"\uc5d0
+ # \ub178\ucd9c\ub410\ub2e4 \u2014 score_eligible=False\uba74 \uc774\uc288 \ubc1c\uacac \ub2e8\uacc4\uc5d0\uc11c\ub3c4 \ube60\uc838\uc57c \ud55c\ub2e4.
+ real_issue = post("1", "\ubc38\ub7f0\uc2a4 \ud328\uce58 \ubd88\ub9cc", '["\ubc38\ub7f0\uc2a4", "\ud328\uce58"]')
+ callout = post("2", "\uc0ac\ub791\uc9dd \ub610 \uc800\uaca9\ub2f9\ud568", '["\uc0ac\ub791\uc9dd"]')
+ callout.score_eligible = False
+ groups = cluster_posts([real_issue, callout])
+ assert len(groups) == 1
+ assert groups[0][0].post_id == "1"
+
 def test_dashboard_route_returns_sentiment_shape(client,make_user,db_factory):
  make_user(email="sentiment@example.com",password="hunter2")
  assert client.post("/auth/login",json={"email":"sentiment@example.com","password":"hunter2"}).status_code==200
