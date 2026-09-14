@@ -56,6 +56,7 @@ def test_collect_splits_detail_budget_across_sources(monkeypatch, db_factory):
  monkeypatch.setattr(collector,"dc_candidates",lambda pages:[collector.Candidate("DCINSIDE",f"dc{i}",f"t{i}",f"https://x/dc{i}",None) for i in range(5)])
  monkeypatch.setattr(collector,"priring_candidates",lambda pages:[collector.Candidate("DCINSIDE_PRIRING",f"pr{i}",f"t{i}",f"https://x/pr{i}",None) for i in range(5)])
  monkeypatch.setattr(collector,"latale_candidates",lambda pages:[collector.Candidate("LATALE_OFFICIAL",f"of{i}",f"t{i}",f"https://x/of{i}",None) for i in range(5)])
+ monkeypatch.setattr(collector,"naver_cafe_candidates",lambda pages:[])
  monkeypatch.setattr(collector,"_content",lambda item:f"content-{item.post_id}")
  monkeypatch.setattr(collector,"collect_references",lambda db,pages=2:{"found":0,"new":0,"errors":[]})
 
@@ -95,3 +96,41 @@ def test_collect_dc_comments_persists_and_skips_deleted(monkeypatch, db_factory)
  assert len(comments)==1
  assert comments[0].content=="\uc88b\ub124\uc694 \uc7ac\ubc0c\uc788\uc5b4\uc694"
  assert result["found"]==1 and result["new"]==1
+
+
+def test_naver_cafe_candidates_parses_article_list_and_stops_pagination(monkeypatch):
+ # \uac8c\uc2dc\uae00 \ubaa9\ub85d\uc740 \ub85c\uadf8\uc778 \uc5c6\uc774 \uacf5\uac1c API\ub85c \uc870\ud68c\ub418\uc9c0\ub9cc, \ubcf8\ubb38\u00b7\ub313\uae00\uc740
+ # \ub85c\uadf8\uc778\ud574\uc57c\ub9cc \ubcf4\uc5ec\uc11c(\uc9c1\uc811 \ud655\uc778) \uc81c\ubaa9\ub9cc \uc218\uc9d1\ud55c\ub2e4.
+ page1={"message":{"result":{"hasNext":True,"articleList":[
+  {"articleId":111,"subject":"\uc81c\ubaa91","writeDateTimestamp":1757800000000,"writerNickname":"a","readCount":10,"commentCount":2,"likeItCount":1},
+ ]}}}
+ page2={"message":{"result":{"hasNext":False,"articleList":[
+  {"articleId":112,"subject":"\uc81c\ubaa92","writeDateTimestamp":1757800100000,"writerNickname":"b","readCount":5,"commentCount":0,"likeItCount":0},
+ ]}}}
+ calls=[page1,page2]
+ monkeypatch.setattr(collector,"_get_json",lambda url,referer:calls.pop(0))
+
+ out=collector.naver_cafe_candidates(pages=5)
+
+ assert len(out)==2  # hasNext=False\uc5d0\uc11c \uba48\ucdb0\uc11c \uc694\uccad\ud55c 5\ud398\uc774\uc9c0\ub97c \ub2e4 \uc548 \ub3ce
+ assert out[0].source=="NAVER_CAFE_LATALESIA"
+ assert out[0].post_id=="111"
+ assert out[0].title=="\uc81c\ubaa91"
+ assert out[0].url=="https://cafe.naver.com/latalesia/111"
+ assert out[0].content is None
+
+
+def test_collect_never_fetches_content_for_naver_cafe(monkeypatch, db_factory):
+ monkeypatch.setattr(collector,"dc_candidates",lambda pages:[])
+ monkeypatch.setattr(collector,"priring_candidates",lambda pages:[])
+ monkeypatch.setattr(collector,"latale_candidates",lambda pages:[])
+ monkeypatch.setattr(collector,"naver_cafe_candidates",lambda pages:[collector.Candidate("NAVER_CAFE_LATALESIA","1","\uc81c\ubaa9",'https://cafe.naver.com/latalesia/1',None)])
+ monkeypatch.setattr(collector,"_content",lambda item:(_ for _ in ()).throw(AssertionError("\ub124\uc774\ubc84 \uce74\ud398\ub294 \ubcf8\ubb38\uc744 \uac00\uc838\uc624\uba74 \uc548 \ub41c\ub2e4")))
+ monkeypatch.setattr(collector,"collect_references",lambda db,pages=2:{"found":0,"new":0,"errors":[]})
+
+ db=db_factory()
+ result=collector.collect(db,pages=1,detail_limit=90)
+
+ assert result["details"]==0
+ post=db.query(SentimentPost).one()
+ assert post.content is None

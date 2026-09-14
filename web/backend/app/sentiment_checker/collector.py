@@ -1,5 +1,5 @@
 from __future__ import annotations
-import hashlib, re, time
+import hashlib, json, re, time
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta
 from urllib.parse import parse_qs, urljoin, urlparse
@@ -12,6 +12,13 @@ from .models import SentimentPost, SentimentReference
 DC_LIST = "https://gall.dcinside.com/board/lists/?id=latale&page={page}&list_num=100"
 PRIRING_LIST = "https://gall.dcinside.com/mgallery/board/lists/?id=laf&page={page}&list_num=100"
 LAT_LIST = "https://www.latale.com/community/forum?page={page}"
+# 라테일 시아(비공식 팬 네이버 카페) — 게시글 목록(제목·조회수·좋아요·
+# 댓글수)은 로그인 없이 공개 API로 조회되지만, 본문·댓글은 로그인해야만
+# 보여서(직접 확인: "로그인하지 않았습니다" 에러) 제목만 수집한다. 다른
+# 소스처럼 본문 기반 분류는 못 하지만, 어떤 화제가 갑자기 몰리는지
+# 감지하는 데는 제목만으로도 신호가 된다.
+NAVER_CAFE_LIST = "https://apis.naver.com/cafe-web/cafe2/ArticleListV2dot1.json?search.clubid=12320458&search.queryType=lastArticle&search.page={page}&search.perPage=50"
+NAVER_CAFE_ARTICLE_URL = "https://cafe.naver.com/latalesia/{article_id}"
 UA = "Mozilla/5.0 (compatible; UXTLER-Internal-Research/1.0)"
 
 @dataclass
@@ -24,6 +31,10 @@ def _get(url:str)->BeautifulSoup:
     with urlopen(req,timeout=20) as res: raw=res.read(2_000_000)
     if len(raw)<1000: raise RuntimeError("EMPTY_OR_BLOCKED_RESPONSE")
     return BeautifulSoup(raw,"html.parser",from_encoding="utf-8")
+
+def _get_json(url:str,referer:str)->dict:
+    req=Request(url,headers={"User-Agent":UA,"Accept-Language":"ko-KR,ko;q=0.9","Referer":referer})
+    with urlopen(req,timeout=20) as res: return json.loads(res.read().decode("utf-8"))
 
 def _num(value:str)->int:
     m=re.search(r"[\d,]+",value or "")
@@ -80,6 +91,22 @@ def latale_candidates(pages:int=2)->list[Candidate]:
         time.sleep(.25)
     return out
 
+def naver_cafe_candidates(pages:int=3)->list[Candidate]:
+    out=[]
+    for page in range(1,pages+1):
+        payload=_get_json(NAVER_CAFE_LIST.format(page=page),"https://cafe.naver.com/latalesia")
+        result=payload.get("message",{}).get("result",{})
+        for article in result.get("articleList",[]):
+            article_id=str(article.get("articleId") or "")
+            subject=(article.get("subject") or "").strip()
+            if not article_id or not subject: continue
+            timestamp=article.get("writeDateTimestamp")
+            created=datetime.fromtimestamp(timestamp/1000,tz=timezone.utc) if timestamp else None
+            out.append(Candidate("NAVER_CAFE_LATALESIA",article_id,subject,NAVER_CAFE_ARTICLE_URL.format(article_id=article_id),created,article.get("writerNickname"),article.get("readCount",0),article.get("commentCount",0),article.get("likeItCount",0)))
+        if not result.get("hasNext"): break
+        time.sleep(.3)
+    return out
+
 def _content(item:Candidate)->str:
     try:
         soup=_get(item.url)
@@ -115,20 +142,22 @@ def collect_references(db:Session,pages:int=2)->dict:
 
 def collect(db:Session,pages:int=3,detail_limit:int=90)->dict:
     candidates=[]; errors=[]
-    for fn in (dc_candidates,priring_candidates,latale_candidates):
-        try: candidates.extend(fn(pages if fn in (dc_candidates,priring_candidates) else min(2,pages)))
+    for fn in (dc_candidates,priring_candidates,latale_candidates,naver_cafe_candidates):
+        try: candidates.extend(fn(pages if fn in (dc_candidates,priring_candidates,naver_cafe_candidates) else min(2,pages)))
         except Exception as exc: errors.append(f"{fn.__name__}: {type(exc).__name__}")
     new=0; updated=0; details=0
     # 소스마다 예산을 나눠서, 게시글이 제일 많은 DCInside 하나가 전체
     # detail_limit을 다 써버려 나머지 소스는 본문을 하나도 못 가져오는
     # 걸 막는다 — 예전엔 LATALE_OFFICIAL만 본문을 가져왔는데, 실제 민심이
     # 가장 많이 드러나는 DCInside/프리링 게시글은 제목만 수집되고 있었다.
+    # 네이버 카페(NAVER_CAFE_LATALESIA)는 본문·댓글이 로그인해야만 보여서
+    # (직접 확인) 애초에 예산 대상이 아니다 — 제목만 수집한다.
     per_source_limit=max(1,detail_limit//3); details_by_source:dict[str,int]={}
     for item in candidates:
         post=db.execute(select(SentimentPost).where(SentimentPost.source==item.source,SentimentPost.post_id==item.post_id)).scalar_one_or_none()
         if post is None:
             used=details_by_source.get(item.source,0)
-            if used<per_source_limit and details<detail_limit:
+            if item.source!="NAVER_CAFE_LATALESIA" and used<per_source_limit and details<detail_limit:
                 item.content=_content(item); details+=1; details_by_source[item.source]=used+1; time.sleep(.18)
             post=SentimentPost(source=item.source,post_id=item.post_id,title=item.title,content=item.content,author_hash=hashlib.sha256(f"{item.source}:{item.author or ''}".encode()).hexdigest() if item.author else None,url=item.url,created_at=item.created_at,views=item.views,comments=item.comments,upvotes=item.upvotes)
             db.add(post); new+=1

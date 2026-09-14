@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from .models import SentimentPost,SentimentReference,SentimentSnapshot,SentimentAIAnalysis,SentimentComment
 from .clustering import cluster_posts,representative_name
 CATEGORY_LABELS={"OPERATIONS":"\uc6b4\uc601","UPDATE":"\uc5c5\ub370\uc774\ud2b8","EVENT":"\uc774\ubca4\ud2b8","BALANCE":"\ubc38\ub7f0\uc2a4","CLASS":"\uc9c1\uc5c5","CONTENT":"\ucf58\ud150\uce20","ITEM":"\uc544\uc774\ud15c","REWARD":"\ubcf4\uc0c1","MONETIZATION":"\uacfc\uae08","BUG":"\ubc84\uadf8","SERVER":"\uc11c\ubc84","UI_UX":"UI/UX","CONVENIENCE":"\ud3b8\uc758\uc131","NEW_RETURNING":"\uc2e0\uaddc/\ubcf5\uadc0","OTHER":"\uae30\ud0c0"}
-SOURCE_LABELS={"DCINSIDE":"DCInside \ub77c\ud14c\uc77c","DCINSIDE_PRIRING":"\ud504\ub9ac\ub9c1(\ub77c\ud14c\uc77c)","LATALE_OFFICIAL":"\ub77c\ud14c\uc77c \uacf5\uc2dd"}
+SOURCE_LABELS={"DCINSIDE":"DCInside \ub77c\ud14c\uc77c","DCINSIDE_PRIRING":"\ud504\ub9ac\ub9c1(\ub77c\ud14c\uc77c)","LATALE_OFFICIAL":"\ub77c\ud14c\uc77c \uacf5\uc2dd","NAVER_CAFE_LATALESIA":"\ub124\uc774\ubc84\uce74\ud398(\uc2dc\uc544)"}
 def _aware(d): return None if d is None else d.replace(tzinfo=timezone.utc) if d.tzinfo is None else d
 def _score(posts):
  eligible=[p for p in posts if p.score_eligible]
