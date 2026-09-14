@@ -2,10 +2,14 @@ from __future__ import annotations
 import math
 from collections import Counter
 from datetime import datetime,timedelta,timezone
-from sqlalchemy import select
+from sqlalchemy import func,select
 from sqlalchemy.orm import Session
 from .models import SentimentPost,SentimentReference,SentimentSnapshot,SentimentAIAnalysis,SentimentComment
 from .clustering import cluster_posts,representative_name
+# ALL_STORED 폴백(교차 확인된 이슈가 하나도 없을 때 이력 전체를 다시
+# 클러스터링)이 보관 기간이 길어질수록 O(n^2) 비교 비용을 한도 없이
+# 키우는 걸 막는다 — 최근 N건으로 상한을 둔다.
+_ALL_STORED_FALLBACK_LIMIT=500
 CATEGORY_LABELS={"OPERATIONS":"\uc6b4\uc601","UPDATE":"\uc5c5\ub370\uc774\ud2b8","EVENT":"\uc774\ubca4\ud2b8","BALANCE":"\ubc38\ub7f0\uc2a4","CLASS":"\uc9c1\uc5c5","CONTENT":"\ucf58\ud150\uce20","ITEM":"\uc544\uc774\ud15c","REWARD":"\ubcf4\uc0c1","MONETIZATION":"\uacfc\uae08","BUG":"\ubc84\uadf8","SERVER":"\uc11c\ubc84","UI_UX":"UI/UX","CONVENIENCE":"\ud3b8\uc758\uc131","NEW_RETURNING":"\uc2e0\uaddc/\ubcf5\uadc0","OTHER":"\uae30\ud0c0"}
 SOURCE_LABELS={"DCINSIDE":"DCInside \ub77c\ud14c\uc77c","DCINSIDE_PRIRING":"\ud504\ub9ac\ub9c1(\ub77c\ud14c\uc77c)","LATALE_OFFICIAL":"\ub77c\ud14c\uc77c \uacf5\uc2dd","NAVER_CAFE_LATALESIA":"\ub124\uc774\ubc84\uce74\ud398(\uc2dc\uc544)"}
 def _aware(d): return None if d is None else d.replace(tzinfo=timezone.utc) if d.tzinfo is None else d
@@ -45,16 +49,23 @@ def _issue_rows(current,previous):
   rows.append({"key":f"{category}:{raw_title}","title":title,"category":CATEGORY_LABELS.get(category,"\uae30\ud0c0"),"mentions":len(posts),"growth":growth,"positive":round(sentiments["POSITIVE"]*100/len(posts)),"neutral":round(sentiments["NEUTRAL"]*100/len(posts)),"negative":round(sentiments["NEGATIVE"]*100/len(posts)),"representative":[{"title":p.title,"url":p.url,"source":SOURCE_LABELS.get(p.source,p.source),"created_at":p.created_at.isoformat() if p.created_at else None} for p in posts[:3]]})
  rows.sort(key=lambda x:(x["mentions"]*2+max(0,x["growth"]),x["negative"]),reverse=True); return rows
 def dashboard(db:Session,hours:int=24):
+ # 이전엔 매 요청마다 SentimentPost/SentimentComment 테이블 전체를
+ # Python으로 불러온 뒤 걸러냈다 — 보관 이력이 쌓일수록(1~3단계로 수집
+ # 소스·댓글이 늘어난 뒤로는 더 빠르게) 매 페이지 로드마다 비용이 계속
+ # 커지는 구조였다. 기간 필터는 DB 쿼리 단계에서 걸어 필요한 행만 읽는다.
  now=datetime.now(timezone.utc); start=now-timedelta(hours=hours); prev_start=start-timedelta(hours=hours)
- all_posts=db.execute(select(SentimentPost)).scalars().all(); current=_period_posts(all_posts,start); previous=_period_posts(all_posts,prev_start,start)
- current_ids={p.id for p in current}; comments=[c for c in db.execute(select(SentimentComment)).scalars().all() if c.post_db_id in current_ids]
+ stored_total=db.execute(select(func.count()).select_from(SentimentPost)).scalar_one()
+ current=list(db.execute(select(SentimentPost).where(SentimentPost.created_at>=start,SentimentPost.created_at<now)).scalars().all())
+ previous=list(db.execute(select(SentimentPost).where(SentimentPost.created_at>=prev_start,SentimentPost.created_at<start)).scalars().all())
+ current_ids=[p.id for p in current]
+ comments=list(db.execute(select(SentimentComment).where(SentimentComment.post_db_id.in_(current_ids))).scalars().all()) if current_ids else []
  comment_sentiments=Counter(c.sentiment for c in comments); comment_stances=Counter(c.stance for c in comments)
  issues=_issue_rows(current,previous); analysis_posts=current; analysis_basis="SELECTED_PERIOD"
  if len(current)<10 or len(issues)<3:
-  analysis_posts=_period_posts(all_posts,now-timedelta(days=7)); analysis_basis="RECENT_7_DAYS"
+  analysis_posts=list(db.execute(select(SentimentPost).where(SentimentPost.created_at>=now-timedelta(days=7))).scalars().all()); analysis_basis="RECENT_7_DAYS"
   issues=_issue_rows(analysis_posts,[])
- if len(issues)<1 and all_posts:
-  analysis_posts=all_posts; analysis_basis="ALL_STORED"
+ if len(issues)<1 and stored_total:
+  analysis_posts=list(db.execute(select(SentimentPost).order_by(SentimentPost.created_at.desc()).limit(_ALL_STORED_FALLBACK_LIMIT)).scalars().all()); analysis_basis="ALL_STORED"
   issues=_issue_rows(analysis_posts,[])
  score=_score(current); prev_score=_score(previous)
  source_stats=[{"source":label,"count":len(ps),"score":_score(ps)} for source,label in SOURCE_LABELS.items() for ps in [[p for p in current if p.source==source]]]
@@ -70,7 +81,7 @@ def dashboard(db:Session,hours:int=24):
  snapshots=db.execute(select(SentimentSnapshot).where(SentimentSnapshot.period_hours==hours).order_by(SentimentSnapshot.observed_at.desc()).limit(48)).scalars().all()
  timeline=[{"observed_at":x.observed_at.isoformat(),"score":x.sentiment_score,"count":x.post_count} for x in reversed(snapshots)]
  ai_ids={x.post_db_id for x in db.execute(select(SentimentAIAnalysis)).scalars().all()}; ai_analyzed=sum(p.id in ai_ids for p in current)
- return {"generated_at":now.isoformat(),"period_hours":hours,"analysis_basis":analysis_basis,"analysis_count":len(analysis_posts),"metrics":{"stored_total":len(all_posts),"collected":len(current),"eligible":sum(p.score_eligible for p in current),"issue_count":len(issues),"ai_analyzed":ai_analyzed,"ai_pending":max(0,len(current)-ai_analyzed),"analysis_coverage":round(ai_analyzed*100/max(1,len(current))),"score":score,"change":round(score-prev_score,1),"positive":sum(p.sentiment=="POSITIVE" for p in current),"neutral":sum(p.sentiment=="NEUTRAL" for p in current),"negative":sum(p.sentiment=="NEGATIVE" for p in current)},"brief":brief,"comment_metrics":{"count":len(comments),"positive":comment_sentiments["POSITIVE"],"neutral":comment_sentiments["NEUTRAL"],"negative":comment_sentiments["NEGATIVE"],"agree":comment_stances["AGREE"],"disagree":comment_stances["DISAGREE"],"stance_neutral":comment_stances["NEUTRAL"]},"issues":top,"spikes":[i for i in issues if i["growth"]>=2][:5],"sources":source_stats,"categories":[{"name":k,"count":v} for k,v in categories.most_common(8)],"observations":observations,"references":related,"timeline":timeline,"recent":[{"title":p.title,"url":p.url,"source":SOURCE_LABELS.get(p.source,p.source),"created_at":p.created_at.isoformat() if p.created_at else None,"sentiment":p.sentiment,"category":CATEGORY_LABELS.get(p.category,"\uae30\ud0c0")} for p in sorted(current,key=lambda p:_aware(p.created_at) or datetime.min.replace(tzinfo=timezone.utc),reverse=True)[:12]]}
+ return {"generated_at":now.isoformat(),"period_hours":hours,"analysis_basis":analysis_basis,"analysis_count":len(analysis_posts),"metrics":{"stored_total":stored_total,"collected":len(current),"eligible":sum(p.score_eligible for p in current),"issue_count":len(issues),"ai_analyzed":ai_analyzed,"ai_pending":max(0,len(current)-ai_analyzed),"analysis_coverage":round(ai_analyzed*100/max(1,len(current))),"score":score,"change":round(score-prev_score,1),"positive":sum(p.sentiment=="POSITIVE" for p in current),"neutral":sum(p.sentiment=="NEUTRAL" for p in current),"negative":sum(p.sentiment=="NEGATIVE" for p in current)},"brief":brief,"comment_metrics":{"count":len(comments),"positive":comment_sentiments["POSITIVE"],"neutral":comment_sentiments["NEUTRAL"],"negative":comment_sentiments["NEGATIVE"],"agree":comment_stances["AGREE"],"disagree":comment_stances["DISAGREE"],"stance_neutral":comment_stances["NEUTRAL"]},"issues":top,"spikes":[i for i in issues if i["growth"]>=2][:5],"sources":source_stats,"categories":[{"name":k,"count":v} for k,v in categories.most_common(8)],"observations":observations,"references":related,"timeline":timeline,"recent":[{"title":p.title,"url":p.url,"source":SOURCE_LABELS.get(p.source,p.source),"created_at":p.created_at.isoformat() if p.created_at else None,"sentiment":p.sentiment,"category":CATEGORY_LABELS.get(p.category,"\uae30\ud0c0")} for p in sorted(current,key=lambda p:_aware(p.created_at) or datetime.min.replace(tzinfo=timezone.utc),reverse=True)[:12]]}
 def save_snapshot(db:Session,hours:int=24):
  data=dashboard(db,hours); m=data["metrics"]
  row=SentimentSnapshot(period_hours=hours,post_count=m["collected"],eligible_count=m["eligible"],sentiment_score=m["score"],positive_count=m["positive"],neutral_count=m["neutral"],negative_count=m["negative"])
@@ -79,7 +90,7 @@ def save_snapshot(db:Session,hours:int=24):
 
 def issue_detail(db:Session,key:str,hours:int=168):
  now=datetime.now(timezone.utc); start=now-timedelta(hours=hours)
- posts=_period_posts(db.execute(select(SentimentPost)).scalars().all(),start)
+ posts=list(db.execute(select(SentimentPost).where(SentimentPost.created_at>=start)).scalars().all())
  target=None; title=""; category="OTHER"
  for group in cluster_posts(posts):
   if not group: continue

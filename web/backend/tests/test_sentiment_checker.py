@@ -2,7 +2,7 @@ from datetime import datetime,timezone
 from bs4 import BeautifulSoup
 from app.sentiment_checker.models import SentimentPost,SentimentComment
 from app.sentiment_checker.clustering import cluster_posts
-from app.sentiment_checker import collector,comment_collector
+from app.sentiment_checker import collector,comment_collector,service
 
 def post(post_id,issue,keywords="[]"):
  return SentimentPost(source="DCINSIDE",post_id=post_id,title=issue,url=f"https://example.com/{post_id}",created_at=datetime.now(timezone.utc),category="BUG",sentiment="NEGATIVE",sentiment_value=-1,score_eligible=True,issue_key=f"AI:{issue}",keywords=keywords)
@@ -22,6 +22,27 @@ def test_dashboard_route_returns_sentiment_shape(client,make_user,db_factory):
  assert body["metrics"]["collected"]==1
  assert body["issues"][0]["title"]=="\uc11c\ubc84 \uc811\uc18d \uc624\ub958"
  assert "timeline" in body and "references" in body
+
+
+def test_dashboard_all_stored_fallback_is_capped(monkeypatch, db_factory):
+ # 교차 확인된 이슈가 하나도 없을 때(선택 기간·최근 7일 모두 조용한 경우)
+ # 이력 전체를 통째로 다시 클러스터링하면, 보관 기간이 길어질수록
+ # O(n^2) 비교 비용이 한도 없이 커진다 — 최근 N건으로 상한을 두는지 확인.
+ monkeypatch.setattr(service, "_ALL_STORED_FALLBACK_LIMIT", 2)
+ db = db_factory()
+ for i in range(5):
+  db.add(post(f"old{i}", "오래된 이슈"))
+ db.commit()
+ old = datetime(2000, 1, 1, tzinfo=timezone.utc)
+ for row in db.query(SentimentPost).all():
+  row.created_at = old
+ db.commit()
+
+ result = service.dashboard(db, hours=24)
+
+ assert result["metrics"]["stored_total"] == 5  # 전체 개수는 정확히 세되
+ assert result["analysis_basis"] == "ALL_STORED"
+ assert result["analysis_count"] == 2  # 클러스터링 입력은 상한만큼만
 
 
 def test_issue_detail_route_returns_grounded_posts(client,make_user,db_factory):

@@ -15,7 +15,14 @@ import "./sentiment-checker.css";
 export function SentimentCheckerPage() {
   const [hours, setHours] = useState(24);
   const [data, setData] = useState<DashboardData | null>(null);
+  // loading: 그냥 저장된 데이터를 읽어오는 초기/기간 전환 로딩.
+  // refreshing: "수동 갱신"이 실제로 외부 사이트를 크롤링하고 AI 분석까지
+  // 돌리는 무거운 작업이 진행 중이라는 뜻 — 이 둘을 하나로 합쳐 쓰면
+  // 페이지를 열기만 해도 버튼이 "분석 중"으로 보이는 문제가 생긴다
+  // (실제로 갱신 버튼을 누른 적이 없는데도 그렇게 보인다는 피드백으로
+  // 확인).
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState(false);
   const [detail, setDetail] = useState<IssueDetail | null>(null);
   const [detailLoading, setDetailLoading] = useState(false);
@@ -47,7 +54,7 @@ export function SentimentCheckerPage() {
   };
 
   const refresh = () => {
-    setLoading(true);
+    setRefreshing(true);
     fetch("/sentiment-checker/refresh", { method: "POST", credentials: "include" })
       .then((r) => {
         if (!r.ok) throw new Error();
@@ -55,7 +62,7 @@ export function SentimentCheckerPage() {
       })
       .then((x) => setData(x.dashboard))
       .catch(() => setError(true))
-      .finally(() => setLoading(false));
+      .finally(() => setRefreshing(false));
   };
 
   return (
@@ -74,8 +81,8 @@ export function SentimentCheckerPage() {
               </button>
             ))}
           </nav>
-          <button className="sc-refresh-btn" onClick={refresh} disabled={loading}>
-            {loading ? "분석 중" : "수동 갱신"}
+          <button className="sc-refresh-btn" onClick={refresh} disabled={loading || refreshing}>
+            {refreshing ? "분석 중" : "수동 갱신"}
           </button>
         </div>
       </header>
