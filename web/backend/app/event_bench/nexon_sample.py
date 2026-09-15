@@ -53,6 +53,13 @@ LOD_EVENTS_URL = "https://lod.nexon.com/news/event"
 # ?hl=ko-KR 없이 요청하면 서버가 영문판을 내려준다(직접 확인).
 ETERNALRETURN_EVENTS_URL = "https://event.playeternalreturn.com/S12_Sailing?hl=ko-KR"
 WP_EVENTS_URL = "https://wp.nexon.com/news/event?headlineId=1242"
+SLUGGER_EVENTS_URL = "https://slugger.pmang.com/index.nwz?mKey=1&sKey=3"
+# 데카론은 완전한 Angular SPA(정적 HTML에 콘텐츠가 전혀 없음, 실측 확인)라
+# 페이지 자체는 못 긁지만, 홈 배너가 읽는 정적 JSON을 그대로 쓸 수 있다 —
+# 로그인/API 키 없이 공개돼 있고(직접 확인), 이벤트명·기간·이미지·링크가
+# 이미 구조화돼 있어 HTML 파싱보다 오히려 더 안정적이다.
+DEKARON_BANNER_URL = "https://dekaron.game.pmang.com/assets/json/main/Banner.json"
+DEKARON_IMAGE_BASE = "https://img.dekaron.co.kr/dekaron/site/main/banner/"
 _DATE_RANGE = re.compile(r"(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})\s*[^~]{0,20}~\s*(20\d{2}\s*[.-]\s*\d{2}\s*[.-]\s*\d{2})")
 # Cyphers prints dates without a year ("9/3 점검 후 ~ 9/22 점검 전") — _DATE_RANGE
 # expects a 4-digit year and never matches this format.
@@ -1081,6 +1088,67 @@ def collect_blade_and_soul_events() -> list[EventCandidate]:
 # \uc2dc\uc791\ud558\uba74 \uadf8\ub54c \ucd94\uac00\ud55c\ub2e4.
 
 
+def collect_slugger_events() -> list[EventCandidate]:
+    """Collect 슬러거(피망) ongoing events — the list page already shows only
+    the "진행중" tab's cards server-side (실측 확인: "종료" 탭 콘텐츠는 별도로
+    없음), each linking to a dedicated event page (target="_blank")."""
+    soup = BeautifulSoup(_fetch_html(SLUGGER_EVENTS_URL), "html.parser")
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for card in soup.select("div.bbs_event ul.list li"):
+        title_link = card.select_one("h3 a[href]")
+        if title_link is None:
+            continue
+        event_url = urljoin(SLUGGER_EVENTS_URL, title_link.get("href", "").strip())
+        title = title_link.get_text(" ", strip=True)
+        if not title or event_url in seen:
+            continue
+        period_node = card.select_one("h4")
+        starts_on, ends_on = _date_parts(period_node.get_text(" ", strip=True) if period_node else "")
+        if not _is_current_or_scheduled(starts_on, ends_on):
+            continue
+        seen.add(event_url)
+        image = card.select_one(".image img")
+        candidates.append(EventCandidate(
+            publisher="Neowiz", game="슬러거", title=title, event_url=event_url,
+            hero_image_url=image.get("src") if image else None, starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="full_page", collected_at=collected_at,
+        ))
+    return candidates
+
+
+def collect_dekaron_events() -> list[EventCandidate]:
+    """Collect 데카론(피망) ongoing events from the site's own public home-banner
+    JSON (실측 확인: 로그인/API 키 불필요) — the site itself is an Angular SPA
+    with no server-rendered content to scrape directly."""
+    payload = json.loads(_fetch_html(DEKARON_BANNER_URL))
+    collected_at = datetime.now(timezone.utc).isoformat()
+    candidates: list[EventCandidate] = []
+    seen: set[str] = set()
+    for item in payload:
+        link = (item.get("LINK") or "").strip()
+        title = (item.get("TITLE") or "").strip()
+        if not link or not title:
+            continue
+        event_url = urljoin(DEKARON_BANNER_URL, link)
+        if event_url in seen:
+            continue
+        starts_on = (item.get("EVENT_START_DATE") or "")[:10] or None
+        ends_on = (item.get("EVENT_END_DATE") or "")[:10] or None
+        if not item.get("ALL_TIME") and not _is_current_or_scheduled(starts_on, ends_on):
+            continue
+        seen.add(event_url)
+        image_file = item.get("IMG_BG")
+        candidates.append(EventCandidate(
+            publisher="Neowiz", game="데카론", title=title, event_url=event_url,
+            hero_image_url=urljoin(DEKARON_IMAGE_BASE, image_file) if image_file else None,
+            starts_on=starts_on, ends_on=ends_on,
+            published_on=starts_on, status="ongoing", event_format="full_page", collected_at=collected_at,
+        ))
+    return candidates
+
+
 def collect_nexon_events() -> list[EventCandidate]:
     return [
         *collect_fc_online_events(),
@@ -1105,10 +1173,12 @@ def collect_nexon_events() -> list[EventCandidate]:
         *collect_lod_events(),
         *collect_eternalreturn_events(),
         *collect_wp_events(),
+        *collect_slugger_events(),
+        *collect_dekaron_events(),
     ]
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect verified NEXON official event candidates.")
-    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "lod", "eternalreturn", "wp", "all"), default="all")
+    parser.add_argument("--source", choices=("fc-online", "maplestory", "mabinogi", "talesweaver", "elsword", "baram", "lostark", "lineage", "lineagem", "blade-and-soul", "black-desert", "gersang", "cso", "heroes", "talesrunner", "dnf", "ragnarok", "audition", "cyphers", "thefinals", "lod", "eternalreturn", "wp", "slugger", "dekaron", "all"), default="all")
     parser.add_argument("--output", type=Path, help="Optional UTF-8 JSON output path.")
     args = parser.parse_args()
     if args.source == "fc-online":
@@ -1157,6 +1227,10 @@ def main() -> None:
         candidates = collect_eternalreturn_events()
     elif args.source == "wp":
         candidates = collect_wp_events()
+    elif args.source == "slugger":
+        candidates = collect_slugger_events()
+    elif args.source == "dekaron":
+        candidates = collect_dekaron_events()
     else:
         candidates = collect_nexon_events()
     rendered = json.dumps([asdict(item) for item in candidates], ensure_ascii=False, indent=2)

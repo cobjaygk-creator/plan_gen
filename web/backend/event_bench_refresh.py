@@ -33,6 +33,8 @@ from app.event_bench.nexon_sample import (
     collect_audition_events,
     collect_lod_events,
     collect_eternalreturn_events,
+    collect_slugger_events,
+    collect_dekaron_events,
 )
 
 OUTPUT_PATH = BENCHMARK_DATA_DIR / "event_bench" / "nexon_events_sample.json"
@@ -86,6 +88,8 @@ COLLECTORS = {
     "\uc5b4\ub460\uc758\uc804\uc124": collect_lod_events,
     "\uc774\ud130\ub110 \ub9ac\ud134": collect_eternalreturn_events,
     "\ud504\ub77c\uc2dc\uc544\uc804\uae30": lambda: collect_via_github_fallback("\ud504\ub77c\uc2dc\uc544\uc804\uae30"),
+    "\uc2ac\ub7ec\uac70": collect_slugger_events,
+    "\ub370\uce74\ub860": collect_dekaron_events,
 }
 
 
@@ -147,6 +151,10 @@ def canonical_game_for_url(event_url: str | None, current_game: str | None) -> s
         return "\uc0ac\uc774\ud37c\uc988"
     if "thefinals.nexon.com" in host:
         return "\ub354 \ud30c\uc774\ub110\uc2a4"
+    if "slugger.pmang.com" in host:
+        return "\uc2ac\ub7ec\uac70"
+    if "dekaron.game.pmang.com" in host:
+        return "\ub370\uce74\ub860"
     return current_game
 
 
