@@ -27,7 +27,6 @@ from app.event_bench.nexon_sample import (
     collect_lineagem_events,
     collect_blade_and_soul_events,
     collect_black_desert_events,
-    collect_dnf_events,
     collect_cso_events,
     collect_heroes_events,
     collect_ragnarok_events,
@@ -41,8 +40,10 @@ LAST_GOOD_PATH = OUTPUT_PATH.with_name("nexon_events_last_good.json")
 LOG_PATH = OUTPUT_PATH.with_name("refresh.log")
 
 # tales.nexon.com(\ud14c\uc77c\uc988\uc704\ubc84)/tr.rhaon.co.kr(\ud14c\uc77c\uc988\ub7f0\ub108)/gersang.co.kr(\uac70\uc0c1)/
-# thefinals.nexon.com(\ub354 \ud30c\uc774\ub110\uc2a4)/cyphers.nexon.com(\uc0ac\uc774\ud37c\uc988)\ub294 \uc624\ub77c\ud074 \ud074\ub77c\uc6b0\ub4dc IP\ub97c
-# \ucc28\ub2e8\ud574\uc11c(403/\ud0c0\uc784\uc544\uc6c3, \uc9c1\uc811 \ud655\uc778) \uc6b4\uc601 \uc11c\ubc84\uac00 \ubabb \ub6ab\ub294\ub2e4. wp.nexon.com(\ud504\ub77c\uc2dc\uc544\uc804\uae30)\uc740
+# thefinals.nexon.com(\ub354 \ud30c\uc774\ub110\uc2a4)/cyphers.nexon.com(\uc0ac\uc774\ud37c\uc988)/df.nexon.com(\ub358\uc804\uc564\ud30c\uc774\ud130)\ub294
+# \uc624\ub77c\ud074 \ud074\ub77c\uc6b0\ub4dc IP\ub97c \ucc28\ub2e8\ud574\uc11c(403/\ud0c0\uc784\uc544\uc6c3 \ub610\ub294 \uc870\uc6a9\ud55c \uc218\uc9d1 \uc2e4\ud328, \uc9c1\uc811 \ud655\uc778 \u2014
+# \ub358\uc804\uc564\ud30c\uc774\ud130\ub294 last_seen_at\uc774 2026-09-08 \uc774\ud6c4\ub85c \uba48\ucdb0\uc788\ub358 \uac78\ub85c \ud655\uc778) \uc6b4\uc601 \uc11c\ubc84\uac00
+# \ubabb \ub6ab\ub294\ub2e4. wp.nexon.com(\ud504\ub77c\uc2dc\uc544\uc804\uae30)\uc740
 # \uac1c\ubc1c \ud658\uacbd \uc815\uc801 \uc694\uccad\uc5d0\uc11c\ub3c4 \uc774\ubbf8 \uc774\ubca4\ud2b8 \ubaa9\ub85d\uc774 \uc548 \uc7a1\ud600\uc11c(\ube0c\ub77c\uc6b0\uc800 \ub80c\ub354\ub9c1
 # \uacb0\uacfc\uc640 \ub2e4\ub984) \uac80\uc99d \uc0bc\uc544 \uac19\uc774 \ud3ec\ud568\ud55c\ub2e4 \u2014 GitHub Actions
 # (fallback-collect.yml)\uac00 \ub300\uc2e0 \uc218\uc9d1\ud574 \ucee4\ubc0b\ud574\ub454
@@ -74,7 +75,7 @@ COLLECTORS = {
     "\ube14\ub808\uc774\ub4dc\uc564\uc18c\uc6b8": collect_blade_and_soul_events,
     "\uac80\uc740\uc0ac\ub9c9": collect_black_desert_events,
     "\uac70\uc0c1": lambda: collect_via_github_fallback("\uac70\uc0c1"),
-    "\ub358\uc804\uc564\ud30c\uc774\ud130": collect_dnf_events,
+    "\ub358\uc804\uc564\ud30c\uc774\ud130": lambda: collect_via_github_fallback("\ub358\uc804\uc564\ud30c\uc774\ud130"),
     "\ud14c\uc77c\uc988\ub7f0\ub108": lambda: collect_via_github_fallback("\ud14c\uc77c\uc988\ub7f0\ub108"),
     "\uce74\uc6b4\ud130\uc2a4\ud2b8\ub77c\uc774\ud06c \uc628\ub77c\uc778": collect_cso_events,
     "\ub9c8\ube44\ub178\uae30 \uc601\uc6c5\uc804": collect_heroes_events,
