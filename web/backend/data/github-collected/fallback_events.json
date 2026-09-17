@@ -241,7 +241,7 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T20:07:59.315270+00:00"
+      "collected_at": "2026-09-17T01:26:07.258461+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -254,23 +254,36 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T20:07:59.315270+00:00"
-    },
-    {
-      "publisher": "NEXON Korea",
-      "game": "사이퍼즈",
-      "title": "귀환 능력자를 위한 전용 혜택",
-      "event_url": "https://cyphers.nexon.com/pages/events/welcome?comeback",
-      "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/01/07/1767769532113.png",
-      "starts_on": "2026-09-03",
-      "ends_on": "2026-09-30",
-      "published_on": "2026-09-03",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-09-16T20:07:59.315270+00:00"
+      "collected_at": "2026-09-17T01:26:07.258461+00:00"
     }
   ],
   "던전앤파이터": [
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "리네아의 매지컬 보드",
+      "event_url": "https://df.nexon.com/pg/magicalboard",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/36c79414-7805-5454-bf3b-400afceddade.jpg",
+      "starts_on": "2026-09-17",
+      "ends_on": "2026-10-08",
+      "published_on": "2026-09-17",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "높고 맑은 가을 하늘 PC방",
+      "event_url": "https://df.nexon.com/pg/highautumnskypcb",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/074afd26-7d3e-129b-b5e1-7f4e4ffd0472.jpg",
+      "starts_on": "2026-09-17",
+      "ends_on": "2026-10-15",
+      "published_on": "2026-09-17",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
+    },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
@@ -282,7 +295,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +308,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +321,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +334,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +347,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +360,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +373,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +386,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,12 +399,12 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
-      "title": "던파 X넥슨 현대카드 Ed.2 혜택 RUSH",
+      "title": "[종료]\n                    던파 X넥슨 현대카드 Ed.2 혜택 RUSH",
       "event_url": "https://df.nexon.com/pr/dnfhyundai?eventCode=NXNGN&utm_source=da&utm_medium=listda&utm_campaign=nxhd2026&utm_term=none&utm_content=common_banner42",
       "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202607/c2a611bf-c8a1-03dc-439a-fffaeb0dd41a.jpg",
       "starts_on": "2026-07-30",
@@ -399,7 +412,7 @@
       "published_on": "2026-07-30",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,20 +425,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "시원한 물살 가르는 21주년 Special PC방",
-      "event_url": "https://df.nexon.com/pg/21stpcb",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202608/4a5cbb5b-76ce-4283-7e54-cfa18c896ec9.jpg",
-      "starts_on": "2026-08-06",
-      "ends_on": "2026-09-17",
-      "published_on": "2026-08-06",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-09-16T16:55:56.306113+00:00"
+      "collected_at": "2026-09-17T01:26:08.124798+00:00"
     }
   ]
 }
