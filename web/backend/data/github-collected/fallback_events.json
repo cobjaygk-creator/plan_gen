@@ -241,7 +241,7 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:22:59.444458+00:00"
+      "collected_at": "2026-09-18T00:19:56.225881+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -254,7 +254,7 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:22:59.444458+00:00"
+      "collected_at": "2026-09-18T00:19:56.225881+00:00"
     }
   ],
   "던전앤파이터": [
@@ -269,7 +269,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -282,7 +282,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +295,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +308,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +321,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +334,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +347,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +360,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +373,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +386,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,20 +399,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "[종료]\n                    던파 X넥슨 현대카드 Ed.2 혜택 RUSH",
-      "event_url": "https://df.nexon.com/pr/dnfhyundai?eventCode=NXNGN&utm_source=da&utm_medium=listda&utm_campaign=nxhd2026&utm_term=none&utm_content=common_banner42",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202607/c2a611bf-c8a1-03dc-439a-fffaeb0dd41a.jpg",
-      "starts_on": "2026-07-30",
-      "ends_on": "2026-09-17",
-      "published_on": "2026-07-30",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -425,7 +412,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-17T21:23:00.111390+00:00"
+      "collected_at": "2026-09-18T00:19:56.511759+00:00"
     }
   ]
 }
