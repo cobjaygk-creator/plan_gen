@@ -241,7 +241,7 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-21T17:04:21.096851+00:00"
+      "collected_at": "2026-09-22T04:57:06.690223+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -254,7 +254,20 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-21T17:04:21.096851+00:00"
+      "collected_at": "2026-09-22T04:57:06.690223+00:00"
+    },
+    {
+      "publisher": "NEXON Korea",
+      "game": "사이퍼즈",
+      "title": "귀환 능력자를 위한 전용 혜택",
+      "event_url": "https://cyphers.nexon.com/pages/events/welcome?comeback",
+      "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/01/07/1767769532113.png",
+      "starts_on": "2026-09-03",
+      "ends_on": "2026-09-30",
+      "published_on": "2026-09-03",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-09-22T04:57:06.690223+00:00"
     }
   ],
   "던전앤파이터": [
@@ -269,7 +282,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -282,7 +295,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +308,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +321,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +334,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +347,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +360,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +373,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +386,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +399,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +412,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +425,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-22T00:07:50.982816+00:00"
+      "collected_at": "2026-09-22T04:57:07.089557+00:00"
     }
   ]
 }
