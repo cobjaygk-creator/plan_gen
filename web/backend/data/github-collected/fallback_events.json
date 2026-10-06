@@ -150,15 +150,15 @@
     {
       "publisher": "AtoZ Games",
       "game": "거상",
-      "title": "천하제일 낚시 대회!",
-      "event_url": "https://www.gersang.co.kr/event/2026/20260819_f1shh0o3/",
-      "hero_image_url": "https://www.gersang.co.kr/event/2026/20260819_f1shh0o3/img/1920x610.jpg",
-      "starts_on": "2026-08-19",
-      "ends_on": "2026-09-15",
-      "published_on": "2026-08-19",
+      "title": "운명이 이끄는 모험",
+      "event_url": "https://www.gersang.co.kr/event/2026/20260914_dEst13Y/main_1.gs",
+      "hero_image_url": "https://www.gersang.co.kr/event/2026/20260914_dEst13Y/img/1920x610.jpg",
+      "starts_on": "2026-09-14",
+      "ends_on": "2026-10-18",
+      "published_on": "2026-09-14",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.511364+00:00"
+      "collected_at": "2026-10-06T07:35:26.587016+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.511364+00:00"
+      "collected_at": "2026-10-06T07:35:26.587016+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,20 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.511364+00:00"
+      "collected_at": "2026-10-06T07:35:26.587016+00:00"
+    },
+    {
+      "publisher": "AtoZ Games",
+      "game": "거상",
+      "title": "추천서버 혜택",
+      "event_url": "http://www.gersang.co.kr/main/index.gs",
+      "hero_image_url": "https://www.gersang.co.kr/event/2024/20240326_3E5vE5/img/1920x610.jpg",
+      "starts_on": null,
+      "ends_on": null,
+      "published_on": null,
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-06T07:35:26.587016+00:00"
     }
   ],
   "더 파이널스": [
@@ -241,7 +254,7 @@
       "published_on": "2026-09-03",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:35.492902+00:00"
+      "collected_at": "2026-10-06T07:35:28.002436+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -254,7 +267,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:35.492902+00:00"
+      "collected_at": "2026-10-06T07:35:28.002436+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -267,7 +280,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:35.492902+00:00"
+      "collected_at": "2026-10-06T07:35:28.002436+00:00"
     }
   ],
   "던전앤파이터": [
@@ -282,7 +295,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +308,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +321,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +334,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +347,7 @@
       "published_on": "2026-09-23",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +360,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +373,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +386,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +399,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +412,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +425,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -425,7 +438,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -438,7 +451,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -451,7 +464,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -464,7 +477,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-06T00:49:36.157784+00:00"
+      "collected_at": "2026-10-06T07:35:28.292173+00:00"
     }
   ]
 }
