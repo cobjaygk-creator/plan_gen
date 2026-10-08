@@ -158,7 +158,7 @@
       "published_on": "2026-09-14",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:44.791300+00:00"
+      "collected_at": "2026-10-08T15:37:32.188263+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:44.791300+00:00"
+      "collected_at": "2026-10-08T15:37:32.188263+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:44.791300+00:00"
+      "collected_at": "2026-10-08T15:37:32.188263+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -197,7 +197,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:44.791300+00:00"
+      "collected_at": "2026-10-08T15:37:32.188263+00:00"
     }
   ],
   "더 파이널스": [
@@ -254,7 +254,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.450128+00:00"
+      "collected_at": "2026-10-08T15:37:33.502787+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -267,10 +267,36 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.450128+00:00"
+      "collected_at": "2026-10-08T15:37:33.502787+00:00"
     }
   ],
   "던전앤파이터": [
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "오필리아의 백일장을 도와줘!",
+      "event_url": "https://df.nexon.com/community/news/event/2928637",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/2196cd12-6770-7183-ea78-7c62e740bf57.jpg",
+      "starts_on": "2026-10-08",
+      "ends_on": "2026-10-22",
+      "published_on": "2026-10-08",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "마일리지샵 2026 시즌9",
+      "event_url": "https://df.nexon.com/community/news/event/2928609",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/be64b909-7e36-5821-4472-5a8db795d28a.jpg",
+      "starts_on": "2026-10-08",
+      "ends_on": "2026-11-12",
+      "published_on": "2026-10-08",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
+    },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
@@ -282,7 +308,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +321,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +334,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +347,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +360,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +373,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +386,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +399,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +412,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +425,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +438,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-08T07:25:46.734541+00:00"
+      "collected_at": "2026-10-08T15:37:33.784001+00:00"
     }
   ]
 }
