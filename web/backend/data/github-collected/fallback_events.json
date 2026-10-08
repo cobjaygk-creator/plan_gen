@@ -158,7 +158,7 @@
       "published_on": "2026-09-14",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:16.916335+00:00"
+      "collected_at": "2026-10-08T01:01:02.879624+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:16.916335+00:00"
+      "collected_at": "2026-10-08T01:01:02.879624+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:16.916335+00:00"
+      "collected_at": "2026-10-08T01:01:02.879624+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -197,7 +197,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:16.916335+00:00"
+      "collected_at": "2026-10-08T01:01:02.879624+00:00"
     }
   ],
   "더 파이널스": [
@@ -246,19 +246,6 @@
     {
       "publisher": "NEXON Korea",
       "game": "사이퍼즈",
-      "title": "2026 리얼 사이퍼즈",
-      "event_url": "https://cyphers.nexon.com/pages/events/contest/2026",
-      "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/09/03/1788390520319.png",
-      "starts_on": "2026-09-03",
-      "ends_on": "2026-10-08",
-      "published_on": "2026-09-03",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:18.595128+00:00"
-    },
-    {
-      "publisher": "NEXON Korea",
-      "game": "사이퍼즈",
       "title": "신규 능력자를 위한 전용 혜택",
       "event_url": "https://cyphers.nexon.com/pages/events/welcome",
       "hero_image_url": "https://pub.cyphers.co.kr/images3/content/2026/01/07/1767769455419.png",
@@ -267,7 +254,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:18.595128+00:00"
+      "collected_at": "2026-10-08T01:01:04.822278+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -280,7 +267,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T20:38:18.595128+00:00"
+      "collected_at": "2026-10-08T01:01:04.822278+00:00"
     }
   ],
   "던전앤파이터": [
@@ -295,7 +282,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +295,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +308,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,33 +321,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "세리아의 특별 상점 OPEN!",
-      "event_url": "https://df.nexon.com/community/news/notice/2928552",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/afe33e43-cc6b-cdbb-20e3-f255994b3b7c.jpg",
-      "starts_on": "2026-09-23",
-      "ends_on": "2026-10-08",
-      "published_on": "2026-09-23",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "리네아의 매지컬 보드",
-      "event_url": "https://df.nexon.com/pg/magicalboard",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/36c79414-7805-5454-bf3b-400afceddade.jpg",
-      "starts_on": "2026-09-17",
-      "ends_on": "2026-10-08",
-      "published_on": "2026-09-17",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +334,7 @@
       "published_on": "2026-09-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,20 +347,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "우리는 출석하고 증폭한다! 시즌2",
-      "event_url": "https://df.nexon.com/community/news/event/2928470",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/5d462638-2dec-5745-d547-0063f629b62c.jpg",
-      "starts_on": "2026-09-10",
-      "ends_on": "2026-10-08",
-      "published_on": "2026-09-10",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +360,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -425,7 +373,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -438,20 +386,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "마일리지샵 2026 시즌8",
-      "event_url": "https://df.nexon.com/community/news/event/2928290",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202608/d197fb5f-0ac4-8ca7-2eee-9a6d99fb73fb.jpg",
-      "starts_on": "2026-08-27",
-      "ends_on": "2026-10-08",
-      "published_on": "2026-08-27",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -464,7 +399,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -477,7 +412,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-07T14:30:48.055685+00:00"
+      "collected_at": "2026-10-08T01:01:05.140501+00:00"
     }
   ]
 }
