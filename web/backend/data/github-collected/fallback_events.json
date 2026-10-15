@@ -158,7 +158,7 @@
       "published_on": "2026-10-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-15T00:33:52.610674+00:00"
+      "collected_at": "2026-10-15T05:54:43.789628+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": "2026-09-14",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-15T00:33:52.610674+00:00"
+      "collected_at": "2026-10-15T05:54:43.789628+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-15T00:33:52.610674+00:00"
+      "collected_at": "2026-10-15T05:54:43.789628+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -197,7 +197,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-15T00:33:52.610674+00:00"
+      "collected_at": "2026-10-15T05:54:43.789628+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -210,7 +210,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-15T00:33:52.610674+00:00"
+      "collected_at": "2026-10-15T05:54:43.789628+00:00"
     }
   ],
   "더 파이널스": [
@@ -267,7 +267,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:18.416971+00:00"
+      "collected_at": "2026-10-15T05:54:45.010880+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -280,10 +280,36 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:18.416971+00:00"
+      "collected_at": "2026-10-15T05:54:45.010880+00:00"
     }
   ],
   "던전앤파이터": [
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "풍요로운 가을의 PC방",
+      "event_url": "https://df.nexon.com/pg/bountifulpcb",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/1bdd29c7-f4cc-4219-88c8-942b393ebdf6.jpg",
+      "starts_on": "2026-10-15",
+      "ends_on": "2026-11-12",
+      "published_on": "2026-10-15",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "강자의 길 : 선택",
+      "event_url": "https://df.nexon.com/pg/thewayofthestrong",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/4b7e07db-f299-fa87-77a7-8799cecefc3d.jpg",
+      "starts_on": "2026-10-15",
+      "ends_on": "2026-11-12",
+      "published_on": "2026-10-15",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
+    },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
@@ -295,7 +321,7 @@
       "published_on": "2026-10-08",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +334,7 @@
       "published_on": "2026-10-08",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +347,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +360,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +373,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,20 +386,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "높고 맑은 가을 하늘 PC방",
-      "event_url": "https://df.nexon.com/pg/highautumnskypcb",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/074afd26-7d3e-129b-b5e1-7f4e4ffd0472.jpg",
-      "starts_on": "2026-09-17",
-      "ends_on": "2026-10-15",
-      "published_on": "2026-09-17",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +399,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +412,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +425,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -425,7 +438,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -438,7 +451,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -451,7 +464,7 @@
       "published_on": "2026-08-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-14T18:38:19.468680+00:00"
+      "collected_at": "2026-10-15T05:54:45.248685+00:00"
     }
   ]
 }
