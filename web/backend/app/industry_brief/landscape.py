@@ -5,6 +5,7 @@ from datetime import datetime, timedelta, timezone
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+from fastapi import HTTPException
 
 from .models import Article, ArticleAnalysis, ReferenceArticle
 
@@ -121,16 +122,28 @@ def build_issue_detail(db: Session, issue_key: str, days: int = 30) -> dict:
     if not references:
         raise HTTPException(status_code=404, detail="Unknown industry-map issue.")
 
-    cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=days)
     live_rows = db.execute(
         select(Article, ArticleAnalysis)
         .join(ArticleAnalysis, ArticleAnalysis.article_id == Article.id)
-        .where(Article.classified_at.is_not(None), Article.classified_at >= cutoff)
+        .where(Article.classified_at.is_not(None))
         .order_by(Article.published_at.desc().nulls_last(), Article.collected_at.desc())
     ).all()
     live = []
+    live_months = Counter()
+    latest_analysis = None
     for article, analysis in live_rows:
         if issue_key not in json.loads(analysis.reference_issue_keys or "[]"):
+            continue
+        classified_at = article.classified_at.replace(tzinfo=timezone.utc) if article.classified_at.tzinfo is None else article.classified_at
+        latest_analysis = max(latest_analysis, classified_at) if latest_analysis else classified_at
+        published_at = article.published_at or article.collected_at
+        if published_at:
+            published_at = published_at.replace(tzinfo=timezone.utc) if published_at.tzinfo is None else published_at
+            if published_at.year == now.year and published_at <= now:
+                live_months[published_at.strftime("%Y-%m")] += 1
+        if classified_at < cutoff:
             continue
         live.append({
             "title": article.title,
@@ -140,14 +153,24 @@ def build_issue_detail(db: Session, issue_key: str, days: int = 30) -> dict:
         })
 
     dates = [reference.observed_at for reference in references if reference.observed_at]
-    timeline_counts = Counter(date.strftime("%Y-%m") for date in dates)
-    timeline = [{"month": month, "count": count} for month, count in sorted(timeline_counts.items())]
+    timeline_counts = Counter(date.strftime("%Y-%m") for date in dates if date.year == now.year)
+    timeline = [
+        {"month": (month := f"{now.year}-{number:02d}"),
+         "count": timeline_counts[month] + live_months[month],
+         "referenceCount": timeline_counts[month], "analyzedCount": live_months[month]}
+        for number in range(1, now.month + 1)
+    ]
     first_date = min(dates).date().isoformat() if dates else None
     last_date = max(dates).date().isoformat() if dates else None
     if first_date and last_date:
         change_summary = f"{first_date}부터 {last_date}까지 기준선 기사 {len(references)}건이 축적됐고, 최근 {days}일 분석에서 {len(live)}건이 다시 연결됐습니다."
     else:
         change_summary = f"기준선 기사 {len(references)}건 중 최근 {days}일 분석에서 {len(live)}건이 연결됐습니다."
+    change_summary += " 월별 그래프는 과거 스크랩과 자동 분석 기사를 구분해 보여줍니다. 두 자료에 같은 기사가 포함될 수 있습니다."
+    if latest_analysis is None:
+        change_summary += " 연결된 자동 분석 기사가 아직 없습니다."
+    elif latest_analysis < cutoff:
+        change_summary += f" 연결된 기사의 마지막 분석은 {latest_analysis.date().isoformat()}입니다. 최근 분석 데이터가 없어 최신 동향을 판단할 수 없습니다."
     return {
         "key": issue_key,
         "title": ISSUE_LABELS.get(issue_key, issue_key),
@@ -156,6 +179,7 @@ def build_issue_detail(db: Session, issue_key: str, days: int = 30) -> dict:
         "recentCount": len(live),
         "historicalEnd": last_date,
         "changeSummary": change_summary,
+        "latestAnalysisAt": latest_analysis.isoformat() if latest_analysis else None,
         "timeline": timeline,
         "historicalArticles": [
             {

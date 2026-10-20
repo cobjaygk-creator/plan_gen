@@ -194,6 +194,8 @@ export interface LandscapeEvidenceArticle {
 export interface LandscapeTimelinePoint {
   month: string;
   count: number;
+  referenceCount?: number;
+  analyzedCount?: number;
 }
 
 export interface LandscapeIssueDetail {

@@ -2131,3 +2131,11 @@
 /* GitHub Pages is a read-only benchmark snapshot. */
 body.static-site .ib-feedback-manager,
 body.static-site .ib-refresh { display: none; }
+
+.ib-landscape-timeline-legend { display: flex; gap: 16px; margin: 12px 0 6px; font-size: 12px; color: var(--ink-faint); }
+.ib-landscape-timeline-legend span:last-child { color: #2457e7; }
+.ib-landscape-timeline { overflow-x: auto; }
+.ib-landscape-month-bars { display: flex; align-items: flex-end; gap: 3px; height: 62px; }
+.ib-landscape-month-bars span { width: 12px; flex: 1; }
+.ib-landscape-month-bars span.is-analyzed { background: #2457e7; }
+.ib-landscape-timeline-note { font-size: 12px; color: var(--ink-faint); }
