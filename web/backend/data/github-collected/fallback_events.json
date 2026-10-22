@@ -158,7 +158,7 @@
       "published_on": "2026-10-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T00:00:20.417020+00:00"
+      "collected_at": "2026-10-22T04:45:58.947062+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": "2026-10-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T00:00:20.417020+00:00"
+      "collected_at": "2026-10-22T04:45:58.947062+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T00:00:20.417020+00:00"
+      "collected_at": "2026-10-22T04:45:58.947062+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -197,7 +197,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T00:00:20.417020+00:00"
+      "collected_at": "2026-10-22T04:45:58.947062+00:00"
     }
   ],
   "더 파이널스": [
@@ -254,7 +254,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T20:37:54.827206+00:00"
+      "collected_at": "2026-10-22T04:46:00.680950+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -267,10 +267,36 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T20:37:54.827206+00:00"
+      "collected_at": "2026-10-22T04:46:00.680950+00:00"
     }
   ],
   "던전앤파이터": [
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "으스스한 할로윈 선물 상자",
+      "event_url": "https://df.nexon.com/pg/halloweengiftbox26",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/32a3a06b-a43f-cf6b-b68e-b5cdf5fe0470.jpg",
+      "starts_on": "2026-10-22",
+      "ends_on": "2026-11-12",
+      "published_on": "2026-10-22",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "아라드패스 2026 시즌5",
+      "event_url": "https://df.nexon.com/pg/aradpass26_s5",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/40008fe2-0bd5-2cc0-4271-7f9548cedb47.jpg",
+      "starts_on": "2026-10-22",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-10-22",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
+    },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
@@ -282,7 +308,7 @@
       "published_on": "2026-10-15",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,20 +321,7 @@
       "published_on": "2026-10-15",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "오필리아의 백일장을 도와줘!",
-      "event_url": "https://df.nexon.com/community/news/event/2928637",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/2196cd12-6770-7183-ea78-7c62e740bf57.jpg",
-      "starts_on": "2026-10-08",
-      "ends_on": "2026-10-22",
-      "published_on": "2026-10-08",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +334,7 @@
       "published_on": "2026-10-08",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +347,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +360,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +373,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +386,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +399,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +412,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,20 +425,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "2026 아라드 패스 사막의 수호자 아바타 콤보 상자",
-      "event_url": "https://df.nexon.com/pg/desertcombo",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202608/d18fb77f-878b-0176-6423-807fcece2255.jpg",
-      "starts_on": "2026-08-27",
-      "ends_on": "2026-10-22",
-      "published_on": "2026-08-27",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -438,20 +438,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "아라드 패스 2026 시즌4",
-      "event_url": "https://df.nexon.com/pg/aradpass26_s4",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202608/10768961-dbeb-2399-5fb8-ba75ac4845d8.jpg",
-      "starts_on": "2026-08-13",
-      "ends_on": "2026-10-22",
-      "published_on": "2026-08-13",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-10-21T17:12:45.110258+00:00"
+      "collected_at": "2026-10-22T04:46:01.004826+00:00"
     }
   ]
 }
