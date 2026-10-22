@@ -1,4 +1,5 @@
-import type { User, Generation, AccessLog, SiteVisit } from "./types";
+import type { User, Generation, AccessLog, SiteVisit, WireframeGeneration } from "./types";
+import type { WireframeJob, WireframePageInfo } from "../features/wireframe/types";
 
 export class ApiError extends Error {
   status: number;
@@ -41,12 +42,28 @@ export const api = {
   listSiteVisits: () => request<SiteVisit[]>("/auth/site-visits"),
 
   listGenerations: () => request<Generation[]>("/generations"),
+  listWireframeHistory: () => request<WireframeGeneration[]>("/wireframe/history"),
+  wireframeDownloadUrl: (id: number) => `/wireframe/history/${id}/download`,
   getGeneration: (id: number) => request<Generation>(`/generations/${id}`),
   createGeneration: (file: File) => {
     const form = new FormData();
     form.append("file", file);
     return request<Generation>("/generations", { method: "POST", body: form });
   },
+  analyzeWireframe: (file: File, instruction = "") => {
+    const form = new FormData();
+    form.append("file", file);
+    form.append("instruction", instruction);
+    return request<{ pages: WireframePageInfo[] }>("/wireframe/analyze", { method: "POST", body: form });
+  },
+  generateWireframe: (file: File, pageId: string, instruction = "") => {
+    const form = new FormData();
+    form.append("file", file);
+    form.append("page_id", pageId);
+    form.append("instruction", instruction);
+    return request<{ jobId: string }>("/wireframe/generate", { method: "POST", body: form });
+  },
+  getWireframeJob: (jobId: string) => request<WireframeJob>(`/wireframe/jobs/${jobId}`),
   downloadUrl: (id: number) => `/generations/${id}/download`,
   streamUrl: (id: number) => `/generations/${id}/stream`,
 };

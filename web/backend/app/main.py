@@ -5,6 +5,7 @@ from fastapi import Depends, FastAPI, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
+from sqlalchemy import inspect, text
 from starlette.middleware.sessions import SessionMiddleware
 
 from .config import SESSION_COOKIE_NAME, SESSION_MAX_AGE_SECONDS, SESSION_SECRET_KEY
@@ -17,9 +18,16 @@ from .event_bench.routes import router as event_bench_router
 from .preregistration.routes import router as preregistration_router
 from .game_sites.routes import router as game_sites_router
 from .sentiment_checker.routes import router as sentiment_checker_router
+from .wireframe.routes import router as wireframe_router
 from .routers import auth, generations
 
 Base.metadata.create_all(bind=engine)
+# Lightweight additive migration for existing local/OCI SQLite databases.
+if "wireframe_generations" in inspect(engine).get_table_names():
+    columns = {column["name"] for column in inspect(engine).get_columns("wireframe_generations")}
+    if "output_path" not in columns:
+        with engine.begin() as connection:
+            connection.execute(text("ALTER TABLE wireframe_generations ADD COLUMN output_path VARCHAR(500)"))
 
 
 @asynccontextmanager
@@ -47,6 +55,7 @@ app.include_router(event_bench_router)
 app.include_router(preregistration_router)
 app.include_router(game_sites_router)
 app.include_router(sentiment_checker_router)
+app.include_router(wireframe_router)
 
 
 @app.get("/health")

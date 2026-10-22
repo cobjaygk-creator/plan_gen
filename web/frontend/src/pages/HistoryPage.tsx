@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../api/client";
-import type { Generation, GenerationStatus } from "../api/types";
+import type { Generation, GenerationStatus, WireframeGeneration } from "../api/types";
 import "./HistoryPage.css";
 
 const STATUS_LABEL: Record<GenerationStatus, string> = {
@@ -33,10 +33,13 @@ function formatMonth(month: string): string {
 
 export function HistoryPage() {
   const [items, setItems] = useState<Generation[] | null>(null);
+  const [wireframes, setWireframes] = useState<WireframeGeneration[] | null>(null);
+  const [activeTab, setActiveTab] = useState<"documents" | "wireframes">("documents");
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     api.listGenerations().then(setItems);
+    api.listWireframeHistory().then(setWireframes);
   }, []);
 
   const filtered = (items ?? []).filter((g) => {
@@ -51,7 +54,11 @@ export function HistoryPage() {
         <h1>생성 이력</h1>
         <p>과거에 생성한 SB 문서를 확인하고 다시 내려받을 수 있습니다.</p>
       </div>
-      <div className="card table-card">
+      <div className="history-tabs" role="tablist" aria-label="생성 이력 종류">
+        <button type="button" role="tab" aria-selected={activeTab === "documents"} className={activeTab === "documents" ? "active" : ""} onClick={() => setActiveTab("documents")}>기획서 생성 이력 <span>{items?.length ?? 0}</span></button>
+        <button type="button" role="tab" aria-selected={activeTab === "wireframes"} className={activeTab === "wireframes" ? "active" : ""} onClick={() => setActiveTab("wireframes")}>와이어프레임 생성 이력 <span>{wireframes?.length ?? 0}</span></button>
+      </div>
+      {activeTab === "documents" && <div className="card table-card">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", borderBottom: "1px solid var(--border)", gap: 12, flexWrap: "wrap" }}>
           <input
             className="field-search"
@@ -123,7 +130,14 @@ export function HistoryPage() {
             </tbody>
           </table>
         )}
-      </div>
+      </div>}
+      {activeTab === "wireframes" && <div className="card table-card">
+        {wireframes === null ? <div className="empty-history">불러오는 중...</div> : wireframes.length === 0 ? <div className="empty-history">아직 생성한 와이어프레임이 없습니다. <Link to="/wireframe">와이어프레임 생성</Link>에서 시작해보세요.</div> : (
+          <table><thead><tr><th>원본 파일</th><th>화면</th><th>생성 일시</th><th>상태</th><th>모델</th><th>비용</th><th></th></tr></thead><tbody>
+            {wireframes.map((item) => <tr key={item.id}><td>{item.source_filename}</td><td>{item.page_title || item.page_id}</td><td className="tabular">{formatDateTime(item.created_at)}</td><td><span className={`pill ${item.status === "done" ? "ok" : item.status === "error" ? "err" : "neutral"}`}><span className="dot" />{item.status === "done" ? "완료" : item.status === "error" ? "오류" : item.status === "running" ? "생성 중" : "대기 중"}</span></td><td>{item.model || "-"}</td><td>{item.cost_usd == null ? "-" : `$${item.cost_usd.toFixed(4)}`}</td><td>{item.status === "done" ? <a href={api.wireframeDownloadUrl(item.id)}>HTML 다운로드</a> : <span style={{color:"var(--ink-faint)"}}>다운로드</span>}</td></tr>)}
+          </tbody></table>
+        )}
+      </div>}
     </>
   );
 }

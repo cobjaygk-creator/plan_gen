@@ -78,3 +78,20 @@ class Generation(Base):
     completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
     user: Mapped["User"] = relationship(back_populates="generations")
+
+
+class WireframeGeneration(Base):
+    __tablename__ = "wireframe_generations"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    source_filename: Mapped[str] = mapped_column(String(255))
+    page_id: Mapped[str] = mapped_column(String(120))
+    page_title: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    status: Mapped[str] = mapped_column(String(20), default="queued")
+    model: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    cost_usd: Mapped[float | None] = mapped_column(nullable=True)
+    output_path: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    error_message: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_utcnow)
+    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)

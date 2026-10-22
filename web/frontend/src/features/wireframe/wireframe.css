@@ -1,0 +1,176 @@
+.wf-page-root {
+  max-width: 1280px;
+  margin: 0 auto;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.wf-intro h1 {
+  margin: 0 0 var(--sp-1);
+  font-size: var(--fs-page);
+}
+
+.wf-intro p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: var(--fs-body);
+}
+
+.wf-drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  border: 1.5px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink-muted);
+  font-size: var(--fs-body);
+  cursor: pointer;
+}
+
+.wf-drop.dragging {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.wf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.wf-instruction-label { display: block; margin-top: 18px; color: var(--ink); font-size: 13px; font-weight: 700; }
+.wf-instruction-label span { margin-left: 6px; color: var(--ink-faint); font-size: 11px; font-weight: 400; }
+.wf-instruction { display: block; width: min(100%, 760px); margin-top: 8px; padding: 11px 13px; border: 1px solid var(--border-strong); border-radius: 7px; background: var(--surface); color: var(--ink); font: inherit; font-size: 13px; line-height: 1.6; resize: vertical; }
+.wf-instruction:focus { border-color: var(--accent); outline: 2px solid color-mix(in srgb, var(--accent) 20%, transparent); }
+.wf-instruction-help { margin: 7px 0 0; color: var(--ink-faint); font-size: 12px; }
+.wf-settings { margin-top: 20px; padding: 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-muted); }
+.wf-settings-title { margin-bottom: 12px; color: var(--ink); font-size: 13px; font-weight: 700; }
+.wf-settings-title span { margin-left: 8px; color: var(--ink-faint); font-size: 11px; font-weight: 400; }
+.wf-settings-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.wf-settings-grid label { display: flex; flex-direction: column; gap: 6px; color: var(--ink); font-size: 12px; font-weight: 700; }
+.wf-settings-grid input, .wf-settings-grid select { min-height: 36px; padding: 8px 10px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--ink); font: inherit; font-size: 12px; font-weight: 400; }
+@media (max-width: 820px) { .wf-settings-grid { grid-template-columns: 1fr; } }
+
+.wf-cost {
+  margin-left: auto;
+  color: var(--ink-muted);
+  font-size: var(--fs-meta);
+}
+
+.wf-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: var(--fs-meta);
+}
+
+.wf-workspace {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: var(--sp-4);
+  align-items: start;
+}
+
+.wf-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.wf-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.wf-item.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.wf-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.wf-item-main:disabled {
+  cursor: default;
+}
+
+.wf-item-main strong {
+  font-size: var(--fs-card);
+}
+
+.wf-item-main span {
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+}
+
+.wf-item-main .wf-done {
+  color: var(--success);
+}
+
+.wf-preview {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.wf-preview-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.wf-stage {
+  height: 78vh;
+  overflow: hidden;
+  background: var(--surface-sunken);
+}
+
+.wf-stage iframe {
+  display: block;
+  border: 0;
+  transform-origin: 0 0;
+}
+
+.wf-empty {
+  margin: 0;
+  padding: var(--sp-6) var(--sp-4);
+  color: var(--ink-faint);
+  text-align: center;
+  font-size: var(--fs-body);
+}
+
+@media (max-width: 900px) {
+  .wf-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.wf-hint {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: var(--fs-meta);
+}

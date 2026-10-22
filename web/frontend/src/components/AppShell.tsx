@@ -43,6 +43,14 @@ function GlobeIcon() {
     </svg>
   );
 }
+function LayoutIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M3 9h18M9 9v12" />
+    </svg>
+  );
+}
 function ChevronDown() {
   return (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -69,9 +77,9 @@ export function AppShell() {
           </div>
         </div>
         <div className="gnb-right">
-          {/* 로그인 없이 보는 게 기본 화면이라, 로그인 버튼/사용자 표시
-              자체를 관리자로 실제 로그인했을 때만 보여준다. */}
-          {isAdmin && (
+          {/* 로그인 없이 보는 게 기본 화면이라 로그인 버튼은 두지 않지만,
+              어떤 계정으로든 로그인된 상태라면 로그아웃할 수 있어야 한다. */}
+          {user && (
             <div className="user-menu">
               <button
                 type="button"
@@ -128,6 +136,12 @@ export function AppShell() {
                   <HistoryIcon />
                 </span>
                 생성 이력
+              </NavLink>
+              <NavLink to="/wireframe" className={navClass}>
+                <span className="ic">
+                  <LayoutIcon />
+                </span>
+                와이어프레임
               </NavLink>
             </>
           )}

@@ -18,6 +18,19 @@ export interface Generation {
   completed_at: string | null;
 }
 
+export interface WireframeGeneration {
+  id: number;
+  source_filename: string;
+  page_id: string;
+  page_title: string | null;
+  status: "queued" | "running" | "done" | "error";
+  model: string | null;
+  cost_usd: number | null;
+  error_message: string | null;
+  created_at: string;
+  completed_at: string | null;
+}
+
 export interface ProgressEvent {
   status: GenerationStatus;
   step: number;
