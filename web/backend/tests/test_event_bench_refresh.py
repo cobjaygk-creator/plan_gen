@@ -1,5 +1,6 @@
 import json
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -17,7 +18,7 @@ def test_collect_via_github_fallback_reconstructs_event_candidates(monkeypatch):
         "테일즈위버": [{
             "publisher": "NEXON Korea", "game": "테일즈위버", "title": "테스트 이벤트",
             "event_url": "https://tales.nexon.com/News/Event/1", "hero_image_url": None,
-            "starts_on": "2026-09-01", "ends_on": "2026-09-30", "published_on": None,
+            "starts_on": "2026-09-01", "ends_on": "2999-12-31", "published_on": None,
             "status": "ongoing", "event_format": "board", "collected_at": "2026-09-09T00:00:00+00:00",
         }],
         "거상": [],
@@ -97,3 +98,51 @@ def test_main_keeps_previously_cached_thumbnail_when_this_cycle_extracts_none(mo
 
     saved = json.loads(event_bench_refresh.OUTPUT_PATH.read_text(encoding="utf-8"))
     assert saved[0]["hero_image_url"] == "data/thumbnails/event_bench/already-cached.jpg"
+
+
+def _fake_fallback(monkeypatch, payload):
+    class FakeResponse:
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+        def read(self):
+            return json.dumps(payload).encode("utf-8")
+
+    monkeypatch.setattr(event_bench_refresh.urllib.request, "urlopen", lambda url, timeout=20: FakeResponse())
+
+
+def _item(title, ends_on, collected_at):
+    return {
+        "publisher": "RHAON", "game": "테일즈런너", "title": title,
+        "event_url": f"https://tr.rhaon.co.kr/{title}", "hero_image_url": None,
+        "starts_on": "2026-09-01", "ends_on": ends_on, "published_on": None,
+        "status": "ongoing", "event_format": "board", "collected_at": collected_at,
+    }
+
+
+def test_fallback_drops_events_that_already_ended(monkeypatch):
+    # GitHub Actions 수집이 멈추면 직전 성공분이 그대로 남는데, 그중 이미
+    # 끝난 이벤트까지 매시간 "진행 중"으로 다시 찍히면 안 된다.
+    now = datetime.now(timezone.utc).isoformat()
+    _fake_fallback(monkeypatch, {"테일즈런너": [_item("ended", "2020-01-01", now), _item("open", "2999-12-31", now), _item("no-end", None, now)]})
+    titles = [e.title for e in event_bench_refresh.collect_via_github_fallback("테일즈런너")]
+    assert titles == ["open", "no-end"]
+
+
+def test_fallback_warns_when_data_is_stale(monkeypatch, caplog):
+    stale = (datetime.now(timezone.utc) - timedelta(days=14)).isoformat()
+    _fake_fallback(monkeypatch, {"테일즈런너": [_item("old", "2999-12-31", stale)]})
+    with caplog.at_level("WARNING"):
+        event_bench_refresh.collect_via_github_fallback("테일즈런너")
+    assert "stale" in caplog.text and "테일즈런너" in caplog.text
+
+
+def test_fallback_is_silent_when_data_is_fresh(monkeypatch, caplog):
+    fresh = datetime.now(timezone.utc).isoformat()
+    _fake_fallback(monkeypatch, {"테일즈런너": [_item("new", "2999-12-31", fresh)]})
+    with caplog.at_level("WARNING"):
+        event_bench_refresh.collect_via_github_fallback("테일즈런너")
+    assert "stale" not in caplog.text

@@ -11,7 +11,7 @@ import json
 import logging
 import urllib.request
 from dataclasses import asdict
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from app.config import BENCHMARK_DATA_DIR
 from app.media_cache import cache_thumbnail
@@ -58,10 +58,26 @@ _GITHUB_FALLBACK_URL = (
 )
 
 
+FALLBACK_STALE_AFTER = timedelta(hours=48)
+_KST_OFFSET = timedelta(hours=9)
+
+
 def collect_via_github_fallback(game: str) -> list[EventCandidate]:
     with urllib.request.urlopen(_GITHUB_FALLBACK_URL, timeout=20) as response:  # noqa: S310
         payload = json.loads(response.read().decode("utf-8"))
-    return [EventCandidate(**item) for item in payload.get(game, [])]
+    items = payload.get(game, [])
+    now = datetime.now(timezone.utc)
+
+    collected = [datetime.fromisoformat(i["collected_at"]) for i in items if i.get("collected_at")]
+    if collected and now - max(collected) > FALLBACK_STALE_AFTER:
+        logging.warning(
+            "%s fallback data is stale: newest item collected %s (GitHub Actions collection keeps failing; "
+            "see fallback_status.json)", game, max(collected).isoformat(),
+        )
+
+    # 수집이 멈춘 소스의 종료된 이벤트가 매시간 "진행 중"으로 다시 찍히지 않게 한다.
+    today = (now + _KST_OFFSET).date().isoformat()
+    return [EventCandidate(**item) for item in items if not item.get("ends_on") or item["ends_on"] >= today]
 
 
 COLLECTORS = {

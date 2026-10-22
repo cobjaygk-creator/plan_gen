@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 from app.event_bench.nexon_sample import (
@@ -33,6 +34,7 @@ from app.event_bench.nexon_sample import (
 )
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "github-collected" / "fallback_events.json"
+STATUS_PATH = OUTPUT_PATH.with_name("fallback_status.json")
 
 COLLECTORS = {
     "테일즈위버": collect_talesweaver_events,
@@ -45,30 +47,54 @@ COLLECTORS = {
 }
 
 
+def _load_json(path: Path) -> dict:
+    if not path.is_file():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
 def main() -> None:
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    previous: dict[str, list[dict]] = {}
-    if OUTPUT_PATH.is_file():
-        try:
-            previous = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            previous = {}
+    previous = _load_json(OUTPUT_PATH)
+    status = _load_json(STATUS_PATH)
+    now = datetime.now(timezone.utc).isoformat()
 
     result: dict[str, list[dict]] = {}
+    failed: list[str] = []
     for game, collector in COLLECTORS.items():
+        before = status.get(game, {})
         try:
             candidates = [asdict(item) for item in collector()]
             if not candidates:
                 raise RuntimeError("collector returned no candidates")
             result[game] = candidates
+            status[game] = {
+                "ok": True, "checkedAt": now, "lastSuccessAt": now,
+                "count": len(candidates), "error": None, "consecutiveFailures": 0,
+            }
             print(f"{game}: {len(candidates)}건 수집")
         except Exception as error:
             # 실패한 소스는 직전 성공분을 그대로 유지한다 — event_bench_refresh.py
-            # 본연의 "실패 시 이전 상태 유지" 원칙과 같다.
+            # 본연의 "실패 시 이전 상태 유지" 원칙과 같다. 대신 실패 사실과
+            # 이유를 status 파일과 GitHub Actions 경고로 반드시 남긴다.
             result[game] = previous.get(game, [])
-            print(f"{game}: 수집 실패, 이전 값({len(result[game])}건) 유지 - {error}")
+            message = f"{type(error).__name__}: {error}"[:300]
+            status[game] = {
+                "ok": False, "checkedAt": now, "lastSuccessAt": before.get("lastSuccessAt"),
+                "count": len(result[game]), "error": message,
+                "consecutiveFailures": before.get("consecutiveFailures", 0) + 1,
+            }
+            failed.append(game)
+            print(f"{game}: 수집 실패, 이전 값({len(result[game])}건) 유지 - {message}")
+            print(f"::warning title=Fallback collection failed ({game})::{message}")
 
     OUTPUT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    STATUS_PATH.write_text(json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8")
+    if failed:
+        print(f"실패한 소스: {', '.join(failed)}")
 
 
 if __name__ == "__main__":

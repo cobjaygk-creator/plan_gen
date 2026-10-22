@@ -44,41 +44,67 @@
     {
       "publisher": "RHAON Entertainment",
       "game": "테일즈런너",
-      "title": "테일즈런너 21주년 파티",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/09/21th-anniversary",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/1Ehwx2pjpPvZPpTCCLnYTx.png",
-      "starts_on": "2026-09-02",
-      "ends_on": "2026-09-16",
-      "published_on": "2026-09-02",
+      "title": "할로윈 사탕 주머니",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/10/2026-halloween",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/2LG0z56lksW8r7lvvx2j7r.png",
+      "starts_on": "2026-10-21",
+      "ends_on": "2026-11-04",
+      "published_on": "2026-10-21",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
+      "collected_at": "2026-10-22T22:32:24.079021+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
       "game": "테일즈런너",
-      "title": "21주년 행사 사전 안내",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/09/festival-teaser",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/7lKALtnMqxPjQ2dMjtCwCe.png",
-      "starts_on": "2026-09-02",
-      "ends_on": "2026-09-16",
-      "published_on": "2026-09-02",
+      "title": "2026 대운동회 소개",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/10/blue-red-sports-day",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/1eINFp9Ksj8hkHsdPIWIfs.png",
+      "starts_on": "2026-10-07",
+      "ends_on": "2026-11-04",
+      "published_on": "2026-10-07",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
+      "collected_at": "2026-10-22T22:32:24.079021+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
       "game": "테일즈런너",
-      "title": "9월 생일 이벤트",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/09/birthday",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/7dOiRLv7b8CVagN7owJxXZ.png",
-      "starts_on": "2026-09-02",
-      "ends_on": "2026-10-07",
-      "published_on": "2026-09-02",
+      "title": "테일즈런너 2026 K-챔피언십 오프라인 본선",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/10/K-championship",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/1w3KOmIfI4MOdDU5xAbFLx.jpg",
+      "starts_on": "2026-10-07",
+      "ends_on": "2026-11-18",
+      "published_on": "2026-10-07",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
+      "collected_at": "2026-10-22T22:32:24.079021+00:00"
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "10월 생일 이벤트",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/10/birthday",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/5BtxM51Ra9T2CbP4CuEIqn.png",
+      "starts_on": "2026-10-07",
+      "ends_on": "2026-11-04",
+      "published_on": "2026-10-07",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-22T22:32:24.079021+00:00"
+    },
+    {
+      "publisher": "RHAON Entertainment",
+      "game": "테일즈런너",
+      "title": "2026 K-챔피언십 행사 안내",
+      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/09/21th-festival",
+      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/2vrQc4l4uej0PLlRWoNKjC.jpg",
+      "starts_on": "2026-09-16",
+      "ends_on": "2026-11-01",
+      "published_on": "2026-09-16",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-10-22T22:32:24.079021+00:00"
     },
     {
       "publisher": "RHAON Entertainment",
@@ -91,59 +117,7 @@
       "published_on": "2026-08-05",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
-    },
-    {
-      "publisher": "RHAON Entertainment",
-      "game": "테일즈런너",
-      "title": "테일즈런너 2026 K-챔피언십 온라인 예선",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/08/K-championship-qualifier",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/5Fldw1BGuN9gUW3yQvvLLk.png",
-      "starts_on": "2026-08-19",
-      "ends_on": "2026-09-16",
-      "published_on": "2026-08-19",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
-    },
-    {
-      "publisher": "RHAON Entertainment",
-      "game": "테일즈런너",
-      "title": "매지컬 프리즈마 브랜드",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/07/magical-prisma-brand",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/6FKCyGn21c0QTRBAX9045d.jpg",
-      "starts_on": "2026-07-08",
-      "ends_on": "2026-10-07",
-      "published_on": "2026-07-08",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
-    },
-    {
-      "publisher": "RHAON Entertainment",
-      "game": "테일즈런너",
-      "title": "신규 레이드&매직! 프리즈마 지크로니움",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/07/raid-skill",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/7UzhaMMWZRaUk2wW1KjAXK.jpg",
-      "starts_on": "2026-07-08",
-      "ends_on": "2026-10-07",
-      "published_on": "2026-07-08",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
-    },
-    {
-      "publisher": "RHAON Entertainment",
-      "game": "테일즈런너",
-      "title": "캐릭캐릭 체인지 콜라보",
-      "event_url": "https://tr.rhaon.co.kr/event/origin/2026/06/Shugo-Chara1st",
-      "hero_image_url": "https://trimage.rhaon.co.kr/images/notice/event/snb/1l2gWpenCUVp6EssaewD4u.jpg",
-      "starts_on": "2026-06-24",
-      "ends_on": "2026-10-07",
-      "published_on": "2026-06-24",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-09-09T00:59:49.433215+00:00"
+      "collected_at": "2026-10-22T22:32:24.079021+00:00"
     }
   ],
   "거상": [
@@ -158,7 +132,7 @@
       "published_on": "2026-10-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:50.203119+00:00"
+      "collected_at": "2026-10-22T22:32:24.219151+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +145,7 @@
       "published_on": "2026-10-13",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:50.203119+00:00"
+      "collected_at": "2026-10-22T22:32:24.219151+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +158,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:50.203119+00:00"
+      "collected_at": "2026-10-22T22:32:24.219151+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -197,7 +171,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:50.203119+00:00"
+      "collected_at": "2026-10-22T22:32:24.219151+00:00"
     }
   ],
   "더 파이널스": [
@@ -254,7 +228,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:51.887810+00:00"
+      "collected_at": "2026-10-22T22:32:24.584367+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -267,7 +241,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:51.887810+00:00"
+      "collected_at": "2026-10-22T22:32:24.584367+00:00"
     }
   ],
   "던전앤파이터": [
@@ -282,7 +256,7 @@
       "published_on": "2026-10-22",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +269,7 @@
       "published_on": "2026-10-22",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +282,7 @@
       "published_on": "2026-10-22",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +295,7 @@
       "published_on": "2026-10-15",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +308,7 @@
       "published_on": "2026-10-15",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +321,7 @@
       "published_on": "2026-10-08",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +334,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +347,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +360,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +373,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +386,7 @@
       "published_on": "2026-09-10",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -425,7 +399,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -438,7 +412,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -451,7 +425,7 @@
       "published_on": "2026-08-20",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-10-22T22:20:52.749677+00:00"
+      "collected_at": "2026-10-22T22:32:24.690948+00:00"
     }
   ]
 }
