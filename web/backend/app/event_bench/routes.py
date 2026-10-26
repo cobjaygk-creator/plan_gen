@@ -8,9 +8,10 @@ from threading import Lock
 from fastapi import APIRouter, Depends, HTTPException, status
 
 from ..config import BENCHMARK_DATA_DIR
-from ..deps import get_current_user, get_current_user_optional
+from ..deps import get_current_user, get_current_user_optional, require_admin
 from ..media_cache import as_absolute_path
 from ..models import User
+from .collection_history import build_collection_history
 
 
 router = APIRouter(prefix="/event-bench", tags=["event-bench"])
@@ -50,6 +51,18 @@ def list_candidates(user: User | None = Depends(get_current_user_optional)):
         "candidates": candidates,
     }
 
+
+
+@router.get("/collection-history")
+def collection_history(user: User = Depends(require_admin)):
+    """게임별·기간별·날짜별 이벤트 수집 현황 (관리자 전용)."""
+    if not _SAMPLE_PATH.is_file():
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "아직 수집된 이벤트 데이터가 없습니다.")
+    try:
+        rows = json.loads(_SAMPLE_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR, "이벤트 데이터를 읽지 못했습니다.") from exc
+    return build_collection_history(rows)
 
 
 @router.post("/refresh")

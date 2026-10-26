@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import hashlib
 import io
+import math
 import re
 import threading
+import time
 import uuid
 from pathlib import Path
 from collections import OrderedDict
@@ -19,7 +21,10 @@ from sqlalchemy.orm import Session
 from datetime import datetime, timezone
 from .converter import SlideDoc, convert
 from .generator import Page, group_pages
-from .hifi import HIFI_MODEL, deck_context, generate_page_hifi, generate_theme, related_pages_text
+from .hifi import (
+    HIFI_MODEL, deck_context, find_settings_slide, generate_page_hifi, generate_theme,
+    related_pages_text, slide_text,
+)
 
 router = APIRouter(prefix="/wireframe", tags=["wireframe"])
 
@@ -36,9 +41,52 @@ _WIRE_OUTPUT_DIR = Path(__file__).resolve().parents[2] / "data" / "wireframe_out
 _WIRE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
+# 단계별 진행률 구간(시작%, 끝%), 예상 글자 수, 예상 소요 초 — 실제 생성 로그에서 잡은 대략값
+_STAGES = {
+    "queued": (0, 5, 1, 2),
+    "theme": (5, 30, 10_000, 35),
+    "page": (30, 96, 22_000, 85),
+    "saving": (96, 99, 1, 2),
+}
+_PAGE_START_WITHOUT_THEME = 8
+
+
+def _enter_stage(job: dict, stage: str) -> None:
+    job["stage"] = stage
+    job["stageStartedAt"] = time.time()
+    job["chars"] = 0
+
+
+def _progress(job: dict) -> int:
+    if job["status"] == "done":
+        return 100
+    stage = job.get("stage", "queued")
+    start, end, expected_chars, expected_secs = _STAGES[stage]
+    if stage == "page" and not job.get("themeGenerated"):
+        start = _PAGE_START_WITHOUT_THEME
+    elapsed = time.time() - job.get("stageStartedAt", time.time())
+    fraction = min(0.95, max(job.get("chars", 0) / expected_chars, 1 - math.exp(-elapsed / expected_secs)))
+    value = max(job.get("progress", 0), round(start + (end - start) * fraction))
+    job["progress"] = value
+    return value
+
+
 def _cost(usage: dict) -> float:
     billed_in = usage["input"] + 1.25 * usage.get("cacheWrite", 0) + 0.1 * usage.get("cacheRead", 0)
     return (billed_in * INPUT_USD_PER_MTOK + usage["output"] * OUTPUT_USD_PER_MTOK) / 1e6
+
+
+def _pages_from_slide_range(docs: list[SlideDoc], sources: list[str]) -> list[Page]:
+    """화면ID가 없는 SB용 — 지시문이나 설정 장표의 '슬라이드 7~11' 같은 화면 범위를 쓴다."""
+    for source in sources:
+        match = re.search(r"(?:슬라이드|slide)\s*(\d+)\s*(?:~|-|–|부터)\s*(\d+)", source, re.IGNORECASE)
+        if not match:
+            continue
+        start, end = sorted((int(match.group(1)), int(match.group(2))))
+        selected = [doc for doc in docs if start <= doc.index <= end]
+        if selected:
+            return [Page(f"SLIDE-RANGE-{start}-{end}", f"슬라이드 {start}~{end}", selected)]
+    return []
 
 
 def _load_deck(file: UploadFile, instruction: str = "") -> tuple[str, list[SlideDoc], list[Page]]:
@@ -52,13 +100,9 @@ def _load_deck(file: UploadFile, instruction: str = "") -> tuple[str, list[Slide
     except Exception:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "PPT 파일을 읽을 수 없습니다.")
     pages = group_pages(docs)
-    if not pages and instruction:
-        match = re.search(r"(?:슬라이드|slide)\s*(\d+)\s*(?:~|-|–|부터)\s*(\d+)", instruction, re.IGNORECASE)
-        if match:
-            start, end = sorted((int(match.group(1)), int(match.group(2))))
-            selected = [doc for doc in docs if start <= doc.index <= end]
-            if selected:
-                pages = [Page(f"SLIDE-RANGE-{start}-{end}", f"슬라이드 {start}~{end}", selected)]
+    if not pages:
+        settings = find_settings_slide(docs)
+        pages = _pages_from_slide_range(docs, [instruction, slide_text(settings) if settings else ""])
     if not pages:
         raise HTTPException(
             status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -67,12 +111,14 @@ def _load_deck(file: UploadFile, instruction: str = "") -> tuple[str, list[Slide
     return hashlib.sha256(data).hexdigest(), docs, pages
 
 
-def _theme_for(deck_hash: str, context: str) -> tuple[str, dict, bool]:
+def _theme_for(deck_hash: str, context: str, job: dict) -> tuple[str, dict, bool]:
     with _theme_lock:
         cached = _themes.get(deck_hash)
         if cached is not None:
             return cached[0], cached[1], False
-        css, usage = generate_theme(context)
+        job["themeGenerated"] = True
+        _enter_stage(job, "theme")
+        css, usage = generate_theme(context, on_text=lambda n: job.update(chars=job.get("chars", 0) + n))
         _themes[deck_hash] = (css, usage)
         return css, usage, True
 
@@ -85,8 +131,13 @@ def _run_job(job_id: str, record_id: int, deck_hash: str, docs: list[SlideDoc], 
         record = db.get(WireframeGeneration, record_id)
         if record: record.status = "running"; db.commit()
         context = deck_context(docs)
-        theme_css, theme_usage, theme_fresh = _theme_for(deck_hash, context)
-        document, usage = generate_page_hifi(page, context, theme_css, related_pages_text(pages, page), instruction=instruction)
+        theme_css, theme_usage, theme_fresh = _theme_for(deck_hash, context, job)
+        _enter_stage(job, "page")
+        document, usage = generate_page_hifi(
+            page, context, theme_css, related_pages_text(pages, page), instruction=instruction,
+            on_text=lambda n: job.update(chars=job.get("chars", 0) + n),
+        )
+        _enter_stage(job, "saving")
         cost = _cost(usage) + (_cost(theme_usage) if theme_fresh else 0.0)
         job["result"] = {
             "pageId": page.page_id,
@@ -113,8 +164,10 @@ def _run_job(job_id: str, record_id: int, deck_hash: str, docs: list[SlideDoc], 
 
 @router.post("/analyze")
 def analyze(file: UploadFile, instruction: str = Form(""), _: User = Depends(require_admin)):
-    _, _, pages = _load_deck(file, instruction)
+    _, docs, pages = _load_deck(file, instruction)
+    settings = find_settings_slide(docs)
     return {
+        "settings": {"slide": settings.index, "text": slide_text(settings)} if settings else None,
         "pages": [
             {
                 "pageId": page.page_id,
@@ -137,7 +190,7 @@ def generate(file: UploadFile, page_id: str = Form(...), instruction: str = Form
     record = WireframeGeneration(user_id=user.id, source_filename=file.filename or "uploaded.pptx", page_id=page.page_id, page_title=page.title, status="queued")
     db.add(record); db.commit(); db.refresh(record)
     with _jobs_lock:
-        _jobs[job_id] = {"status": "queued"}
+        _jobs[job_id] = {"status": "queued", "stage": "queued", "stageStartedAt": time.time(), "startedAt": time.time(), "chars": 0, "progress": 0}
         while len(_jobs) > MAX_JOBS_KEPT:
             _jobs.popitem(last=False)
     threading.Thread(target=_run_job, args=(job_id, record.id, deck_hash, docs, pages, page, instruction), daemon=True).start()
@@ -165,4 +218,8 @@ def get_job(job_id: str, _: User = Depends(require_admin)):
     job = _jobs.get(job_id)
     if job is None:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "작업을 찾을 수 없습니다. 다시 생성해 주세요.")
-    return {"status": job["status"], "result": job.get("result"), "error": job.get("error")}
+    return {
+        "status": job["status"], "stage": job.get("stage", "queued"), "progress": _progress(job),
+        "elapsedSec": round(time.time() - job.get("startedAt", time.time())),
+        "result": job.get("result"), "error": job.get("error"),
+    }

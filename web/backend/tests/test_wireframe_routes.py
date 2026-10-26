@@ -30,6 +30,13 @@ def _screen_deck() -> bytes:
 
 
 @pytest.fixture(autouse=True)
+def _isolate_job_side_effects(db_factory, tmp_path, monkeypatch):
+    # 생성 작업 스레드가 실제 로컬 DB와 data/ 폴더를 건드리지 않게 테스트 DB·임시 폴더로 돌린다.
+    monkeypatch.setattr(wireframe_routes, "SessionLocal", db_factory)
+    monkeypatch.setattr(wireframe_routes, "_WIRE_OUTPUT_DIR", tmp_path)
+
+
+@pytest.fixture(autouse=True)
 def _reset_state():
     wireframe_routes._jobs.clear()
     wireframe_routes._themes.clear()
@@ -51,7 +58,7 @@ def _upload(client, path, name="screen.pptx", content=None, **data):
 
 
 def _finish(client, job_id):
-    for _ in range(100):
+    for _ in range(400):
         body = client.get(f"/wireframe/jobs/{job_id}").json()
         if body["status"] in ("done", "error"):
             return body
@@ -88,7 +95,7 @@ def test_generate_rejects_unknown_page(client, admin):
 def test_job_generates_theme_once_per_deck(client, admin, monkeypatch):
     theme_calls = []
 
-    def fake_theme(context):
+    def fake_theme(context, on_text=None):
         theme_calls.append(context)
         return ":root{--bg:#fff}", {"input": 1000, "output": 1000}
 
@@ -96,7 +103,7 @@ def test_job_generates_theme_once_per_deck(client, admin, monkeypatch):
     monkeypatch.setattr(
         wireframe_routes,
         "generate_page_hifi",
-        lambda page, context, theme_css, related, instruction="": (
+        lambda page, context, theme_css, related, instruction="", on_text=None: (
             f"<!doctype html><html>{theme_css}</html>",
             {"input": 2000, "output": 3000, "cacheRead": 0, "cacheWrite": 0},
         ),
@@ -113,7 +120,7 @@ def test_job_generates_theme_once_per_deck(client, admin, monkeypatch):
 
 
 def test_job_reports_ai_failure(client, admin, monkeypatch):
-    def boom(context):
+    def boom(context, on_text=None):
         raise RuntimeError("credit balance is too low")
 
     monkeypatch.setattr(wireframe_routes, "generate_theme", boom)

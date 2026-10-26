@@ -5,6 +5,16 @@ export interface WireframePageInfo {
   elementCount: number;
 }
 
+export interface WireframeSettings {
+  slide: number;
+  text: string;
+}
+
+export interface WireframeAnalysis {
+  settings: WireframeSettings | null;
+  pages: WireframePageInfo[];
+}
+
 export interface WireframeResult {
   pageId: string;
   title: string;
@@ -15,7 +25,15 @@ export interface WireframeResult {
   costUsd: number;
 }
 
-export interface WireframeJob {
+export type JobStage = "queued" | "theme" | "page" | "saving";
+
+export interface JobProgress {
+  stage: JobStage;
+  progress: number;
+  elapsedSec: number;
+}
+
+export interface WireframeJob extends JobProgress {
   status: "queued" | "running" | "done" | "error";
   result: WireframeResult | null;
   error: string | null;

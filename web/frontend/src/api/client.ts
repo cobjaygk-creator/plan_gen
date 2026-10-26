@@ -1,5 +1,6 @@
 import type { User, Generation, AccessLog, SiteVisit, WireframeGeneration } from "./types";
-import type { WireframeJob, WireframePageInfo } from "../features/wireframe/types";
+import type { WireframeAnalysis, WireframeJob } from "../features/wireframe/types";
+import type { CollectionHistory } from "../features/collection-history/types";
 
 export class ApiError extends Error {
   status: number;
@@ -38,6 +39,7 @@ export const api = {
     request<User>("/auth/login", { method: "POST", body: JSON.stringify({ email, password }) }),
   logout: () => request<{ ok: boolean }>("/auth/logout", { method: "POST" }),
   me: () => request<User>("/auth/me"),
+  getCollectionHistory: () => request<CollectionHistory>("/event-bench/collection-history"),
   listAccessLogs: () => request<AccessLog[]>("/auth/access-logs"),
   listSiteVisits: () => request<SiteVisit[]>("/auth/site-visits"),
 
@@ -54,7 +56,7 @@ export const api = {
     const form = new FormData();
     form.append("file", file);
     form.append("instruction", instruction);
-    return request<{ pages: WireframePageInfo[] }>("/wireframe/analyze", { method: "POST", body: form });
+    return request<WireframeAnalysis>("/wireframe/analyze", { method: "POST", body: form });
   },
   generateWireframe: (file: File, pageId: string, instruction = "") => {
     const form = new FormData();

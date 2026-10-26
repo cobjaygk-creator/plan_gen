@@ -1,11 +1,19 @@
 import { useEffect, useRef, useState, type DragEvent } from "react";
 import { api, ApiError } from "../../api/client";
-import type { WireframePageInfo, WireframeResult } from "./types";
+import { ProgressBar } from "./components/ProgressBar";
+import type { JobProgress, JobStage, WireframePageInfo, WireframeResult, WireframeSettings } from "./types";
 import "./wireframe.css";
 
 const PREVIEW_WIDTH = 1920;
 const POLL_INTERVAL_MS = 2000;
 const COST_HINT = "화이트·그레이 테마 · 실제 해상도 · 설명의 인터랙션 구현 · 페이지당 약 150원 (문서 첫 생성은 테마 약 80원 추가)";
+
+const STAGE_LABEL: Record<JobStage, string> = {
+  queued: "생성 준비 중",
+  theme: "디자인 테마 만드는 중",
+  page: "화면 HTML 만드는 중",
+  saving: "결과 저장 중",
+};
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -38,22 +46,9 @@ export function WireframePage() {
   const stageRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
   const [instruction, setInstruction] = useState("");
-  const [layout, setLayout] = useState("설계서 기준");
-  const [required, setRequired] = useState("");
-  const [style, setStyle] = useState("화이트·그레이 업무형");
-  const [viewport, setViewport] = useState("데스크톱 1920×1080");
-  const [avoid, setAvoid] = useState("");
-
-  function buildInstruction() {
-    return [
-      `레이아웃: ${layout}`,
-      `스타일: ${style}`,
-      `기준 해상도: ${viewport}`,
-      required.trim() ? `필수 구성 요소: ${required.trim()}` : "",
-      avoid.trim() ? `금지 및 제외 사항: ${avoid.trim()}` : "",
-      instruction.trim() ? `추가 지시사항: ${instruction.trim()}` : "",
-    ].filter(Boolean).join("\n");
-  }
+  const [settings, setSettings] = useState<WireframeSettings | null>(null);
+  const [progress, setProgress] = useState<Record<string, JobProgress>>({});
+  const [batch, setBatch] = useState<{ done: number; total: number } | null>(null);
 
   const totalCost = Object.values(results).reduce((sum, r) => sum + r.costUsd, 0);
   const selectedResult = selected ? results[selected] : undefined;
@@ -77,6 +72,7 @@ export function WireframePage() {
     }
     setFile(next);
     setPages(null);
+    setSettings(null);
     setResults({});
     setErrors({});
     setSelected(null);
@@ -93,7 +89,9 @@ export function WireframePage() {
     setAnalyzing(true);
     setError(null);
     try {
-      setPages((await api.analyzeWireframe(file, buildInstruction())).pages);
+      const analysis = await api.analyzeWireframe(file, instruction.trim());
+      setPages(analysis.pages);
+      setSettings(analysis.settings);
     } catch (e) {
       setError(e instanceof ApiError ? e.message : "분석에 실패했습니다.");
     } finally {
@@ -105,12 +103,14 @@ export function WireframePage() {
     if (!file) return;
     setBusy((prev) => ({ ...prev, [pageId]: true }));
     setErrors((prev) => ({ ...prev, [pageId]: "" }));
+    setProgress((prev) => ({ ...prev, [pageId]: { stage: "queued", progress: 1, elapsedSec: 0 } }));
     try {
-      const { jobId } = await api.generateWireframe(file, pageId, buildInstruction());
+      const { jobId } = await api.generateWireframe(file, pageId, instruction.trim());
       for (;;) {
         await sleep(POLL_INTERVAL_MS);
         const job = await api.getWireframeJob(jobId);
         if (job.status === "error") throw new ApiError(500, job.error ?? "생성에 실패했습니다.");
+        setProgress((prev) => ({ ...prev, [pageId]: { stage: job.stage, progress: job.progress, elapsedSec: job.elapsedSec } }));
         if (job.status === "done" && job.result) {
           setResults((prev) => ({ ...prev, [pageId]: job.result as WireframeResult }));
           setSelected(pageId);
@@ -121,20 +121,28 @@ export function WireframePage() {
       setErrors((prev) => ({ ...prev, [pageId]: e instanceof ApiError ? e.message : "생성에 실패했습니다." }));
     } finally {
       setBusy((prev) => ({ ...prev, [pageId]: false }));
+      setProgress((prev) => {
+        const { [pageId]: _finished, ...rest } = prev;
+        return rest;
+      });
     }
   }
 
   async function generateAll() {
-    for (const page of pages ?? []) {
-      if (!results[page.pageId]) await generate(page.pageId);
+    const pending = (pages ?? []).filter((page) => !results[page.pageId]);
+    setBatch({ done: 0, total: pending.length });
+    for (const [index, page] of pending.entries()) {
+      await generate(page.pageId);
+      setBatch({ done: index + 1, total: pending.length });
     }
+    setBatch(null);
   }
 
   return (
     <div className="wf-page-root">
       <header className="wf-intro">
         <h1>와이어프레임 생성</h1>
-        <p>화면설계서(PPT)를 올리면 화면과 설명을 읽어 페이지 단위 HTML 와이어프레임을 만듭니다.</p>
+        <p>화면설계서(PPT)를 올리면 화면과 설명을 읽어 페이지 단위 HTML 와이어프레임을 만듭니다. SB 앞쪽에 와이어프레임 설정 장표(화면 범위·레이아웃·시각 기준·생성 지시사항)를 넣으면 함께 읽어 반영합니다.</p>
       </header>
 
       <div
@@ -159,33 +167,6 @@ export function WireframePage() {
 
       <p className="wf-hint">{COST_HINT}</p>
 
-      <div className="wf-settings">
-        <div className="wf-settings-title">결과물 품질 설정 <span>선택 입력 · 분석과 생성에 함께 반영</span></div>
-        <div className="wf-settings-grid">
-          <label>레이아웃
-            <select value={layout} onChange={(e) => setLayout(e.target.value)}>
-              <option>설계서 기준</option><option>대시보드형</option><option>목록·상세형</option><option>랜딩페이지형</option><option>좌측 사이드바형</option>
-            </select>
-          </label>
-          <label>스타일
-            <select value={style} onChange={(e) => setStyle(e.target.value)}>
-              <option>화이트·그레이 업무형</option><option>모던 SaaS형</option><option>게임 서비스형</option><option>미니멀 브랜드형</option>
-            </select>
-          </label>
-          <label>기준 해상도
-            <select value={viewport} onChange={(e) => setViewport(e.target.value)}>
-              <option>데스크톱 1920×1080</option><option>데스크톱 1440×900</option><option>모바일 390×844</option><option>반응형 우선</option>
-            </select>
-          </label>
-          <label>필수 구성 요소
-            <input value={required} onChange={(e) => setRequired(e.target.value)} placeholder="예: 검색, 필터, 주요 CTA, 상태 배지" />
-          </label>
-          <label>금지·제외 사항
-            <input value={avoid} onChange={(e) => setAvoid(e.target.value)} placeholder="예: 임의의 메뉴·문구·이미지 추가 금지" />
-          </label>
-        </div>
-      </div>
-
       <label className="wf-instruction-label" htmlFor="wf-instruction">자연어 지시사항 <span>선택</span></label>
       <textarea id="wf-instruction" className="wf-instruction" value={instruction} onChange={(e) => setInstruction(e.target.value)} placeholder="예: 상단 메뉴는 고정하고, 3열 카드 영역은 한 화면에 모두 보이게 구성해 주세요. 설계서에서 누락된 버튼은 넣지 마세요." rows={3} />
       <p className="wf-instruction-help">인식이 부족한 부분, 우선순위, 화면 구성 의도를 자연어로 적어 주세요. 아래에서 생성할 화면을 선택하면 이 지시사항이 함께 전달됩니다.</p>
@@ -199,9 +180,31 @@ export function WireframePage() {
             남은 페이지 모두 생성
           </button>
         )}
+        {batch && (
+          <div className="wf-batch">
+            <ProgressBar
+              value={(batch.done / batch.total) * 100}
+              label="전체 생성 진행률"
+              caption={`전체 ${batch.done}/${batch.total}개 완료`}
+            />
+          </div>
+        )}
         {totalCost > 0 && <span className="wf-cost">누적 비용 {formatKrw(totalCost)} (${totalCost.toFixed(4)})</span>}
       </div>
       {error && <p className="wf-error">{error}</p>}
+
+      {pages &&
+        (settings ? (
+          <details className="wf-settings-found">
+            <summary>설정 장표 인식됨 · 슬라이드 {settings.slide} — 모든 페이지 생성에 최우선으로 반영됩니다</summary>
+            <pre>{settings.text}</pre>
+          </details>
+        ) : (
+          <p className="wf-settings-missing">
+            설정 장표를 찾지 못했습니다. SB 앞쪽 6장 이내에 화면 범위·레이아웃·시각 기준·생성 지시사항 장표를 넣으면 반영됩니다.
+            없으면 설계서 내용만으로 생성합니다.
+          </p>
+        ))}
 
       {pages && (
         <div className="wf-workspace">
@@ -218,13 +221,20 @@ export function WireframePage() {
                     {result && <span className="wf-done">생성됨 · {formatKrw(result.costUsd)}</span>}
                     {errors[page.pageId] && <span className="wf-error">{errors[page.pageId]}</span>}
                   </button>
+                  {busy[page.pageId] && progress[page.pageId] && (
+                    <ProgressBar
+                      value={progress[page.pageId].progress}
+                      label={`${page.title || page.pageId} 생성 진행률`}
+                      caption={`${STAGE_LABEL[progress[page.pageId].stage]} · ${progress[page.pageId].elapsedSec}초 경과`}
+                    />
+                  )}
                   <button
                     type="button"
                     className="btn btn-ghost"
                     disabled={busy[page.pageId] || anyBusy}
                     onClick={() => generate(page.pageId)}
                   >
-                    {busy[page.pageId] ? "생성 중… (1~2분)" : result ? "다시 생성" : "생성"}
+                    {busy[page.pageId] ? "생성 중…" : result ? "다시 생성" : "생성"}
                   </button>
                 </li>
               );

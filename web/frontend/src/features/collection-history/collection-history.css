@@ -1,0 +1,338 @@
+.ch-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.ch-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.ch-head h1 {
+  margin: 0 0 var(--sp-1);
+  font-size: var(--fs-page);
+}
+
+.ch-head p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: var(--fs-body);
+}
+
+.ch-head-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.ch-asof {
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+}
+
+.ch-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: var(--fs-body);
+}
+
+.ch-empty {
+  margin: 0;
+  padding: var(--sp-5) var(--sp-4);
+  color: var(--ink-faint);
+  font-size: var(--fs-body);
+  text-align: center;
+}
+
+.ch-note {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+  line-height: 1.6;
+}
+
+/* ---- 기간 카드 ---- */
+.ch-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--sp-3);
+}
+
+.ch-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--sp-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.ch-card-total {
+  background: var(--surface-sunken);
+}
+
+.ch-card-label {
+  color: var(--ink-muted);
+  font-size: var(--fs-meta);
+  font-weight: 700;
+}
+
+.ch-card-value {
+  font-size: 30px;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.ch-card-sub {
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+}
+
+/* ---- 패널/표 ---- */
+.ch-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.ch-panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.ch-panel-head h2 {
+  margin: 0;
+  font-size: var(--fs-card);
+}
+
+.ch-panel-head > span {
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+}
+
+.ch-scroll {
+  overflow-x: auto;
+}
+
+.ch-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-meta);
+  font-variant-numeric: tabular-nums;
+}
+
+.ch-table th,
+.ch-table td {
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ch-table thead th {
+  background: var(--surface-sunken);
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
+.ch-table .num {
+  text-align: right;
+}
+
+.ch-table tbody tr.active > * {
+  background: var(--accent-soft);
+}
+
+.ch-table tbody th {
+  font-weight: 600;
+}
+
+.ch-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 3px;
+}
+
+.ch-link:hover,
+.ch-link:focus-visible {
+  color: var(--accent);
+}
+
+.ch-chip {
+  display: inline-block;
+  margin-right: var(--sp-2);
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--surface-sunken);
+  color: var(--ink-muted);
+}
+
+.ch-chip.ok {
+  background: color-mix(in srgb, var(--success) 16%, transparent);
+  color: var(--success);
+}
+
+.ch-chip.warn {
+  background: color-mix(in srgb, var(--warning) 20%, transparent);
+  color: var(--warning);
+}
+
+.ch-chip.late {
+  background: color-mix(in srgb, var(--danger) 18%, transparent);
+  color: var(--danger);
+}
+
+.ch-time {
+  color: var(--ink-faint);
+}
+
+/* ---- 날짜 매트릭스 ---- */
+.ch-tabs {
+  display: flex;
+  gap: var(--sp-1);
+}
+
+.ch-tabs button {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: var(--fs-meta);
+  cursor: pointer;
+}
+
+.ch-tabs button.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ch-matrix th.num,
+.ch-matrix td.num {
+  min-width: 38px;
+  padding-inline: var(--sp-2);
+  text-align: center;
+}
+
+.ch-matrix th.today {
+  color: var(--accent);
+}
+
+.ch-matrix td.cell {
+  color: var(--ink-faint);
+}
+
+.ch-matrix td.cell.has {
+  background: color-mix(in srgb, var(--accent) var(--heat, 20%), var(--surface));
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.ch-matrix td.sum {
+  background: var(--surface-sunken);
+  font-weight: 700;
+}
+
+/* ---- 게임 상세 ---- */
+.ch-days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ch-days > li {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.ch-day-head {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: baseline;
+  margin-bottom: var(--sp-2);
+}
+
+.ch-day-head span {
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+}
+
+.ch-events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  font-size: var(--fs-body);
+}
+
+.ch-events li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-items: baseline;
+}
+
+.ch-events a {
+  color: var(--ink);
+}
+
+.ch-events a:hover {
+  color: var(--accent);
+}
+
+.ch-state {
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--surface-sunken);
+  color: var(--ink-faint);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ch-state.on {
+  background: color-mix(in srgb, var(--success) 16%, transparent);
+  color: var(--success);
+}
+
+.ch-ends {
+  color: var(--ink-faint);
+  font-size: var(--fs-meta);
+}
+
+.ch-more {
+  margin: var(--sp-3) var(--sp-4);
+}
+
+@media (max-width: 900px) {
+  .ch-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
