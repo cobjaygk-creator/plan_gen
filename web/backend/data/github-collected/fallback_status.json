@@ -1,56 +1,56 @@
 {
   "테일즈위버": {
     "ok": false,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
     "lastSuccessAt": null,
     "count": 3,
     "error": "CalledProcessError: Command '['/usr/bin/curl', '-L', '--fail', '--silent', '--show-error', '--max-time', '20', '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139 Safari/537.36', '-H', 'Accept-Language: ko-KR,ko;q=0.9', '-H', 'Referer: https://tales.nexon.com/', 'https://t",
-    "consecutiveFailures": 29
+    "consecutiveFailures": 30
   },
   "테일즈런너": {
     "ok": false,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
     "lastSuccessAt": "2026-10-22T22:32:23.694629+00:00",
     "count": 6,
     "error": "HTTPError: HTTP Error 403: Forbidden",
-    "consecutiveFailures": 28
+    "consecutiveFailures": 29
   },
   "거상": {
-    "ok": false,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
-    "lastSuccessAt": "2026-10-27T20:05:38.313959+00:00",
+    "ok": true,
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
+    "lastSuccessAt": "2026-10-28T05:42:48.593838+00:00",
     "count": 5,
-    "error": "HTTPError: HTTP Error 403: Forbidden",
-    "consecutiveFailures": 1
+    "error": null,
+    "consecutiveFailures": 0
   },
   "더 파이널스": {
     "ok": false,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
     "lastSuccessAt": null,
     "count": 3,
     "error": "HTTPError: HTTP Error 403: Forbidden",
-    "consecutiveFailures": 29
+    "consecutiveFailures": 30
   },
   "프라시아전기": {
     "ok": false,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
     "lastSuccessAt": null,
     "count": 0,
     "error": "RuntimeError: collector returned no candidates",
-    "consecutiveFailures": 29
+    "consecutiveFailures": 30
   },
   "사이퍼즈": {
     "ok": true,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
-    "lastSuccessAt": "2026-10-27T23:46:54.206090+00:00",
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
+    "lastSuccessAt": "2026-10-28T05:42:48.593838+00:00",
     "count": 2,
     "error": null,
     "consecutiveFailures": 0
   },
   "던전앤파이터": {
     "ok": true,
-    "checkedAt": "2026-10-27T23:46:54.206090+00:00",
-    "lastSuccessAt": "2026-10-27T23:46:54.206090+00:00",
+    "checkedAt": "2026-10-28T05:42:48.593838+00:00",
+    "lastSuccessAt": "2026-10-28T05:42:48.593838+00:00",
     "count": 14,
     "error": null,
     "consecutiveFailures": 0
