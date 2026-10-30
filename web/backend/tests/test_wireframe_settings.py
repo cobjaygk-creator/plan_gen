@@ -66,8 +66,9 @@ def test_guide_headings_identify_the_settings_slide():
 def test_keywords_need_the_word_wireframe():
     keywords_only = ["레이아웃: 사이드바", "스타일: 모던", "필수: 검색"]
     assert find_settings_slide(_docs(lambda p: _add_text_slide(p, keywords_only))) is None
-    with_word = ["와이어프레임 설정", *keywords_only]
-    assert find_settings_slide(_docs(lambda p: _add_text_slide(p, with_word))) is not None
+    for word in ("와이어프레임 설정", "퀵 프로토타입 설정"):
+        with_word = [word, *keywords_only]
+        assert find_settings_slide(_docs(lambda p: _add_text_slide(p, with_word))) is not None, word
 
 
 def test_screen_slides_and_late_slides_are_not_settings():

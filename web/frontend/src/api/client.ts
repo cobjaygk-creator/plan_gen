@@ -1,5 +1,5 @@
 import type { User, Generation, AccessLog, SiteVisit, WireframeGeneration } from "./types";
-import type { WireframeAnalysis, WireframeJob } from "../features/wireframe/types";
+import type { EditSaveResult, Patch, WireframeAnalysis, WireframeJob, WireframeRecord } from "../features/wireframe/types";
 import type { CollectionHistory } from "../features/collection-history/types";
 
 export class ApiError extends Error {
@@ -45,7 +45,13 @@ export const api = {
 
   listGenerations: () => request<Generation[]>("/generations"),
   listWireframeHistory: () => request<WireframeGeneration[]>("/wireframe/history"),
-  wireframeDownloadUrl: (id: number) => `/wireframe/history/${id}/download`,
+  wireframeDownloadUrl: (id: number, version: "original" | "edited" = "original") =>
+    `/wireframe/history/${id}/download?version=${version}`,
+  wireframeZipUrl: (ids: number[], version: "original" | "edited" = "edited") =>
+    `/wireframe/export?ids=${ids.join(",")}&version=${version}`,
+  getWireframeRecord: (id: number) => request<WireframeRecord>(`/wireframe/history/${id}`),
+  saveWireframeEdits: (id: number, patches: Patch[]) =>
+    request<EditSaveResult>(`/wireframe/history/${id}/edits`, { method: "PUT", body: JSON.stringify({ patches }) }),
   getGeneration: (id: number) => request<Generation>(`/generations/${id}`),
   createGeneration: (file: File) => {
     const form = new FormData();
@@ -63,7 +69,7 @@ export const api = {
     form.append("file", file);
     form.append("page_id", pageId);
     form.append("instruction", instruction);
-    return request<{ jobId: string }>("/wireframe/generate", { method: "POST", body: form });
+    return request<{ jobId: string; historyId: number }>("/wireframe/generate", { method: "POST", body: form });
   },
   getWireframeJob: (jobId: string) => request<WireframeJob>(`/wireframe/jobs/${jobId}`),
   downloadUrl: (id: number) => `/generations/${id}/download`,

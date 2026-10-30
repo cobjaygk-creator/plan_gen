@@ -109,3 +109,13 @@ class WireframeGeneration(Base):
     error_message: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(UTCDateTime(), default=_utcnow)
     completed_at: Mapped[datetime | None] = mapped_column(UTCDateTime(), nullable=True)
+
+
+class WireframeEdit(Base):
+    """퀵 프로토타입 결과에 대한 사용자 수정 목록(JSON). 원본 파일은 그대로 두고 수정만 따로 보관한다."""
+
+    __tablename__ = "wireframe_edits"
+
+    record_id: Mapped[int] = mapped_column(ForeignKey("wireframe_generations.id"), primary_key=True)
+    patches: Mapped[str] = mapped_column(Text)
+    updated_at: Mapped[datetime] = mapped_column(UTCDateTime(), default=_utcnow)

@@ -29,6 +29,8 @@ export interface WireframeGeneration {
   error_message: string | null;
   created_at: string;
   completed_at: string | null;
+  has_edits: boolean;
+  edited_at: string | null;
 }
 
 export interface ProgressEvent {

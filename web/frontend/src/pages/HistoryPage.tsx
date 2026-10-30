@@ -56,7 +56,7 @@ export function HistoryPage() {
       </div>
       <div className="history-tabs" role="tablist" aria-label="생성 이력 종류">
         <button type="button" role="tab" aria-selected={activeTab === "documents"} className={activeTab === "documents" ? "active" : ""} onClick={() => setActiveTab("documents")}>기획서 생성 이력 <span>{items?.length ?? 0}</span></button>
-        <button type="button" role="tab" aria-selected={activeTab === "wireframes"} className={activeTab === "wireframes" ? "active" : ""} onClick={() => setActiveTab("wireframes")}>와이어프레임 생성 이력 <span>{wireframes?.length ?? 0}</span></button>
+        <button type="button" role="tab" aria-selected={activeTab === "wireframes"} className={activeTab === "wireframes" ? "active" : ""} onClick={() => setActiveTab("wireframes")}>퀵 프로토타입 생성 이력 <span>{wireframes?.length ?? 0}</span></button>
       </div>
       {activeTab === "documents" && <div className="card table-card">
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 20px", borderBottom: "1px solid var(--border)", gap: 12, flexWrap: "wrap" }}>
@@ -132,9 +132,9 @@ export function HistoryPage() {
         )}
       </div>}
       {activeTab === "wireframes" && <div className="card table-card">
-        {wireframes === null ? <div className="empty-history">불러오는 중...</div> : wireframes.length === 0 ? <div className="empty-history">아직 생성한 와이어프레임이 없습니다. <Link to="/wireframe">와이어프레임 생성</Link>에서 시작해보세요.</div> : (
+        {wireframes === null ? <div className="empty-history">불러오는 중...</div> : wireframes.length === 0 ? <div className="empty-history">아직 생성한 퀵 프로토타입이 없습니다. <Link to="/wireframe">퀵 프로토타입</Link>에서 시작해보세요.</div> : (
           <table><thead><tr><th>원본 파일</th><th>화면</th><th>생성 일시</th><th>상태</th><th>모델</th><th>비용</th><th></th></tr></thead><tbody>
-            {wireframes.map((item) => <tr key={item.id}><td>{item.source_filename}</td><td>{item.page_title || item.page_id}</td><td className="tabular">{formatDateTime(item.created_at)}</td><td><span className={`pill ${item.status === "done" ? "ok" : item.status === "error" ? "err" : "neutral"}`}><span className="dot" />{item.status === "done" ? "완료" : item.status === "error" ? "오류" : item.status === "running" ? "생성 중" : "대기 중"}</span></td><td>{item.model || "-"}</td><td>{item.cost_usd == null ? "-" : `$${item.cost_usd.toFixed(4)}`}</td><td>{item.status === "done" ? <a href={api.wireframeDownloadUrl(item.id)}>HTML 다운로드</a> : <span style={{color:"var(--ink-faint)"}}>다운로드</span>}</td></tr>)}
+            {wireframes.map((item) => <tr key={item.id}><td>{item.source_filename}</td><td>{item.page_title || item.page_id}{item.has_edits && <span className="pill ok" style={{ marginLeft: 8 }}>수정됨</span>}</td><td className="tabular">{formatDateTime(item.created_at)}</td><td><span className={`pill ${item.status === "done" ? "ok" : item.status === "error" ? "err" : "neutral"}`}><span className="dot" />{item.status === "done" ? "완료" : item.status === "error" ? "오류" : item.status === "running" ? "생성 중" : "대기 중"}</span></td><td>{item.model || "-"}</td><td>{item.cost_usd == null ? "-" : `$${item.cost_usd.toFixed(4)}`}</td><td className="row-actions">{item.status === "done" ? <><Link to={`/wireframe?edit=${item.id}`}>편집</Link>{" · "}<a href={api.wireframeDownloadUrl(item.id)}>원본</a>{item.has_edits && <>{" · "}<a href={api.wireframeDownloadUrl(item.id, "edited")}>수정본</a></>}</> : <span style={{color:"var(--ink-faint)"}}>다운로드</span>}</td></tr>)}
           </tbody></table>
         )}
       </div>}

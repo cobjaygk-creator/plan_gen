@@ -149,7 +149,7 @@ export function AppShell() {
                 <span className="ic">
                   <LayoutIcon />
                 </span>
-                와이어프레임
+                퀵 프로토타입
               </NavLink>
               <NavLink to="/collection-history" className={navClass}>
                 <span className="ic">

@@ -235,3 +235,5 @@
     transition: none;
   }
 }
+.wf-preview-tools { display: flex; align-items: center; gap: 8px; }
+.wf-preview-tools select { font: inherit; font-size: 13px; padding: 5px 8px; border: 1px solid var(--border-strong); border-radius: 6px; background: var(--surface); color: var(--ink); }

@@ -66,14 +66,14 @@ def slide_text(doc: SlideDoc) -> str:
 
 def find_settings_slide(docs: list[SlideDoc]) -> SlideDoc | None:
     """SB 앞쪽에 둔 '와이어프레임 설정 장표'를 찾는다 — 가이드 양식의 6개 소제목이
-    2개 이상 있거나, '와이어프레임'이라는 말과 설정 키워드 3개 이상이 있는 비화면 슬라이드."""
+    2개 이상 있거나, '와이어프레임'·'프로토타입'이라는 말과 설정 키워드 3개 이상이 있는 비화면 슬라이드."""
     for doc in docs:
         if doc.index > SETTINGS_MAX_SLIDE_INDEX or doc.page_id or doc.annotations:
             continue
         text = slide_text(doc)
         if sum(heading in text for heading in SETTINGS_HEADINGS) >= 2:
             return doc
-        if "와이어프레임" in text and sum(keyword in text for keyword in SETTINGS_KEYWORDS) >= 3:
+        if ("와이어프레임" in text or "프로토타입" in text) and sum(keyword in text for keyword in SETTINGS_KEYWORDS) >= 3:
             return doc
     return None
 

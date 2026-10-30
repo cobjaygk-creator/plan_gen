@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState, type DragEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { api, ApiError } from "../../api/client";
 import { ProgressBar } from "./components/ProgressBar";
+import { buildDoc } from "./editor/buildDoc";
+import { PrototypeEditor } from "./editor/PrototypeEditor";
 import type { JobProgress, JobStage, WireframePageInfo, WireframeResult, WireframeSettings } from "./types";
 import "./wireframe.css";
 
-const PREVIEW_WIDTH = 1920;
+const VIEWPORTS = [1920, 1620, 1440, 1280, 1024, 768, 390];
 const POLL_INTERVAL_MS = 2000;
 const COST_HINT = "화이트·그레이 테마 · 실제 해상도 · 설명의 인터랙션 구현 · 페이지당 약 150원 (문서 첫 생성은 테마 약 80원 추가)";
 
@@ -49,6 +52,13 @@ export function WireframePage() {
   const [settings, setSettings] = useState<WireframeSettings | null>(null);
   const [progress, setProgress] = useState<Record<string, JobProgress>>({});
   const [batch, setBatch] = useState<{ done: number; total: number } | null>(null);
+  const [previewWidth, setPreviewWidth] = useState(1920);
+  const [historyIds, setHistoryIds] = useState<Record<string, number>>({});
+  const [editedHtml, setEditedHtml] = useState<Record<string, string>>({});
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const editParam = Number(searchParams.get("edit"));
+  const openEditId = editingId ?? (Number.isInteger(editParam) && editParam > 0 ? editParam : null);
 
   const totalCost = Object.values(results).reduce((sum, r) => sum + r.costUsd, 0);
   const selectedResult = selected ? results[selected] : undefined;
@@ -58,11 +68,11 @@ export function WireframePage() {
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return;
-    const fit = () => setScale(Math.min(1, stage.clientWidth / PREVIEW_WIDTH));
+    const fit = () => setScale(Math.min(1, stage.clientWidth / previewWidth));
     fit();
     window.addEventListener("resize", fit);
     return () => window.removeEventListener("resize", fit);
-  }, [hasPreview]);
+  }, [hasPreview, previewWidth]);
 
   function pickFile(next: File | null) {
     setError(null);
@@ -105,7 +115,7 @@ export function WireframePage() {
     setErrors((prev) => ({ ...prev, [pageId]: "" }));
     setProgress((prev) => ({ ...prev, [pageId]: { stage: "queued", progress: 1, elapsedSec: 0 } }));
     try {
-      const { jobId } = await api.generateWireframe(file, pageId, instruction.trim());
+      const { jobId, historyId } = await api.generateWireframe(file, pageId, instruction.trim());
       for (;;) {
         await sleep(POLL_INTERVAL_MS);
         const job = await api.getWireframeJob(jobId);
@@ -113,6 +123,11 @@ export function WireframePage() {
         setProgress((prev) => ({ ...prev, [pageId]: { stage: job.stage, progress: job.progress, elapsedSec: job.elapsedSec } }));
         if (job.status === "done" && job.result) {
           setResults((prev) => ({ ...prev, [pageId]: job.result as WireframeResult }));
+          setHistoryIds((prev) => ({ ...prev, [pageId]: historyId }));
+          setEditedHtml((prev) => {
+            const { [pageId]: _stale, ...rest } = prev;
+            return rest;
+          });
           setSelected(pageId);
           break;
         }
@@ -138,11 +153,24 @@ export function WireframePage() {
     setBatch(null);
   }
 
+  function closeEditor(saved: import("./types").WireframeRecord | null) {
+    if (saved) {
+      const doc = buildDoc(saved.html, saved.patches, "view", saved.assets);
+      setEditedHtml((prev) => ({ ...prev, [saved.pageId]: doc }));
+    }
+    setEditingId(null);
+    if (searchParams.has("edit")) setSearchParams({}, { replace: true });
+  }
+
+  const selectedHistoryId = selected ? historyIds[selected] : undefined;
+  const zipIds = Object.values(historyIds);
+
   return (
     <div className="wf-page-root">
+      {openEditId !== null && <PrototypeEditor recordId={openEditId} onClose={closeEditor} />}
       <header className="wf-intro">
-        <h1>와이어프레임 생성</h1>
-        <p>화면설계서(PPT)를 올리면 화면과 설명을 읽어 페이지 단위 HTML 와이어프레임을 만듭니다. SB 앞쪽에 와이어프레임 설정 장표(화면 범위·레이아웃·시각 기준·생성 지시사항)를 넣으면 함께 읽어 반영합니다.</p>
+        <h1>퀵 프로토타입</h1>
+        <p>화면설계서(PPT)를 올리면 화면과 설명을 읽어 인터랙션까지 갖춘 페이지 단위 HTML 프로토타입을 만듭니다. SB 앞쪽에 설정 장표(화면 범위·레이아웃·시각 기준·생성 지시사항)를 넣으면 함께 읽어 반영합니다.</p>
       </header>
 
       <div
@@ -246,17 +274,32 @@ export function WireframePage() {
               <>
                 <div className="wf-preview-bar">
                   <strong>{selectedResult.title || selectedResult.pageId}</strong>
-                  <button type="button" className="btn btn-ghost" onClick={() => downloadHtml(selectedResult)}>
-                    HTML 다운로드
-                  </button>
+                  <div className="wf-preview-tools">
+                    <select aria-label="미리보기 해상도" value={previewWidth} onChange={(e) => setPreviewWidth(Number(e.target.value))}>
+                      {VIEWPORTS.map((w) => (
+                        <option key={w} value={w}>{w}px</option>
+                      ))}
+                    </select>
+                    {selectedHistoryId !== undefined && (
+                      <button type="button" className="btn btn-primary" onClick={() => setEditingId(selectedHistoryId)}>
+                        편집
+                      </button>
+                    )}
+                    <button type="button" className="btn btn-ghost" onClick={() => downloadHtml({ ...selectedResult, html: editedHtml[selectedResult.pageId] ?? selectedResult.html })}>
+                      HTML 다운로드
+                    </button>
+                    {zipIds.length > 1 && (
+                      <a className="btn btn-ghost" href={api.wireframeZipUrl(zipIds)}>전체 ZIP</a>
+                    )}
+                  </div>
                 </div>
                 <div className="wf-stage" ref={stageRef}>
                   <iframe
-                    title="와이어프레임 미리보기"
+                    title="퀵 프로토타입 미리보기"
                     sandbox="allow-scripts"
-                    srcDoc={selectedResult.html}
+                    srcDoc={editedHtml[selectedResult.pageId] ?? selectedResult.html}
                     style={{
-                      width: PREVIEW_WIDTH,
+                      width: previewWidth,
                       height: `calc(78vh / ${scale})`,
                       transform: `scale(${scale})`,
                     }}

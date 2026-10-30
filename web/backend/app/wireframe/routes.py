@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import io
+import json
 import math
 import re
 import threading
@@ -11,15 +12,17 @@ from pathlib import Path
 from collections import OrderedDict
 
 from fastapi import APIRouter, Depends, Form, HTTPException, UploadFile, status
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
+from pydantic import BaseModel
 
 from ..deps import require_admin
-from ..models import User, WireframeGeneration
+from ..models import User, WireframeEdit, WireframeGeneration
 from ..database import SessionLocal, get_db
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from datetime import datetime, timezone
 from .converter import SlideDoc, convert
+from .edits import PatchError, build_document, export_zip, load_asset, safe_page_filename, validate_patches
 from .generator import Page, group_pages
 from .hifi import (
     HIFI_MODEL, deck_context, find_settings_slide, generate_page_hifi, generate_theme,
@@ -197,20 +200,141 @@ def generate(file: UploadFile, page_id: str = Form(...), instruction: str = Form
     return {"jobId": job_id, "historyId": record.id}
 
 
+def _owned_record(db: Session, history_id: int, user: User) -> WireframeGeneration:
+    record = db.get(WireframeGeneration, history_id)
+    if record is None or record.user_id != user.id:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "퀵 프로토타입 이력을 찾을 수 없습니다.")
+    return record
+
+
+def _read_original(record: WireframeGeneration) -> str:
+    if record.status != "done" or not record.output_path or not Path(record.output_path).is_file():
+        raise HTTPException(status.HTTP_409_CONFLICT, "완료된 결과 파일이 없습니다.")
+    return Path(record.output_path).read_text(encoding="utf-8")
+
+
+def _load_patches(db: Session, record_id: int) -> tuple[list[dict], datetime | None]:
+    edit = db.get(WireframeEdit, record_id)
+    if edit is None:
+        return [], None
+    try:
+        return json.loads(edit.patches), edit.updated_at
+    except json.JSONDecodeError:
+        return [], None
+
+
+def _attachment(filename: str) -> dict:
+    return {"Content-Disposition": f'attachment; filename="{filename}"'}
+
+
 @router.get("/history")
 def list_wireframe_history(user: User = Depends(require_admin), db: Session = Depends(get_db)):
-    return db.execute(select(WireframeGeneration).where(WireframeGeneration.user_id == user.id).order_by(WireframeGeneration.created_at.desc())).scalars().all()
+    rows = db.execute(
+        select(WireframeGeneration, WireframeEdit.updated_at)
+        .outerjoin(WireframeEdit, WireframeEdit.record_id == WireframeGeneration.id)
+        .where(WireframeGeneration.user_id == user.id)
+        .order_by(WireframeGeneration.created_at.desc())
+    ).all()
+    return [
+        {
+            "id": record.id, "source_filename": record.source_filename, "page_id": record.page_id,
+            "page_title": record.page_title, "status": record.status, "model": record.model,
+            "cost_usd": record.cost_usd, "error_message": record.error_message,
+            "created_at": record.created_at, "completed_at": record.completed_at,
+            "has_edits": edited_at is not None, "edited_at": edited_at,
+        }
+        for record, edited_at in rows
+    ]
+
+
+@router.get("/history/{history_id}")
+def get_wireframe_record(history_id: int, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    record = _owned_record(db, history_id, user)
+    html = _read_original(record)
+    patches, edited_at = _load_patches(db, record.id)
+    latest_by_page: dict[str, WireframeGeneration] = {}
+    for sibling in db.execute(
+        select(WireframeGeneration)
+        .where(
+            WireframeGeneration.user_id == user.id,
+            WireframeGeneration.source_filename == record.source_filename,
+            WireframeGeneration.status == "done",
+        )
+        .order_by(WireframeGeneration.id.desc())
+    ).scalars():
+        latest_by_page.setdefault(sibling.page_id, sibling)
+    return {
+        "id": record.id, "pageId": record.page_id, "title": record.page_title, "sourceFilename": record.source_filename,
+        "html": html, "patches": patches, "editedAt": edited_at,
+        "siblings": [
+            {"historyId": item.id, "pageId": item.page_id, "title": item.page_title}
+            for item in sorted(latest_by_page.values(), key=lambda item: item.id)
+        ],
+        "assets": {"runtime": load_asset("qp_runtime.js"), "editor": load_asset("qp_editor.js")},
+    }
+
+
+class EditsIn(BaseModel):
+    patches: list[dict]
+
+
+@router.put("/history/{history_id}/edits")
+def save_wireframe_edits(history_id: int, body: EditsIn, user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    record = _owned_record(db, history_id, user)
+    if record.status != "done":
+        raise HTTPException(status.HTTP_409_CONFLICT, "생성이 끝난 결과만 수정할 수 있습니다.")
+    try:
+        clean = validate_patches(body.patches)
+    except PatchError as error:
+        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, str(error))
+    edit = db.get(WireframeEdit, record.id)
+    if not clean:
+        if edit is not None:
+            db.delete(edit)
+            db.commit()
+        return {"saved": True, "count": 0, "editedAt": None}
+    payload = json.dumps(clean, ensure_ascii=False)
+    if edit is None:
+        db.add(WireframeEdit(record_id=record.id, patches=payload))
+    else:
+        edit.patches = payload
+        edit.updated_at = datetime.now(timezone.utc)
+    db.commit()
+    return {"saved": True, "count": len(clean), "editedAt": db.get(WireframeEdit, record.id).updated_at}
 
 
 @router.get("/history/{history_id}/download")
-def download_wireframe(history_id: int, user: User = Depends(require_admin), db: Session = Depends(get_db)):
-    record = db.get(WireframeGeneration, history_id)
-    if record is None or record.user_id != user.id:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "와이어프레임 이력을 찾을 수 없습니다.")
-    if record.status != "done" or not record.output_path or not Path(record.output_path).is_file():
-        raise HTTPException(status.HTTP_409_CONFLICT, "완료된 결과 파일이 없습니다.")
-    safe_name = f"{record.page_id}.html"
-    return FileResponse(record.output_path, media_type="text/html", filename=safe_name)
+def download_wireframe(history_id: int, version: str = "original", user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    record = _owned_record(db, history_id, user)
+    html = _read_original(record)
+    filename = f"{safe_page_filename(record.page_id)}.html"
+    patches = _load_patches(db, record.id)[0] if version == "edited" else []
+    if not patches:
+        return FileResponse(record.output_path, media_type="text/html", filename=filename)
+    return Response(build_document(html, patches, "view"), media_type="text/html; charset=utf-8", headers=_attachment(filename))
+
+
+@router.get("/export")
+def export_wireframes(ids: str, version: str = "edited", user: User = Depends(require_admin), db: Session = Depends(get_db)):
+    try:
+        wanted = [int(part) for part in ids.split(",") if part.strip()][:50]
+    except ValueError:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "ids 형식이 올바르지 않습니다.")
+    pages: list[tuple[str, str, str]] = []
+    seen: set[str] = set()
+    for history_id in wanted:
+        record = db.get(WireframeGeneration, history_id)
+        if record is None or record.user_id != user.id or record.status != "done" or record.page_id in seen:
+            continue
+        if not record.output_path or not Path(record.output_path).is_file():
+            continue
+        html = Path(record.output_path).read_text(encoding="utf-8")
+        patches = _load_patches(db, record.id)[0] if version == "edited" else []
+        pages.append((record.page_id, record.page_title or record.page_id, build_document(html, patches, "view")))
+        seen.add(record.page_id)
+    if not pages:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, "내려받을 완료된 결과가 없습니다.")
+    return Response(export_zip(pages), media_type="application/zip", headers=_attachment("quick-prototype.zip"))
 
 
 @router.get("/jobs/{job_id}")
