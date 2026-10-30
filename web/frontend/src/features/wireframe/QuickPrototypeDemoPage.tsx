@@ -128,7 +128,7 @@ export function QuickPrototypeDemoPage() {
         onClick={() => inputRef.current?.click()}
       >
         <input ref={inputRef} type="file" accept=".pptx" hidden onChange={(e) => pickFile(e.target.files?.[0] ?? null)} />
-        {file ? <strong>{file.name}</strong> : <span>PPTX 파일을 끌어놓거나 클릭해서 선택 (선택 없이 바로 분석해도 됩니다)</span>}
+        {file ? <strong>{file.name}</strong> : <span style={{ color: "var(--danger)", fontWeight: 600 }}>현재 진행중인 기능으로 본 화면은 예시화면 입니다.</span>}
       </div>
 
       <div className="wf-actions">
