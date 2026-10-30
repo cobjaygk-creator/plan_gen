@@ -18,7 +18,19 @@ const INSERT_LABEL = { text: "텍스트", button: "버튼", divider: "구분선"
 
 interface Props {
   recordId: number;
+  /** 시연용: 서버 대신 이 기록으로 편집하고 저장하지 않는다. */
+  demoRecord?: WireframeRecord;
   onClose: (saved: WireframeRecord | null) => void;
+}
+
+function downloadEdited(record: WireframeRecord, patches: Patch[]) {
+  const html = buildDoc(record.html, patches, "view", record.assets);
+  const url = URL.createObjectURL(new Blob([html], { type: "text/html;charset=utf-8" }));
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${record.pageId}-edited.html`;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 function pxNumber(value: string | undefined): string {
@@ -26,7 +38,7 @@ function pxNumber(value: string | undefined): string {
   return Number.isFinite(n) ? String(Math.round(n * 10) / 10) : "";
 }
 
-export function PrototypeEditor({ recordId, onClose }: Props) {
+export function PrototypeEditor({ recordId, demoRecord, onClose }: Props) {
   const [currentId, setCurrentId] = useState(recordId);
   const [record, setRecord] = useState<WireframeRecord | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -57,8 +69,7 @@ export function PrototypeEditor({ recordId, onClose }: Props) {
 
   const load = useCallback((id: number) => {
     setLoadError(null);
-    api
-      .getWireframeRecord(id)
+    (demoRecord ? Promise.resolve(demoRecord) : api.getWireframeRecord(id))
       .then((rec) => {
         setRecord(rec);
         setCurrentId(id);
@@ -70,7 +81,7 @@ export function PrototypeEditor({ recordId, onClose }: Props) {
         setDoc(buildDoc(rec.html, rec.patches, "edit", rec.assets));
       })
       .catch((e) => setLoadError(e instanceof ApiError ? e.message : "불러오지 못했습니다."));
-  }, []);
+  }, [demoRecord]);
 
   useEffect(() => {
     load(recordId);
@@ -140,16 +151,23 @@ export function PrototypeEditor({ recordId, onClose }: Props) {
     setSaving(true);
     setMessage(null);
     try {
-      await api.saveWireframeEdits(currentId, patchesRef.current);
-      setSavedJson(JSON.stringify(patchesRef.current));
-      setWasSaved(true);
-      setMessage("저장했습니다.");
+      if (demoRecord) {
+        downloadEdited(record, patchesRef.current);
+        setSavedJson(JSON.stringify(patchesRef.current));
+        setWasSaved(true);
+        setMessage("시연 모드입니다. 서버에는 저장되지 않고 수정본 HTML로 내려받았습니다.");
+      } else {
+        await api.saveWireframeEdits(currentId, patchesRef.current);
+        setSavedJson(JSON.stringify(patchesRef.current));
+        setWasSaved(true);
+        setMessage("저장했습니다.");
+      }
     } catch (e) {
       setMessage(e instanceof ApiError ? e.message : "저장하지 못했습니다.");
     } finally {
       setSaving(false);
     }
-  }, [record, currentId]);
+  }, [record, currentId, demoRecord]);
 
   const requestClose = useCallback(() => {
     if (dirty && !window.confirm("저장하지 않은 수정이 있습니다. 닫을까요?")) return;
@@ -285,7 +303,7 @@ export function PrototypeEditor({ recordId, onClose }: Props) {
         <label className="qpe-check">
           <input type="checkbox" checked={preview} onChange={(e) => togglePreview(e.target.checked)} /> 미리보기
         </label>
-        {record && (
+        {record && !demoRecord && (
           <div className="qpe-group">
             <a className="btn btn-ghost" href={api.wireframeDownloadUrl(currentId, "original")}>원본 HTML</a>
             <a
@@ -298,7 +316,7 @@ export function PrototypeEditor({ recordId, onClose }: Props) {
           </div>
         )}
         <button type="button" className="btn btn-primary" onClick={save} disabled={saving || !dirty} title="저장 (Ctrl+S)">
-          {saving ? "저장 중…" : "저장"}
+          {saving ? "저장 중…" : demoRecord ? "수정본 받기" : "저장"}
         </button>
         <button type="button" className="btn btn-ghost" onClick={requestClose}>닫기</button>
       </header>

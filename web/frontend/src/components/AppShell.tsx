@@ -131,6 +131,12 @@ export function AppShell() {
             </span>
             {"타사 사이트"}
           </NavLink>
+          <NavLink to="/quick-prototype" className={navClass}>
+            <span className="ic">
+              <LayoutIcon />
+            </span>
+            퀵 프로토타입
+          </NavLink>
           {isAdmin && (
             <>
               <NavLink to="/generate" className={navClass}>
@@ -149,7 +155,7 @@ export function AppShell() {
                 <span className="ic">
                   <LayoutIcon />
                 </span>
-                퀵 프로토타입
+                퀵 프로토타입(J)
               </NavLink>
               <NavLink to="/collection-history" className={navClass}>
                 <span className="ic">

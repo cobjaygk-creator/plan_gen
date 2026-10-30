@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dragon Nest SEA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style id="theme">
+:root{
+  --bg:#ffffff;
+  --surface:#f3f4f5;
+  --surface-2:#e9ebed;
+  --ink:#1f2328;
+  --ink-muted:#6b7178;
+  --ink-disabled:#a3a9af;
+  --accent:#2b2f33;
+  --accent-ink:#ffffff;
+  --line:#d9dcdf;
+  --radius:6px;
+  --radius-lg:10px;
+  --content:1600px;
+  --gutter:40px;
+  --gnb-h:80px;
+  --shadow:0 8px 24px rgba(31,35,40,.08);
+  --font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;min-width:1280px;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+input,select,textarea{font:inherit;color:inherit}
+
+/* Typography */
+.display{font-size:72px;line-height:1.1;font-weight:900;letter-spacing:-.03em}
+.h1{font-size:44px;line-height:1.25;font-weight:800;letter-spacing:-.025em}
+.h2{font-size:28px;line-height:1.35;font-weight:700;letter-spacing:-.02em}
+.h3{font-size:20px;line-height:1.4;font-weight:700}
+.body{font-size:16px;line-height:1.7;font-weight:400;color:var(--ink)}
+.body-sm{font-size:14px;line-height:1.6;color:var(--ink-muted)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted)}
+.muted{color:var(--ink-muted)}
+
+/* Container */
+.wrap{width:100%;max-width:var(--content);margin:0 auto;padding:0 var(--gutter)}
+@media (min-width:1681px){.wrap{padding:0}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 28px;border-radius:var(--radius);font-size:15px;font-weight:700;letter-spacing:0;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:#000;box-shadow:var(--shadow)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:#b8bdc2}
+.btn-ghost:hover{border-color:var(--ink);background:var(--surface)}
+.btn-sm{height:38px;padding:0 18px;font-size:13px}
+.btn[disabled],.btn.disabled{background:var(--surface-2);color:var(--ink-disabled);border-color:var(--line);pointer-events:none}
+
+/* Focus */
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:var(--radius)}
+
+/* Card */
+.card{display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b8bdc2}
+.card-body{padding:24px;display:flex;flex-direction:column;gap:8px}
+.card-title{font-size:18px;font-weight:700;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{font-size:13px;color:var(--ink-muted)}
+.grid{display:grid;gap:24px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+
+/* Tag */
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:12px;font-weight:700;color:var(--ink-muted);line-height:1}
+.tag.dark{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* GNB */
+.gnb{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--gnb-h);background:transparent;color:var(--ink);border-bottom:1px solid transparent;transition:background .3s,border-color .3s,box-shadow .3s}
+.gnb .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.gnb .logo{font-size:22px;font-weight:900;letter-spacing:.04em}
+.gnb nav{display:flex;gap:48px;font-size:15px;font-weight:700;letter-spacing:.06em}
+.gnb nav a{position:relative;padding:8px 0;color:var(--ink-muted);transition:color .2s}
+.gnb nav a:hover,.gnb nav a.active{color:var(--ink)}
+.gnb nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--ink);transform:scaleX(0);transition:transform .2s}
+.gnb nav a:hover::after,.gnb nav a.active::after{transform:scaleX(1)}
+.gnb .util{display:flex;align-items:center;gap:16px;font-size:13px;font-weight:700;color:var(--ink-muted)}
+.gnb.solid{background:rgba(255,255,255,.96);border-bottom-color:var(--line);box-shadow:0 2px 12px rgba(31,35,40,.06);backdrop-filter:blur(8px)}
+
+/* Section */
+.section{padding:120px 0}
+.section.alt{background:var(--surface)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px}
+.section-head .h1{margin-top:8px}
+
+/* Placeholder */
+.ph{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;overflow:hidden;background:
+  repeating-linear-gradient(45deg,rgba(31,35,40,.045) 0 1px,transparent 1px 14px),
+  linear-gradient(135deg,#eef0f1,#dfe2e5);color:var(--ink-disabled)}
+.ph.hero{position:absolute;inset:0;aspect-ratio:auto;background:
+  repeating-linear-gradient(45deg,rgba(31,35,40,.05) 0 1px,transparent 1px 16px),
+  linear-gradient(160deg,#f3f4f5 0%,#dcdfe2 100%)}
+.ph.square{aspect-ratio:1/1}
+.ph-label{position:relative;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);background:rgba(255,255,255,.8);padding:6px 12px;border-radius:999px;border:1px solid var(--line)}
+
+/* Hero */
+.hero{position:relative;height:100vh;min-height:760px;display:flex;align-items:center;overflow:hidden;background:var(--surface)}
+.hero .wrap{position:relative;z-index:1}
+.hero .display{margin:16px 0 20px}
+.hero .body{max-width:560px;color:var(--ink-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hero-cta{display:flex;gap:12px;margin-top:36px}
+.indicator{position:absolute;right:40px;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;gap:14px;align-items:flex-end}
+.indicator a{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--ink-disabled);transition:color .2s}
+.indicator a:hover,.indicator a.active{color:var(--ink)}
+.scroll-hint{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);z-index:2;font-size:12px;letter-spacing:.2em;color:var(--ink-muted)}
+
+/* Row list */
+.list{border-top:2px solid var(--ink)}
+.row{display:flex;align-items:center;gap:20px;padding:20px 16px;border-bottom:1px solid var(--line);transition:background .2s,padding-left .2s}
+.row:hover{background:var(--surface);padding-left:24px}
+.row .title{flex:1;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .date{font-size:13px;color:var(--ink-muted)}
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:80px 20px;text-align:center;color:var(--ink-muted);border-bottom:1px solid var(--line);background:var(--bg)}
+.empty strong{color:var(--ink);font-size:18px}
+
+/* Tabs / pager */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line)}
+.tab{position:relative;padding:14px 24px;font-size:15px;font-weight:700;color:var(--ink-disabled);transition:color .2s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--ink)}
+.tab.active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--ink)}
+.pager{display:flex;justify-content:center;gap:6px;margin-top:48px}
+.pager a,.pager button{min-width:38px;height:38px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:var(--radius);font-size:14px;color:var(--ink-muted);background:#fff;transition:all .2s}
+.pager a:hover,.pager button:hover{border-color:var(--ink);color:var(--ink)}
+.pager .active{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+
+/* Floating banner */
+.float-banner{position:fixed;right:32px;bottom:32px;z-index:90;width:280px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:0 12px 32px rgba(31,35,40,.16);overflow:hidden}
+.float-banner .close{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.9);border:1px solid var(--line);font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:1;transition:background .2s,color .2s}
+.float-banner .close:hover{background:var(--accent);color:#fff}
+.float-banner .card-body{padding:16px 20px}
+.float-banner.hidden{display:none}
+
+/* Footer */
+.footer{background:var(--surface);border-top:1px solid var(--line);padding:56px 0;font-size:13px;color:var(--ink-muted)}
+
+/* Utilities */
+.hidden{display:none!important}
+.center{text-align:center}
+.flex{display:flex}
+.between{justify-content:space-between}
+.gap-8{gap:8px}.gap-16{gap:16px}.gap-24{gap:24px}
+.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-40{margin-top:40px}
+
+@media (max-width:1680px){
+  .display{font-size:64px}
+  .section{padding:104px 0}
+}
+@media (max-width:1280px){
+  .display{font-size:56px}
+  .h1{font-size:38px}
+  .grid{gap:20px}
+}
+</style>
+<style>
+.gnb .wrap{gap:24px}
+.gnb .left{display:flex;align-items:center;gap:48px}
+.gnb .right{display:flex;align-items:center;gap:20px}
+.sns{display:flex;gap:8px}
+.sns a{width:28px;height:28px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--ink-muted);background:#fff}
+.sns a:hover{background:var(--accent);color:#fff}
+.gnb .util a:hover{color:var(--ink)}
+.hero .display{font-size:96px;max-width:1000px}
+.hero .sub2{margin-top:12px;font-size:14px;color:var(--ink-muted)}
+.hero .scroll-hint{display:flex;flex-direction:column;align-items:center;gap:4px;border:0;background:none}
+.sec-event{padding:120px 0}
+.ev-grid{display:grid;grid-template-columns:327fr 366fr 220fr;gap:24px;align-items:stretch}
+.ev-grid>*{min-width:0}
+.ev-banner{position:relative;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;min-height:480px;display:flex}
+.ev-banner .ph{position:absolute;inset:0;aspect-ratio:auto}
+.ev-banner .cap{position:absolute;left:0;right:0;bottom:0;padding:28px;background:linear-gradient(transparent,rgba(255,255,255,.92) 40%)}
+.ev-banner .cap h3{font-size:26px;font-weight:800}
+.notice-box{border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;display:flex;flex-direction:column;background:#fff}
+.notice-box header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.notice-box header h3{font-size:20px;font-weight:800}
+.notice-box header a{font-size:13px;color:var(--ink-muted)}
+.notice-box header a:hover{color:var(--ink)}
+.notice-box li a{display:flex;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.notice-box li a:hover .t{text-decoration:underline}
+.notice-box .t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.notice-box .d{font-size:12px;color:var(--ink-muted);flex:none}
+.notice-box .empty{flex:1;border:0;padding:40px 10px}
+.pn-col{display:flex;flex-direction:column;gap:16px}
+.pn{flex:1;display:flex;flex-direction:column}
+.pn .ph{aspect-ratio:220/150;flex:none}
+.pn .card-body{padding:12px 14px;gap:4px}
+.pn .card-title{font-size:15px}
+@media (max-width:1620px){.pn-col{display:none}.ev-grid{grid-template-columns:327fr 366fr}}
+.sns-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:start}
+.sns-col{display:flex;flex-direction:column;gap:20px}
+.post{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.post:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.post-h{display:flex;align-items:center;gap:10px;padding:14px 16px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.post-h .nm{flex:1;line-height:1.3}
+.post-h .nm b{display:block;font-size:13px}
+.post-h .nm span{font-size:12px;color:var(--ink-muted)}
+.ch{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);font-size:11px;display:flex;align-items:center;justify-content:center;color:var(--ink-muted)}
+.media{position:relative}
+.media .ph{aspect-ratio:auto;height:100%}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(31,35,40,.75);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:2}
+.post-b{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px}
+.post-b .tx{font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.post-b .tx:hover{text-decoration:underline}
+.post-b .tg{font-size:12px;color:var(--ink-muted)}
+.post-f{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-muted);padding-top:8px;border-top:1px solid var(--line)}
+.sns-links{display:flex;gap:10px}
+.sns-links a{font-size:13px;font-weight:700;color:var(--ink-muted);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.sns-links a:hover{color:var(--ink);border-color:var(--ink)}
+.more{font-size:14px;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.footer .brand{font-size:20px;font-weight:900;color:var(--ink);letter-spacing:.06em}
+.footer .sns{margin-left:auto;margin-right:24px}
+.footer .st{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.dock{position:fixed;left:24px;bottom:24px;z-index:120;display:flex;gap:8px;flex-wrap:wrap;max-width:600px}
+.dock button{font-size:12px;font-weight:700;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;box-shadow:var(--shadow)}
+.dock button:hover,.dock button[aria-pressed=true]{background:var(--accent);color:#fff}
+.dev-note{display:none;font-size:11px;color:var(--ink-muted);background:var(--surface);border:1px dashed var(--ink-disabled);padding:2px 6px;border-radius:4px;margin-top:6px}
+body.notes .dev-note{display:block}
+.fb-img{padding:0}
+.float-banner .ph{aspect-ratio:280/160}
+.top-btn{position:fixed;right:32px;bottom:260px;z-index:80;width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);font-size:11px;font-weight:700;box-shadow:var(--shadow)}
+.top-btn.hidden{display:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<header class="gnb" id="gnb">
+  <div class="wrap">
+    <div class="left">
+      <a href="#top" class="logo" aria-label="Dragon Nest SEA 메인">LOGO</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#">NEWS</a><a href="#">PATCHNOTE</a><a href="#">SUPPORT</a><a href="#">COMMUNITY</a>
+      </nav>
+    </div>
+    <div class="right">
+      <div class="util"><a href="#">LOGIN</a><span aria-hidden="true">l</span><a href="#">SIGN UP</a></div>
+      <div class="sns">
+        <a href="https://facebook.com/dragonnestsea" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        <a href="https://youtube.com/user/dragonnestsea" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="Discord">D</a>
+      </div>
+      <a href="#" class="btn btn-primary btn-sm">DOWNLOAD</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="sec-hero" aria-label="메인 배너">
+  <div class="ph hero"><span class="ph-label">메인 배너 영상/이미지 2560×1440</span></div>
+  <div class="wrap">
+    <span class="eyebrow">Dragon Nest SEA</span>
+    <h1 class="display">SPLASH TOGETHER!</h1>
+    <p class="body">Bring your friends to the festival and collect rewards together!</p>
+    <p class="sub2">August 2026 Update Patch ~ September 2026 Update Patch</p>
+    <div class="hero-cta">
+      <a href="#" class="btn btn-primary">PATCHNOTE</a>
+      <a href="#sec-event" class="btn btn-ghost">EVENT</a>
+    </div>
+    <span class="dev-note">메인타이틀/서브타이틀/버튼 1~3: CMS 메인 배너 관리 값 출력. 배경은 등록된 이미지 또는 영상.</span>
+  </div>
+  <nav class="indicator" aria-label="섹션 이동">
+    <a href="#sec-hero" class="active">MAIN</a>
+    <a href="#sec-event">EVENT</a>
+    <a href="#sec-sns">COMMUNITY</a>
+  </nav>
+  <a href="#sec-event" class="scroll-hint">SCROLL<span aria-hidden="true">⌄</span></a>
+</section>
+
+<section class="section" id="sec-event" aria-labelledby="ev-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">EVENT &amp; NOTICE</span>
+        <h2 class="h1" id="ev-h">WHAT'S ON THIS MONTH</h2>
+      </div>
+      <p class="body-sm" style="max-width:360px">Running events, patch notes, and every notice from the SEA service team.</p>
+    </div>
+    <div class="ev-grid">
+      <a href="#" class="ev-banner" aria-label="Better Together 이벤트">
+        <div class="ph"><span class="ph-label">이벤트 배너 (런처 배너 사이즈)</span></div>
+        <div class="cap">
+          <h3>Better Together</h3>
+          <p class="body-sm">Play together. Earn together.</p>
+          <p class="body-sm">August, 2026</p>
+        </div>
+      </a>
+
+      <section class="notice-box" aria-labelledby="nt-h">
+        <header><h3 id="nt-h">NOTICE</h3><a href="#">more &gt;</a></header>
+        <ul id="noticeList"></ul>
+        <div class="empty hidden" id="noticeEmpty"><strong>No posts found</strong><span>등록된 공지가 없습니다.</span></div>
+      </section>
+
+      <div class="pn-col" aria-label="패치노트">
+        <a href="#" class="card pn"><div class="ph"><span class="ph-label">PATCHNOTE 220×150</span></div><div class="card-body"><span class="tag" style="align-self:flex-start">UPDATE</span><span class="card-title">Title</span></div></a>
+        <a href="#" class="card pn"><div class="ph"><span class="ph-label">PATCHNOTE 220×150</span></div><div class="card-body"><span class="tag" style="align-self:flex-start">UPDATE</span><span class="card-title">Title</span></div></a>
+      </div>
+    </div>
+    <span class="dev-note">패치노트 최신순 2건. 1620px 이하에서 우측 가변 영역 숨김.</span>
+  </div>
+</section>
+
+<section class="section alt" id="sec-sns" aria-labelledby="sns-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">COMMUNITY</span>
+        <h2 class="h1" id="sns-h">OFFICIAL SNS FEED</h2>
+      </div>
+      <div class="flex gap-16" style="align-items:center">
+        <div class="sns-links">
+          <a href="https://facebook.com/dragonnestsea" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://youtube.com/user/dragonnestsea" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <a href="#" class="more">more</a>
+      </div>
+    </div>
+    <div class="sns-grid" id="snsGrid"></div>
+    <span class="dev-note">Facebook/YouTube 게시물 통합 최신순, 4열 2줄 8개. 카드 높이는 썸네일 비율에 따라 가변. 수치 불가 시 제외.</span>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="brand">DRAGONNEST</span>
+    <div class="sns">
+      <a href="https://facebook.com/dragonnestsea" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+      <a href="https://youtube.com/user/dragonnestsea" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+      <a href="#" aria-label="Discord">D</a>
+      <a href="#" aria-label="DN Classic">C</a>
+    </div>
+    <div class="st">
+      <span>SERVER TIME <b id="svTime">--</b></span>
+      <span>© 2026 EYEDENTITY GAMES. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="float-banner" id="floatBanner" aria-label="프로모션 배너">
+  <button class="close" id="fbClose" aria-label="배너 닫기">✕</button>
+  <div class="ph"><span class="ph-label">플로팅 배너</span></div>
+  <div class="card-body"><strong>Better Together</strong><span class="card-meta">Play together. Earn together.</span></div>
+</aside>
+<button class="top-btn hidden" id="topBtn" aria-label="맨 위로">TOP</button>
+
+<div class="dock" role="group" aria-label="화면 상태 전환">
+  <button id="tgEmpty" aria-pressed="false">공지 빈 화면</button>
+  <button id="tgBanner">플로팅 배너 보이기</button>
+  <button id="tgNote" aria-pressed="false">dev-note</button>
+</div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  var gnb=$('#gnb'),topBtn=$('#topBtn');
+  function onScroll(){
+    gnb.classList.toggle('solid',scrollY>40);
+    topBtn.classList.toggle('hidden',scrollY<400);
+    var ids=['sec-hero','sec-event','sec-sns'],cur=0;
+    ids.forEach(function(id,i){if(document.getElementById(id).getBoundingClientRect().top<=innerHeight/2)cur=i});
+    document.querySelectorAll('.indicator a').forEach(function(a,i){a.classList.toggle('active',i===cur)});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  topBtn.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+
+  var notices=[
+    ['MAINT.','[Completed] Scheduled Maintenance on September 29th, 2026','Aug 19'],
+    ['EVENT','[Special Event] Anniversary Pre-Event','Aug 19'],
+    ['SALES','Flash Sale: Grubby Key Special Deal','Aug 19'],
+    ['NOTICE','Ranking Announcement for Crazy Cooking Contest','Aug 19'],
+    ['UPDATE','[Completed] August 11th, 2026 Update Patch','Aug 19'],
+    ['MAINT.','[Completed] August 11th, 2026 Update Maintenance','Aug 19']
+  ];
+  var nl=$('#noticeList');
+  nl.innerHTML=notices.map(function(n){return '<li><a href="#"><span class="tag">'+n[0]+'</span><span class="t">'+n[1]+'</span><span class="d">'+n[2]+'</span></a></li>'}).join('');
+  $('#tgEmpty').onclick=function(){
+    var on=this.getAttribute('aria-pressed')!=='true';
+    this.setAttribute('aria-pressed',on);
+    nl.classList.toggle('hidden',on);$('#noticeEmpty').classList.toggle('hidden',!on);
+  };
+
+  var posts=[
+    [['f','Lagendia Harvest Festival has begun! Collect Harvest Seeds and exchange them for great rewards.','#DragonNest #DNSEA #Event','2 days ago','♥ 273   💬 21',134,0],
+     ['▶','[2026] September Update Trailer – Paradox Frozen Dragon Nest','#DragonNest #Update','1 week ago','👁 14K views   💬 196',96,1]],
+    [['f','Solo Martial Conquest Season 2 ladder is live — climb from Bronze to Conqueror!','#DNSEA #PvP','5 days ago','♥ 451   💬 120',125,1],
+     ['▶','Class Showcase : Machina Awakening Skills','#DragonNest #Machina','2 weeks ago','👁 8.2K views   💬 87',106,1]],
+    [['f','Flash Sale: Dragon Jade Growth Package 2 is available for a limited time only!','#DNSEA #Sale','1 week ago','♥ 133   💬 12',96,0],
+     ['f','[Completed] Scheduled Maintenance on September 29th, 2026. Thank you for your patience!','#DNSEA','3 days ago','♥ 98   💬 30',115,0]],
+    [['▶','Lagendia Harvest Festival Guide','#DragonNest #Guide','3 weeks ago','👁 5.1K views   💬 42',144,1],
+     ['f','Draw Your Way into Dragon Nest – Art Contest winners have been announced!','#DNSEA #FanArt','2 weeks ago','♥ 612   💬 75',86,0]]
+  ];
+  $('#snsGrid').innerHTML=posts.map(function(col){
+    return '<div class="sns-col">'+col.map(function(p){
+      var yt=p[0]==='▶';
+      return '<article class="post"><div class="post-h"><span class="avatar">DN</span><div class="nm"><b>Dragon Nest SEA</b><span>@dragonnestsea</span></div><a class="ch" href="'+(yt?'https://youtube.com/user/dragonnestsea':'https://facebook.com/dragonnestsea')+'" target="_blank" rel="noopener" aria-label="'+(yt?'YouTube':'Facebook')+'">'+p[0]+'</a></div>'+
+      '<div class="media" style="height:'+(p[5]*1.1)+'px"><div class="ph"><span class="ph-label">'+(yt?'썸네일 16:9':'게시 이미지')+'</span></div>'+(yt?'<span class="play" aria-hidden="true">▶</span>':'')+'</div>'+
+      '<div class="post-b"><a class="tx" href="#" target="_blank" rel="noopener">'+p[1]+'</a><span class="tg">'+p[2]+'</span><div class="post-f"><span>◷ '+p[3]+'</span><span>'+p[4]+'</span></div></div></article>';
+    }).join('')+'</div>';
+  }).join('');
+
+  $('#fbClose').onclick=function(){$('#floatBanner').classList.add('hidden')};
+  $('#tgBanner').onclick=function(){$('#floatBanner').classList.remove('hidden')};
+  $('#tgNote').onclick=function(){var on=document.body.classList.toggle('notes');this.setAttribute('aria-pressed',on)};
+
+  function tick(){
+    var d=new Date(Date.now()+(new Date().getTimezoneOffset()+480)*60000);
+    var m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var p=function(n){return String(n).padStart(2,'0')};
+    $('#svTime').textContent=p(d.getHours())+':'+p(d.getMinutes())+' · '+p(d.getDate())+'. '+m[d.getMonth()]+'. '+d.getFullYear()+' (SGT)';
+  }
+  tick();setInterval(tick,30000);
+})();
+</script>
+</body>
+</html>

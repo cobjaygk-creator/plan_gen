@@ -12,6 +12,7 @@ import { PreRegistrationPage } from "./features/preregistration/PreRegistrationP
 import { GameSitesPage } from "./features/game-sites/GameSitesPage";
 import { SentimentCheckerPage } from "./features/sentiment-checker/SentimentCheckerPage";
 import { WireframePage } from "./features/wireframe/WireframePage";
+import { QuickPrototypeDemoPage } from "./features/wireframe/QuickPrototypeDemoPage";
 import { CollectionHistoryPage } from "./features/collection-history/CollectionHistoryPage";
 
 // 업계동향/타사 이벤트/타사 사이트는 로그인 없이 누구나 볼 수 있다 —
@@ -27,6 +28,7 @@ function App() {
             <Route index element={<DashboardPage />} />
             <Route path="event-bench" element={<EventBenchPage />} />
             <Route path="game-sites" element={<GameSitesPage />} />
+            <Route path="quick-prototype" element={<QuickPrototypeDemoPage />} />
             <Route element={<AdminRoute />}>
               <Route path="preregistrations" element={<PreRegistrationPage />} />
               <Route path="generate" element={<GeneratePage />} />

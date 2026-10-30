@@ -169,7 +169,7 @@ export function WireframePage() {
     <div className="wf-page-root">
       {openEditId !== null && <PrototypeEditor recordId={openEditId} onClose={closeEditor} />}
       <header className="wf-intro">
-        <h1>퀵 프로토타입</h1>
+        <h1>퀵 프로토타입(J)</h1>
         <p>화면설계서(PPT)를 올리면 화면과 설명을 읽어 인터랙션까지 갖춘 페이지 단위 HTML 프로토타입을 만듭니다. SB 앞쪽에 설정 장표(화면 범위·레이아웃·시각 기준·생성 지시사항)를 넣으면 함께 읽어 반영합니다.</p>
       </header>
 
