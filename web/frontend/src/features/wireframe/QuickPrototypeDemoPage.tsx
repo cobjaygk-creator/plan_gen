@@ -128,7 +128,11 @@ export function QuickPrototypeDemoPage() {
         onClick={() => inputRef.current?.click()}
       >
         <input ref={inputRef} type="file" accept=".pptx" hidden onChange={(e) => pickFile(e.target.files?.[0] ?? null)} />
-        {file ? <strong>{file.name}</strong> : <span style={{ color: "var(--danger)", fontWeight: 600 }}>현재 진행중인 기능으로 본 화면은 예시화면 입니다.</span>}
+        {file ? <strong>{file.name}</strong> : <span style={{ color: "var(--danger)", fontWeight: 600, textAlign: "center", lineHeight: 1.7 }}>
+            현재 진행중인 기능으로 본 화면은 예시화면 입니다.
+            <br />
+            아래 화면분석을 클릭해주세요.
+          </span>}
       </div>
 
       <div className="wf-actions">
