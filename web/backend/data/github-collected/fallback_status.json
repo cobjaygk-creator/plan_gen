@@ -1,56 +1,56 @@
 {
   "테일즈위버": {
     "ok": false,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
     "lastSuccessAt": null,
     "count": 3,
     "error": "CalledProcessError: Command '['/usr/bin/curl', '-L', '--fail', '--silent', '--show-error', '--max-time', '20', '-A', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/139 Safari/537.36', '-H', 'Accept-Language: ko-KR,ko;q=0.9', '-H', 'Referer: https://tales.nexon.com/', 'https://t",
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   "테일즈런너": {
     "ok": false,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
     "lastSuccessAt": "2026-10-22T22:32:23.694629+00:00",
     "count": 6,
     "error": "HTTPError: HTTP Error 403: Forbidden",
-    "consecutiveFailures": 41
+    "consecutiveFailures": 42
   },
   "거상": {
     "ok": true,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
-    "lastSuccessAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
+    "lastSuccessAt": "2026-10-31T06:59:49.708476+00:00",
     "count": 5,
     "error": null,
     "consecutiveFailures": 0
   },
   "더 파이널스": {
     "ok": false,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
     "lastSuccessAt": null,
     "count": 3,
     "error": "HTTPError: HTTP Error 403: Forbidden",
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   "프라시아전기": {
     "ok": false,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
     "lastSuccessAt": null,
     "count": 0,
     "error": "RuntimeError: collector returned no candidates",
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   "사이퍼즈": {
     "ok": true,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
-    "lastSuccessAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
+    "lastSuccessAt": "2026-10-31T06:59:49.708476+00:00",
     "count": 2,
     "error": null,
     "consecutiveFailures": 0
   },
   "던전앤파이터": {
     "ok": true,
-    "checkedAt": "2026-10-31T00:47:54.071870+00:00",
-    "lastSuccessAt": "2026-10-31T00:47:54.071870+00:00",
+    "checkedAt": "2026-10-31T06:59:49.708476+00:00",
+    "lastSuccessAt": "2026-10-31T06:59:49.708476+00:00",
     "count": 14,
     "error": null,
     "consecutiveFailures": 0
