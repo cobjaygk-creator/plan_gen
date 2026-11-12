@@ -132,7 +132,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T21:57:53.406829+00:00"
+      "collected_at": "2026-11-12T02:59:17.741569+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -145,7 +145,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T21:57:53.406829+00:00"
+      "collected_at": "2026-11-12T02:59:17.741569+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -158,7 +158,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T21:57:53.406829+00:00"
+      "collected_at": "2026-11-12T02:59:17.741569+00:00"
     }
   ],
   "더 파이널스": [
@@ -215,7 +215,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.041489+00:00"
+      "collected_at": "2026-11-12T02:59:19.543085+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -228,10 +228,153 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.041489+00:00"
+      "collected_at": "2026-11-12T02:59:19.543085+00:00"
     }
   ],
   "던전앤파이터": [
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "2026 WINTER FESTIVAL",
+      "event_url": "https://df.nexon.com/pg/winterfestival26",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/b67e9aa1-8785-774c-3cfe-1b9c1dc24a05.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-18",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "겨울맞이 8일간의 여정",
+      "event_url": "https://df.nexon.com/pg/eightgift",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/9837fee1-51e4-b36a-ea84-92724805ed35.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "윈터 부스트 업",
+      "event_url": "https://df.nexon.com/pg/winterboostup",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/e020b211-9121-9ccc-0dfa-0d49d8dbd0c4.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "모예와 함께 아라드 탐험!",
+      "event_url": "https://df.nexon.com/pg/expedition",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/2a8549f7-e3d2-e331-ef7a-a4279e32df0f.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "르이르와 수상한 랜턴",
+      "event_url": "https://df.nexon.com/pg/leuirmysteriouslantern",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/bccd3902-6834-15ad-95c6-9b3e6bc116cb.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "넥플과 함께! 윈터 페스티벌!",
+      "event_url": "https://df.nexon.com/pr/winterfestivalnxp",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/ab782a61-4b5c-8113-8f67-5f2b0daa2133.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-17",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "겨울을 따뜻하게 맞이하는 PC방",
+      "event_url": "https://df.nexon.com/pg/winterwarmthpcb",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/8618d96a-0054-b5b4-6f9b-c09326c581e6.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-17",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "바니바니 윈터 아라드 패키지",
+      "event_url": "https://df.nexon.com/pg/bunnywinterpkg",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/9841ce98-f505-983b-6ed3-f303bc4fc258.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "윈터 스펙업 패키지",
+      "event_url": "https://df.nexon.com/pg/winterspecuppkg",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/9320a13b-7be7-06c7-406b-0d62ea103e62.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "2026 왕립 아라드 고교 아바타 콤보 상자",
+      "event_url": "https://df.nexon.com/pg/royalacademycombo",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/b1e6599c-e64b-19d3-f130-436b95f6a1da.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2027-02-04",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "full_page",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "윈터 특제 피로도 30 회복의 비약",
+      "event_url": "https://df.nexon.com/community/news/seriashop/672",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/3efbaaa0-b860-0b37-43d7-a3af208b4348.jpg",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-12-31",
+      "published_on": "2026-11-12",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
+    },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
@@ -243,7 +386,7 @@
       "published_on": "2026-11-05",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -256,7 +399,7 @@
       "published_on": "2026-11-05",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -269,33 +412,7 @@
       "published_on": "2026-11-05",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "할로윈 펌킨 크래프팅!",
-      "event_url": "https://df.nexon.com/community/news/event/2928714",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/28705e58-4139-c5d1-29e2-eb345242b43c.jpg",
-      "starts_on": "2026-10-22",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-22",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "으스스한 할로윈 선물 상자",
-      "event_url": "https://df.nexon.com/pg/halloweengiftbox26",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/32a3a06b-a43f-cf6b-b68e-b5cdf5fe0470.jpg",
-      "starts_on": "2026-10-22",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-22",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,85 +425,7 @@
       "published_on": "2026-10-22",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "풍요로운 가을의 PC방",
-      "event_url": "https://df.nexon.com/pg/bountifulpcb",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/1bdd29c7-f4cc-4219-88c8-942b393ebdf6.jpg",
-      "starts_on": "2026-10-15",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-15",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "강자의 길 : 선택",
-      "event_url": "https://df.nexon.com/pg/thewayofthestrong",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/4b7e07db-f299-fa87-77a7-8799cecefc3d.jpg",
-      "starts_on": "2026-10-15",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-15",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "마일리지샵 2026 시즌9",
-      "event_url": "https://df.nexon.com/community/news/event/2928609",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202610/be64b909-7e36-5821-4472-5a8db795d28a.jpg",
-      "starts_on": "2026-10-08",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-08",
-      "status": "ongoing",
-      "event_format": "board",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "마법소년 메이커!",
-      "event_url": "https://df.nexon.com/pg/magicalboymaker",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/b6049825-956b-06f7-b349-f19ab4c23823.jpg",
-      "starts_on": "2026-10-01",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-01",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "마법소년의 다이어리 출석 체크",
-      "event_url": "https://df.nexon.com/pg/diarycheck",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202609/a86cfed8-6b72-494b-0909-c94a58c06349.jpg",
-      "starts_on": "2026-10-01",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-10-01",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "천해천 부스트 업 앵콜",
-      "event_url": "https://df.nexon.com/pg/boostupencore",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202608/a64c600c-26b5-a072-9214-36a8b0e1d6eb.jpg",
-      "starts_on": "2026-08-27",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-08-27",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,20 +438,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
-    },
-    {
-      "publisher": "NEOPLE",
-      "game": "던전앤파이터",
-      "title": "2026 서부의 보안관 아바타 콤보 상자",
-      "event_url": "https://df.nexon.com/pg/westernsheriffcombo",
-      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202608/7885ea11-03d9-e8a1-ab41-0d3918287574.jpg",
-      "starts_on": "2026-08-20",
-      "ends_on": "2026-11-12",
-      "published_on": "2026-08-20",
-      "status": "ongoing",
-      "event_format": "full_page",
-      "collected_at": "2026-11-11T15:12:12.424132+00:00"
+      "collected_at": "2026-11-12T02:59:19.855655+00:00"
     }
   ]
 }
