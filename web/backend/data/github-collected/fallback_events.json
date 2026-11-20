@@ -132,7 +132,7 @@
       "published_on": "2026-11-17",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:26.739478+00:00"
+      "collected_at": "2026-11-20T11:40:18.367253+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -145,7 +145,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:26.739478+00:00"
+      "collected_at": "2026-11-20T11:40:18.367253+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -158,7 +158,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:26.739478+00:00"
+      "collected_at": "2026-11-20T11:40:18.367253+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -171,7 +171,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:26.739478+00:00"
+      "collected_at": "2026-11-20T11:40:18.367253+00:00"
     },
     {
       "publisher": "AtoZ Games",
@@ -184,7 +184,7 @@
       "published_on": null,
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:26.739478+00:00"
+      "collected_at": "2026-11-20T11:40:18.367253+00:00"
     }
   ],
   "더 파이널스": [
@@ -241,7 +241,7 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.284466+00:00"
+      "collected_at": "2026-11-20T11:40:19.964607+00:00"
     },
     {
       "publisher": "NEXON Korea",
@@ -254,10 +254,23 @@
       "published_on": "2026-10-01",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.284466+00:00"
+      "collected_at": "2026-11-20T11:40:19.964607+00:00"
     }
   ],
   "던전앤파이터": [
+    {
+      "publisher": "NEOPLE",
+      "game": "던전앤파이터",
+      "title": "2026 던파 페스티벌",
+      "event_url": "https://df.nexon.com/pr/dnffestival26",
+      "hero_image_url": "https://bbscdn.df.nexon.com/data6/commu/202611/e357533d-e9a7-b13d-f4f1-8da0091d0257.jpg",
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-12-20",
+      "published_on": "2026-11-20",
+      "status": "ongoing",
+      "event_format": "board",
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
+    },
     {
       "publisher": "NEOPLE",
       "game": "던전앤파이터",
@@ -269,7 +282,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -282,7 +295,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -295,7 +308,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -308,7 +321,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -321,7 +334,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -334,7 +347,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -347,7 +360,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -360,7 +373,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -373,7 +386,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -386,7 +399,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -399,7 +412,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -412,7 +425,7 @@
       "published_on": "2026-11-12",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -425,7 +438,7 @@
       "published_on": "2026-11-05",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -438,7 +451,7 @@
       "published_on": "2026-11-05",
       "status": "ongoing",
       "event_format": "board",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -451,7 +464,7 @@
       "published_on": "2026-11-05",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -464,7 +477,7 @@
       "published_on": "2026-10-22",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     },
     {
       "publisher": "NEOPLE",
@@ -477,7 +490,7 @@
       "published_on": "2026-08-27",
       "status": "ongoing",
       "event_format": "full_page",
-      "collected_at": "2026-11-20T03:15:28.576910+00:00"
+      "collected_at": "2026-11-20T11:40:20.311658+00:00"
     }
   ]
 }
