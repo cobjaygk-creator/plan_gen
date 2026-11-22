@@ -128,15 +128,24 @@ def _openai_classify(system_prompt: str, user_prompt: str, schema_model: Type[T]
         },
     }
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
-        ],
-        tools=[tool],
-        tool_choice={"type": "function", "function": {"name": tool_name}},
-    )
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            tools=[tool],
+            tool_choice={"type": "function", "function": {"name": tool_name}},
+        )
+    except openai.OpenAIError as e:
+        # 원래는 이 호출이 실패하면 OpenAI SDK의 원본 예외(인증 오류, 모델 이름 오류,
+        # 요청 한도 초과 등)가 그대로 위로 튀어 올라가 ClassificationError로 안 잡히고,
+        # 호출부(classify_pending)의 루프가 첫 기사에서 그대로 멈춰버렸다 — 그래서
+        # 콘텐츠 전체가 "분류 0건"으로 끝나면서도 진짜 이유는 어디에도 안 남았다.
+        # ClassificationError로 감싸 두면 같은 실패라도 (a) 호출부가 기사 하나만
+        # 건너뛰고 계속 진행하고, (b) 원본 오류 메시지가 로그에 남는다.
+        raise ClassificationError(f"OpenAI 호출 실패: {type(e).__name__}: {e}") from e
 
     message = response.choices[0].message
     if not message.tool_calls:

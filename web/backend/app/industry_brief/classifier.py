@@ -10,6 +10,7 @@ default (spec: "Provider 변경을 고려하여 AI Service Layer를 분리한다
 No Issue clustering here (Phase 4) — this only touches one article at a
 time."""
 import json
+import logging
 import os
 import sys
 from collections import Counter
@@ -28,6 +29,8 @@ if str(REPO_ROOT) not in sys.path:
 from tools.ai_client import classify, ClassificationError
 
 from .models import Article
+
+logger = logging.getLogger(__name__)
 from .sources import is_korean_source
 from .reference import analyze_live_article
 from .ai_editorial_policy import ai_editorial_cap, ai_editorial_score, is_ai_context_only
@@ -141,7 +144,13 @@ def _classify_one(article: Article) -> ArticleClassification | None:
             SYSTEM_PROMPT, user_prompt, ArticleClassification, CLASSIFIER_MODEL,
             provider=BRIEF_AI_PROVIDER,
         )
-    except ClassificationError:
+    except ClassificationError as e:
+        # 전에는 여기서 이유 없이 그냥 None을 돌려줬다 — 기사 하나가 실패하는 거야
+        # 흔한 일이라 그건 맞지만, 계정/모델 설정처럼 "이번 배치 전체가 똑같은
+        # 이유로 전부 실패"하는 경우까지 똑같이 조용히 넘어가다 보니 실제로 벌어진
+        # 사고(OpenAI 호출이 계속 실패해 분류가 0건으로 멈춤)를 아무도 로그에서
+        # 알아챌 수 없었다. article마다 찍으면 배치당 최대 몇십 줄이라 과하지 않다.
+        logger.warning("industry_brief 분류 실패 (article id=%s, source=%s): %s", article.id, article.source, e)
         return None
 
 
